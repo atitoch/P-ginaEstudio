@@ -1,0 +1,356 @@
+// === INTRODUCCIÓN A JAVASCRIPT ===
+
+::JavaScript Ubicación::¿Dónde se ejecuta JavaScript principalmente?{
+=En el navegador (lado del cliente)
+~En el servidor únicamente
+~En la base de datos
+~En el sistema operativo
+}
+
+::DOM::¿Qué significa DOM en JavaScript?{
+=Document Object Model
+~Data Object Management
+~Dynamic Object Method
+~Document Operation Mode
+}
+
+::Eventos JavaScript::Los eventos en JavaScript permiten {=reaccionar a acciones del usuario} como clicks, teclas presionadas o carga de páginas.
+
+::Validación Datos::JavaScript se utiliza para validar datos de formularios {=antes de enviarlos al servidor}.
+
+// === SINTAXIS BÁSICA ===
+
+::Case Sensitive::JavaScript es case-sensitive, lo que significa que 'variable', 'Variable' y 'VARIABLE' son consideradas como variables diferentes.{T}
+
+::Espacios en Blanco::Los espacios en blanco, tabs y saltos de línea en JavaScript {=ignoran ~afectan ~modifican ~alteran} la ejecución del código, solo afectan la legibilidad.
+
+::Terminador Línea::¿El punto y coma (\;) en JavaScript es obligatorio al final de cada línea?{
+~Sí, siempre es obligatorio
+=No, es opcional pero recomendado
+~Solo en funciones
+~Solo en declaraciones de variables
+}
+
+::Comentario Una Línea::¿Cuál es la sintaxis correcta para un comentario de una línea en JavaScript?{
+=// Comentario
+~\# Comentario
+~<!-- Comentario -->
+~-- Comentario
+}
+
+::Comentario Multilínea::Los comentarios multilínea en JavaScript se escriben con {=/* */ ~// // ~<!-- --> ~\# \#}.
+
+// === IDENTIFICADORES ===
+
+::Identificadores Válidos::¿Cuál de estos identificadores es válido en JavaScript?{
+=mi_variable
+~2variable #Los identificadores no pueden empezar con número
+~function #Es una palabra reservada
+~var #Es una palabra reservada
+}
+
+::Identificadores Números::Los identificadores en JavaScript pueden empezar con un número.{F}
+
+// === PALABRAS RESERVADAS ===
+
+::Palabra Reservada::¿Cuál de estas es una palabra reservada en JavaScript?{
+=function
+~variable
+~nombre
+~contador
+}
+
+::Break Continue::Las palabras {=break} y continue son palabras clave usadas en bucles de JavaScript.
+
+::Continue Break::Las palabras break y {=continue} son palabras clave usadas en bucles de JavaScript.
+
+// === VARIABLES ===
+
+::Declaración Variable::¿Cuál es la sintaxis correcta para declarar una variable en JavaScript?{
+=var nombre\;
+~variable nombre\;
+~declare nombre\;
+~int nombre\;
+}
+
+::Alcance Variables::Las variables declaradas con 'var' tienen alcance {=global ~local ~privado ~público} o de función.
+
+::Variables Sin Bloque::En JavaScript, las variables declaradas dentro de un if o for están limitadas solo a ese bloque.{F}
+
+// === TIPOS DE DATOS - NÚMEROS ===
+
+::Tipos Números::JavaScript distingue entre números enteros y flotantes.{F}
+
+::Notación Hexadecimal::¿Cuál es el valor decimal de 0xFF en JavaScript?{
+=255
+~15
+~16
+~256
+}
+
+::Valores Especiales Numéricos::¿Cuáles son valores especiales numéricos en JavaScript?{
+=Infinity y NaN
+~null y undefined
+~true y false
+~0 y 1
+}
+
+::Math PI::Math.PI devuelve el valor de {=3.1416... ~2.718... ~1.618... ~1.414...}.
+
+// === BOOLEANOS ===
+
+::Valor Booleano True::Uno de los valores booleanos en JavaScript es {=true ~false ~1 ~0}.
+
+::Valor Booleano False::Otro de los valores booleanos en JavaScript es {=false ~true ~1 ~0}.
+
+::Valores Booleanos Opciones::¿Cuáles son los valores booleanos en JavaScript?{
+=true y false
+~1 y 0
+~sí y no
+~on y off
+}
+
+// === CADENAS ===
+
+::Delimitadores String Simple::Las cadenas en JavaScript pueden ser delimitadas por comillas {=simples ~dobles ~invertidas ~especiales}.
+
+::Delimitadores String Dobles::Las cadenas en JavaScript también pueden ser delimitadas por comillas {=dobles ~simples ~invertidas ~especiales}.
+
+::Concatenación::¿Cuál es el operador para concatenar cadenas en JavaScript?{
+=+
+~&
+~.
+~,
+}
+
+::Secuencia Escape::La secuencia de escape \\n en JavaScript representa {=salto de línea ~tabulación ~retroceso ~comilla}.
+
+// === OBJETOS ===
+
+::Objeto Literal::¿Cuál es la sintaxis correcta para crear un objeto literal?{
+=var persona \= \{nombre\: "Ana", edad\: 25\}\;
+~var persona \= [nombre\: "Ana", edad\: 25]\;
+~var persona \= (nombre\: "Ana", edad\: 25)\;
+~var persona \= <nombre\: "Ana", edad\: 25>\;
+}
+
+::Acceso Propiedades Punto::Para acceder a la propiedad 'nombre' del objeto 'persona' se puede usar persona.{=nombre ~edad ~tipo ~valor}.
+
+::Acceso Propiedades Corchetes::Para acceder a la propiedad 'nombre' del objeto 'persona' también se puede usar persona{=["nombre"] ~("nombre") ~<"nombre"> ~\{"nombre"\}}.
+
+// === ARREGLOS ===
+
+::Pop Method::El método pop() en un array{
+=elimina y devuelve el último elemento
+~añade un elemento al final
+~invierte el array
+~ordena los elementos
+}
+
+::Push Modifica::El método push() modifica el array original.{T}
+
+::Concat Modifica::El método concat() modifica el array original.{F}
+
+::Join Method::¿Qué hace el método join() en un array?{
+=Convierte el array en string separado por comas
+~Une dos arrays
+~Añade un elemento al final
+~Elimina un elemento
+}
+
+::Slice No Modifica::El método {=slice} NO modifica el array original.
+
+::Splice Modifica::El método {=splice} SÍ modifica el array original.
+
+::IndexOf Return::Si indexOf() no encuentra un elemento en el array, devuelve {=-1 ~0 ~null ~undefined}.
+
+// === VALORES ESPECIALES ===
+
+::Null vs Undefined::¿Cuál es la diferencia entre null y undefined?{
+=null es asignado intencionalmente, undefined es una variable no inicializada
+~Son exactamente lo mismo
+~null es para números, undefined para strings
+~No hay diferencia práctica
+}
+
+::Comparación Doble Igual::null \=\= undefined devuelve {=true ~false}.
+
+::Comparación Triple Igual::null \=\=\= undefined devuelve {=false ~true}.
+
+// === FUNCIONES ===
+
+::Definición Función::¿Cuál es la sintaxis correcta para definir una función?{
+=function nombre(x, y) \{ return x+y\; \}
+~def nombre(x, y) \{ return x+y\; \}
+~func nombre(x, y) \{ return x+y\; \}
+~method nombre(x, y) \{ return x+y\; \}
+}
+
+::Expresión Función::Una expresión de función se puede asignar a una {=variable ~constante ~método ~clase}.
+
+::Invocación Función::Para invocar una función en JavaScript se requiere usar {=paréntesis ~corchetes ~llaves ~punto}.
+
+// === DECLARACIONES DE CONTROL ===
+
+::Estructuras Condicionales::¿Cuáles son las estructuras condicionales en JavaScript?{
+=if/else y switch
+~solo if/else
+~solo switch
+~if/else, switch y when
+}
+
+::Bucle For::El bucle {=for} es uno de los tipos de bucles en JavaScript.
+
+::Bucle While::El bucle {=while} es otro tipo de bucle en JavaScript.
+
+::Excepciones::¿Cuál es la estructura correcta para manejar excepciones en JavaScript?{
+=try/catch/finally
+~try/except/finally
+~begin/rescue/end
+~attempt/catch/cleanup
+}
+
+::Break Continue Etiquetas::Las declaraciones break y continue pueden usar {=etiquetas ~números ~variables ~funciones} para controlar bucles anidados.
+
+// === PREGUNTAS ADICIONALES ===
+
+::Método Push::El método {=push} añade un elemento al final del array y modifica el array original.
+
+::Método Pop::El método {=pop} elimina y devuelve el último elemento del array.
+
+::Typeof Operador::El operador {=typeof} en JavaScript devuelve el tipo de dato de una variable.
+
+::Valor Undefined::Una variable no inicializada en JavaScript tiene el valor {=undefined ~null ~0 ~false}.
+
+::Hoisting::El concepto de "hoisting" en JavaScript significa que las declaraciones son {=movidas ~ejecutadas ~ignoradas ~duplicadas} al inicio del ámbito.
+// === PUNTOS ADICIONALES OMITIDOS ===
+
+::Secuencias Escape Completas::¿Cuál de estas secuencias de escape es válida en JavaScript?{
+=\\b (retroceso)
+=\\f (form feed)
+=\\r (retorno de carro)
+=\\t (tabulación)
+=\\v (tabulación vertical)
+~\\p (no existe)
+}
+
+::Secuencia Escape Latin::La secuencia \\xdd en JavaScript representa {=código Latin-1 ~código Unicode ~código ASCII ~código hexadecimal}.
+
+::Cadenas Unicode::Las cadenas en JavaScript son secuencias de caracteres Unicode de {=16 ~8 ~32 ~64} bits.
+
+::Operadores String::¿Cuáles son operadores válidos para strings en JavaScript?{
+~%16.67%\+ (concatenación)
+~%16.67%\=\= (comparación)
+~%16.67%!\= (diferente)
+~%16.67%< (menor que)
+~%16.67%<\= (menor o igual)
+~%16.67%> (mayor que)
+~%16.67%>\= (mayor o igual)
+~%-50%\* (no es válido para strings)
+}
+
+::Métodos String Object::Los métodos de cadenas están definidos en el objeto {=String ~Text ~Char ~Word}.
+
+::Constructor Objeto::Para crear un objeto con constructor se usa la palabra clave {=new ~create ~make ~build}.
+
+::Ejemplo Constructor::Un ejemplo de constructor de objeto es new {=Date ~Array ~Object ~String}().
+
+::Array ToString::El método toString() convierte el array [1,2,3] en el string {="1,2,3" ~"123" ~"[1,2,3]" ~"1 2 3"}.
+
+::Array Join Separador::El método join() puede usar un separador diferente a la coma.{T}
+
+::Unshift Method::El método {=unshift} añade un elemento al principio del array.
+
+::Shift Method::El método {=shift} elimina y devuelve el primer elemento del array.
+
+::Reverse Method::El método {=reverse} invierte el orden de los elementos del array.
+
+::Sort Method::El método sort() ordena los elementos de forma {=alfabética ~numérica ~cronológica ~aleatoria} por defecto.
+
+::Splice Función::El método splice() puede {=añadir ~eliminar ~both} elementos en una posición específica.
+
+::LastIndexOf Method::El método {=lastIndexOf} devuelve la última posición de un elemento en el array.
+
+::Compatibilidad Navegadores::Los métodos de JavaScript pueden {=variar ~ser idénticos ~no funcionar ~ejecutarse mal} entre Chrome, Firefox y Edge.
+
+::Palabras Reservadas Abstract::¿Cuál de estas es una palabra reservada que debe evitarse?{
+=abstract
+=boolean
+=class
+=const
+~variable
+}
+
+::Palabras Reservadas Export::Las palabras {=export ~import ~extends ~implements} son palabras reservadas en JavaScript.
+
+::Palabras Reservadas Tipos::¿Cuáles son palabras reservadas de tipos de datos?{
+~%25%byte
+~%25%char
+~%25%double
+~%25%float
+~%-100%string (no es palabra reservada)
+}
+
+::Palabras Reservadas Modificadores::¿Cuáles son palabras reservadas de modificadores de acceso?{
+~%33.33%private
+~%33.33%protected  
+~%33.33%public
+~%-50%open (no es palabra reservada)
+}
+
+::Declaración Sin Inicializar::Una variable puede declararse sin {=inicializar ~declarar ~nombrar ~tipear} inmediatamente.
+
+::Cambio Tipo Variable::En JavaScript, una variable puede {=cambiar de tipo ~mantener tipo fijo ~solo ser numérica ~solo ser string} después de su inicialización.
+
+::Math Sqrt::Math.sqrt(16) devuelve {=4 ~2 ~8 ~16}.
+
+::Infinity Causa::Infinity es resultado de {=sobreflujo numérico ~división por cero ~error de sintaxis ~operación inválida}.
+
+::NaN Significado::NaN significa {=Not a Number ~New a Number ~Null and Number ~Number as Null}.
+
+::Literal vs Constructor Objeto::Un objeto literal usa llaves \{\}, mientras que un constructor usa la palabra {=new ~create ~object ~make}.
+
+::For In Loop::El bucle {=for/in} es específico para recorrer propiedades de objetos.
+
+::Do While Loop::El bucle {=do/while} ejecuta el código al menos una vez antes de verificar la condición.
+
+::With Statement::La declaración {=with} modifica el alcance de las variables temporalmente.
+
+::Throw Statement::La declaración {=throw} se usa para lanzar excepciones personalizadas.
+
+::Finally Block::El bloque {=finally} se ejecuta siempre, sin importar si hay errores o no.
+
+::Return Statement::La declaración {=return} termina la ejecución de una función y devuelve un valor.
+
+::Var Statement::La declaración {=var} se usa para declarar variables.
+
+::Function Statement::La declaración {=function} se usa para definir funciones.
+
+::Etiquetas Break Continue::Las etiquetas permiten que break y continue controlen bucles {=anidados ~simples ~externos ~internos} específicos.
+
+::Switch Statement::La declaración {=switch} permite múltiples condiciones basadas en un valor.
+
+::Default Case::En switch, {=default} maneja casos que no coinciden con ningún case.
+
+::Case Statement::En switch, cada {=case} representa una posible coincidencia del valor.
+
+::Catch Block::El bloque {=catch} maneja las excepciones lanzadas en try.
+
+::Try Block::El bloque {=try} contiene código que puede lanzar excepciones.
+
+::Delete Operator::El operador {=delete} elimina propiedades de objetos.
+
+::In Operator::El operador {=in} verifica si una propiedad existe en un objeto.
+
+::Instanceof Operator::El operador {=instanceof} verifica si un objeto es instancia de un constructor específico.
+
+::This Keyword::La palabra clave {=this} se refiere al objeto actual en el contexto de ejecución.
+
+::Void Operator::El operador {=void} evalúa una expresión y devuelve undefined.
+
+::Typeof Return::El operador typeof puede devolver {="number" ="string" ="boolean" ="object" ="undefined" ="function"}.
+
+::Variable Scope Global::Las variables declaradas fuera de funciones tienen alcance {=global ~local ~privado ~protegido}.
+
+::Variable Scope Function::Las variables declaradas con var dentro de una función tienen alcance de {=función ~bloque ~global ~objeto}.
+

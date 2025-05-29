@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programación Web - Material de Estudio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #4caf50;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .units-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .unit-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border-left: 5px solid #4caf50;
+      }
+
+      .unit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .unit-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .unit-icon {
+        font-size: 2em;
+        margin-right: 15px;
+        color: #4caf50;
+      }
+
+      .unit-title {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .unit-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .unit-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .content-item {
+        background: #f8f9fa;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        color: #666;
+        border: 1px solid #e9ecef;
+      }
+
+      .content-item.available {
+        background: #e8f5e8;
+        color: #4caf50;
+        border-color: #4caf50;
+      }
+
+      .unit-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        flex: 1;
+      }
+
+      .btn-primary {
+        background: #4caf50;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #e9ecef;
+        color: #666;
+      }
+
+      .btn-secondary:hover {
+        background: #dee2e6;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #4caf50;
+      }
+
+      @media (max-width: 768px) {
+        .units-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .unit-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="../index.html" class="back-button">⬅ Volver al menú principal</a>
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> > Programación Web
+      </div>
+
+      <div class="header">
+        <h1>🌐 Programación Web</h1>
+        <p>Desarrollo Front-end y Back-end</p>
+      </div>
+
+      <div class="units-grid">
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🏗️</div>
+            <div class="unit-title">Unidad 1</div>
+          </div>
+          <div class="unit-description">
+            Fundamentos de HTML y CSS. Estructura básica de páginas web y
+            estilos. Introducción al desarrollo web.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">HTML</div>
+            <div class="content-item">CSS</div>
+            <div class="content-item">Ejercicios</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">⚡</div>
+            <div class="unit-title">Unidad 2</div>
+          </div>
+          <div class="unit-description">
+            JavaScript básico y DOM. Programación client-side e interactividad.
+            Manejo de eventos y validaciones.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">JavaScript</div>
+            <div class="content-item">DOM</div>
+            <div class="content-item">Eventos</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🎨</div>
+            <div class="unit-title">Unidad 3</div>
+          </div>
+          <div class="unit-description">
+            CSS avanzado, frameworks y responsive design. Bootstrap, Flexbox y
+            Grid Layout para diseños modernos.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">CSS Avanzado</div>
+            <div class="content-item">Bootstrap</div>
+            <div class="content-item">Responsive</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🌐</div>
+            <div class="unit-title">Unidad 4</div>
+          </div>
+          <div class="unit-description">
+            JavaScript avanzado: sintaxis, tipos de datos, funciones y control
+            de flujo. Fundamentos completos del lenguaje de programación.
+          </div>
+          <div class="unit-content">
+            <div class="content-item available">Cuestionario JavaScript</div>
+            <div class="content-item">Sintaxis</div>
+            <div class="content-item">Tipos de Datos</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <a href="ProgWebU4.html" class="btn btn-primary"
+              >Cuestionario JavaScript</a
+            >
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🚀</div>
+            <div class="unit-title">Unidad 5</div>
+          </div>
+          <div class="unit-description">
+            Frameworks modernos: React.js y Vue.js. Desarrollo de aplicaciones
+            web interactivas y componentes reutilizables.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">React.js</div>
+            <div class="content-item">Vue.js</div>
+            <div class="content-item">Componentes</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">⚙️</div>
+            <div class="unit-title">Unidad 6</div>
+          </div>
+          <div class="unit-description">
+            Backend con Node.js y Express. APIs REST, bases de datos y
+            desarrollo full-stack completo.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Node.js</div>
+            <div class="content-item">Express</div>
+            <div class="content-item">APIs REST</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Proyecto Final</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Animación de entrada
+      window.addEventListener("load", function () {
+        const cards = document.querySelectorAll(".unit-card");
+        cards.forEach((card, index) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+
+          setTimeout(() => {
+            card.style.transition = "all 0.6s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, index * 150);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas Programables - Material de Estudio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #ff9800;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .units-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .unit-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border-left: 5px solid #ff9800;
+      }
+
+      .unit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .unit-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .unit-icon {
+        font-size: 2em;
+        margin-right: 15px;
+        color: #ff9800;
+      }
+
+      .unit-title {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .unit-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .unit-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .content-item {
+        background: #f8f9fa;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        color: #666;
+        border: 1px solid #e9ecef;
+      }
+
+      .content-item.available {
+        background: #e8f5e8;
+        color: #4caf50;
+        border-color: #4caf50;
+      }
+
+      .unit-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+        flex: 1;
+      }
+
+      .btn-primary {
+        background: #ff9800;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: #f57c00;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: #e9ecef;
+        color: #666;
+      }
+
+      .btn-secondary:hover {
+        background: #dee2e6;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #ff9800;
+      }
+
+      @media (max-width: 768px) {
+        .units-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .unit-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="../index.html" class="back-button">⬅ Volver al menú principal</a>
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> > Sistemas Programables
+      </div>
+
+      <div class="header">
+        <h1>🔧 Sistemas Programables</h1>
+        <p>Microcontroladores, Arduino y Sistemas Embebidos</p>
+      </div>
+
+      <div class="units-grid">
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">📚</div>
+            <div class="unit-title">Unidad 1</div>
+          </div>
+          <div class="unit-description">
+            Introducción a los sistemas programables y fundamentos de
+            microcontroladores. Conceptos básicos de programación embebida.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Teoría</div>
+            <div class="content-item">Ejercicios</div>
+            <div class="content-item">Cuestionario</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🔌</div>
+            <div class="unit-title">Unidad 2</div>
+          </div>
+          <div class="unit-description">
+            Programación básica de Arduino. Entradas y salidas digitales y
+            analógicas. Control de sensores y actuadores.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Teoría</div>
+            <div class="content-item">Prácticas</div>
+            <div class="content-item">Cuestionario</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🤖</div>
+            <div class="unit-title">Unidad 3</div>
+          </div>
+          <div class="unit-description">
+            Placas Arduino avanzadas, protocolos de comunicación (I2C, SPI,
+            UART) y características técnicas específicas de cada modelo.
+          </div>
+          <div class="unit-content">
+            <div class="content-item available">Cuestionario Arduino</div>
+            <div class="content-item">Teoría</div>
+            <div class="content-item">Proyectos</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <a href="SisProgU3.html" class="btn btn-primary"
+              >Cuestionario Arduino</a
+            >
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">⚡</div>
+            <div class="unit-title">Unidad 4</div>
+          </div>
+          <div class="unit-description">
+            Proyectos integradores y sistemas avanzados. IoT, comunicación
+            inalámbrica y control remoto de dispositivos.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Proyectos</div>
+            <div class="content-item">IoT</div>
+            <div class="content-item">Evaluación</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Proyecto Final</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Animación de entrada
+      window.addEventListener("load", function () {
+        const cards = document.querySelectorAll(".unit-card");
+        cards.forEach((card, index) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+
+          setTimeout(() => {
+            card.style.transition = "all 0.6s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, index * 150);
+        });
+      });
+    </script>
+  </body>
+</html>
