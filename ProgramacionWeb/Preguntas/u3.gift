@@ -354,3 +354,92 @@
 
 ::Variable Scope Function::Las variables declaradas con var dentro de una función tienen alcance de {=función ~bloque ~global ~objeto}.
 
+
+::Ejecución Script Cliente::¿Cuándo se ejecuta el script del lado del cliente? {=Al cargarse o en algún evento ~Solo al cargar ~Solo en eventos ~Nunca}.
+
+::Modificación Dinámica::¿El lenguaje script del lado del cliente puede modificar dinámicamente el documento? {=Sí ~No ~Solo parcialmente ~Depende del navegador}.
+
+::Vinculación Script::¿A qué se puede vincular el lenguaje script? {=A controles ~A bases de datos ~Al servidor ~Al sistema operativo}.
+
+::Script Multiejecutabl::¿Cuándo el lenguaje script es multiejecutabl? {=Cuando es una función ~Siempre ~Nunca ~Solo en bucles}.
+
+::Objetos JavaScript Tipos::¿Qué tipo de objetos permite JavaScript? {=Objetos sencillos ~Objetos complejos ~Solo primitivos ~Solo arrays}.
+
+::JavaScript OOP Carencias::¿De qué carece JavaScript siendo un lenguaje orientado a objetos? {=De herencia y polimorfismo ~De encapsulación ~De métodos ~De propiedades}.
+
+::DOM Definición::¿Qué es el DOM? {=El modelo de objetos de documento ~El método de operación de datos ~La definición de objetos múltiples ~El diseño de objetos modulares}.
+
+::DOM Función::¿Qué permite el DOM? {=Acceder a todos los elementos de una página ~Solo leer elementos ~Solo modificar estilos ~Solo manejar eventos}.
+
+::Objetos JavaScript Cantidad::¿Los objetos interconstruidos del JavaScript en cuántos y cuáles tipos tiene? {=3 Nativo, Incorporado y Anfitrión ~2 Nativo y Anfitrión ~4 Nativo, Local, Global y Anfitrión ~1 Solo Nativo}.
+
+::Objeto MATH Tipo::¿Qué tipo de objeto es MATH? {=Incorporado ~Nativo ~Anfitrión ~Global}.
+
+::Objetos Dependientes Implementación::¿Qué tipo de objetos de JavaScript son dependientes de la implementación? {=Los anfitriones ~Los nativos ~Los incorporados ~Los globales}.
+
+::JavaScript Case Sensitive::¿Es JavaScript sensitivo a mayúsculas? {=Sí ~No ~Solo en variables ~Solo en funciones}.
+
+::Terminador Instrucciones::¿Cuál es el terminador de instrucciones de JavaScript? {=\; ~\: ~\. ~\,}.
+
+::Comentarios Cantidad::¿Cuántos tipos de comentario tiene JavaScript? {=2 ~1 ~3 ~4}.
+
+::Identificador 2conejo::¿El identificador 2conejo es válido? {=No ~Sí ~Solo en modo estricto ~Depende del navegador}.
+
+::Finally Palabra Reservada::¿Es finally una palabra clave reservada? {=No ~Sí ~Solo en try-catch ~Depende de la versión}.
+
+::Declaración Variable Entera::¿Cuál es la palabra clave en JavaScript para declarar una variable entera? {=Var ~int ~integer ~number}.
+
+::Omisión Declaración Variable::¿Cuándo se puede omitir la declaración de una variable? {=Cuando es global ~Nunca ~Siempre ~Solo en funciones}.
+
+::Variables Alcance Bloque::¿Las variables de script tienen alcance de bloque? {=No ~Sí ~Solo con let ~Solo con const}.
+
+::Datos Primitivos JavaScript::¿Cuáles son los tipos de datos primitivos de JavaScript? {=3 números, booleanos y cadenas ~4 números, booleanos, cadenas y objetos ~2 números y cadenas ~5 números, booleanos, cadenas, null y undefined}.
+
+::Datos Compuestos JavaScript::¿Cuántos y cuáles son los tipos de datos compuestos de JavaScript? {=2 arreglos y objetos ~1 solo objetos ~3 arreglos, objetos y funciones ~4 arreglos, objetos, funciones y clases}.
+
+::Datos Especiales JavaScript::¿Cuántos y cuáles son los tipos de datos especiales de JavaScript? {=2 null y undefined ~1 solo undefined ~3 null, undefined y NaN ~4 null, undefined, NaN e Infinity}.
+
+::Función Expresión Cociente::La declaración de la función de expresión cociente que retorne el cociente de dos parámetros es {=Var cociente \= function\(x,y\)\{return x/y;\} ~function cociente(x,y)\{return x/y;\} ~cociente = \(x,y\) \=\> x/y ~let cociente \= x/y}.
+
+::Función Expresión Menor::La declaración de la función de expresión menor que retorne el menor de dos parámetros es {=Var menor = function\(x,y\)\{if \(x\<y\) return x else return y;\} ~function menor(x,y)\{return x<y?x\:y;\} ~menor \= \(x,y) \=> Math.min(x,y) ~let menor \= x<y}.
+
+::Ajax Definición::¿Qué es y para qué sirve Ajax? {=Es una tecnología que permite modificar dinámicamente las páginas web ~Es un lenguaje de programación ~Es un navegador web ~Es una base de datos}.
+
+
+::Ventana Emergente::El objeto que permite mostrar una ventana emergente es {=alert ~prompt ~confirm ~console}.
+
+::Objetos Dependientes::Los objetos dependientes de la implementación son los {=anfitriones ~nativos ~incorporados ~globales}.
+
+::Script Ejecución Al::El lenguaje script se puede ejecutar al {=cargarse ~iniciarse ~terminarse ~compilarse}.
+
+::Operador Comentario::¿Qué permite el operador //? {=comentario ~división ~comparación ~concatenación}.
+
+::Vinculación Web::¿A qué se puede vincular el lenguaje script en una página web? {=controles ~servidores ~bases de datos ~sistemas}.
+
+
+::Null Undefined Comparación::Los tipos null y undefined ¿cómo se consideran con el operador \=\=\=? {=diferentes ~iguales ~incompatibles ~similares}.
+
+::Validación Script::¿Qué se puede validar con el lenguaje script? {=datos ~servidores ~navegadores ~sistemas}.
+
+::Objeto Implementación::Ejemplo de objeto proporcionado por la implementación es {=Date ~Math ~String ~Number}.
+
+::Identificador Primer Carácter::¿Qué no debe de ser el primer carácter de un identificador? {=dígito ~letra ~guión bajo ~símbolo}.
+
+::Datos Compuestos Cantidad::¿Cuántos datos compuestos tiene JavaScript? {=dos ~uno ~tres ~cuatro}.
+
+::DOM Inglés::¿Cuál es el conjunto de objetos predeterminados presentes en el navegador? {=DOM ~BOM ~API ~SDK}.
+
+::Script Evento::El lenguaje script ¿se puede ejecutar en un...? {=evento ~proceso ~hilo ~servidor}.
+
+::Variables Omisión::¿Cuáles son las variables que se puede omitir su declaración? {=globales ~locales ~privadas ~estáticas}.
+
+::Script Soporte::¿Cómo es el lenguaje script con respecto al soporte? {=independiente ~dependiente ~limitado ~restringido}.
+
+::Objetos Nativos Entorno::¿Cómo son los objetos nativos respecto al entorno? {=independientes ~dependientes ~variables ~fijos}.
+
+::Objeto Incorporado Ejemplo::¿Ejemplo de objeto incorporado? {=math ~date ~window ~document}.
+
+::Objetos Implementación Cuáles::¿Cuáles son los objetos proporcionados por la implementación? {=nativos ~locales ~globales ~estáticos}.
+
+::Script Dónde Ejecuta::¿Dónde se ejecuta el lenguaje script? {=navegador ~servidor ~base de datos ~sistema operativo}.
+

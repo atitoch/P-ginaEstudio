@@ -41,6 +41,7 @@
       .header p {
         color: #666;
         font-size: 1.2em;
+        margin-bottom: 10px;
       }
 
       .breadcrumb {
@@ -63,7 +64,7 @@
 
       .units-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 25px;
       }
 
@@ -108,15 +109,15 @@
       .unit-content {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
         margin-bottom: 20px;
       }
 
       .content-item {
         background: #f8f9fa;
-        padding: 8px 15px;
-        border-radius: 20px;
-        font-size: 0.9em;
+        padding: 6px 12px;
+        border-radius: 15px;
+        font-size: 0.85em;
         color: #666;
         border: 1px solid #e9ecef;
       }
@@ -130,6 +131,30 @@
       .unit-actions {
         display: flex;
         gap: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+
+      .header .course-info {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .course-info h3 {
+        color: #4caf50;
+        margin-bottom: 10px;
+      }
+
+      .course-info p {
+        font-size: 0.95em;
+        margin-bottom: 5px;
       }
 
       .btn {
@@ -209,28 +234,53 @@
 
       <div class="header">
         <h1>🌐 Programación Web</h1>
-        <p>Desarrollo Front-end y Back-end</p>
+        <p>
+          Desarrollo de aplicaciones web dinámicas del lado cliente y del
+          servidor
+        </p>
+        <div class="course-info">
+          <h3>Información del Curso</h3>
+          <p><strong>Clave:</strong> AEB-1055</p>
+          <p><strong>Profesor:</strong> Cesar Octavio Muniz Luna</p>
+          <p>
+            <strong>Objetivo:</strong> Desarrolla aplicaciones web dinámicas del
+            lado cliente y del servidor, considerando la conectividad a orígenes
+            de datos, la interconectividad entre aplicaciones y cómputo en la
+            nube.
+          </p>
+        </div>
       </div>
 
       <div class="units-grid">
         <div class="unit-card">
           <div class="unit-header">
             <div class="unit-icon">🏗️</div>
-            <div class="unit-title">Unidad 1</div>
+            <div class="unit-title">
+              Unidad 1: Introducción a las aplicaciones web
+            </div>
           </div>
           <div class="unit-description">
-            Fundamentos de aplicaciones web: arquitectura cliente-servidor,
-            tecnologías, fases del diseño web y metodologías de desarrollo.
+            Evolución y arquitectura de aplicaciones web, tecnologías de
+            desarrollo, metodologías y planificación de proyectos web.
           </div>
           <div class="unit-content">
+            <div class="content-item available">Material de Estudio</div>
             <div class="content-item available">
               Cuestionario Aplicaciones Web
             </div>
-            <div class="content-item">Arquitectura Web</div>
-            <div class="content-item">Diseño Web</div>
+            <div class="content-item">Evolución del Diseño Web</div>
+            <div class="content-item">Arquitectura 3 Capas</div>
+            <div class="content-item">Tecnologías Clave</div>
+            <div class="content-item">Planificación de Proyectos</div>
+            <div class="content-item">Ingeniería Web</div>
           </div>
           <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button
+              class="btn btn-secondary"
+              onclick="window.location.href='MaterialU1.html'"
+            >
+              Ver Material
+            </button>
             <a href="ProgWebU1.html" class="btn btn-primary"
               >Cuestionario Aplicaciones Web</a
             >
@@ -239,63 +289,64 @@
 
         <div class="unit-card">
           <div class="unit-header">
-            <div class="unit-icon">⚡</div>
-            <div class="unit-title">Unidad 2</div>
+            <div class="unit-icon">📝</div>
+            <div class="unit-title">Unidad 2: HTML, XML y CSS</div>
           </div>
           <div class="unit-description">
-            Etiquetas HTML básicas, estructura de documentos, atributos y
-            elementos multimedia.
+            Estructura de documentos web, elementos básicos, formularios y
+            lenguajes de presentación con selectores y modelo de caja.
           </div>
           <div class="unit-content">
-            <div class="content-item">Etiquetas</div>
-            <div class="content-item">DOM</div>
+            <div class="content-item available">Material de Estudio</div>
+            <div class="content-item available">Cuestionario HTML/CSS</div>
+            <div class="content-item">Estructura Documentos</div>
+            <div class="content-item">Elementos Básicos</div>
+            <div class="content-item">Formularios</div>
+            <div class="content-item">CSS Selectores</div>
+            <div class="content-item">Modelo de Caja</div>
+          </div>
+          <div class="unit-actions">
+            <button
+              class="btn btn-secondary"
+              onclick="window.location.href='MaterialU2.html'"
+            >
+              Ver Material
+            </button>
+            <a href="ProgWebU2.html" class="btn btn-primary">
+              Cuestionario HTML/CSS
+            </a>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🖥️</div>
+            <div class="unit-title">
+              Unidad 3: Programación del lado del cliente
+            </div>
+          </div>
+          <div class="unit-description">
+            JavaScript: introducción al lenguaje, frameworks, estructuras de
+            control, manipulación del DOM y objetos nativos.
+          </div>
+          <div class="unit-content">
+            <div class="content-item available">Material de Estudio</div>
+            <div class="content-item available">Cuestionario JavaScript</div>
+            <div class="content-item">Introducción JS</div>
+            <div class="content-item">Variables y Tipos</div>
+            <div class="content-item">Estructuras Control</div>
+            <div class="content-item">Manipulación DOM</div>
+            <div class="content-item">Objetos Nativos</div>
             <div class="content-item">Eventos</div>
           </div>
           <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-primary">
-              Cuestionario de etiquetas HTML
+            <button
+              class="btn btn-secondary"
+              onclick="window.location.href='MaterialU3.html'"
+            >
+              Ver Material
             </button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">🎨</div>
-            <div class="unit-title">Unidad 3</div>
-          </div>
-          <div class="unit-description">
-            CSS avanzado, frameworks y responsive design. Bootstrap, Flexbox y
-            Grid Layout para diseños modernos.
-          </div>
-          <div class="unit-content">
-            <div class="content-item">CSS Avanzado</div>
-            <div class="content-item">Bootstrap</div>
-            <div class="content-item">Responsive</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Cuestionario</button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">🌐</div>
-            <div class="unit-title">Unidad 4</div>
-          </div>
-          <div class="unit-description">
-            JavaScript avanzado: sintaxis, tipos de datos, funciones y control
-            de flujo. Fundamentos completos del lenguaje de programación.
-          </div>
-          <div class="unit-content">
-            <div class="content-item available">Cuestionario JavaScript</div>
-            <div class="content-item">Sintaxis</div>
-            <div class="content-item">Tipos de Datos</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <a href="ProgWebU4.html" class="btn btn-primary"
+            <a href="ProgWebU3.html" class="btn btn-primary"
               >Cuestionario JavaScript</a
             >
           </div>
@@ -303,40 +354,62 @@
 
         <div class="unit-card">
           <div class="unit-header">
-            <div class="unit-icon">🚀</div>
-            <div class="unit-title">Unidad 5</div>
+            <div class="unit-icon">⚙️</div>
+            <div class="unit-title">
+              Unidad 4: Programación del lado del servidor
+            </div>
           </div>
           <div class="unit-description">
-            Frameworks modernos: React.js y Vue.js. Desarrollo de aplicaciones
-            web interactivas y componentes reutilizables.
+            PHP: introducción al lenguaje, estructuras de control, formularios,
+            objetos del servidor, clases y acceso a datos.
           </div>
           <div class="unit-content">
-            <div class="content-item">React.js</div>
-            <div class="content-item">Vue.js</div>
-            <div class="content-item">Componentes</div>
+            <div class="content-item available">Material de Estudio</div>
+            <div class="content-item">Introducción PHP</div>
+            <div class="content-item">Estructuras Control</div>
+            <div class="content-item">Formularios</div>
+            <div class="content-item">Objetos Servidor</div>
+            <div class="content-item">Clases</div>
+            <div class="content-item">Acceso Datos</div>
           </div>
           <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Cuestionario</button>
+            <button
+              class="btn btn-secondary"
+              onclick="window.location.href='MaterialU4.html'"
+            >
+              Ver Material
+            </button>
+            <button class="btn btn-secondary" disabled>Cuestionario PHP</button>
           </div>
         </div>
 
         <div class="unit-card">
           <div class="unit-header">
-            <div class="unit-icon">⚙️</div>
-            <div class="unit-title">Unidad 6</div>
+            <div class="unit-icon">☁️</div>
+            <div class="unit-title">
+              Unidad 5: Cómputo en la nube y servicios
+            </div>
           </div>
           <div class="unit-description">
-            Backend con Node.js y Express. APIs REST, bases de datos y
-            desarrollo full-stack completo.
+            Conceptos generales, tipos de servicios, patrones de diseño,
+            estándares, plataformas tecnológicas y seguridad en la nube.
           </div>
           <div class="unit-content">
-            <div class="content-item">Node.js</div>
-            <div class="content-item">Express</div>
-            <div class="content-item">APIs REST</div>
+            <div class="content-item available">Material de Estudio</div>
+            <div class="content-item">Conceptos Generales</div>
+            <div class="content-item">Tipos Servicios</div>
+            <div class="content-item">Patrones Diseño</div>
+            <div class="content-item">Estándares</div>
+            <div class="content-item">Plataformas Cloud</div>
+            <div class="content-item">Seguridad</div>
           </div>
           <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button
+              class="btn btn-secondary"
+              onclick="window.location.href='MaterialU5.html'"
+            >
+              Ver Material
+            </button>
             <button class="btn btn-secondary" disabled>Proyecto Final</button>
           </div>
         </div>

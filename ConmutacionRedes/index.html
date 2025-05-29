@@ -3,26 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistemas Programables - Material de Estudio</title>
+    <title>
+      Conmutación y Enrutamiento en Redes de Datos - Material de Estudio
+    </title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
         min-height: 100vh;
         padding: 20px;
       }
-
       .container {
         max-width: 1000px;
         margin: 0 auto;
       }
-
       .header {
         background: white;
         border-radius: 15px;
@@ -31,19 +30,16 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         text-align: center;
       }
-
       .header h1 {
-        color: #ff9800;
+        color: #9c27b0;
         font-size: 2.5em;
         margin-bottom: 10px;
       }
-
       .header p {
         color: #666;
         font-size: 1.2em;
         margin-bottom: 10px;
       }
-
       .header .course-info {
         background: #f8f9fa;
         padding: 15px;
@@ -51,17 +47,14 @@
         margin-top: 15px;
         text-align: left;
       }
-
       .course-info h3 {
-        color: #ff9800;
+        color: #9c27b0;
         margin-bottom: 10px;
       }
-
       .course-info p {
         font-size: 0.95em;
         margin-bottom: 5px;
       }
-
       .breadcrumb {
         background: rgba(255, 255, 255, 0.2);
         padding: 15px 20px;
@@ -69,68 +62,63 @@
         margin-bottom: 30px;
         color: white;
       }
-
       .breadcrumb a {
         color: white;
         text-decoration: none;
         opacity: 0.8;
       }
-
       .breadcrumb a:hover {
         opacity: 1;
       }
-
       .units-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 25px;
       }
-
       .unit-card {
         background: white;
         border-radius: 15px;
         padding: 25px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
-        border-left: 5px solid #ff9800;
+        border-left: 5px solid #9c27b0;
       }
-
       .unit-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
       }
-
       .unit-header {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
       }
-
       .unit-icon {
         font-size: 2em;
         margin-right: 15px;
-        color: #ff9800;
+        color: #9c27b0;
       }
-
       .unit-title {
         font-size: 1.4em;
         font-weight: bold;
         color: #333;
       }
-
+      .unit-period {
+        font-size: 0.85em;
+        color: #e91e63;
+        font-weight: 600;
+        margin-top: 5px;
+      }
       .unit-description {
         color: #666;
         line-height: 1.6;
         margin-bottom: 20px;
       }
-
       .unit-content {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
         margin-bottom: 20px;
       }
-
       .content-item {
         background: #f8f9fa;
         padding: 6px 12px;
@@ -139,18 +127,15 @@
         color: #666;
         border: 1px solid #e9ecef;
       }
-
       .content-item.available {
         background: #e8f5e8;
         color: #4caf50;
         border-color: #4caf50;
       }
-
       .unit-actions {
         display: flex;
         gap: 10px;
       }
-
       .btn {
         padding: 10px 20px;
         border: none;
@@ -163,32 +148,26 @@
         text-align: center;
         flex: 1;
       }
-
       .btn-primary {
-        background: #ff9800;
+        background: #9c27b0;
         color: white;
       }
-
       .btn-primary:hover {
-        background: #f57c00;
+        background: #7b1fa2;
         transform: translateY(-2px);
       }
-
       .btn-secondary {
         background: #e9ecef;
         color: #666;
       }
-
       .btn-secondary:hover {
         background: #dee2e6;
       }
-
       .btn:disabled {
         opacity: 0.5;
         cursor: not-allowed;
         transform: none;
       }
-
       .back-button {
         background: rgba(255, 255, 255, 0.2);
         color: white;
@@ -201,17 +180,14 @@
         display: inline-block;
         margin-bottom: 20px;
       }
-
       .back-button:hover {
         background: white;
-        color: #ff9800;
+        color: #9c27b0;
       }
-
       @media (max-width: 768px) {
         .units-grid {
           grid-template-columns: 1fr;
         }
-
         .unit-actions {
           flex-direction: column;
         }
@@ -221,169 +197,129 @@
   <body>
     <div class="container">
       <a href="../index.html" class="back-button">⬅ Volver al menú principal</a>
-
       <div class="breadcrumb">
-        <a href="../index.html">Inicio</a> > Sistemas Programables
+        <a href="../index.html">Inicio</a> > Conmutación y Enrutamiento en Redes
+        de Datos
       </div>
-
       <div class="header">
-        <h1>🔧 Sistemas Programables</h1>
-        <p>Sensores, Actuadores, Microcontroladores y Programación Embebida</p>
+        <h1>🔗 Conmutación y Enrutamiento en Redes de Datos</h1>
+        <p>Diseño, instalación y configuración de redes LAN inalámbricas</p>
         <div class="course-info">
           <h3>Información del Curso</h3>
-          <p><strong>Clave:</strong> SCD-1015</p>
-          <p><strong>Profesor:</strong> Cesar Octavio Muniz Luna</p>
+          <p><strong>Clave:</strong> SCD-1004</p>
+          <p><strong>Profesor:</strong> Ever Ulysses Torres Carrillo</p>
           <p>
-            <strong>Objetivo:</strong> Desarrollar la capacidad de analizar,
-            diseñar e implementar sistemas programables para la automatización
-            de procesos.
+            <strong>Objetivo:</strong> Diseña, instala y configura redes LAN
+            inalámbricas aplicando normas y estándares vigentes para la solución
+            de problemas de conectividad.
           </p>
         </div>
       </div>
-
       <div class="units-grid">
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🌐</div>
+            <div>
+              <div class="unit-title">Direccionamiento IP y Enrutamiento</div>
+            </div>
+          </div>
+          <div class="unit-description">
+            Fundamentos del direccionamiento IP con y sin clase, enrutamiento
+            estático y dinámico, y protocolos de enrutamiento modernos.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Direccionamiento IP</div>
+            <div class="content-item">VLSM</div>
+            <div class="content-item">CIDR</div>
+            <div class="content-item">Enrutamiento Estático/Dinámico</div>
+            <div class="content-item">RIP</div>
+            <div class="content-item">EIGRP</div>
+            <div class="content-item">OSPF</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🔀</div>
+            <div>
+              <div class="unit-title">Conmutación de Redes LAN</div>
+            </div>
+          </div>
+          <div class="unit-description">
+            Segmentación de dominios, métodos de conmutación y tecnologías
+            avanzadas como VLAN, VTP y Spanning Tree Protocol.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Segmentación de Dominios</div>
+            <div class="content-item">Métodos de Conmutación</div>
+            <div class="content-item">VLAN</div>
+            <div class="content-item">VTP</div>
+            <div class="content-item">STP</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
+        <div class="unit-card">
+          <div class="unit-header">
+            <div class="unit-icon">🌍</div>
+            <div>
+              <div class="unit-title">Tecnologías WAN</div>
+            </div>
+          </div>
+          <div class="unit-description">
+            Redes de área amplia, enlaces dedicados y públicos, topologías WAN y
+            tecnologías como PPP, XDSL, Frame Relay e ISDN.
+          </div>
+          <div class="unit-content">
+            <div class="content-item">Introducción WAN</div>
+            <div class="content-item">Enlaces Dedicados/Públicos</div>
+            <div class="content-item">Topologías WAN</div>
+            <div class="content-item">PPP</div>
+            <div class="content-item">XDSL</div>
+            <div class="content-item">Frame Relay</div>
+            <div class="content-item">ISDN/ATM</div>
+            <div class="content-item">VPN</div>
+          </div>
+          <div class="unit-actions">
+            <button class="btn btn-secondary" disabled>Ver Material</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
+          </div>
+        </div>
+
         <div class="unit-card">
           <div class="unit-header">
             <div class="unit-icon">📡</div>
             <div>
-              <div class="unit-title">Sensores</div>
+              <div class="unit-title">Tecnologías Inalámbricas</div>
             </div>
           </div>
           <div class="unit-description">
-            Estudio de sensores ópticos, de temperatura, presión y proximidad.
-            Tipos, funcionamiento, características y modos de comunicación.
+            Clasificación de redes inalámbricas, estándares Wi-Fi, Bluetooth,
+            configuración de dispositivos y protocolos de seguridad.
           </div>
           <div class="unit-content">
-            <div class="content-item">Sensores Ópticos</div>
-            <div class="content-item">Temperatura</div>
-            <div class="content-item">Presión</div>
-            <div class="content-item">Proximidad</div>
+            <div class="content-item">WPAN/WLAN/WMAN/WWAN</div>
+            <div class="content-item">Bluetooth</div>
+            <div class="content-item">Infrarrojo</div>
+            <div class="content-item">Wi-Fi</div>
+            <div class="content-item">WiMax</div>
+            <div class="content-item">WEP/WPA/WPA2</div>
+            <div class="content-item">Filtrado MAC</div>
           </div>
           <div class="unit-actions">
             <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Evaluación</button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">⚙️</div>
-            <div>
-              <div class="unit-title">Actuadores</div>
-            </div>
-          </div>
-          <div class="unit-description">
-            Estudio de actuadores eléctricos, mecánicos e hidráulicos. Análisis
-            de tipos, funcionamiento y comunicación.
-          </div>
-          <div class="unit-content">
-            <div class="content-item">Eléctricos</div>
-            <div class="content-item">Mecánicos</div>
-            <div class="content-item">Hidráulicos</div>
-            <div class="content-item">Comunicación</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Evaluación</button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">🔌</div>
-            <div>
-              <div class="unit-title">Microcontroladores</div>
-            </div>
-          </div>
-          <div class="unit-description">
-            Características generales de microcontroladores, familias, memoria,
-            buses y circuitería alternativa para entrada/salida.
-          </div>
-          <div class="unit-content">
-            <div class="content-item available">Cuestionario Arduino</div>
-            <div class="content-item">Características</div>
-            <div class="content-item">Displays</div>
-            <div class="content-item">Codificadores</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <a href="SisProgU3.html" class="btn btn-primary"
-              >Cuestionario Arduino</a
-            >
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">💻</div>
-            <div>
-              <div class="unit-title">Programación de Microcontroladores</div>
-            </div>
-          </div>
-          <div class="unit-description">
-            Programación de microcontroladores: modelo de programación,
-            registros, direccionamiento, instrucciones y lenguajes.
-          </div>
-          <div class="unit-content">
-            <div class="content-item">Modelo</div>
-            <div class="content-item">Registros</div>
-            <div class="content-item">Direccionamiento</div>
-            <div class="content-item">Ensamblador</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Prácticas</button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">🔗</div>
-            <div>
-              <div class="unit-title">Puertos y Buses de Comunicación</div>
-            </div>
-          </div>
-          <div class="unit-description">
-            Puertos y buses de comunicación para microcontroladores. Tipos,
-            programación, estándares y aplicaciones.
-          </div>
-          <div class="unit-content">
-            <div class="content-item">Puertos</div>
-            <div class="content-item">Buses</div>
-            <div class="content-item">Estándares</div>
-            <div class="content-item">Comunicación</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Laboratorio</button>
-          </div>
-        </div>
-
-        <div class="unit-card">
-          <div class="unit-header">
-            <div class="unit-icon">⚡</div>
-            <div>
-              <div class="unit-title">Interfaces</div>
-            </div>
-          </div>
-          <div class="unit-description">
-            Interfaces: conceptos básicos, clasificación, módulos de adquisición
-            de datos, diseño hombre-máquina y máquina-máquina.
-          </div>
-          <div class="unit-content">
-            <div class="content-item">Conceptos</div>
-            <div class="content-item">Adquisición</div>
-            <div class="content-item">Hombre-Máquina</div>
-            <div class="content-item">Máquina-Máquina</div>
-          </div>
-          <div class="unit-actions">
-            <button class="btn btn-secondary" disabled>Ver Material</button>
-            <button class="btn btn-secondary" disabled>Proyecto Final</button>
+            <button class="btn btn-secondary" disabled>Cuestionario</button>
           </div>
         </div>
       </div>
     </div>
-
     <script>
       // Animación de entrada
       window.addEventListener("load", function () {
@@ -391,7 +327,6 @@
         cards.forEach((card, index) => {
           card.style.opacity = "0";
           card.style.transform = "translateY(30px)";
-
           setTimeout(() => {
             card.style.transition = "all 0.6s ease";
             card.style.opacity = "1";
