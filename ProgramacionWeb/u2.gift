@@ -1,0 +1,547 @@
+::Pregunta 1:: ¿Cuál es la etiqueta raíz de todo documento HTML? {
+= <html>
+~ <body>
+~ <head>
+~ <DOCTYPE>
+}
+
+::Pregunta 2:: ¿Qué etiqueta contiene metadatos sobre el documento HTML? {
+= <head>
+~ <header>
+~ <body>
+~ <title>
+}
+
+::Pregunta 3:: La etiqueta <body> contiene todo el contenido visible de la página. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 4:: ¿Qué etiqueta define el título que aparece en la pestaña del navegador? {
+= <title>
+~ <h1>
+~ <header>
+~ <meta>
+}
+
+::Pregunta 5:: ¿Para qué se usa la etiqueta <meta>? {
+= Para proporcionar metadatos sobre el documento HTML
+~ Para insertar imágenes
+~ Para crear enlaces
+~ Para definir el cuerpo del documento
+}
+
+::Pregunta 6:: La etiqueta <DOCTYPE html> se coloca dentro de <head>. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 7:: ¿Qué etiqueta define la cabecera principal de una página o sección? {
+= <header>
+~ <head>
+~ <h1>
+~ <top>
+}
+
+::Pregunta 8:: ¿Cuál etiqueta se usa para definir una barra de navegación? {
+= <nav>
+~ <menu>
+~ <navigation>
+~ <navbar>
+}
+
+::Pregunta 9:: La etiqueta <main> representa el contenido principal del documento. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 10:: ¿Qué etiqueta define una sección independiente de contenido? {
+= <section>
+~ <div>
+~ <part>
+~ <segment>
+}
+
+::Pregunta 11:: ¿Para qué se usa la etiqueta <article>? {
+= Para contenido independiente que puede ser distribuido por separado
+~ Para crear artículos de noticias únicamente
+~ Para definir párrafos largos
+~ Para agrupar elementos relacionados
+}
+
+::Pregunta 12:: ¿Qué etiqueta representa contenido complementario o secundario? {
+= <aside>
+~ <sidebar>
+~ <secondary>
+~ <complement>
+}
+
+::Pregunta 13:: La etiqueta <footer> solo puede usarse al final de la página. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 14:: ¿Qué etiqueta define un párrafo en HTML? {
+= <p>
+~ <paragraph>
+~ <par>
+~ <text>
+}
+
+::Pregunta 15:: ¿Cuál es la diferencia entre <div> y <span>? {
+= <div> es un elemento de bloque, <span> es en línea
+~ No hay diferencia
+~ <div> es para texto, <span> para imágenes
+~ <span> es más grande que <div>
+}
+
+::Pregunta 16:: ¿Qué etiqueta inserta un salto de línea? {
+= <br>
+~ <break>
+~ <lb>
+~ <newline>
+}
+
+::Pregunta 17:: La etiqueta <hr> inserta una línea horizontal. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 18:: ¿Para qué se usa principalmente la etiqueta <div>? {
+= Para agrupar elementos y aplicar estilos
+~ Para crear divisiones matemáticas
+~ Para insertar imágenes
+~ Para definir encabezados
+}
+
+::Pregunta 19:: ¿Qué etiqueta crea una lista no ordenada? {
+= <ul>
+~ <ol>
+~ <list>
+~ <unordered>
+}
+
+::Pregunta 20:: ¿Cuál etiqueta se usa para listas ordenadas (numeradas)? {
+= <ol>
+~ <ul>
+~ <ordered>
+~ <numbered>
+}
+
+::Pregunta 21:: ¿Qué etiqueta define cada elemento dentro de una lista? {
+= <li>
+~ <item>
+~ <list-item>
+~ <element>
+}
+
+::Pregunta 22:: ¿Qué etiqueta se usa para listas de definición? {
+= <dl>
+~ <def>
+~ <definition>
+~ <describe>
+}
+
+::Pregunta 23:: En una lista de definición, ¿qué etiqueta define el término? {
+= <dt>
+~ <dd>
+~ <term>
+~ <def-term>
+}
+
+::Pregunta 24:: ¿Qué etiqueta contiene la descripción en una lista de definición? {
+= <dd>
+~ <dt>
+~ <desc>
+~ <definition>
+}
+
+::Pregunta 25:: ¿Qué etiqueta se usa para crear enlaces en HTML? {
+= <a>
+~ <link>
+~ <href>
+~ <url>
+}
+
+::Pregunta 26:: ¿Cuál es el atributo principal de la etiqueta <a> para definir el destino? {
+= href
+~ src
+~ link
+~ url
+}
+
+::Pregunta 27:: El atributo target \= "_blank" en un enlace\: {
+= Abre el enlace en una nueva pestaña
+~ Abre el enlace en la misma pestaña
+~ Hace que el enlace esté en blanco
+~ No hace nada
+}
+
+::Pregunta 28:: ¿Para qué se usa la etiqueta <link> en HTML? {
+= Para vincular recursos externos como CSS
+~ Para crear enlaces clickeables
+~ Para enlazar páginas internas
+~ Para definir hipervínculos
+}
+
+::Pregunta 29:: Un enlace puede apuntar a una sección específica usando\: {
+= El símbolo # seguido del id
+~ El símbolo & seguido del nombre
+~ El símbolo % seguido de la clase
+~ No es posible hacer esto
+}
+
+::Pregunta 30:: ¿Qué etiqueta define un formulario en HTML? {
+= <form>
+~ <input>
+~ <formular>
+~ <submit>
+}
+
+::Pregunta 31:: ¿Cuál es la etiqueta más versátil para campos de entrada? {
+= <input>
+~ <field>
+~ <entry>
+~ <textbox>
+}
+
+::Pregunta 32:: ¿Qué atributo de <input> define el tipo de campo? {
+= type
+~ kind
+~ field
+~ input-type
+}
+
+::Pregunta 33:: ¿Qué etiqueta crea un botón en un formulario? {
+= <button>
+~ <btn>
+~ <click>
+~ <submit>
+}
+
+::Pregunta 34:: ¿Para qué se usa la etiqueta <textarea>? {
+= Para campos de texto multilínea
+~ Para áreas de imágenes
+~ Para crear tablas
+~ Para insertar texto fijo
+}
+
+::Pregunta 35:: ¿Qué etiqueta crea una lista desplegable? {
+= <select>
+~ <dropdown>
+~ <list>
+~ <choose>
+}
+
+::Pregunta 36:: ¿Qué etiqueta define cada opción dentro de <select>? {
+= <option>
+~ <choice>
+~ <item>
+~ <value>
+}
+
+::Pregunta 37:: ¿Para qué se usa la etiqueta <label>? {
+= Para asociar texto descriptivo con campos de formulario
+~ Para crear etiquetas de precio
+~ Para marcar elementos importantes
+~ Para definir categorías
+}
+
+::Pregunta 38:: ¿Qué etiqueta agrupa campos relacionados en un formulario? {
+= <fieldset>
+~ <group>
+~ <section>
+~ <field-group>
+}
+
+::Pregunta 39:: La etiqueta <legend> se usa con\: {
+= <fieldset>
+~ <form>
+~ <input>
+~ <label>
+}
+
+
+::Pregunta 40:: ¿Qué etiqueta inserta video en HTML5? {
+= <video>
+~ <movie>
+~ <media>
+~ <film>
+}
+
+::Pregunta 41:: El atributo controls en <video> y <audio>\: {
+= Muestra los controles de reproducción
+~ Controla el volumen automáticamente
+~ Define el tamaño del reproductor
+~ No hace nada visible
+}
+
+::Pregunta 42:: ¿Qué etiqueta permite definir múltiples fuentes para video? {
+= <source>
+~ <src>
+~ <resource>
+~ <file>
+}
+
+::Pregunta 43:: El atributo autoplay hace que el video\: {
+= Se reproduzca automáticamente al cargar
+~ Se reproduzca en bucle
+~ Se pause automáticamente
+~ Se reproduzca en silencio
+}
+
+::Pregunta 44:: ¿Qué etiqueta se usa para texto preformateado? {
+= <pre>
+~ <format>
+~ <fixed>
+~ <mono>
+}
+
+::Pregunta 45:: ¿Para qué se usa la etiqueta <abbr>? {
+= Para definir abreviaciones
+~ Para texto abreviado
+~ Para crear abstracts
+~ Para alineación
+}
+
+::Pregunta 46:: ¿Qué etiqueta marca texto como una muestra de salida de programa? {
+= <samp>
+~ <output>
+~ <result>
+~ <sample>
+}
+
+::Pregunta 47:: ¿Para qué se usa la etiqueta <var>? {
+= Para representar variables en expresiones matemáticas o código
+~ Para crear variaciones de texto
+~ Para contenido variable
+~ Para versiones alternativas
+}
+
+::Pregunta 48:: La etiqueta <mark> se usa para\: {
+= Resaltar o marcar texto
+~ Crear marcadores de página
+~ Definir marcas comerciales
+~ Marcar errores
+}
+
+::Pregunta 49:: ¿Qué etiqueta representa una fecha y hora? {
+= <time>
+~ <date>
+~ <datetime>
+~ <timestamp>
+}
+
+::Pregunta 50:: ¿Para qué se usa la etiqueta <address>? {
+= Para información de contacto del autor
+~ Para direcciones de envío
+~ Para direcciones IP
+~ Para ubicaciones geográficas
+}
+
+::Pregunta 51:: ¿Qué etiqueta crea contenido que puede expandirse/contraerse? {
+= <details>
+~ <expand>
+~ <collapsible>
+~ <toggle>
+}
+
+::Pregunta 52:: ¿Qué etiqueta va dentro de <details> como título visible? {
+= <summary>
+~ <title>
+~ <header>
+~ <caption>
+}
+
+::Pregunta 53:: ¿Para qué se usa la etiqueta <dialog>? {
+= Para crear cuadros de diálogo modales
+~ Para conversaciones de chat
+~ Para diálogos de película
+~ Para comentarios
+}
+
+::Pregunta 54:: ¿Qué etiqueta se usa para incluir JavaScript? {
+= <script>
+~ <js>
+~ <javascript>
+~ <code>
+}
+
+::Pregunta 55:: ¿Para qué se usa la etiqueta <style>? {
+= Para incluir CSS interno
+~ Para definir estilos de texto
+~ Para crear diseños
+~ Para formatear párrafos
+}
+
+::Pregunta 56:: ¿Qué etiqueta proporciona texto alternativo cuando scripts no están disponibles? {
+= <noscript>
+~ <no-js>
+~ <alt-script>
+~ <fallback>
+}
+
+::Pregunta 57:: La etiqueta <base> define\: {
+= La URL base para enlaces relativos
+~ La base de datos a usar
+~ El elemento base de la página
+~ La configuración básica
+}
+
+::Pregunta 58:: ¿Para qué se usa la etiqueta <figure>? {
+= Para agrupar contenido ilustrativo con su leyenda
+~ Para crear figuras geométricas
+~ Para representar números
+~ Para cálculos matemáticos
+}
+
+::Pregunta 59:: ¿Qué etiqueta proporciona la leyenda para <figure>? {
+= <figcaption>
+~ <caption>
+~ <legend>
+~ <description>
+}
+
+::Pregunta 60:: ¿Para qué se usa la etiqueta <template>? {
+= Para definir contenido que no se renderiza inicialmente
+~ Para plantillas de diseño
+~ Para crear modelos
+~ Para duplicar elementos
+}
+
+::Pregunta 61:: ¿Cuál es la estructura básica mínima de un documento HTML5? {
+= <!DOCTYPE html>, <html>, <head>, <title>, <body>
+~ Solo <html> y <body>
+~ <DOCTYPE>, <head>, <body>
+~ <html>, <head>, <body>, <footer>
+}
+
+::Pregunta 62:: Un formulario de contacto típico incluiría\: {
+= <form>, <input>, <textarea>, <button>, <label>
+~ Solo <form> e <input>
+~ <contact>, <form>, <send>
+~ <form>, <table>, <submit>
+}
+
+::Pregunta 63:: Para crear una página de artículo semánticamente correcta usarías\: {
+= <article>, <header>, <section>, <aside>, <footer>
+~ <div>, <span>, <p>
+~ <content>, <title>, <text>
+~ Solo <article> y <p>
+}
+
+::Pregunta 64:: Una lista de navegación semánticamente correcta incluye\: {
+= <nav>, <ul>, <li>, <a>
+~ <navigation>, <list>, <link>
+~ <menu>, <item>, <href>
+~ Solo <nav> y <a>
+}
+
+::Pregunta 65:: Para incluir multimedia accesible es importante usar\: {
+= Atributos alt, controles, subtítulos y múltiples formatos
+~ Solo la etiqueta correspondiente
+~ Únicamente el atributo src
+~ Solo controles de reproducción
+}
+
+
+::Pregunta 66:: ¿Cuál etiqueta se usa para mostrar texto más pequeño en HTML? {
+= <small>
+~ <strong>
+~ <sub>
+~ <sup>
+}
+
+::Pregunta 67:: ¿Qué función tiene la etiqueta strong? {
+= Mostrar el texto en negritas con importancia semántica
+~ Aumentar la variable
+~ Crear una celda
+~ Subrayar texto
+}
+
+::Pregunta 68:: La etiqueta <sub> se usa para texto en subíndice. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 69:: ¿Qué etiqueta define texto en superíndice en HTML? {
+= <sup>
+~ <sub>
+~ <small>
+~ <u>
+}
+
+::Pregunta 70:: ¿Qué etiqueta subraya el texto? {
+= <u>
+~ <sub>
+~ <i>
+~ <table>
+}
+
+::Pregunta 71:: ¿Con qué etiqueta creo tablas en html? {
+= <table>
+~ <tab>
+~ <tbl>
+~ <grid>
+}
+
+::Pregunta 72:: ¿Qué función tiene la etiqueta th? {
+= Define un encabezado de tabla
+~ Define una celda normal
+~ Define una fila
+~ Define el título de la tabla
+}
+
+::Pregunta 73:: ¿Con qué etiqueta defino una fila en una tabla? {
+= <tr>
+~ <row>
+~ <line>
+~ <td>
+}
+
+::Pregunta 74:: ¿Con qué etiqueta defino una celda? {
+= <td>
+~ <cell>
+~ <data>
+~ <th>
+}
+
+::Pregunta 75:: ¿Qué función tiene la etiqueta caption? {
+= Definir un título para la tabla
+~ Crear una leyenda
+~ Definir un encabezado
+~ Agrupar columnas
+}
+
+::Pregunta 76:: ¿Qué utilidad se le da a la etiqueta img? {
+= Representar una imagen en la página
+~ Agregar una referencia a la imagen
+~ Poder clickear la imagen para abrir vínculos
+~ Representa un texto alterno en la imagen
+}
+
+::Pregunta 77:: ¿Cuáles son los formatos admitidos para la etiqueta img? {
+= PNG, GIF, SVG, JPEG
+~ mp4, mov, avi
+~ mp3, flac
+~ wav, amr
+}
+
+::Pregunta 78:: ¿Qué es la etiqueta audio? {
+= Etiqueta que inserta contenido de audio en una página HTML
+~ Etiqueta que inserta títulos en audio en páginas html
+~ Generador de subtítulos para audio
+~ Control de volumen
+}
+
+::Pregunta 79:: ¿Canvas puede generar contenido por sí sola? {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 80:: ¿Qué utiliza canvas para generar contenido? {
+= Hace uso de Javascript
+~ Por sí sola genera contenido
+~ Utiliza PHP para poder manejarlo
+~ Utiliza solo HTML
+}

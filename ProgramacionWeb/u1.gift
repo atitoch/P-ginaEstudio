@@ -1,0 +1,981 @@
+// === PREGUNTAS ADICIONALES - EVOLUCIÓN DE LAS APP WEB ===
+
+::Personalización Consistencia::La personalización del usuario puede afectar la {=consistencia y funcionalidad ~velocidad y rendimiento ~seguridad y privacidad ~instalación y configuración} de la aplicación.
+
+::Flash Java Uniformidad::Una ventaja adicional de Flash y Java applets era la {=uniformidad en los elementos gráficos ~velocidad de carga ~facilidad de instalación ~compatibilidad universal}.
+
+::Flash Java Implementaciones::Los problemas de compatibilidad de Flash y Java ocurrían entre diferentes {=implementaciones ~navegadores ~sistemas operativos ~usuarios}.
+
+::RIA Tecnologías::Las Aplicaciones Enriquecidas de Internet aprovechan tecnologías adicionales para proporcionar interfaces más {=avanzadas ~simples ~rápidas ~económicas}.
+
+::Ventaja Compatibilidad::Una ventaja de las aplicaciones web es la {=reducción de problemas de compatibilidad ~eliminación total de errores ~perfecta sincronización ~instalación automática}.
+
+::Primera Generación Diseño::El diseño de la primera generación era {=lineal ~circular ~modular ~jerárquico} y estaba enfocado en científicos.
+
+::Primera Generación Monitores::En la primera generación se utilizaban monitores {=monocromos ~a color ~táctiles ~curvos}.
+
+::Primera Generación Estructura::La estructura desordenada de la primera generación llevó a la creación del {=W3C ~HTML ~CSS ~JavaScript}.
+
+::W3C Objetivo::El W3C se creó para establecer estándares en HTML y {=unificar el diseño web ~crear navegadores ~desarrollar software ~entrenar programadores}.
+
+::Segunda Generación Maquetación::En la segunda generación, las tablas se usaron para organizar contenidos similar a {=libros o revistas ~periódicos ~folletos ~carteles}.
+
+::Segunda Generación Mejoras::La segunda generación tuvo mejoras en {=monitores y tarjetas gráficas ~procesadores y memoria ~discos duros y redes ~software y sistemas}.
+
+::Tercera Generación Revolución::¿Qué tecnología revolucionó el diseño web en la tercera generación?{
+=Macromedia Flash
+~Adobe Photoshop
+~Microsoft Word
+~Google Chrome
+}
+
+::Tercera Generación Experiencia::La tercera generación prestó mayor atención a la navegabilidad intuitiva y estructurada para mejorar la experiencia del {=usuario ~desarrollador ~diseñador ~administrador}.
+
+::Cuarta Generación Soporte::La diversidad de diseños en la cuarta generación fue posible gracias al soporte mejorado de los {=navegadores ~servidores ~sistemas operativos ~procesadores}.
+
+::Cuarta Generación Variedad::La cuarta generación ofreció una amplia variedad de {=estilos y funcionalidades ~colores y formas ~tamaños y formatos ~idiomas y regiones}.
+
+::Quinta Generación Televisión::La quinta generación se caracteriza por la integración de televisión {=IP o televisión online ~satelital ~por cable ~terrestre}.
+
+::Quinta Generación Tendencia::Hooping.tv marca una nueva {=tendencia en el diseño web ~era de la programación ~fase del desarrollo ~etapa de la tecnología}.
+
+::Aplicaciones Cliente Ligero::El uso práctico del navegador como cliente {=ligero ~pesado ~completo ~robusto} es una característica de las aplicaciones web.
+
+::DOM Estándar::Además de HTML y CSS, los navegadores modernos siguen el estándar {=DOM ~XML ~JSON ~SOAP}.
+
+::Adherencia Estándares::Un problema común es la falta de {=adherencia a los estándares ~velocidad de carga ~memoria disponible ~espacio en disco} por algunos navegadores.
+
+::Plug-ins Dependencia::Una desventaja de Flash y Java applets era la dependencia de {=complementos (plug-ins) ~sistemas operativos ~navegadores específicos ~conexiones rápidas}.
+
+::AJAX Framework::AJAX es un ejemplo de {=framework ~lenguaje ~navegador ~sistema operativo} para interactividad en tiempo real.
+
+::Tres Capas Presentación::En el modelo de tres capas, la presentación utiliza {=Navegador (HTML/CSS/JS) ~Servidor (PHP/Python) ~Base de datos (MySQL) ~Red (TCP/IP)}.
+
+::Tres Capas Lógica::En el modelo de tres capas, la lógica utiliza {=Servidor (PHP, Python, etc.) ~Navegador (HTML/CSS/JS) ~Base de datos (MySQL) ~Cliente (JavaScript)}.
+
+::Tres Capas Base Datos::En el modelo de tres capas, la base de datos incluye {=MySQL, PostgreSQL ~HTML, CSS ~PHP, Python ~Flash, Java}.
+
+::Mosaic Combinación::La página web Mosaic combinaba {=imágenes y texto ~solo imágenes ~solo texto ~videos y audio} aunque con limitaciones técnicas.
+
+::Mosaic Limitaciones::Mosaic tenía limitaciones {=técnicas ~económicas ~legales ~comerciales} a pesar de combinar imágenes y texto.
+
+::Primera Generación Transmisión::Las velocidades lentas de la primera generación se debían a la transmisión de datos por {=MODEM ~fibra óptica ~cable ethernet ~WiFi}.
+
+::Herramientas Avanzadas APIs::¿Cuáles son ejemplos de herramientas avanzadas mencionadas como APIs?{
+~%50%IndexedDB
+~%50%WebRTC
+~%-25%MySQL
+~%-25%HTML5
+}
+
+::WebGL Soporte::WebGL es mencionado como un soporte {=multimedia ~de navegadores ~de sistemas ~de redes} en las tecnologías clave.
+
+::Quinta Generación Empresas::Hooping.tv ofrece soluciones específicamente para {=empresas y organizaciones ~usuarios domésticos ~estudiantes universitarios ~desarrolladores independientes}.
+
+// ...existing code...
+
+// === ARQUITECTURA DE APLICACIONES WEB ===
+
+::Evolución Apps Web::Las aplicaciones web se han convertido en complejos sistemas con interfaces de usuario cada vez más parecidas a las aplicaciones de {=escritorio ~móviles ~consola ~servidores}.
+
+::Requisitos Apps Web::Las aplicaciones web modernas tienen requisitos estrictos de {=accesibilidad y respuesta ~velocidad únicamente ~solo diseño ~compatibilidad limitada}.
+
+::Reflexiones Arquitectura::La complejidad de las aplicaciones web ha exigido reflexiones sobre la mejor {=arquitectura ~programación ~instalación ~comercialización} y las técnicas de diseño más adecuadas.
+
+::Concepto Arquitectura::Una arquitectura define un conjunto de elementos, conectores, restricciones y un sistema de {=control ~archivos ~usuarios ~navegadores} que caracterizan a un sistema.
+
+::Arquitectura Web Básica::Para abrir una página web en un navegador, se teclea el correspondiente {=URL ~IP ~DNS ~FTP} o a través de un hiperenlace.
+
+::Protocolo Solicitud::La solicitud de una página web se realiza mediante el protocolo {=HTTP ~FTP ~SMTP ~TCP}.
+
+::Servidor Web Proceso::Cuando el servidor web recibe una solicitud, localiza la página web en su sistema de {=ficheros ~memoria ~red ~usuarios} y la envía de vuelta al navegador.
+
+::Modelo Cliente Servidor::La arquitectura cliente-servidor es un modelo de aplicación {=distribuida ~centralizada ~local ~individual} en el que las tareas se reparten entre proveedores y demandantes.
+
+::Servidores Proveedores::En el modelo cliente-servidor, los {=servidores ~clientes ~navegadores ~usuarios} son los proveedores de recursos o servicios.
+
+::Clientes Demandantes::En el modelo cliente-servidor, los {=clientes ~servidores ~protocolos ~archivos} son los demandantes de recursos o servicios.
+
+::Cliente Peticiones::Un cliente realiza {=peticiones ~respuestas ~archivos ~protocolos} a otro programa llamado servidor.
+
+::Páginas Web Modelo::La mayoría de páginas web usan modelo {=cliente-servidor ~peer-to-peer ~centralizado ~distribuido}.
+
+::Remitente Cliente::El remitente es quien hace la solicitud, también conocido como {=cliente ~servidor ~protocolo ~receptor}.
+
+::Cliente Inicia::¿Cuál es una característica del cliente?{
+=Es quien inicia solicitudes o peticiones
+~Procesa las solicitudes recibidas
+~Almacena los datos principales
+~Controla la red completa
+}
+
+::Cliente Respuestas::El cliente {=espera y recibe ~envía y procesa ~almacena y distribuye ~controla y gestiona} las respuestas del servidor.
+
+::Cliente Conexiones::Por lo general, un cliente puede conectarse a {=varios servidores ~un solo servidor ~ningún servidor ~solo bases de datos} a la vez.
+
+::Cliente GUI::Normalmente el cliente interactúa directamente con los usuarios finales mediante una {=GUI ~CLI ~API ~URL}.
+
+::Receptor Servidor::El receptor es quien recibe la solicitud del cliente, también conocido como {=servidor ~remitente ~protocolo ~navegador}.
+
+::Servidor Espera::Los servidores {=esperan a que lleguen las solicitudes ~envían peticiones constantemente ~procesan datos internamente ~se conectan a clientes} de los clientes.
+
+::Servidor Proceso::Tras la recepción de una solicitud, el servidor la {=procesa y luego envía la respuesta ~almacena permanentemente ~reenvía a otros clientes ~elimina automáticamente} al cliente.
+
+::Servidor Conexiones::Por lo general, los servidores aceptan conexiones desde un {=gran número de clientes ~solo un cliente ~número limitado fijo ~máximo de tres clientes}.
+
+::Ventajas Cliente Servidor::¿Cuáles son ventajas del modelo cliente-servidor?{
+~%33.33%Centralización del control
+~%33.33%Escalabilidad
+~%33.33%Fácil mantenimiento
+~%-50%Mayor complejidad
+}
+
+::Desventaja Congestión::Una desventaja del modelo cliente-servidor es la {=congestión del tráfico ~facilidad de uso ~bajo costo ~perfecta escalabilidad}.
+
+::Desventaja Cliente Recursos::El cliente no dispone de los {=recursos que pueden existir en el servidor ~protocolos necesarios ~permisos de administrador ~sistemas operativos adecuados}.
+
+::Arquitectura 3 Niveles::En la arquitectura de 3 niveles, el cliente es quien {=solicita recursos ~proporciona datos ~procesa aplicaciones ~almacena información}.
+
+::Cliente Interfaz::El cliente está equipado con una interfaz de usuario, generalmente un {=navegador web ~servidor de aplicaciones ~base de datos ~protocolo HTTP}.
+
+::Servidor Aplicaciones::El servidor de aplicaciones tiene la tarea de {=proporcionar los recursos solicitados ~presentar la interfaz ~almacenar datos únicamente ~conectar usuarios}.
+
+::Servidor Aplicaciones Requiere::El servidor de aplicaciones requiere de {=otro servidor ~solo memoria ~únicamente procesador ~solo red} para proporcionar recursos.
+
+::Servidor Datos::El servidor de datos es el que {=proporciona al servidor de aplicaciones los datos ~presenta la interfaz al usuario ~procesa las aplicaciones ~gestiona las conexiones}.
+
+::Capa Presentación Elementos::¿Qué elementos pertenecen a la capa de presentación?{
+~%33.33%Navegador web
+~%33.33%Formularios
+~%33.33%Informes
+~%-50%Base de datos
+}
+
+::Capa Presentación Tecnologías::¿Qué tecnologías se usan en la capa de presentación?{
+~%33.33%HTML
+~%33.33%JavaScript
+~%33.33%XML
+~%-50%MySQL
+}
+
+::Capa Negocio Elementos::¿Qué elementos pertenecen a la capa de negocio?{
+~%25%Reglas
+~%25%Validaciones
+~%25%Cálculos
+~%25%Flujos
+~%-50%Formularios
+}
+
+::Capa Negocio Tecnologías::¿Qué tecnologías se usan en la capa de negocio?{
+~%33.33%Java
+~%33.33%C++/C#
+~%33.33%PHP
+~%-50%HTML
+}
+
+::Capa Datos Elementos::¿Qué elementos pertenecen a la capa de datos?{
+~%25%Base de datos
+~%25%Tablas
+~%25%Procedimientos almacenados
+~%25%Componentes de datos
+~%-50%Formularios
+}
+
+::Capa Datos Tecnologías::¿Qué tecnologías se mencionan para la capa de datos?{
+~%50%MySQL
+~%50%DBase
+~%-25%JavaScript
+~%-25%HTML
+}
+
+::Navegación 3 Capas::Al conectarnos a internet estamos navegando en {=3 ~2 ~4 ~5} capas.
+
+::Formulario Capa::Al abrir un formulario web de inscripción corresponde a la capa de {=presentación ~negocio ~datos ~red}.
+
+::Verificación Capa::Después de enviar la información, esta es verificada en la capa de {=negocios ~presentación ~datos ~protocolos}.
+
+::Grabación Capa::Finalmente la información es grabada en una base de datos correspondiente a la capa de {=datos ~presentación ~negocios ~aplicación}.
+
+::Protocolo Definición::Un protocolo es un método estándar que permite la {=comunicación entre procesos ~instalación de software ~diseño de interfaces ~almacenamiento de datos}.
+
+::Protocolo Reglas::Un protocolo es un conjunto de {=reglas y procedimientos ~archivos y carpetas ~usuarios y permisos ~navegadores y servidores} para el envío y recepción de datos.
+
+::Protocolos Internet::En Internet, los protocolos utilizados pertenecen al conjunto denominado {=TCP/IP ~HTTP/FTP ~HTML/CSS ~XML/JSON}.
+
+::HTTP Protocolo::El protocolo HTTP significa {=Protocolo de transferencia de hipertexto ~Protocolo de transmisión de texto ~Protocolo de transferencia de archivos ~Protocolo de transmisión de datos}.
+
+::HTTP Más Utilizado::El protocolo {=HTTP ~FTP ~SMTP ~TCP} es el protocolo más utilizado en Internet.
+
+::HTTP Permite::El protocolo HTTP permite la transferencia de archivos principalmente en formato {=HTML ~XML ~JSON ~PDF} entre navegador y servidor.
+
+::HTTP Cliente Servidor::La comunicación HTTP se lleva a cabo entre un {=navegador ~protocolo ~archivo ~usuario} (cliente) y un servidor web.
+
+::URL Cadena::El servidor web se localiza mediante una cadena de caracteres denominada dirección {=URL ~IP ~DNS ~HTTP}.
+
+::HTTP Etapas::La comunicación entre navegador y servidor HTTP se lleva a cabo en {=dos ~tres ~cuatro ~cinco} etapas.
+
+::HTTP Primera Etapa::En la primera etapa de comunicación HTTP, el {=navegador realiza una solicitud ~servidor envía respuesta ~cliente procesa datos ~usuario introduce URL}.
+
+::HTTP Segunda Etapa::En la segunda etapa de comunicación HTTP, el servidor {=procesa la solicitud y envía una respuesta ~recibe únicamente datos ~almacena información ~conecta con otros servidores}.
+
+::FTP Protocolo::El protocolo FTP significa {=Protocolo de transferencia de archivos ~Protocolo de transferencia de texto ~Protocolo de formato de archivos ~Protocolo de filtrado de archivos}.
+
+::FTP Transferir::El protocolo FTP es un protocolo para {=transferir archivos ~crear páginas web ~enviar correos ~navegar por internet}.
+
+::FTP Define::El protocolo FTP define la manera en que los datos deben ser transferidos a través de una red {=TCP/IP ~HTTP ~HTML ~XML}.
+
+::FTP Objetivos::¿Cuáles son objetivos del protocolo FTP?{
+~%33.33%Permitir que equipos remotos puedan compartir archivos
+~%33.33%Permitir la independencia entre sistemas de archivo
+~%33.33%Permitir una transferencia de datos eficaz
+~%-50%Crear páginas web dinámicas
+}
+
+::SMTP Protocolo::El protocolo SMTP significa {=Protocolo simple de transferencia de correo ~Protocolo seguro de transmisión de mensajes ~Protocolo simple de transferencia de mensajes ~Protocolo de servicio de correo}.
+
+::SMTP Estándar::SMTP es el protocolo {=estándar ~opcional ~alternativo ~experimental} que permite la transferencia de correo de un servidor a otro.
+
+::SMTP Conexión::SMTP permite transferencia de correo mediante una conexión {=punto a punto ~multipunto ~broadcast ~multicast}.
+
+::SMTP Modelo::SMTP se basa en el modelo {=cliente-servidor ~peer-to-peer ~distribuido ~centralizado} donde un cliente envía mensaje a receptores.
+
+// ...existing code...
+
+// === TECNOLOGÍAS PARA EL DESARROLLO DE APLICACIONES WEB ===
+
+::Modelo Cliente Servidor División::El modelo cliente/servidor divide los sistemas informáticos en {=dos partes principales ~tres componentes ~cuatro niveles ~múltiples capas}.
+
+::Cliente Dispositivo::En el modelo cliente/servidor, el cliente es el dispositivo que {=inicia una solicitud ~responde peticiones ~almacena datos ~gestiona servidores}.
+
+::Servidor Responde::En el modelo cliente/servidor, el servidor {=responde a la solicitud proporcionando recursos ~inicia las comunicaciones ~almacena únicamente ~procesa localmente}.
+
+::Arquitectura Capas Desarrollo::En el desarrollo de software, una aplicación se puede dividir en capas lógicas para mejorar su {=organización y mantenimiento ~velocidad de ejecución ~consumo de memoria ~costo de desarrollo}.
+
+::Arquitectura 2 Capas División::La arquitectura de 2 capas se divide en{
+~%50%Capa de presentación y lógica (P+L)
+~%50%Capa de datos (D)
+~%-25%Capa de negocio
+~%-25%Capa de red
+}
+
+::Capa PL Maneja::La capa de presentación y lógica (P+L) maneja{
+~%50%la interfaz de usuario
+~%50%parte de la lógica del negocio
+~%-25%solo almacenamiento
+~%-25%únicamente redes
+}
+
+::Capa Datos Encargada::La capa de datos (D) está encargada del {=almacenamiento y gestión de información ~diseño de interfaces ~procesamiento gráfico ~control de usuarios}.
+
+::Desventajas 2 Capas::¿Cuáles son desventajas de la arquitectura de 2 capas?{
+~%33.33%Las aplicaciones suelen ser monolíticas y difíciles de mantener
+~%33.33%Alto consumo de recursos en el cliente
+~%33.33%Dificultad para reutilizar la lógica en otras aplicaciones
+~%-50%Mejor rendimiento general
+}
+
+::Arquitectura 3 Capas Tercera::La arquitectura de 3 capas introduce una {=tercera capa intermedia ~cuarta capa adicional ~segunda interfaz ~primera conexión} separando mejor las responsabilidades.
+
+::Tres Capas Presentación::En la arquitectura de 3 capas, la capa de presentación maneja la {=interfaz gráfica para el usuario ~lógica de negocios ~persistencia de datos ~comunicación de red}.
+
+::Tres Capas Lógica Negocios::En la arquitectura de 3 capas, la capa de lógica de negocios se encarga del {=procesamiento de reglas empresariales ~diseño de interfaces ~almacenamiento de datos ~control de hardware}.
+
+::Tres Capas Persistencia::En la arquitectura de 3 capas, la capa de persistencia maneja el {=almacenamiento de datos en bases de datos ~diseño gráfico ~procesamiento local ~control de usuarios}.
+
+::Ventajas 3 Capas::¿Cuáles son ventajas de la arquitectura de 3 capas?{
+~%33.33%Facilita la reutilización del código
+~%33.33%Permite escalar mejor la aplicación
+~%33.33%Independiza la lógica de negocio de la interfaz gráfica
+~%-50%Mayor complejidad de desarrollo
+}
+
+::Distribución Lineal::En la distribución lineal, cada componente lógico se ubica en un {=nodo diferente ~mismo servidor ~cliente único ~navegador específico} permitiendo mejor distribución de la carga.
+
+::Distribución Monolítica::En la distribución monolítica, toda la aplicación se ejecuta en {=un solo nodo ~múltiples servidores ~varios clientes ~diferentes navegadores} sin aprovechar los beneficios del cliente/servidor.
+
+::Distribución Web::La distribución orientada al web utiliza servidores web para{
+~%50%gestionar la interfaz de usuario
+~%50%distribuir dinámicamente el contenido
+~%-25%almacenar únicamente datos
+~%-25%procesar solo imágenes
+}
+
+::Distribución Componentes::La distribución de componentes permite dividir los componentes entre varios servidores para mejorar{
+~%50%el rendimiento
+~%50%la modularidad
+~%-25%el costo
+~%-25%la simplicidad
+}
+
+::Modelo Clásico Cliente::En el modelo clásico, el cliente gestiona {=la interfaz de usuario ~la lógica de negocios ~las bases de datos ~los servidores web}.
+
+::Modelo Clásico Servidor::En el modelo clásico, el servidor gestiona {=la lógica de negocios ~la interfaz de usuario ~solo presentación ~únicamente gráficos}.
+
+::Modelo Clásico Middleware::El modelo clásico usa middleware como{
+~%50%ORB
+~%50%sockets
+~%-25%HTML
+~%-25%CSS
+} para la comunicación.
+
+::Modelo Contenido Dinámico::El modelo de contenido dinámico utiliza tecnologías como{
+~%25%CGI
+~%25%Servlets
+~%25%JSP
+~%25%ASP
+~%-50%HTML estático
+} para generar contenido dinámico.
+
+::Contenido Dinámico Ventajas::El modelo de contenido dinámico{
+~%50%mejora la flexibilidad
+~%50%reduce la carga en los clientes
+~%-25%aumenta la complejidad
+~%-25%limita las funcionalidades
+}.
+
+::Modelo Componentes Gráficos Cliente::El modelo de componentes gráficos usa un {=navegador web ~servidor dedicado ~programa específico ~sistema operativo} como cliente.
+
+::Componentes Gráficos Lógica::En el modelo de componentes gráficos, la lógica reside en un servidor que maneja los {=componentes gráficos descargados por el cliente ~archivos estáticos únicamente ~datos sin procesar ~protocolos de red}.
+
+::Lenguajes C Plus::C++ es un lenguaje {=rápido, pero difícil de mantener ~lento, pero fácil de usar ~simple y eficiente ~complejo y lento}.
+
+::Lenguajes Visual Basic::Visual Basic es {=fácil de aprender, pero limitado en escalabilidad ~difícil de usar, pero muy escalable ~complejo, pero rápido ~simple y muy escalable}.
+
+::Lenguajes Java::Java es {=independiente de la plataforma y orientado a objetos ~dependiente del sistema y procedimental ~solo para web y estructurado ~únicamente móvil y funcional}.
+
+::Lenguajes Perl::Perl es {=útil para manipulación de texto y bases de datos ~solo para gráficos y multimedia ~únicamente para redes y seguridad ~exclusivo para interfaces y diseño}.
+
+::Middleware Sockets::Los sockets proporcionan {=comunicación de bajo nivel entre cliente y servidor ~interfaces gráficas avanzadas ~almacenamiento de datos ~procesamiento de imágenes}.
+
+::Middleware ORB::ORB (Object Request Broker) {=facilita la comunicación entre objetos distribuidos ~gestiona únicamente bases de datos ~procesa solo interfaces ~controla exclusivamente redes}.
+
+::Middleware HTTP::HTTP es el {=protocolo estándar para la web ~lenguaje de programación principal ~sistema operativo web ~navegador más usado}.
+
+::CGI Generación::CGI {=ejecuta programas en el servidor para generar páginas web ~solo diseña interfaces estáticas ~únicamente almacena datos ~exclusivamente gestiona usuarios}.
+
+::Servlets Manejo::Los Servlets {=manejan solicitudes web dentro del servidor ~solo procesan imágenes ~únicamente almacenan archivos ~exclusivamente gestioann CSS}.
+
+::JSP Contenido::JSP {=permite generar contenido dinámico con Java ~solo crea páginas estáticas ~únicamente maneja CSS ~exclusivamente procesa imágenes}.
+
+::ASP Tecnología::ASP es {=tecnología de Microsoft para contenido dinámico ~lenguaje de programación de Google ~sistema operativo de Apple ~navegador de Mozilla}.
+
+::Desarrollo Web Creación::El desarrollo web abarca la creación de aplicaciones {=accesibles en internet ~solo locales ~únicamente móviles ~exclusivamente de escritorio}.
+
+::Desarrollo Web Áreas::El desarrollo web se divide en {=tres ~dos ~cuatro ~cinco} áreas principales.
+
+::Frontend Cliente::El Frontend (Cliente) maneja la interfaz con tecnologías como{
+~%33.33%HTML
+~%33.33%CSS
+~%33.33%JavaScript
+~%-50%MySQL
+}.
+
+::Backend Servidor::El Backend (Servidor) gestiona la lógica de negocio y las bases de datos con lenguajes como{
+~%25%Python
+~%25%Node.js
+~%25%PHP
+~%25%Java
+~%-50%HTML
+}.
+
+::Full Stack::Full Stack {=combina ambas áreas para construir aplicaciones completas ~solo maneja frontend ~únicamente gestiona backend ~exclusivamente diseña interfaces}.
+
+::Importancia Presencia::El desarrollo web facilita la {=presencia digital de empresas y emprendedores ~comunicación interna únicamente ~procesos manuales exclusivamente ~operaciones offline solamente}.
+
+::Importancia Economía::El desarrollo web impulsa la economía digital incluyendo{
+~%33.33%E-commerce
+~%33.33%fintech
+~%33.33%SaaS
+~%-50%agricultura tradicional
+}.
+
+::Importancia Accesibilidad::El desarrollo web permite {=accesibilidad global, optimizando aplicaciones para dispositivos móviles ~acceso solo local ~uso únicamente en computadoras ~funcionamiento offline exclusivamente}.
+
+::Tecnologías Emergentes::El desarrollo web incorpora tecnologías emergentes como{
+~%33.33%IA
+~%33.33%blockchain
+~%33.33%PWA
+~%-50%máquinas de escribir
+}.
+
+::HTML Función::HTML {=define la estructura de las páginas web ~aplica estilos visuales ~agrega interactividad ~gestiona bases de datos}.
+
+::CSS Función::CSS {=aplica estilos y diseño responsivo ~define estructura HTML ~agrega lógica de programación ~gestiona servidores}.
+
+::JavaScript Función::JavaScript {=agrega interactividad y manipulación del DOM ~define estructura de páginas ~aplica solo estilos ~gestiona únicamente bases de datos}.
+
+::React Características::React.js está {=basado en componentes reutilizables y SPA ~orientado solo a backend ~diseñado únicamente para móviles ~enfocado exclusivamente en bases de datos}.
+
+::Angular Framework::Angular es un framework {=estructurado con TypeScript ~solo para CSS ~únicamente para HTML ~exclusivamente para imágenes}.
+
+::Vue Características::Vue.js tiene {=sintaxis sencilla, ideal para proyectos escalables ~estructura compleja y limitada ~enfoque solo en backend ~orientación únicamente a bases de datos}.
+
+::CSS Frameworks::¿Cuáles son ejemplos de CSS Frameworks?{
+~%33.33%Bootstrap
+~%33.33%Tailwind CSS
+~%33.33%Material UI
+~%-50%MySQL
+}
+
+::Node Características::Node.js es {=rápido y eficiente para aplicaciones en tiempo real ~lento y limitado para web ~solo para bases de datos ~únicamente para diseño}.
+
+::Python Backend::Python con Django y Flask ofrece {=seguridad y escalabilidad ~solo diseño visual ~únicamente procesamiento local ~exclusivamente interfaces}.
+
+::PHP Uso::PHP con Laravel es {=popular en sitios dinámicos y CMS ~usado solo en aplicaciones móviles ~enfocado únicamente en juegos ~diseñado exclusivamente para gráficos}.
+
+::Java Enterprise::Java con Spring Boot es {=ideal para sistemas empresariales ~solo para aplicaciones simples ~únicamente para diseño web ~exclusivamente para móviles}.
+
+::Ruby Rails::Ruby on Rails permite {=desarrollo ágil y sencillo ~programación compleja y lenta ~solo diseño visual ~únicamente bases de datos}.
+
+::NoSQL Bases::Las bases NoSQL como MongoDB y Redis manejan {=datos flexibles y de rápido crecimiento ~solo datos estructurados ~únicamente texto ~exclusivamente imágenes}.
+
+::SQL Bases::Las bases SQL como MySQL y PostgreSQL manejan {=datos organizados en tablas ~solo archivos multimedia ~únicamente gráficos ~exclusivamente audio}.
+
+::REST Arquitectura::REST es {=arquitectura estándar para intercambio de datos ~lenguaje de programación específico ~sistema operativo web ~navegador especializado}.
+
+::GraphQL Alternativa::GraphQL es {=alternativa flexible a REST ~igual que REST ~sistema de bases de datos ~lenguaje de programación}.
+
+::MERN Stack::MERN incluye{
+~%25%MongoDB
+~%25%Express.js
+~%25%React
+~%25%Node.js
+~%-50%Python
+} usando JavaScript en todas las capas.
+
+::MEAN Stack::MEAN es similar a MERN pero usa {=Angular ~React ~Vue ~jQuery} en lugar de React.
+
+::LAMP Stack::LAMP incluye{
+~%25%Linux
+~%25%Apache
+~%25%MySQL
+~%25%PHP
+~%-50%JavaScript
+} y es tradicional y estable.
+
+::Django React::Django + React es una {=potente combinación Python + JS ~arquitectura solo backend ~framework únicamente frontend ~sistema solo de bases de datos}.
+
+::Git Control::Git, GitHub y GitLab son herramientas de {=control de versiones ~diseño gráfico ~bases de datos ~solo testing}.
+
+::CI CD Tools::Jenkins y GitLab CI/CD proporcionan {=integración y despliegue continuo ~solo diseño visual ~únicamente testing ~exclusivamente documentación}.
+
+::Docker Kubernetes::Docker y Kubernetes ofrecen{
+~%50%virtualización
+~%50%orquestación de aplicaciones
+~%-25%diseño gráfico
+~%-25%solo documentación
+}.
+
+::Cloud Computing::AWS, Google Cloud y Azure proporcionan {=infraestructura escalable en la nube ~solo almacenamiento local ~únicamente procesamiento offline ~exclusivamente diseño web}.
+
+// ...existing code...
+
+// === FASES DEL DISEÑO WEB ===
+
+::Diseño Web Proceso::El diseño web es un proceso {=elaborado que está formado por varias fases ~simple de una sola etapa ~automático sin intervención ~básico de dos pasos}.
+
+::Proyecto Grande Fases::Cuanto más grande es el proyecto, {=más fases puede tener ~menos etapas requiere ~igual número de pasos ~menor complejidad presenta}.
+
+::Fases Básicas Diseño::Las fases básicas del diseño web son aquellas con las que cuentan {=todos los proyectos ~solo proyectos grandes ~únicamente proyectos simples ~exclusivamente proyectos comerciales}.
+
+::Fases Diseño Web::¿Cuáles son las tres fases básicas del diseño web?{
+~%33.33%Análisis y definición del diseño web
+~%33.33%Creación de la página web de acuerdo al diseño web establecido
+~%33.33%Programación de la navegabilidad de las páginas web del sitio
+~%-50%Documentación del proyecto
+}
+
+::Análisis Definición Fase::En la fase de análisis y definición se estudia la {=imagen que debe tener la página web de acuerdo al objetivo ~programación de la navegabilidad ~implementación del diseño ~documentación del proyecto}.
+
+::Primera Visión::La fase de análisis y definición es donde se genera una primera visión del {=diseño que presentarán las páginas web del sitio ~código de programación ~base de datos ~servidor web}.
+
+::Creación Página Boceto::Después de aprobar el {=boceto del diseño web ~código de programación ~base de datos ~servidor de aplicaciones} se procede a la implementación del diseño como página web.
+
+::Implementación Elementos::En la creación de la página web se implementa el diseño con{
+~%25%cabeceras
+~%25%menús
+~%25%animaciones
+~%25%imágenes
+~%-50%bases de datos
+}.
+
+::Programación Navegabilidad::Una vez creadas y estructuradas las páginas web, se procede a programar su {=navegabilidad y funcionalidad ~base de datos y servidores ~documentación y manuales ~testing y validación}.
+
+::Correcta Presentación::La programación de navegabilidad busca una correcta presentación de las páginas web tal y como se define en el {=diseño web original ~código fuente ~base de datos ~servidor web}.
+
+::Diseño Web Abanico::El diseño web contiene un {=amplio abanico de posibilidades ~limitado conjunto de opciones ~único tipo de implementación ~restringido número de alternativas}.
+
+::Variedad Tipos::El amplio abanico de posibilidades lleva a una {=amplia variedad de tipos de diseño web ~única forma de diseño ~limitada creatividad ~escasa flexibilidad}.
+
+::Tipos Diseño Web::¿Cuáles son los tres tipos principales de diseño web mencionados?{
+~%33.33%Diseño web avanzado
+~%33.33%Diseño web clásico
+~%33.33%Diseño web industrial
+~%-50%Diseño web móvil
+}
+
+::Diseño Avanzado Orientado::El diseño web avanzado está orientado a {=profesionales ~estudiantes ~usuarios básicos ~empresas tradicionales} que quieren contar con nuevas tecnologías.
+
+::Diseño Avanzado Demandado::El diseño web avanzado es demandado principalmente por{
+~%50%empresas tecnológicas
+~%50%clientes relacionados con el mundo audiovisual
+~%-25%empresas tradicionales
+~%-25%usuarios domésticos
+}.
+
+::Funcionalidades Avanzadas::¿Cuáles son funcionalidades del diseño web avanzado?{
+~%20%Animaciones interactivas
+~%20%Optimización para dispositivos móviles
+~%20%Búsqueda con filtros avanzados
+~%20%Formularios avanzados
+~%20%Mapas interactivos
+~%-50%Solo texto plano
+}
+
+::Diseño Clásico Tradicional::El diseño web clásico es el diseño web {=tradicional ~moderno ~avanzado ~experimental} utilizando elementos básicos.
+
+::Elementos Básicos Clásico::El diseño web clásico utiliza elementos básicos como{
+~%50%texto
+~%50%imágenes
+~%-25%videos
+~%-25%animaciones
+}.
+
+::Diseño Clásico Prescinde::El diseño web clásico prescinde de elementos como{
+~%33.33%flash
+~%33.33%video streaming
+~%33.33%cualquier tecnología avanzada
+~%-50%texto e imágenes
+}.
+
+::Diseño Industrial Encarga::El diseño web industrial se encarga de las páginas web para {=industrias ~entretenimiento ~educación ~deportes}.
+
+::Webs Corporativas Objetivo::Las webs corporativas del diseño industrial tienen como objetivo {=representar la imagen de la empresa ~vender productos online ~educar usuarios ~entretener visitantes}.
+
+::Ejemplos Industrial::Algunos ejemplos de diseño web industrial son los sitios web de{
+~%33.33%New Holland
+~%33.33%Davenport Machine
+~%33.33%transporte neumático de materiales industriales
+~%-50%redes sociales
+}.
+
+::Características Industrial::¿Cuáles son características del diseño web industrial?{
+~%20%Páginas técnicas de productos
+~%20%Estudios de casos
+~%20%Logotipos de socios
+~%20%Servicios
+~%20%Testimonios de clientes
+~%-50%Entretenimiento multimedia
+}
+
+// === METODOLOGÍAS PARA EL DESARROLLO DE APLICACIONES WEB ===
+
+::Desarrollo Crecimiento::El desarrollo de aplicaciones web ha crecido significativamente debido a{
+~%50%la expansión del comercio electrónico
+~%50%la digitalización de organizaciones
+~%-25%la reducción de costos
+~%-25%la simplicidad técnica
+}.
+
+::Evolución Constante::El crecimiento ha generado una {=evolución constante ~estancamiento tecnológico ~reducción de opciones ~simplificación extrema} en la forma de crear, gestionar y optimizar aplicaciones.
+
+::Desafíos Importantes::La evolución plantea desafíos importantes en términos de{
+~%33.33%calidad
+~%33.33%seguridad
+~%33.33%eficiencia
+~%-50%simplicidad
+}.
+
+::Crecimiento Acelerado::Muchas aplicaciones web se desarrollan de manera {=improvisada, sin seguir metodologías formales ~estructurada y sistemática ~lenta pero segura ~simple pero efectiva}.
+
+::Desarrollo Improvisado::El desarrollo improvisado puede derivar en productos de {=baja calidad ~alta eficiencia ~perfecta funcionalidad ~excelente rendimiento}.
+
+::Falta Enfoque Requisitos::A menudo, los desarrolladores no prestan suficiente atención a{
+~%50%la elicitación de requisitos
+~%50%el análisis de requisitos
+~%-25%la programación básica
+~%-25%el diseño visual
+}.
+
+::Impacto Funcionalidad::La falta de enfoque en requisitos impacta en{
+~%33.33%la funcionalidad
+~%33.33%la usabilidad
+~%33.33%la confiabilidad
+~%-50%el costo únicamente
+} de las aplicaciones.
+
+::Dependencia Conocimiento::Se confía demasiado en la {=experiencia de los desarrolladores individuales ~documentación formal ~metodologías estándares ~herramientas automáticas} en lugar de utilizar estándares.
+
+::Atributos Calidad::¿Cuáles son atributos clave para asegurar el éxito de una aplicación web?{
+~%20%Funcionalidad
+~%20%Confiabilidad
+~%20%Mantenibilidad
+~%20%Usabilidad
+~%20%Portabilidad
+~%-50%Complejidad
+}
+
+::Funcionalidad Garantizar::La funcionalidad debe {=garantizar que la aplicación cumpla con los requisitos esperados ~reducir el costo de desarrollo ~aumentar la velocidad ~simplificar la programación}.
+
+::Confiabilidad Reducir::La confiabilidad busca {=reducir fallos y mejorar la estabilidad del sistema ~aumentar la complejidad ~reducir las funcionalidades ~limitar el acceso}.
+
+::Mantenibilidad Facilitar::La mantenibilidad debe {=facilitar la actualización y corrección de errores ~complicar las modificaciones ~limitar los cambios ~restringir el acceso}.
+
+::Usabilidad Asegurar::La usabilidad debe {=asegurar una experiencia de usuario óptima ~complicar la interfaz ~reducir las opciones ~limitar la funcionalidad}.
+
+::Portabilidad Permitir::La portabilidad debe {=permitir el acceso desde distintos dispositivos y navegadores ~limitar a un solo navegador ~restringir a computadoras ~funcionar solo offline}.
+
+::Ingeniería Web Conjunto::La ingeniería web es el conjunto de {=procesos y metodologías ~herramientas básicas ~lenguajes únicos ~sistemas simples} aplicadas para diseñar, desarrollar y mantener aplicaciones web.
+
+::Enfoque Sistemático::Un enfoque sistemático basado en modelos y estándares permite{
+~%33.33%mejor comprensión de los proyectos web
+~%33.33%análisis y control de calidad desde las primeras fases
+~%33.33%implementación de mejores prácticas
+~%-50%reducción de costos únicamente
+}.
+
+::Actividades Proceso::¿Cuáles son las actividades que forman parte del proceso de ingeniería web?{
+~%14.28%formulación
+~%14.28%planificación
+~%14.28%análisis
+~%14.28%modelado
+~%14.28%generación de páginas
+~%14.28%test
+~%14.28%evaluación del cliente
+~%-50%solo programación
+}
+
+::Formulación Identifica::La formulación {=identifica objetivos y establece el alcance de la primera entrega ~programa las funcionalidades ~diseña la interfaz ~implementa la base de datos}.
+
+::Planificación Genera::La planificación genera{
+~%33.33%la estimación del costo general del proyecto
+~%33.33%la evaluación de riesgos
+~%33.33%el calendario del desarrollo y fechas de entrega
+~%-50%solo el código fuente
+}.
+
+::Análisis Especifica::El análisis {=especifica los requerimientos e identifica el contenido ~programa las funcionalidades ~diseña la interfaz ~implementa la base de datos}.
+
+::Modelado Secuencias::El modelado se compone de {=dos secuencias paralelas ~una secuencia única ~tres etapas consecutivas ~cuatro fases simultáneas} de tareas.
+
+::Primera Secuencia::Una secuencia del modelado consiste en el {=diseño y producción del contenido ~testing de la aplicación ~deployment del sistema ~mantenimiento del código}.
+
+::Segunda Secuencia::La otra secuencia del modelado consiste en el diseño de{
+~%33.33%la arquitectura
+~%33.33%navegación
+~%33.33%interfaz de usuario
+~%-50%solo bases de datos
+}.
+
+::Importancia Interfaz::Es importante destacar la importancia del {=diseño de la interfaz ~costo del proyecto ~tiempo de desarrollo ~tamaño del equipo}.
+
+::Buena Interfaz::Una buena interfaz {=mejora la percepción que el usuario tiene ~complica la navegación ~aumenta los costos ~reduce la funcionalidad} del contenido y servicios.
+
+::Generación Páginas::En la generación de páginas se integra{
+~%25%contenido
+~%25%arquitectura
+~%25%navegación
+~%25%interfaz
+~%-50%solo diseño gráfico
+} para crear el aspecto más visible de la aplicación.
+
+::Test Busca::El test busca errores a todos los niveles como{
+~%25%contenido
+~%25%funcional
+~%25%navegacionalidad
+~%25%rendimiento
+~%-50%solo diseño visual
+}.
+
+::Test Especialmente::El proceso de test es especialmente difícil porque las aplicaciones {=residen en la red, y que interoperen en plataformas muy distintas ~son simples y uniformes ~funcionan offline únicamente ~usan una sola tecnología}.
+
+::Evaluación Cliente::Finalmente, el resultado es sometido a la {=evaluación del cliente ~programación automática ~testing interno ~documentación técnica}.
+
+// === PLANIFICACIÓN DE APLICACIÓN WEB ===
+
+::Planificar Objetivo::A menudo antes de empezar un proyecto no tenemos claro {=cuál es el objetivo del mismo ~qué tecnología usar ~cuánto costará ~quién lo desarrollará}.
+
+::Planificar Futuro::Planificar una aplicación web implica {=pensar y definir muchas cuestiones de importancia ~solo programar ~únicamente diseñar ~exclusivamente testear}.
+
+::Planificar Futuro Escalabilidad::Al planificar el futuro se debe considerar qué pasa si tuviéramos problemas de {=escalabilidad ~diseño ~programación ~documentación}.
+
+::Migración Bases::Un ejemplo de planificación futura es considerar la migración de bases de datos de {=MySQL a Oracle ~Oracle a MySQL ~SQL a NoSQL ~NoSQL a SQL}.
+
+::Buena Planificación::De una buena planificación depende la {=dificultad en un futuro de realizar cambios ~velocidad de desarrollo inicial ~costo del proyecto ~tamaño del equipo}.
+
+::Documentación Todo::Se debe {=documentar todo lo que puedas ~documentar solo lo básico ~evitar documentación ~minimizar la documentación} de tu aplicación.
+
+::Documentación Especial::Se debe documentar en especial aquellas partes que hayan requerido un {=mayor tiempo de desarrollo ~menor esfuerzo ~programación simple ~diseño básico}.
+
+::Documentación Futuro::Una buena documentación en un futuro cercano te {=librará de más de un quebradero de cabeza ~complicará el mantenimiento ~aumentará los costos ~reducirá la funcionalidad}.
+
+::Pequeños Detalles::A menudo es más sencillo plantearse el desarrollo de pequeños servicios como{
+~%50%RSS
+~%50%galería de imágenes
+~%-25%bases de datos principales
+~%-25%arquitectura central
+}.
+
+::Comenzar Base::Es fundamental comenzar por lo que vendrá a ser {=la base de nuestra aplicación ~los detalles finales ~las funciones secundarias ~los elementos decorativos}.
+
+::Orden Lógico::Comenzar por la base permite ir completando la aplicación en un {=orden lógico ~orden aleatorio ~proceso inverso ~método caótico}.
+
+::Primero Cimientos::El orden lógico implica {=primero los cimientos ~después los cimientos ~omitir los cimientos ~simplificar los cimientos}.
+
+::Buen Diseño Interfaz::Es importante conseguir un {=buen diseño para nuestra interfaz ~diseño simple y básico ~interfaz compleja ~diseño temporal}.
+
+::Interfaz Atractivo::Es importante conseguir una interfaz que sea {=atractivo y útil para la gran mayoría de los usuarios ~complejo y avanzado ~simple y limitado ~exclusivo y restringido}.
+
+::Conectar Usuario::Lo más importante es llegar a {=conectar con el usuario ~impresionar técnicamente ~mostrar complejidad ~demostrar conocimiento}.
+
+::Información Usuario::La mejor manera de conectar es {=ofrecerle la mayor cantidad de información posible ~limitar la información ~ocultar detalles ~restringir el acceso}.
+
+::Sentir Parte::El objetivo es que el usuario {=se llegue a sentir parte del proyecto ~use mínimamente la aplicación ~visite ocasionalmente ~acceda raramente}.
+
+::Mala Elección::Muchas veces no conseguimos conectar por una {=mala elección en la combinación de los colores ~falta de funcionalidades ~exceso de información ~complejidad técnica}.
+
+::Librerías Frameworks::Se debe {=evitar construirse librerías o frameworks innecesarios ~crear todas las librerías propias ~desarrollar frameworks únicos ~construir herramientas personalizadas}.
+
+::Desarrollador Propias::Muchas personas sostienen que es mejor que cada desarrollador utilice sus {=propias librerías ~librerías estándares ~frameworks comunes ~herramientas compartidas}.
+
+::Realidad Pérdida::La realidad es que en muchas ocasiones esto supone una {=gran pérdida de tiempo ~mejor rendimiento ~mayor eficiencia ~menor costo}.
+
+::Mejor Buscar::Es mejor {=buscar una librería o framework que se parezca al deseado ~desarrollarlo por ti mismo ~crear uno desde cero ~inventar nuevas herramientas}.
+
+::Plan Proyecto::Se debe {=tener un plan de proyecto ~trabajar sin planificación ~improvisar constantemente ~avanzar sin dirección}.
+
+::Desarrollador Sepa::Asegúrate de que cada desarrollador {=sepa qué es lo que debe de hacer y cuándo tiene que hacerlo ~trabaje libremente ~decida por sí mismo ~improvise constantemente}.
+
+::Documento Redactado::Teniendo todo redactado en un documento te ayudará a {=identificar problemas ~complicar el proceso ~aumentar la confusión ~generar más trabajo}.
+
+::Lenguaje Adecuado::Se debe {=elegir el lenguaje adecuado ~usar cualquier lenguaje ~cambiar constantemente ~experimentar siempre}.
+
+::Mejor Lenguaje::La respuesta a cuál es el mejor lenguaje de programación es {=depende de para qué quieras utilizarlo ~siempre es el mismo ~no importa cuál uses ~todos son iguales}.
+
+::Evitar Distracciones::Se debe {=evitar las distracciones ~aceptar todas las interrupciones ~mantener múltiples actividades ~trabajar con distracciones}.
+
+::Optimizar Tiempo::Se debe {=optimizar tu tiempo ~trabajar sin planificación ~perder tiempo libremente ~no controlar el tiempo}.
+
+::Trabajo Aislado::Se debe proponer un buen número de horas al día de {=trabajo aislado dedicado al proyecto ~trabajo con interrupciones ~actividades múltiples ~tareas dispersas}.
+
+::Control Calidad::Se debe {=seguir un buen control de calidad ~ignorar la calidad ~simplificar al máximo ~acelerar sin control}.
+
+::Planificar Tiempos::Muchas veces nos equivocamos al {=planificar los tiempos de proyecto ~elegir tecnologías ~diseñar interfaces ~documentar procesos}.
+
+::Código Sucio::Los errores de planificación llevan a menudo a los desarrolladores a tener que escribir {="código sucio" ~código perfecto ~código documentado ~código optimizado}.
+
+::Demo Funcionando::El "código sucio" es una buena opción si lo que quieres es una {=demo de la aplicación funcionando ~aplicación final ~producto comercial ~sistema robusto}.
+
+::Problemas Futuro::La actitud de "código sucio" te {=traerá problemas en el futuro ~beneficiará a largo plazo ~mejorará el rendimiento ~simplificará el mantenimiento}.
+
+::Pasos Después Desarrollo::Se debe {=plantearse los pasos a seguir después del desarrollo ~terminar con el desarrollo ~ignorar el post-desarrollo ~olvidar el mantenimiento}.
+
+::Fase Desarrollo::Se debe tener en cuenta que la fase de desarrollo {=algún día deberá acabar ~nunca terminará ~continuará indefinidamente ~será permanente}.
+
+::Frecuencia Actualizar::Se debe estudiar con qué {=frecuencia se deberá actualizar ~velocidad funcionará ~costo operará ~complejidad mantendrá}.
+
+::Necesita Funcionar::Se debe estudiar {=qué se necesita para que funcione ~solo el código inicial ~únicamente el diseño ~exclusivamente la programación}.
+
+// ...existing code...
+
+// === ¿QUÉ ES UNA APP WEB? ===
+
+::Definición App Web::¿Qué es una aplicación web?{
+=Software accesible a través de un navegador utilizando un servidor web
+~Programa que se instala localmente en cada dispositivo
+~Aplicación móvil descargable desde una tienda
+~Sistema operativo basado en web
+}
+
+::Lenguajes App Web::¿En qué lenguajes están codificadas las aplicaciones web?{
+~%33.33%HTML
+~%33.33%CSS
+~%33.33%JavaScript
+~%-50%Solo en Java
+}
+
+::Navegador Cliente::Las aplicaciones web utilizan el navegador como un cliente {=ligero ~pesado ~completo ~independiente}.
+
+::Ejemplos App Web::¿Cuáles son ejemplos de aplicaciones web?{
+~%25%wikis
+~%25%blogs
+~%25%tiendas en línea
+~%25%webmails
+~%-50%aplicaciones de escritorio
+}
+
+::Antecedentes Históricos Antes::Antes de las aplicaciones web, los modelos cliente-servidor requerían {=instalaciones en cada dispositivo ~solo navegadores web ~únicamente servidores ~conexión a internet}.
+
+::Estándares Actuales::En la actualidad, las aplicaciones están basadas en estándares como {=HTML ~XML ~JSON ~SQL} para simplificar y unificar el acceso.
+
+::Independencia SO::Las aplicaciones web funcionan independientemente del {=sistema operativo ~navegador ~hardware ~idioma} del usuario.
+
+::Desarrollo Multiplataforma::En lugar de desarrollar clientes específicos para Windows, MacOS o Linux, las aplicaciones web se escriben {=una vez ~dos veces ~tres veces ~múltiples veces} y se ejecutan en cualquier navegador.
+
+::Estándares Navegadores::¿Cuáles son estándares que siguen los navegadores web modernos?{
+~%33.33%HTML
+~%33.33%CSS
+~%33.33%DOM
+~%-50%Flash
+}
+
+::IE Incompatibilidad::Los problemas de incompatibilidad ocurren principalmente con versiones de Internet Explorer anteriores a la {=7.0 ~6.0 ~8.0 ~5.0}.
+
+::Falta Adherencia::Un problema común es la falta de {=adherencia a los estándares ~velocidad de carga ~memoria disponible ~espacio en disco} por algunos navegadores.
+
+::Personalización Usuario::Los usuarios pueden modificar configuraciones como{
+~%50%tamaño y color de las fuentes
+~%50%habilitar o deshabilitar JavaScript
+~%-25%cambiar el sistema operativo
+~%-25%modificar el hardware
+}.
+
+::Personalización Consistencia::La personalización del usuario puede afectar la {=consistencia y funcionalidad ~velocidad y rendimiento ~seguridad y privacidad ~instalación y configuración} de la aplicación.
+
+::Tecnologías Interfaz Rica::¿Cuáles fueron tecnologías populares para crear interfaces ricas y personalizadas?{
+~%50%Flash
+~%50%Java applets
+~%-25%HTML puro
+~%-25%Solo CSS
+}
+
+::Ventaja Flash Java Control::Una ventaja de Flash y Java applets era el {=más control sobre la interfaz ~menor tamaño ~mayor velocidad ~menor costo}.
+
+::Flash Java Uniformidad::Una ventaja adicional de Flash y Java applets era la {=uniformidad en los elementos gráficos ~velocidad de carga ~facilidad de instalación ~compatibilidad universal}.
+
+::Desventaja Plug-ins::Una desventaja de Flash y Java applets era la {=dependencia de complementos (plug-ins) ~mayor velocidad ~mejor compatibilidad ~menor costo}.
+
+::Flash Java Implementaciones::Los problemas de compatibilidad de Flash y Java ocurrían entre diferentes {=implementaciones ~navegadores ~sistemas operativos ~usuarios} de Flash o Java.
+
+::Aplicaciones RIA::Las Aplicaciones Enriquecidas de Internet también se conocen como {=RIA ~SPA ~PWA ~API}.
+
+::RIA Tecnologías::Las Aplicaciones Enriquecidas de Internet aprovechan tecnologías adicionales para proporcionar interfaces más {=avanzadas ~simples ~rápidas ~económicas}.
+
+::AJAX Framework::AJAX es un ejemplo de {=framework ~lenguaje ~navegador ~sistema operativo} para interactividad en tiempo real.
+
+::Modelo Tres Capas Estructura::El modelo de aplicaciones web consta de {=tres ~dos ~cuatro ~cinco} capas principales.
+
+::Tres Capas Presentación::En el modelo de tres capas, la presentación utiliza {=Navegador (HTML/CSS/JS) ~Servidor (PHP/Python) ~Base de datos (MySQL) ~Red (TCP/IP)}.
+
+::Tres Capas Lógica::En el modelo de tres capas, la lógica utiliza {=Servidor (PHP, Python, etc.) ~Navegador (HTML/CSS/JS) ~Base de datos (MySQL) ~Cliente (JavaScript)}.
+
+::Tres Capas Base Datos::En el modelo de tres capas, la base de datos incluye {=MySQL, PostgreSQL ~HTML, CSS ~PHP, Python ~Flash, Java}.
+
+::Ventaja Instalación::Una ventaja de las aplicaciones web es que {=no requieren instalación local ~necesitan instalación compleja ~ocupan mucho espacio ~son difíciles de usar}.
+
+::Ventaja Espacio::Las aplicaciones web proporcionan {=ahorro de espacio en disco duro ~mayor uso de memoria ~instalación pesada ~lentitud de acceso}.
+
+::Ventaja Colaboración::Las aplicaciones web facilitan la {=colaboración entre usuarios ~instalación individual ~configuración compleja ~compatibilidad limitada}.
+
+::Ventaja Compatibilidad::Una ventaja de las aplicaciones web es la {=reducción de problemas de compatibilidad ~eliminación total de errores ~perfecta sincronización ~instalación automática}.
+
+::Desventaja Internet::Un inconveniente de las aplicaciones web es la {=dependencia de conexión a internet ~instalación compleja ~mayor costo ~difícil mantenimiento}.
+
+::Desventaja Navegadores::Las aplicaciones web pueden tener {=inconsistencias en navegadores antiguos ~perfecta compatibilidad ~instalación automática ~funcionamiento offline}.
+
+::Desventaja Funcionalidades::Las aplicaciones web tienen {=menos funcionalidades que las aplicaciones de escritorio ~más funcionalidades siempre ~iguales capacidades ~perfecta funcionalidad}.
+
+::Tecnologías Clave Lenguajes::¿Cuáles son lenguajes de programación mencionados en las tecnologías clave?{
+~%25%HTML
+~%25%JavaScript
+~%25%PHP
+~%25%Python
+~%-50%C++
+}
+
+::Soportes Multimedia::¿Cuáles son soportes multimedia mencionados?{
+~%50%Flash
+~%50%WebGL
+~%-25%MySQL
+~%-25%HTML5
+}
+
+::Estándares Modernos::¿Cuáles son estándares modernos mencionados?{
+~%50%HTML5
+~%50%CSS3
+~%-25%Flash
+~%-25%Java
+}
+
+::Herramientas Avanzadas APIs::¿Cuáles son ejemplos de herramientas avanzadas mencionadas como APIs?{
+~%50%IndexedDB
+~%50%WebRTC
+~%-25%MySQL
+~%-25%HTML5
+}
+
+::Primera Generación Año::La primera generación de diseño web comenzó en {=1993 ~1990 ~1995 ~2000}.
+
+::Mosaic Combinación::La página web Mosaic combinaba {=imágenes y texto ~solo imágenes ~solo texto ~videos y audio} aunque con limitaciones técnicas.
+
+::Mosaic Visitantes::Mosaic tenía {=2M de visitantes ~1M de visitantes ~3M de visitantes ~500k visitantes}.
+
+::Primera Generación Diseño::El diseño de la primera generación era {=lineal ~circular ~modular ~jerárquico} y estaba enfocado en científicos.
+
+::Primera Generación Monitores::En la primera generación se utilizaban monitores {=monocromos ~a color ~táctiles ~curvos}.
+
+::Primera Generación Transmisión::Las velocidades lentas de la primera generación se debían a la transmisión de datos por {=MODEM ~fibra óptica ~cable ethernet ~WiFi}.
+
+::Primera Generación Estructura::La estructura desordenada de la primera generación llevó a la creación del {=W3C ~HTML ~CSS ~JavaScript}.
+
+::W3C Objetivo::El W3C se creó para establecer estándares en HTML y {=unificar el diseño web ~crear navegadores ~desarrollar software ~entrenar programadores}.
+
+::Segunda Generación Elementos::¿Qué elementos gráficos introdujo la segunda generación?{
+~%25%iconos
+~%25%imágenes de fondo
+~%25%botones con relieve
+~%25%banners
+~%-50%videos
+}
+
+::Segunda Generación Tablas::En la segunda generación, las tablas se usaron para {=organizar contenidos y mejorar la maquetación ~solo mostrar datos ~crear formularios ~diseñar navegación}.
+
+::Segunda Generación Maquetación::En la segunda generación, las tablas se usaron para organizar contenidos similar a {=libros o revistas ~periódicos ~folletos ~carteles}.
+
+::Segunda Generación Mejoras::La segunda generación tuvo mejoras en {=monitores y tarjetas gráficas ~procesadores y memoria ~discos duros y redes ~software y sistemas}.
+
+::Segunda Generación Navegadores::En la segunda generación había problemas de compatibilidad entre navegadores como{
+~%50%Internet Explorer
+~%50%Netscape Navigator
+~%-25%Chrome
+~%-25%Firefox
+}.
+
+::Tercera Generación Enfoque::La tercera generación tuvo enfoque en {=diseñadores ~programadores ~usuarios finales ~administradores}.
+
+::Tercera Generación Revolución::¿Qué tecnología revolucionó el diseño web en la tercera generación?{
+=Macromedia Flash
+~Adobe Photoshop
+~Microsoft Word
+~Google Chrome
+}
+
+::Tercera Generación Especialización::La tercera generación se especializó según el objetivo de las páginas como{
+~%33.33%ventas
+~%33.33%comunidades
+~%33.33%información
+~%-50%solo entretenimiento
+}.
+
+::Tercera Generación Experiencia::La tercera generación prestó mayor atención a la navegabilidad intuitiva y estructurada para mejorar la experiencia del {=usuario ~desarrollador ~diseñador ~administrador}.
+
+::Cuarta Generación Multimedia::La cuarta generación se caracterizó por la integración de {=multimedia avanzada ~solo texto ~únicamente imágenes ~solo audio} en las páginas web.
+
+::Cuarta Generación Soporte::La diversidad de diseños en la cuarta generación fue posible gracias al soporte mejorado de los {=navegadores ~servidores ~sistemas operativos ~procesadores}.
+
+::Cuarta Generación Accesibilidad::La cuarta generación ofreció {=accesibilidad para todo tipo de usuarios ~acceso limitado ~uso restringido ~funcionalidad básica}.
+
+::Cuarta Generación Variedad::La cuarta generación ofreció una amplia variedad de {=estilos y funcionalidades ~colores y formas ~tamaños y formatos ~idiomas y regiones}.
+
+::Quinta Generación Característica::La quinta generación se caracteriza por la integración de televisión {=IP o televisión online ~satelital ~por cable ~terrestre}.
+
+::Quinta Generación Plataforma::¿Qué plataforma se menciona como ejemplo en la quinta generación?{
+=Hooping.tv
+~YouTube
+~Netflix
+~Twitch
+}
+
+::Quinta Generación Tendencia::Hooping.tv marca una nueva {=tendencia en el diseño web ~era de la programación ~fase del desarrollo ~etapa de la tecnología}.
+
+::Quinta Generación Empresas::Hooping.tv ofrece soluciones específicamente para {=empresas y organizaciones ~usuarios domésticos ~estudiantes universitarios ~desarrolladores independientes}.

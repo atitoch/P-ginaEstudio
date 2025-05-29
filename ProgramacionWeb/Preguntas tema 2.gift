@@ -1,0 +1,271 @@
+///Jazmin Aurora Ruiz Puga, Erick Martin Ayala Arguello
+
+
+::Pregunta 1:: ¿Cuál etiqueta se usa para mostrar texto más pequeño en HTML? {
+= <_small>
+~ <_strong>
+~ <_sub>
+~ <_sup>
+}
+
+::Pregunta 2:: Selecciona la opción correcta La etiqueta <_strong> se usa para... {
+= Resaltar texto en negrita con importancia.
+~ Crear una tabla.
+~ Definir una columna en una tabla.
+~ Subrayar un texto.
+}
+
+::Pregunta 3:: La etiqueta <_sub> se usa para texto en subíndice. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 4:: Completa la frase La etiqueta <_caption> se utiliza para agregar un ____ a una tabla. {
+= título
+}
+
+::Pregunta 5:: ¿Qué etiqueta define texto en superíndice en HTML? {
+= <_sup>
+~ <_sub>
+~ <_small>
+~ <_u>
+}
+
+::Pregunta 6:: ¿Cuál de las siguientes etiquetas se usa para agrupar columnas en una tabla? {
+= <_colgroup>
+~ <_caption>
+~ <_small>
+~ <_table>
+}
+
+::Pregunta 7:: ¿Cómo se representa correctamente una tabla en HTML? {
+= <_table>...<_/table>
+~ <_tab>...<_/tab>
+~ <_tbl>...<_/tbl>
+~ <_t>...<_/t>
+}
+
+::Pregunta 8:: La etiqueta <_u> representa texto en negrita. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 9:: Completa la frase La etiqueta <_col> define propiedades de una ____ específica en una tabla. {
+= columna
+}
+
+::Pregunta 10:: ¿Cuál es la función de la etiqueta <_colgroup>? {
+= Agrupar una o más columnas en una tabla.
+~ Agregar un título a la tabla.
+~ Aplicar estilos solo a la primera fila.
+~ Definir una nueva celda en una tabla.
+}
+
+::Pregunta 11:: La etiqueta <_table> se usa para representar una tabla en HTML. {
+= Verdadero
+~ Falso
+}
+
+::Pregunta 12:: ¿Para qué sirve la etiqueta <_strong>? {
+= Resaltar texto en negrita con importancia.
+~ Crear una tabla.
+~ Subrayar un texto.
+~ Definir propiedades de una columna.
+}
+
+::Pregunta 13:: ¿Cuál etiqueta se usa para definir un título en una tabla? {
+= <_caption>
+~ <_table>
+~ <_colgroup>
+~ <_col>
+}
+
+::Pregunta 14:: Completa la frase La etiqueta <_sup> permite escribir texto en ____. {
+= superíndice
+}
+
+::Pregunta 15:: La etiqueta <_colgroup> permite agrupar varias filas en una tabla. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 16:: ¿Qué etiqueta permite definir texto en subíndice? {
+= <_sub>
+~ <_sup>
+~ <_strong>
+~ <_colgroup>
+}
+
+::Pregunta 17:: ¿Cuál es la función principal de la etiqueta <_small>? {
+= Mostrar texto más pequeño que el normal.
+~ Subrayar texto.
+~ Crear una tabla.
+~ Agrupar columnas en una tabla.
+}
+
+::Pregunta 18:: ¿Cuál etiqueta HTML define un texto con importancia o énfasis? {
+= <_strong>
+~ <_small>
+~ <_caption>
+~ <_col>
+}
+
+::Pregunta 19:: La etiqueta <_col> permite agregar un título a la tabla. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 20:: Completa la frase La etiqueta <_u> se usa para ____ un texto. {
+= subrayar
+}
+
+::Pregunta 21:: ¿Cuál de las siguientes etiquetas no está relacionada con la creación de tablas? {
+= <_strong>
+~ <_caption>
+~ <_colgroup>
+~ <_table>
+}
+
+::Pregunta 22:: ¿Cómo se usa la etiqueta <_colgroup>? {
+= Para agrupar varias columnas en una tabla.
+~ Para resaltar texto.
+~ Para definir filas en una tabla.
+~ Para crear tablas dentro de tablas.
+}
+
+::Pregunta 23:: ¿Cuál etiqueta representa una tabla en HTML? {
+= <_table>
+~ <_caption>
+~ <_col>
+~ <_colgroup>
+}
+
+::Pregunta 24:: La etiqueta <_caption> se usa para definir propiedades de una columna específica. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 25:: ¿Qué etiqueta en HTML se usa para definir una columna en una tabla? {
+= <_col>
+~ <_caption>
+~ <_table>
+~ <_sub>
+}
+
+::Pregunta 26:: ¿Cuál de las siguientes opciones es correcta? La etiqueta <_sup> {
+= Se usa para superíndice.
+~ Se usa para subíndice.
+~ Se usa para definir una tabla.
+~ Se usa para agrupar columnas.
+}
+
+::Pregunta 27:: La etiqueta <_table> se usa para agrupar columnas en una tabla. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 28:: ¿Qué etiqueta define texto más pequeño que el normal? {
+= <_small>
+~ <_strong>
+~ <_u>
+~ <_sup>
+}
+
+::Pregunta 29:: Completa la frase La etiqueta <_strong> se usa para resaltar un texto en ____. {
+= negrita
+}
+
+::Pregunta 30:: ¿Para qué sirve la etiqueta <_col>? {
+= Para definir propiedades de una columna específica.
+~ Para crear una tabla.
+~ Para agregar un título a la tabla.
+~ Para definir texto en negrita.
+}
+
+::Pregunta 31:: ¿Qué etiqueta permite definir un grupo de columnas en una tabla? {
+= <_colgroup>
+~ <_table>
+~ <_caption>
+~ <_col>
+}
+
+::Pregunta 32:: La etiqueta <_u> se usa para mostrar texto en cursiva. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 33:: ¿Qué etiqueta permite definir propiedades de varias columnas a la vez? {
+= <_colgroup>
+~ <_table>
+~ <_caption>
+~ <_strong>
+}
+
+::Pregunta 34:: Completa la frase La etiqueta <_sub> se usa para escribir texto en ____. {
+= subíndice
+}
+
+::Pregunta 35:: ¿Cuál etiqueta HTML define un título dentro de una tabla? {
+= <_caption>
+~ <_table>
+~ <_col>
+~ <_colgroup>
+}
+
+::Pregunta 36:: La etiqueta <_col> se usa para definir estilos en una fila de la tabla. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 37:: ¿Qué etiqueta permite definir texto en superíndice en HTML? {
+= <_sup>
+~ <_sub>
+~ <_table>
+~ <_colgroup>
+}
+
+::Pregunta 38:: ¿Cómo se usa la etiqueta <_caption>? {
+= Para agregar un título a la tabla.
+~ Para definir el tamaño de una tabla.
+~ Para definir una columna en una tabla.
+~ Para subrayar texto.
+}
+
+::Pregunta 39:: ¿Qué etiqueta permite definir una tabla en HTML? {
+= <_table>
+~ <_col>
+~ <_caption>
+~ <_sub>
+}
+
+::Pregunta 40:: Completa la frase La etiqueta <_colgroup> permite agrupar ____ en una tabla. {
+= columnas
+}
+
+::Pregunta 41:: La etiqueta <_caption> se usa para definir propiedades de una fila específica. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 42:: ¿Qué etiqueta en HTML permite definir un texto en superíndice? {
+= <_sup>
+~ <_sub>
+~ <_small>
+~ <_strong>
+}
+
+::Pregunta 43:: ¿Cuál etiqueta se usa para definir el título de una tabla? {
+= <_caption>
+~ <_col>
+~ <_table>
+~ <_sub>
+}
+
+::Pregunta 44:: La etiqueta <_table> se usa para definir propiedades de columnas en una tabla. {
+~ Verdadero
+= Falso
+}
+
+::Pregunta 45:: Completa la frase La etiqueta <_strong> resalta el texto en ____. {
+= negrita
+}

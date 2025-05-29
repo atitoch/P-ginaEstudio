@@ -1,0 +1,5102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidad 1: Fundamentos de Aplicaciones Web - Cuestionario</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #667eea;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .quiz-container {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      .quiz-progress {
+        background: #f0f0f0;
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+
+      .question-counter {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      .question {
+        display: none;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .question.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .question h3 {
+        color: #333;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .options {
+        list-style: none;
+      }
+
+      .option {
+        background: #f8f9fa;
+        margin: 10px 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .option:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+      }
+
+      .option input[type="radio"] {
+        display: none;
+      }
+
+      .option label {
+        display: block;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      .option input[type="radio"]:checked + label {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border-radius: 8px;
+      }
+
+      .option.correct {
+        border-color: #28a745;
+        background: #d4edda;
+      }
+
+      .option.incorrect {
+        border-color: #dc3545;
+        background: #f8d7da;
+      }
+
+      .fill-blank {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+
+      .blank-input {
+        background: #fff;
+        border: 2px solid #667eea;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 1em;
+        margin: 0 5px;
+        min-width: 120px;
+      }
+
+      .blank-input.correct {
+        background: #d4edda;
+        border-color: #28a745;
+      }
+
+      .blank-input.incorrect {
+        background: #f8d7da;
+        border-color: #dc3545;
+      }
+
+      .true-false {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .tf-option {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      .tf-option:hover {
+        background: #e9ecef;
+        transform: scale(1.05);
+      }
+
+      .tf-option.selected {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border-color: #667eea;
+      }
+
+      .tf-option.correct {
+        background: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+
+      .tf-option.incorrect {
+        background: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #dee2e6;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #5a6268;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .feedback {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        display: none;
+      }
+
+      .feedback.correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .feedback.incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f1b6ba;
+      }
+
+      .results {
+        text-align: center;
+        display: none;
+      }
+
+      .score {
+        font-size: 3em;
+        font-weight: bold;
+        color: #667eea;
+        margin: 20px 0;
+      }
+
+      .score-details {
+        font-size: 1.2em;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #667eea;
+      }
+
+      @media (max-width: 768px) {
+        .true-false {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .controls {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-button">⬅ Volver a Programación Web</a>
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> >
+        <a href="index.html">Programación Web</a> > Unidad 1: Fundamentos de
+        Aplicaciones Web
+      </div>
+
+      <div class="header">
+        <h1>🌐 Unidad 1: Fundamentos de Aplicaciones Web</h1>
+        <p>Tecnologías, Arquitectura y Desarrollo de Aplicaciones Web</p>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-counter">
+          <span id="currentQuestion">1</span> de
+          <span id="totalQuestions">210</span>
+        </div>
+
+        <!-- Pregunta 1 -->
+        <div class="question active" data-type="multiple">
+          <h3>¿Qué es una aplicación web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q1" value="correct" id="q1a" />
+              <label for="q1a"
+                >Software accesible a través de un navegador utilizando un
+                servidor web</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1b" />
+              <label for="q1b"
+                >Programa que se instala localmente en cada dispositivo</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1c" />
+              <label for="q1c"
+                >Aplicación móvil descargable desde una tienda</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1d" />
+              <label for="q1d">Sistema operativo basado en web</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué lenguajes están codificadas las aplicaciones web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q2" value="correct" id="q2a" />
+              <label for="q2a">HTML, CSS y JavaScript</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2b" />
+              <label for="q2b">Solo en Java</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2c" />
+              <label for="q2c">C++ y Python únicamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2d" />
+              <label for="q2d">Solo en HTML</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ejemplos de aplicaciones web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q3" value="correct" id="q3a" />
+              <label for="q3a">Wikis, blogs, tiendas en línea y webmails</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3b" />
+              <label for="q3b">Solo aplicaciones de escritorio</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3c" />
+              <label for="q3c">Únicamente sistemas operativos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3d" />
+              <label for="q3d">Solo bases de datos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Las aplicaciones web funcionan independientemente del
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="sistema operativo"
+            />
+            del usuario.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son estándares que siguen los navegadores web modernos?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q5" value="correct" id="q5a" />
+              <label for="q5a">HTML, CSS y DOM</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5b" />
+              <label for="q5b">Solo Flash</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5c" />
+              <label for="q5c">Únicamente XML</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5d" />
+              <label for="q5d">Solo Java</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los problemas de incompatibilidad ocurren principalmente con
+            versiones de Internet Explorer anteriores a la
+            <input type="text" class="blank-input" data-answer="7.0" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles fueron tecnologías populares para crear interfaces ricas y
+            personalizadas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q7" value="correct" id="q7a" />
+              <label for="q7a">Flash y Java applets</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7b" />
+              <label for="q7b">Solo HTML puro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7c" />
+              <label for="q7c">Solo CSS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7d" />
+              <label for="q7d">Únicamente JavaScript</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            AJAX es un ejemplo de
+            <input type="text" class="blank-input" data-answer="framework" />
+            para interactividad en tiempo real.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            El modelo de aplicaciones web consta de cuántas capas principales:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q9" value="correct" id="q9a" />
+              <label for="q9a">Tres</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9b" />
+              <label for="q9b">Dos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9c" />
+              <label for="q9c">Cuatro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9d" />
+              <label for="q9d">Cinco</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el modelo de tres capas, la presentación utiliza
+            <input type="text" class="blank-input" data-answer="navegador" />
+            con HTML/CSS/JS.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ventajas de las aplicaciones web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q11" value="correct" id="q11a" />
+              <label for="q11a"
+                >No requieren instalación local, ahorro de espacio, colaboración
+                fácil</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11b" />
+              <label for="q11b">Necesitan instalación compleja</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11c" />
+              <label for="q11c">Ocupan mucho espacio</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11d" />
+              <label for="q11d">Son difíciles de usar</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Un inconveniente de las aplicaciones web es la dependencia de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="conexión a internet"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué año comenzó la primera generación de diseño web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q13" value="correct" id="q13a" />
+              <label for="q13a">1993</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13b" />
+              <label for="q13b">1990</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13c" />
+              <label for="q13c">1995</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13d" />
+              <label for="q13d">2000</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La página web Mosaic tenía
+            <input type="text" class="blank-input" data-answer="2M" />
+            de visitantes.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La estructura desordenada de la primera generación llevó a la
+            creación del
+            <input type="text" class="blank-input" data-answer="W3C" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué tecnología revolucionó el diseño web en la tercera generación?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q16" value="correct" id="q16a" />
+              <label for="q16a">Macromedia Flash</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16b" />
+              <label for="q16b">Adobe Photoshop</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16c" />
+              <label for="q16c">Microsoft Word</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16d" />
+              <label for="q16d">Google Chrome</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La quinta generación se caracteriza por la integración de televisión
+            <input type="text" class="blank-input" data-answer="IP" />
+            o televisión online.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué plataforma se menciona como ejemplo en la quinta generación?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q18" value="correct" id="q18a" />
+              <label for="q18a">Hooping.tv</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18b" />
+              <label for="q18b">YouTube</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18c" />
+              <label for="q18c">Netflix</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18d" />
+              <label for="q18d">Twitch</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el modelo cliente-servidor, ¿quiénes son los proveedores de
+            recursos?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q19" value="correct" id="q19a" />
+              <label for="q19a">Los servidores</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19b" />
+              <label for="q19b">Los clientes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19c" />
+              <label for="q19c">Los navegadores</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19d" />
+              <label for="q19d">Los usuarios</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Para abrir una página web en un navegador, se teclea el
+            correspondiente
+            <input type="text" class="blank-input" data-answer="URL" />
+            o a través de un hiperenlace.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 21 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ventajas del modelo cliente-servidor?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q21" value="correct" id="q21a" />
+              <label for="q21a"
+                >Centralización del control, escalabilidad y fácil
+                mantenimiento</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21b" />
+              <label for="q21b">Mayor complejidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21c" />
+              <label for="q21c">Menor rendimiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21d" />
+              <label for="q21d">Dificultad de uso</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 22 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El protocolo HTTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo de transferencia de hipertexto"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuántas etapas tiene la comunicación HTTP entre navegador y
+            servidor?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q23" value="correct" id="q23a" />
+              <label for="q23a">Dos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23b" />
+              <label for="q23b">Tres</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23c" />
+              <label for="q23c">Cuatro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23d" />
+              <label for="q23d">Cinco</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El protocolo FTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo de transferencia de archivos"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son desventajas de la arquitectura de 2 capas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q25" value="correct" id="q25a" />
+              <label for="q25a"
+                >Aplicaciones monolíticas, alto consumo de recursos, dificultad
+                para reutilizar</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25b" />
+              <label for="q25b">Mejor rendimiento general</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25c" />
+              <label for="q25c">Mayor facilidad de uso</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25d" />
+              <label for="q25d">Menor costo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ventajas de la arquitectura de 3 capas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q26" value="correct" id="q26a" />
+              <label for="q26a"
+                >Facilita reutilización, permite escalar mejor, independiza
+                lógica de interfaz</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26b" />
+              <label for="q26b">Mayor complejidad de desarrollo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26c" />
+              <label for="q26c">Menor rendimiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26d" />
+              <label for="q26d">Dificultad de mantenimiento</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 27 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Java es
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="independiente de la plataforma"
+            />
+            y orientado a objetos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 28 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son lenguajes de programación para backend?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q28" value="correct" id="q28a" />
+              <label for="q28a">Python, Node.js, PHP y Java</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28b" />
+              <label for="q28b">Solo HTML</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28c" />
+              <label for="q28c">Solo CSS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28d" />
+              <label for="q28d">Solo JavaScript</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 29 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ejemplos de CSS Frameworks?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q29" value="correct" id="q29a" />
+              <label for="q29a">Bootstrap, Tailwind CSS y Material UI</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29b" />
+              <label for="q29b">Solo MySQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29c" />
+              <label for="q29c">Solo Java</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29d" />
+              <label for="q29d">Solo Python</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 30 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            REST es
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="arquitectura estándar"
+            />
+            para intercambio de datos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 31 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son las tres fases básicas del diseño web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q31" value="correct" id="q31a" />
+              <label for="q31a"
+                >Análisis y definición, creación de páginas, programación de
+                navegabilidad</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31b" />
+              <label for="q31b">Solo documentación del proyecto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31c" />
+              <label for="q31c">Solo programación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31d" />
+              <label for="q31d">Solo diseño gráfico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 32 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los tres tipos principales de diseño web mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q32" value="correct" id="q32a" />
+              <label for="q32a"
+                >Diseño web avanzado, clásico e industrial</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32b" />
+              <label for="q32b">Solo diseño web móvil</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32c" />
+              <label for="q32c">Solo diseño responsivo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32d" />
+              <label for="q32d">Solo diseño estático</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 33 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son las actividades del proceso de ingeniería web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q33" value="correct" id="q33a" />
+              <label for="q33a"
+                >Formulación, planificación, análisis, modelado, generación,
+                test, evaluación</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33b" />
+              <label for="q33b">Solo programación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33c" />
+              <label for="q33c">Solo diseño</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33d" />
+              <label for="q33d">Solo testing</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 34 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El proceso de test es especialmente difícil porque las aplicaciones
+            residen en la red, y que interoperen en plataformas muy
+            <input type="text" class="blank-input" data-answer="distintas" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 35 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            A menudo antes de empezar un proyecto no tenemos claro cuál es el
+            <input type="text" class="blank-input" data-answer="objetivo" />
+            del mismo.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 36 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Al planificar el futuro se debe considerar qué pasa si tuviéramos
+            problemas de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="escalabilidad"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 37 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Se debe documentar en especial aquellas partes que hayan requerido
+            un
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="mayor tiempo de desarrollo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 38 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Es fundamental comenzar por lo que vendrá a ser
+            <input type="text" class="blank-input" data-answer="la base" />
+            de nuestra aplicación.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 39 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Lo más importante es llegar a
+            <input type="text" class="blank-input" data-answer="conectar" />
+            con el usuario.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 40 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Se debe evitar construirse librerías o frameworks
+            <input type="text" class="blank-input" data-answer="innecesarios" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 41 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La respuesta a cuál es el mejor lenguaje de programación es
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="depende de para qué quieras utilizarlo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 42 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Se debe proponer un buen número de horas al día de trabajo
+            <input type="text" class="blank-input" data-answer="aislado" />
+            dedicado al proyecto.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 43 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los errores de planificación llevan a menudo a los desarrolladores a
+            tener que escribir
+            <input type="text" class="blank-input" data-answer="código sucio" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 44 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Se debe tener en cuenta que la fase de desarrollo algún día deberá
+            <input type="text" class="blank-input" data-answer="acabar" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 45 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son stacks tecnológicos populares?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q45" value="correct" id="q45a" />
+              <label for="q45a">MERN, MEAN, LAMP y Django + React</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45b" />
+              <label for="q45b">Solo MERN</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45c" />
+              <label for="q45c">Solo LAMP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45d" />
+              <label for="q45d">Solo Django</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 46 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué incluye MERN stack?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q46" value="correct" id="q46a" />
+              <label for="q46a">MongoDB, Express.js, React y Node.js</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46b" />
+              <label for="q46b">Solo Python</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46c" />
+              <label for="q46c">Solo Java</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46d" />
+              <label for="q46d">Solo PHP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 47 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué proporcionan AWS, Google Cloud y Azure?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q47" value="correct" id="q47a" />
+              <label for="q47a">Infraestructura escalable en la nube</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47b" />
+              <label for="q47b">Solo almacenamiento local</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47c" />
+              <label for="q47c">Únicamente procesamiento offline</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47d" />
+              <label for="q47d">Exclusivamente diseño web</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 48 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las aplicaciones web utilizan el navegador como un cliente ligero.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 49 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>El método concat() modifica el array original.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 50 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las funciones en JavaScript se definen una vez y se pueden
+            reutilizar.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 51 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Antes de las aplicaciones web, los modelos cliente-servidor
+            requerían instalaciones en cada dispositivo.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 52 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la actualidad, las aplicaciones están basadas en estándares como
+            <input type="text" class="blank-input" data-answer="HTML" />
+            para simplificar y unificar el acceso.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 53 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son ejemplos de wikis, blogs, tiendas en línea y webmails?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q53" value="correct" id="q53a" />
+              <label for="q53a">Todas son aplicaciones web</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53b" />
+              <label for="q53b">Solo son aplicaciones de escritorio</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53c" />
+              <label for="q53c">Son sistemas operativos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53d" />
+              <label for="q53d">Son bases de datos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 54 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En lugar de desarrollar clientes específicos para Windows, MacOS o
+            Linux, las aplicaciones web se escriben:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q54" value="correct" id="q54a" />
+              <label for="q54a"
+                >Una vez y se ejecutan en cualquier navegador</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54b" />
+              <label for="q54b">Dos veces para cada sistema</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54c" />
+              <label for="q54c">Tres veces para compatibilidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54d" />
+              <label for="q54d">Múltiples veces para cada dispositivo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 55 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los problemas de incompatibilidad ocurren principalmente con
+            versiones de Internet Explorer anteriores a la
+            <input type="text" class="blank-input" data-answer="7.0" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 56 -->
+        <div class="question" data-type="multiple">
+          <h3>Un problema común es la falta de:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q56" value="correct" id="q56a" />
+              <label for="q56a"
+                >Adherencia a los estándares por algunos navegadores</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56b" />
+              <label for="q56b">Velocidad de carga</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56c" />
+              <label for="q56c">Memoria disponible</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56d" />
+              <label for="q56d">Espacio en disco</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 57 -->
+        <div class="question" data-type="multiple">
+          <h3>Los usuarios pueden modificar configuraciones como:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q57" value="correct" id="q57a" />
+              <label for="q57a"
+                >Tamaño y color de fuentes, habilitar/deshabilitar
+                JavaScript</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57b" />
+              <label for="q57b">Cambiar el sistema operativo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57c" />
+              <label for="q57c">Modificar el hardware</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57d" />
+              <label for="q57d">Alterar la red</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 58 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La personalización del usuario puede afectar la
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="consistencia y funcionalidad"
+            />
+            de la aplicación.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 59 -->
+        <div class="question" data-type="multiple">
+          <h3>Una ventaja de Flash y Java applets era:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q59" value="correct" id="q59a" />
+              <label for="q59a">Más control sobre la interfaz</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59b" />
+              <label for="q59b">Menor tamaño</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59c" />
+              <label for="q59c">Mayor velocidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59d" />
+              <label for="q59d">Menor costo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 60 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Una ventaja adicional de Flash y Java applets era la
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="uniformidad en los elementos gráficos"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 61 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Una desventaja de Flash y Java applets era la
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="dependencia de complementos"
+            />
+            (plug-ins).
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 62 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los problemas de compatibilidad de Flash y Java ocurrían entre
+            diferentes
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="implementaciones"
+            />
+            de Flash o Java.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 63 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Las Aplicaciones Enriquecidas de Internet también se conocen como
+            <input type="text" class="blank-input" data-answer="RIA" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 64 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Las Aplicaciones Enriquecidas de Internet aprovechan tecnologías
+            adicionales para proporcionar interfaces más
+            <input type="text" class="blank-input" data-answer="avanzadas" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 65 -->
+        <div class="question" data-type="multiple">
+          <h3>En el modelo de tres capas, ¿qué incluye la capa de datos?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q65" value="correct" id="q65a" />
+              <label for="q65a">MySQL, PostgreSQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65b" />
+              <label for="q65b">HTML, CSS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65c" />
+              <label for="q65c">PHP, Python</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65d" />
+              <label for="q65d">Flash, Java</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 66 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las aplicaciones web proporcionan ahorro de espacio en disco duro.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 67 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las aplicaciones web facilitan la colaboración entre usuarios.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 68 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las aplicaciones web pueden tener inconsistencias en navegadores
+            antiguos.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 69 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las aplicaciones web tienen menos funcionalidades que las
+            aplicaciones de escritorio.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 70 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son estándares modernos mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q70" value="correct" id="q70a" />
+              <label for="q70a">HTML5 y CSS3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70b" />
+              <label for="q70b">Solo Flash</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70c" />
+              <label for="q70c">Solo Java</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70d" />
+              <label for="q70d">Solo XML</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 71 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son ejemplos de herramientas avanzadas mencionadas como
+            APIs?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q71" value="correct" id="q71a" />
+              <label for="q71a">IndexedDB y WebRTC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71b" />
+              <label for="q71b">Solo MySQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71c" />
+              <label for="q71c">Solo HTML5</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71d" />
+              <label for="q71d">Solo CSS3</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 72 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La página web Mosaic combinaba
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="imágenes y texto"
+            />
+            aunque con limitaciones técnicas.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 73 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El diseño de la primera generación era
+            <input type="text" class="blank-input" data-answer="lineal" />
+            y estaba enfocado en científicos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 74 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la primera generación se utilizaban monitores
+            <input type="text" class="blank-input" data-answer="monocromos" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 75 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Las velocidades lentas de la primera generación se debían a la
+            transmisión de datos por
+            <input type="text" class="blank-input" data-answer="MODEM" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 76 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El W3C se creó para establecer estándares en HTML y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="unificar el diseño web"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 77 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué elementos gráficos introdujo la segunda generación?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q77" value="correct" id="q77a" />
+              <label for="q77a"
+                >Iconos, imágenes de fondo, botones con relieve y banners</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77b" />
+              <label for="q77b">Solo videos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77c" />
+              <label for="q77c">Solo audio</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77d" />
+              <label for="q77d">Solo texto</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 78 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la segunda generación, las tablas se usaron para
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="organizar contenidos y mejorar la maquetación"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 79 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la segunda generación, las tablas se usaron para organizar
+            contenidos similar a
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="libros o revistas"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 80 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La segunda generación tuvo mejoras en
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="monitores y tarjetas gráficas"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 81 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En la segunda generación había problemas de compatibilidad entre
+            navegadores como:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q81" value="correct" id="q81a" />
+              <label for="q81a">Internet Explorer y Netscape Navigator</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81b" />
+              <label for="q81b">Chrome y Firefox</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81c" />
+              <label for="q81c">Safari y Edge</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81d" />
+              <label for="q81d">Opera y Brave</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 82 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La tercera generación tuvo enfoque en
+            <input type="text" class="blank-input" data-answer="diseñadores" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 83 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            La tercera generación se especializó según el objetivo de las
+            páginas como:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q83" value="correct" id="q83a" />
+              <label for="q83a">Ventas, comunidades e información</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83b" />
+              <label for="q83b">Solo entretenimiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83c" />
+              <label for="q83c">Solo educación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83d" />
+              <label for="q83d">Solo comercio</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 84 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La tercera generación prestó mayor atención a la navegabilidad
+            intuitiva y estructurada para mejorar la experiencia del
+            <input type="text" class="blank-input" data-answer="usuario" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 85 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La cuarta generación se caracterizó por la integración de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="multimedia avanzada"
+            />
+            en las páginas web.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 86 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La diversidad de diseños en la cuarta generación fue posible gracias
+            al soporte mejorado de los
+            <input type="text" class="blank-input" data-answer="navegadores" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 87 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La cuarta generación ofreció
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="accesibilidad para todo tipo de usuarios"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 88 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La cuarta generación ofreció una amplia variedad de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="estilos y funcionalidades"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 89 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Hooping.tv marca una nueva
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="tendencia en el diseño web"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 90 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Hooping.tv ofrece soluciones específicamente para
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="empresas y organizaciones"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 91 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son características del remitente (cliente) en arquitectura
+            cliente-servidor?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q91" value="correct" id="q91a" />
+              <label for="q91a"
+                >Inicia solicitudes, espera respuestas, puede conectarse a
+                varios servidores</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91b" />
+              <label for="q91b">Solo procesa datos localmente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91c" />
+              <label for="q91c">No necesita conexión de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91d" />
+              <label for="q91d">Funciona independientemente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 92 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son características del receptor (servidor) en arquitectura
+            cliente-servidor?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q92" value="correct" id="q92a" />
+              <label for="q92a"
+                >Esperan solicitudes, procesan y envían respuestas, aceptan
+                múltiples conexiones</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92b" />
+              <label for="q92b">Solo manejan una conexión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92c" />
+              <label for="q92c">No procesan solicitudes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92d" />
+              <label for="q92d">Trabajan offline únicamente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 93 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son desventajas del modelo cliente-servidor?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q93" value="correct" id="q93a" />
+              <label for="q93a"
+                >Congestión del tráfico, el cliente no dispone de todos los
+                recursos del servidor</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93b" />
+              <label for="q93b">Mayor seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93c" />
+              <label for="q93c">Mejor rendimiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93d" />
+              <label for="q93d">Menor costo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 94 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la arquitectura de 3 niveles, el servidor de aplicaciones
+            proporciona los recursos solicitados, pero que requiere de otro
+            <input type="text" class="blank-input" data-answer="servidor" />
+            para hacerlo.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 95 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Al conectarnos a internet estamos navegando en
+            <input type="text" class="blank-input" data-answer="3 capas" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 96 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Un protocolo es un método estándar que permite la comunicación entre
+            <input type="text" class="blank-input" data-answer="procesos" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 97 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En Internet, los protocolos utilizados pertenecen a un conjunto
+            denominado
+            <input type="text" class="blank-input" data-answer="TCP/IP" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 98 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El protocolo SMTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo simple de transferencia de correo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 99 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>El protocolo SMTP se basa en el modelo cliente-servidor.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 100 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son objetivos del protocolo FTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q100" value="correct" id="q100a" />
+              <label for="q100a"
+                >Compartir archivos remotos, independencia entre sistemas,
+                transferencia eficaz</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100b" />
+              <label for="q100b">Solo enviar correos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100c" />
+              <label for="q100c">Solo navegar web</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100d" />
+              <label for="q100d">Solo almacenar datos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 101 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el desarrollo de software, ¿cuáles son las capas de la
+            arquitectura de 2 capas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q101" value="correct" id="q101a" />
+              <label for="q101a"
+                >Capa de presentación y lógica (P+L), Capa de datos (D)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101b" />
+              <label for="q101b">Solo presentación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101c" />
+              <label for="q101c">Solo datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101d" />
+              <label for="q101d">Solo lógica</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 102 -->
+        <div class="question" data-type="multiple">
+          <h3>En la arquitectura de 3 capas, ¿cuáles son las tres capas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q102" value="correct" id="q102a" />
+              <label for="q102a"
+                >Presentación, Lógica de negocios, Persistencia</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102b" />
+              <label for="q102b">Solo frontend y backend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102c" />
+              <label for="q102c">Solo cliente y servidor</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102d" />
+              <label for="q102d">Solo datos y interfaz</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 103 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son formas de distribución de componentes?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q103" value="correct" id="q103a" />
+              <label for="q103a"
+                >Distribución lineal, monolítica, orientada al web, de
+                componentes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103b" />
+              <label for="q103b">Solo distribución simple</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103c" />
+              <label for="q103c">Solo distribución compleja</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103d" />
+              <label for="q103d">Solo distribución local</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 104 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La distribución monolítica significa que toda la aplicación se
+            ejecuta en un solo
+            <input type="text" class="blank-input" data-answer="nodo" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 105 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La distribución orientada al web utiliza servidores web para
+            gestionar la interfaz de usuario y distribuir dinámicamente el
+            <input type="text" class="blank-input" data-answer="contenido" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 106 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son características de C++ como lenguaje de programación?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q106" value="correct" id="q106a" />
+              <label for="q106a">Rápido, pero difícil de mantener</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106b" />
+              <label for="q106b">Lento pero fácil</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106c" />
+              <label for="q106c">Solo para web</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106d" />
+              <label for="q106d">Solo para móviles</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 107 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son características de Visual Basic como lenguaje de
+            programación?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q107" value="correct" id="q107a" />
+              <label for="q107a"
+                >Fácil de aprender, pero limitado en escalabilidad</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107b" />
+              <label for="q107b">Difícil pero muy escalable</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107c" />
+              <label for="q107c">Solo para bases de datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107d" />
+              <label for="q107d">Solo para servidores</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 108 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Perl es útil para manipulación de texto y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="bases de datos"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 109 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son tipos de middleware mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q109" value="correct" id="q109a" />
+              <label for="q109a"
+                >Sockets, ORB (Object Request Broker), HTTP</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109b" />
+              <label for="q109b">Solo HTML</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109c" />
+              <label for="q109c">Solo CSS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109d" />
+              <label for="q109d">Solo JavaScript</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 110 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los sockets proporcionan comunicación de
+            <input type="text" class="blank-input" data-answer="bajo nivel" />
+            entre cliente y servidor.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 111 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            ORB significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Object Request Broker"
+            />
+            y facilita la comunicación entre objetos distribuidos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 112 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son tecnologías de generación de contenido dinámico?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q112" value="correct" id="q112a" />
+              <label for="q112a">CGI, Servlets, JSP y ASP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112b" />
+              <label for="q112b">Solo HTML</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112c" />
+              <label for="q112c">Solo CSS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112d" />
+              <label for="q112d">Solo Flash</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 113 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            CGI significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Common Gateway Interface"
+            />
+            y ejecuta programas en el servidor para generar páginas web.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 114 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los Servlets manejan
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="solicitudes web"
+            />
+            dentro del servidor.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 115 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            JSP permite generar contenido dinámico con
+            <input type="text" class="blank-input" data-answer="Java" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 116 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            ASP es una tecnología de
+            <input type="text" class="blank-input" data-answer="Microsoft" />
+            para contenido dinámico.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 117 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son las tres áreas principales del desarrollo web moderno?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q117" value="correct" id="q117a" />
+              <label for="q117a"
+                >Frontend (Cliente), Backend (Servidor), Full Stack</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117b" />
+              <label for="q117b">Solo Frontend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117c" />
+              <label for="q117c">Solo Backend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117d" />
+              <label for="q117d">Solo diseño gráfico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 118 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son frameworks de JavaScript frontend mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q118" value="correct" id="q118a" />
+              <label for="q118a">React.js, Angular y Vue.js</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118b" />
+              <label for="q118b">Solo Django</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118c" />
+              <label for="q118c">Solo MySQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118d" />
+              <label for="q118d">Solo PHP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 119 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            React.js está basado en
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="componentes reutilizables"
+            />
+            y SPA.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 120 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Angular es un framework estructurado con
+            <input type="text" class="blank-input" data-answer="TypeScript" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 121 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Vue.js tiene sintaxis sencilla, ideal para proyectos
+            <input type="text" class="blank-input" data-answer="escalables" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 122 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son características de Node.js?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q122" value="correct" id="q122a" />
+              <label for="q122a"
+                >Rápido y eficiente para aplicaciones en tiempo real</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122b" />
+              <label for="q122b">Lento y pesado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122c" />
+              <label for="q122c">Solo para frontend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122d" />
+              <label for="q122d">Solo para bases de datos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 123 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son características de Python con Django y Flask?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q123" value="correct" id="q123a" />
+              <label for="q123a">Seguridad y escalabilidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123b" />
+              <label for="q123b">Solo para frontend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123c" />
+              <label for="q123c">Difícil de usar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123d" />
+              <label for="q123d">Solo para móviles</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 124 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            PHP con Laravel es popular en sitios dinámicos y
+            <input type="text" class="blank-input" data-answer="CMS" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 125 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Java con Spring Boot es ideal para sistemas
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="empresariales"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 126 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Ruby on Rails permite desarrollo
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="ágil y sencillo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 127 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son tipos de bases de datos mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q127" value="correct" id="q127a" />
+              <label for="q127a"
+                >NoSQL (MongoDB, Redis) y SQL (MySQL, PostgreSQL)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q127" value="incorrect" id="q127b" />
+              <label for="q127b">Solo NoSQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q127" value="incorrect" id="q127c" />
+              <label for="q127c">Solo SQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q127" value="incorrect" id="q127d" />
+              <label for="q127d">Solo archivos planos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 128 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            NoSQL es para datos flexibles y de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="rápido crecimiento"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 129 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            SQL es para datos organizados en
+            <input type="text" class="blank-input" data-answer="tablas" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 130 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            GraphQL es una alternativa
+            <input type="text" class="blank-input" data-answer="flexible" />
+            a REST.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 131 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa MEAN stack?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q131" value="correct" id="q131a" />
+              <label for="q131a">MongoDB, Express.js, Angular y Node.js</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q131" value="incorrect" id="q131b" />
+              <label for="q131b">Solo MongoDB</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q131" value="incorrect" id="q131c" />
+              <label for="q131c">Solo Angular</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q131" value="incorrect" id="q131d" />
+              <label for="q131d">Solo Node.js</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 132 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa LAMP stack?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q132" value="correct" id="q132a" />
+              <label for="q132a">Linux, Apache, MySQL y PHP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q132" value="incorrect" id="q132b" />
+              <label for="q132b">Solo Linux</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q132" value="incorrect" id="q132c" />
+              <label for="q132c">Solo Apache</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q132" value="incorrect" id="q132d" />
+              <label for="q132d">Solo MySQL</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 133 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            LAMP es un stack
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="tradicional y estable"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 134 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Django + React es una
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="potente combinación"
+            />
+            Python + JS.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 135 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de control de versiones mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q135" value="correct" id="q135a" />
+              <label for="q135a">Git, GitHub y GitLab</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q135" value="incorrect" id="q135b" />
+              <label for="q135b">Solo SVN</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q135" value="incorrect" id="q135c" />
+              <label for="q135c">Solo CVS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q135" value="incorrect" id="q135d" />
+              <label for="q135d">Solo archivos locales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 136 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de CI/CD mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q136" value="correct" id="q136a" />
+              <label for="q136a">Jenkins y GitLab CI/CD</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q136" value="incorrect" id="q136b" />
+              <label for="q136b">Solo Jenkins</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q136" value="incorrect" id="q136c" />
+              <label for="q136c">Solo GitLab</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q136" value="incorrect" id="q136d" />
+              <label for="q136d">Solo despliegue manual</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 137 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            CI/CD significa integración y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="despliegue continuo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 138 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de contenedores mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q138" value="correct" id="q138a" />
+              <label for="q138a">Docker y Kubernetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q138" value="incorrect" id="q138b" />
+              <label for="q138b">Solo Docker</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q138" value="incorrect" id="q138c" />
+              <label for="q138c">Solo Kubernetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q138" value="incorrect" id="q138d" />
+              <label for="q138d">Solo máquinas virtuales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 139 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Docker y Kubernetes proporcionan virtualización y
+            <input type="text" class="blank-input" data-answer="orquestación" />
+            de aplicaciones.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 140 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son importancias del desarrollo web mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q140" value="correct" id="q140a" />
+              <label for="q140a"
+                >Presencia digital, economía digital, accesibilidad global,
+                tecnologías emergentes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q140" value="incorrect" id="q140b" />
+              <label for="q140b">Solo presencia digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q140" value="incorrect" id="q140c" />
+              <label for="q140c">Solo economía digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q140" value="incorrect" id="q140d" />
+              <label for="q140d">Solo tecnologías emergentes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 141 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El desarrollo web impulsa la economía digital como
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="E-commerce, fintech, SaaS"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 142 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El desarrollo web incorpora tecnologías emergentes como
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="IA, blockchain y PWA"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 143 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            HTML define la
+            <input type="text" class="blank-input" data-answer="estructura" />
+            de las páginas web.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 144 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            CSS aplica estilos y diseño
+            <input type="text" class="blank-input" data-answer="responsivo" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 145 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            JavaScript agrega interactividad y manipulación del
+            <input type="text" class="blank-input" data-answer="DOM" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 146 -->
+        <div class="question" data-type="multiple">
+          <h3>En la primera fase del diseño web, ¿qué se estudia?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q146" value="correct" id="q146a" />
+              <label for="q146a"
+                >La imagen que debe tener la página web de acuerdo al
+                objetivo</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q146" value="incorrect" id="q146b" />
+              <label for="q146b">Solo la programación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q146" value="incorrect" id="q146c" />
+              <label for="q146c">Solo las bases de datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q146" value="incorrect" id="q146d" />
+              <label for="q146d">Solo el hosting</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 147 -->
+        <div class="question" data-type="multiple">
+          <h3>En la segunda fase del diseño web, ¿qué se implementa?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q147" value="correct" id="q147a" />
+              <label for="q147a"
+                >El diseño como página web con cabeceras, menús, animaciones e
+                imágenes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q147" value="incorrect" id="q147b" />
+              <label for="q147b">Solo la base de datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q147" value="incorrect" id="q147c" />
+              <label for="q147c">Solo el servidor</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q147" value="incorrect" id="q147d" />
+              <label for="q147d">Solo la documentación</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 148 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la tercera fase se procede a programar la
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="navegabilidad y funcionalidad"
+            />
+            de las páginas web.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 149 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El diseño web avanzado es demandado principalmente por empresas
+            <input type="text" class="blank-input" data-answer="tecnológicas" />
+            o clientes relacionados con el mundo audiovisual.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 150 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son funcionalidades que se pueden incluir en diseño web
+            avanzado?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q150" value="correct" id="q150a" />
+              <label for="q150a"
+                >Animaciones interactivas, optimización móvil, búsqueda
+                avanzada, formularios avanzados, mapas interactivos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q150" value="incorrect" id="q150b" />
+              <label for="q150b">Solo texto plano</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q150" value="incorrect" id="q150c" />
+              <label for="q150c">Solo imágenes estáticas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q150" value="incorrect" id="q150d" />
+              <label for="q150d">Solo HTML básico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 151 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El diseño web clásico prescinde de elementos como flash, video
+            streaming o cualquier tecnología
+            <input type="text" class="blank-input" data-answer="avanzada" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 152 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son características del diseño web industrial?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q152" value="correct" id="q152a" />
+              <label for="q152a"
+                >Páginas técnicas de productos, estudios de casos, logotipos de
+                socios, servicios, testimonios</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q152" value="incorrect" id="q152b" />
+              <label for="q152b">Solo entretenimiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q152" value="incorrect" id="q152c" />
+              <label for="q152c">Solo redes sociales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q152" value="incorrect" id="q152d" />
+              <label for="q152d">Solo blogs personales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 153 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ejemplos de sitios web industriales mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q153" value="correct" id="q153a" />
+              <label for="q153a"
+                >New Holland, Davenport Machine y transporte neumático de
+                materiales industriales</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q153" value="incorrect" id="q153b" />
+              <label for="q153b">Solo redes sociales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q153" value="incorrect" id="q153c" />
+              <label for="q153c">Solo tiendas online</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q153" value="incorrect" id="q153d" />
+              <label for="q153d">Solo blogs</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 154 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son desafíos en el desarrollo de aplicaciones web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q154" value="correct" id="q154a" />
+              <label for="q154a"
+                >Crecimiento acelerado sin metodologías, falta de enfoque en
+                calidad, dependencia del conocimiento individual</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q154" value="incorrect" id="q154b" />
+              <label for="q154b">Solo falta de recursos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q154" value="incorrect" id="q154c" />
+              <label for="q154c">Solo problemas de hardware</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q154" value="incorrect" id="q154d" />
+              <label for="q154d">Solo costos elevados</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 155 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son atributos clave de calidad en aplicaciones web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q155" value="correct" id="q155a" />
+              <label for="q155a"
+                >Funcionalidad, confiabilidad, mantenibilidad, usabilidad,
+                portabilidad</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q155" value="incorrect" id="q155b" />
+              <label for="q155b">Solo funcionalidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q155" value="incorrect" id="q155c" />
+              <label for="q155c">Solo usabilidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q155" value="incorrect" id="q155d" />
+              <label for="q155d">Solo portabilidad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 156 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La ingeniería web es el conjunto de procesos y metodologías
+            aplicadas para diseñar, desarrollar y mantener aplicaciones web de
+            alta
+            <input type="text" class="blank-input" data-answer="calidad" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 157 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La formulación identifica objetivos y establece el
+            <input type="text" class="blank-input" data-answer="alcance" />
+            de la primera entrega.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 158 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La planificación genera la estimación del costo general del
+            proyecto, la evaluación de riesgos y el
+            <input type="text" class="blank-input" data-answer="calendario" />
+            del desarrollo.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 159 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El análisis especifica los requerimientos e identifica el
+            <input type="text" class="blank-input" data-answer="contenido" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 160 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El modelado se compone de dos secuencias paralelas: diseño y
+            producción del contenido, y diseño de la arquitectura,
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="navegación e interfaz"
+            />
+            de usuario.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 161 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La generación incluye el uso de herramientas automáticas de código y
+            la integración de
+            <input type="text" class="blank-input" data-answer="componentes" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 162 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El test se centra en contenido, función, navegación, rendimiento,
+            compatibilidad y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="configuración"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 163 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La evaluación del cliente se basa en la revisión del contenido y la
+            evaluación del
+            <input type="text" class="blank-input" data-answer="desempeño" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 164 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los 10 puntos de planificación de aplicación web
+            mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q164" value="correct" id="q164a" />
+              <label for="q164a"
+                >Planificar el futuro, documentar todo, comenzar por la base,
+                conectar con usuario, usar librerías existentes, elegir lenguaje
+                apropiado, trabajar aislado, acabar desarrollo, etc.</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q164" value="incorrect" id="q164b" />
+              <label for="q164b">Solo planificar el futuro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q164" value="incorrect" id="q164c" />
+              <label for="q164c">Solo documentar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q164" value="incorrect" id="q164d" />
+              <label for="q164d">Solo elegir lenguaje</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 165 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el primer punto de planificación, se debe considerar qué pasa si
+            tuviéramos problemas de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="escalabilidad"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 166 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el segundo punto, se debe documentar en especial aquellas partes
+            que hayan requerido un
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="mayor tiempo de desarrollo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 167 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el tercer punto, es fundamental comenzar por lo que vendrá a ser
+            <input type="text" class="blank-input" data-answer="la base" />
+            de nuestra aplicación.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 168 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el cuarto punto, lo más importante es llegar a
+            <input type="text" class="blank-input" data-answer="conectar" />
+            con el usuario.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 169 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el quinto punto, se debe evitar construirse librerías o
+            frameworks
+            <input type="text" class="blank-input" data-answer="innecesarios" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 170 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el sexto punto, la respuesta a cuál es el mejor lenguaje de
+            programación es
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="depende de para qué quieras utilizarlo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 171 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el séptimo punto, se debe proponer un buen número de horas al día
+            de trabajo
+            <input type="text" class="blank-input" data-answer="aislado" />
+            dedicado al proyecto.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 172 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el octavo punto, los errores de planificación llevan a menudo a
+            los desarrolladores a tener que escribir
+            <input type="text" class="blank-input" data-answer="código sucio" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 173 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el noveno punto, se debe tener en cuenta que la fase de
+            desarrollo algún día deberá
+            <input type="text" class="blank-input" data-answer="acabar" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 174 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué se menciona sobre el décimo punto de planificación?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q174" value="correct" id="q174a" />
+              <label for="q174a">Referente a los pasos post-desarrollo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q174" value="incorrect" id="q174b" />
+              <label for="q174b">Solo programación inicial</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q174" value="incorrect" id="q174c" />
+              <label for="q174c">Solo diseño de interfaz</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q174" value="incorrect" id="q174d" />
+              <label for="q174d">Solo testing básico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 175 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La primera generación de diseño web comenzó en
+            <input type="text" class="blank-input" data-answer="1993" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 176 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Mosaic tenía
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="2M de visitantes"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 177 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            El diseño de la primera generación era lineal y estaba enfocado en
+            científicos.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 178 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>En la primera generación se utilizaban monitores monocromos.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 179 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las velocidades lentas de la primera generación se debían a la
+            transmisión de datos por MODEM.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 180 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La estructura desordenada de la primera generación llevó a la
+            creación del
+            <input type="text" class="blank-input" data-answer="W3C" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 181 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La segunda generación tuvo mejoras en monitores y tarjetas gráficas.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 182 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            En la segunda generación, las tablas se usaron para organizar
+            contenidos similar a libros o revistas.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 183 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La tercera generación se especializó según el objetivo de las
+            páginas como ventas, comunidades e información.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 184 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La cuarta generación se caracterizó por la integración de multimedia
+            avanzada en las páginas web.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 185 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La quinta generación se caracteriza por la integración de televisión
+            IP o televisión online.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 186 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En el modelo cliente-servidor, los clientes inician
+            <input type="text" class="blank-input" data-answer="solicitudes" />
+            a los servidores.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 187 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Los servidores esperan solicitudes, las procesan y envían
+            <input type="text" class="blank-input" data-answer="respuestas" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 188 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Una ventaja del modelo cliente-servidor es la centralización del
+            control.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 189 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Una desventaja del modelo cliente-servidor es la congestión del
+            tráfico.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 190 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            HTTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo de transferencia de hipertexto"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 191 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            FTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo de transferencia de archivos"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 192 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            SMTP significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Protocolo simple de transferencia de correo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 193 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La comunicación HTTP entre navegador y servidor tiene dos etapas.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 194 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Para abrir una página web se puede usar un URL o un hiperenlace.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 195 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Un protocolo es un método estándar que permite la comunicación entre
+            <input type="text" class="blank-input" data-answer="procesos" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 196 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En Internet, los protocolos utilizados pertenecen a un conjunto
+            denominado
+            <input type="text" class="blank-input" data-answer="TCP/IP" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 197 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Al conectarnos a internet estamos navegando en 3 capas.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 198 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            En la arquitectura de 3 niveles, el servidor de aplicaciones
+            requiere de otro servidor para proporcionar recursos.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 199 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son ventajas de la arquitectura de 3 capas mencionadas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q199" value="correct" id="q199a" />
+              <label for="q199a"
+                >Facilita reutilización, permite escalar mejor, independiza
+                lógica de interfaz</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q199" value="incorrect" id="q199b" />
+              <label for="q199b">Solo facilita reutilización</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q199" value="incorrect" id="q199c" />
+              <label for="q199c">Solo permite escalar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q199" value="incorrect" id="q199d" />
+              <label for="q199d">Solo independiza lógica</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 200 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son desventajas de la arquitectura de 2 capas mencionadas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q200" value="correct" id="q200a" />
+              <label for="q200a"
+                >Aplicaciones monolíticas, alto consumo de recursos, dificultad
+                para reutilizar</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q200" value="incorrect" id="q200b" />
+              <label for="q200b">Solo aplicaciones monolíticas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q200" value="incorrect" id="q200c" />
+              <label for="q200c">Solo alto consumo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q200" value="incorrect" id="q200d" />
+              <label for="q200d">Solo dificultad para reutilizar</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 201 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La distribución monolítica significa que toda la aplicación se
+            ejecuta en un solo nodo.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 202 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            La distribución orientada al web utiliza servidores web para
+            gestionar la interfaz de usuario.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 203 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Java es independiente de la plataforma y orientado a objetos.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 204 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>C++ es rápido, pero difícil de mantener.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 205 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Visual Basic es fácil de aprender, pero limitado en escalabilidad.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 206 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Perl es útil para manipulación de texto y bases de datos.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 207 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Los sockets proporcionan comunicación de bajo nivel entre cliente y
+            servidor.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 208 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>ORB facilita la comunicación entre objetos distribuidos.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 209 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Los Servlets manejan solicitudes web dentro del servidor.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 210 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>JSP permite generar contenido dinámico con Java.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 211 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>ASP es una tecnología de Microsoft para contenido dinámico.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 212 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son las tres áreas principales del desarrollo web moderno?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q212" value="correct" id="q212a" />
+              <label for="q212a"
+                >Frontend (Cliente), Backend (Servidor), Full Stack</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q212" value="incorrect" id="q212b" />
+              <label for="q212b">Solo Frontend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q212" value="incorrect" id="q212c" />
+              <label for="q212c">Solo Backend</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q212" value="incorrect" id="q212d" />
+              <label for="q212d">Solo diseño gráfico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 213 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son frameworks de JavaScript frontend mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q213" value="correct" id="q213a" />
+              <label for="q213a">React.js, Angular y Vue.js</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q213" value="incorrect" id="q213b" />
+              <label for="q213b">Solo Django</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q213" value="incorrect" id="q213c" />
+              <label for="q213c">Solo MySQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q213" value="incorrect" id="q213d" />
+              <label for="q213d">Solo PHP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 214 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            React.js está basado en
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="componentes reutilizables y SPA"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 215 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Angular es un framework estructurado con
+            <input type="text" class="blank-input" data-answer="TypeScript" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 216 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Vue.js tiene sintaxis sencilla, ideal para proyectos
+            <input type="text" class="blank-input" data-answer="escalables" />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 217 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son ejemplos de CSS Frameworks?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q217" value="correct" id="q217a" />
+              <label for="q217a">Bootstrap, Tailwind CSS, Material UI</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q217" value="incorrect" id="q217b" />
+              <label for="q217b">Solo MySQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q217" value="incorrect" id="q217c" />
+              <label for="q217c">Solo React</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q217" value="incorrect" id="q217d" />
+              <label for="q217d">Solo PHP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 218 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Node.js es rápido y eficiente para aplicaciones en tiempo real.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 219 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Python con Django y Flask ofrece seguridad y escalabilidad.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 220 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>PHP con Laravel es popular en sitios dinámicos y CMS.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 221 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Java con Spring Boot es ideal para sistemas empresariales.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 222 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Ruby on Rails permite desarrollo ágil y sencillo.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 223 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son tipos de bases de datos mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q223" value="correct" id="q223a" />
+              <label for="q223a"
+                >NoSQL (MongoDB, Redis) y SQL (MySQL, PostgreSQL)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q223" value="incorrect" id="q223b" />
+              <label for="q223b">Solo NoSQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q223" value="incorrect" id="q223c" />
+              <label for="q223c">Solo SQL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q223" value="incorrect" id="q223d" />
+              <label for="q223d">Solo archivos planos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 224 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>NoSQL es para datos flexibles y de rápido crecimiento.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 225 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>SQL maneja datos organizados en tablas.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 226 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>REST es arquitectura estándar para intercambio de datos.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 227 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>GraphQL es una alternativa flexible a REST.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 228 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa MERN stack?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q228" value="correct" id="q228a" />
+              <label for="q228a">MongoDB, Express.js, React y Node.js</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q228" value="incorrect" id="q228b" />
+              <label for="q228b">Solo MongoDB</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q228" value="incorrect" id="q228c" />
+              <label for="q228c">Solo React</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q228" value="incorrect" id="q228d" />
+              <label for="q228d">Solo Node.js</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 229 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            MEAN es similar a MERN pero usa
+            <input type="text" class="blank-input" data-answer="Angular" />
+            en lugar de React.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 230 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa LAMP stack?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q230" value="correct" id="q230a" />
+              <label for="q230a">Linux, Apache, MySQL y PHP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q230" value="incorrect" id="q230b" />
+              <label for="q230b">Solo Linux</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q230" value="incorrect" id="q230c" />
+              <label for="q230c">Solo Apache</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q230" value="incorrect" id="q230d" />
+              <label for="q230d">Solo MySQL</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 231 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>LAMP es un stack tradicional y estable.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 232 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Django + React es una potente combinación Python + JS.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 233 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de control de versiones mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q233" value="correct" id="q233a" />
+              <label for="q233a">Git, GitHub y GitLab</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q233" value="incorrect" id="q233b" />
+              <label for="q233b">Solo SVN</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q233" value="incorrect" id="q233c" />
+              <label for="q233c">Solo CVS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q233" value="incorrect" id="q233d" />
+              <label for="q233d">Solo archivos locales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 234 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de CI/CD mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q234" value="correct" id="q234a" />
+              <label for="q234a">Jenkins y GitLab CI/CD</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q234" value="incorrect" id="q234b" />
+              <label for="q234b">Solo Jenkins</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q234" value="incorrect" id="q234c" />
+              <label for="q234c">Solo GitLab</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q234" value="incorrect" id="q234d" />
+              <label for="q234d">Solo despliegue manual</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 235 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            CI/CD significa integración y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="despliegue continuo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 236 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son herramientas de contenedores mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q236" value="correct" id="q236a" />
+              <label for="q236a">Docker y Kubernetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q236" value="incorrect" id="q236b" />
+              <label for="q236b">Solo Docker</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q236" value="incorrect" id="q236c" />
+              <label for="q236c">Solo Kubernetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q236" value="incorrect" id="q236d" />
+              <label for="q236d">Solo máquinas virtuales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 237 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Docker y Kubernetes proporcionan virtualización y orquestación de
+            aplicaciones.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 238 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son servicios de computación en la nube mencionados?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q238" value="correct" id="q238a" />
+              <label for="q238a">AWS, Google Cloud y Azure</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q238" value="incorrect" id="q238b" />
+              <label for="q238b">Solo AWS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q238" value="incorrect" id="q238c" />
+              <label for="q238c">Solo Google Cloud</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q238" value="incorrect" id="q238d" />
+              <label for="q238d">Solo Azure</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 239 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            AWS, Google Cloud y Azure proporcionan infraestructura escalable en
+            la nube.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 240 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son importancias del desarrollo web mencionadas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q240" value="correct" id="q240a" />
+              <label for="q240a"
+                >Presencia digital, economía digital, accesibilidad global,
+                tecnologías emergentes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q240" value="incorrect" id="q240b" />
+              <label for="q240b">Solo presencia digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q240" value="incorrect" id="q240c" />
+              <label for="q240c">Solo economía digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q240" value="incorrect" id="q240d" />
+              <label for="q240d">Solo tecnologías emergentes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 241 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            El desarrollo web facilita la presencia digital de empresas y
+            emprendedores.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 242 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son ejemplos de economía digital que impulsa el desarrollo
+            web?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q242" value="correct" id="q242a" />
+              <label for="q242a">E-commerce, fintech, SaaS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q242" value="incorrect" id="q242b" />
+              <label for="q242b">Solo agricultura tradicional</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q242" value="incorrect" id="q242c" />
+              <label for="q242c">Solo manufactura</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q242" value="incorrect" id="q242d" />
+              <label for="q242d">Solo minería</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 243 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            El desarrollo web permite accesibilidad global, optimizando
+            aplicaciones para dispositivos móviles.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 244 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son tecnologías emergentes que incorpora el desarrollo web?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q244" value="correct" id="q244a" />
+              <label for="q244a">IA, blockchain y PWA</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q244" value="incorrect" id="q244b" />
+              <label for="q244b">Solo máquinas de escribir</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q244" value="incorrect" id="q244c" />
+              <label for="q244c">Solo fax</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q244" value="incorrect" id="q244d" />
+              <label for="q244d">Solo teléfonos analógicos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 245 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>HTML define la estructura de las páginas web.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 246 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>CSS aplica estilos y diseño responsivo.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 247 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>JavaScript agrega interactividad y manipulación del DOM.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 248 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            El diseño web es un proceso elaborado que está formado por varias
+            fases.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 249 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>Cuanto más grande es el proyecto, más fases puede tener.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 250 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son las tres fases básicas del diseño web?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q250" value="correct" id="q250a" />
+              <label for="q250a"
+                >Análisis y definición, Creación de páginas web, Programación de
+                navegabilidad</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q250" value="incorrect" id="q250b" />
+              <label for="q250b">Solo documentación del proyecto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q250" value="incorrect" id="q250c" />
+              <label for="q250c">Solo programación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q250" value="incorrect" id="q250d" />
+              <label for="q250d">Solo diseño gráfico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 251 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            En la fase de análisis y definición se estudia la
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="imagen que debe tener la página web de acuerdo al objetivo"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 252 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La fase de análisis y definición es donde se genera una primera
+            visión del
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="diseño que presentarán las páginas web del sitio"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 253 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Después de aprobar el
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="boceto del diseño web"
+            />
+            se procede a la implementación del diseño como página web.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 254 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué elementos se implementan en la creación de la página web?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q254" value="correct" id="q254a" />
+              <label for="q254a"
+                >Cabeceras, menús, animaciones e imágenes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q254" value="incorrect" id="q254b" />
+              <label for="q254b">Solo bases de datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q254" value="incorrect" id="q254c" />
+              <label for="q254c">Solo servidores</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q254" value="incorrect" id="q254d" />
+              <label for="q254d">Solo documentación</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 255 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Una vez creadas y estructuradas las páginas web, se procede a
+            programar su
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="navegabilidad y funcionalidad"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 256 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            La programación de navegabilidad busca una correcta presentación de
+            las páginas web tal y como se define en el
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="diseño web original"
+            />
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 257 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>El diseño web contiene un amplio abanico de posibilidades.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 258 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            El amplio abanico de posibilidades lleva a una amplia variedad de
+            tipos de diseño web.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 259 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los tres tipos principales de diseño web mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q259" value="correct" id="q259a" />
+              <label for="q259a"
+                >Diseño web avanzado, Diseño web clásico, Diseño web
+                industrial</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q259" value="incorrect" id="q259b" />
+              <label for="q259b">Solo diseño web móvil</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q259" value="incorrect" id="q259c" />
+              <label for="q259c">Solo diseño web responsive</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q259" value="incorrect" id="q259d" />
+              <label for="q259d">Solo diseño web básico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 260 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            El diseño web avanzado está orientado a
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="profesionales"
+            />
+            que quieren contar con nuevas tecnologías.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Resultados -->
+        <div class="results">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="score" id="finalScore">0%</div>
+          <div class="score-details" id="scoreDetails">
+            0 de 210 preguntas correctas
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <button class="btn btn-primary" onclick="restartQuiz()">
+              Reintentar
+            </button>
+            <a href="index.html" class="btn btn-secondary"
+              >Volver a Programación Web</a
+            >
+          </div>
+        </div>
+
+        <div class="controls">
+          <button
+            class="btn btn-secondary"
+            id="prevBtn"
+            onclick="changeQuestion(-1)"
+          >
+            Anterior
+          </button>
+          <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()">
+            Verificar
+          </button>
+          <button
+            class="btn btn-primary"
+            id="nextBtn"
+            onclick="changeQuestion(1)"
+            style="display: none"
+          >
+            Siguiente
+          </button>
+          <button
+            class="btn btn-primary"
+            id="finishBtn"
+            onclick="showResults()"
+            style="display: none"
+          >
+            Finalizar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentQuestionIndex = 0;
+      let score = 0;
+      let totalQuestions = 260; // Actualizado a 260 preguntas
+      let answers = new Array(totalQuestions).fill(null);
+      let questionAnswered = false;
+      let questionOrder = [];
+      let originalQuestions = [];
+
+      const tfAnswers = {
+        48: "true", // Cliente ligero
+        49: "false", // Concat modifica
+        50: "true", // Funciones reutilizables
+        51: "true", // Modelos cliente-servidor requerían instalaciones
+        66: "true", // Aplicaciones web ahorro espacio
+        67: "true", // Aplicaciones web colaboración
+        68: "true", // Inconsistencias navegadores antiguos
+        69: "true", // Menos funcionalidades que escritorio
+        99: "true", // SMTP modelo cliente-servidor
+        177: "true", // Primera generación lineal
+        178: "true", // Monitores monocromos
+        179: "true", // Velocidades lentas MODEM
+        181: "true", // Segunda generación mejoras monitores
+        182: "true", // Tablas organizar contenidos
+        183: "true", // Tercera generación especialización
+        184: "true", // Cuarta generación multimedia
+        185: "true", // Quinta generación televisión IP
+        188: "true", // Ventaja centralización control
+        189: "true", // Desventaja congestión tráfico
+        193: "true", // HTTP dos etapas
+        194: "true", // URL o hiperenlace
+        197: "true", // Internet 3 capas
+        198: "true", // Arquitectura 3 niveles servidor
+        201: "true", // Distribución monolítica
+        202: "true", // Distribución orientada web
+        203: "true", // Java independiente plataforma
+        204: "true", // C++ rápido difícil mantener
+        205: "true", // Visual Basic fácil limitado
+        206: "true", // Perl texto bases datos
+        207: "true", // Sockets comunicación bajo nivel
+        208: "true", // ORB objetos distribuidos
+        209: "true", // Servlets solicitudes web
+        210: "true", // JSP contenido dinámico Java
+        211: "true", // ASP tecnología Microsoft
+        218: "true", // Node.js rápido eficiente
+        219: "true", // Python Django Flask seguridad
+        220: "true", // PHP Laravel sitios dinámicos
+        221: "true", // Java Spring Boot empresariales
+        222: "true", // Ruby on Rails desarrollo ágil
+        224: "true", // NoSQL datos flexibles
+        225: "true", // SQL datos tablas
+        226: "true", // REST arquitectura estándar
+        227: "true", // GraphQL alternativa flexible
+        231: "true", // LAMP stack tradicional
+        232: "true", // Django React combinación potente
+        237: "true", // Docker Kubernetes virtualización
+        239: "true", // AWS Google Cloud Azure infraestructura
+        241: "true", // Desarrollo web presencia digital
+        243: "true", // Desarrollo web accesibilidad global
+        245: "true", // HTML define estructura
+        246: "true", // CSS aplica estilos
+        247: "true", // JavaScript agrega interactividad
+        248: "true", // Diseño web proceso elaborado
+        249: "true", // Proyecto grande más fases
+        257: "true", // Diseño web amplio abanico
+        258: "true", // Amplio abanico variedad tipos
+      };
+
+      function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+
+      function shuffleOptions(question) {
+        const options = question.querySelectorAll(".option");
+        const optionsArray = Array.from(options);
+        const shuffledOptions = shuffleArray(optionsArray);
+
+        const optionsList = question.querySelector(".options");
+        optionsList.innerHTML = "";
+
+        shuffledOptions.forEach((option) => {
+          optionsList.appendChild(option);
+        });
+      }
+
+      function initializeQuestionOrder() {
+        questionOrder = Array.from({ length: totalQuestions }, (_, i) => i);
+        questionOrder = shuffleArray(questionOrder);
+
+        const questions = document.querySelectorAll(".question");
+        originalQuestions = Array.from(questions);
+
+        originalQuestions.forEach((question) => {
+          if (question.getAttribute("data-type") === "multiple") {
+            shuffleOptions(question);
+          }
+        });
+      }
+
+      function getCurrentQuestion() {
+        const actualIndex = questionOrder[currentQuestionIndex];
+        return originalQuestions[actualIndex];
+      }
+
+      function getCurrentOriginalIndex() {
+        return questionOrder[currentQuestionIndex];
+      }
+
+      function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+        document.getElementById("currentQuestion").textContent =
+          currentQuestionIndex + 1;
+      }
+
+      function showQuestion(index) {
+        originalQuestions.forEach((q) => q.classList.remove("active"));
+
+        const currentQuestion = getCurrentQuestion();
+        currentQuestion.classList.add("active");
+
+        updateProgress();
+        updateButtons();
+        questionAnswered = answers[index] !== null;
+
+        if (questionAnswered) {
+          document.getElementById("checkBtn").style.display = "none";
+          document.getElementById("nextBtn").style.display = "inline-block";
+          if (index === totalQuestions - 1) {
+            document.getElementById("finishBtn").style.display = "inline-block";
+            document.getElementById("nextBtn").style.display = "none";
+          }
+        } else {
+          document.getElementById("checkBtn").style.display = "inline-block";
+          document.getElementById("nextBtn").style.display = "none";
+          document.getElementById("finishBtn").style.display = "none";
+        }
+      }
+
+      function updateButtons() {
+        document.getElementById("prevBtn").disabled =
+          currentQuestionIndex === 0;
+      }
+
+      function changeQuestion(direction) {
+        const newIndex = currentQuestionIndex + direction;
+        if (newIndex >= 0 && newIndex < totalQuestions) {
+          currentQuestionIndex = newIndex;
+          showQuestion(currentQuestionIndex);
+        }
+      }
+
+      function checkAnswer() {
+        const currentQuestion = getCurrentQuestion();
+        const questionType = currentQuestion.getAttribute("data-type");
+        const feedback = currentQuestion.querySelector(".feedback");
+        const originalIndex = getCurrentOriginalIndex();
+        let isCorrect = false;
+
+        if (questionType === "multiple") {
+          const selectedOption = currentQuestion.querySelector(
+            'input[type="radio"]:checked'
+          );
+          if (!selectedOption) {
+            alert("Por favor selecciona una respuesta");
+            return;
+          }
+
+          isCorrect = selectedOption.value === "correct";
+
+          const options = currentQuestion.querySelectorAll(".option");
+          options.forEach((option) => {
+            const input = option.querySelector('input[type="radio"]');
+            if (input.value === "correct") {
+              option.classList.add("correct");
+            } else if (input.checked && input.value === "incorrect") {
+              option.classList.add("incorrect");
+            }
+          });
+        } else if (questionType === "fill") {
+          const inputs = currentQuestion.querySelectorAll(".blank-input");
+          isCorrect = true;
+
+          inputs.forEach((input) => {
+            const userAnswer = input.value.trim().toLowerCase();
+            const correctAnswer = input
+              .getAttribute("data-answer")
+              .toLowerCase();
+            const isInputCorrect =
+              userAnswer === correctAnswer ||
+              (correctAnswer.includes("sistema operativo") &&
+                (userAnswer.includes("sistema") ||
+                  userAnswer.includes("so"))) ||
+              (correctAnswer.includes("protocolo de transferencia") &&
+                userAnswer.includes("protocolo")) ||
+              (correctAnswer.includes("conexión a internet") &&
+                (userAnswer.includes("internet") ||
+                  userAnswer.includes("conexión"))) ||
+              (correctAnswer.includes("mayor tiempo de desarrollo") &&
+                (userAnswer.includes("mayor tiempo") ||
+                  userAnswer.includes("más tiempo"))) ||
+              (correctAnswer.includes("depende de para qué") &&
+                userAnswer.includes("depende")) ||
+              (correctAnswer.includes("código sucio") &&
+                userAnswer.includes("sucio")) ||
+              (correctAnswer.includes("arquitectura estándar") &&
+                userAnswer.includes("arquitectura"));
+
+            if (isInputCorrect) {
+              input.classList.add("correct");
+            } else {
+              input.classList.add("incorrect");
+              isCorrect = false;
+            }
+          });
+        } else if (questionType === "true-false") {
+          const selectedOption = currentQuestion.querySelector(
+            ".tf-option.selected"
+          );
+          if (!selectedOption) {
+            alert("Por favor selecciona una respuesta");
+            return;
+          }
+
+          const userAnswer = selectedOption.getAttribute("data-value");
+          const correctAnswer =
+            tfAnswers[originalIndex] ||
+            currentQuestion.getAttribute("data-answer") ||
+            "true";
+
+          isCorrect = userAnswer === correctAnswer;
+
+          if (isCorrect) {
+            selectedOption.classList.add("correct");
+          } else {
+            selectedOption.classList.add("incorrect");
+            const correctOption = currentQuestion.querySelector(
+              `[data-value="${correctAnswer}"]`
+            );
+            if (correctOption) correctOption.classList.add("correct");
+          }
+        }
+
+        feedback.style.display = "block";
+        if (isCorrect) {
+          feedback.className = "feedback correct";
+          feedback.textContent = "¡Correcto! 🎉";
+          score++;
+        } else {
+          feedback.className = "feedback incorrect";
+          feedback.textContent = "Incorrecto. Revisa la respuesta correcta. ❌";
+        }
+
+        answers[currentQuestionIndex] = isCorrect;
+        questionAnswered = true;
+
+        document.getElementById("checkBtn").style.display = "none";
+        if (currentQuestionIndex === totalQuestions - 1) {
+          document.getElementById("finishBtn").style.display = "inline-block";
+        } else {
+          document.getElementById("nextBtn").style.display = "inline-block";
+        }
+      }
+
+      function showResults() {
+        document.querySelector(
+          ".quiz-container .question.active"
+        ).style.display = "none";
+        document.querySelector(".controls").style.display = "none";
+        document.querySelector(".quiz-progress").style.display = "none";
+        document.querySelector(".question-counter").style.display = "none";
+
+        const percentage = Math.round((score / totalQuestions) * 100);
+        document.getElementById("finalScore").textContent = percentage + "%";
+        document.getElementById(
+          "scoreDetails"
+        ).textContent = `${score} de ${totalQuestions} preguntas correctas`;
+
+        document.querySelector(".results").style.display = "block";
+      }
+
+      function restartQuiz() {
+        currentQuestionIndex = 0;
+        score = 0;
+        answers = new Array(totalQuestions).fill(null);
+        questionAnswered = false;
+
+        initializeQuestionOrder();
+
+        originalQuestions.forEach((question) => {
+          question.querySelectorAll(".option").forEach((option) => {
+            option.classList.remove("correct", "incorrect");
+          });
+
+          question.querySelectorAll('input[type="radio"]').forEach((input) => {
+            input.checked = false;
+          });
+
+          question.querySelectorAll(".blank-input").forEach((input) => {
+            input.value = "";
+            input.classList.remove("correct", "incorrect");
+          });
+
+          question.querySelectorAll(".tf-option").forEach((option) => {
+            option.classList.remove("selected", "correct", "incorrect");
+          });
+
+          const feedback = question.querySelector(".feedback");
+          if (feedback) {
+            feedback.style.display = "none";
+          }
+        });
+
+        document.querySelector(".controls").style.display = "flex";
+        document.querySelector(".quiz-progress").style.display = "block";
+        document.querySelector(".question-counter").style.display = "block";
+        document.querySelector(".results").style.display = "none";
+
+        showQuestion(0);
+      }
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("tf-option")) {
+          const parent = e.target.closest(".question");
+          parent
+            .querySelectorAll(".tf-option")
+            .forEach((opt) => opt.classList.remove("selected"));
+          e.target.classList.add("selected");
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("totalQuestions").textContent = totalQuestions;
+        initializeQuestionOrder();
+        showQuestion(0);
+      });
+    </script>
+  </body>
+</html>
