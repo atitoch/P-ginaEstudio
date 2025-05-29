@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Material de Estudio - Unidad 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #4caf50;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #4caf50;
+      }
+
+      .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        margin-bottom: 30px;
+      }
+
+      .material-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        border-left: 5px solid #4caf50;
+      }
+
+      .material-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .material-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .material-icon {
+        font-size: 2.5em;
+        margin-right: 15px;
+        color: #4caf50;
+      }
+
+      .material-info h3 {
+        color: #333;
+        font-size: 1.3em;
+        margin-bottom: 5px;
+      }
+
+      .material-info .type {
+        color: #666;
+        font-size: 0.9em;
+        background: #f0f0f0;
+        padding: 4px 8px;
+        border-radius: 12px;
+        display: inline-block;
+      }
+
+      .material-description {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .material-details {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+      }
+
+      .detail-item {
+        color: #888;
+      }
+
+      .detail-item strong {
+        color: #4caf50;
+      }
+
+      .download-btn {
+        background: #4caf50;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .download-btn:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+      }
+
+      .download-btn:active {
+        transform: translateY(0);
+      }
+
+      .section-title {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title h2 {
+        color: #4caf50;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .folder-link {
+        background: #e8f5e8;
+        color: #2e7d32;
+        padding: 10px 20px;
+        border: 2px solid #4caf50;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .folder-link:hover {
+        background: #4caf50;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .materials-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .material-details {
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-button">⬅ Volver a Programación Web</a>
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> >
+        <a href="index.html">Programación Web</a> > Material Unidad 1
+      </div>
+
+      <div class="header">
+        <h1>📚 Material de Estudio</h1>
+        <p>Unidad 1: Introducción a las aplicaciones web</p>
+      </div>
+
+      <div class="section-title">
+        <h2>🎯 Objetivos de Aprendizaje</h2>
+        <p>
+          Al finalizar esta unidad, el estudiante será capaz de comprender la
+          evolución de las aplicaciones web, identificar sus componentes
+          arquitectónicos y planificar proyectos de desarrollo web utilizando
+          las tecnologías apropiadas.
+        </p>
+      </div>
+
+      <div class="materials-grid">
+        <!-- Sección 1.1: Evolución de las App WEB -->
+        <div class="section-title">
+          <h2>🌐 1.1 Evolución de las App WEB</h2>
+          <p>
+            Material completo sobre la evolución histórica de las aplicaciones
+            web, desde las páginas estáticas hasta las aplicaciones modernas.
+          </p>
+        </div>
+
+        <!-- Archivo 1: Documento principal de evolución -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📄</div>
+            <div class="material-info">
+              <h3>Historia del Diseño Web</h3>
+              <span class="type">Documento PDF</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Análisis detallado de las cinco generaciones del diseño web y su
+            evolución tecnológica.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tema:</strong> Evolución</span>
+          </div>
+          <a
+            href="Material/1.1 Evolucion de las App WEB/historia-diseno-web.pdf"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Historia del Diseño
+          </a>
+        </div>
+
+        <!-- PDF Evolución de las aplicaciones web -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📈</div>
+            <div class="material-info">
+              <h3>Evolución de las aplicaciones web</h3>
+              <span class="type">Documento PDF</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Documento detallado sobre la evolución histórica de las aplicaciones
+            web, tecnologías y tendencias actuales.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tipo:</strong> Documento</span>
+          </div>
+          <a
+            href="Material/Evolución de las aplicaciones web.PDF"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Documento
+          </a>
+        </div>
+
+        <!-- Documento Elementos de la evolución -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📋</div>
+            <div class="material-info">
+              <h3>Elementos de la evolución</h3>
+              <span class="type">Documento Word</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Análisis detallado de los elementos clave que han marcado la
+            evolución de las aplicaciones web a lo largo del tiempo.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> DOCX</span>
+            <span class="detail-item"><strong>Tipo:</strong> Documento</span>
+          </div>
+          <a
+            href="Material/Elementosde la evolucion.docx"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Documento
+          </a>
+        </div>
+
+        <!-- Archivo 2: Tecnologías web modernas -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">🔧</div>
+            <div class="material-info">
+              <h3>Tecnologías Web Modernas</h3>
+              <span class="type">Presentación</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Presentación sobre las tecnologías actuales: HTML5, CSS3, JavaScript
+            frameworks y herramientas modernas.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PPTX</span>
+            <span class="detail-item"><strong>Tema:</strong> Tecnologías</span>
+          </div>
+          <a
+            href="Material/1.1 Evolucion de las App WEB/tecnologias-modernas.pptx"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Presentación
+          </a>
+        </div>
+
+        <!-- Sección 1.2: Arquitectura de las App WEB -->
+        <div class="section-title">
+          <h2>🏗️ 1.2 Arquitectura de las App WEB</h2>
+          <p>
+            Análisis profundo de patrones arquitectónicos: MVC, MVP, MVVM,
+            arquitectura en capas y componentes de aplicaciones web.
+          </p>
+        </div>
+
+        <!-- Archivo 1: Patrones arquitectónicos -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">🏗️</div>
+            <div class="material-info">
+              <h3>Patrones Arquitectónicos</h3>
+              <span class="type">Documento PDF</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Explicación detallada de los patrones MVC, MVP, MVVM y su
+            implementación en aplicaciones web.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tema:</strong> Arquitectura</span>
+          </div>
+          <a
+            href="Material/1.2 Arquitectura de las App WEB/patrones-arquitectonicos.pdf"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Patrones
+          </a>
+        </div>
+
+        <!-- Archivo 2: Arquitectura en capas -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📊</div>
+            <div class="material-info">
+              <h3>Arquitectura en Capas</h3>
+              <span class="type">Guía Técnica</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Guía sobre arquitectura de 2 y 3 capas, distribución de componentes
+            y mejores prácticas.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tema:</strong> Capas</span>
+          </div>
+          <a
+            href="Material/1.2 Arquitectura de las App WEB/arquitectura-capas.pdf"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Guía
+          </a>
+        </div>
+
+        <!-- Archivo 3: Componentes web -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">⚙️</div>
+            <div class="material-info">
+              <h3>Componentes de Aplicaciones Web</h3>
+              <span class="type">Manual Técnico</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Manual sobre los componentes esenciales: frontend, backend, bases de
+            datos y servicios web.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> DOCX</span>
+            <span class="detail-item"><strong>Tema:</strong> Componentes</span>
+          </div>
+          <a
+            href="Material/1.2 Arquitectura de las App WEB/componentes-web.docx"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Manual
+          </a>
+        </div>
+
+        <!-- Sección: Material Complementario -->
+        <div class="section-title">
+          <h2>📚 Material Complementario</h2>
+          <p>Documentos adicionales de apoyo para el estudio de la unidad.</p>
+        </div>
+
+        <!-- Aplicaciones Web PDF -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📊</div>
+            <div class="material-info">
+              <h3>Aplicaciones Web</h3>
+              <span class="type">Presentación PDF</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Presentación principal sobre conceptos fundamentales de aplicaciones
+            web, características y clasificación.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tipo:</strong> Presentación</span>
+          </div>
+          <a href="Material/Aplicaciones Web.PDF" class="download-btn" download>
+            📥 Descargar Presentación
+          </a>
+        </div>
+
+        <!-- Sección: Planificación y Metodologías -->
+        <div class="section-title">
+          <h2>📋 Planificación y Metodologías</h2>
+          <p>
+            Guías y materiales sobre planificación de proyectos web y
+            metodologías de desarrollo.
+          </p>
+        </div>
+
+        <!-- Planificación de Proyectos -->
+        <div class="material-card">
+          <div class="material-header">
+            <div class="material-icon">📋</div>
+            <div class="material-info">
+              <h3>Planificación de Proyectos Web</h3>
+              <span class="type">Guía Práctica</span>
+            </div>
+          </div>
+          <div class="material-description">
+            Metodologías ágiles, estimación de proyectos, gestión de equipos y
+            mejores prácticas en el desarrollo web.
+          </div>
+          <div class="material-details">
+            <span class="detail-item"><strong>Formato:</strong> PDF</span>
+            <span class="detail-item"><strong>Tamaño:</strong> 2.8 MB</span>
+            <span class="detail-item"><strong>Páginas:</strong> 42</span>
+          </div>
+          <a
+            href="Material/planificacion-proyectos-web.pdf"
+            class="download-btn"
+            download
+          >
+            📥 Descargar Guía
+          </a>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h2>📝 Instrucciones de Acceso</h2>
+        <p>
+          <strong>Nota:</strong> Los materiales están organizados por temas. Los
+          archivos PDF se pueden descargar directamente, mientras que las
+          carpetas contienen material adicional que se abre en una nueva
+          ventana. Si experimentas problemas para acceder a algún material,
+          contacta al profesor o al administrador del sistema.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Animación de entrada
+      window.addEventListener("load", function () {
+        const cards = document.querySelectorAll(".material-card");
+        cards.forEach((card, index) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+
+          setTimeout(() => {
+            card.style.transition = "all 0.6s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, index * 100);
+        });
+      });
+
+      // Función para manejar errores de descarga
+      document
+        .querySelectorAll(".download-btn, .folder-link")
+        .forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            // Opcional: agregar analytics o logging
+            console.log("Accediendo a:", this.href);
+          });
+        });
+    </script>
+  </body>
+</html>

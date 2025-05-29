@@ -81,6 +81,10 @@
         background: linear-gradient(45deg, #ff9800, #ffc107);
       }
 
+      .subject-card.networking::before {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+      }
+
       .subject-icon {
         font-size: 3em;
         margin-bottom: 20px;
@@ -161,6 +165,14 @@
         box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
       }
 
+      .networking .btn-enter {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+      }
+
+      .networking .btn-enter:hover {
+        box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+      }
+
       .footer {
         text-align: center;
         color: white;
@@ -199,7 +211,7 @@
           </div>
           <div class="subject-stats">
             <div class="stat">
-              <div class="stat-number">6</div>
+              <div class="stat-number">5</div>
               <div class="stat-label">Unidades</div>
             </div>
             <div class="stat">
@@ -222,7 +234,31 @@
           </div>
           <div class="subject-stats">
             <div class="stat">
-              <div class="stat-number">3</div>
+              <div class="stat-number">6</div>
+              <div class="stat-label">Unidades</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Cuestionarios</div>
+            </div>
+          </div>
+          <button class="btn-enter">Ingresar a la materia</button>
+        </div>
+
+        <div
+          class="subject-card networking"
+          onclick="navigateToSubject('ConmutacionRedes')"
+        >
+          <div class="subject-icon">🔗</div>
+          <div class="subject-title">Conmutación de Redes</div>
+          <div class="subject-description">
+            Fundamentos de redes de datos, protocolos de comunicación,
+            configuración de switches y routers. Aprende sobre VLAN,
+            enrutamiento y seguridad de redes.
+          </div>
+          <div class="subject-stats">
+            <div class="stat">
+              <div class="stat-number">4</div>
               <div class="stat-label">Unidades</div>
             </div>
             <div class="stat">
