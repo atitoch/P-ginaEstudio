@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unidad 2: Segmentación de Redes - Cuestionario</title>
+    <title>Unidad 3: Segmentación de Redes</title>
     <link rel="stylesheet" href="./QuizRedes.css" />
   </head>
   <body>
@@ -14,15 +14,13 @@
 
       <div class="breadcrumb">
         <a href="../index.html">Inicio</a> >
-        <a href="index.html">Conmutación y Redes</a> > Unidad 2: Segmentación de
+        <a href="index.html">Conmutación y Redes</a> > Unidad 3: Segmentación de
         Redes
       </div>
 
       <div class="header">
-        <h1>🔄 Unidad 2: Segmentación de Redes</h1>
-        <p>
-          Conceptos de Segmentación, Switches, VLANs, VTP y Cálculo de Subredes
-        </p>
+        <h1>🌐 Unidad 3: Segmentación de Redes</h1>
+        <p>Switches, VLANs y Técnicas de Conmutación</p>
       </div>
 
       <div id="loadingMessage" class="loading">
@@ -112,7 +110,7 @@
       // Función para cargar el archivo JSON
       async function loadQuizData() {
         try {
-          const response = await fetch("U2.json");
+          const response = await fetch("U3.json");
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }

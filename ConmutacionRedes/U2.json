@@ -1,0 +1,3511 @@
+{
+  "quiz": {
+    "title": "Segmentación de Intranets y Redes Locales",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cuál es el principal objetivo de segmentar una intranet?",
+        "options": [
+          {
+            "text": "Cambiar el protocolo de comunicación utilizado",
+            "correct": false
+          },
+          {
+            "text": "Aumentar el número de computadoras conectadas y/o mejorar el rendimiento",
+            "correct": true
+          },
+          {
+            "text": "Reducir el costo de implementación de la red",
+            "correct": false
+          },
+          { "text": "Cambiar la topología física de la red", "correct": false }
+        ],
+        "feedback": "La segmentación de una intranet busca principalmente superar las limitaciones de número de nodos y mejorar el rendimiento de la red cuando aumenta el tráfico."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Qué característica debe tener el dispositivo utilizado para segmentar una red?",
+        "options": [
+          {
+            "text": "Debe ser económico y fácil de instalar",
+            "correct": false
+          },
+          {
+            "text": "Debe soportar múltiples protocolos simultáneamente",
+            "correct": false
+          },
+          {
+            "text": "Debe ser inteligente para decidir hacia qué segmento enviar la información",
+            "correct": true
+          },
+          {
+            "text": "Debe funcionar únicamente con protocolos TCP/IP",
+            "correct": false
+          }
+        ],
+        "feedback": "Los dispositivos de segmentación deben ser inteligentes para tomar decisiones sobre el enrutamiento de la información hacia el segmento apropiado."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "Al segmentar una intranet, ¿qué características se mantienen?",
+        "options": [
+          { "text": "Solo la topología y el protocolo", "correct": false },
+          {
+            "text": "Una única topología, un único tipo de protocolo y un único entorno de trabajo",
+            "correct": true
+          },
+          { "text": "Solo el entorno de trabajo", "correct": false },
+          {
+            "text": "Múltiples topologías para mejorar el rendimiento",
+            "correct": false
+          }
+        ],
+        "feedback": "En la segmentación de intranets se mantiene la homogeneidad en topología, protocolo y entorno de trabajo, diferenciándose de la interconexión de redes."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "Cuando se trabaja con protocolos TCP/IP en una intranet segmentada:",
+        "options": [
+          {
+            "text": "Es necesario asignar una dirección de red diferente a cada segmento",
+            "correct": false
+          },
+          {
+            "text": "Solo se requiere que cada estación tenga su propia dirección IP única",
+            "correct": true
+          },
+          {
+            "text": "Se debe cambiar el protocolo por uno más eficiente",
+            "correct": false
+          },
+          {
+            "text": "Es obligatorio usar direcciones IP privadas únicamente",
+            "correct": false
+          }
+        ],
+        "feedback": "En una intranet segmentada con TCP/IP, la única condición es que cada estación mantenga su dirección IP única, sin necesidad de cambiar la configuración de red."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Cuáles son los dos principales motivos para segmentar una intranet?",
+        "options": [
+          { "text": "Reducir costos y mejorar la seguridad", "correct": false },
+          {
+            "text": "Cambiar protocolos y actualizar hardware",
+            "correct": false
+          },
+          {
+            "text": "Sobrepasar el número de nodos permitido y mejorar el rendimiento ante mayor tráfico",
+            "correct": true
+          },
+          {
+            "text": "Implementar nuevas topologías y reducir el cableado",
+            "correct": false
+          }
+        ],
+        "feedback": "Los dos motivos principales para la segmentación son superar las limitaciones de número de nodos y mejorar el rendimiento cuando hay mayor tráfico en la red."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Qué factores imponen limitaciones en el número de nodos de una intranet?",
+        "options": [
+          { "text": "Solo el tipo de cable utilizado", "correct": false },
+          {
+            "text": "Únicamente el ancho de banda disponible",
+            "correct": false
+          },
+          {
+            "text": "El método de acceso al medio, tipo de cable y ancho de banda",
+            "correct": true
+          },
+          { "text": "Solo el método de acceso al medio", "correct": false }
+        ],
+        "feedback": "Las limitaciones en el número de nodos dependen de múltiples factores: el método de acceso al medio, el tipo de cable utilizado y el ancho de banda disponible."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuál es la solución más drástica para mejorar el rendimiento de una intranet?",
+        "options": [
+          { "text": "Segmentar la intranet en subredes", "correct": false },
+          {
+            "text": "Cambiar algún elemento físico como cable, tarjetas de red o topología",
+            "correct": true
+          },
+          { "text": "Instalar más aplicaciones en la red", "correct": false },
+          { "text": "Aumentar el número de usuarios", "correct": false }
+        ],
+        "feedback": "La solución más drástica implica cambiar elementos físicos de la red como cables, tarjetas de red o la topología completa, lo que puede ser costoso y complejo."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué dispositivos se consideran inteligentes para la segmentación de intranets?",
+        "options": [
+          { "text": "Solo switches", "correct": false },
+          { "text": "Repetidores y switches", "correct": false },
+          { "text": "Router y puente (bridge)", "correct": true },
+          { "text": "Solo repetidores", "correct": false }
+        ],
+        "feedback": "Los routers y puentes (bridges) son considerados dispositivos inteligentes porque pueden tomar decisiones sobre el enrutamiento de la información entre segmentos."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿A qué nivel trabaja un switch en la interconexión de intranets?",
+        "options": [
+          { "text": "Nivel de red", "correct": false },
+          { "text": "Nivel de presentación", "correct": false },
+          { "text": "Nivel físico", "correct": true },
+          { "text": "Nivel de enlace", "correct": false }
+        ],
+        "feedback": "Los switches operan principalmente en el nivel físico (Capa 1) del modelo OSI, aunque los switches modernos también pueden trabajar en niveles superiores."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de un gateway?",
+        "options": [
+          {
+            "text": "Conexión a nivel físico en el mismo segmento",
+            "correct": false
+          },
+          {
+            "text": "Conexión a nivel de enlace entre dos segmentos",
+            "correct": false
+          },
+          { "text": "Conexión a nivel de red", "correct": false },
+          {
+            "text": "Conexión a nivel de presentación entre dos redes distintas",
+            "correct": true
+          }
+        ],
+        "feedback": "Los gateways operan en el nivel de presentación y se utilizan para conectar redes completamente distintas, traduciendo entre diferentes protocolos y arquitecturas."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Qué tipo de limitaciones NO se mencionan como inherentes a las redes locales?",
+        "options": [
+          { "text": "Limitaciones en el número de host", "correct": false },
+          {
+            "text": "Limitaciones en la distancia que puede cubrir",
+            "correct": false
+          },
+          {
+            "text": "Limitaciones en el costo de implementación",
+            "correct": true
+          },
+          { "text": "Limitaciones en el acceso a los nodos", "correct": false }
+        ],
+        "feedback": "Las limitaciones inherentes de las redes locales incluyen número de hosts, distancia y acceso a nodos, pero no específicamente el costo de implementación."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Qué diferencia principal existe entre segmentar una intranet e interconectar intranets?",
+        "options": [
+          {
+            "text": "Los dispositivos utilizados son completamente diferentes",
+            "correct": false
+          },
+          {
+            "text": "La segmentación se refiere a una única intranet, mientras que la interconexión involucra intranets con topologías diferentes",
+            "correct": true
+          },
+          {
+            "text": "Solo se puede segmentar con protocolos TCP/IP",
+            "correct": false
+          },
+          {
+            "text": "La segmentación requiere más dispositivos",
+            "correct": false
+          }
+        ],
+        "feedback": "La segmentación trabaja con una sola intranet manteniendo homogeneidad, mientras que la interconexión une intranets diferentes que pueden tener topologías y protocolos distintos."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Qué tipo de soluciones se utilizan para resolver las limitaciones de las redes locales?",
+        "options": [
+          { "text": "Solo soluciones de hardware", "correct": false },
+          { "text": "Solo soluciones de software", "correct": false },
+          {
+            "text": "Elementos de interconexión y software de servicios",
+            "correct": true
+          },
+          { "text": "Únicamente cambios en la topología", "correct": false }
+        ],
+        "feedback": "Las limitaciones de las redes locales se resuelven mediante una combinación de elementos de interconexión (hardware) y software de servicios especializados."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de un repetidor?",
+        "options": [
+          {
+            "text": "Conexión a nivel de enlace entre dos segmentos",
+            "correct": false
+          },
+          {
+            "text": "Conexión a nivel físico, en el mismo segmento",
+            "correct": true
+          },
+          { "text": "Conexión a nivel de red", "correct": false },
+          { "text": "Conexión a nivel de presentación", "correct": false }
+        ],
+        "feedback": "Los repetidores operan a nivel físico y su función es amplificar y regenerar señales dentro del mismo segmento de red para extender la distancia."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿A qué nivel del modelo OSI trabaja un puente (bridge)?",
+        "options": [
+          { "text": "Nivel físico", "correct": false },
+          { "text": "Nivel de enlace", "correct": true },
+          { "text": "Nivel de red", "correct": false },
+          { "text": "Nivel de presentación", "correct": false }
+        ],
+        "feedback": "Los puentes (bridges) operan en el nivel de enlace de datos (Capa 2) del modelo OSI, examinando direcciones MAC para tomar decisiones de reenvío."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Cuál es una ventaja de la segmentación estratégica por aulas en un centro educativo?",
+        "options": [
+          {
+            "text": "Permite usar diferentes protocolos en cada aula",
+            "correct": false
+          },
+          {
+            "text": "Reduce el costo total de la implementación",
+            "correct": false
+          },
+          {
+            "text": "Mejora el rendimiento de la red en cada aula al reducir el tráfico",
+            "correct": true
+          },
+          {
+            "text": "Elimina la necesidad de dispositivos de interconexión",
+            "correct": false
+          }
+        ],
+        "feedback": "La segmentación por aulas mejora el rendimiento al crear dominios de colisión más pequeños, reduciendo el tráfico de red en cada segmento individual."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Qué permite que en una intranet segmentada se produzcan varias comunicaciones simultáneas?",
+        "options": [
+          {
+            "text": "El uso de protocolos diferentes en cada segmento",
+            "correct": false
+          },
+          {
+            "text": "Que cada segmento trabaje de forma independiente y se comunique con otros solo cuando es necesario",
+            "correct": true
+          },
+          {
+            "text": "La implementación de dispositivos más rápidos",
+            "correct": false
+          },
+          {
+            "text": "El cambio de topología en cada segmento",
+            "correct": false
+          }
+        ],
+        "feedback": "La independencia de cada segmento permite comunicaciones simultáneas, ya que los segmentos solo interactúan cuando es necesario comunicarse entre ellos."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Cuál NO es una limitación inherente de las redes locales mencionada en el documento?",
+        "options": [
+          { "text": "Limitaciones en el número de host", "correct": false },
+          {
+            "text": "Limitaciones en la comunicación con los usuarios",
+            "correct": false
+          },
+          {
+            "text": "Limitaciones en el protocolo de comunicación",
+            "correct": true
+          },
+          {
+            "text": "Limitaciones en el número y tipo de nodos que se pueden conectar",
+            "correct": false
+          }
+        ],
+        "feedback": "Las limitaciones inherentes incluyen número de hosts, comunicación con usuarios y tipos de nodos, pero no específicamente el protocolo de comunicación utilizado."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿En qué capa del modelo OSI opera un switch?",
+        "options": [
+          { "text": "Capa física", "correct": false },
+          { "text": "Capa de enlace de datos", "correct": true },
+          { "text": "Capa de red", "correct": false },
+          { "text": "Capa de transporte", "correct": false }
+        ],
+        "feedback": "Los switches operan principalmente en la Capa 2 (enlace de datos) del modelo OSI, utilizando direcciones MAC para tomar decisiones de conmutación."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Qué tipo de direcciones almacenan los switches para su funcionamiento?",
+        "options": [
+          { "text": "Direcciones IP", "correct": false },
+          { "text": "Direcciones de red de capa 3", "correct": false },
+          { "text": "Direcciones MAC", "correct": true },
+          { "text": "Direcciones de puerto", "correct": false }
+        ],
+        "feedback": "Los switches almacenan direcciones MAC en su tabla de direcciones para aprender y recordar qué dispositivos están conectados a cada puerto."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Cuál es la principal causa de las inundaciones de tráfico en una red con switches?",
+        "options": [
+          { "text": "Sobrecarga de datos", "correct": false },
+          { "text": "Bucles de red", "correct": true },
+          { "text": "Fallas en el hardware", "correct": false },
+          { "text": "Configuración incorrecta de IP", "correct": false }
+        ],
+        "feedback": "Los bucles de red causan inundaciones de tráfico porque las tramas circulan indefinidamente entre switches, multiplicando el tráfico de broadcast."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cuál es el rango de tamaño válido para una trama Ethernet?",
+        "options": [
+          { "text": "Entre 32 y 1024 bytes", "correct": false },
+          { "text": "Entre 64 y 1518 bytes", "correct": true },
+          { "text": "Entre 128 y 2048 bytes", "correct": false },
+          { "text": "Entre 256 y 4096 bytes", "correct": false }
+        ],
+        "feedback": "El estándar Ethernet define que las tramas deben tener entre 64 y 1518 bytes para ser consideradas válidas, incluyendo cabeceras y datos."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Qué método utilizan los switches Store-and-Forward para verificar la integridad de las tramas?",
+        "options": [
+          { "text": "Verificación de IP", "correct": false },
+          { "text": "Cálculo de CRC", "correct": true },
+          { "text": "Análisis de puertos", "correct": false },
+          { "text": "Validación MAC", "correct": false }
+        ],
+        "feedback": "Los switches Store-and-Forward calculan el CRC (Cyclic Redundancy Check) para verificar que la trama no contiene errores antes de reenviarla."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Cuántos bytes lee un switch Cut-Through para tomar la decisión de encaminamiento?",
+        "options": [
+          { "text": "Los primeros 4 bytes", "correct": false },
+          { "text": "Los primeros 6 bytes", "correct": true },
+          { "text": "Los primeros 8 bytes", "correct": false },
+          { "text": "Los primeros 12 bytes", "correct": false }
+        ],
+        "feedback": "Los switches Cut-Through leen solo los primeros 6 bytes de la trama, que corresponden a la dirección MAC de destino, para tomar decisiones rápidas de encaminamiento."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Qué contienen los primeros 6 bytes que lee un switch Cut-Through?",
+        "options": [
+          { "text": "La dirección IP de destino", "correct": false },
+          { "text": "El número de puerto", "correct": false },
+          { "text": "La dirección MAC de destino", "correct": true },
+          { "text": "El tipo de protocolo", "correct": false }
+        ],
+        "feedback": "Los primeros 6 bytes de una trama Ethernet contienen la dirección MAC de destino, que es suficiente para que el switch Cut-Through determine el puerto de salida."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Cuántos bytes lee como mínimo un switch Fragment Free?",
+        "options": [
+          { "text": "32 bytes", "correct": false },
+          { "text": "48 bytes", "correct": false },
+          { "text": "64 bytes", "correct": true },
+          { "text": "128 bytes", "correct": false }
+        ],
+        "feedback": "Los switches Fragment Free leen los primeros 64 bytes para detectar colisiones tardías, ya que la mayoría de errores y colisiones ocurren en esta porción inicial."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Cuál es la principal ventaja de los switches Store-and-Forward?",
+        "options": [
+          { "text": "Mayor velocidad de procesamiento", "correct": false },
+          { "text": "Menor consumo de energía", "correct": false },
+          {
+            "text": "Operaciones sin error y mayor confianza de la red",
+            "correct": true
+          },
+          { "text": "Menor costo de implementación", "correct": false }
+        ],
+        "feedback": "Los switches Store-and-Forward proporcionan mayor confiabilidad al verificar completamente cada trama antes del reenvío, eliminando tramas corruptas."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Cuál es la principal desventaja de los switches Cut-Through?",
+        "options": [
+          { "text": "Alto consumo de memoria", "correct": false },
+          {
+            "text": "No detecta tramas corruptas causadas por colisiones",
+            "correct": true
+          },
+          { "text": "Requiere configuración compleja", "correct": false },
+          { "text": "Solo funciona con cables específicos", "correct": false }
+        ],
+        "feedback": "Los switches Cut-Through pueden reenviar tramas corruptas porque no verifican la integridad completa de la trama antes del reenvío, solo leen la dirección de destino."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Qué tipo de switches son más utilizados en redes corporativas?",
+        "options": [
+          { "text": "Cut-Through", "correct": false },
+          { "text": "Fragment Free", "correct": false },
+          { "text": "Store-and-Forward", "correct": true },
+          { "text": "Adaptative Cut-Through", "correct": false }
+        ],
+        "feedback": "Los switches Store-and-Forward son preferidos en redes corporativas debido a su mayor confiabilidad y capacidad de detectar errores antes del reenvío."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Qué característica tienen los switches Adaptative Cut-Through?",
+        "options": [
+          {
+            "text": "Solo procesan en modo store-and-forward",
+            "correct": false
+          },
+          { "text": "Solo procesan en modo cut-through", "correct": false },
+          {
+            "text": "Son compatibles con ambos modos y pueden cambiar entre ellos",
+            "correct": true
+          },
+          {
+            "text": "Requieren intervención manual para cambiar de modo",
+            "correct": false
+          }
+        ],
+        "feedback": "Los switches Adaptative Cut-Through pueden cambiar automáticamente entre los modos cut-through y store-and-forward según las condiciones de la red y la tasa de errores detectada."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Cómo se llaman las tramas corruptas causadas por colisiones?",
+        "options": [
+          { "text": "Frames", "correct": false },
+          { "text": "Runts", "correct": true },
+          { "text": "Packets", "correct": false },
+          { "text": "Segments", "correct": false }
+        ],
+        "feedback": "Las tramas corruptas causadas por colisiones se denominan 'runts', que son tramas de tamaño inferior al mínimo permitido debido a errores de transmisión."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Cuántos pines tiene un conector RJ-45 usado en switches?",
+        "options": [
+          { "text": "4 pines", "correct": false },
+          { "text": "6 pines", "correct": false },
+          { "text": "8 pines", "correct": true },
+          { "text": "12 pines", "correct": false }
+        ],
+        "feedback": "El conector RJ-45 estándar utilizado en switches Ethernet tiene 8 pines, aunque no todos se utilizan dependiendo del tipo de conexión (10/100 vs Gigabit)."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿En qué tipo de aplicaciones son más utilizados los switches Cut-Through?",
+        "options": [
+          { "text": "Redes corporativas grandes", "correct": false },
+          { "text": "Centros de datos", "correct": false },
+          {
+            "text": "Pequeños grupos de trabajo y departamentos",
+            "correct": true
+          },
+          { "text": "Conexiones de larga distancia", "correct": false }
+        ],
+        "feedback": "Los switches Cut-Through son más apropiados para pequeños grupos de trabajo y departamentos donde la velocidad es prioritaria y las tasas de error son menores."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Cuál es la principal finalidad de los switches de capa 2?",
+        "options": [
+          {
+            "text": "Enrutar paquetes entre diferentes redes",
+            "correct": false
+          },
+          {
+            "text": "Dividir una LAN en múltiples dominios de colisión",
+            "correct": true
+          },
+          {
+            "text": "Implementar protocolos de enrutamiento",
+            "correct": false
+          },
+          { "text": "Filtrar broadcasts y multicasts", "correct": false }
+        ],
+        "feedback": "La principal finalidad de los switches de capa 2 es dividir una LAN en múltiples dominios de colisión, mejorando el rendimiento y reduciendo las colisiones."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿En qué basan su decisión de envío los switches de capa 2?",
+        "options": [
+          { "text": "En la dirección IP de destino", "correct": false },
+          { "text": "En la dirección MAC destino", "correct": true },
+          { "text": "En el puerto TCP/UDP", "correct": false },
+          { "text": "En el protocolo de capa 3", "correct": false }
+        ],
+        "feedback": "Los switches de capa 2 basan sus decisiones de envío en la dirección MAC de destino, operando en el nivel de enlace de datos del modelo OSI."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Qué NO pueden filtrar los switches de capa 2?",
+        "options": [
+          { "text": "Tramas corruptas", "correct": false },
+          { "text": "Broadcasts y multicasts", "correct": true },
+          {
+            "text": "Tramas con direcciones MAC incorrectas",
+            "correct": false
+          },
+          { "text": "Paquetes fragmentados", "correct": false }
+        ],
+        "feedback": "Los switches de capa 2 no pueden filtrar broadcasts y multicasts, ya que estos deben ser propagados a todos los puertos del mismo dominio de broadcast."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Qué funciones adicionales incorporan los switches de capa 3?",
+        "options": [
+          { "text": "Solo funciones de seguridad", "correct": false },
+          {
+            "text": "Funciones de enrutamiento y determinación de camino basado en capa 3",
+            "correct": true
+          },
+          { "text": "Únicamente soporte para VLANs", "correct": false },
+          { "text": "Solo validación de checksums", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 incorporan funciones de enrutamiento y determinación de camino basadas en información de capa 3 (direcciones IP), combinando switching y routing."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Qué protocolos de routing soportan los switches de capa 3?",
+        "options": [
+          { "text": "Solo protocolos propietarios", "correct": false },
+          { "text": "RIP y OSPF", "correct": true },
+          { "text": "Solo TCP/IP", "correct": false },
+          { "text": "Únicamente protocolos de capa 2", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 soportan protocolos de routing estándar como RIP (Routing Information Protocol) y OSPF (Open Shortest Path First)."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Para qué tipo de redes son especialmente recomendados los switches de capa 3?",
+        "options": [
+          { "text": "Redes pequeñas de oficina", "correct": false },
+          {
+            "text": "Redes LAN muy grandes con excesivos broadcasts",
+            "correct": true
+          },
+          { "text": "Solo redes domésticas", "correct": false },
+          { "text": "Únicamente redes inalámbricas", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 son especialmente recomendados para redes LAN muy grandes donde el tráfico de broadcast excesivo puede degradar el rendimiento."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Por qué un switch de capa 3 es más escalable que un enrutador tradicional?",
+        "options": [
+          { "text": "Consume menos energía", "correct": false },
+          { "text": "Es más económico", "correct": false },
+          {
+            "text": "Sobrepone la función de enrutamiento encima del encaminamiento",
+            "correct": true
+          },
+          { "text": "Tiene más puertos disponibles", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 son más escalables porque sobreponen la función de enrutamiento encima del encaminamiento de capa 2, optimizando el rendimiento."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Qué característica define a un switch paquete por paquete (packet by packet)?",
+        "options": [
+          {
+            "text": "Es un caso especial de switch Cut-Through",
+            "correct": false
+          },
+          {
+            "text": "Es un caso especial de switch Store-and-Forward",
+            "correct": true
+          },
+          { "text": "Solo procesa paquetes pequeños", "correct": false },
+          { "text": "No calcula CRC", "correct": false }
+        ],
+        "feedback": "Un switch paquete por paquete es un caso especial de switch Store-and-Forward que procesa cada paquete completamente antes de reenviarlo."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Qué hace un switch de capa 3 Cut-Through después de examinar las cabeceras?",
+        "options": [
+          { "text": "Almacena todo el paquete", "correct": false },
+          {
+            "text": "Establece una conexión punto a punto a nivel 2",
+            "correct": true
+          },
+          { "text": "Descarta el paquete", "correct": false },
+          { "text": "Lo reenvía sin procesar", "correct": false }
+        ],
+        "feedback": "Después de examinar las cabeceras de capa 3, el switch establece una conexión punto a punto a nivel 2 para optimizar el reenvío de paquetes posteriores."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Qué significa MPOA en el contexto de switches de capa 3?",
+        "options": [
+          { "text": "Multi Port Optical Adapter", "correct": false },
+          { "text": "Multi Protocol Over ATM", "correct": true },
+          {
+            "text": "Multiple Packet Operations Administrator",
+            "correct": false
+          },
+          { "text": "Main Protocol Operations Access", "correct": false }
+        ],
+        "feedback": "MPOA significa Multi Protocol Over ATM, una tecnología que permite ejecutar múltiples protocolos sobre una infraestructura ATM."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuáles son las principales características del MPOA?",
+        "options": [
+          { "text": "Simple y económico de implementar", "correct": false },
+          {
+            "text": "Complejo, caro y limitado a backbones ATM",
+            "correct": true
+          },
+          { "text": "Solo funciona con Ethernet", "correct": false },
+          { "text": "Únicamente para redes pequeñas", "correct": false }
+        ],
+        "feedback": "MPOA es una tecnología compleja y costosa de implementar, además está limitada a backbones ATM, lo que restringe su aplicabilidad."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Cómo se denominan también los switches de capa 4?",
+        "options": [
+          { "text": "Layer 2 Plus", "correct": false },
+          { "text": "Layer 3+ (Layer 3 Plus)", "correct": true },
+          { "text": "Advanced Layer 2", "correct": false },
+          { "text": "Super Layer 3", "correct": false }
+        ],
+        "feedback": "Los switches de capa 4 también se denominan Layer 3+ (Layer 3 Plus) porque extienden las funcionalidades de capa 3 con capacidades de capa 4."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Qué información adicional procesan los switches de capa 4?",
+        "options": [
+          { "text": "Solo direcciones MAC extendidas", "correct": false },
+          {
+            "text": "Puertos TCP/UDP, SNMP, FTP y otros protocolos de capa 4+",
+            "correct": true
+          },
+          { "text": "Únicamente información de tiempo", "correct": false },
+          { "text": "Solo datos de ubicación geográfica", "correct": false }
+        ],
+        "feedback": "Los switches de capa 4 procesan información de puertos TCP/UDP, SNMP, FTP y otros protocolos de capa 4 y superiores para tomar decisiones avanzadas."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Cómo se define la técnica Store and Forward?",
+        "options": [
+          { "text": "Técnica de cifrado de datos", "correct": false },
+          {
+            "text": "Técnica de conmutación donde datos se envían a nodo intermedio y se retienen temporalmente",
+            "correct": true
+          },
+          { "text": "Método de compresión de información", "correct": false },
+          { "text": "Protocolo de autenticación", "correct": false }
+        ],
+        "feedback": "Store and Forward es una técnica de conmutación donde los datos se envían a un nodo intermedio que los retiene temporalmente antes de reenviarlos."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Qué verifica cada nodo intermedio en Store and Forward antes de reenviar?",
+        "options": [
+          { "text": "La velocidad de transmisión", "correct": false },
+          { "text": "El origen del mensaje", "correct": false },
+          { "text": "La integridad del mensaje", "correct": true },
+          { "text": "El costo de transmisión", "correct": false }
+        ],
+        "feedback": "En Store and Forward, cada nodo intermedio verifica la integridad del mensaje antes de reenviarlo, asegurando la fiabilidad de la transmisión."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Para qué tipo de redes es más adecuada la técnica Store and Forward?",
+        "options": [
+          { "text": "Redes de tiempo real únicamente", "correct": false },
+          {
+            "text": "Redes tolerantes al retardo (DTN) sin servicios en tiempo real",
+            "correct": true
+          },
+          { "text": "Solo redes de alta velocidad", "correct": false },
+          { "text": "Únicamente redes locales", "correct": false }
+        ],
+        "feedback": "Store and Forward es más adecuada para redes tolerantes al retardo (DTN) que no requieren servicios en tiempo real, donde la fiabilidad es más importante que la velocidad."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿En qué escenarios es especialmente útil Store and Forward?",
+        "options": [
+          { "text": "Solo en redes de baja latencia", "correct": false },
+          {
+            "text": "Nodos geográficamente distantes, sin conectividad directa o alta tasa de errores",
+            "correct": true
+          },
+          { "text": "Únicamente en conexiones directas", "correct": false },
+          { "text": "Solo en redes de fibra óptica", "correct": false }
+        ],
+        "feedback": "Store and Forward es especialmente útil en escenarios con nodos geográficamente distantes, sin conectividad directa constante o con alta tasa de errores."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Qué ventaja principal ofrecen los switches de capa 3 respecto a las VLANs?",
+        "options": [
+          { "text": "Solo pueden crear VLANs simples", "correct": false },
+          {
+            "text": "Permiten comunicación entre diferentes VLANs sin router externo",
+            "correct": true
+          },
+          { "text": "Eliminan completamente las VLANs", "correct": false },
+          { "text": "Solo soportan una VLAN por switch", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 permiten la comunicación entre diferentes VLANs sin necesidad de un router externo, integrando funciones de routing."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "¿Qué posibilitan los switches de capa 2 en términos de transmisiones?",
+        "options": [
+          { "text": "Solo una transmisión a la vez", "correct": false },
+          {
+            "text": "Múltiples transmisiones simultáneas sin interferir en otras sub-redes",
+            "correct": true
+          },
+          { "text": "Únicamente transmisiones broadcast", "correct": false },
+          { "text": "Solo transmisiones unicast", "correct": false }
+        ],
+        "feedback": "Los switches de capa 2 posibilitan múltiples transmisiones simultáneas entre diferentes puertos sin que interfieran entre sí, creando dominios de colisión separados."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "¿Qué limitación tienen los switches de capa 2 con respecto a las tramas de destino desconocido?",
+        "options": [
+          { "text": "Las procesan normalmente", "correct": false },
+          { "text": "No las pueden filtrar", "correct": true },
+          { "text": "Las descartan automáticamente", "correct": false },
+          { "text": "Las convierten a broadcasts", "correct": false }
+        ],
+        "feedback": "Los switches de capa 2 no pueden filtrar las tramas con destino desconocido, deben realizar flooding (inundación) enviándolas por todos los puertos."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Cuándo se ejecuta el encaminamiento en un switch que opera con virtual cut-through?",
+        "options": [
+          { "text": "Cuando se recibe el paquete completo", "correct": false },
+          {
+            "text": "En cuanto llega la cabecera del paquete",
+            "correct": true
+          },
+          { "text": "Solo después de verificar el CRC", "correct": false },
+          { "text": "Al final de la transmisión", "correct": false }
+        ],
+        "feedback": "En virtual cut-through, el encaminamiento se ejecuta tan pronto como llega la cabecera del paquete, sin esperar a recibir el paquete completo."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "¿Qué puede suceder con un paquete en virtual cut-through mientras se transfiere?",
+        "options": [
+          {
+            "text": "Debe transmitirse completo antes de continuar",
+            "correct": false
+          },
+          {
+            "text": "Puede 'cortarse' en trozos más pequeños",
+            "correct": true
+          },
+          {
+            "text": "Se debe almacenar completamente en cada switch",
+            "correct": false
+          },
+          {
+            "text": "No puede fragmentarse bajo ninguna circunstancia",
+            "correct": false
+          }
+        ],
+        "feedback": "En virtual cut-through, un paquete puede 'cortarse' en trozos más pequeños mientras se transfiere a través de la red, optimizando el uso de recursos."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "¿Qué sucede cuando un paquete se bloquea en virtual cut-through?",
+        "options": [
+          { "text": "Se descarta inmediatamente", "correct": false },
+          {
+            "text": "Se almacena en el buffer a la entrada del switch",
+            "correct": true
+          },
+          { "text": "Se reenvía por una ruta alternativa", "correct": false },
+          { "text": "Se fragmenta automáticamente", "correct": false }
+        ],
+        "feedback": "Cuando un paquete se bloquea en virtual cut-through, se almacena temporalmente en el buffer a la entrada del switch hasta que pueda continuar."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Qué capacidad mínima debe tener el buffer en virtual cut-through?",
+        "options": [
+          { "text": "La mitad de un paquete", "correct": false },
+          { "text": "Al menos un paquete completo", "correct": true },
+          { "text": "Dos paquetes completos", "correct": false },
+          { "text": "Solo la cabecera del paquete", "correct": false }
+        ],
+        "feedback": "El buffer en virtual cut-through debe tener capacidad para almacenar al menos un paquete completo para manejar situaciones de bloqueo."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "¿De qué depende el ancho de banda en una red virtual cut-through?",
+        "options": [
+          { "text": "Del tipo de cable utilizado", "correct": false },
+          {
+            "text": "Del número de canales que puedan transferir información simultáneamente",
+            "correct": true
+          },
+          { "text": "Solo de la velocidad del procesador", "correct": false },
+          { "text": "Únicamente del protocolo utilizado", "correct": false }
+        ],
+        "feedback": "El ancho de banda en virtual cut-through depende del número de canales que pueden transferir información simultáneamente, no solo de la velocidad individual."
+      },
+      {
+        "id": 59,
+        "type": "multiple",
+        "question": "¿Qué problema puede causar un paquete bloqueado en virtual cut-through?",
+        "options": [
+          { "text": "Pérdida total de conectividad", "correct": false },
+          {
+            "text": "Bloqueo en cadena y saturación de la red",
+            "correct": true
+          },
+          { "text": "Corrupción de datos automática", "correct": false },
+          { "text": "Cambio de protocolo forzado", "correct": false }
+        ],
+        "feedback": "Un paquete bloqueado puede causar un efecto en cadena, bloqueando otros paquetes y potencialmente saturando toda la red."
+      },
+      {
+        "id": 60,
+        "type": "multiple",
+        "question": "¿Cómo se puede solventar parcialmente el problema de bloqueo en cadena?",
+        "options": [
+          { "text": "Cambiando el protocolo de red", "correct": false },
+          {
+            "text": "Usando almacenamiento común a todas las entradas en los switches",
+            "correct": true
+          },
+          {
+            "text": "Aumentando la velocidad de transmisión",
+            "correct": false
+          },
+          { "text": "Reduciendo el tamaño de los paquetes", "correct": false }
+        ],
+        "feedback": "El problema de bloqueo en cadena se puede mitigar usando almacenamiento común (shared buffer) a todas las entradas en los switches, permitiendo mejor gestión de recursos."
+      },
+      {
+        "id": 61,
+        "type": "multiple",
+        "question": "¿Qué ventaja tiene virtual cut-through comparado con 'almacenamiento y reenvío'?",
+        "options": [
+          { "text": "Mayor verificación de integridad", "correct": false },
+          { "text": "Reduce el tiempo de paso por el switch", "correct": true },
+          { "text": "Menor costo de implementación", "correct": false },
+          { "text": "Mayor fiabilidad de datos", "correct": false }
+        ],
+        "feedback": "Virtual cut-through reduce significativamente el tiempo de paso por el switch al comenzar el reenvío tan pronto como llega la cabecera, sin esperar al paquete completo."
+      },
+      {
+        "id": 62,
+        "type": "multiple",
+        "question": "¿Cuál es la desventaja de virtual cut-through respecto a la fiabilidad?",
+        "options": [
+          { "text": "Es más lento que otros métodos", "correct": false },
+          {
+            "text": "No verifica la integridad de los paquetes",
+            "correct": true
+          },
+          { "text": "Requiere más memoria", "correct": false },
+          { "text": "No soporta múltiples protocolos", "correct": false }
+        ],
+        "feedback": "Virtual cut-through sacrifica fiabilidad por velocidad, ya que no verifica la integridad completa de los paquetes antes del reenvío, pudiendo propagar errores."
+      },
+      {
+        "id": 63,
+        "type": "multiple",
+        "question": "¿Cómo se conoce también la conmutación sin fragmentos?",
+        "options": [
+          { "text": "Conmutación rápida", "correct": false },
+          { "text": "Conmutación sin runtless", "correct": true },
+          { "text": "Conmutación híbrida", "correct": false },
+          { "text": "Conmutación avanzada", "correct": false }
+        ],
+        "feedback": "La conmutación sin fragmentos también se conoce como 'conmutación sin runtless' porque está diseñada específicamente para evitar el reenvío de runts (tramas corruptas)."
+      },
+      {
+        "id": 64,
+        "type": "multiple",
+        "question": "¿Para resolver qué problema se desarrolló la conmutación sin fragmentos?",
+        "options": [
+          { "text": "La velocidad de transmisión", "correct": false },
+          { "text": "La colisión tardía", "correct": true },
+          { "text": "El costo de los equipos", "correct": false },
+          { "text": "La compatibilidad de protocolos", "correct": false }
+        ],
+        "feedback": "La conmutación sin fragmentos fue desarrollada específicamente para resolver el problema de las colisiones tardías que pueden corromper las tramas después de iniciada la transmisión."
+      },
+      {
+        "id": 65,
+        "type": "multiple",
+        "question": "¿Qué es una colisión tardía?",
+        "options": [
+          {
+            "text": "Una colisión que ocurre al inicio de la transmisión",
+            "correct": false
+          },
+          {
+            "text": "Una colisión que se produce después de que se hayan transmitido al menos los primeros 60 bytes",
+            "correct": true
+          },
+          {
+            "text": "Una colisión entre diferentes protocolos",
+            "correct": false
+          },
+          {
+            "text": "Una colisión causada por software defectuoso",
+            "correct": false
+          }
+        ],
+        "feedback": "Una colisión tardía ocurre después de que se han transmitido al menos los primeros 60 bytes, lo que puede resultar en tramas corruptas que ya han comenzado a ser reenviadas."
+      },
+      {
+        "id": 66,
+        "type": "multiple",
+        "question": "¿Cuántos bytes almacena un switch en modo sin fragmentos antes de reenviar?",
+        "options": [
+          { "text": "Los primeros 32 bytes", "correct": false },
+          { "text": "Los primeros 64 bytes", "correct": true },
+          { "text": "Los primeros 128 bytes", "correct": false },
+          { "text": "Los primeros 256 bytes", "correct": false }
+        ],
+        "feedback": "Los switches en modo sin fragmentos almacenan exactamente los primeros 64 bytes antes de reenviar, lo suficiente para detectar la mayoría de colisiones tardías y errores."
+      },
+      {
+        "id": 67,
+        "type": "multiple",
+        "question": "¿Por qué la conmutación sin fragmentos almacena exactamente 64 bytes?",
+        "options": [
+          {
+            "text": "Es el tamaño mínimo de paquete permitido",
+            "correct": false
+          },
+          {
+            "text": "La mayoría de errores y colisiones ocurren durante los primeros 64 bytes",
+            "correct": true
+          },
+          {
+            "text": "Es un estándar internacional establecido",
+            "correct": false
+          },
+          { "text": "Mejora la velocidad de procesamiento", "correct": false }
+        ],
+        "feedback": "Se almacenan 64 bytes porque estadísticamente la mayoría de errores y colisiones (incluyendo colisiones tardías) ocurren durante los primeros 64 bytes de la transmisión."
+      },
+      {
+        "id": 68,
+        "type": "multiple",
+        "question": "¿Dónde es mejor utilizar la conmutación de corte?",
+        "options": [
+          { "text": "En la capa de acceso a la red", "correct": false },
+          {
+            "text": "En el núcleo de la red donde los errores son menores",
+            "correct": true
+          },
+          { "text": "Solo en redes pequeñas", "correct": false },
+          { "text": "Únicamente en conexiones inalámbricas", "correct": false }
+        ],
+        "feedback": "La conmutación de corte es ideal para el núcleo de la red donde la calidad de los enlaces es mejor y los errores son menos frecuentes, priorizando la velocidad."
+      },
+      {
+        "id": 69,
+        "type": "multiple",
+        "question": "¿Dónde es mejor utilizar almacenamiento y reenvío?",
+        "options": [
+          { "text": "En el núcleo de la red", "correct": false },
+          {
+            "text": "En la capa de acceso donde se encuentran la mayoría de problemas",
+            "correct": true
+          },
+          { "text": "Solo en conexiones de alta velocidad", "correct": false },
+          { "text": "Únicamente en servidores", "correct": false }
+        ],
+        "feedback": "Almacenamiento y reenvío es mejor en la capa de acceso donde hay mayor probabilidad de errores y se requiere verificación completa de integridad de datos."
+      },
+      {
+        "id": 70,
+        "type": "multiple",
+        "question": "¿En qué capa del modelo OSI funcionan los routers?",
+        "options": [
+          { "text": "Capa 2 (Enlace de datos)", "correct": false },
+          { "text": "Capa 3 (Red)", "correct": true },
+          { "text": "Capa 4 (Transporte)", "correct": false },
+          { "text": "Capa 1 (Física)", "correct": false }
+        ],
+        "feedback": "Los routers operan en la Capa 3 (Red) del modelo OSI, tomando decisiones de enrutamiento basadas en direcciones IP y manteniendo tablas de enrutamiento."
+      },
+      {
+        "id": 71,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia fundamental entre un switch de capa 3 y un router?",
+        "options": [
+          {
+            "text": "El switch de capa 3 solo funciona con Ethernet",
+            "correct": false
+          },
+          {
+            "text": "El switch de capa 3 tiene hardware optimizado para pasar tráfico tan rápido como switches de capa 2",
+            "correct": true
+          },
+          { "text": "Los routers son más económicos", "correct": false },
+          { "text": "No hay diferencias significativas", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 tienen hardware optimizado que les permite procesar y reenviar tráfico de capa 3 a velocidades similares a los switches de capa 2, superando a los routers tradicionales."
+      },
+      {
+        "id": 72,
+        "type": "multiple",
+        "question": "¿Cómo toman decisiones los switches de capa 3?",
+        "options": [
+          { "text": "Solo basándose en direcciones MAC", "correct": false },
+          {
+            "text": "Basándose en direcciones IP a nivel de puerto",
+            "correct": true
+          },
+          {
+            "text": "Únicamente usando protocolos propietarios",
+            "correct": false
+          },
+          { "text": "Solo mediante configuración manual", "correct": false }
+        ],
+        "feedback": "Los switches de capa 3 toman decisiones basándose en direcciones IP a nivel de puerto, combinando la velocidad del switching con las capacidades de enrutamiento."
+      },
+      {
+        "id": 73,
+        "type": "multiple",
+        "question": "¿Cómo toman decisiones los routers?",
+        "options": [
+          {
+            "text": "Basándose en direcciones MAC únicamente",
+            "correct": false
+          },
+          {
+            "text": "Basándose en un mapa de la red de capa 3 mantenido en una tabla de enrutamiento",
+            "correct": true
+          },
+          { "text": "Solo mediante direcciones IP locales", "correct": false },
+          { "text": "Únicamente por configuración estática", "correct": false }
+        ],
+        "feedback": "Los routers toman decisiones basándose en un mapa completo de la red de capa 3 que mantienen en su tabla de enrutamiento, considerando múltiples rutas y métricas."
+      },
+      {
+        "id": 74,
+        "type": "multiple",
+        "question": "¿Qué técnica deben utilizar los switches LAN para habilitar conmutación multicapa?",
+        "options": [
+          { "text": "Cut-through únicamente", "correct": false },
+          { "text": "Almacenamiento y reenvío", "correct": true },
+          { "text": "Fragment-free solamente", "correct": false },
+          { "text": "Virtual cut-through", "correct": false }
+        ],
+        "feedback": "Para habilitar conmutación multicapa, los switches LAN deben utilizar almacenamiento y reenvío para poder examinar y procesar completamente las cabeceras de múltiples capas."
+      },
+      {
+        "id": 75,
+        "type": "multiple",
+        "question": "¿Cuáles son las tres formas que tiene un router de aprender sobre las redes?",
+        "options": [
+          { "text": "Solo protocolos dinámicos", "correct": false },
+          {
+            "text": "Puertos conectados localmente, entradas de ruta estática y protocolos de enrutamiento dinámico",
+            "correct": true
+          },
+          { "text": "Únicamente configuración manual", "correct": false },
+          { "text": "Solo mediante tablas predefinidas", "correct": false }
+        ],
+        "feedback": "Los routers aprenden sobre redes de tres formas: redes conectadas directamente a sus puertos, rutas estáticas configuradas manualmente, y rutas dinámicas aprendidas mediante protocolos de enrutamiento."
+      },
+      {
+        "id": 76,
+        "type": "multiple",
+        "question": "¿Cuáles son algunos protocolos de enrutamiento comunes mencionados?",
+        "options": [
+          { "text": "Solo TCP/IP", "correct": false },
+          { "text": "RIP, OSPF, IGRP y BGP", "correct": true },
+          { "text": "Únicamente Ethernet", "correct": false },
+          { "text": "Solo protocolos propietarios", "correct": false }
+        ],
+        "feedback": "Los protocolos de enrutamiento más comunes incluyen RIP (protocolo simple), OSPF (estado de enlace), IGRP (vector distancia mejorado) y BGP (para routing entre sistemas autónomos)."
+      },
+      {
+        "id": 77,
+        "type": "multiple",
+        "question": "¿Qué significa VLAN?",
+        "options": [
+          { "text": "Virtual Large Area Network", "correct": false },
+          {
+            "text": "Virtual Local Area Network (Red de área local virtual)",
+            "correct": true
+          },
+          { "text": "Very Large Area Network", "correct": false },
+          { "text": "Variable Local Access Network", "correct": false }
+        ],
+        "feedback": "VLAN significa Virtual Local Area Network (Red de Área Local Virtual), que permite crear redes lógicas independientes dentro de una infraestructura física compartida."
+      },
+      {
+        "id": 78,
+        "type": "multiple",
+        "question": "¿Cuál es el propósito principal de las VLANs?",
+        "options": [
+          { "text": "Aumentar la velocidad de transmisión", "correct": false },
+          {
+            "text": "Crear redes lógicas e independientes dentro de una misma red física",
+            "correct": true
+          },
+          { "text": "Reducir el costo de los equipos", "correct": false },
+          { "text": "Cambiar protocolos de comunicación", "correct": false }
+        ],
+        "feedback": "El propósito principal de las VLANs es crear redes lógicas independientes dentro de una misma infraestructura física, permitiendo segmentación y organización flexible."
+      },
+      {
+        "id": 79,
+        "type": "multiple",
+        "question": "¿Pueden coexistir varias VLANs en un único switch físico?",
+        "options": [
+          { "text": "No, solo una VLAN por switch", "correct": false },
+          { "text": "Sí, varias VLANs pueden coexistir", "correct": true },
+          { "text": "Solo con hardware especializado", "correct": false },
+          { "text": "Únicamente con switches de capa 3", "correct": false }
+        ],
+        "feedback": "Múltiples VLANs pueden coexistir en un único switch físico, siendo esta una de las principales ventajas de la tecnología VLAN para optimizar recursos de hardware."
+      },
+      {
+        "id": 80,
+        "type": "multiple",
+        "question": "¿Para qué son útiles las VLANs en términos de administración?",
+        "options": [
+          { "text": "Solo para aumentar velocidad", "correct": false },
+          {
+            "text": "Reducir el dominio de difusión y separar segmentos lógicos",
+            "correct": true
+          },
+          { "text": "Únicamente para cifrado", "correct": false },
+          { "text": "Solo para monitoreo de red", "correct": false }
+        ],
+        "feedback": "Las VLANs son útiles para reducir el dominio de difusión (broadcast domain) y separar segmentos lógicos, mejorando el rendimiento y la seguridad de la red."
+      },
+      {
+        "id": 81,
+        "type": "multiple",
+        "question": "¿Cómo configuran los administradores las VLANs?",
+        "options": [
+          { "text": "Solo mediante hardware especializado", "correct": false },
+          { "text": "Mediante software en lugar de hardware", "correct": true },
+          { "text": "Únicamente con cables especiales", "correct": false },
+          { "text": "Solo con configuración manual física", "correct": false }
+        ],
+        "feedback": "Las VLANs se configuran mediante software a través de interfaces de administración, sin necesidad de cambios físicos en el hardware o cableado."
+      },
+      {
+        "id": 82,
+        "type": "multiple",
+        "question": "¿Cuál es una de las mayores ventajas de las VLANs al trasladar equipos?",
+        "options": [
+          { "text": "Requiere reconfiguración completa", "correct": false },
+          {
+            "text": "El ordenador puede permanecer en la misma VLAN sin cambiar configuración IP",
+            "correct": true
+          },
+          { "text": "Necesita cambiar todo el cableado", "correct": false },
+          { "text": "Obliga a usar nuevos protocolos", "correct": false }
+        ],
+        "feedback": "Una gran ventaja de las VLANs es que al trasladar un equipo, puede permanecer en la misma VLAN lógica sin necesidad de cambiar su configuración IP, simplificando la administración."
+      },
+      {
+        "id": 83,
+        "type": "multiple",
+        "question": "¿Qué característica hace que las VLANs sean extremadamente flexibles?",
+        "options": [
+          { "text": "Su alto costo de implementación", "correct": false },
+          {
+            "text": "Su configuración mediante software en lugar de hardware",
+            "correct": true
+          },
+          { "text": "La necesidad de cables especiales", "correct": false },
+          { "text": "Su dependencia de hardware específico", "correct": false }
+        ],
+        "feedback": "La flexibilidad extrema de las VLANs proviene de su configuración mediante software, permitiendo cambios rápidos y dinámicos sin modificaciones físicas en la infraestructura."
+      },
+      {
+        "id": 84,
+        "type": "multiple",
+        "question": "¿Cómo pueden los departamentos de una empresa intercambiar datos si están en VLANs separadas?",
+        "options": [
+          {
+            "text": "No pueden intercambiar datos bajo ninguna circunstancia",
+            "correct": false
+          },
+          {
+            "text": "A través de un enrutador o switch de capa 3 y 4",
+            "correct": true
+          },
+          {
+            "text": "Solo cambiando la configuración física",
+            "correct": false
+          },
+          { "text": "Únicamente mediante conexión directa", "correct": false }
+        ],
+        "feedback": "Los departamentos en VLANs separadas pueden intercambiar datos a través de un enrutador o switch de capa 3 y 4, que proporciona las funciones de routing entre VLANs."
+      },
+      {
+        "id": 85,
+        "type": "multiple",
+        "question": "¿Qué permite la conmutación multicapa en términos de capas OSI?",
+        "options": [
+          { "text": "Solo conmutación en capa 2", "correct": false },
+          {
+            "text": "Conmutación tanto en capa 2 como en capa 3",
+            "correct": true
+          },
+          { "text": "Únicamente en capa 3", "correct": false },
+          { "text": "Solo en capas superiores", "correct": false }
+        ],
+        "feedback": "La conmutación multicapa permite operaciones tanto en capa 2 (switching basado en MAC) como en capa 3 (routing basado en IP) en el mismo dispositivo."
+      },
+      {
+        "id": 86,
+        "type": "multiple",
+        "question": "¿Qué velocidad ofrecía Ethernet a principios de los años ochenta?",
+        "options": [
+          { "text": "1 Mbits/s", "correct": false },
+          { "text": "10 Mbits/s", "correct": true },
+          { "text": "100 Mbits/s", "correct": false },
+          { "text": "1000 Mbits/s", "correct": false }
+        ],
+        "feedback": "A principios de los años ochenta, Ethernet ofrecía una velocidad de 10 Mbits/s, que era revolucionaria para su época y estableció las bases para el networking moderno."
+      },
+      {
+        "id": 87,
+        "type": "multiple",
+        "question": "¿Qué topología tenían las primeras redes Ethernet?",
+        "options": [
+          { "text": "Topología en estrella", "correct": false },
+          { "text": "Topología en bus", "correct": true },
+          { "text": "Topología en anillo", "correct": false },
+          { "text": "Topología en malla", "correct": false }
+        ],
+        "feedback": "Las primeras redes Ethernet utilizaban topología en bus, donde todos los dispositivos compartían un único medio de comunicación (cable coaxial)."
+      },
+      {
+        "id": 88,
+        "type": "multiple",
+        "question": "¿Qué medio físico utilizaban las primeras redes Ethernet?",
+        "options": [
+          { "text": "Cable de par trenzado", "correct": false },
+          { "text": "Cable coaxial", "correct": true },
+          { "text": "Fibra óptica", "correct": false },
+          { "text": "Conexión inalámbrica", "correct": false }
+        ],
+        "feedback": "Las primeras implementaciones de Ethernet utilizaban cable coaxial como medio físico, conocido como 'thick Ethernet' o 'thin Ethernet' según el tipo de cable."
+      },
+      {
+        "id": 89,
+        "type": "multiple",
+        "question": "¿Qué protocolo controla el acceso al medio compartido en Ethernet?",
+        "options": [
+          { "text": "TCP/IP", "correct": false },
+          { "text": "CSMA/CD", "correct": true },
+          { "text": "STP", "correct": false },
+          { "text": "802.1Q", "correct": false }
+        ],
+        "feedback": "CSMA/CD (Carrier Sense Multiple Access with Collision Detection) es el protocolo que controla el acceso al medio compartido en Ethernet, detectando y gestionando colisiones."
+      },
+      {
+        "id": 90,
+        "type": "multiple",
+        "question": "¿Quién inventó el switch Ethernet con auto-aprendizaje?",
+        "options": [
+          { "text": "Dr. Robert Metcalfe", "correct": false },
+          { "text": "Dr. W. David Sincoskie", "correct": true },
+          { "text": "Dr. Vint Cerf", "correct": false },
+          { "text": "Dr. Tim Berners-Lee", "correct": false }
+        ],
+        "feedback": "El Dr. W. David Sincoskie inventó el switch Ethernet con auto-aprendizaje, revolucionando las redes al permitir que los switches aprendan automáticamente las direcciones MAC."
+      },
+      {
+        "id": 91,
+        "type": "multiple",
+        "question": "¿Qué permite hacer el uso de switches para interconectar redes Ethernet?",
+        "options": [
+          { "text": "Aumentar las colisiones", "correct": false },
+          { "text": "Separar dominios de colisión", "correct": true },
+          { "text": "Reducir la velocidad de transmisión", "correct": false },
+          {
+            "text": "Eliminar completamente el protocolo Ethernet",
+            "correct": false
+          }
+        ],
+        "feedback": "Los switches permiten separar dominios de colisión, creando un dominio de colisión individual para cada puerto, lo que elimina las colisiones y mejora el rendimiento."
+      },
+      {
+        "id": 92,
+        "type": "multiple",
+        "question": "¿Qué protocolo se requiere para evitar tormentas broadcast en topologías redundantes?",
+        "options": [
+          { "text": "CSMA/CD", "correct": false },
+          { "text": "Spanning Tree Protocol (STP)", "correct": true },
+          { "text": "802.1Q", "correct": false },
+          { "text": "OSPF", "correct": false }
+        ],
+        "feedback": "Spanning Tree Protocol (STP) se requiere para evitar tormentas broadcast en topologías redundantes, creando una topología lógica sin bucles mientras mantiene redundancia."
+      },
+      {
+        "id": 93,
+        "type": "multiple",
+        "question": "¿Cómo logró Sincoskie aliviar la sobrecarga de los switches centrales?",
+        "options": [
+          {
+            "text": "Aumentando la velocidad de los puertos",
+            "correct": false
+          },
+          { "text": "Inventando LANs virtuales (VLANs)", "correct": true },
+          {
+            "text": "Cambiando el protocolo de comunicación",
+            "correct": false
+          },
+          { "text": "Reduciendo el número de conexiones", "correct": false }
+        ],
+        "feedback": "Sincoskie alivió la sobrecarga de los switches centrales inventando las LANs virtuales (VLANs), que permiten segmentar el tráfico lógicamente sin modificar la infraestructura física."
+      },
+      {
+        "id": 94,
+        "type": "multiple",
+        "question": "¿Qué se añade a las tramas Ethernet para diferenciar el tráfico en VLANs?",
+        "options": [
+          { "text": "Una dirección IP adicional", "correct": false },
+          { "text": "Una etiqueta VLAN", "correct": true },
+          { "text": "Un checksum extra", "correct": false },
+          { "text": "Una dirección MAC secundaria", "correct": false }
+        ],
+        "feedback": "Se añade una etiqueta VLAN a las tramas Ethernet para identificar a qué VLAN pertenece el tráfico, permitiendo que los switches manejen múltiples VLANs en la misma infraestructura."
+      },
+      {
+        "id": 95,
+        "type": "multiple",
+        "question": "¿Qué norma define la etiqueta VLAN?",
+        "options": [
+          { "text": "IEEE 802.3", "correct": false },
+          { "text": "IEEE 802.1Q", "correct": true },
+          { "text": "IEEE 802.11", "correct": false },
+          { "text": "IEEE 802.1X", "correct": false }
+        ],
+        "feedback": "La norma IEEE 802.1Q define el estándar para etiquetas VLAN, especificando cómo se insertan los identificadores VLAN en las tramas Ethernet."
+      },
+      {
+        "id": 96,
+        "type": "multiple",
+        "question": "¿Cómo se llama el enlace especial por el que fluye tráfico de varias VLANs?",
+        "options": [
+          { "text": "Link agregado", "correct": false },
+          { "text": "Trunk", "correct": true },
+          { "text": "Canal", "correct": false },
+          { "text": "Puerto espejo", "correct": false }
+        ],
+        "feedback": "Un trunk es el enlace especial que transporta tráfico de múltiples VLANs entre switches, utilizando etiquetas VLAN para identificar el tráfico de cada VLAN."
+      },
+      {
+        "id": 97,
+        "type": "multiple",
+        "question": "¿Cuál es el tipo más común de VLAN según el nivel OSI?",
+        "options": [
+          { "text": "VLAN de nivel 2 por direcciones MAC", "correct": false },
+          { "text": "VLAN de nivel 1 por puerto", "correct": true },
+          {
+            "text": "VLAN de nivel 3 por direcciones de subred",
+            "correct": false
+          },
+          { "text": "VLAN de niveles superiores", "correct": false }
+        ],
+        "feedback": "Las VLANs de nivel 1 por puerto son las más comunes, donde cada puerto del switch se asigna a una VLAN específica, proporcionando simplicidad en la configuración."
+      },
+      {
+        "id": 98,
+        "type": "multiple",
+        "question": "¿Cuál es la principal desventaja de las VLANs de nivel 1 (por puerto)?",
+        "options": [
+          { "text": "Son muy costosas de implementar", "correct": false },
+          {
+            "text": "No permite la movilidad de los usuarios",
+            "correct": true
+          },
+          { "text": "Requieren hardware especializado", "correct": false },
+          {
+            "text": "Solo funcionan con un tipo de protocolo",
+            "correct": false
+          }
+        ],
+        "feedback": "La principal desventaja de las VLANs por puerto es que no permiten movilidad de usuarios, ya que al cambiar de puerto, el usuario puede cambiar de VLAN involuntariamente."
+      },
+      {
+        "id": 99,
+        "type": "multiple",
+        "question": "¿Cuál es la ventaja principal de las VLANs de nivel 2 por direcciones MAC?",
+        "options": [
+          { "text": "Son más económicas", "correct": false },
+          {
+            "text": "No hay que reconfigurar si el usuario cambia de ubicación",
+            "correct": true
+          },
+          { "text": "Procesan datos más rápidamente", "correct": false },
+          { "text": "Consumen menos ancho de banda", "correct": false }
+        ],
+        "feedback": "La ventaja principal de las VLANs por MAC es que proporcionan movilidad total al usuario: independientemente del puerto que use, permanecerá en su VLAN asignada."
+      },
+      {
+        "id": 100,
+        "type": "multiple",
+        "question": "¿Cuál es el principal inconveniente de las VLANs por direcciones MAC?",
+        "options": [
+          { "text": "Son menos seguras", "correct": false },
+          {
+            "text": "Con cientos de usuarios hay que asignar los miembros uno a uno",
+            "correct": true
+          },
+          { "text": "No funcionan con todos los protocolos", "correct": false },
+          { "text": "Requieren switches especiales", "correct": false }
+        ],
+        "feedback": "El principal inconveniente de las VLANs por MAC es la complejidad administrativa: con cientos de usuarios, cada dirección MAC debe asignarse individualmente a su VLAN correspondiente."
+      },
+      {
+        "id": 101,
+        "type": "multiple",
+        "question": "En las VLANs de nivel 2 por tipo de protocolo, ¿qué determina la VLAN?",
+        "options": [
+          { "text": "La dirección MAC del dispositivo", "correct": false },
+          {
+            "text": "El contenido del campo tipo de protocolo de la trama MAC",
+            "correct": true
+          },
+          { "text": "La dirección IP de destino", "correct": false },
+          { "text": "El puerto físico de conexión", "correct": false }
+        ],
+        "feedback": "En las VLANs de nivel 2 por tipo de protocolo, la asignación a la VLAN se determina por el contenido del campo tipo de protocolo en la trama MAC, no por ubicación física."
+      },
+      {
+        "id": 102,
+        "type": "multiple",
+        "question": "En las VLANs de nivel 3 por direcciones de subred, ¿qué pertenece a la VLAN?",
+        "options": [
+          { "text": "Las estaciones", "correct": false },
+          { "text": "Los paquetes", "correct": true },
+          { "text": "Los puertos del switch", "correct": false },
+          { "text": "Los cables de conexión", "correct": false }
+        ],
+        "feedback": "En las VLANs de nivel 3 por direcciones de subred, son los paquetes los que pertenecen a la VLAN basándose en la información de red de capa 3."
+      },
+      {
+        "id": 103,
+        "type": "multiple",
+        "question": "¿Qué factores pueden combinarse en las VLANs de niveles superiores?",
+        "options": [
+          { "text": "Solo puertos y direcciones MAC", "correct": false },
+          {
+            "text": "Puertos, direcciones MAC, subred, hora del día",
+            "correct": true
+          },
+          { "text": "Únicamente protocolos de aplicación", "correct": false },
+          { "text": "Solo información de tiempo", "correct": false }
+        ],
+        "feedback": "Las VLANs de niveles superiores pueden combinar múltiples factores como puertos, direcciones MAC, información de subred e incluso hora del día para determinar la pertenencia."
+      },
+      {
+        "id": 104,
+        "type": "multiple",
+        "question": "¿En cuántos grupos se suele separar la red institucional de un campus universitario?",
+        "options": [
+          { "text": "Dos grupos: estudiantes y profesores", "correct": false },
+          {
+            "text": "Tres grupos: alumnos, profesores y administración",
+            "correct": true
+          },
+          {
+            "text": "Cuatro grupos: alumnos, profesores, administración y invitados",
+            "correct": false
+          },
+          { "text": "No se separa en grupos específicos", "correct": false }
+        ],
+        "feedback": "Las redes institucionales de campus universitarios típicamente se separan en tres grupos principales: alumnos, profesores y administración, cada uno con necesidades y permisos diferentes."
+      },
+      {
+        "id": 105,
+        "type": "multiple",
+        "question": "¿A qué corresponde cada grupo universitario en términos de red?",
+        "options": [
+          { "text": "A un switch diferente", "correct": false },
+          { "text": "A un dominio de difusión y una VLAN", "correct": true },
+          { "text": "Solo a una subred IP", "correct": false },
+          { "text": "A un protocolo específico", "correct": false }
+        ],
+        "feedback": "Cada grupo universitario (alumnos, profesores, administración) corresponde a un dominio de difusión separado y una VLAN específica para aislar y gestionar el tráfico."
+      },
+      {
+        "id": 106,
+        "type": "multiple",
+        "question": "¿Qué rango de direcciones IP se usa en el ejemplo institucional?",
+        "options": [
+          { "text": "192.168.XXX.0/24", "correct": false },
+          { "text": "172.16.XXX.0/24", "correct": true },
+          { "text": "10.0.XXX.0/24", "correct": false },
+          { "text": "169.254.XXX.0/24", "correct": false }
+        ],
+        "feedback": "En el ejemplo institucional se utiliza el rango de direcciones IP privadas 172.16.XXX.0/24, que pertenece a la clase B de direcciones privadas."
+      },
+      {
+        "id": 107,
+        "type": "multiple",
+        "question": "¿Qué subred IP corresponde a la VLAN 20 de profesores en el ejemplo?",
+        "options": [
+          { "text": "172.16.10.0/24", "correct": false },
+          { "text": "172.16.20.0/24", "correct": true },
+          { "text": "172.16.30.0/24", "correct": false },
+          { "text": "172.16.40.0/24", "correct": false }
+        ],
+        "feedback": "La VLAN 20 de profesores utiliza la subred IP 172.16.20.0/24, manteniendo correspondencia entre el número de VLAN y el tercer octeto de la dirección IP."
+      },
+      {
+        "id": 108,
+        "type": "multiple",
+        "question": "¿Cómo se denomina el switch al que se conectan directamente los sistemas finales?",
+        "options": [
+          { "text": "Switch troncal", "correct": false },
+          { "text": "Switch de acceso", "correct": true },
+          { "text": "Switch de distribución", "correct": false },
+          { "text": "Switch principal", "correct": false }
+        ],
+        "feedback": "El switch de acceso es el dispositivo al cual se conectan directamente los sistemas finales (computadoras, impresoras, etc.) en la red."
+      },
+      {
+        "id": 109,
+        "type": "multiple",
+        "question": "¿Qué tipo de enlaces conectan los switches de acceso con el switch troncal?",
+        "options": [
+          { "text": "Enlaces de acceso", "correct": false },
+          { "text": "Enlaces trunk", "correct": true },
+          { "text": "Enlaces punto a punto", "correct": false },
+          { "text": "Enlaces dedicados", "correct": false }
+        ],
+        "feedback": "Los switches de acceso se conectan al switch troncal mediante enlaces trunk, que permiten transportar tráfico de múltiples VLANs a través de un solo enlace."
+      },
+      {
+        "id": 110,
+        "type": "multiple",
+        "question": "¿Qué velocidades típicas maneja el switch troncal?",
+        "options": [
+          { "text": "10 Mbps o 100 Mbps", "correct": false },
+          { "text": "Gigabit Ethernet o 10-Gigabit Ethernet", "correct": true },
+          { "text": "Solo 100 Mbps", "correct": false },
+          { "text": "Solo Fast Ethernet", "correct": false }
+        ],
+        "feedback": "Los switches troncales manejan velocidades altas como Gigabit Ethernet (1000 Mbps) o 10-Gigabit Ethernet para soportar el tráfico agregado de múltiples switches de acceso."
+      },
+      {
+        "id": 111,
+        "type": "multiple",
+        "question": "¿Qué comando IOS se usa para entrar en la base de datos de VLANs?",
+        "options": [
+          { "text": "configure vlan", "correct": false },
+          { "text": "vlan database", "correct": true },
+          { "text": "setup vlan", "correct": false },
+          { "text": "create vlan", "correct": false }
+        ],
+        "feedback": "El comando 'vlan database' se utiliza en IOS para acceder al modo de configuración de la base de datos de VLANs donde se pueden crear y modificar VLANs."
+      },
+      {
+        "id": 112,
+        "type": "multiple",
+        "question": "¿Qué comando se usa para crear la VLAN 10 con nombre 'administracion'?",
+        "options": [
+          { "text": "create vlan 10 administracion", "correct": false },
+          { "text": "vlan 10 name administracion", "correct": true },
+          { "text": "set vlan 10 administracion", "correct": false },
+          { "text": "add vlan 10 administracion", "correct": false }
+        ],
+        "feedback": "El comando 'vlan 10 name administracion' crea la VLAN con ID 10 y le asigna el nombre descriptivo 'administracion' para facilitar su identificación."
+      },
+      {
+        "id": 113,
+        "type": "multiple",
+        "question": "¿Qué comando configura un puerto como trunk?",
+        "options": [
+          { "text": "switchport access trunk", "correct": false },
+          { "text": "switchport mode trunk", "correct": true },
+          { "text": "switchport trunk enable", "correct": false },
+          { "text": "switchport set trunk", "correct": false }
+        ],
+        "feedback": "El comando 'switchport mode trunk' configura un puerto del switch en modo trunk, permitiéndole transportar tráfico de múltiples VLANs."
+      },
+      {
+        "id": 114,
+        "type": "multiple",
+        "question": "¿Qué comando asigna un puerto a la VLAN 10 en modo acceso?",
+        "options": [
+          { "text": "switchport vlan 10", "correct": false },
+          { "text": "switchport access vlan 10", "correct": true },
+          { "text": "set vlan 10", "correct": false },
+          { "text": "assign vlan 10", "correct": false }
+        ],
+        "feedback": "El comando 'switchport access vlan 10' asigna un puerto específico a la VLAN 10 en modo acceso, donde el puerto pertenece únicamente a esa VLAN."
+      },
+      {
+        "id": 115,
+        "type": "multiple",
+        "question": "¿Qué interfaces se asignan a la VLAN de administración en el ejemplo?",
+        "options": [
+          { "text": "f0/0-15", "correct": true },
+          { "text": "f0/16-31", "correct": false },
+          { "text": "f0/32-47", "correct": false },
+          { "text": "g0/0-3", "correct": false }
+        ],
+        "feedback": "En el ejemplo, las interfaces FastEthernet f0/0-15 (puertos 1 al 16) se asignan a la VLAN de administración, proporcionando 16 puertos para usuarios administrativos."
+      },
+      {
+        "id": 116,
+        "type": "multiple",
+        "question": "¿Qué interfaces se asignan a la VLAN de profesores en el ejemplo?",
+        "options": [
+          { "text": "f0/0-15", "correct": false },
+          { "text": "f0/16-31", "correct": true },
+          { "text": "f0/32-47", "correct": false },
+          { "text": "g0/0-3", "correct": false }
+        ],
+        "feedback": "Las interfaces FastEthernet f0/16-31 (puertos 17 al 32) se asignan a la VLAN de profesores, separando físicamente el acceso de profesores del de administración."
+      },
+      {
+        "id": 117,
+        "type": "multiple",
+        "question": "¿Qué comando se usa para configurar la encapsulación dot1q en una subinterfaz?",
+        "options": [
+          { "text": "encap dot1q", "correct": false },
+          { "text": "encapsulation dot1q", "correct": true },
+          { "text": "set dot1q", "correct": false },
+          { "text": "configure dot1q", "correct": false }
+        ],
+        "feedback": "El comando 'encapsulation dot1q' configura la encapsulación IEEE 802.1Q en una subinterfaz del router para permitir el routing entre VLANs."
+      },
+      {
+        "id": 118,
+        "type": "multiple",
+        "question": "¿Qué dirección IP se asigna a la subinterfaz de la VLAN 10 en el router?",
+        "options": [
+          { "text": "172.16.10.1", "correct": true },
+          { "text": "172.16.20.1", "correct": false },
+          { "text": "172.16.30.1", "correct": false },
+          { "text": "172.16.1.1", "correct": false }
+        ],
+        "feedback": "La subinterfaz correspondiente a la VLAN 10 se configura con la dirección IP 172.16.10.1, que actúa como gateway para los dispositivos en esa VLAN."
+      },
+      {
+        "id": 119,
+        "type": "multiple",
+        "question": "¿Cuál es la principal ventaja de usar VLANs frente a redes LAN interconectadas con router?",
+        "options": [
+          { "text": "Menor costo de hardware", "correct": false },
+          { "text": "Es una solución escalable", "correct": true },
+          { "text": "Mayor velocidad de procesamiento", "correct": false },
+          { "text": "Menor consumo de energía", "correct": false }
+        ],
+        "feedback": "La principal ventaja de las VLANs es la escalabilidad, permitiendo gestionar redes más grandes y complejas de manera eficiente sin requerir hardware adicional proporcional."
+      },
+      {
+        "id": 120,
+        "type": "multiple",
+        "question": "¿Qué permite que la pertenencia a una VLAN sea independiente de la ubicación física?",
+        "options": [
+          { "text": "El uso de direcciones IP estáticas", "correct": false },
+          {
+            "text": "La configuración por software de las VLANs",
+            "correct": true
+          },
+          { "text": "El tipo de cable utilizado", "correct": false },
+          { "text": "La velocidad de los puertos", "correct": false }
+        ],
+        "feedback": "La configuración por software de las VLANs permite que la pertenencia sea independiente de la ubicación física, ya que se basa en configuración lógica y no en conexiones físicas."
+      },
+      {
+        "id": 121,
+        "type": "multiple",
+        "question": "¿Qué es una VLAN?",
+        "options": [
+          { "text": "Una red física de alta velocidad", "correct": false },
+          {
+            "text": "Una agrupación lógica de dispositivos sin importar su ubicación física",
+            "correct": true
+          },
+          { "text": "Un tipo de cable de red especial", "correct": false },
+          { "text": "Un protocolo de seguridad avanzado", "correct": false }
+        ],
+        "feedback": "Una VLAN es una agrupación lógica de dispositivos o usuarios que se pueden agrupar por función, departamento o aplicación, independientemente de su ubicación física."
+      },
+      {
+        "id": 122,
+        "type": "multiple",
+        "question": "¿Dónde se realiza la configuración de las VLAN?",
+        "options": [
+          { "text": "En el router principal", "correct": false },
+          { "text": "En el switch a través del software", "correct": true },
+          { "text": "En cada dispositivo individual", "correct": false },
+          { "text": "En el módem de conexión", "correct": false }
+        ],
+        "feedback": "La configuración de las VLAN se realiza en el switch a través del software, no requiere cambios físicos en el hardware."
+      },
+      {
+        "id": 123,
+        "type": "multiple",
+        "question": "¿Las VLAN están estandarizadas?",
+        "options": [
+          { "text": "Sí, siguen estándares internacionales", "correct": false },
+          {
+            "text": "No, requieren software propietario del fabricante",
+            "correct": true
+          },
+          {
+            "text": "Solo algunas características están estandarizadas",
+            "correct": false
+          },
+          { "text": "Depende del tipo de switch utilizado", "correct": false }
+        ],
+        "feedback": "Las VLAN no están completamente estandarizadas y requieren el uso de software propietario específico del fabricante del switch."
+      },
+      {
+        "id": 124,
+        "type": "multiple",
+        "question": "¿Cómo se configura tradicionalmente una LAN?",
+        "options": [
+          {
+            "text": "Según las necesidades de cada departamento",
+            "correct": false
+          },
+          {
+            "text": "Según la infraestructura física que conecta",
+            "correct": true
+          },
+          { "text": "Según el software utilizado", "correct": false },
+          { "text": "Según el presupuesto disponible", "correct": false }
+        ],
+        "feedback": "Una LAN típica se configura según la infraestructura física que conecta, agrupando usuarios por su ubicación física en relación con switches o hubs."
+      },
+      {
+        "id": 125,
+        "type": "multiple",
+        "question": "¿Qué proporcionan las VLAN que no ofrecen los segmentos creados por switches tradicionales?",
+        "options": [
+          { "text": "Mayor velocidad de transmisión", "correct": false },
+          {
+            "text": "Segmentación y capacidad de actuar como firewall de broadcast",
+            "correct": true
+          },
+          { "text": "Menor costo de implementación", "correct": false },
+          {
+            "text": "Compatibilidad con todos los dispositivos",
+            "correct": false
+          }
+        ],
+        "feedback": "Las VLAN proporcionan segmentación lógica y pueden actuar como firewall de broadcast, funciones que los segmentos tradicionales creados por switches no ofrecen."
+      },
+      {
+        "id": 126,
+        "type": "multiple",
+        "question": "¿Cómo segmentan las VLAN la infraestructura física de las LAN?",
+        "options": [
+          { "text": "En diferentes cables físicos", "correct": false },
+          {
+            "text": "En diferentes subredes o dominios de broadcast",
+            "correct": true
+          },
+          { "text": "En diferentes edificios", "correct": false },
+          {
+            "text": "En diferentes velocidades de transmisión",
+            "correct": false
+          }
+        ],
+        "feedback": "Las VLAN segmentan lógicamente la infraestructura física en diferentes subredes o dominios de broadcast para Ethernet."
+      },
+      {
+        "id": 127,
+        "type": "multiple",
+        "question": "¿Entre qué puertos se conmutan las tramas de broadcast en las VLAN?",
+        "options": [
+          { "text": "Entre todos los puertos del switch", "correct": false },
+          {
+            "text": "Solo entre puertos dentro de la misma VLAN",
+            "correct": true
+          },
+          { "text": "Solo entre puertos del mismo edificio", "correct": false },
+          { "text": "Entre puertos de diferentes VLANs", "correct": false }
+        ],
+        "feedback": "Las tramas de broadcast se conmutan únicamente entre puertos que pertenecen a la misma VLAN, proporcionando segmentación del tráfico."
+      },
+      {
+        "id": 128,
+        "type": "multiple",
+        "question": "¿Qué permite el enfoque actual de las VLAN que cubre toda la red?",
+        "options": [
+          {
+            "text": "Solo conectar dispositivos del mismo piso",
+            "correct": false
+          },
+          {
+            "text": "Agrupar usuarios separados por grandes distancias físicas",
+            "correct": true
+          },
+          {
+            "text": "Reducir el número de switches necesarios",
+            "correct": false
+          },
+          { "text": "Eliminar completamente los routers", "correct": false }
+        ],
+        "feedback": "Las VLAN actuales permiten agrupar usuarios separados por grandes distancias físicas en topologías virtuales que abarcan toda la red."
+      },
+      {
+        "id": 129,
+        "type": "multiple",
+        "question": "¿En qué capas del modelo OSI funcionan las VLAN?",
+        "options": [
+          { "text": "Solo en Capa 2", "correct": false },
+          { "text": "En Capas 2, 3 y 4", "correct": true },
+          { "text": "Solo en Capa 3", "correct": false },
+          { "text": "En todas las capas OSI", "correct": false }
+        ],
+        "feedback": "Las VLAN funcionan en los niveles de Capa 2 (enlace de datos), Capa 3 (red) y Capa 4 (transporte) del modelo OSI."
+      },
+      {
+        "id": 130,
+        "type": "multiple",
+        "question": "¿Cómo se implementa la comunicación entre diferentes VLAN?",
+        "options": [
+          { "text": "Automáticamente por el switch", "correct": false },
+          { "text": "Mediante enrutamiento de Capa 3", "correct": true },
+          { "text": "Por conexión directa entre switches", "correct": false },
+          {
+            "text": "No es posible la comunicación entre VLANs",
+            "correct": false
+          }
+        ],
+        "feedback": "La comunicación entre diferentes VLAN se implementa mediante enrutamiento de Capa 3, requiriendo un router o switch de capa 3."
+      },
+      {
+        "id": 131,
+        "type": "multiple",
+        "question": "¿Qué método proporcionan las VLAN para controlar el tráfico de red?",
+        "options": [
+          {
+            "text": "Control de la velocidad de transmisión",
+            "correct": false
+          },
+          { "text": "Control de los broadcasts de red", "correct": true },
+          { "text": "Control del consumo eléctrico", "correct": false },
+          {
+            "text": "Control de la temperatura de los equipos",
+            "correct": false
+          }
+        ],
+        "feedback": "Las VLAN proporcionan un método eficaz para controlar y limitar los broadcasts de red, mejorando el rendimiento general."
+      },
+      {
+        "id": 132,
+        "type": "multiple",
+        "question": "¿Quién asigna usuarios a una VLAN?",
+        "options": [
+          { "text": "Los propios usuarios", "correct": false },
+          { "text": "El administrador de la red", "correct": true },
+          { "text": "El sistema automáticamente", "correct": false },
+          { "text": "El proveedor de servicios de Internet", "correct": false }
+        ],
+        "feedback": "El administrador de la red es quien tiene la responsabilidad y autoridad para asignar usuarios a las diferentes VLAN según las necesidades organizacionales."
+      },
+      {
+        "id": 133,
+        "type": "multiple",
+        "question": "¿Cómo pueden las VLAN aumentar la seguridad de la red?",
+        "options": [
+          {
+            "text": "Cifrando automáticamente todo el tráfico",
+            "correct": false
+          },
+          {
+            "text": "Definiendo cuáles nodos pueden comunicarse entre sí",
+            "correct": true
+          },
+          {
+            "text": "Cambiando las contraseñas regularmente",
+            "correct": false
+          },
+          { "text": "Bloqueando todos los accesos externos", "correct": false }
+        ],
+        "feedback": "Las VLAN aumentan la seguridad definiendo específicamente cuáles nodos de red pueden comunicarse entre sí, creando segmentación de seguridad."
+      },
+      {
+        "id": 134,
+        "type": "multiple",
+        "question": "¿Qué tipos de grupos de trabajo se pueden crear con la tecnología VLAN?",
+        "options": [
+          { "text": "Solo departamentos del mismo edificio", "correct": false },
+          {
+            "text": "Compañeros del mismo departamento, equipos interfuncionales y usuarios de la misma aplicación",
+            "correct": true
+          },
+          {
+            "text": "Solo usuarios del mismo sistema operativo",
+            "correct": false
+          },
+          {
+            "text": "Únicamente grupos de la misma ubicación física",
+            "correct": false
+          }
+        ],
+        "feedback": "Las VLAN permiten crear diversos grupos: compañeros del mismo departamento, equipos de producción interfuncionales y usuarios que comparten aplicaciones."
+      },
+      {
+        "id": 135,
+        "type": "multiple",
+        "question": "¿Qué alcance pueden tener las VLAN en términos de infraestructura?",
+        "options": [
+          { "text": "Solo dentro de un switch", "correct": false },
+          {
+            "text": "Un solo edificio, edificios conectados o redes de área amplia (WAN)",
+            "correct": true
+          },
+          { "text": "Únicamente redes locales pequeñas", "correct": false },
+          { "text": "Solo conexiones inalámbricas", "correct": false }
+        ],
+        "feedback": "Las VLAN pueden abarcar desde un solo edificio hasta edificios conectados entre sí, e incluso extenderse a redes de área amplia (WAN)."
+      },
+      {
+        "id": 136,
+        "type": "multiple",
+        "question": "¿Qué es fundamental en cualquier arquitectura de VLAN respecto al backbone?",
+        "options": [
+          { "text": "Eliminar completamente el backbone", "correct": false },
+          {
+            "text": "La capacidad de transportar información de VLAN entre switches y routers",
+            "correct": true
+          },
+          { "text": "Usar solo cables de fibra óptica", "correct": false },
+          { "text": "Reducir la velocidad del backbone", "correct": false }
+        ],
+        "feedback": "Es fundamental la capacidad de transportar información de VLAN entre switches interconectados y routers que residen en el backbone corporativo."
+      },
+      {
+        "id": 137,
+        "type": "multiple",
+        "question": "¿Qué beneficios proporcionan las capacidades de transporte de VLAN?",
+        "options": [
+          { "text": "Solo reducción de costos", "correct": false },
+          {
+            "text": "Eliminan fronteras físicas, aumentan flexibilidad y proporcionan interoperabilidad",
+            "correct": true
+          },
+          { "text": "Únicamente mayor velocidad", "correct": false },
+          { "text": "Solo mejor seguridad", "correct": false }
+        ],
+        "feedback": "Las capacidades de transporte eliminan fronteras físicas entre usuarios, aumentan flexibilidad de configuración y proporcionan interoperabilidad entre componentes."
+      },
+      {
+        "id": 138,
+        "type": "multiple",
+        "question": "¿Cuál es el papel tradicional de un router en las redes?",
+        "options": [
+          {
+            "text": "Solo conectar dispositivos inalámbricos",
+            "correct": false
+          },
+          {
+            "text": "Proporcionar firewalls, administración de broadcast y procesamiento de rutas",
+            "correct": true
+          },
+          { "text": "Únicamente amplificar señales", "correct": false },
+          { "text": "Solo asignar direcciones IP", "correct": false }
+        ],
+        "feedback": "El papel tradicional del router incluye proporcionar firewalls, administración de broadcast, y procesamiento y distribución de rutas."
+      },
+      {
+        "id": 139,
+        "type": "multiple",
+        "question": "¿Por qué siguen siendo vitales los routers en las arquitecturas VLAN?",
+        "options": [
+          { "text": "Solo por razones de compatibilidad", "correct": false },
+          {
+            "text": "Proporcionan rutas conectadas entre diferentes VLAN",
+            "correct": true
+          },
+          {
+            "text": "Únicamente para conexiones inalámbricas",
+            "correct": false
+          },
+          { "text": "Solo para reducir costos", "correct": false }
+        ],
+        "feedback": "Los routers siguen siendo vitales porque proporcionan las rutas conectadas necesarias entre diferentes VLAN y conexiones a sitios remotos."
+      },
+      {
+        "id": 140,
+        "type": "multiple",
+        "question": "¿Qué tipos de conexiones se usan típicamente para integrar routers en la arquitectura de conmutación?",
+        "options": [
+          { "text": "Solo conexiones Ethernet estándar", "correct": false },
+          {
+            "text": "Conexiones Fast Ethernet o ATM de alta velocidad",
+            "correct": true
+          },
+          { "text": "Únicamente conexiones inalámbricas", "correct": false },
+          { "text": "Solo conexiones de fibra óptica", "correct": false }
+        ],
+        "feedback": "Se utilizan típicamente conexiones Fast Ethernet o ATM de alta velocidad para integrar routers en el backbone de conmutación."
+      },
+      {
+        "id": 141,
+        "type": "multiple",
+        "question": "¿Cuáles son los tres métodos de implementación de VLAN mencionados?",
+        "options": [
+          { "text": "Rápida, media y lenta", "correct": false },
+          { "text": "De puerto central, estática y dinámica", "correct": true },
+          { "text": "Local, remota y híbrida", "correct": false },
+          { "text": "Simple, compleja y avanzada", "correct": false }
+        ],
+        "feedback": "Los tres métodos de implementación de VLAN son: de puerto central, estática y dinámica, cada uno con características específicas."
+      },
+      {
+        "id": 142,
+        "type": "multiple",
+        "question": "¿Cómo funcionan las VLAN de puerto central?",
+        "options": [
+          { "text": "Asignan usuarios aleatoriamente", "correct": false },
+          {
+            "text": "Asignan el mismo identificador de VLAN a todos los nodos conectados a puertos en la misma VLAN",
+            "correct": true
+          },
+          { "text": "Solo funcionan con un puerto por VLAN", "correct": false },
+          {
+            "text": "Requieren configuración individual de cada dispositivo",
+            "correct": false
+          }
+        ],
+        "feedback": "En las VLAN de puerto central, todos los nodos conectados a puertos en la misma VLAN reciben el mismo identificador de VLAN."
+      },
+      {
+        "id": 143,
+        "type": "multiple",
+        "question": "¿Qué ventajas ofrecen las VLAN de puerto central para el administrador?",
+        "options": [
+          { "text": "Solo reducción de costos", "correct": false },
+          {
+            "text": "Fácil administración, mayor seguridad y los paquetes no se filtran a otros dominios",
+            "correct": true
+          },
+          { "text": "Únicamente mayor velocidad", "correct": false },
+          { "text": "Solo compatibilidad universal", "correct": false }
+        ],
+        "feedback": "Las VLAN de puerto central ofrecen fácil administración, mayor seguridad entre VLANs y evitan que los paquetes se filtren a otros dominios."
+      },
+      {
+        "id": 144,
+        "type": "multiple",
+        "question": "¿Qué característica define a las VLAN estáticas?",
+        "options": [
+          {
+            "text": "Cambian automáticamente según el tráfico",
+            "correct": false
+          },
+          {
+            "text": "Los puertos se asignan estáticamente y mantienen su configuración hasta ser cambiados",
+            "correct": true
+          },
+          {
+            "text": "Solo funcionan durante horarios específicos",
+            "correct": false
+          },
+          { "text": "Requieren reinicio diario del switch", "correct": false }
+        ],
+        "feedback": "Las VLAN estáticas son puertos asignados estáticamente a una VLAN que mantienen sus configuraciones hasta que el administrador las cambie."
+      },
+      {
+        "id": 145,
+        "type": "multiple",
+        "question": "¿En qué tipo de redes funcionan bien las VLAN estáticas?",
+        "options": [
+          { "text": "En redes con cambios constantes", "correct": false },
+          {
+            "text": "En redes donde el movimiento está controlado y administrado",
+            "correct": true
+          },
+          { "text": "Solo en redes temporales", "correct": false },
+          { "text": "Únicamente en redes de prueba", "correct": false }
+        ],
+        "feedback": "Las VLAN estáticas funcionan bien en redes donde el movimiento de usuarios está controlado y administrado, proporcionando estabilidad."
+      },
+      {
+        "id": 146,
+        "type": "multiple",
+        "question": "¿Cómo determinan las VLAN dinámicas sus asignaciones?",
+        "options": [
+          { "text": "Solo por la ubicación física", "correct": false },
+          {
+            "text": "Por direcciones MAC, direccionamiento lógico o tipo de protocolo",
+            "correct": true
+          },
+          { "text": "Únicamente por la hora del día", "correct": false },
+          { "text": "Solo por el nombre del usuario", "correct": false }
+        ],
+        "feedback": "Las VLAN dinámicas determinan automáticamente sus asignaciones basándose en direcciones MAC, direccionamiento lógico o tipo de protocolo de los datos."
+      },
+      {
+        "id": 147,
+        "type": "multiple",
+        "question": "¿Qué sucede cuando una estación se conecta inicialmente a un puerto no asignado en VLAN dinámica?",
+        "options": [
+          {
+            "text": "Se rechaza la conexión automáticamente",
+            "correct": false
+          },
+          {
+            "text": "El switch verifica la dirección MAC en la base de datos y configura dinámicamente el puerto",
+            "correct": true
+          },
+          {
+            "text": "Se asigna a una VLAN por defecto permanentemente",
+            "correct": false
+          },
+          {
+            "text": "Requiere configuración manual inmediata",
+            "correct": false
+          }
+        ],
+        "feedback": "El switch verifica la dirección MAC en la base de datos de administración de VLAN y configura dinámicamente el puerto con la configuración correspondiente."
+      },
+      {
+        "id": 148,
+        "type": "multiple",
+        "question": "¿Cuáles son los principales beneficios de las VLAN dinámicas?",
+        "options": [
+          { "text": "Solo mayor velocidad de configuración", "correct": false },
+          {
+            "text": "Menor administración al agregar usuarios y notificación centralizada de usuarios no reconocidos",
+            "correct": true
+          },
+          { "text": "Únicamente mejor seguridad", "correct": false },
+          { "text": "Solo reducción de costos de hardware", "correct": false }
+        ],
+        "feedback": "Los beneficios incluyen menor necesidad de administración al agregar usuarios y notificación centralizada cuando se detectan usuarios no reconocidos."
+      },
+      {
+        "id": 149,
+        "type": "multiple",
+        "question": "¿Qué es el filtrado de trama en las VLAN?",
+        "options": [
+          {
+            "text": "Un método para acelerar las transmisiones",
+            "correct": false
+          },
+          {
+            "text": "Una técnica que examina información específica sobre cada trama",
+            "correct": true
+          },
+          { "text": "Una forma de cifrar los datos", "correct": false },
+          { "text": "Un protocolo de comunicación", "correct": false }
+        ],
+        "feedback": "El filtrado de trama es una técnica que examina información específica sobre cada trama, similar al filtrado que utilizan los routers."
+      },
+      {
+        "id": 150,
+        "type": "multiple",
+        "question": "¿Qué información puede examinar el filtrado de trama según la sofisticación del switch?",
+        "options": [
+          { "text": "Solo direcciones IP", "correct": false },
+          {
+            "text": "Direcciones MAC, tipos de protocolo de capa de red o tipos de aplicación",
+            "correct": true
+          },
+          { "text": "Únicamente el tamaño de las tramas", "correct": false },
+          { "text": "Solo la velocidad de transmisión", "correct": false }
+        ],
+        "feedback": "El filtrado puede examinar direcciones MAC de estaciones, tipos de protocolo de capa de red o tipos de aplicación según las capacidades del switch."
+      },
+      {
+        "id": 151,
+        "type": "multiple",
+        "question": "¿Qué es el etiquetado de tramas en las VLAN?",
+        "options": [
+          { "text": "Un método de cifrado de datos", "correct": false },
+          {
+            "text": "Asignar un identificador exclusivo definido por el usuario a cada trama",
+            "correct": true
+          },
+          { "text": "Una técnica de compresión", "correct": false },
+          { "text": "Un protocolo de enrutamiento", "correct": false }
+        ],
+        "feedback": "El etiquetado de tramas asigna de forma exclusiva un identificador definido por el usuario a cada trama para su identificación en la red."
+      },
+      {
+        "id": 152,
+        "type": "multiple",
+        "question": "¿Por qué el grupo de estándares IEEE eligió la técnica de etiquetado de tramas?",
+        "options": [
+          { "text": "Por su bajo costo únicamente", "correct": false },
+          { "text": "Debido a su escalabilidad", "correct": true },
+          { "text": "Solo por su simplicidad", "correct": false },
+          { "text": "Únicamente por compatibilidad", "correct": false }
+        ],
+        "feedback": "El grupo de estándares IEEE eligió la técnica de etiquetado de tramas específicamente debido a su capacidad de escalabilidad en redes grandes."
+      },
+      {
+        "id": 153,
+        "type": "multiple",
+        "question": "¿Dónde coloca el identificador la técnica de etiquetado de tramas VLAN?",
+        "options": [
+          { "text": "Al final de cada trama", "correct": false },
+          { "text": "En el encabezado de cada trama", "correct": true },
+          { "text": "En una trama separada", "correct": false },
+          { "text": "Solo en tramas de broadcast", "correct": false }
+        ],
+        "feedback": "La identificación de tramas VLAN coloca un identificador exclusivo en el encabezado de cada trama mientras se envía por el backbone."
+      },
+      {
+        "id": 154,
+        "type": "multiple",
+        "question": "¿Qué sucede con el identificador cuando la trama sale del backbone de la red?",
+        "options": [
+          { "text": "Se mantiene permanentemente", "correct": false },
+          {
+            "text": "El switch lo elimina antes de transmitir a la estación final",
+            "correct": true
+          },
+          { "text": "Se transfiere a otra trama", "correct": false },
+          { "text": "Se convierte en parte de los datos", "correct": false }
+        ],
+        "feedback": "Cuando la trama sale del backbone, el switch elimina el identificador antes de que la trama se transmita a la estación final objetivo."
+      },
+      {
+        "id": 155,
+        "type": "multiple",
+        "question": "¿En qué capa funciona la identificación de trama y qué requiere?",
+        "options": [
+          { "text": "Capa 3 y requiere mucho procesamiento", "correct": false },
+          {
+            "text": "Capa 2 y requiere poco procesamiento o gasto administrativo",
+            "correct": true
+          },
+          {
+            "text": "Capa 4 y requiere hardware especializado",
+            "correct": false
+          },
+          {
+            "text": "Todas las capas y configuración compleja",
+            "correct": false
+          }
+        ],
+        "feedback": "La identificación de trama funciona a nivel de Capa 2 y requiere poco procesamiento o gasto administrativo, siendo muy eficiente."
+      },
+      {
+        "id": 156,
+        "type": "multiple",
+        "question": "¿Qué dispositivos examinan el identificador de VLAN en el backbone?",
+        "options": [
+          { "text": "Solo los routers", "correct": false },
+          {
+            "text": "Cada switch, router y dispositivo de estación final",
+            "correct": true
+          },
+          { "text": "Únicamente los switches", "correct": false },
+          { "text": "Solo los dispositivos de seguridad", "correct": false }
+        ],
+        "feedback": "El identificador es comprendido y examinado por cada switch, router y dispositivo de estación final antes de enviar cualquier transmisión."
+      },
+      {
+        "id": 157,
+        "type": "multiple",
+        "question": "¿Cuál es la principal diferencia entre la segmentación tradicional y las VLAN?",
+        "options": [
+          { "text": "Las VLAN son más costosas", "correct": false },
+          {
+            "text": "Las VLAN agrupan por asociación lógica, no por ubicación física",
+            "correct": true
+          },
+          { "text": "Las VLAN son más lentas", "correct": false },
+          { "text": "No hay diferencias significativas", "correct": false }
+        ],
+        "feedback": "La principal diferencia es que las configuraciones VLAN agrupan usuarios por asociación lógica en lugar de por ubicación física como en la segmentación tradicional."
+      },
+      {
+        "id": 158,
+        "type": "multiple",
+        "question": "¿Qué significa VTP en redes Cisco?",
+        "options": [
+          { "text": "Virtual Terminal Protocol", "correct": false },
+          { "text": "VLAN Trunking Protocol", "correct": true },
+          { "text": "Virtual Transport Protocol", "correct": false },
+          { "text": "VLAN Transfer Protocol", "correct": false }
+        ],
+        "feedback": "VTP significa VLAN Trunking Protocol, un protocolo de mensajes de nivel 2 usado para configurar y administrar VLANs en equipos Cisco."
+      },
+      {
+        "id": 159,
+        "type": "multiple",
+        "question": "¿Cuál es el propósito principal del protocolo VTP?",
+        "options": [
+          { "text": "Aumentar la velocidad de transmisión", "correct": false },
+          {
+            "text": "Centralizar y simplificar la administración de VLANs en un dominio",
+            "correct": true
+          },
+          { "text": "Proporcionar seguridad adicional", "correct": false },
+          { "text": "Reducir el consumo de energía", "correct": false }
+        ],
+        "feedback": "VTP permite centralizar y simplificar la administración en un dominio de VLANs, pudiendo crear, borrar y renombrar las mismas desde un punto central."
+      },
+      {
+        "id": 160,
+        "type": "multiple",
+        "question": "¿En cuántos modos distintos opera VTP?",
+        "options": [
+          { "text": "2 modos", "correct": false },
+          { "text": "3 modos", "correct": true },
+          { "text": "4 modos", "correct": false },
+          { "text": "5 modos", "correct": false }
+        ],
+        "feedback": "VTP opera en 3 modos distintos: Servidor, Cliente y Transparente, cada uno con funciones específicas."
+      },
+      {
+        "id": 161,
+        "type": "multiple",
+        "question": "¿Cuáles son los tres modos de operación de VTP?",
+        "options": [
+          { "text": "Principal, Secundario, Auxiliar", "correct": false },
+          { "text": "Servidor, Cliente, Transparente", "correct": true },
+          { "text": "Activo, Pasivo, Neutral", "correct": false },
+          { "text": "Maestro, Esclavo, Independiente", "correct": false }
+        ],
+        "feedback": "Los tres modos de VTP son: Servidor (puede crear/modificar VLANs), Cliente (solo sincroniza) y Transparente (no procesa actualizaciones)."
+      },
+      {
+        "id": 162,
+        "type": "multiple",
+        "question": "¿Cuál es el modo por defecto de VTP?",
+        "options": [
+          { "text": "Cliente", "correct": false },
+          { "text": "Servidor", "correct": true },
+          { "text": "Transparente", "correct": false },
+          { "text": "Automático", "correct": false }
+        ],
+        "feedback": "El modo Servidor es el modo por defecto de VTP, desde el cual se pueden crear, eliminar o modificar VLANs."
+      },
+      {
+        "id": 163,
+        "type": "multiple",
+        "question": "¿Qué operaciones se pueden realizar desde el modo Servidor de VTP?",
+        "options": [
+          { "text": "Solo consultar VLANs existentes", "correct": false },
+          { "text": "Crear, eliminar o modificar VLANs", "correct": true },
+          { "text": "Solo sincronizar información", "correct": false },
+          { "text": "Únicamente reenviar mensajes", "correct": false }
+        ],
+        "feedback": "Desde el modo Servidor se pueden crear, eliminar o modificar VLANs, y su función es anunciar la configuración al resto de switches del dominio."
+      },
+      {
+        "id": 164,
+        "type": "multiple",
+        "question": "¿Qué limitaciones tiene el modo Cliente de VTP?",
+        "options": [
+          { "text": "No puede recibir actualizaciones", "correct": false },
+          {
+            "text": "No puede crear, eliminar o modificar VLANs",
+            "correct": true
+          },
+          { "text": "No puede conectarse a otros switches", "correct": false },
+          { "text": "No puede procesar tráfico de red", "correct": false }
+        ],
+        "feedback": "En modo Cliente no se pueden crear, eliminar o modificar VLANs, solo sincronizar información basándose en mensajes VTP recibidos de servidores."
+      },
+      {
+        "id": 165,
+        "type": "multiple",
+        "question": "¿Qué sucede con la información VLAN en un cliente VTP cuando se reinicia el switch?",
+        "options": [
+          { "text": "Se mantiene permanentemente", "correct": false },
+          { "text": "Se borra la información de VLAN", "correct": true },
+          { "text": "Se respalda automáticamente", "correct": false },
+          { "text": "Se transfiere a otro switch", "correct": false }
+        ],
+        "feedback": "Un cliente VTP solo guarda la información de VLAN mientras el switch está activado; un reinicio borra esta información."
+      },
+      {
+        "id": 166,
+        "type": "multiple",
+        "question": "¿Por qué se llama 'Transparente' al tercer modo de VTP?",
+        "options": [
+          { "text": "Porque es invisible en la red", "correct": false },
+          {
+            "text": "Porque no procesa las actualizaciones VTP, solo las reenvía",
+            "correct": true
+          },
+          { "text": "Porque no consume ancho de banda", "correct": false },
+          { "text": "Porque no requiere configuración", "correct": false }
+        ],
+        "feedback": "Se llama Transparente porque no procesa las actualizaciones VTP recibidas, tan solo las reenvía a otros switches del mismo dominio."
+      },
+      {
+        "id": 167,
+        "type": "multiple",
+        "question": "¿Cómo se pueden modificar las VLANs en modo Transparente?",
+        "options": [
+          { "text": "Desde cualquier servidor del dominio", "correct": false },
+          { "text": "Solo localmente en ese switch", "correct": true },
+          { "text": "Mediante mensajes VTP", "correct": false },
+          { "text": "No se pueden modificar", "correct": false }
+        ],
+        "feedback": "En modo Transparente, la información VLAN solo se puede modificar localmente en ese switch específico."
+      },
+      {
+        "id": 168,
+        "type": "multiple",
+        "question": "¿A través de qué VLAN se distribuyen por defecto los cambios VTP?",
+        "options": [
+          { "text": "VLAN 0", "correct": false },
+          { "text": "VLAN 1", "correct": true },
+          { "text": "VLAN 999", "correct": false },
+          { "text": "VLAN 4094", "correct": false }
+        ],
+        "feedback": "Los cambios VTP se distribuyen a través de los enlaces trunk por defecto usando la VLAN 1."
+      },
+      {
+        "id": 169,
+        "type": "multiple",
+        "question": "¿Con qué frecuencia envían información los dispositivos VTP versión 2 en modo transparente?",
+        "options": [
+          { "text": "Cada minuto", "correct": false },
+          { "text": "Cada 5 minutos", "correct": true },
+          { "text": "Cada 10 minutos", "correct": false },
+          { "text": "Solo cuando hay cambios", "correct": false }
+        ],
+        "feedback": "Los dispositivos que usan VTP versión 2 en modo transparente envían publicaciones VTP a otros dispositivos conectados cada 5 minutos."
+      },
+      {
+        "id": 170,
+        "type": "multiple",
+        "question": "¿Qué condición deben cumplir dos equipos para compartir información VTP?",
+        "options": [
+          { "text": "Tener la misma velocidad de puerto", "correct": false },
+          { "text": "Pertenecer al mismo dominio VTP", "correct": true },
+          { "text": "Usar el mismo modelo de switch", "correct": false },
+          { "text": "Estar en la misma ubicación física", "correct": false }
+        ],
+        "feedback": "Para que dos equipos puedan compartir información VTP sobre VLANs, es necesario que pertenezcan al mismo dominio VTP."
+      },
+      {
+        "id": 171,
+        "type": "multiple",
+        "question": "¿Qué sucede con los mensajes VTP de otro dominio?",
+        "options": [
+          { "text": "Se procesan normalmente", "correct": false },
+          { "text": "Los switches los descartan", "correct": true },
+          { "text": "Se almacenan para referencia", "correct": false },
+          { "text": "Se reenvían automáticamente", "correct": false }
+        ],
+        "feedback": "Los switches descartan automáticamente los mensajes VTP que provienen de otro dominio VTP diferente al suyo."
+      },
+      {
+        "id": 172,
+        "type": "multiple",
+        "question": "¿Qué controla las configuraciones VTP en una red?",
+        "options": [
+          { "text": "La dirección MAC del switch", "correct": false },
+          { "text": "Un número de revisión", "correct": true },
+          { "text": "La velocidad del enlace", "correct": false },
+          { "text": "El tiempo de configuración", "correct": false }
+        ],
+        "feedback": "Las configuraciones VTP en una red son controladas por un número de revisión que indica el nivel de actualización."
+      },
+      {
+        "id": 173,
+        "type": "multiple",
+        "question": "¿Cuándo se aplica una nueva configuración VTP?",
+        "options": [
+          { "text": "Siempre que se recibe", "correct": false },
+          {
+            "text": "Cuando el número de revisión recibido es más alto que el anterior",
+            "correct": true
+          },
+          { "text": "Solo si viene del servidor principal", "correct": false },
+          { "text": "Únicamente en horarios programados", "correct": false }
+        ],
+        "feedback": "Se aplica una nueva configuración VTP solo si el número de revisión de la actualización recibida es más alto que la revisión anterior."
+      },
+      {
+        "id": 174,
+        "type": "multiple",
+        "question": "¿Qué se debe hacer al añadir nuevos dispositivos a un dominio VTP?",
+        "options": [
+          { "text": "Reiniciar todos los switches", "correct": false },
+          {
+            "text": "Asegurar que tengan números de revisión más bajos",
+            "correct": true
+          },
+          { "text": "Cambiar el nombre del dominio", "correct": false },
+          { "text": "Desconectar temporalmente la red", "correct": false }
+        ],
+        "feedback": "Al añadir nuevos switches, hay que asegurar que tengan números de revisión más bajos que los configurados en la red para evitar conflictos."
+      },
+      {
+        "id": 175,
+        "type": "multiple",
+        "question": "¿Cómo se puede resetear el contador de revisión de un switch?",
+        "options": [
+          { "text": "Reiniciando el switch físicamente", "correct": false },
+          {
+            "text": "Eliminando el nombre del dominio del switch",
+            "correct": true
+          },
+          { "text": "Cambiando la configuración IP", "correct": false },
+          { "text": "Actualizando el firmware", "correct": false }
+        ],
+        "feedback": "Eliminar el nombre del dominio del switch vuelve a poner a cero su contador de revisión automáticamente."
+      },
+      {
+        "id": 176,
+        "type": "multiple",
+        "question": "¿Qué rango de VLANs aprende VTP?",
+        "options": [
+          { "text": "Todas las VLANs disponibles", "correct": false },
+          { "text": "VLAN de rango normal (ID 1 a 1005)", "correct": true },
+          { "text": "Solo VLANs de rango extendido", "correct": false },
+          { "text": "VLAN 1 a 4094", "correct": false }
+        ],
+        "feedback": "VTP solo aprende sobre las VLAN de rango normal con ID de VLAN del 1 al 1005; las VLANs de rango extendido no son admitidas."
+      },
+      {
+        "id": 177,
+        "type": "multiple",
+        "question": "¿Cómo se llama la base de datos donde VTP guarda las configuraciones VLAN?",
+        "options": [
+          { "text": "config.dat", "correct": false },
+          { "text": "vlan.dat", "correct": true },
+          { "text": "switch.dat", "correct": false },
+          { "text": "vtp.dat", "correct": false }
+        ],
+        "feedback": "VTP guarda las configuraciones de VLAN en la base de datos denominada vlan.dat."
+      },
+      {
+        "id": 178,
+        "type": "multiple",
+        "question": "¿Qué riesgo existe si VTP opera sin autenticación?",
+        "options": [
+          { "text": "Pérdida de velocidad", "correct": false },
+          {
+            "text": "Un atacante puede falsificar paquetes VTP para modificar VLANs",
+            "correct": true
+          },
+          { "text": "Incompatibilidad entre switches", "correct": false },
+          { "text": "Mayor consumo de recursos", "correct": false }
+        ],
+        "feedback": "Sin autenticación, un atacante puede falsificar fácilmente paquetes VTP para añadir, cambiar o borrar información sobre VLANs."
+      },
+      {
+        "id": 179,
+        "type": "multiple",
+        "question": "¿Qué método de autenticación se recomienda para VTP?",
+        "options": [
+          { "text": "Autenticación simple", "correct": false },
+          { "text": "Password con función hash MD5", "correct": true },
+          { "text": "Certificados digitales", "correct": false },
+          { "text": "Autenticación por IP", "correct": false }
+        ],
+        "feedback": "Se recomienda establecer un password para el dominio VTP y usarlo con la función hash MD5 para autenticar los paquetes VTP."
+      },
+      {
+        "id": 180,
+        "type": "multiple",
+        "question": "¿En qué tipos de tramas se pueden enviar los paquetes VTP?",
+        "options": [
+          { "text": "Solo en tramas Ethernet estándar", "correct": false },
+          {
+            "text": "En tramas Inter-Switch Link (ISL) y IEEE 802.1Q (dot1q)",
+            "correct": true
+          },
+          { "text": "Únicamente en tramas Token Ring", "correct": false },
+          { "text": "Solo en tramas ATM", "correct": false }
+        ],
+        "feedback": "Los paquetes VTP se pueden enviar tanto en tramas Inter-Switch Link (ISL) como en tramas IEEE 802.1Q (dot1q)."
+      },
+      {
+        "id": 181,
+        "type": "multiple",
+        "question": "¿Cuáles son las versiones del protocolo VTP disponibles?",
+        "options": [
+          { "text": "Versiones 1, 2 y 3", "correct": true },
+          { "text": "Solo versiones 1 y 2", "correct": false },
+          { "text": "Versiones 1, 2, 3 y 4", "correct": false },
+          { "text": "Solo versión 2", "correct": false }
+        ],
+        "feedback": "El protocolo VTP está disponible en tres versiones: 1, 2 y 3, cada una con mejoras y características adicionales."
+      },
+      {
+        "id": 182,
+        "type": "multiple",
+        "question": "¿Cuáles son los tipos de mensajes VTP?",
+        "options": [
+          { "text": "Solo mensajes de configuración", "correct": false },
+          {
+            "text": "Resumen de advertencias, Subconjunto de advertencias, Peticiones de advertencias y Mensajes de unión",
+            "correct": true
+          },
+          { "text": "Únicamente mensajes de sincronización", "correct": false },
+          { "text": "Solo mensajes de actualización", "correct": false }
+        ],
+        "feedback": "Los tipos de mensajes VTP incluyen: Resumen de advertencias, Subconjunto de advertencias, Peticiones de advertencias y Mensajes de unión VTP."
+      },
+      {
+        "id": 183,
+        "type": "multiple",
+        "question": "¿Cuántos bits tiene el número de configuración de revisión VTP?",
+        "options": [
+          { "text": "16 bits", "correct": false },
+          { "text": "32 bits", "correct": true },
+          { "text": "64 bits", "correct": false },
+          { "text": "8 bits", "correct": false }
+        ],
+        "feedback": "El número de configuración de revisión es un número de 32 bits que indica el nivel de revisión del paquete VTP."
+      },
+      {
+        "id": 184,
+        "type": "multiple",
+        "question": "¿Para qué sirve el número de configuración de revisión?",
+        "options": [
+          { "text": "Para identificar el switch emisor", "correct": false },
+          {
+            "text": "Para indicar el nivel de revisión del paquete VTP",
+            "correct": true
+          },
+          {
+            "text": "Para establecer la velocidad de transmisión",
+            "correct": false
+          },
+          { "text": "Para definir el tipo de VLAN", "correct": false }
+        ],
+        "feedback": "El número de configuración de revisión indica el nivel de revisión del paquete VTP y cada nodo VTP rastrea este número para determinar actualizaciones."
+      },
+      {
+        "id": 185,
+        "type": "multiple",
+        "question": "¿Qué debe haber como mínimo en un dominio VTP?",
+        "options": [
+          { "text": "Un cliente", "correct": false },
+          { "text": "Un servidor", "correct": true },
+          { "text": "Un switch transparente", "correct": false },
+          { "text": "Dos servidores", "correct": false }
+        ],
+        "feedback": "Debe haber al menos un servidor en el dominio VTP para poder crear, eliminar y modificar VLANs."
+      },
+      {
+        "id": 186,
+        "type": "multiple",
+        "question": "¿Cuándo es especialmente importante tener cuidado con VTP?",
+        "options": [
+          { "text": "Durante el mantenimiento rutinario", "correct": false },
+          {
+            "text": "Cuando hay cambios de topología lógicos o físicos",
+            "correct": true
+          },
+          {
+            "text": "Solo durante las actualizaciones de firmware",
+            "correct": false
+          },
+          { "text": "Únicamente en horarios de oficina", "correct": false }
+        ],
+        "feedback": "Se recomienda tener mucho cuidado al usar VTP cuando hay cambios de topología, ya sean lógicos o físicos, para evitar conflictos."
+      },
+      {
+        "id": 187,
+        "type": "multiple",
+        "question": "¿Qué ventaja proporciona VTP en la administración de redes?",
+        "options": [
+          {
+            "text": "Solo reduce el tiempo de configuración",
+            "correct": false
+          },
+          {
+            "text": "Minimiza problemas por configuraciones incorrectas e inconsistencias",
+            "correct": true
+          },
+          { "text": "Únicamente mejora la seguridad", "correct": false },
+          { "text": "Solo aumenta la velocidad de la red", "correct": false }
+        ],
+        "feedback": "VTP minimiza los problemas causados por configuraciones incorrectas e inconsistencias al centralizar la administración de VLANs."
+      },
+      {
+        "id": 188,
+        "type": "multiple",
+        "question": "¿Qué sucede cuando un dispositivo en modo cliente recibe una configuración VTP?",
+        "options": [
+          { "text": "La ignora completamente", "correct": false },
+          {
+            "text": "Automáticamente aplica la configuración recibida",
+            "correct": true
+          },
+          { "text": "La reenvía sin procesarla", "correct": false },
+          { "text": "Solicita confirmación al administrador", "correct": false }
+        ],
+        "feedback": "Los dispositivos en modo cliente automáticamente aplican la configuración VTP que reciben del dominio, sin posibilidad de crear VLANs propias."
+      },
+      {
+        "id": 189,
+        "type": "multiple",
+        "question": "¿Por qué nace el protocolo VTP como herramienta de administración?",
+        "options": [
+          {
+            "text": "Para mejorar la velocidad de transmisión",
+            "correct": false
+          },
+          {
+            "text": "Para redes de cierto tamaño donde la gestión manual se vuelve inabordable",
+            "correct": true
+          },
+          { "text": "Para reducir el costo de los equipos", "correct": false },
+          { "text": "Para mejorar la seguridad únicamente", "correct": false }
+        ],
+        "feedback": "VTP nace como herramienta de administración para redes de cierto tamaño, donde la gestión manual de VLANs se vuelve inabordable."
+      },
+      {
+        "id": 190,
+        "type": "multiple",
+        "question": "¿Qué incluye la cabecera VTP en todos los paquetes?",
+        "options": [
+          { "text": "Solo la versión del protocolo", "correct": false },
+          {
+            "text": "Versión del protocolo, tipos de mensaje, longitud y nombre del dominio",
+            "correct": true
+          },
+          { "text": "Únicamente información de VLANs", "correct": false },
+          { "text": "Solo datos de configuración", "correct": false }
+        ],
+        "feedback": "Todos los paquetes VTP contienen: versión del protocolo, tipos de mensaje VTP, longitud del dominio de control y nombre del dominio de control."
+      },
+      {
+        "id": 191,
+        "type": "multiple",
+        "question": "¿Qué diferencia hay entre encapsulación ISL y dot1q para VTP?",
+        "options": [
+          { "text": "No hay diferencias", "correct": false },
+          {
+            "text": "En dot1q se sustituyen la cabecera ISL y CRC por etiquetas dot1q",
+            "correct": true
+          },
+          { "text": "ISL es más seguro", "correct": false },
+          { "text": "dot1q es más rápido", "correct": false }
+        ],
+        "feedback": "En paquetes VTP encapsulados en dot1q, tanto la cabecera ISL como el CRC son sustituidos por etiquetas dot1q."
+      },
+      {
+        "id": 192,
+        "type": "multiple",
+        "question": "¿Para qué tipo de enlaces es vital la autenticación VTP?",
+        "options": [
+          { "text": "Solo para enlaces de acceso", "correct": false },
+          { "text": "Para los enlaces troncales de VLAN", "correct": true },
+          { "text": "Únicamente para enlaces inalámbricos", "correct": false },
+          { "text": "Solo para enlaces de larga distancia", "correct": false }
+        ],
+        "feedback": "La autenticación VTP resulta de vital importancia especialmente para los enlaces troncales de VLAN donde se transporta información crítica."
+      },
+      {
+        "id": 193,
+        "type": "multiple",
+        "question": "¿Qué rastrea cada nodo VTP?",
+        "options": [
+          { "text": "Solo las direcciones MAC", "correct": false },
+          { "text": "El número de configuración de revisión", "correct": true },
+          { "text": "Únicamente las VLANs activas", "correct": false },
+          { "text": "Solo la información del servidor", "correct": false }
+        ],
+        "feedback": "Cada nodo VTP rastrea el número de configuración de revisión para determinar si debe aplicar nuevas configuraciones recibidas."
+      },
+      {
+        "id": 194,
+        "type": "multiple",
+        "question": "¿Qué herramientas existen para atacar VTP sin autenticación?",
+        "options": [
+          { "text": "No existen herramientas disponibles", "correct": false },
+          { "text": "Herramientas disponibles gratuitamente", "correct": true },
+          {
+            "text": "Solo herramientas comerciales costosas",
+            "correct": false
+          },
+          {
+            "text": "Únicamente herramientas gubernamentales",
+            "correct": false
+          }
+        ],
+        "feedback": "Existen herramientas disponibles gratuitamente que pueden falsificar paquetes VTP, razón por la cual se recomienda usar autenticación."
+      },
+      {
+        "id": 195,
+        "type": "multiple",
+        "question": "¿Cómo forma una VLAN una red conmutada?",
+        "options": [
+          { "text": "Solo por ubicación física de usuarios", "correct": false },
+          {
+            "text": "Lógicamente segmentada por funciones, equipos o aplicaciones sin considerar ubicación física",
+            "correct": true
+          },
+          { "text": "Únicamente por tipo de dispositivo", "correct": false },
+          { "text": "Solo por velocidad de conexión", "correct": false }
+        ],
+        "feedback": "Una VLAN forma una red conmutada lógicamente segmentada por funciones, equipos de proyectos o aplicaciones, sin tener en cuenta la ubicación física de los usuarios."
+      },
+      {
+        "id": 196,
+        "type": "multiple",
+        "question": "¿Qué sucede con los broadcasts entre puertos de la misma VLAN?",
+        "options": [
+          { "text": "No se comparten nunca", "correct": false },
+          {
+            "text": "Los puertos de la misma VLAN comparten broadcasts",
+            "correct": true
+          },
+          {
+            "text": "Solo se comparten en horarios específicos",
+            "correct": false
+          },
+          { "text": "Se bloquean automáticamente", "correct": false }
+        ],
+        "feedback": "Los puertos asignados a la misma VLAN comparten broadcasts, mientras que los puertos que no pertenecen a esa VLAN no comparten esos broadcasts."
+      },
+      {
+        "id": 197,
+        "type": "multiple",
+        "question": "¿Cuáles son los tres métodos de implementación de VLAN para asignar puertos?",
+        "options": [
+          { "text": "Manual, automático, híbrido", "correct": false },
+          { "text": "De puerto central, estática, dinámica", "correct": true },
+          { "text": "Local, remota, distribuida", "correct": false },
+          { "text": "Simple, intermedia, avanzada", "correct": false }
+        ],
+        "feedback": "Los tres métodos de implementación de VLAN son: de puerto central, estática y dinámica, cada uno con características específicas de asignación."
+      },
+      {
+        "id": 198,
+        "type": "multiple",
+        "question": "¿Cómo se asignan los identificadores en las VLAN de puerto central?",
+        "options": [
+          {
+            "text": "Cada puerto tiene un identificador único",
+            "correct": false
+          },
+          {
+            "text": "Todos los nodos en puertos de la misma VLAN reciben el mismo identificador",
+            "correct": true
+          },
+          {
+            "text": "Los identificadores se asignan aleatoriamente",
+            "correct": false
+          },
+          {
+            "text": "Solo el primer puerto tiene identificador",
+            "correct": false
+          }
+        ],
+        "feedback": "En las VLAN de puerto central, a todos los nodos conectados a puertos en la misma VLAN se les asigna el mismo identificador de VLAN."
+      },
+      {
+        "id": 199,
+        "type": "multiple",
+        "question": "¿Por qué las VLAN de puerto central facilitan el trabajo del administrador?",
+        "options": [
+          { "text": "Solo porque son más rápidas", "correct": false },
+          {
+            "text": "Los usuarios se asignan por puerto, son de fácil administración y proporcionan mayor seguridad",
+            "correct": true
+          },
+          {
+            "text": "Únicamente porque consumen menos energía",
+            "correct": false
+          },
+          { "text": "Solo porque son más económicas", "correct": false }
+        ],
+        "feedback": "Las VLAN de puerto central facilitan el trabajo porque los usuarios se asignan por puerto, son de fácil administración, proporcionan mayor seguridad y los paquetes no se filtran a otros dominios."
+      },
+      {
+        "id": 200,
+        "type": "multiple",
+        "question": "¿Cómo mantienen su configuración las VLAN estáticas?",
+        "options": [
+          { "text": "Cambian automáticamente cada día", "correct": false },
+          {
+            "text": "Mantienen sus configuraciones asignadas hasta que se cambien manualmente",
+            "correct": true
+          },
+          { "text": "Se resetean con cada reinicio", "correct": false },
+          { "text": "Solo duran una sesión de trabajo", "correct": false }
+        ],
+        "feedback": "Las VLAN estáticas son puertos que se asignan estáticamente a una VLAN y mantienen sus configuraciones asignadas hasta que el administrador las cambie."
+      },
+      {
+        "id": 201,
+        "type": "multiple",
+        "question": "¿En qué tipo de redes funcionan bien las VLAN estáticas?",
+        "options": [
+          {
+            "text": "En redes con movimiento constante de usuarios",
+            "correct": false
+          },
+          {
+            "text": "En redes donde el movimiento está controlado y administrado",
+            "correct": true
+          },
+          { "text": "Solo en redes temporales", "correct": false },
+          { "text": "Únicamente en redes de prueba", "correct": false }
+        ],
+        "feedback": "Las VLAN estáticas funcionan bien en redes donde el movimiento se encuentra controlado y administrado, siendo seguras y de fácil configuración."
+      },
+      {
+        "id": 202,
+        "type": "multiple",
+        "question": "¿En qué se basan las funciones de las VLAN dinámicas?",
+        "options": [
+          { "text": "Solo en la ubicación física", "correct": false },
+          {
+            "text": "En direcciones MAC, direccionamiento lógico o tipo de protocolo",
+            "correct": true
+          },
+          { "text": "Únicamente en la hora del día", "correct": false },
+          { "text": "Solo en el nombre del usuario", "correct": false }
+        ],
+        "feedback": "Las funciones de las VLAN dinámicas se basan en las direcciones MAC, direccionamiento lógico o tipo de protocolo de los paquetes de datos."
+      },
+      {
+        "id": 203,
+        "type": "multiple",
+        "question": "¿Qué verifica el switch cuando una estación se conecta a un puerto no asignado en VLAN dinámica?",
+        "options": [
+          { "text": "Solo la velocidad de conexión", "correct": false },
+          {
+            "text": "La entrada de direcciones MAC en la base de datos de administración",
+            "correct": true
+          },
+          { "text": "Únicamente el tipo de cable", "correct": false },
+          { "text": "Solo el sistema operativo", "correct": false }
+        ],
+        "feedback": "El switch verifica la entrada de direcciones MAC en la base de datos de administración de la VLAN y configura dinámicamente el puerto con la configuración correspondiente."
+      },
+      {
+        "id": 204,
+        "type": "multiple",
+        "question": "¿Cuáles son los principales beneficios de las VLAN dinámicas?",
+        "options": [
+          { "text": "Solo mayor velocidad", "correct": false },
+          {
+            "text": "Menor administración al agregar usuarios y notificación centralizada de usuarios no reconocidos",
+            "correct": true
+          },
+          { "text": "Únicamente mejor seguridad", "correct": false },
+          { "text": "Solo reducción de costos", "correct": false }
+        ],
+        "feedback": "Los principales beneficios son menor necesidad de administración al agregar usuarios y notificación centralizada cuando se agrega un usuario no reconocido."
+      },
+      {
+        "id": 205,
+        "type": "multiple",
+        "question": "¿Qué examina la técnica de filtrado de trama?",
+        "options": [
+          { "text": "Solo el tamaño de las tramas", "correct": false },
+          {
+            "text": "Información específica acerca de cada trama",
+            "correct": true
+          },
+          {
+            "text": "Únicamente la velocidad de transmisión",
+            "correct": false
+          },
+          { "text": "Solo el origen de las tramas", "correct": false }
+        ],
+        "feedback": "El filtrado de trama es una técnica que examina información específica acerca de cada trama, similar al concepto utilizado por los routers."
+      },
+      {
+        "id": 206,
+        "type": "multiple",
+        "question": "¿Según qué puede agrupar usuarios un switch LAN sofisticado con filtrado de trama?",
+        "options": [
+          { "text": "Solo por ubicación geográfica", "correct": false },
+          {
+            "text": "Por direcciones MAC, tipos de protocolo de capa de red o tipos de aplicación",
+            "correct": true
+          },
+          { "text": "Únicamente por hora de conexión", "correct": false },
+          { "text": "Solo por nombre de usuario", "correct": false }
+        ],
+        "feedback": "Según la sofisticación del switch LAN, puede agrupar usuarios según direcciones MAC, tipos de protocolo de capa de red o tipos de aplicación."
+      },
+      {
+        "id": 207,
+        "type": "multiple",
+        "question": "¿Qué proporciona el desarrollo de una tabla de filtrado para cada switch?",
+        "options": [
+          { "text": "Solo mayor velocidad", "correct": false },
+          {
+            "text": "Un alto nivel de control administrativo",
+            "correct": true
+          },
+          { "text": "Únicamente reducción de costos", "correct": false },
+          { "text": "Solo compatibilidad mejorada", "correct": false }
+        ],
+        "feedback": "Se desarrolla una tabla de filtrado para cada switch, lo que proporciona un alto nivel de control administrativo porque puede examinar muchos atributos de cada trama."
+      },
+      {
+        "id": 208,
+        "type": "multiple",
+        "question": "¿Qué hace la identificación de tramas (etiquetado)?",
+        "options": [
+          { "text": "Elimina información de las tramas", "correct": false },
+          {
+            "text": "Asigna de forma exclusiva un identificador definido por el usuario a cada trama",
+            "correct": true
+          },
+          { "text": "Comprime el contenido de las tramas", "correct": false },
+          { "text": "Cifra la información de las tramas", "correct": false }
+        ],
+        "feedback": "La identificación de tramas (etiquetado de tramas) asigna de forma exclusiva un identificador definido por el usuario a cada trama."
+      },
+      {
+        "id": 209,
+        "type": "multiple",
+        "question": "¿Por qué eligió el grupo de estándares IEEE la técnica de etiquetado de tramas?",
+        "options": [
+          { "text": "Por su bajo costo únicamente", "correct": false },
+          { "text": "Debido a su escalabilidad", "correct": true },
+          { "text": "Solo por simplicidad", "correct": false },
+          { "text": "Únicamente por velocidad", "correct": false }
+        ],
+        "feedback": "Esta técnica fue elegida por el grupo de estándares de IEEE debido a su escalabilidad en redes grandes."
+      },
+      {
+        "id": 210,
+        "type": "multiple",
+        "question": "¿Dónde coloca el identificador la identificación de trama de VLAN?",
+        "options": [
+          { "text": "Al final de cada trama", "correct": false },
+          { "text": "En el encabezado de cada trama", "correct": true },
+          { "text": "En una trama separada", "correct": false },
+          { "text": "Solo en tramas especiales", "correct": false }
+        ],
+        "feedback": "Este enfoque coloca un identificador exclusivo en el encabezado de cada trama a medida que se envía por todo el backbone de la red."
+      },
+      {
+        "id": 211,
+        "type": "multiple",
+        "question": "¿Quién comprende y examina el identificador de VLAN en el backbone?",
+        "options": [
+          { "text": "Solo los switches centrales", "correct": false },
+          {
+            "text": "Cada switch antes de enviar transmisiones",
+            "correct": true
+          },
+          { "text": "Únicamente los routers", "correct": false },
+          { "text": "Solo los dispositivos finales", "correct": false }
+        ],
+        "feedback": "El identificador es comprendido y examinado por cada switch antes de enviar cualquier broadcast o transmisión a otros switches, routers o dispositivos."
+      },
+      {
+        "id": 212,
+        "type": "multiple",
+        "question": "¿Qué sucede con el identificador cuando la trama sale del backbone?",
+        "options": [
+          { "text": "Permanece en la trama", "correct": false },
+          {
+            "text": "El switch lo elimina antes de transmitir a la estación final",
+            "correct": true
+          },
+          { "text": "Se convierte en parte de los datos", "correct": false },
+          { "text": "Se transfiere a otra trama", "correct": false }
+        ],
+        "feedback": "Cuando la trama sale del backbone de la red, el switch elimina el identificador antes de que la trama se transmita a la estación final objetivo."
+      },
+      {
+        "id": 213,
+        "type": "multiple",
+        "question": "¿Cuántos bits tiene el número de configuración de revisión VTP?",
+        "options": [
+          { "text": "16 bits", "correct": false },
+          { "text": "32 bits", "correct": true },
+          { "text": "64 bits", "correct": false },
+          { "text": "8 bits", "correct": false }
+        ],
+        "feedback": "El número de configuración de revisión es un número de 32 bits que indica el nivel de revisión del paquete VTP."
+      },
+      {
+        "id": 214,
+        "type": "multiple",
+        "question": "¿Cuándo se incrementa el número de configuración de revisión?",
+        "options": [
+          { "text": "Cada minuto automáticamente", "correct": false },
+          {
+            "text": "Cada vez que hay un cambio en la configuración de VLAN en el dominio",
+            "correct": true
+          },
+          { "text": "Solo cuando se reinicia el switch", "correct": false },
+          { "text": "Únicamente al final del día", "correct": false }
+        ],
+        "feedback": "Cada vez que hay un cambio en la configuración de la VLAN en algún dispositivo VTP del dominio, el número de configuración de revisión se incrementa en una unidad."
+      },
+      {
+        "id": 215,
+        "type": "multiple",
+        "question": "¿Cómo se puede resetear el número de configuración de revisión?",
+        "options": [
+          { "text": "Reiniciando todos los switches", "correct": false },
+          {
+            "text": "Cambiando el nombre del dominio VTP y después restablecerlo",
+            "correct": true
+          },
+          { "text": "Desconectando la alimentación", "correct": false },
+          { "text": "Actualizando el firmware", "correct": false }
+        ],
+        "feedback": "Para resetear el número de configuración de revisión, basta con cambiar el nombre del dominio VTP y después restablecerlo."
+      },
+      {
+        "id": 216,
+        "type": "multiple",
+        "question": "¿Qué informan las publicaciones resumidas que emiten los switches Catalyst?",
+        "options": [
+          { "text": "Solo la velocidad de los puertos", "correct": false },
+          {
+            "text": "El nombre actual del dominio VTP y su número de revisión",
+            "correct": true
+          },
+          { "text": "Únicamente las direcciones MAC", "correct": false },
+          { "text": "Solo la configuración IP", "correct": false }
+        ],
+        "feedback": "Los switches Catalyst emiten publicaciones resumidas que informan a los demás switches del nombre actual del dominio VTP, así como de su número de revisión."
+      },
+      {
+        "id": 217,
+        "type": "multiple",
+        "question": "¿Qué sucede cuando un switch recibe un paquete de resumen con nombre de dominio diferente?",
+        "options": [
+          { "text": "Lo procesa normalmente", "correct": false },
+          { "text": "Ignora el paquete", "correct": true },
+          { "text": "Lo almacena para referencia", "correct": false },
+          { "text": "Cambia su propio dominio", "correct": false }
+        ],
+        "feedback": "Cuando un switch recibe un paquete de resumen, compara su nombre de dominio VTP con el recibido. Si es diferente, ignora el paquete."
+      },
+      {
+        "id": 218,
+        "type": "multiple",
+        "question": "¿Cuándo envía un switch una solicitud de publicación?",
+        "options": [
+          { "text": "Solo al iniciar sesión", "correct": false },
+          {
+            "text": "Cuando recibe un número de revisión mayor que el suyo",
+            "correct": true
+          },
+          { "text": "Únicamente por horario programado", "correct": false },
+          { "text": "Solo cuando hay errores", "correct": false }
+        ],
+        "feedback": "Si el número de revisión recibido es mayor que el propio, el switch envía una solicitud de publicación ya que está desactualizado."
+      },
+      {
+        "id": 219,
+        "type": "multiple",
+        "question": "¿Qué indica el campo Updater Identity en los paquetes de resumen?",
+        "options": [
+          { "text": "El número de usuarios conectados", "correct": false },
+          {
+            "text": "La dirección IP del último switch que incrementó el número de revisión",
+            "correct": true
+          },
+          { "text": "La velocidad de la conexión", "correct": false },
+          { "text": "El tipo de switch", "correct": false }
+        ],
+        "feedback": "El campo Updater Identity es la dirección IP del último switch que incrementó el número de configuración de revisión."
+      },
+      {
+        "id": 220,
+        "type": "multiple",
+        "question": "¿Cuándo se envían las publicaciones de subconjunto?",
+        "options": [
+          { "text": "Solo al inicio del día", "correct": false },
+          {
+            "text": "Después de cambiar la configuración VLAN y enviar publicación de resumen",
+            "correct": true
+          },
+          { "text": "Únicamente cuando hay errores", "correct": false },
+          { "text": "Solo cuando se solicita manualmente", "correct": false }
+        ],
+        "feedback": "Cuando se cambia la configuración VLAN, el switch incrementa el número de revisión y envía una publicación de resumen, seguida por publicaciones de subconjunto."
+      },
+      {
+        "id": 221,
+        "type": "multiple",
+        "question": "¿Qué contienen las publicaciones de subconjunto?",
+        "options": [
+          {
+            "text": "Solo información de configuración general",
+            "correct": false
+          },
+          {
+            "text": "Una lista de información referente a VLANs",
+            "correct": true
+          },
+          { "text": "Únicamente datos de rendimiento", "correct": false },
+          { "text": "Solo información de seguridad", "correct": false }
+        ],
+        "feedback": "Las publicaciones de subconjunto contienen una lista de información referente a VLANs. Si hay varias VLANs, se puede requerir más de una publicación."
+      },
+      {
+        "id": 222,
+        "type": "multiple",
+        "question": "¿En qué situaciones necesita un switch solicitar publicaciones VTP?",
+        "options": [
+          {
+            "text": "Solo cuando hay problemas de conectividad",
+            "correct": false
+          },
+          {
+            "text": "Cuando ha sido reseteado, cambió el dominio VTP o recibió número de revisión mayor",
+            "correct": true
+          },
+          { "text": "Únicamente en horarios programados", "correct": false },
+          {
+            "text": "Solo cuando lo solicita el administrador",
+            "correct": false
+          }
+        ],
+        "feedback": "Un switch solicita publicaciones VTP cuando: ha sido reseteado, el nombre del dominio VTP ha cambiado, o recibió una publicación con número de revisión mayor."
+      },
+      {
+        "id": 223,
+        "type": "multiple",
+        "question": "¿Qué es el VTP Pruning (poda)?",
+        "options": [
+          { "text": "Un método de cifrado", "correct": false },
+          {
+            "text": "Una técnica para filtrar tráfico innecesario",
+            "correct": true
+          },
+          { "text": "Un protocolo de enrutamiento", "correct": false },
+          { "text": "Una forma de comprimir datos", "correct": false }
+        ],
+        "feedback": "El VTP Pruning (poda) se usa para filtrar tráfico innecesario, evitando que broadcasts lleguen a switches que no tienen puertos en esa VLAN."
+      },
+      {
+        "id": 224,
+        "type": "multiple",
+        "question": "¿Qué problema resuelve el VTP Pruning?",
+        "options": [
+          { "text": "Solo problemas de velocidad", "correct": false },
+          {
+            "text": "Que broadcasts lleguen a switches sin puertos en esa VLAN",
+            "correct": true
+          },
+          { "text": "Únicamente problemas de seguridad", "correct": false },
+          { "text": "Solo problemas de configuración", "correct": false }
+        ],
+        "feedback": "El VTP Pruning evita que tráfico broadcast llegue a switches que no tienen puertos asignados a esa VLAN, eliminando tráfico innecesario."
+      },
+      {
+        "id": 225,
+        "type": "multiple",
+        "question": "¿Cuándo está habilitada la poda VTP en un dominio?",
+        "options": [
+          { "text": "Solo en switches específicos", "correct": false },
+          {
+            "text": "Cuando se habilita en un servidor VTP, está para todo el dominio",
+            "correct": true
+          },
+          { "text": "Únicamente en horarios determinados", "correct": false },
+          { "text": "Solo en switches cliente", "correct": false }
+        ],
+        "feedback": "Cuando está habilitada la poda VTP en un servidor VTP, está habilitada para todo el dominio, no solo para switches individuales."
+      },
+      {
+        "id": 226,
+        "type": "multiple",
+        "question": "¿Qué VLANs NO pueden ser podadas (filtradas)?",
+        "options": [
+          { "text": "VLAN 1-10", "correct": false },
+          { "text": "VLANs 1002-1005", "correct": true },
+          { "text": "VLAN 999-1000", "correct": false },
+          { "text": "Todas las VLANs pueden ser podadas", "correct": false }
+        ],
+        "feedback": "El tráfico de las VLANs 1002-1005 no puede ser podado (filtrado) por el sistema de VTP Pruning."
+      },
+      {
+        "id": 227,
+        "type": "multiple",
+        "question": "¿Cuándo se recomienda el modo servidor VTP?",
+        "options": [
+          { "text": "Solo en redes experimentales", "correct": false },
+          {
+            "text": "Para redes de pequeña escala con información de VLANs pequeña",
+            "correct": true
+          },
+          { "text": "Únicamente en redes de alta velocidad", "correct": false },
+          { "text": "Solo en redes temporales", "correct": false }
+        ],
+        "feedback": "Se recomienda el modo servidor VTP para redes de pequeña escala donde la información de VLANs es pequeña y de fácil almacenamiento en las NVRAMs."
+      },
+      {
+        "id": 228,
+        "type": "multiple",
+        "question": "¿En qué debe basarse el administrador para elegir switches servidores en redes grandes?",
+        "options": [
+          { "text": "Solo en la ubicación física", "correct": false },
+          { "text": "En las capacidades de los switches", "correct": true },
+          { "text": "Únicamente en el costo", "correct": false },
+          { "text": "Solo en la marca del fabricante", "correct": false }
+        ],
+        "feedback": "En redes de mayor tamaño, el administrador debe elegir qué switches actúan como servidores basándose en las capacidades de estos (los mejor equipados serán servidores)."
+      },
+      {
+        "id": 229,
+        "type": "multiple",
+        "question": "¿Qué comando se usa para seleccionar el modo de creación y edición de VLANs?",
+        "options": [
+          { "text": "Switch#configure vlan", "correct": false },
+          { "text": "Switch#vlan database", "correct": true },
+          { "text": "Switch#setup vlan", "correct": false },
+          { "text": "Switch#edit vlan", "correct": false }
+        ],
+        "feedback": "El comando 'Switch#vlan database' selecciona el modo de creación y edición de VLANs en el switch."
+      },
+      {
+        "id": 230,
+        "type": "multiple",
+        "question": "¿Qué comando configura el nombre del dominio VTP?",
+        "options": [
+          { "text": "Switch(vlan)#domain nombre-dominio", "correct": false },
+          { "text": "Switch(vlan)#vtp domain nombre-dominio", "correct": true },
+          {
+            "text": "Switch(vlan)#set domain nombre-dominio",
+            "correct": false
+          },
+          {
+            "text": "Switch(vlan)#create domain nombre-dominio",
+            "correct": false
+          }
+        ],
+        "feedback": "El comando 'Switch(vlan)#vtp domain nombre-dominio' establece el nombre del dominio VTP en el switch."
+      },
+      {
+        "id": 231,
+        "type": "multiple",
+        "question": "¿Qué comando permite verificar la configuración del dominio VTP?",
+        "options": [
+          { "text": "Switch#check vtp status", "correct": false },
+          { "text": "Switch#show vtp status", "correct": true },
+          { "text": "Switch#display vtp status", "correct": false },
+          { "text": "Switch#view vtp status", "correct": false }
+        ],
+        "feedback": "El comando 'Switch#show vtp status' permite verificar la configuración del dominio VTP y su estado actual."
+      },
+      {
+        "id": 232,
+        "type": "multiple",
+        "question": "¿Qué comando habilita la poda en el dominio VTP?",
+        "options": [
+          { "text": "Switch(vlan)#enable pruning", "correct": false },
+          { "text": "Switch(vlan)#vtp pruning", "correct": true },
+          { "text": "Switch(vlan)#set pruning", "correct": false },
+          { "text": "Switch(vlan)#activate pruning", "correct": false }
+        ],
+        "feedback": "El comando 'Switch(vlan)#vtp pruning' permite habilitar la función de poda en el dominio VTP."
+      },
+      {
+        "id": 233,
+        "type": "multiple",
+        "question": "¿Qué comando configura un puerto en modo trunk?",
+        "options": [
+          { "text": "Switch(config-if)#set trunk mode", "correct": false },
+          {
+            "text": "Switch(config-if)#switchport mode trunk",
+            "correct": true
+          },
+          { "text": "Switch(config-if)#enable trunk", "correct": false },
+          { "text": "Switch(config-if)#trunk activate", "correct": false }
+        ],
+        "feedback": "El comando 'Switch(config-if)#switchport mode trunk' configura un puerto del switch en modo trunk para transportar múltiples VLANs."
+      },
+      {
+        "id": 234,
+        "type": "multiple",
+        "question": "¿Qué comando configura la VLAN predeterminada en un trunk?",
+        "options": [
+          {
+            "text": "Switch(config-if)#trunk default vlan 2",
+            "correct": false
+          },
+          {
+            "text": "Switch(config-if)#switchport trunk native vlan 2",
+            "correct": true
+          },
+          { "text": "Switch(config-if)#set native vlan 2", "correct": false },
+          { "text": "Switch(config-if)#default vlan 2", "correct": false }
+        ],
+        "feedback": "El comando 'Switch(config-if)#switchport trunk native vlan 2' configura la VLAN 2 como VLAN nativa (predeterminada) para el trunk."
+      }
+    ]
+  }
+}
