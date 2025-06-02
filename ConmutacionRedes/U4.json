@@ -1,0 +1,832 @@
+{
+  "quiz": {
+    "title": "Clasificación de Redes Inalámbricas",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cuál es el término en inglés para las redes inalámbricas?",
+        "options": [
+          { "text": "Network Wireless", "correct": false },
+          { "text": "Wireless Network", "correct": true },
+          { "text": "Radio Network", "correct": false },
+          { "text": "Infrared Network", "correct": false }
+        ],
+        "feedback": "Wireless Network es la traducción correcta al inglés de redes inalámbricas."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "Las redes inalámbricas se basan principalmente en:",
+        "options": [
+          { "text": "Cables de fibra óptica", "correct": false },
+          {
+            "text": "Ondas electromagnéticas de radio o luz infrarroja",
+            "correct": true
+          },
+          { "text": "Cables coaxiales", "correct": false },
+          { "text": "Señales eléctricas directas", "correct": false }
+        ],
+        "feedback": "Las redes inalámbricas utilizan ondas electromagnéticas de radio o luz infrarroja para la transmisión de datos sin cables físicos."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Cuáles son las cuatro categorías principales de redes inalámbricas según su área geográfica?",
+        "options": [
+          { "text": "WPAN, WLAN, WMAN, WWAN", "correct": true },
+          { "text": "WiFi, Bluetooth, WiMax, 4G", "correct": false },
+          { "text": "IEEE, TCP/IP, HTTP, FTP", "correct": false },
+          { "text": "DSL, Cable, Fibra, Satelital", "correct": false }
+        ],
+        "feedback": "Las cuatro categorías principales son WPAN (Personal), WLAN (Local), WMAN (Metropolitana) y WWAN (Amplia)."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Qué significa WiFi en inglés?",
+        "options": [
+          { "text": "Wireless Internet", "correct": false },
+          { "text": "Wide Fidelity", "correct": false },
+          { "text": "Wireless Fidelity", "correct": true },
+          { "text": "Web Interface", "correct": false }
+        ],
+        "feedback": "WiFi significa Wireless Fidelity, término que hace referencia a la fidelidad de las comunicaciones inalámbricas."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "Los estándares WiFi están basados en las especificaciones:",
+        "options": [
+          { "text": "IEEE 802.3", "correct": false },
+          { "text": "IEEE 802.11", "correct": true },
+          { "text": "IEEE 802.15", "correct": false },
+          { "text": "IEEE 802.16", "correct": false }
+        ],
+        "feedback": "Los estándares WiFi se basan en las especificaciones IEEE 802.11 y sus variantes."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "Según la tabla, ¿cuál es la velocidad máxima teórica del estándar 802.11ax?",
+        "options": [
+          { "text": "866.7 Mbps", "correct": false },
+          { "text": "1.73 Gbps", "correct": false },
+          { "text": "2.4 Gbps", "correct": true },
+          { "text": "450 Mbps", "correct": false }
+        ],
+        "feedback": "El estándar 802.11ax (WiFi 6) puede alcanzar velocidades teóricas de hasta 2.4 Gbps."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuál es el área de cobertura típica de las redes WiFi mencionada en el texto?",
+        "options": [
+          { "text": "50 metros a la redonda", "correct": false },
+          { "text": "200 metros a la redonda", "correct": false },
+          { "text": "100 metros a la redonda (300 pies)", "correct": true },
+          { "text": "500 metros a la redonda", "correct": false }
+        ],
+        "feedback": "El área de cobertura típica de WiFi es de aproximadamente 100 metros a la redonda o 300 pies."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué tipo de red inalámbrica es mayormente utilizada en servicios residenciales?",
+        "options": [
+          { "text": "WPAN", "correct": false },
+          { "text": "WLAN", "correct": true },
+          { "text": "WMAN", "correct": false },
+          { "text": "WWAN", "correct": false }
+        ],
+        "feedback": "Las WLAN (Wireless Local Area Network) son las más utilizadas en servicios residenciales."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Cuáles son los dos métodos de señalización mencionados para redes inalámbricas?",
+        "options": [
+          { "text": "TCP y UDP", "correct": false },
+          { "text": "HTTP y HTTPS", "correct": false },
+          { "text": "DSSS y OFDM", "correct": true },
+          { "text": "WEP y WPA", "correct": false }
+        ],
+        "feedback": "DSSS (Direct Sequence Spread Spectrum) y OFDM (Orthogonal Frequency Division Multiplexing) son los dos métodos principales de señalización."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "Según la tabla, ¿cuál estándar opera únicamente en la banda de 2.4 GHz?",
+        "options": [
+          { "text": "802.11ax", "correct": false },
+          { "text": "802.11ac wave2", "correct": false },
+          { "text": "802.11n", "correct": false },
+          { "text": "802.11b", "correct": true }
+        ],
+        "feedback": "El estándar 802.11b opera únicamente en la banda de frecuencia de 2.4 GHz."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Qué factor afecta directamente la calidad y velocidad de las señales inalámbricas?",
+        "options": [
+          { "text": "El color del router", "correct": false },
+          {
+            "text": "Los materiales u obstáculos entre transmisor y receptor",
+            "correct": true
+          },
+          { "text": "La marca del dispositivo", "correct": false },
+          { "text": "El sistema operativo utilizado", "correct": false }
+        ],
+        "feedback": "Los materiales y obstáculos físicos entre el transmisor y receptor afectan significativamente la calidad de la señal inalámbrica."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Cuál es una de las principales preocupaciones de seguridad en redes inalámbricas mencionada en el texto?",
+        "options": [
+          { "text": "El consumo de energía", "correct": false },
+          { "text": "La velocidad de transmisión", "correct": false },
+          {
+            "text": "Que un intruso puede escuchar la red si los datos no están codificados",
+            "correct": true
+          },
+          { "text": "El costo de los equipos", "correct": false }
+        ],
+        "feedback": "La principal preocupación de seguridad es que los datos no codificados pueden ser interceptados por intrusos."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "Según la tabla, ¿cuál es la tecnología MIMO utilizada por el estándar 802.11n?",
+        "options": [
+          { "text": "Usuario múltiple (MIMO-MU)", "correct": false },
+          { "text": "Un solo usuario (SU-MIMO)", "correct": true },
+          { "text": "No se aplica", "correct": false },
+          { "text": "MIMO tradicional", "correct": false }
+        ],
+        "feedback": "El estándar 802.11n utiliza tecnología MIMO de un solo usuario (SU-MIMO)."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Qué dispositivo es necesario para redistribuir la señal WiFi de manera inalámbrica?",
+        "options": [
+          { "text": "Switch", "correct": false },
+          { "text": "Hub", "correct": false },
+          { "text": "Router o Access Point con antena", "correct": true },
+          { "text": "Módem únicamente", "correct": false }
+        ],
+        "feedback": "Se necesita un router o access point con antena para redistribuir la señal WiFi de manera inalámbrica."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad máxima del estándar 802.11g según la tabla?",
+        "options": [
+          { "text": "11 Mbps", "correct": false },
+          { "text": "54 Mbps", "correct": true },
+          { "text": "450 Mbps", "correct": false },
+          { "text": "866.7 Mbps", "correct": false }
+        ],
+        "feedback": "El estándar 802.11g tiene una velocidad máxima de 54 Mbps."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Cuál es la principal diferencia entre los estándares 802.11ac wave1 y wave2?",
+        "options": [
+          { "text": "La frecuencia de operación", "correct": false },
+          {
+            "text": "Wave2 soporta usuario múltiple (MIMO-MU) y wave1 solo un usuario (SU-MIMO)",
+            "correct": true
+          },
+          { "text": "El ancho del canal", "correct": false },
+          { "text": "La velocidad es la misma", "correct": false }
+        ],
+        "feedback": "La principal diferencia es que wave2 soporta MIMO multiusuario mientras que wave1 solo soporta MIMO de un usuario."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Qué estándar tiene la menor velocidad de transmisión según la tabla?",
+        "options": [
+          { "text": "802.11b", "correct": false },
+          { "text": "802.11g", "correct": false },
+          { "text": "802.11n", "correct": false },
+          { "text": "Tradicional 802.11", "correct": true }
+        ],
+        "feedback": "El estándar tradicional 802.11 tiene la menor velocidad de transmisión de todos los mencionados."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Por qué todos los países necesitan regulaciones para las ondas electromagnéticas?",
+        "options": [
+          { "text": "Para controlar los precios", "correct": false },
+          {
+            "text": "Para definir rangos de frecuencia y potencia de transmisión permitidos",
+            "correct": true
+          },
+          { "text": "Para aumentar las velocidades", "correct": false },
+          { "text": "Para reducir el consumo energético", "correct": false }
+        ],
+        "feedback": "Las regulaciones son necesarias para definir los rangos de frecuencia y potencia de transmisión permitidos para evitar interferencias."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Qué significa DSSS en el contexto de redes inalámbricas?",
+        "options": [
+          { "text": "Digital Signal Strength System", "correct": false },
+          {
+            "text": "Direct Sequence Spread Spectrum (Espectro ensanchado por secuencia directa)",
+            "correct": true
+          },
+          { "text": "Data Security Satellite System", "correct": false },
+          { "text": "Dynamic Signal Support Service", "correct": false }
+        ],
+        "feedback": "DSSS significa Direct Sequence Spread Spectrum, una técnica de modulación para esparcir la señal en un espectro amplio."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Qué significa OFDM?",
+        "options": [
+          { "text": "Optical Fiber Data Management", "correct": false },
+          { "text": "Online Frequency Data Modulation", "correct": false },
+          {
+            "text": "Orthogonal Frequency Division Multiplexing (Multiplexación por división de frecuencia ortogonal)",
+            "correct": true
+          },
+          { "text": "Organized File Data Method", "correct": false }
+        ],
+        "feedback": "OFDM significa Orthogonal Frequency Division Multiplexing, una técnica de modulación que divide los datos en múltiples subportadoras."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "Según la tabla, ¿cuáles estándares operan en ambas frecuencias 2.4 y 5 GHz?",
+        "options": [
+          { "text": "Solo 802.11ax", "correct": false },
+          { "text": "802.11ax y 802.11n", "correct": true },
+          { "text": "Solo 802.11n", "correct": false },
+          { "text": "Todos los estándares", "correct": false }
+        ],
+        "feedback": "Los estándares 802.11ax y 802.11n son los que operan en ambas bandas de frecuencia: 2.4 GHz y 5 GHz."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cuál es el ancho de canal utilizado por el estándar 802.11b?",
+        "options": [
+          { "text": "20 MHz", "correct": true },
+          { "text": "40 MHz", "correct": false },
+          { "text": "80 MHz", "correct": false },
+          { "text": "160 MHz", "correct": false }
+        ],
+        "feedback": "El estándar 802.11b utiliza un ancho de canal de 20 MHz."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Qué problema de seguridad específico menciona el texto sobre las ondas hertzianas?",
+        "options": [
+          { "text": "Pueden causar interferencias", "correct": false },
+          {
+            "text": "No se confinan fácilmente a una superficie geográfica restringida",
+            "correct": true
+          },
+          { "text": "Consumen mucha energía", "correct": false },
+          { "text": "Son muy costosas", "correct": false }
+        ],
+        "feedback": "El problema principal es que las ondas hertzianas no se pueden confinar fácilmente a un área geográfica específica, lo que puede comprometer la seguridad."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué dispositivos son propensos a causar interferencias en las ondas electromagnéticas?",
+        "options": [
+          { "text": "Solo dispositivos domésticos", "correct": false },
+          {
+            "text": "Dispositivos de uso militar, científico e inclusive de aficionados",
+            "correct": true
+          },
+          { "text": "Solo equipos de comunicación", "correct": false },
+          { "text": "Únicamente dispositivos WiFi", "correct": false }
+        ],
+        "feedback": "Diversos dispositivos de uso militar, científico y de aficionados pueden causar interferencias en las ondas electromagnéticas."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Cuál es el ancho de canal máximo que puede utilizar el estándar 802.11ax?",
+        "options": [
+          { "text": "20 MHz", "correct": false },
+          { "text": "80 MHz", "correct": false },
+          { "text": "160 MHz", "correct": true },
+          { "text": "320 MHz", "correct": false }
+        ],
+        "feedback": "El estándar 802.11ax puede utilizar un ancho de canal máximo de 160 MHz."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Qué relación existe entre la distancia del dispositivo y la calidad de conexión WiFi?",
+        "options": [
+          { "text": "No hay relación", "correct": false },
+          {
+            "text": "Mientras más cerca esté del transmisor, mejor será la conexión",
+            "correct": true
+          },
+          {
+            "text": "Mientras más lejos esté, mejor será la conexión",
+            "correct": false
+          },
+          {
+            "text": "La distancia solo afecta la velocidad, no la calidad",
+            "correct": false
+          }
+        ],
+        "feedback": "Existe una relación inversa: mientras más cerca esté el dispositivo del transmisor, mejor será la calidad de la conexión WiFi."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué información es necesaria para conocer las características específicas de una red inalámbrica?",
+        "options": [
+          {
+            "text": "Solo la velocidad de internet contratada",
+            "correct": false
+          },
+          {
+            "text": "Las marcas y modelos de los dispositivos de interconexión para consultar su ficha técnica",
+            "correct": true
+          },
+          { "text": "Únicamente el nombre de la red", "correct": false },
+          { "text": "Solo la contraseña de acceso", "correct": false }
+        ],
+        "feedback": "Es necesario conocer las marcas y modelos de los dispositivos para consultar sus fichas técnicas y conocer las características específicas."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Qué garantiza la certificación WiFi basada en IEEE 802.11?",
+        "options": [
+          { "text": "Solo la velocidad máxima", "correct": false },
+          {
+            "text": "La conectividad e interoperabilidad entre equipos certificados",
+            "correct": true
+          },
+          { "text": "Únicamente la seguridad", "correct": false },
+          { "text": "Solo el alcance de la señal", "correct": false }
+        ],
+        "feedback": "La certificación WiFi garantiza la conectividad e interoperabilidad entre todos los equipos que cumplan con el estándar."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Cuál es la característica principal que permite a un usuario mantenerse conectado mientras se desplaza en una red inalámbrica?",
+        "options": [
+          { "text": "La velocidad de la conexión", "correct": false },
+          { "text": "La potencia del dispositivo", "correct": false },
+          {
+            "text": "Mantenerse dentro del área de cobertura de la red",
+            "correct": true
+          },
+          { "text": "El tipo de sistema operativo", "correct": false }
+        ],
+        "feedback": "Para mantener la conectividad al desplazarse, el usuario debe permanecer dentro del área de cobertura de la red inalámbrica."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Cuál de los siguientes NO es un estándar mencionado en la tabla?",
+        "options": [
+          { "text": "802.11ax", "correct": false },
+          { "text": "802.11ac wave2", "correct": false },
+          { "text": "802.11ad", "correct": true },
+          { "text": "802.11n", "correct": false }
+        ],
+        "feedback": "El estándar 802.11ad no aparece mencionado en la tabla de estándares WiFi proporcionada."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Cuáles de los siguientes dispositivos NO se mencionan específicamente como conectables a Internet en el texto?",
+        "options": [
+          { "text": "Refrigerador y estufa", "correct": false },
+          { "text": "Aire acondicionado y lavadora", "correct": false },
+          { "text": "Impresora y escáner", "correct": true },
+          { "text": "Cafetera y televisor", "correct": false }
+        ],
+        "feedback": "El texto menciona refrigerador, estufa, aire acondicionado, lavadora, cafetera y televisor como dispositivos conectables, pero no especifica impresora y escáner."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal del protocolo DHCP en una red inalámbrica?",
+        "options": [
+          {
+            "text": "Encriptar las comunicaciones entre dispositivos",
+            "correct": false
+          },
+          {
+            "text": "Asignar direcciones IP a los dispositivos que se conectan a la red",
+            "correct": true
+          },
+          {
+            "text": "Amplificar la señal de radiofrecuencia",
+            "correct": false
+          },
+          {
+            "text": "Controlar el ancho de banda de cada dispositivo",
+            "correct": false
+          }
+        ],
+        "feedback": "DHCP (Dynamic Host Configuration Protocol) se encarga de asignar automáticamente direcciones IP a los dispositivos que se conectan a la red."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Qué ventaja tiene la banda de 5GHz sobre la de 2.4GHz en routers doble banda?",
+        "options": [
+          { "text": "Mayor alcance de transmisión", "correct": false },
+          { "text": "Mayor velocidad de procesamiento", "correct": false },
+          {
+            "text": "Menor congestión por menos dispositivos que la utilizan",
+            "correct": true
+          },
+          { "text": "Menor consumo de energía", "correct": false }
+        ],
+        "feedback": "La banda de 5GHz tiene menor congestión porque menos dispositivos la utilizan comparada con la saturada banda de 2.4GHz."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Qué significa la tecnología MIMO en redes inalámbricas?",
+        "options": [
+          {
+            "text": "Modulación Individual de Múltiples Ondas",
+            "correct": false
+          },
+          {
+            "text": "Múltiples receptores y múltiples emisores",
+            "correct": true
+          },
+          {
+            "text": "Modo de Interferencia Mínima Optimizado",
+            "correct": false
+          },
+          {
+            "text": "Multiplexación de Internet Móvil Omnidireccional",
+            "correct": false
+          }
+        ],
+        "feedback": "MIMO significa Multiple Input Multiple Output, que se traduce como múltiples receptores y múltiples emisores."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cuál es la principal ventaja de la tecnología MIMO?",
+        "options": [
+          {
+            "text": "Reduce el consumo de energía del router",
+            "correct": false
+          },
+          {
+            "text": "Aumenta la velocidad de Internet contratada",
+            "correct": false
+          },
+          {
+            "text": "Mantiene la conectividad aunque una antena falle",
+            "correct": true
+          },
+          {
+            "text": "Elimina completamente las interferencias",
+            "correct": false
+          }
+        ],
+        "feedback": "La principal ventaja de MIMO es la redundancia: si una antena falla, las otras pueden mantener la conectividad."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Qué tipo de cobertura ofrecen las antenas tipo dipolo?",
+        "options": [
+          { "text": "Unidireccional", "correct": false },
+          { "text": "Bidireccional", "correct": false },
+          {
+            "text": "Omnidireccional (excepto arriba y abajo)",
+            "correct": true
+          },
+          { "text": "Multidireccional vertical", "correct": false }
+        ],
+        "feedback": "Las antenas dipolo proporcionan cobertura omnidireccional en el plano horizontal, pero tienen poca radiación arriba y abajo."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Cuál es el alcance típico de las antenas dipolo en uso interior según el texto?",
+        "options": [
+          { "text": "Cientos de metros", "correct": false },
+          { "text": "40 kilómetros", "correct": false },
+          { "text": "10 o 20 metros", "correct": true },
+          { "text": "100 metros", "correct": false }
+        ],
+        "feedback": "En uso interior, las antenas dipolo típicamente alcanzan entre 10 y 20 metros debido a obstáculos y atenuación."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Qué factores afectan la atenuación de las señales inalámbricas?",
+        "options": [
+          { "text": "Solo el tipo de paredes", "correct": false },
+          { "text": "Únicamente las reflexiones", "correct": false },
+          { "text": "Solo las fuentes de ruido", "correct": false },
+          {
+            "text": "Reflexiones, tipo de paredes y fuentes de ruido",
+            "correct": true
+          }
+        ],
+        "feedback": "La atenuación de señales inalámbricas se ve afectada por múltiples factores: reflexiones, el tipo de materiales de las paredes y diversas fuentes de ruido electromagnético."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Qué distancia pueden alcanzar las antenas parabólicas para comunicar bridges?",
+        "options": [
+          { "text": "10-20 metros", "correct": false },
+          { "text": "100 metros", "correct": false },
+          { "text": "40 kilómetros", "correct": true },
+          { "text": "1 kilómetro", "correct": false }
+        ],
+        "feedback": "Las antenas parabólicas de alta ganancia pueden alcanzar distancias de hasta 40 kilómetros para comunicar bridges en enlaces punto a punto."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Cuáles son las dos conexiones de banda ancha más comunes mencionadas en el texto?",
+        "options": [
+          { "text": "Fibra óptica y satélite", "correct": false },
+          { "text": "ADSL y cable", "correct": true },
+          { "text": "Wi-Fi y Bluetooth", "correct": false },
+          { "text": "4G y 5G", "correct": false }
+        ],
+        "feedback": "ADSL y cable son las dos tecnologías de banda ancha más comunes para conexiones residenciales a Internet."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Qué tipo de compañías suelen ofrecer conexiones ADSL?",
+        "options": [
+          { "text": "Compañías eléctricas", "correct": false },
+          { "text": "Compañías de TV por cable", "correct": false },
+          { "text": "Compañías telefónicas", "correct": true },
+          { "text": "Compañías de software", "correct": false }
+        ],
+        "feedback": "Las conexiones ADSL utilizan las líneas telefónicas existentes, por lo que son típicamente ofrecidas por compañías telefónicas."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Cuál de los siguientes NO es un estándar de tecnología de red inalámbrica mencionado en el texto?",
+        "options": [
+          { "text": "802.11n", "correct": false },
+          { "text": "802.11ac", "correct": false },
+          { "text": "802.11ax", "correct": false },
+          { "text": "802.11z", "correct": true }
+        ],
+        "feedback": "802.11z no es un estándar real de redes inalámbricas. Los estándares mencionados (802.11n, 802.11ac, 802.11ax) son reales y ampliamente utilizados."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Qué dispositivos generalmente vienen con adaptador de red inalámbrica preinstalado?",
+        "options": [
+          { "text": "Solo los equipos de escritorio", "correct": false },
+          { "text": "Solo los routers", "correct": false },
+          { "text": "La mayoría de portátiles y tabletas", "correct": true },
+          { "text": "Solo los teléfonos inteligentes", "correct": false }
+        ],
+        "feedback": "La mayoría de dispositivos móviles como portátiles y tabletas vienen con adaptadores de red inalámbrica preinstalados para facilitar la conectividad."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "Según el texto, ¿por qué el router se convierte en un \"cuello de botella\"?",
+        "options": [
+          { "text": "Por su tamaño físico pequeño", "correct": false },
+          {
+            "text": "Porque gestiona toda la comunicación entre dispositivos finales e Internet",
+            "correct": true
+          },
+          { "text": "Por su alto consumo energético", "correct": false },
+          { "text": "Porque solo soporta pocos dispositivos", "correct": false }
+        ],
+        "feedback": "El router se convierte en cuello de botella porque todo el tráfico entre los dispositivos locales e Internet debe pasar a través de él."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Qué sucede con las direcciones IP cuando un dispositivo deja la red?",
+        "options": [
+          { "text": "Se eliminan permanentemente", "correct": false },
+          {
+            "text": "Se guardan para ese dispositivo específico",
+            "correct": false
+          },
+          {
+            "text": "Se liberan y quedan disponibles para otros dispositivos",
+            "correct": true
+          },
+          {
+            "text": "Se transfieren automáticamente a otro dispositivo",
+            "correct": false
+          }
+        ],
+        "feedback": "Cuando un dispositivo se desconecta, su dirección IP se libera y queda disponible en el pool de direcciones para ser asignada a otros dispositivos."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Cuáles son los dos aspectos principales que simplifican la clasificación de antenas?",
+        "options": [
+          { "text": "Potencia y alcance", "correct": false },
+          { "text": "Ganancia y direccionalidad", "correct": true },
+          { "text": "Frecuencia y amplitud", "correct": false },
+          { "text": "Tamaño y peso", "correct": false }
+        ],
+        "feedback": "Las antenas se clasifican principalmente por su ganancia (cantidad de energía que concentran) y su direccionalidad (patrón de radiación)."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Qué es la ganancia en una antena?",
+        "options": [
+          { "text": "El precio de la antena", "correct": false },
+          {
+            "text": "La cantidad de energía que añade a la señal en el lóbulo principal",
+            "correct": true
+          },
+          { "text": "La velocidad de transmisión", "correct": false },
+          {
+            "text": "El número de dispositivos que puede conectar",
+            "correct": false
+          }
+        ],
+        "feedback": "La ganancia de una antena es la cantidad de energía que concentra y dirige hacia el lóbulo principal de radiación."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Qué significa direccionalidad en el contexto de las antenas?",
+        "options": [
+          { "text": "La orientación física de la antena", "correct": false },
+          {
+            "text": "La apertura del espectro de radio que ofrecen",
+            "correct": true
+          },
+          { "text": "La dirección del viento", "correct": false },
+          { "text": "La ubicación geográfica", "correct": false }
+        ],
+        "feedback": "La direccionalidad se refiere a la apertura o patrón del espectro de radio que la antena puede cubrir efectivamente."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Cómo se conecta típicamente el router al ISP?",
+        "options": [
+          { "text": "Mediante WiFi", "correct": false },
+          { "text": "Mediante Bluetooth", "correct": false },
+          { "text": "Mediante cableado", "correct": true },
+          { "text": "Mediante señales satelitales", "correct": false }
+        ],
+        "feedback": "El router típicamente se conecta al ISP mediante conexión por cable (ethernet, coaxial, o línea telefónica) para garantizar estabilidad y velocidad."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Qué componentes básicos se requieren para crear una red inalámbrica según el texto?",
+        "options": [
+          { "text": "Solo un router inalámbrico", "correct": false },
+          {
+            "text": "Conexión a Internet de banda ancha, módem, router inalámbrico y adaptador de red",
+            "correct": true
+          },
+          { "text": "Solo conexión a Internet y módem", "correct": false },
+          { "text": "Router y antena únicamente", "correct": false }
+        ],
+        "feedback": "Para una red inalámbrica completa se necesita: conexión a Internet de banda ancha, módem, router inalámbrico y adaptadores de red en los dispositivos."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Qué es un bridge según el texto?",
+        "options": [
+          { "text": "Un tipo de antena de alta ganancia", "correct": false },
+          {
+            "text": "Un dispositivo para amplificar señales",
+            "correct": false
+          },
+          {
+            "text": "Un tipo especial de punto de acceso especializado en comunicar redes separadas",
+            "correct": true
+          },
+          { "text": "Un router de doble banda", "correct": false }
+        ],
+        "feedback": "Un bridge es un tipo especial de punto de acceso que se especializa en conectar o comunicar redes que están físicamente separadas."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "¿Qué modalidad utilizan frecuentemente los ISP para entregar el equipo router?",
+        "options": [
+          { "text": "Venta directa", "correct": false },
+          { "text": "Comodato", "correct": true },
+          { "text": "Renta mensual", "correct": false },
+          { "text": "Leasing", "correct": false }
+        ],
+        "feedback": "Los ISP frecuentemente entregan el router en comodato, lo que significa que el equipo sigue siendo propiedad del proveedor pero el cliente puede usarlo."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "¿Qué combinación de equipos ofrecen algunos ISP en un mismo dispositivo?",
+        "options": [
+          { "text": "Router y antena", "correct": false },
+          { "text": "Módem y switch", "correct": false },
+          { "text": "Módem y router inalámbrico", "correct": true },
+          { "text": "Router y repetidor", "correct": false }
+        ],
+        "feedback": "Algunos ISP ofrecen dispositivos integrados que combinan módem y router inalámbrico en una sola unidad para simplificar la instalación."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Qué tipo de compañías típicamente ofrecen conexiones por cable?",
+        "options": [
+          { "text": "Compañías telefónicas", "correct": false },
+          { "text": "Compañías de TV por cable", "correct": true },
+          { "text": "Compañías eléctricas", "correct": false },
+          { "text": "Compañías de Internet exclusivamente", "correct": false }
+        ],
+        "feedback": "Las conexiones por cable (cable módem) son típicamente ofrecidas por compañías de televisión por cable que ya tienen infraestructura coaxial instalada."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "Según el texto, ¿en qué condiciones los fabricantes afirman que las antenas pueden alcanzar cientos de metros?",
+        "options": [
+          { "text": "En condiciones normales de uso", "correct": false },
+          { "text": "Solo en interiores", "correct": false },
+          { "text": "En condiciones muy excepcionales", "correct": true },
+          { "text": "Únicamente con amplificadores", "correct": false }
+        ],
+        "feedback": "Los fabricantes afirman que las antenas pueden alcanzar cientos de metros solo en condiciones muy excepcionales, no en uso normal."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "¿Cómo ha cambiado Internet nuestra forma de vida según el texto?",
+        "options": [
+          { "text": "Solo en el trabajo", "correct": false },
+          { "text": "Solo en el entretenimiento", "correct": false },
+          {
+            "text": "Ha cambiado nuestra forma de estudiar, trabajar, divertirnos y convivir",
+            "correct": true
+          },
+          { "text": "Únicamente en la comunicación", "correct": false }
+        ],
+        "feedback": "Internet ha transformado integralmente nuestra forma de vida, afectando cómo estudiamos, trabajamos, nos divertimos y convivimos con otros."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Qué dispositivos típicos tiene un usuario común según el texto?",
+        "options": [
+          { "text": "Solo smartphone y laptop", "correct": false },
+          { "text": "Laptop, smartphone, tablet y smartTV", "correct": true },
+          { "text": "Solo dispositivos móviles", "correct": false },
+          { "text": "Solo dispositivos de escritorio", "correct": false }
+        ],
+        "feedback": "Un usuario común típicamente posee múltiples dispositivos: laptop, smartphone, tablet y smartTV, todos requiriendo conectividad a Internet."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "¿Qué permite a los dispositivos potenciar sus recursos según el texto?",
+        "options": [
+          { "text": "Tener mayor memoria RAM", "correct": false },
+          { "text": "Contar con procesadores más rápidos", "correct": false },
+          { "text": "Contar con una conexión a Internet", "correct": true },
+          {
+            "text": "Tener mayor capacidad de almacenamiento",
+            "correct": false
+          }
+        ],
+        "feedback": "La conexión a Internet permite a los dispositivos potenciar sus recursos accediendo a servicios en la nube, aplicaciones web y contenido remoto."
+      }
+    ]
+  }
+}

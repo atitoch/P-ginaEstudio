@@ -1,0 +1,655 @@
+{
+  "quiz": {
+    "title": "Administración y Monitoreo de Tecnologías WAN",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Qué es una WAN (Wide Area Network)?",
+        "options": [
+          { "text": "Una red local dentro de un edificio", "correct": false },
+          {
+            "text": "Una red de comunicación de datos que opera más allá del alcance geográfico de una LAN",
+            "correct": true
+          },
+          { "text": "Un protocolo de seguridad para redes", "correct": false },
+          { "text": "Un tipo de cable de fibra óptica", "correct": false }
+        ],
+        "feedback": "Una WAN extiende el alcance de una red más allá del área geográfica limitada de una LAN."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Cuáles son las principales autoridades que definen los estándares WAN?",
+        "options": [
+          { "text": "ITU-T, ISO, IETF, ETA", "correct": true },
+          { "text": "IEEE, TCP/IP, HTTP, FTP", "correct": false },
+          { "text": "Microsoft, Apple, Google, IBM", "correct": false },
+          { "text": "CISCO, Juniper, Huawei, Nokia", "correct": false }
+        ],
+        "feedback": "ITU-T, ISO, IETF y ETA son organismos que establecen estándares para redes WAN."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "En el modelo WAN, ¿qué significa DTE y DCE respectivamente?",
+        "options": [
+          {
+            "text": "Data Terminal Equipment y Data Communication Equipment",
+            "correct": true
+          },
+          {
+            "text": "Digital Terminal Equipment y Digital Communication Equipment",
+            "correct": false
+          },
+          {
+            "text": "Direct Terminal Equipment y Direct Communication Equipment",
+            "correct": false
+          },
+          {
+            "text": "Dynamic Terminal Equipment y Dynamic Communication Equipment",
+            "correct": false
+          }
+        ],
+        "feedback": "DTE es el equipo terminal de datos y DCE el de comunicación de datos."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad máxima del estándar HSSI (High-Speed Serial Interface)?",
+        "options": [
+          { "text": "48 Mbps", "correct": false },
+          { "text": "52 Mbps", "correct": true },
+          { "text": "64 Mbps", "correct": false },
+          { "text": "128 Mbps", "correct": false }
+        ],
+        "feedback": "El estándar HSSI puede alcanzar hasta 52 Mbps."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Cuáles son las velocidades típicas de los enlaces conmutados analógicos?",
+        "options": [
+          {
+            "text": "Hasta 53 kbps downlink y 48 kbps uplink",
+            "correct": true
+          },
+          {
+            "text": "Hasta 64 kbps downlink y 128 kbps uplink",
+            "correct": false
+          },
+          {
+            "text": "Hasta 128 kbps downlink y 64 kbps uplink",
+            "correct": false
+          },
+          {
+            "text": "Hasta 48 kbps downlink y 53 kbps uplink",
+            "correct": false
+          }
+        ],
+        "feedback": "Los enlaces analógicos conmutados ofrecen velocidades modestas, típicamente de hasta 53 kbps."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Qué significa RDSI en el contexto de enlaces digitales?",
+        "options": [
+          { "text": "Red Digital de Servicios Integrados", "correct": true },
+          { "text": "Red Dedicada de Servicios Integrados", "correct": false },
+          { "text": "Red Digital de Sistemas Integrados", "correct": false },
+          {
+            "text": "Red Distribuida de Servicios Integrados",
+            "correct": false
+          }
+        ],
+        "feedback": "RDSI se refiere a la Red Digital de Servicios Integrados."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuál es una característica principal de los enlaces dedicados?",
+        "options": [
+          {
+            "text": "Velocidades variables según el tráfico",
+            "correct": false
+          },
+          {
+            "text": "Tarifas planas sin influencia del tráfico cruzado",
+            "correct": true
+          },
+          { "text": "Requieren autenticación constante", "correct": false },
+          {
+            "text": "Solo funcionan con tecnología inalámbrica",
+            "correct": false
+          }
+        ],
+        "feedback": "Los enlaces dedicados ofrecen tarifas planas y no están influenciados por el tráfico cruzado."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué significa PPP en tecnologías WAN?",
+        "options": [
+          { "text": "Public Protocol Point", "correct": false },
+          { "text": "Private Protocol Point", "correct": false },
+          { "text": "Point-to-Point Protocol", "correct": true },
+          { "text": "Packet Protocol Point", "correct": false }
+        ],
+        "feedback": "PPP es un protocolo punto a punto ampliamente utilizado en WANs."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Qué representa la \"x\" en la tecnología XDSL?",
+        "options": [
+          { "text": "eXtended (extendida)", "correct": false },
+          { "text": "eXtreme (extrema)", "correct": false },
+          { "text": "Define variantes de DSL", "correct": true },
+          { "text": "eXclusive (exclusiva)", "correct": false }
+        ],
+        "feedback": "La 'x' en XDSL representa distintas variantes de la tecnología DSL como ADSL, SDSL, etc."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Cuál es el tamaño total de una celda ATM?",
+        "options": [
+          { "text": "48 bytes", "correct": false },
+          { "text": "53 bytes", "correct": true },
+          { "text": "64 bytes", "correct": false },
+          { "text": "128 bytes", "correct": false }
+        ],
+        "feedback": "Las celdas ATM tienen un tamaño fijo de 53 bytes."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "En ATM, ¿cómo se distribuyen los bytes entre Header y Payload?",
+        "options": [
+          { "text": "Header: 3 bytes, Payload: 50 bytes", "correct": false },
+          { "text": "Header: 5 bytes, Payload: 48 bytes", "correct": true },
+          { "text": "Header: 8 bytes, Payload: 45 bytes", "correct": false },
+          { "text": "Header: 10 bytes, Payload: 43 bytes", "correct": false }
+        ],
+        "feedback": "Una celda ATM se divide en 5 bytes de cabecera (header) y 48 de carga útil (payload)."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal del Header en las celdas ATM?",
+        "options": [
+          { "text": "Solo transportar datos del usuario", "correct": false },
+          {
+            "text": "Identificación del canal, detección de errores y estado de utilización",
+            "correct": true
+          },
+          { "text": "Comprimir la información de datos", "correct": false },
+          { "text": "Establecer conexiones punto a punto", "correct": false }
+        ],
+        "feedback": "El Header en ATM contiene información de canal, errores y control de tráfico."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Qué estándar CCITT se utiliza para redes de conmutación de circuitos?",
+        "options": [
+          { "text": "V.35", "correct": false },
+          { "text": "X.21", "correct": true },
+          { "text": "EIA/TIA-232", "correct": false },
+          { "text": "EIA/TIA-449", "correct": false }
+        ],
+        "feedback": "X.21 es un estándar definido por CCITT para redes de conmutación de circuitos."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "Frame Relay fue introducido por ITU-T a partir de qué recomendación?",
+        "options": [
+          { "text": "I.122 de 1988", "correct": true },
+          { "text": "I.144 de 1990", "correct": false },
+          { "text": "V.35 de 1987", "correct": false },
+          { "text": "X.25 de 1985", "correct": false }
+        ],
+        "feedback": "ITU-T introdujo Frame Relay en la recomendación I.122 en 1988."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cuál es una ventaja principal de la tecnología XDSL?",
+        "options": [
+          { "text": "Requiere nuevos cables de cobre", "correct": false },
+          {
+            "text": "Convierte líneas analógicas en digitales de alta velocidad usando el cableado existente",
+            "correct": true
+          },
+          { "text": "Solo funciona con fibra óptica", "correct": false },
+          {
+            "text": "Necesita amplificadores cada 100 metros",
+            "correct": false
+          }
+        ],
+        "feedback": "XDSL permite aprovechar el cableado telefónico existente para ofrecer servicios digitales."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Qué significa ATM en tecnologías WAN?",
+        "options": [
+          { "text": "Automatic Transfer Mode", "correct": false },
+          { "text": "Advanced Transfer Mode", "correct": false },
+          { "text": "Asynchronous Transfer Mode", "correct": true },
+          { "text": "Analog Transfer Mode", "correct": false }
+        ],
+        "feedback": "ATM significa Asynchronous Transfer Mode."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cuál es el rango de velocidad que manejaba originalmente el estándar V.35?",
+        "options": [
+          { "text": "48 a 168 kbps", "correct": true },
+          { "text": "64 a 128 kbps", "correct": false },
+          { "text": "32 a 64 kbps", "correct": false },
+          { "text": "128 a 256 kbps", "correct": false }
+        ],
+        "feedback": "El estándar V.35 ofrecía velocidades entre 48 y 168 kbps."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Qué característica tienen los enlaces RDSI digitales?",
+        "options": [
+          { "text": "Transmiten a 32 kbps o 64 kbps", "correct": false },
+          { "text": "Transmiten a 64 kbps o 128 kbps", "correct": true },
+          { "text": "Transmiten a 128 kbps o 256 kbps", "correct": false },
+          { "text": "Transmiten a 256 kbps o 512 kbps", "correct": false }
+        ],
+        "feedback": "RDSI ofrece canales B de 64 kbps y puede alcanzar 128 kbps usando dos canales."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Cuál era la sigla anterior de ITU-T?",
+        "options": [
+          {
+            "text": "CCITT (Consultative Committee for International Telegraph and Telephone)",
+            "correct": true
+          },
+          { "text": "ISOC (Internet Society)", "correct": false },
+          {
+            "text": "IEEE (Institute of Electrical and Electronics Engineers)",
+            "correct": false
+          },
+          {
+            "text": "ANSI (American National Standards Institute)",
+            "correct": false
+          }
+        ],
+        "feedback": "ITU-T era conocido anteriormente como CCITT."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Qué ventaja principal ofrece Frame Relay?",
+        "options": [
+          { "text": "Mayor seguridad en las transmisiones", "correct": false },
+          {
+            "text": "Interconexión de redes LAN separadas geográficamente a menor coste",
+            "correct": true
+          },
+          { "text": "Velocidades más altas que ATM", "correct": false },
+          {
+            "text": "No requiere infraestructura de telecomunicaciones",
+            "correct": false
+          }
+        ],
+        "feedback": "Frame Relay es una solución económica para conectar redes LAN a larga distancia."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Cuál es el método recomendado para establecer la configuración básica de un router desconfigurado?",
+        "options": [
+          { "text": "Terminal virtual vía Telnet", "correct": false },
+          { "text": "Servidor TFTP", "correct": false },
+          { "text": "Puerto de la consola", "correct": true },
+          { "text": "Interfaz web del router", "correct": false }
+        ],
+        "feedback": "Para un router desconfigurado se recomienda usar el puerto de la consola para establecer la configuración básica."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cómo se llama el cable especial utilizado para conectar un PC al puerto de consola del router?",
+        "options": [
+          { "text": "Cable azul rollover", "correct": true },
+          { "text": "Cable cruzado", "correct": false },
+          { "text": "Cable directo", "correct": false },
+          { "text": "Cable de fibra óptica", "correct": false }
+        ],
+        "feedback": "El cable rollover (azul) es el cable especial que incorpora el router para conectar al puerto de consola."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Cuál es el indicador que aparece en el modo usuario de un router?",
+        "options": [
+          { "text": "Nombre del router seguido de #", "correct": false },
+          { "text": "Nombre del router seguido de >", "correct": true },
+          { "text": "Nombre del router seguido de $", "correct": false },
+          { "text": "Nombre del router seguido de *", "correct": false }
+        ],
+        "feedback": "En modo usuario aparece el nombre del router seguido del signo > (mayor que)."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué comando se utiliza para acceder al modo privilegiado desde el modo usuario?",
+        "options": [
+          { "text": "configure", "correct": false },
+          { "text": "enable", "correct": true },
+          { "text": "admin", "correct": false },
+          { "text": "privileged", "correct": false }
+        ],
+        "feedback": "El comando 'enable' permite acceder al modo privilegiado desde el modo usuario."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Cuál es el comando para entrar en modo de configuración global desde el modo privilegiado?",
+        "options": [
+          { "text": "config terminal", "correct": true },
+          { "text": "configure enable", "correct": false },
+          { "text": "setup global", "correct": false },
+          { "text": "admin config", "correct": false }
+        ],
+        "feedback": "El comando 'config terminal' o 'config t' permite entrar al modo de configuración global."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Qué comando se utiliza para cambiar el nombre del router?",
+        "options": [
+          { "text": "name", "correct": false },
+          { "text": "router-name", "correct": false },
+          { "text": "hostname", "correct": true },
+          { "text": "set-name", "correct": false }
+        ],
+        "feedback": "El comando 'hostname' se utiliza para cambiar el nombre del router."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué comando muestra la configuración que actualmente se está ejecutando en el router?",
+        "options": [
+          { "text": "show startup-config", "correct": false },
+          { "text": "show running-config", "correct": true },
+          { "text": "show current-config", "correct": false },
+          { "text": "show active-config", "correct": false }
+        ],
+        "feedback": "El comando 'show running-config' muestra la configuración almacenada en RAM que se está ejecutando."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Dónde se almacena la configuración que muestra el comando 'show startup-config'?",
+        "options": [
+          { "text": "RAM", "correct": false },
+          { "text": "NVRAM", "correct": true },
+          { "text": "Flash", "correct": false },
+          { "text": "ROM", "correct": false }
+        ],
+        "feedback": "El comando 'show startup-config' muestra la configuración almacenada en NVRAM."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Cuál es el formato correcto para configurar fecha y hora en un router?",
+        "options": [
+          { "text": "set clock 21:43:05 13 june 2021", "correct": false },
+          { "text": "clock set 21:43:05 13 june 2021", "correct": true },
+          { "text": "time set 21:43:05 13 june 2021", "correct": false },
+          { "text": "configure clock 21:43:05 13 june 2021", "correct": false }
+        ],
+        "feedback": "El comando correcto es 'clock set' seguido de la hora y fecha en el formato especificado."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Qué comando permite obtener ayuda sobre todos los comandos disponibles en cualquier modo del IOS?",
+        "options": [
+          { "text": "help", "correct": false },
+          { "text": "?", "correct": true },
+          { "text": "assist", "correct": false },
+          { "text": "commands", "correct": false }
+        ],
+        "feedback": "El comando '?' muestra un listado completo de los comandos disponibles en el modo actual."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de un módem dial-up?",
+        "options": [
+          {
+            "text": "Concentrar comunicaciones de usuarios múltiples",
+            "correct": false
+          },
+          {
+            "text": "Convertir señales digitales en frecuencias de voz para transmisión telefónica",
+            "correct": true
+          },
+          {
+            "text": "Proporcionar terminación de señal digital",
+            "correct": false
+          },
+          { "text": "Conmutar tráfico Frame Relay", "correct": false }
+        ],
+        "feedback": "El módem dial-up convierte señales digitales en frecuencias de voz para su transmisión por líneas telefónicas tradicionales."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Qué dispositivo concentra las comunicaciones de entrada y salida del módem dial-up de los usuarios?",
+        "options": [
+          { "text": "CSU/DSU", "correct": false },
+          { "text": "Switch WAN", "correct": false },
+          { "text": "Servidor de acceso", "correct": true },
+          { "text": "Router", "correct": false }
+        ],
+        "feedback": "El servidor de acceso permite centralizar las conexiones provenientes de múltiples módems dial-up."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Cuáles son las dos funciones principales de una CSU/DSU?",
+        "options": [
+          { "text": "Modular y demodular señales", "correct": false },
+          {
+            "text": "Concentrar usuarios y proporcionar interfaces",
+            "correct": false
+          },
+          {
+            "text": "Proporcionar terminación de señal digital y convertir tramas",
+            "correct": true
+          },
+          { "text": "Conmutar tráfico y enrutar paquetes", "correct": false }
+        ],
+        "feedback": "Una CSU/DSU convierte señales digitales a un formato adecuado para la red WAN y proporciona terminación de señal."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿En qué capa del modelo OSI operan típicamente los switches WAN?",
+        "options": [
+          { "text": "Capa 1 (Física)", "correct": false },
+          { "text": "Capa 2 (Enlace de datos)", "correct": true },
+          { "text": "Capa 3 (Red)", "correct": false },
+          { "text": "Capa 4 (Transporte)", "correct": false }
+        ],
+        "feedback": "Los switches WAN trabajan generalmente en la capa 2 del modelo OSI, gestionando tramas."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia principal entre un módem dial-up y un módem de banda ancha?",
+        "options": [
+          { "text": "El tipo de señal que procesan", "correct": false },
+          { "text": "El número de usuarios que soportan", "correct": false },
+          {
+            "text": "Las velocidades de transmisión y frecuencias utilizadas",
+            "correct": true
+          },
+          { "text": "La capa OSI en la que operan", "correct": false }
+        ],
+        "feedback": "La banda ancha ofrece velocidades mucho mayores y opera en frecuencias diferentes al módem dial-up."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Cuál es la característica principal de la conmutación de circuitos?",
+        "options": [
+          { "text": "Divide los datos en paquetes", "correct": false },
+          {
+            "text": "Establece un circuito dedicado antes de la comunicación",
+            "correct": true
+          },
+          {
+            "text": "Permite comunicación sin establecer conexión",
+            "correct": false
+          },
+          {
+            "text": "Utiliza direccionamiento en cada paquete",
+            "correct": false
+          }
+        ],
+        "feedback": "En la conmutación de circuitos, se establece una conexión dedicada antes de la transmisión."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Cuáles son los dos tipos más comunes de tecnologías WAN de conmutación de circuitos mencionados?",
+        "options": [
+          { "text": "Frame Relay e Internet", "correct": false },
+          { "text": "ATM y Frame Relay", "correct": false },
+          { "text": "PSTN e ISDN", "correct": true },
+          { "text": "DSL y Cable", "correct": false }
+        ],
+        "feedback": "PSTN e ISDN son tecnologías tradicionales que utilizan conmutación de circuitos."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "En la conmutación de paquetes, ¿qué permite que muchos pares de nodos se comuniquen?",
+        "options": [
+          { "text": "El uso de circuitos dedicados", "correct": false },
+          {
+            "text": "La red compartida sin necesidad de establecer circuitos",
+            "correct": true
+          },
+          { "text": "La conexión punto a punto", "correct": false },
+          { "text": "El establecimiento previo de rutas", "correct": false }
+        ],
+        "feedback": "La conmutación de paquetes permite compartir la red eficientemente sin conexiones dedicadas."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo de sistema sin conexión en conmutación de paquetes?",
+        "options": [
+          { "text": "Frame Relay", "correct": false },
+          { "text": "ISDN", "correct": false },
+          { "text": "Internet", "correct": true },
+          { "text": "PSTN", "correct": false }
+        ],
+        "feedback": "Internet es un sistema que opera mediante conmutación de paquetes sin necesidad de conexión previa."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "En los sistemas orientados a la conexión, ¿qué transporta cada paquete en lugar de toda la información de direccionamiento?",
+        "options": [
+          {
+            "text": "La dirección completa del destinatario",
+            "correct": false
+          },
+          { "text": "Un identificador", "correct": true },
+          { "text": "El número de secuencia", "correct": false },
+          { "text": "La ruta completa", "correct": false }
+        ],
+        "feedback": "Los sistemas orientados a la conexión usan identificadores para simplificar el encaminamiento."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Cómo se denomina el identificador utilizado en Frame Relay?",
+        "options": [
+          { "text": "VC (Virtual Circuit)", "correct": false },
+          { "text": "PSN (Packet Switched Network)", "correct": false },
+          { "text": "DLCI (Data Link Connection Identifier)", "correct": true },
+          { "text": "CSU (Channel Service Unit)", "correct": false }
+        ],
+        "feedback": "Frame Relay usa DLCI para identificar conexiones virtuales dentro de la red."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Qué es un circuito virtual (VC)?",
+        "options": [
+          {
+            "text": "Un circuito físico permanente entre dos puntos",
+            "correct": false
+          },
+          {
+            "text": "Un circuito que se establece temporalmente mientras un paquete viaja a través de él",
+            "correct": true
+          },
+          {
+            "text": "Una conexión dedicada para voz únicamente",
+            "correct": false
+          },
+          { "text": "Un identificador de direccionamiento", "correct": false }
+        ],
+        "feedback": "Los circuitos virtuales simulan una conexión dedicada, pero se establecen dinámicamente."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Por qué se considera el módem dial-up como una tecnología WAN antigua?",
+        "options": [
+          { "text": "Porque opera en capa 2", "correct": false },
+          {
+            "text": "Porque utiliza frecuencias de voz y velocidades limitadas",
+            "correct": true
+          },
+          { "text": "Porque requiere CSU/DSU", "correct": false },
+          { "text": "Porque no puede conectarse a Internet", "correct": false }
+        ],
+        "feedback": "El módem dial-up es considerado obsoleto por sus limitadas velocidades y uso de frecuencias de voz."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuál es la ventaja principal de la conmutación de paquetes sobre la conmutación de circuitos?",
+        "options": [
+          { "text": "Mayor seguridad", "correct": false },
+          { "text": "Mejor calidad de voz", "correct": false },
+          { "text": "Uso más eficiente de la red compartida", "correct": true },
+          { "text": "Conexiones más estables", "correct": false }
+        ],
+        "feedback": "La conmutación de paquetes optimiza el uso de la red al compartir recursos entre múltiples usuarios."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "Según el documento, ¿cuál es un ejemplo específico de sistema orientado a la conexión?",
+        "options": [
+          { "text": "Internet", "correct": false },
+          { "text": "PSTN", "correct": false },
+          { "text": "Frame Relay", "correct": true },
+          { "text": "ISDN", "correct": false }
+        ],
+        "feedback": "Frame Relay es un ejemplo de sistema de red orientado a la conexión con circuitos virtuales."
+      }
+    ]
+  }
+}
