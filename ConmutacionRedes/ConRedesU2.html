@@ -1,0 +1,3949 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidad 2: Segmentación de Redes - Cuestionario</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #3f51b5 0%, #2196f3 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #3f51b5;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .quiz-container {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      .quiz-progress {
+        background: #f0f0f0;
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+
+      .question-counter {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      .question {
+        display: none;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .question.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .question h3 {
+        color: #333;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .options {
+        list-style: none;
+      }
+
+      .option {
+        background: #f8f9fa;
+        margin: 10px 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .option:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+      }
+
+      .option input[type="radio"] {
+        display: none;
+      }
+
+      .option label {
+        display: block;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      .option input[type="radio"]:checked + label {
+        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        color: white;
+        border-radius: 8px;
+      }
+
+      .option.correct {
+        border-color: #28a745;
+        background: #d4edda;
+      }
+
+      .option.incorrect {
+        border-color: #dc3545;
+        background: #f8d7da;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #dee2e6;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(63, 81, 181, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #5a6268;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .feedback {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        display: none;
+      }
+
+      .feedback.correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .feedback.incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f1b6ba;
+      }
+
+      .results {
+        text-align: center;
+        display: none;
+      }
+
+      .score {
+        font-size: 3em;
+        font-weight: bold;
+        color: #3f51b5;
+        margin: 20px 0;
+      }
+
+      .score-details {
+        font-size: 1.2em;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #3f51b5;
+      }
+
+      @media (max-width: 768px) {
+        .controls {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-button"
+        >⬅ Volver a Conmutación y Redes</a
+      >
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> >
+        <a href="index.html">Conmutación y Redes</a> > Unidad 2: Segmentación de
+        Redes
+      </div>
+
+      <div class="header">
+        <h1>🔄 Unidad 2: Segmentación de Redes</h1>
+        <p>
+          Conceptos de Segmentación, Switches, VLANs, VTP y Cálculo de Subredes
+        </p>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-counter">
+          Pregunta <span id="currentQuestion">1</span> de
+          <span id="totalQuestions">123</span>
+        </div>
+        <!-- Pregunta 1 -->
+        <div class="question active" data-type="multiple">
+          <h3>¿Qué es un segmento en el contexto de redes?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q1" value="correct" id="q1a" />
+              <label for="q1a"
+                >Un bus lineal al que están conectadas varias estaciones y que
+                termina en los extremos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1b" />
+              <label for="q1b"
+                >Un dispositivo para conectar múltiples redes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1c" />
+              <label for="q1c"
+                >Una técnica de cifrado para proteger datos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1d" />
+              <label for="q1d">Un protocolo de enrutamiento dinámico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el principal propósito de segmentar una intranet?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2a" />
+              <label for="q2a">Reducir el costo de los equipos de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2b" />
+              <label for="q2b">Mejorar la seguridad mediante cifrado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="correct" id="q2c" />
+              <label for="q2c"
+                >Dividirla en subredes para aumentar el número de computadoras
+                y/o el rendimiento</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2d" />
+              <label for="q2d"
+                >Cambiar el protocolo de comunicación utilizado</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué debe ser inteligente el dispositivo usado para segmentar
+            una red?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3a" />
+              <label for="q3a">Para cifrar la información transmitida</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="correct" id="q3b" />
+              <label for="q3b"
+                >Para decidir hacia qué segmento debe enviar la información
+                recibida</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3c" />
+              <label for="q3c">Para aumentar la velocidad de transmisión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3d" />
+              <label for="q3d">Para reducir el consumo eléctrico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué capa del modelo OSI opera un switch?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4a" />
+              <label for="q4a">Capa 1 (Física)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="correct" id="q4b" />
+              <label for="q4b">Capa 2 (Enlace de datos)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4c" />
+              <label for="q4c">Capa 3 (Red)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4d" />
+              <label for="q4d">Capa 4 (Transporte)</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué característica define a los switches Store-and-Forward?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5a" />
+              <label for="q5a"
+                >Envían las tramas inmediatamente al recibirlas</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="correct" id="q5b" />
+              <label for="q5b"
+                >Guardan cada trama en un búfer antes del intercambio hacia el
+                puerto de salida</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5c" />
+              <label for="q5c">Solo procesan la dirección MAC de destino</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5d" />
+              <label for="q5d">Operan únicamente en modo half-duplex</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál fue el objetivo principal del diseño de los switches
+            Cut-Through?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6a" />
+              <label for="q6a">Aumentar la seguridad de la red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6b" />
+              <label for="q6b">Mejorar la detección de errores</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="correct" id="q6c" />
+              <label for="q6c"
+                >Reducir la latencia o retardo en el procesamiento</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6d" />
+              <label for="q6d"
+                >Incrementar el número de puertos disponibles</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuántos bytes lee siempre un switch Fragment-Free antes de reenviar
+            la trama?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7a" />
+              <label for="q7a">32 bytes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7b" />
+              <label for="q7b">48 bytes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="correct" id="q7c" />
+              <label for="q7c">64 bytes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7d" />
+              <label for="q7d">128 bytes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es una VLAN?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8a" />
+              <label for="q8a">Un tipo de cable especial para redes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8b" />
+              <label for="q8b">Un protocolo de enrutamiento avanzado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="correct" id="q8c" />
+              <label for="q8c"
+                >Un método de crear redes lógicas independientes dentro de una
+                misma red física</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8d" />
+              <label for="q8d"
+                >Un dispositivo físico para segmentar redes</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa VTP en el contexto de redes?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9a" />
+              <label for="q9a">Virtual Trunking Protocol</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9b" />
+              <label for="q9b">VLAN Transfer Protocol</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="correct" id="q9c" />
+              <label for="q9c">VLAN Trunking Protocol</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9d" />
+              <label for="q9d">Virtual Transfer Protocol</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En cuántos modos diferentes puede operar VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10a" />
+              <label for="q10a">2 modos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="correct" id="q10b" />
+              <label for="q10b">3 modos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10c" />
+              <label for="q10c">4 modos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10d" />
+              <label for="q10d">5 modos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué operaciones puede realizar un switch en modo servidor VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11a" />
+              <label for="q11a">Solo recibir configuraciones</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="correct" id="q11b" />
+              <label for="q11b">Crear, eliminar y modificar VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11c" />
+              <label for="q11c">Solo reenviar información VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11d" />
+              <label for="q11d">Únicamente monitorear VLANs</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la característica principal del modo transparente VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12a" />
+              <label for="q12a">Procesa todas las actualizaciones VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12b" />
+              <label for="q12b">Solo funciona como servidor</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="correct" id="q12c" />
+              <label for="q12c"
+                >No procesa actualizaciones VTP recibidas, solo las
+                reenvía</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12d" />
+              <label for="q12d">Elimina toda la información VTP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Para qué se utiliza el número de revisión en VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13a" />
+              <label for="q13a">Para identificar el switch</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13b" />
+              <label for="q13b">Para contar el número de VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="correct" id="q13c" />
+              <label for="q13c"
+                >Para determinar si la información recibida es más reciente que
+                la actual</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13d" />
+              <label for="q13d"
+                >Para calcular la velocidad de transmisión</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los tres métodos de implementación de VLAN mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14a" />
+              <label for="q14a">Estática, dinámica y automática</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="correct" id="q14b" />
+              <label for="q14b">De puerto central, estática y dinámica</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14c" />
+              <label for="q14c">Manual, automática y semi-automática</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14d" />
+              <label for="q14d">Fija, variable y adaptativa</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿En qué se basan las VLAN dinámicas para determinar asignaciones?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15a" />
+              <label for="q15a">Solo en la velocidad de puerto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15b" />
+              <label for="q15b">Únicamente en direcciones IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="correct" id="q15c" />
+              <label for="q15c"
+                >En direcciones MAC, direccionamiento lógico o tipo de
+                protocolo</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15d" />
+              <label for="q15d">Solo en la hora del día</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es un enlace trunk en el contexto de VLANs?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16a" />
+              <label for="q16a">Un cable especial de alta velocidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="correct" id="q16b" />
+              <label for="q16b"
+                >Un enlace que transporta tráfico de múltiples VLANs</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16c" />
+              <label for="q16c">Una conexión inalámbrica</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16d" />
+              <label for="q16d">Un protocolo de seguridad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el principal problema de los switches Cut-Through?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17a" />
+              <label for="q17a">Son más lentos que Store-and-Forward</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="correct" id="q17b" />
+              <label for="q17b"
+                >No detectan tramas corruptas causadas por colisiones</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17c" />
+              <label for="q17c">Consumen más energía</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17d" />
+              <label for="q17d">Solo funcionan con cables específicos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué ventaja ofrece VLAN cuando se traslada físicamente un
+            ordenador?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18a" />
+              <label for="q18a"
+                >Se mejora automáticamente la velocidad de red</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="correct" id="q18b" />
+              <label for="q18b"
+                >Puede permanecer en la misma VLAN sin cambiar la configuración
+                IP</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18c" />
+              <label for="q18c">Se reduce el consumo eléctrico</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18d" />
+              <label for="q18d">Se actualiza automáticamente el hardware</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué velocidad ofrecía Ethernet en los años ochenta?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19a" />
+              <label for="q19a">1 Mbps</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19b" />
+              <label for="q19b">5 Mbps</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="correct" id="q19c" />
+              <label for="q19c">10 Mbps</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19d" />
+              <label for="q19d">100 Mbps</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué topología tenían originalmente las redes Ethernet?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20a" />
+              <label for="q20a">Topología en estrella</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="correct" id="q20b" />
+              <label for="q20b"
+                >Topología en bus con cable coaxial compartido</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20c" />
+              <label for="q20c">Topología en anillo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20d" />
+              <label for="q20d">Topología en malla</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 21 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué controla el protocolo CSMA/CD en Ethernet?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21a" />
+              <label for="q21a">La velocidad de transmisión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21b" />
+              <label for="q21b">El direccionamiento IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="correct" id="q21c" />
+              <label for="q21c">El acceso al medio compartido</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21d" />
+              <label for="q21d">La seguridad de los datos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 22 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo aprende un switch las direcciones MAC?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22a" />
+              <label for="q22a"
+                >Se configuran manualmente todas las direcciones</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="correct" id="q22b" />
+              <label for="q22b"
+                >Almacena automáticamente las direcciones MAC de dispositivos
+                alcanzables por cada puerto</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22c" />
+              <label for="q22c"
+                >Solo funciona con direcciones preconfiguradas</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22d" />
+              <label for="q22d"
+                >Utiliza un servidor central de direcciones</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Para qué se utiliza el CRC en switches Store-and-Forward?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23a" />
+              <label for="q23a">Para identificar la dirección MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23b" />
+              <label for="q23b">Para determinar la ruta más rápida</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="correct" id="q23c" />
+              <label for="q23c"
+                >Para verificar si la trama tiene errores antes de
+                reenviarla</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23d" />
+              <label for="q23d">Para contar el número de saltos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántos pines tiene un conector RJ-45?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24a" />
+              <label for="q24a">4 pines</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24b" />
+              <label for="q24b">6 pines</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="correct" id="q24c" />
+              <label for="q24c">8 pines</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24d" />
+              <label for="q24d">12 pines</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué dos tipos de encapsulación pueden usar los paquetes VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25a" />
+              <label for="q25a">Solo ISL</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25b" />
+              <label for="q25b">Solo 802.1Q</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="correct" id="q25c" />
+              <label for="q25c"
+                >Inter-Switch Link (ISL) y IEEE 802.1Q (dot1q)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25d" />
+              <label for="q25d">ISL y Frame Relay</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el rango de ID para VLANs normales que soporta VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26a" />
+              <label for="q26a">1 a 100</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26b" />
+              <label for="q26b">1 a 500</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="correct" id="q26c" />
+              <label for="q26c">1 a 1005</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26d" />
+              <label for="q26d">1 a 4096</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 27 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué problema específico resuelve la conmutación sin fragmentos?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27a" />
+              <label for="q27a">Los errores de CRC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27b" />
+              <label for="q27b">Los problemas de velocidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="correct" id="q27c" />
+              <label for="q27c">Las colisiones tardías</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27d" />
+              <label for="q27d">Los bucles de red</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 28 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la fórmula para calcular el número de subredes válidas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28a" />
+              <label for="q28a">2^b</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28b" />
+              <label for="q28b">2^b + 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="correct" id="q28c" />
+              <label for="q28c">2^b - 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28d" />
+              <label for="q28d">2^b * 2</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 29 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la fórmula para calcular hosts disponibles por subred?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29a" />
+              <label for="q29a">2^h</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29b" />
+              <label for="q29b">2^h + 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="correct" id="q29c" />
+              <label for="q29c">2^h - 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29d" />
+              <label for="q29d">2^h / 2</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 30 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿De dónde se toman los bits para crear subredes en el cálculo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30a" />
+              <label for="q30a">De la dirección de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="correct" id="q30b" />
+              <label for="q30b"
+                >De la parte de host, de izquierda a derecha</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30c" />
+              <label for="q30c">De la máscara de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30d" />
+              <label for="q30d">De la dirección de broadcast</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 31 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué se descartan la primera y última combinación en el cálculo
+            de subredes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31a" />
+              <label for="q31a">Por limitaciones técnicas del hardware</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="correct" id="q31b" />
+              <label for="q31b"
+                >Para no confundirlas con la dirección de red y la dirección de
+                broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31c" />
+              <label for="q31c">Por restricciones del protocolo IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31d" />
+              <label for="q31d"
+                >Para reservar direcciones para administración</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 32 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa MPOA en el contexto de switches de capa 3?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32a" />
+              <label for="q32a">Multi Protocol Online Access</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32b" />
+              <label for="q32b">Multiple Port Optical Adapter</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="correct" id="q32c" />
+              <label for="q32c">Multi Protocol Over ATM</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q32" value="incorrect" id="q32d" />
+              <label for="q32d">Main Protocol Operations Administrator</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 33 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué información adicional procesan los switches de capa 4?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33a" />
+              <label for="q33a">Solo direcciones MAC extendidas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="correct" id="q33b" />
+              <label for="q33b"
+                >Puertos TCP/UDP, SNMP, FTP y protocolos de capa 4 o
+                superiores</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33c" />
+              <label for="q33c">Únicamente información de tiempo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q33" value="incorrect" id="q33d" />
+              <label for="q33d">Solo datos de ubicación geográfica</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 34 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué son los "runts" en el contexto de Ethernet?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q34" value="incorrect" id="q34a" />
+              <label for="q34a">Paquetes de gran tamaño</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q34" value="correct" id="q34b" />
+              <label for="q34b">Tramas corruptas causadas por colisiones</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q34" value="incorrect" id="q34c" />
+              <label for="q34c">Direcciones MAC inválidas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q34" value="incorrect" id="q34d" />
+              <label for="q34d">Errores de configuración</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 35 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es una tormenta broadcast?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q35" value="incorrect" id="q35a" />
+              <label for="q35a">Un error de configuración IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q35" value="incorrect" id="q35b" />
+              <label for="q35b">Un problema de alimentación eléctrica</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q35" value="correct" id="q35c" />
+              <label for="q35c"
+                >Fenómeno donde el tráfico broadcast satura la red debido a
+                bucles</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q35" value="incorrect" id="q35d" />
+              <label for="q35d">Una técnica de optimización de red</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 36 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál fue el principal beneficio de evolucionar de bus a estrella en
+            Ethernet?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q36" value="incorrect" id="q36a" />
+              <label for="q36a">Reducir costos de implementación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q36" value="correct" id="q36b" />
+              <label for="q36b"
+                >Separar dominios de colisión aumentando eficiencia y
+                escalabilidad</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q36" value="incorrect" id="q36c" />
+              <label for="q36c">Simplificar la configuración</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q36" value="incorrect" id="q36d" />
+              <label for="q36d">Mejorar la seguridad automáticamente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 37 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es un dominio de colisión?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q37" value="incorrect" id="q37a" />
+              <label for="q37a">Una zona de la red con alta seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q37" value="incorrect" id="q37b" />
+              <label for="q37b"
+                >Un segmento donde solo hay un dispositivo</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q37" value="correct" id="q37c" />
+              <label for="q37c"
+                >Un segmento de red donde las colisiones pueden ocurrir</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q37" value="incorrect" id="q37d" />
+              <label for="q37d">Una area reservada para servidores</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 38 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué técnica eligió el grupo de estándares IEEE para VLANs?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q38" value="incorrect" id="q38a" />
+              <label for="q38a">Filtrado de trama</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q38" value="correct" id="q38b" />
+              <label for="q38b"
+                >Etiquetado de tramas (identificación de tramas)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q38" value="incorrect" id="q38c" />
+              <label for="q38c">Enrutamiento por MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q38" value="incorrect" id="q38d" />
+              <label for="q38d">Segmentación por IP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 39 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué se recomienda para la seguridad del dominio VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q39" value="incorrect" id="q39a" />
+              <label for="q39a">No usar ninguna seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q39" value="incorrect" id="q39b" />
+              <label for="q39b">Solo usar VTP transparente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q39" value="correct" id="q39c" />
+              <label for="q39c"
+                >Establecer un password y usar autenticación MD5</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q39" value="incorrect" id="q39d" />
+              <label for="q39d">Cambiar de dominio frecuentemente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 40 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué característica tienen los valores en segmentaciones con
+            máscaras de longitud fija?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q40" value="incorrect" id="q40a" />
+              <label for="q40a">Son aleatorios</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q40" value="incorrect" id="q40b" />
+              <label for="q40b">Disminuyen progresivamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q40" value="correct" id="q40c" />
+              <label for="q40c">Se incrementan en una cantidad constante</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q40" value="incorrect" id="q40d" />
+              <label for="q40d">No siguen ningún patrón</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 41 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los dos planteamientos iniciales para el cálculo de
+            subredes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q41" value="incorrect" id="q41a" />
+              <label for="q41a">Solo por velocidad o por costo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q41" value="correct" id="q41b" />
+              <label for="q41b"
+                >Segmentar en número determinado de subredes o subredes para
+                número determinado de hosts</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q41" value="incorrect" id="q41c" />
+              <label for="q41c">Solo por ubicación física o lógica</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q41" value="incorrect" id="q41d" />
+              <label for="q41d">Únicamente por fabricante o protocolo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 42 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo se compone la máscara de subred?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q42" value="incorrect" id="q42a" />
+              <label for="q42a">Solo con bits de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q42" value="incorrect" id="q42b" />
+              <label for="q42b">Aleatoriamente según necesidades</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q42" value="correct" id="q42c" />
+              <label for="q42c"
+                >Poniendo a 1 los bits de red y subred, y a 0 los de host</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q42" value="incorrect" id="q42d" />
+              <label for="q42d">Solo con bits de host</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 43 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo se forma la dirección de difusión o broadcast?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q43" value="incorrect" id="q43a" />
+              <label for="q43a">Poniendo todos los bits a 1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q43" value="incorrect" id="q43b" />
+              <label for="q43b">Poniendo todos los bits a 0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q43" value="correct" id="q43c" />
+              <label for="q43c"
+                >Poniendo todos los bits de la parte de host a 1</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q43" value="incorrect" id="q43d" />
+              <label for="q43d">Usando la última dirección IP disponible</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 44 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué representa exactamente un phit en redes?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q44" value="incorrect" id="q44a" />
+              <label for="q44a">Un paquete completo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q44" value="incorrect" id="q44b" />
+              <label for="q44b">Una dirección MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q44" value="correct" id="q44c" />
+              <label for="q44c"
+                >La unidad de información transferida por un enlace en un ciclo
+                de red</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q44" value="incorrect" id="q44d" />
+              <label for="q44d">Un tipo de protocolo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 45 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa DTN en el contexto de Store-and-Forward?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45a" />
+              <label for="q45a">Data Transfer Network</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45b" />
+              <label for="q45b">Dynamic Transfer Node</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="correct" id="q45c" />
+              <label for="q45c"
+                >Delay-Tolerant Networks (redes tolerantes al retardo)</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q45" value="incorrect" id="q45d" />
+              <label for="q45d">Direct Transmission Network</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 46 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Para qué se habilita el protocolo Spanning Tree (STP)?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46a" />
+              <label for="q46a">Para crear VLANs automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46b" />
+              <label for="q46b">Para aumentar la velocidad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="correct" id="q46c" />
+              <label for="q46c"
+                >Para evitar bucles en topologías redundantes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q46" value="incorrect" id="q46d" />
+              <label for="q46d">Para cifrar el tráfico</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 47 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué se crea en el router para cada VLAN en un enlace trunk?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47a" />
+              <label for="q47a">Una VLAN separada</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47b" />
+              <label for="q47b">Un puerto físico adicional</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="correct" id="q47c" />
+              <label for="q47c">Una subinterfaz</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q47" value="incorrect" id="q47d" />
+              <label for="q47d">Una tabla de enrutamiento</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 48 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué característica tiene la VLAN nativa en un trunk?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q48" value="incorrect" id="q48a" />
+              <label for="q48a">Siempre es la VLAN 1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q48" value="incorrect" id="q48b" />
+              <label for="q48b">Se cifra automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q48" value="correct" id="q48c" />
+              <label for="q48c">No lleva etiqueta en las tramas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q48" value="incorrect" id="q48d" />
+              <label for="q48d"
+                >Solo transporta tráfico de administración</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 49 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la fórmula general para calcular combinaciones con n bits?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q49" value="incorrect" id="q49a" />
+              <label for="q49a">n^2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q49" value="correct" id="q49b" />
+              <label for="q49b">2^n</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q49" value="incorrect" id="q49c" />
+              <label for="q49c">2*n</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q49" value="incorrect" id="q49d" />
+              <label for="q49d">n!</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 50 -->
+        <div class="question" data-type="multiple">
+          <h3>¿De qué lado se toman los bits prestados para crear subredes?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q50" value="correct" id="q50a" />
+              <label for="q50a"
+                >De izquierda a derecha de la parte de host</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q50" value="incorrect" id="q50b" />
+              <label for="q50b"
+                >De derecha a izquierda de la parte de host</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q50" value="incorrect" id="q50c" />
+              <label for="q50c">Del centro hacia los extremos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q50" value="incorrect" id="q50d" />
+              <label for="q50d">Aleatoriamente según necesidad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 51 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué operaciones puede realizar un switch en modo cliente VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q51" value="correct" id="q51a" />
+              <label for="q51a"
+                >Recibir actualizaciones VTP y sincronizar información
+                VLAN</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q51" value="incorrect" id="q51b" />
+              <label for="q51b">Crear, eliminar y modificar VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q51" value="incorrect" id="q51c" />
+              <label for="q51c">Solo reenviar información VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q51" value="incorrect" id="q51d" />
+              <label for="q51d">Funcionar como servidor VTP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 52 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué requisito deben cumplir dos switches para compartir información
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q52" value="incorrect" id="q52a" />
+              <label for="q52a">Tener la misma velocidad de puerto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q52" value="incorrect" id="q52b" />
+              <label for="q52b">Usar el mismo fabricante</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q52" value="correct" id="q52c" />
+              <label for="q52c">Pertenecer al mismo dominio VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q52" value="incorrect" id="q52d" />
+              <label for="q52d">Estar físicamente conectados</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 53 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el objetivo del VTP pruning?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53a" />
+              <label for="q53a">Eliminar todas las VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53b" />
+              <label for="q53b">Reducir el número de switches</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="correct" id="q53c" />
+              <label for="q53c"
+                >Filtrar tráfico innecesario de VLANs que no tienen puertos
+                activos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53d" />
+              <label for="q53d">Aumentar la velocidad de la red</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 54 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué versiones del protocolo VTP existen según el material?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54a" />
+              <label for="q54a">Solo versión 1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54b" />
+              <label for="q54b">Versiones 1 y 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="correct" id="q54c" />
+              <label for="q54c">Versiones 1, 2 y 3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54d" />
+              <label for="q54d">Versiones 1, 2, 3 y 4</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 55 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué caracteriza a las VLAN estáticas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55a" />
+              <label for="q55a">Se configuran automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="correct" id="q55b" />
+              <label for="q55b"
+                >Los puertos se asignan estáticamente a una VLAN y mantienen su
+                configuración</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55c" />
+              <label for="q55c">Cambian según el tráfico de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55d" />
+              <label for="q55d">Solo funcionan con direcciones MAC</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 56 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuántos niveles de clasificación tienen las VLANs según la
+            jerarquía OSI?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56a" />
+              <label for="q56a">3 niveles</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="correct" id="q56b" />
+              <label for="q56b">4 niveles principales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56c" />
+              <label for="q56c">5 niveles</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56d" />
+              <label for="q56d">6 niveles</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 57 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué caracteriza a las VLAN de nivel 1 (por puerto)?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q57" value="correct" id="q57a" />
+              <label for="q57a"
+                >Se especifica qué puertos del switch pertenecen a la
+                VLAN</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57b" />
+              <label for="q57b">Se basan únicamente en direcciones MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57c" />
+              <label for="q57c"
+                >Solo funcionan con protocolos específicos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57d" />
+              <label for="q57d">Requieren direcciones IP fijas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 58 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la ventaja principal de las VLAN por direcciones MAC?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58a" />
+              <label for="q58a">Mayor velocidad de procesamiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="correct" id="q58b" />
+              <label for="q58b"
+                >No requiere reconfiguración si el usuario cambia de ubicación
+                física</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58c" />
+              <label for="q58c">Menor consumo de recursos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58d" />
+              <label for="q58d">Mayor seguridad automática</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 59 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cómo se determinan las VLAN de nivel 2 por tipo de protocolo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59a" />
+              <label for="q59a">Por la dirección IP del dispositivo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="correct" id="q59b" />
+              <label for="q59b"
+                >Por el contenido del campo tipo de protocolo de la trama
+                MAC</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59c" />
+              <label for="q59c">Por la velocidad de transmisión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59d" />
+              <label for="q59d">Por el fabricante del equipo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 60 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es el filtrado de trama en VLANs?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60a" />
+              <label for="q60a">Un tipo de cable especial</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="correct" id="q60b" />
+              <label for="q60b"
+                >Una técnica que examina información específica de cada
+                trama</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60c" />
+              <label for="q60c">Un protocolo de enrutamiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60d" />
+              <label for="q60d">Un método de cifrado</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 61 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el ID mínimo para VLANs de rango extendido?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61a" />
+              <label for="q61a">1000</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61b" />
+              <label for="q61b">1005</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="correct" id="q61c" />
+              <label for="q61c">1006 (mayor a 1005)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61d" />
+              <label for="q61d">2000</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 62 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué archivo se guardan las configuraciones VLAN del VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62a" />
+              <label for="q62a">config.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62b" />
+              <label for="q62b">switch.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="correct" id="q62c" />
+              <label for="q62c">vlan.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62d" />
+              <label for="q62d">vtp.dat</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 63 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué la conmutación sin fragmentos almacena exactamente 64
+            bytes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63a" />
+              <label for="q63a">Es el tamaño estándar de los switches</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="correct" id="q63b" />
+              <label for="q63b"
+                >La mayoría de errores y colisiones ocurren en los primeros 64
+                bytes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63c" />
+              <label for="q63c">Es el límite máximo de memoria</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63d" />
+              <label for="q63d">Es un requisito del protocolo Ethernet</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 64 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué técnica deben utilizar los switches para habilitar conmutación
+            multicapa?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64a" />
+              <label for="q64a">Cut-Through únicamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="correct" id="q64b" />
+              <label for="q64b"
+                >Store-and-Forward porque debe recibir toda la trama</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64c" />
+              <label for="q64c">Fragment-Free solamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64d" />
+              <label for="q64d">Adaptive Cut-Through</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 65 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la diferencia fundamental entre un switch de capa 3 y un
+            router?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65a" />
+              <label for="q65a">No hay diferencias</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65b" />
+              <label for="q65b">El router es más rápido</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="correct" id="q65c" />
+              <label for="q65c"
+                >Los switches de capa 3 tienen hardware optimizado para
+                velocidad de capa 2</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65d" />
+              <label for="q65d">Solo el router puede enrutar</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 66 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué controlaba el protocolo CSMA/CD en Ethernet original?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66a" />
+              <label for="q66a">La velocidad de los cables</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66b" />
+              <label for="q66b">Las direcciones MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="correct" id="q66c" />
+              <label for="q66c"
+                >El acceso al medio compartido en topología de bus</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66d" />
+              <label for="q66d">El enrutamiento entre redes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 67 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo evolucionó Ethernet desde su topología original?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67a" />
+              <label for="q67a">De estrella a bus</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67b" />
+              <label for="q67b">De anillo a bus</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="correct" id="q67c" />
+              <label for="q67c"
+                >De bus con cable coaxial compartido a estrella con
+                switches</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67d" />
+              <label for="q67d">De malla a anillo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 68 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué problema crea el spanning tree en la topología de red?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68a" />
+              <label for="q68a">Reduce la seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68b" />
+              <label for="q68b">Aumenta los costos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="correct" id="q68c" />
+              <label for="q68c"
+                >Los switches centrales se convierten en cuellos de
+                botella</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68d" />
+              <label for="q68d">Elimina la redundancia</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 69 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué fenómeno se debe evitar en redes con switches redundantes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69a" />
+              <label for="q69a">Colisiones tardías</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69b" />
+              <label for="q69b">Pérdida de paquetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="correct" id="q69c" />
+              <label for="q69c">Tormentas broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69d" />
+              <label for="q69d">Fragmentación excesiva</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 70 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el ejemplo de red institucional, ¿cuáles son los tres grupos
+            típicos mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70a" />
+              <label for="q70a">Directores, secretarios y estudiantes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="correct" id="q70b" />
+              <label for="q70b">Alumnos, profesores y administración</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70c" />
+              <label for="q70c">Técnicos, usuarios y gerentes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70d" />
+              <label for="q70d">Ventas, producción y contabilidad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 71 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué indica el comando "encapsulation dot1q" en la configuración del
+            router?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71a" />
+              <label for="q71a">Tipo de cable a utilizar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="correct" id="q71b" />
+              <label for="q71b">Protocolo de etiquetado VLAN IEEE 802.1Q</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71c" />
+              <label for="q71c">Velocidad de la interfaz</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71d" />
+              <label for="q71d">Dirección IP estática</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 72 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué se restan 2 combinaciones en el cálculo de subredes
+            válidas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72a" />
+              <label for="q72a">Por limitaciones del hardware</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="correct" id="q72b" />
+              <label for="q72b"
+                >Para no confundir dirección de red con dirección de
+                broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72c" />
+              <label for="q72c">Por restricciones del protocolo TCP/IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72d" />
+              <label for="q72d">Para reservar direcciones especiales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 73 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué se restan 2 direcciones en el cálculo de hosts válidos?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73a" />
+              <label for="q73a">Por limitaciones de memoria</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="correct" id="q73b" />
+              <label for="q73b"
+                >Primera es dirección de subred, última es dirección de
+                broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73c" />
+              <label for="q73c">Para direcciones de gateway y DNS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73d" />
+              <label for="q73d">Por restricciones de seguridad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 74 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué octeto se usa principalmente para la segmentación en el ejemplo
+            1 del anexo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74a" />
+              <label for="q74a">Primer octeto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="correct" id="q74b" />
+              <label for="q74b">Segundo octeto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74c" />
+              <label for="q74c">Tercer octeto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74d" />
+              <label for="q74d">Cuarto octeto</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 75 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la diferencia principal entre el ejemplo 1 y 2 del anexo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75a" />
+              <label for="q75a">El tipo de clase de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="correct" id="q75b" />
+              <label for="q75b"
+                >El número de octetos usados para segmentación</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75c" />
+              <label for="q75c">La máscara de red original</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75d" />
+              <label for="q75d">El número total de hosts</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 76 -->
+        <div class="question" data-type="multiple">
+          <h3>En la notación 75.32.0.0/12, ¿qué significa el /12?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76a" />
+              <label for="q76a">12 subredes disponibles</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76b" />
+              <label for="q76b">12 hosts por subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="correct" id="q76c" />
+              <label for="q76c"
+                >12 bits totales para direccionamiento de red</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76d" />
+              <label for="q76d">12 octetos en la dirección</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 77 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es el propósito principal de los ejercicios propuestos en el
+            anexo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77a" />
+              <label for="q77a">Solo practicar conversiones binarias</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="correct" id="q77b" />
+              <label for="q77b"
+                >Aplicar el proceso completo de segmentación con diferentes
+                escenarios</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77c" />
+              <label for="q77c">Memorizar fórmulas matemáticas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77d" />
+              <label for="q77d">Comparar diferentes clases de redes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 78 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el ejercicio 1 del anexo (20.0.0.0/8 con 18 bits de subred),
+            ¿cuántos bits quedan para hosts?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78a" />
+              <label for="q78a">8 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78b" />
+              <label for="q78b">10 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="correct" id="q78c" />
+              <label for="q78c">14 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78d" />
+              <label for="q78d">16 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 79 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Para el ejercicio 2 del anexo (30 hosts por subred), ¿cuántos bits
+            mínimo se necesitan para hosts?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79a" />
+              <label for="q79a">4 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="correct" id="q79b" />
+              <label for="q79b">5 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79c" />
+              <label for="q79c">6 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79d" />
+              <label for="q79d">7 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 80 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Para dividir 192.168.0.0/24 en 7 subredes, ¿cuántos bits se deben
+            prestar?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80a" />
+              <label for="q80a">2 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="correct" id="q80b" />
+              <label for="q80b">3 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80c" />
+              <label for="q80c">4 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80d" />
+              <label for="q80d">5 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 81 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es el método más rápido para calcular la dirección de
+            broadcast de una subred?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81a" />
+              <label for="q81a"
+                >Convertir todo a binario y poner 1s en hosts</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="correct" id="q81b" />
+              <label for="q81b"
+                >Ver la siguiente dirección de subred y restar 1</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81c" />
+              <label for="q81c">Sumar 255 a la dirección de subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81d" />
+              <label for="q81d">Multiplicar por 2 la dirección de subred</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 82 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo se obtiene la dirección del primer host en una subred?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q82" value="correct" id="q82a" />
+              <label for="q82a">Sumar 1 a la dirección de subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82b" />
+              <label for="q82b">Restar 1 a la dirección de broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82c" />
+              <label for="q82c">Usar la misma dirección de subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82d" />
+              <label for="q82d">Sumar 2 a la dirección de subred</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 83 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo se obtiene la dirección del último host en una subred?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83a" />
+              <label for="q83a">Usar la dirección de broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="correct" id="q83b" />
+              <label for="q83b">Restar 1 a la dirección de broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83c" />
+              <label for="q83c">Sumar 1 a la dirección de subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83d" />
+              <label for="q83d">Restar 2 a la siguiente subred</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 84 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué operaciones puede realizar un switch en modo cliente VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q84" value="correct" id="q84a" />
+              <label for="q84a"
+                >Recibir actualizaciones VTP y sincronizar información
+                VLAN</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84b" />
+              <label for="q84b">Crear, eliminar y modificar VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84c" />
+              <label for="q84c">Solo reenviar información VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84d" />
+              <label for="q84d">Funcionar como servidor VTP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 85 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué requisito deben cumplir dos switches para compartir información
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85a" />
+              <label for="q85a">Tener la misma velocidad de puerto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85b" />
+              <label for="q85b">Usar el mismo fabricante</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="correct" id="q85c" />
+              <label for="q85c">Pertenecer al mismo dominio VTP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85d" />
+              <label for="q85d">Estar físicamente conectados</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 86 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el objetivo del VTP pruning?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86a" />
+              <label for="q86a">Eliminar todas las VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86b" />
+              <label for="q86b">Reducir el número de switches</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="correct" id="q86c" />
+              <label for="q86c"
+                >Filtrar tráfico innecesario de VLANs que no tienen puertos
+                activos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86d" />
+              <label for="q86d">Aumentar la velocidad de la red</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 87 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué versiones del protocolo VTP existen según el material?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87a" />
+              <label for="q87a">Solo versión 1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87b" />
+              <label for="q87b">Versiones 1 y 2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="correct" id="q87c" />
+              <label for="q87c">Versiones 1, 2 y 3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87d" />
+              <label for="q87d">Versiones 1, 2, 3 y 4</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 88 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué caracteriza a las VLAN estáticas?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88a" />
+              <label for="q88a">Se configuran automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="correct" id="q88b" />
+              <label for="q88b"
+                >Los puertos se asignan estáticamente a una VLAN y mantienen su
+                configuración</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88c" />
+              <label for="q88c">Cambian según el tráfico de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88d" />
+              <label for="q88d">Solo funcionan con direcciones MAC</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 89 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuántos niveles de clasificación tienen las VLANs según la
+            jerarquía OSI?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89a" />
+              <label for="q89a">3 niveles</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="correct" id="q89b" />
+              <label for="q89b">4 niveles principales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89c" />
+              <label for="q89c">5 niveles</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89d" />
+              <label for="q89d">6 niveles</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 90 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué caracteriza a las VLAN de nivel 1 (por puerto)?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q90" value="correct" id="q90a" />
+              <label for="q90a"
+                >Se especifica qué puertos del switch pertenecen a la
+                VLAN</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90b" />
+              <label for="q90b">Se basan únicamente en direcciones MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90c" />
+              <label for="q90c"
+                >Solo funcionan con protocolos específicos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90d" />
+              <label for="q90d">Requieren direcciones IP fijas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 91 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la ventaja principal de las VLAN por direcciones MAC?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91a" />
+              <label for="q91a">Mayor velocidad de procesamiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="correct" id="q91b" />
+              <label for="q91b"
+                >No requiere reconfiguración si el usuario cambia de ubicación
+                física</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91c" />
+              <label for="q91c">Menor consumo de recursos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91d" />
+              <label for="q91d">Mayor seguridad automática</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 92 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cómo se determinan las VLAN de nivel 2 por tipo de protocolo?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92a" />
+              <label for="q92a">Por la dirección IP del dispositivo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="correct" id="q92b" />
+              <label for="q92b"
+                >Por el contenido del campo tipo de protocolo de la trama
+                MAC</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92c" />
+              <label for="q92c">Por la velocidad de transmisión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92d" />
+              <label for="q92d">Por el fabricante del equipo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 93 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué es el filtrado de trama en VLANs?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93a" />
+              <label for="q93a">Un tipo de cable especial</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="correct" id="q93b" />
+              <label for="q93b"
+                >Una técnica que examina información específica de cada
+                trama</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93c" />
+              <label for="q93c">Un protocolo de enrutamiento</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93d" />
+              <label for="q93d">Un método de cifrado</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 94 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el ID mínimo para VLANs de rango extendido?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94a" />
+              <label for="q94a">1000</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94b" />
+              <label for="q94b">1005</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="correct" id="q94c" />
+              <label for="q94c">1006 (mayor a 1005)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94d" />
+              <label for="q94d">2000</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 95 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué archivo se guardan las configuraciones VLAN del VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95a" />
+              <label for="q95a">config.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95b" />
+              <label for="q95b">switch.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="correct" id="q95c" />
+              <label for="q95c">vlan.dat</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95d" />
+              <label for="q95d">vtp.dat</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 96 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué la conmutación sin fragmentos almacena exactamente 64
+            bytes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96a" />
+              <label for="q96a">Es el tamaño estándar de los switches</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="correct" id="q96b" />
+              <label for="q96b"
+                >La mayoría de errores y colisiones ocurren en los primeros 64
+                bytes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96c" />
+              <label for="q96c">Es el límite máximo de memoria</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96d" />
+              <label for="q96d">Es un requisito del protocolo Ethernet</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 97 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué técnica deben utilizar los switches para habilitar conmutación
+            multicapa?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97a" />
+              <label for="q97a">Cut-Through únicamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="correct" id="q97b" />
+              <label for="q97b"
+                >Store-and-Forward porque debe recibir toda la trama</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97c" />
+              <label for="q97c">Fragment-Free solamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97d" />
+              <label for="q97d">Adaptive Cut-Through</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 98 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuál es la diferencia fundamental entre un switch de capa 3 y un
+            router?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98a" />
+              <label for="q98a">No hay diferencias</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98b" />
+              <label for="q98b">El router es más rápido</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="correct" id="q98c" />
+              <label for="q98c"
+                >Los switches de capa 3 tienen hardware optimizado para
+                velocidad de capa 2</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98d" />
+              <label for="q98d">Solo el router puede enrutar</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 99 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué controlaba el protocolo CSMA/CD en Ethernet original?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99a" />
+              <label for="q99a">La velocidad de los cables</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99b" />
+              <label for="q99b">Las direcciones MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="correct" id="q99c" />
+              <label for="q99c"
+                >El acceso al medio compartido en topología de bus</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99d" />
+              <label for="q99d">El enrutamiento entre redes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 100 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo evolucionó Ethernet desde su topología original?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100a" />
+              <label for="q100a">De estrella a bus</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100b" />
+              <label for="q100b">De anillo a bus</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="correct" id="q100c" />
+              <label for="q100c"
+                >De bus con cable coaxial compartido a estrella con
+                switches</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100d" />
+              <label for="q100d">De malla a anillo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 101 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué problema crea el spanning tree en la topología de red?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101a" />
+              <label for="q101a">Reduce la seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101b" />
+              <label for="q101b">Aumenta los costos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="correct" id="q101c" />
+              <label for="q101c"
+                >Los switches centrales se convierten en cuellos de
+                botella</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101d" />
+              <label for="q101d">Elimina la redundancia</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 102 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué fenómeno se debe evitar en redes con switches redundantes?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102a" />
+              <label for="q102a">Colisiones tardías</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102b" />
+              <label for="q102b">Pérdida de paquetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="correct" id="q102c" />
+              <label for="q102c">Tormentas broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102d" />
+              <label for="q102d">Fragmentación excesiva</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 103 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el ejemplo de red institucional, ¿cuáles son los tres grupos
+            típicos mencionados?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103a" />
+              <label for="q103a">Directores, secretarios y estudiantes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="correct" id="q103b" />
+              <label for="q103b">Alumnos, profesores y administración</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103c" />
+              <label for="q103c">Técnicos, usuarios y gerentes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103d" />
+              <label for="q103d">Ventas, producción y contabilidad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 104 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué indica el comando "encapsulation dot1q" en la configuración del
+            router?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104a" />
+              <label for="q104a">Tipo de cable a utilizar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="correct" id="q104b" />
+              <label for="q104b"
+                >Protocolo de etiquetado VLAN IEEE 802.1Q</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104c" />
+              <label for="q104c">Velocidad de la interfaz</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104d" />
+              <label for="q104d">Dirección IP estática</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 105 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué se restan 2 combinaciones en el cálculo de subredes
+            válidas?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105a" />
+              <label for="q105a">Por limitaciones del hardware</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="correct" id="q105b" />
+              <label for="q105b"
+                >Para no confundir dirección de red con dirección de
+                broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105c" />
+              <label for="q105c">Por restricciones del protocolo TCP/IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105d" />
+              <label for="q105d">Para reservar direcciones especiales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 106 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Por qué se restan 2 direcciones en el cálculo de hosts válidos?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106a" />
+              <label for="q106a">Por limitaciones de memoria</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="correct" id="q106b" />
+              <label for="q106b"
+                >Primera es dirección de subred, última es dirección de
+                broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106c" />
+              <label for="q106c">Para direcciones de gateway y DNS</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106d" />
+              <label for="q106d">Por restricciones de seguridad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 107 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En el ejercicio 1 del anexo (20.0.0.0/8 con 18 bits de subred),
+            ¿cuántos bits quedan para hosts?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107a" />
+              <label for="q107a">8 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107b" />
+              <label for="q107b">10 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="correct" id="q107c" />
+              <label for="q107c">14 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107d" />
+              <label for="q107d">16 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 108 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Para el ejercicio 2 del anexo (30 hosts por subred), ¿cuántos bits
+            mínimo se necesitan para hosts?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108a" />
+              <label for="q108a">4 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="correct" id="q108b" />
+              <label for="q108b">5 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108c" />
+              <label for="q108c">6 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108d" />
+              <label for="q108d">7 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 109 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Para dividir 192.168.0.0/24 en 7 subredes, ¿cuántos bits se deben
+            prestar?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109a" />
+              <label for="q109a">2 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="correct" id="q109b" />
+              <label for="q109b">3 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109c" />
+              <label for="q109c">4 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109d" />
+              <label for="q109d">5 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 110 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Con qué frecuencia envían información los dispositivos VTP versión
+            2 en modo transparente?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110a" />
+              <label for="q110a">Cada minuto</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="correct" id="q110b" />
+              <label for="q110b">Cada 5 minutos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110c" />
+              <label for="q110c">Cada 10 minutos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110d" />
+              <label for="q110d">Cada 15 minutos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 111 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cuáles son los campos comunes en la cabecera de todos los paquetes
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111a" />
+              <label for="q111a">Solo versión y tipo de mensaje</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="correct" id="q111b" />
+              <label for="q111b"
+                >Versión del protocolo, tipo de mensaje, longitud del dominio y
+                nombre del dominio</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111c" />
+              <label for="q111c"
+                >Solo nombre de dominio y número de revisión</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111d" />
+              <label for="q111d">Únicamente información de autenticación</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 112 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿De cuántos bits es el número de configuración de revisión en VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112a" />
+              <label for="q112a">16 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="correct" id="q112b" />
+              <label for="q112b">32 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112c" />
+              <label for="q112c">64 bits</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112d" />
+              <label for="q112d">8 bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 113 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cómo se puede resetear el número de revisión VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113a" />
+              <label for="q113a">Reiniciando el switch</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113b" />
+              <label for="q113b">Solo con comandos especiales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="correct" id="q113c" />
+              <label for="q113c"
+                >Cambiando el nombre del dominio VTP y después
+                restablecerlo</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113d" />
+              <label for="q113d">No se puede resetear</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 114 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué información principal incluyen las publicaciones de resumen
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114a" />
+              <label for="q114a">Configuración completa de VLANs</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="correct" id="q114b" />
+              <label for="q114b"
+                >Nombre actual del dominio VTP y número de revisión</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114c" />
+              <label for="q114c">Solo direcciones MAC de dispositivos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114d" />
+              <label for="q114d">Únicamente información de seguridad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 115 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué casos un switch necesita solicitar publicaciones VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115a" />
+              <label for="q115a">Solo al encenderse</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115b" />
+              <label for="q115b">Únicamente cuando hay errores</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="correct" id="q115c" />
+              <label for="q115c"
+                >Cuando se resetea, cambia dominio o recibe número de revisión
+                mayor</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115d" />
+              <label for="q115d">Solo cuando cambia la configuración</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 116 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Con qué número empieza la secuencia en las publicaciones de
+            subconjunto VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116a" />
+              <label for="q116a">0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="correct" id="q116b" />
+              <label for="q116b">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116c" />
+              <label for="q116c">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116d" />
+              <label for="q116d">10</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 117 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué valor tiene el campo Code en las publicaciones de subconjunto
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117a" />
+              <label for="q117a">0x01</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="correct" id="q117b" />
+              <label for="q117b">0x02</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117c" />
+              <label for="q117c">0x03</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117d" />
+              <label for="q117d">0x04</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 118 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué valor tiene el campo Code en las solicitudes de publicación
+            VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118a" />
+              <label for="q118a">0x01</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118b" />
+              <label for="q118b">0x02</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="correct" id="q118c" />
+              <label for="q118c">0x03</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118d" />
+              <label for="q118d">0x04</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 119 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué VLANs NO pueden ser podadas por VTP pruning?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119a" />
+              <label for="q119a">VLAN 1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119b" />
+              <label for="q119b">VLANs 1-10</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="correct" id="q119c" />
+              <label for="q119c">VLANs 1002-1005</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119d" />
+              <label for="q119d">VLANs 1006-1010</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 120 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué contiene el campo "Updater Identity" en los paquetes VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120a" />
+              <label for="q120a">El nombre del switch</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="correct" id="q120b" />
+              <label for="q120b"
+                >La dirección IP del último switch que incrementó el número de
+                revisión</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120c" />
+              <label for="q120c">La dirección MAC del dispositivo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120d" />
+              <label for="q120d">El número de serie del equipo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 121 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Qué información proporciona el campo "Update Timestamp" en VTP?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121a" />
+              <label for="q121a">La hora actual del sistema</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="correct" id="q121b" />
+              <label for="q121b"
+                >La fecha y hora del último incremento del número de
+                revisión</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121c" />
+              <label for="q121c">El tiempo de funcionamiento del switch</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121d" />
+              <label for="q121d">La duración de la última actualización</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 122 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Para qué se utiliza el campo "Message Digest 5" en VTP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122a" />
+              <label for="q122a">Para comprimir los datos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122b" />
+              <label for="q122b">Para acelerar las transmisiones</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="correct" id="q122c" />
+              <label for="q122c"
+                >Para portar la contraseña VTP cuando se usa autenticación
+                MD5</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122d" />
+              <label for="q122d">Para identificar el tipo de switch</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 123 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué son los "runts" en el contexto de Ethernet?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123a" />
+              <label for="q123a">Paquetes de gran tamaño</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="correct" id="q123b" />
+              <label for="q123b"
+                >Tramas corruptas causadas por colisiones</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123c" />
+              <label for="q123c">Direcciones MAC inválidas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123d" />
+              <label for="q123d">Errores de configuración</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div class="results">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="score" id="score">0%</div>
+          <div class="score-details">
+            <span id="correctAnswers">0</span> respuestas correctas de
+            <span id="totalQuestionsResult">123</span>
+          </div>
+          <button class="btn btn-primary" onclick="restartQuiz()">
+            Reiniciar Cuestionario
+          </button>
+          <a href="index.html" class="btn btn-secondary"
+            >Volver a Conmutación y Redes</a
+          >
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="controls">
+          <button
+            class="btn btn-secondary"
+            id="prevBtn"
+            onclick="previousQuestion()"
+            disabled
+          >
+            Anterior
+          </button>
+          <div class="question-info">
+            <button
+              class="btn btn-primary"
+              id="checkBtn"
+              onclick="checkAnswer()"
+            >
+              Verificar Respuesta
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            id="nextBtn"
+            onclick="nextQuestion()"
+            disabled
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentQuestionIndex = 0;
+      let questions = [];
+      let userAnswers = [];
+      let correctAnswers = 0;
+      let questionOrder = [];
+      let originalQuestions = [];
+
+      function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+
+      function shuffleOptions(question) {
+        const options = question.querySelectorAll(".option");
+        if (options.length > 0) {
+          const optionsArray = Array.from(options);
+          const shuffledOptions = shuffleArray(optionsArray);
+
+          const optionsList = question.querySelector(".options");
+          optionsList.innerHTML = "";
+
+          shuffledOptions.forEach((option) => {
+            optionsList.appendChild(option);
+          });
+        }
+      }
+
+      function initializeQuestionOrder() {
+        questionOrder = Array.from({ length: questions.length }, (_, i) => i);
+        questionOrder = shuffleArray(questionOrder);
+        originalQuestions = Array.from(questions);
+
+        originalQuestions.forEach((question) => {
+          const questionType = question.dataset.type;
+          if (questionType === "multiple") {
+            shuffleOptions(question);
+          }
+        });
+      }
+
+      function getCurrentQuestion() {
+        const actualIndex = questionOrder[currentQuestionIndex];
+        return originalQuestions[actualIndex];
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        questions = document.querySelectorAll(".question");
+        initializeQuiz();
+      });
+
+      function initializeQuiz() {
+        userAnswers = new Array(questions.length).fill(null);
+        currentQuestionIndex = 0;
+        correctAnswers = 0;
+
+        initializeQuestionOrder();
+
+        document.querySelector(".results").style.display = "none";
+        showQuestion(0);
+
+        document.getElementById("totalQuestions").textContent =
+          questions.length;
+        updateProgress();
+      }
+
+      function showQuestion(index) {
+        originalQuestions.forEach((q) => {
+          q.classList.remove("active");
+        });
+
+        const currentQuestion = getCurrentQuestion();
+        if (currentQuestion) {
+          currentQuestion.classList.add("active");
+        }
+
+        // Corregir esta línea
+        document.getElementById("currentQuestion").textContent = index + 1;
+        updateButtons();
+        updateProgress();
+      }
+
+      function updateButtons() {
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const checkBtn = document.getElementById("checkBtn");
+
+        prevBtn.disabled = currentQuestionIndex === 0;
+
+        if (currentQuestionIndex === questions.length - 1) {
+          nextBtn.textContent = "Ver Resultados";
+          nextBtn.disabled = false;
+        } else {
+          nextBtn.textContent = "Siguiente";
+          nextBtn.disabled = userAnswers[currentQuestionIndex] === null;
+        }
+
+        if (userAnswers[currentQuestionIndex] !== null) {
+          checkBtn.style.display = "none";
+          nextBtn.disabled = false;
+        } else {
+          checkBtn.style.display = "inline-block";
+        }
+      }
+
+      function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      function previousQuestion() {
+        if (currentQuestionIndex > 0) {
+          currentQuestionIndex--;
+          showQuestion(currentQuestionIndex);
+        }
+      }
+
+      function nextQuestion() {
+        if (currentQuestionIndex < questions.length - 1) {
+          currentQuestionIndex++;
+          showQuestion(currentQuestionIndex);
+        } else {
+          showResults();
+        }
+      }
+
+      function checkAnswer() {
+        const currentQuestion = getCurrentQuestion();
+        const selectedOption = currentQuestion.querySelector(
+          'input[type="radio"]:checked'
+        );
+
+        if (!selectedOption) {
+          alert("Por favor selecciona una respuesta");
+          return;
+        }
+
+        const userAnswer = selectedOption.value;
+        const isCorrect = selectedOption.value === "correct";
+
+        const options = currentQuestion.querySelectorAll(".option");
+        options.forEach((option) => {
+          const input = option.querySelector('input[type="radio"]');
+          if (input.value === "correct") {
+            option.classList.add("correct");
+          } else if (input.checked && input.value === "incorrect") {
+            option.classList.add("incorrect");
+          }
+        });
+
+        userAnswers[currentQuestionIndex] = {
+          answer: userAnswer,
+          correct: isCorrect,
+        };
+
+        if (isCorrect) {
+          correctAnswers++;
+        }
+
+        showFeedback(isCorrect);
+        updateButtons();
+      }
+
+      function showFeedback(isCorrect) {
+        const currentQuestion = getCurrentQuestion();
+        const feedback = currentQuestion.querySelector(".feedback");
+
+        feedback.style.display = "block";
+        feedback.className =
+          "feedback " + (isCorrect ? "correct" : "incorrect");
+        feedback.textContent = isCorrect
+          ? "¡Correcto! Bien hecho."
+          : "Incorrecto. Revisa el material de estudio.";
+      }
+
+      function showResults() {
+        const currentQuestion = getCurrentQuestion();
+        currentQuestion.classList.remove("active");
+
+        const resultsDiv = document.querySelector(".results");
+        resultsDiv.style.display = "block";
+
+        const percentage = Math.round(
+          (correctAnswers / questions.length) * 100
+        );
+
+        document.getElementById("score").textContent = percentage + "%";
+        document.getElementById("correctAnswers").textContent = correctAnswers;
+        document.getElementById("totalQuestionsResult").textContent =
+          questions.length;
+
+        document.querySelector(".controls").style.display = "none";
+        document.querySelector(".question-counter").style.display = "none";
+        document.querySelector(".quiz-progress").style.display = "none";
+      }
+
+      function restartQuiz() {
+        correctAnswers = 0;
+        userAnswers = new Array(questions.length).fill(null);
+        currentQuestionIndex = 0;
+
+        originalQuestions.forEach((question) => {
+          question.classList.remove("active");
+
+          const options = question.querySelectorAll(".option");
+          options.forEach((option) => {
+            option.classList.remove("correct", "incorrect");
+          });
+
+          const radios = question.querySelectorAll('input[type="radio"]');
+          radios.forEach((radio) => {
+            radio.checked = false;
+          });
+
+          const feedback = question.querySelector(".feedback");
+          feedback.style.display = "none";
+        });
+
+        document.querySelector(".controls").style.display = "flex";
+        document.querySelector(".question-counter").style.display = "block";
+        document.querySelector(".quiz-progress").style.display = "block";
+
+        initializeQuiz();
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft" && currentQuestionIndex > 0) {
+          previousQuestion();
+        } else if (
+          e.key === "ArrowRight" &&
+          currentQuestionIndex < questions.length - 1
+        ) {
+          nextQuestion();
+        } else if (e.key === "Enter") {
+          const checkBtn = document.getElementById("checkBtn");
+          if (checkBtn.style.display !== "none") {
+            checkAnswer();
+          } else {
+            nextQuestion();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
