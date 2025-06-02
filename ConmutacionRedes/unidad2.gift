@@ -1,0 +1,1185 @@
+// ===== PREGUNTAS DE OPCIÓN MÚLTIPLE - UNIDAD 2 SEGMENTACIÓN =====
+
+::Concepto segmento definición::¿Qué es un segmento en el contexto de redes?{
+=Un bus lineal al que están conectadas varias estaciones y que termina en los extremos
+~Un dispositivo para conectar múltiples redes
+~Una técnica de cifrado para proteger datos
+~Un protocolo de enrutamiento dinámico
+}
+
+::Propósito segmentación intranet::¿Cuál es el principal propósito de segmentar una intranet?{
+~Reducir el costo de los equipos de red
+~Mejorar la seguridad mediante cifrado
+=Dividirla en subredes para aumentar el número de computadoras y/o el rendimiento
+~Cambiar el protocolo de comunicación utilizado
+}
+
+::Dispositivo inteligente segmentación::¿Por qué debe ser inteligente el dispositivo usado para segmentar una red?{
+~Para cifrar la información transmitida
+=Para decidir hacia qué segmento debe enviar la información recibida
+~Para aumentar la velocidad de transmisión
+~Para reducir el consumo eléctrico
+}
+
+::Motivos segmentación red::¿Cuáles son los dos motivos principales para segmentar una intranet?{
+~Reducir costos y aumentar seguridad
+=Sobrepasar el número de nodos que la topología permite y mejorar el rendimiento
+~Cambiar protocolos y actualizar hardware
+~Implementar cifrado y control de acceso
+}
+
+::Switch definición OSI::¿En qué capa del modelo OSI opera un switch?{
+~Capa 1 (Física)
+=Capa 2 (Enlace de datos)
+~Capa 3 (Red)
+~Capa 4 (Transporte)
+}
+
+::Switch función principal::¿Cuál es la función principal de un switch?{
+~Enrutar paquetes entre diferentes redes
+=Interconectar dos o más segmentos de red según la dirección MAC de destino
+~Convertir señales analógicas a digitales
+~Proporcionar acceso a Internet
+}
+
+::Store-and-Forward característica::¿Qué característica define a los switches Store-and-Forward?{
+~Envían las tramas inmediatamente al recibirlas
+=Guardan cada trama en un búfer antes del intercambio hacia el puerto de salida
+~Solo procesan la dirección MAC de destino
+~Operan únicamente en modo half-duplex
+}
+
+::Cut-Through objetivo diseño::¿Cuál fue el objetivo principal del diseño de los switches Cut-Through?{
+~Aumentar la seguridad de la red
+~Mejorar la detección de errores
+=Reducir la latencia o retardo en el procesamiento
+~Incrementar el número de puertos disponibles
+}
+
+::Fragment-Free bytes minimos::¿Cuántos bytes lee siempre un switch Fragment-Free antes de reenviar la trama?{
+~32 bytes
+~48 bytes
+=64 bytes
+~128 bytes
+}
+
+::Adaptive Cut-Through característica::¿Qué característica define a los switches Adaptive Cut-Through?{
+~Solo operan en modo Store-and-Forward
+~Únicamente soportan el modo Cut-Through
+=Pueden cambiar entre modos Store-and-Forward y Cut-Through según condiciones de red
+~Operan exclusivamente con protocolos propietarios
+}
+
+::Switch capa 2 función::¿Cuál es la principal función de los switches de capa 2?{
+~Enrutar paquetes entre diferentes redes IP
+=Dividir una LAN en múltiples dominios de colisión
+~Proporcionar servicios de DHCP
+~Implementar firewalls de red
+}
+
+::Switch capa 3 funciones adicionales::¿Qué funciones adicionales incorporan los switches de capa 3?{
+~Solo funciones de seguridad avanzada
+=Funciones de enrutamiento y determinación de camino basado en información de capa 3
+~Únicamente soporte para protocolos inalámbricos
+~Solo capacidades de monitoreo de red
+}
+
+::VLAN definición::¿Qué es una VLAN?{
+~Un tipo de cable especial para redes
+~Un protocolo de enrutamiento avanzado
+=Un método de crear redes lógicas independientes dentro de una misma red física
+~Un dispositivo físico para segmentar redes
+}
+
+::VLAN ventaja principal::¿Cuál es una de las principales ventajas de las VLANs?{
+~Eliminar completamente los switches de la red
+~Aumentar la velocidad física de transmisión
+=Reducir el tamaño del dominio de difusión y ayudar en la administración
+~Reemplazar todos los cables de red
+}
+
+::VLAN flexibilidad::¿Qué hace que las VLANs sean extremadamente flexibles?{
+~Se configuran únicamente mediante hardware especializado
+=Los administradores las configuran mediante software en lugar de hardware
+~Requieren cables especiales para su funcionamiento
+~Solo funcionan con equipos de un fabricante específico
+}
+
+::Conmutación virtual cut-through inicio::¿Cuándo empieza a retransmitir un switch que usa conmutación virtual cut-through?{
+~Al recibir completamente toda la trama
+=Al identificar la dirección del nodo destino, antes de recibir la trama completa
+~Solo después de verificar el CRC completo
+~Únicamente en horarios programados
+}
+
+::Conmutación sin fragmentos bytes::¿Cuántos bytes almacena un switch en modo sin fragmentos antes de reenviar?{
+~32 bytes
+~48 bytes
+=64 bytes
+~128 bytes
+}
+
+::Bucles de red consecuencia::¿Qué provocan los bucles de red en switches?{
+~Mejoran el rendimiento de la red
+~Aumentan la seguridad de los datos
+=Inundaciones de tráfico y fallo de las comunicaciones
+~Reducen el consumo de energía
+}
+
+::Switch capa 4 diferencia::¿Qué diferencia a los switches de capa 4 de los de capa 3?{
+~Solo operan con protocolos inalámbricos
+~Únicamente soportan IPv6
+=Implementan políticas y filtros basados en información de capa 4 o superiores
+~Solo funcionan en redes pequeñas
+}
+
+::Repetidores nivel conexión::¿A qué nivel proporcionan conexión los repetidores?{
+=Nivel físico, en el mismo segmento
+~Nivel de enlace entre segmentos
+~Nivel de red entre redes diferentes
+~Nivel de aplicación
+}
+
+::Bridges nivel conexión::¿A qué nivel proporcionan conexión los bridges?{
+~Nivel físico únicamente
+=Nivel de enlace entre dos segmentos
+~Nivel de red exclusivamente
+~Nivel de sesión
+}
+
+::Routers nivel conexión::¿A qué nivel proporcionan conexión los routers?{
+~Nivel físico
+~Nivel de enlace de datos
+=Nivel de red
+~Nivel de presentación
+}
+
+::Gateways nivel conexión::¿A qué nivel proporcionan conexión los gateways?{
+~Nivel físico
+~Nivel de enlace
+~Nivel de red
+=Nivel de presentación, entre dos redes distintas
+}
+
+::Tabla MAC switch aprendizaje::¿Cómo aprende un switch las direcciones MAC?{
+~Se configuran manualmente todas las direcciones
+=Almacena automáticamente las direcciones MAC de dispositivos alcanzables por cada puerto
+~Solo funciona con direcciones preconfiguradas
+~Utiliza un servidor central de direcciones
+}
+
+::Switch vs concentrador diferencia::¿Cuál es la principal diferencia entre un switch y un concentrador?{
+~El switch es más barato que el concentrador
+=En un switch la información va del puerto origen al puerto destino específico
+~El concentrador tiene más puertos que el switch
+~No hay diferencias significativas entre ambos
+}
+
+::CRC función Store-and-Forward::¿Para qué se utiliza el CRC en switches Store-and-Forward?{
+~Para identificar la dirección MAC
+~Para determinar la ruta más rápida
+=Para verificar si la trama tiene errores antes de reenviarla
+~Para contar el número de saltos
+}
+
+::Cut-Through problema principal::¿Cuál es el principal problema de los switches Cut-Through?{
+~Son más lentos que Store-and-Forward
+=No detectan tramas corruptas causadas por colisiones
+~Consumen más energía
+~Solo funcionan con cables específicos
+}
+
+::VLAN traslado computadora::¿Qué ventaja ofrece VLAN cuando se traslada físicamente un ordenador?{
+~Se mejora automáticamente la velocidad de red
+=Puede permanecer en la misma VLAN sin cambiar la configuración IP
+~Se reduce el consumo eléctrico
+~Se actualiza automáticamente el hardware
+}
+
+::Ethernet años 80 velocidad::¿Qué velocidad ofrecía Ethernet en los años ochenta?{
+~1 Mbps
+~5 Mbps
+=10 Mbps
+~100 Mbps
+}
+
+::Ethernet topología original::¿Qué topología tenían originalmente las redes Ethernet?{
+~Topología en estrella
+=Topología en bus con cable coaxial compartido
+~Topología en anillo
+~Topología en malla
+}
+
+::CSMA/CD función::¿Qué controla el protocolo CSMA/CD en Ethernet?{
+~La velocidad de transmisión
+~El direccionamiento IP
+=El acceso al medio compartido
+~La seguridad de los datos
+}
+
+::Limitaciones redes locales tipos::¿Cuáles son las principales limitaciones de las redes locales mencionadas en el material?{
+~Solo limitaciones de velocidad y costo
+~Únicamente problemas de seguridad
+=Limitaciones en número de host, distancia, tipos de nodos, acceso y comunicación
+~Solo limitaciones de hardware
+}
+
+::Soluciones ampliar intranets naturaleza::¿Qué dos naturalezas de soluciones se utilizan para resolver las limitaciones de las redes locales?{
+~Solo soluciones de costo y tiempo
+=Software y hardware (elementos de interconexión y software de servicios)
+~Únicamente soluciones físicas
+~Solo protocolos de comunicación
+}
+
+::RJ-45 pines cantidad::¿Cuántos pines tiene un conector RJ-45?{
+~4 pines
+~6 pines
+=8 pines
+~12 pines
+}
+
+::RJ-45 vs RJ-11 diferencia::¿Cuál es la principal diferencia entre RJ-45 y RJ-11?{
+~No hay diferencias
+~RJ-11 es más ancho
+=RJ-45 es más ancho que RJ-11
+~Solo difieren en el color
+}
+
+::Switch aprendizaje MAC proceso::¿Qué sucede cuando un equipo se conecta directamente a un puerto de un switch?{
+~El switch rechaza la conexión
+=El switch almacena automáticamente su dirección MAC
+~Se requiere configuración manual
+~El equipo debe solicitar permiso
+}
+
+::Switches interconectados MAC::Cuando se conectan dos switches, ¿qué aprende cada switch en el puerto de interconexión?{
+~Solo su propia dirección MAC
+~Las direcciones IP de los dispositivos
+=Las direcciones MAC de los dispositivos del otro switch
+~Únicamente información de enrutamiento
+}
+
+::Store-and-Forward ventajas::¿Cuáles son las principales ventajas de los switches Store-and-Forward?{
+~Mayor velocidad de procesamiento
+=Operaciones sin error y mayor confianza de la red
+~Menor costo de implementación
+~Menor consumo de energía
+}
+
+::Store-and-Forward desventaja::¿Cuál es la principal desventaja de los switches Store-and-Forward?{
+~Mayor costo económico
+~Menor seguridad
+=Tiempo de demora proporcional al tamaño de las tramas
+~Incompatibilidad con protocolos estándar
+}
+
+::Cut-Through bytes lectura::¿Cuántos bytes lee un switch Cut-Through para tomar la decisión de enrutamiento?{
+~4 bytes
+=6 bytes (dirección MAC destino)
+~8 bytes
+~12 bytes
+}
+
+::Fragment-Free ventaja sobre Cut-Through::¿Qué ventaja tiene Fragment-Free sobre Cut-Through tradicional?{
+~Mayor velocidad de procesamiento
+=Evita el enrutamiento de runts al leer mínimo 64 bytes
+~Menor consumo de memoria
+~Mayor compatibilidad con protocolos
+}
+
+::Adaptive Cut-Through inteligencia::¿Qué característica hace "inteligente" a un switch Adaptive Cut-Through?{
+~Solo funciona con un modo fijo
+=Puede cambiar automáticamente entre modos según el número de tramas con error
+~Requiere intervención manual constante
+~Solo procesa un tipo de trama
+}
+
+::Cut-Through aplicación recomendada::¿Dónde se recomiendan más los switches Cut-Through?{
+=Pequeños grupos de trabajo y departamentos donde se necesita buen throughput
+~Redes corporativas grandes
+~Centros de datos principales
+~Conexiones WAN
+}
+
+::Store-and-Forward aplicación recomendada::¿Dónde se utilizan principalmente los switches Store-and-Forward?{
+~Solo en redes domésticas
+~Únicamente en redes inalámbricas
+=En redes corporativas donde es necesario control de errores
+~Solo en conexiones punto a punto
+}
+
+::Switch capa 2 limitación broadcasts::¿Qué limitación tienen los switches de capa 2 respecto a broadcasts?{
+~Los bloquean completamente
+=No consiguen filtrar difusiones, multicasts ni tramas de destino desconocido
+~Los amplifican excesivamente
+~Solo procesan broadcasts IPv6
+}
+
+::Switch capa 3 VLAN comunicación::¿Qué capacidad especial tienen algunos switches de capa 3 respecto a VLANs?{
+~Solo pueden crear VLANs simples
+=Permiten comunicación entre diferentes VLANs sin router externo
+~Eliminan completamente las VLANs
+~Solo soportan una VLAN por switch
+}
+
+::Switch capa 3 escalabilidad::¿Por qué se considera que un switch de capa 3 es más escalable que un router?{
+~Tiene más puertos físicos
+=Sobrepone la función de enrutamiento encima del encaminamiento
+~Es más barato de adquirir
+~Consume menos energía
+}
+
+::Switch capa 3 packet-by-packet características::¿Qué característica define a un switch de capa 3 packet-by-packet?{
+=Es un caso especial de Store-and-Forward que calcula CRC y decodifica cabecera de red
+~Solo procesa paquetes de un tamaño específico
+~Únicamente trabaja con protocolos propietarios
+~Solo funciona en modo Cut-Through
+}
+
+::Switch capa 3 Cut-Through conexión::¿Qué establece un switch de capa 3 Cut-Through después de examinar las cabeceras?{
+~Una conexión inalámbrica
+~Una ruta estática permanente
+=Una conexión punto a punto a nivel 2 para alta transferencia
+~Un túnel cifrado
+}
+
+::MPOA significado::¿Qué significa MPOA en el contexto de switches de capa 3?{
+~Multi Protocol Online Access
+~Multiple Port Optical Adapter
+=Multi Protocol Over ATM
+~Main Protocol Operations Administrator
+}
+
+::MPOA características::¿Cuáles son las características del MPOA según el material?{
+~Simple y económico de implementar
+=Complejo, caro de implementar y limitado a backbones ATM
+~Solo funciona con Ethernet
+~Únicamente para redes pequeñas
+}
+
+::Switch capa 4 denominación alternativa::¿Cómo se denominan también los switches de capa 4?{
+~Layer 2 Plus
+=Layer 3+ (Layer 3 Plus)
+~Advanced Layer 2
+~Super Layer 3
+}
+
+::Switch capa 4 información adicional::¿Qué información adicional procesan los switches de capa 4?{
+~Solo direcciones MAC extendidas
+=Puertos TCP/UDP, SNMP, FTP y protocolos de capa 4 o superiores
+~Únicamente información de tiempo
+~Solo datos de ubicación geográfica
+}
+
+::Store-and-Forward técnica definición::¿Cómo se define la técnica Store-and-Forward?{
+~Técnica de cifrado de datos
+=Técnica de conmutación donde datos se envían a nodo intermedio y se retienen temporalmente
+~Método de compresión de información
+~Protocolo de autenticación
+}
+
+::Store-and-Forward verificación::¿Qué verifica cada nodo intermedio en Store-and-Forward antes de reenviar?{
+~La velocidad de transmisión
+~El origen del mensaje
+=La integridad del mensaje
+~El costo de transmisión
+}
+
+::Store-and-Forward aplicación redes::¿Para qué tipo de redes es más adecuada la técnica Store-and-Forward?{
+~Redes de tiempo real únicamente
+=Redes tolerantes al retardo (DTN) sin servicios en tiempo real
+~Solo redes de alta velocidad
+~Únicamente redes locales
+}
+
+::Store-and-Forward escenarios::¿En qué escenarios es especialmente útil Store-and-Forward?{
+~Solo en redes de baja latencia
+=Nodos geográficamente distantes, sin conectividad directa o alta tasa de errores
+~Únicamente en conexiones directas
+~Solo en redes de fibra óptica
+}
+
+::Paquete vs phit diferencia::¿Cuál es la diferencia entre paquete y phit en el contexto de transferencia?{
+~No hay diferencia, son sinónimos
+=Paquete es la unidad entre interfaces (nivel red), phit entre controladores (nivel físico)
+~Paquete es más pequeño que phit
+~Solo difieren en el protocolo usado
+}
+
+::Phit definición completa::¿Qué significa phit en el contexto de redes?{
+~Physical Internet Transfer
+~Packet Header Information Tag
+=Physical unit - unidad de información transferida por un enlace en un ciclo de red
+~Protocol Header Interface Type
+}
+
+::Subred concepto relación segmento::¿Cómo se denomina a cada segmento junto con las estaciones conectadas a él?{
+~Dominio de red
+~Zona de broadcast
+=Subred
+~Cluster de red
+}
+
+::Dispositivos interconexión bridges routers::¿Qué dispositivos se utilizan para interconectar varios segmentos?{
+~Solo repetidores
+~Únicamente hubs
+=Bridges o routers
+~Solo cables especiales
+}
+
+::Segmentación ventaja rendimiento::¿Cómo mejora el rendimiento la segmentación de una red?{
+~Aumenta la velocidad del cable
+=Permite comunicaciones simultáneas en diferentes segmentos
+~Reduce el número de dispositivos
+~Cambia el protocolo de comunicación
+}
+
+::Segmentación vs interconexión diferencia::¿Cuál es la diferencia conceptual entre segmentar e interconectar intranets?{
+~No existe diferencia alguna
+=Segmentar implica una única intranet con topología y protocolo únicos
+~Interconectar es más simple que segmentar
+~Solo difieren en el costo
+}
+
+::TCP/IP segmentación direcciones::¿Es necesario atribuir direcciones de red diferentes a cada segmento cuando se usa TCP/IP?{
+=No, basta con que cada estación tenga su propia dirección IP única
+~Sí, siempre es obligatorio
+~Solo en redes grandes
+~Depende del fabricante del equipo
+}
+
+::Segmentación estratégica ejemplo aulas::En el ejemplo de segmentación por aulas, ¿cuál es el beneficio principal?{
+~Reducir el costo de los cables
+~Cambiar la topología física
+=Crear subredes por aula reduciendo el tráfico en cada una
+~Aumentar la velocidad del procesador
+}
+
+::Limitaciones host distancia tipos::¿Qué tipos de limitaciones específicas tienen las redes locales según el material?{
+~Solo limitaciones económicas
+=Número de host, distancia, tipos de nodos, acceso y comunicación con usuarios
+~Únicamente limitaciones de software
+~Solo problemas de compatibilidad
+}
+
+::Limitaciones host distancia tipos::¿Qué tipos de limitaciones específicas tienen las redes locales según el material?{
+~Solo limitaciones económicas
+=Número de host, distancia, tipos de nodos, acceso y comunicación con usuarios
+~Únicamente limitaciones de software
+~Solo problemas de compatibilidad
+}
+
+::VTP significado completo::¿Qué significa VTP en el contexto de redes?{
+~Virtual Trunking Protocol
+~VLAN Transfer Protocol
+=VLAN Trunking Protocol
+~Virtual Transfer Protocol
+}
+
+::VTP función principal::¿Cuál es el propósito principal del protocolo VTP?{
+~Crear VLANs automáticamente
+=Configurar y administrar VLANs de forma centralizada en equipos Cisco
+~Eliminar todas las VLANs de la red
+~Solo monitorear el tráfico de VLANs
+}
+
+::VTP modos operación::¿En cuántos modos diferentes puede operar VTP?{
+~2 modos
+=3 modos
+~4 modos
+~5 modos
+}
+
+::VTP modo servidor características::¿Qué operaciones puede realizar un switch en modo servidor VTP?{
+~Solo recibir configuraciones
+=Crear, eliminar y modificar VLANs
+~Solo reenviar información VTP
+~Únicamente monitorear VLANs
+}
+
+::VTP modo cliente restricciones::¿Qué NO puede hacer un switch en modo cliente VTP?{
+~Recibir actualizaciones VTP
+~Sincronizar información VLAN
+=Crear, eliminar o modificar VLANs
+~Aplicar configuraciones recibidas
+}
+
+::VTP modo transparente función::¿Cuál es la característica principal del modo transparente VTP?{
+~Procesa todas las actualizaciones VTP
+~Solo funciona como servidor
+=No procesa actualizaciones VTP recibidas, solo las reenvía
+~Elimina toda la información VTP
+}
+
+::VTP dominio requisito::¿Qué requisito deben cumplir dos switches para compartir información VTP?{
+~Tener la misma velocidad de puerto
+~Usar el mismo fabricante
+=Pertenecer al mismo dominio VTP
+~Estar físicamente conectados
+}
+
+::VTP número revisión función::¿Para qué se utiliza el número de revisión en VTP?{
+~Para identificar el switch
+~Para contar el número de VLANs
+=Para determinar si la información recibida es más reciente que la actual
+~Para calcular la velocidad de transmisión
+}
+
+::VTP pruning propósito::¿Cuál es el objetivo del VTP pruning?{
+~Eliminar todas las VLANs
+~Reducir el número de switches
+=Filtrar tráfico innecesario de VLANs que no tienen puertos activos
+~Aumentar la velocidad de la red
+}
+
+::VTP versiones disponibles::¿Qué versiones del protocolo VTP existen según el material?{
+~Solo versión 1
+~Versiones 1 y 2
+=Versiones 1, 2 y 3
+~Versiones 1, 2, 3 y 4
+}
+
+::VLAN tipos implementación::¿Cuáles son los tres métodos de implementación de VLAN mencionados?{
+~Estática, dinámica y automática
+=De puerto central, estática y dinámica
+~Manual, automática y semi-automática
+~Fija, variable y adaptativa
+}
+
+::VLAN estática características::¿Qué caracteriza a las VLAN estáticas?{
+~Se configuran automáticamente
+=Los puertos se asignan estáticamente a una VLAN y mantienen su configuración
+~Cambian según el tráfico de red
+~Solo funcionan con direcciones MAC
+}
+
+::VLAN dinámica base::¿En qué se basan las VLAN dinámicas para determinar asignaciones?{
+~Solo en la velocidad de puerto
+~Únicamente en direcciones IP
+=En direcciones MAC, direccionamiento lógico o tipo de protocolo
+~Solo en la hora del día
+}
+
+::VLAN nivel clasificación::¿Cuántos niveles de clasificación tienen las VLANs según la jerarquía OSI?{
+~3 niveles
+=4 niveles principales
+~5 niveles
+~6 niveles
+}
+
+::VLAN puerto nivel 1::¿Qué caracteriza a las VLAN de nivel 1 (por puerto)?{
+=Se especifica qué puertos del switch pertenecen a la VLAN
+~Se basan únicamente en direcciones MAC
+~Solo funcionan con protocolos específicos
+~Requieren direcciones IP fijas
+}
+
+::VLAN MAC nivel 2::¿Cuál es la ventaja principal de las VLAN por direcciones MAC?{
+~Mayor velocidad de procesamiento
+=No requiere reconfiguración si el usuario cambia de ubicación física
+~Menor consumo de recursos
+~Mayor seguridad automática
+}
+
+::VLAN protocolo nivel 2::¿Cómo se determinan las VLAN de nivel 2 por tipo de protocolo?{
+~Por la dirección IP del dispositivo
+=Por el contenido del campo tipo de protocolo de la trama MAC
+~Por la velocidad de transmisión
+~Por el fabricante del equipo
+}
+
+::Filtrado trama concepto::¿Qué es el filtrado de trama en VLANs?{
+~Un tipo de cable especial
+=Una técnica que examina información específica de cada trama
+~Un protocolo de enrutamiento
+~Un método de cifrado
+}
+
+::Etiquetado trama IEEE::¿Qué técnica eligió el grupo de estándares IEEE para VLANs?{
+~Filtrado de trama
+=Etiquetado de tramas (identificación de tramas)
+~Enrutamiento por MAC
+~Segmentación por IP
+}
+
+::ISL vs dot1q encapsulación::¿Qué dos tipos de encapsulación pueden usar los paquetes VTP?{
+~Solo ISL
+~Solo 802.1Q
+=Inter-Switch Link (ISL) y IEEE 802.1Q (dot1q)
+~ISL y Frame Relay
+}
+
+::Trunk función VLAN::¿Qué es un enlace trunk en el contexto de VLANs?{
+~Un cable especial de alta velocidad
+=Un enlace que transporta tráfico de múltiples VLANs
+~Una conexión inalámbrica
+~Un protocolo de seguridad
+}
+
+::VLAN rango normal límites::¿Cuál es el rango de ID para VLANs normales que soporta VTP?{
+~1 a 100
+~1 a 500
+=1 a 1005
+~1 a 4096
+}
+
+::VLAN rango extendido límites::¿Cuál es el ID mínimo para VLANs de rango extendido?{
+~1000
+~1005
+=1006 (mayor a 1005)
+~2000
+}
+
+::VTP base datos almacenamiento::¿En qué archivo se guardan las configuraciones VLAN del VTP?{
+~config.dat
+~switch.dat
+=vlan.dat
+~vtp.dat
+}
+
+::VTP seguridad recomendación::¿Qué se recomienda para la seguridad del dominio VTP?{
+~No usar ninguna seguridad
+~Solo usar VTP transparente
+=Establecer un password y usar autenticación MD5
+~Cambiar de dominio frecuentemente
+}
+
+::Conmutación sin fragmentos bytes mínimos::¿Por qué la conmutación sin fragmentos almacena exactamente 64 bytes?{
+~Es el tamaño estándar de los switches
+=La mayoría de errores y colisiones ocurren en los primeros 64 bytes
+~Es el límite máximo de memoria
+~Es un requisito del protocolo Ethernet
+}
+
+::Conmutación sin fragmentos colisiones tardías::¿Qué problema específico resuelve la conmutación sin fragmentos?{
+~Los errores de CRC
+~Los problemas de velocidad
+=Las colisiones tardías
+~Los bucles de red
+}
+
+::Conmutación multicapa requisito::¿Qué técnica deben utilizar los switches para habilitar conmutación multicapa?{
+~Cut-Through únicamente
+=Store-and-Forward porque debe recibir toda la trama
+~Fragment-Free solamente
+~Adaptive Cut-Through
+}
+
+::Switch capa 3 vs router diferencia::¿Cuál es la diferencia fundamental entre un switch de capa 3 y un router?{
+~No hay diferencias
+~El router es más rápido
+=Los switches de capa 3 tienen hardware optimizado para velocidad de capa 2
+~Solo el router puede enrutar
+}
+
+::Phit definición técnica::¿Qué representa exactamente un phit en redes?{
+~Un paquete completo
+~Una dirección MAC
+=La unidad de información transferida por un enlace en un ciclo de red
+~Un tipo de protocolo
+}
+
+::Store-and-Forward DTN aplicación::¿Qué significa DTN en el contexto de Store-and-Forward?{
+~Data Transfer Network
+~Dynamic Transfer Node
+=Delay-Tolerant Networks (redes tolerantes al retardo)
+~Direct Transmission Network
+}
+
+::CSMA/CD Ethernet función original::¿Qué controlaba el protocolo CSMA/CD en Ethernet original?{
+~La velocidad de los cables
+~Las direcciones MAC
+=El acceso al medio compartido en topología de bus
+~El enrutamiento entre redes
+}
+
+::Ethernet evolución topología::¿Cómo evolucionó Ethernet desde su topología original?{
+~De estrella a bus
+~De anillo a bus
+=De bus con cable coaxial compartido a estrella con switches
+~De malla a anillo
+}
+
+::STP protocolo función switches::¿Para qué se habilita el protocolo Spanning Tree (STP)?{
+~Para crear VLANs automáticamente
+~Para aumentar la velocidad
+=Para evitar bucles en topologías redundantes
+~Para cifrar el tráfico
+}
+
+::Spanning tree problema central::¿Qué problema crea el spanning tree en la topología de red?{
+~Reduce la seguridad
+~Aumenta los costos
+=Los switches centrales se convierten en cuellos de botella
+~Elimina la redundancia
+}
+
+::Broadcast storm switches::¿Qué fenómeno se debe evitar en redes con switches redundantes?{
+~Colisiones tardías
+~Pérdida de paquetes
+=Tormentas broadcast
+~Fragmentación excesiva
+}
+
+::VLAN institucional ejemplo grupos::En el ejemplo de red institucional, ¿cuáles son los tres grupos típicos mencionados?{
+~Directores, secretarios y estudiantes
+=Alumnos, profesores y administración
+~Técnicos, usuarios y gerentes
+~Ventas, producción y contabilidad
+}
+
+::Subinterfaz router VLAN::¿Qué se crea en el router para cada VLAN en un enlace trunk?{
+~Una VLAN separada
+~Un puerto físico adicional
+=Una subinterfaz
+~Una tabla de enrutamiento
+}
+
+::Encapsulation dot1q comando::¿Qué indica el comando "encapsulation dot1q" en la configuración del router?{
+~Tipo de cable a utilizar
+=Protocolo de etiquetado VLAN IEEE 802.1Q
+~Velocidad de la interfaz
+~Dirección IP estática
+}
+
+::Native VLAN concepto::¿Qué característica tiene la VLAN nativa en un trunk?{
+~Siempre es la VLAN 1
+~Se cifra automáticamente
+=No lleva etiqueta en las tramas
+~Solo transporta tráfico de administración
+}
+
+::Cálculo subredes bits prestados::En el cálculo de subredes, ¿de dónde se toman los bits para crear subredes?{
+~De la dirección de red
+=De la parte de host, de izquierda a derecha
+~De la máscara de red
+~De la dirección de broadcast
+}
+
+::Subredes fórmula válidas::¿Cuál es la fórmula para calcular el número de subredes válidas?{
+~2^b
+~2^b + 2
+=2^b - 2
+~2^b * 2
+}
+
+::Hosts por subred fórmula::¿Cuál es la fórmula para calcular hosts disponibles por subred?{
+~2^h
+~2^h + 2
+=2^h - 2
+~2^h / 2
+}
+
+::Subredes dirección primera última::¿Por qué se descartan la primera y última combinación en el cálculo de subredes?{
+~Por limitaciones técnicas del hardware
+=Para no confundirlas con la dirección de red y la dirección de broadcast
+~Por restricciones del protocolo IP
+~Para reservar direcciones para administración
+}
+
+::Subredes dirección primera última::¿Por qué se descartan la primera y última combinación en el cálculo de subredes?{
+~Por limitaciones técnicas del hardware
+=Para no confundirlas con la dirección de red y la dirección de broadcast
+~Por restricciones del protocolo IP
+~Para reservar direcciones para administración
+}
+
+::VTP pruning frecuencia::¿Con qué frecuencia envían información los dispositivos VTP versión 2 en modo transparente?{
+~Cada minuto
+=Cada 5 minutos
+~Cada 10 minutos
+~Cada 15 minutos
+}
+
+::VTP campos cabecera::¿Cuáles son los campos comunes en la cabecera de todos los paquetes VTP?{
+~Solo versión y tipo de mensaje
+=Versión del protocolo, tipo de mensaje, longitud del dominio y nombre del dominio
+~Solo nombre de dominio y número de revisión
+~Únicamente información de autenticación
+}
+
+::VTP numero revision bits::¿De cuántos bits es el número de configuración de revisión en VTP?{
+~16 bits
+=32 bits
+~64 bits
+~8 bits
+}
+
+::VTP reset numero revision::¿Cómo se puede resetear el número de revisión VTP?{
+~Reiniciando el switch
+~Solo con comandos especiales
+=Cambiando el nombre del dominio VTP y después restablecerlo
+~No se puede resetear
+}
+
+::VTP publicacion resumen funcion::¿Qué información principal incluyen las publicaciones de resumen VTP?{
+~Configuración completa de VLANs
+=Nombre actual del dominio VTP y número de revisión
+~Solo direcciones MAC de dispositivos
+~Únicamente información de seguridad
+}
+
+::VTP solicitud publicacion casos::¿En qué casos un switch necesita solicitar publicaciones VTP?{
+~Solo al encenderse
+~Únicamente cuando hay errores
+=Cuando se resetea, cambia dominio o recibe número de revisión mayor
+~Solo cuando cambia la configuración
+}
+
+::VTP sequence number formato::¿Con qué número empieza la secuencia en las publicaciones de subconjunto VTP?{
+~0
+=1
+~2
+~10
+}
+
+::VTP code field subconjunto::¿Qué valor tiene el campo Code en las publicaciones de subconjunto VTP?{
+~0x01
+=0x02
+~0x03
+~0x04
+}
+
+::VTP code field solicitud::¿Qué valor tiene el campo Code en las solicitudes de publicación VTP?{
+~0x01
+~0x02
+=0x03
+~0x04
+}
+
+::VTP pruning VLANs excluidas::¿Qué VLANs NO pueden ser podadas por VTP pruning?{
+~VLAN 1
+~VLANs 1-10
+=VLANs 1002-1005
+~VLANs 1006-1010
+}
+
+::VTP updater identity campo::¿Qué contiene el campo "Updater Identity" en los paquetes VTP?{
+~El nombre del switch
+=La dirección IP del último switch que incrementó el número de revisión
+~La dirección MAC del dispositivo
+~El número de serie del equipo
+}
+
+::VTP timestamp campo::¿Qué información proporciona el campo "Update Timestamp" en VTP?{
+~La hora actual del sistema
+=La fecha y hora del último incremento del número de revisión
+~El tiempo de funcionamiento del switch
+~La duración de la última actualización
+}
+
+::VTP mensaje digest funcion::¿Para qué se utiliza el campo "Message Digest 5" en VTP?{
+~Para comprimir los datos
+~Para acelerar las transmisiones
+=Para portar la contraseña VTP cuando se usa autenticación MD5
+~Para identificar el tipo de switch
+}
+
+::Runts definicion ethernet::¿Qué son los "runts" en el contexto de Ethernet?{
+~Paquetes de gran tamaño
+=Tramas corruptas causadas por colisiones
+~Direcciones MAC inválidas
+~Errores de configuración
+}
+
+::Spanning tree topologia problema::¿Cuál es el principal problema de usar spanning tree en la topología?{
+~Elimina toda la redundancia
+~Aumenta el costo de la red
+=Los switches centrales se convierten en cuellos de botella
+~Reduce la velocidad de transmisión
+}
+
+::Broadcast storm definicion::¿Qué es una tormenta broadcast?{
+~Un error de configuración IP
+~Un problema de alimentación eléctrica
+=Fenómeno donde el tráfico broadcast satura la red debido a bucles
+~Una técnica de optimización de red
+}
+
+::CSMA/CD limitaciones::¿Qué limitaciones impone CSMA/CD en Ethernet?{
+~Solo limitaciones de costo
+=Limitaciones en ancho de banda máximo y distancia entre estaciones
+~Únicamente problemas de seguridad
+~Solo restricciones de fabricante
+}
+
+::Ethernet evolucion beneficios::¿Cuál fue el principal beneficio de evolucionar de bus a estrella en Ethernet?{
+~Reducir costos de implementación
+=Separar dominios de colisión aumentando eficiencia y escalabilidad
+~Simplificar la configuración
+~Mejorar la seguridad automáticamente
+}
+
+::Dominio colision definicion::¿Qué es un dominio de colisión?{
+~Una zona de la red con alta seguridad
+~Un segmento donde solo hay un dispositivo
+=Un segmento de red donde las colisiones pueden ocurrir
+~Una area reservada para servidores
+}
+
+::VLAN nivel superior aplicaciones::¿En qué se basan las VLAN de niveles superiores?{
+~Solo en puertos físicos
+~Únicamente en direcciones MAC
+=En aplicaciones específicas como FTP, multimedia, correo
+~Solo en protocolos de red
+}
+
+::VLAN membership hora::¿Puede la pertenencia a una VLAN basarse en la hora del día?{
+~No, es técnicamente imposible
+~Solo en redes muy pequeñas
+=Sí, en VLANs de niveles superiores puede combinarse con otros factores
+~Solo con equipos especializados
+}
+
+::Backbone VLAN capacidades::¿Qué capacidades debe proporcionar el backbone en arquitecturas VLAN?{
+~Solo aumentar la velocidad
+=Eliminar fronteras físicas, aumentar flexibilidad y proporcionar interoperabilidad
+~Únicamente reducir costos
+~Solo mejorar la seguridad
+}
+
+::Router VLAN comunicacion externa::¿Por qué siguen siendo vitales los routers en arquitecturas VLAN?{
+~Solo para configurar VLANs
+=Proporcionan rutas entre VLANs diferentes y conexión a sitios remotos
+~Únicamente para reducir costos
+~Solo para mejorar la velocidad
+}
+
+::VLAN puerto central beneficios::¿Por qué las VLAN de puerto central facilitan el trabajo del administrador?{
+~Son automáticas completamente
+=Los usuarios se asignan por puerto, son fáciles de administrar y proporcionan mayor seguridad
+~No requieren configuración
+~Solo funcionan con un tipo de switch
+}
+
+::VLAN dinamica base datos::¿Qué verifica el switch en las VLAN dinámicas?{
+~Solo la velocidad del puerto
+~Únicamente el fabricante del dispositivo
+=La entrada de direcciones MAC en la base de datos de administración VLAN
+~Solo la configuración IP
+}
+
+::VLAN dinamica administracion inicial::¿Qué requieren las VLAN dinámicas en la fase inicial?{
+~Ninguna configuración especial
+~Solo configurar hardware
+=Mayor administración para configurar la base de datos y mantenerla exacta
+~Únicamente cambiar cables
+}
+
+::Filtrado trama router similitud::¿Con qué concepto se compara el filtrado de trama?{
+~Con switching de capa 2
+~Con protocolos de red
+=Con el concepto que normalmente utilizan los routers
+~Con técnicas de cifrado
+}
+
+::Filtrado trama tabla switch::¿Qué se desarrolla para cada switch en filtrado de trama?{
+~Una dirección MAC única
+~Un protocolo especial
+=Una tabla de filtrado específica
+~Una clave de cifrado
+}
+
+::Etiquetado trama IEEE razon::¿Por qué eligió IEEE la técnica de etiquetado de tramas?{
+~Por ser la más económica
+~Por simplicidad de implementación
+=Debido a su escalabilidad
+~Por compatibilidad con fabricantes
+}
+
+::Etiquetado trama identificador::¿Dónde coloca el identificador la técnica de etiquetado de VLAN?{
+~Al final de cada trama
+~En un servidor central
+=En el encabezado de cada trama al enviarla por el backbone
+~En la dirección MAC
+}
+
+::Etiquetado trama salida backbone::¿Qué sucede con el identificador cuando la trama sale del backbone?{
+~Se mantiene permanentemente
+~Se cambia por otro identificador
+=El switch lo elimina antes de transmitir a la estación final
+~Se cifra para mayor seguridad
+}
+
+::Anexo calculo subredes planteamientos::¿Cuáles son los dos planteamientos iniciales para el cálculo de subredes?{
+~Solo por velocidad o por costo
+=Segmentar en número determinado de subredes o subredes para número determinado de hosts
+~Solo por ubicación física o lógica
+~Únicamente por fabricante o protocolo
+}
+
+::Anexo bits prestados direccion::¿De dónde se toman los bits para crear subredes en el cálculo?{
+~De la dirección de red
+~De cualquier parte de la IP
+=De la parte de host, de izquierda a derecha
+~De la máscara original
+}
+
+::Anexo subredes descartadas razon::¿Por qué se descartan la primera y última dirección en subredes?{
+~Por limitaciones de hardware
+~Por cuestiones de velocidad
+=Para no confundirlas con dirección de red y dirección de difusión
+~Por restricciones del fabricante
+}
+
+::Anexo mascara subred composicion::¿Cómo se compone la máscara de subred?{
+~Solo con bits de red
+~Aleatoriamente según necesidades
+=Poniendo a 1 los bits de red y subred, y a 0 los de host
+~Solo con bits de host
+}
+
+::Anexo direccion difusion bits::¿Cómo se forma la dirección de difusión o broadcast?{
+~Poniendo todos los bits a 1
+~Poniendo todos los bits a 0
+=Poniendo todos los bits de la parte de host a 1
+~Usando la última dirección IP disponible
+}
+
+::Anexo calculo hosts formula::¿Cuál es la fórmula para calcular direcciones disponibles para hosts?{
+~2^h
+~2^h + 2
+=2^h - 2
+~h^2 - 2
+}
+
+::Anexo ejemplo 1 octeto usado::¿Qué octeto se usa para segmentación en el ejemplo 1 del anexo?{
+~Primer octeto
+=Segundo octeto
+~Tercer octeto
+~Cuarto octeto
+}
+
+::Anexo ejemplo 2 octetos usados::¿Cuántos octetos se usan para segmentación en el ejemplo 2?{
+~1 octeto
+=2 octetos
+~3 octetos
+~4 octetos
+}
+
+::Anexo incremento constante::¿Qué característica tienen los valores en segmentaciones con máscaras de longitud fija?{
+~Son aleatorios
+~Disminuyen progresivamente
+=Se incrementan en una cantidad constante
+~No siguen ningún patrón
+}
+
+::Ejercicio anexo red clase A bits::En el ejercicio 1 del anexo (20.0.0.0/8 con 18 bits de subred), ¿cuántos bits quedan para hosts?{
+~8 bits
+~10 bits
+=14 bits
+~16 bits
+}
+
+::Ejercicio anexo 30 hosts minimo::Para el ejercicio 2 del anexo (30 hosts por subred), ¿cuántos bits mínimo se necesitan para hosts?{
+~4 bits
+=5 bits
+~6 bits
+~7 bits
+}
+
+::Ejercicio anexo clase C 7 subredes::Para dividir 192.168.0.0/24 en 7 subredes, ¿cuántos bits se deben prestar?{
+~2 bits
+=3 bits
+~4 bits
+~5 bits
+}
+
+::Direccion broadcast calculo metodo::¿Cuál es el método más rápido para calcular la dirección de broadcast de una subred?{
+~Convertir todo a binario y poner 1s en hosts
+=Ver la siguiente dirección de subred y restar 1
+~Sumar 255 a la dirección de subred
+~Multiplicar por 2 la dirección de subred
+}
+
+::Primer host direccion obtencion::¿Cómo se obtiene la dirección del primer host en una subred?{
+=Sumar 1 a la dirección de subred
+~Restar 1 a la dirección de broadcast
+~Usar la misma dirección de subred
+~Sumar 2 a la dirección de subred
+}
+
+::Ultimo host direccion obtencion::¿Cómo se obtiene la dirección del último host en una subred?{
+~Usar la dirección de broadcast
+=Restar 1 a la dirección de broadcast
+~Sumar 1 a la dirección de subred
+~Restar 2 a la siguiente subred
+}
+
+::Mascara subred composicion regla::¿Qué regla se sigue para componer la máscara de subred?{
+~Todos los bits a 1
+~Alternating 1s y 0s
+=Bits de red y subred a 1, bits de host a 0
+~Solo bits de subred a 1
+}
+
+::Incremento constante razon::¿Por qué en las segmentaciones con máscaras fijas los valores se incrementan en cantidad constante?{
+~Es una coincidencia matemática
+=Porque los bits de subred siguen un patrón binario secuencial
+~Porque así lo establece el estándar IEEE
+~Para facilitar la memorización
+}
+
+::Bits prestados direccion lado::¿De qué lado se toman los bits prestados para crear subredes?{
+=De izquierda a derecha de la parte de host
+~De derecha a izquierda de la parte de host
+~Del centro hacia los extremos
+~Aleatoriamente según necesidad
+}
+
+::Combinaciones binarias formula general::¿Cuál es la fórmula general para calcular combinaciones con n bits?{
+~n^2
+=2^n
+~2*n
+~n!
+}
+
+::Subredes validas por que restar 2::¿Por qué se restan 2 combinaciones en el cálculo de subredes válidas?{
+~Por limitaciones del hardware
+=Para no confundir dirección de red con dirección de broadcast
+~Por restricciones del protocolo TCP/IP
+~Para reservar direcciones especiales
+}
+
+::Host validas por que restar 2::¿Por qué se restan 2 direcciones en el cálculo de hosts válidos?{
+~Por limitaciones de memoria
+=Primera es dirección de subred, última es dirección de broadcast
+~Para direcciones de gateway y DNS
+~Por restricciones de seguridad
+}
+
+::Anexo ejemplo 1 octeto usado::En el ejemplo 1 del anexo, ¿qué octeto se usa principalmente para la segmentación?{
+~Primer octeto
+=Segundo octeto
+~Tercer octeto
+~Cuarto octeto
+}
+
+::Anexo ejemplo 2 diferencia principal::¿Cuál es la diferencia principal entre el ejemplo 1 y 2 del anexo?{
+~El tipo de clase de red
+=El número de octetos usados para segmentación
+~La máscara de red original
+~El número total de hosts
+}
+
+::Planteamiento inicial cálculo subredes::¿Cuáles son los dos planteamientos iniciales mencionados para cálculo de subredes?{
+~Por ubicación o por función
+=Número determinado de subredes o hosts determinados por subred
+~Por costo o por velocidad
+~Por protocolo o por fabricante
+}
+
+::Notacion abreviada mascara significado::En la notación 75.32.0.0/12, ¿qué significa el /12?{
+~12 subredes disponibles
+~12 hosts por subred
+=12 bits totales para direccionamiento de red
+~12 octetos en la dirección
+}
+
+::Ejercicios anexo proposito::¿Cuál es el propósito principal de los ejercicios propuestos en el anexo?{
+~Solo practicar conversiones binarias
+=Aplicar el proceso completo de segmentación con diferentes escenarios
+~Memorizar fórmulas matemáticas
+~Comparar diferentes clases de redes
+}
+

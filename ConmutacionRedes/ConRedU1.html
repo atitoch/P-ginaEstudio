@@ -1,0 +1,2611 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidad 1: Direccionamiento IP y Enrutamiento - Cuestionario</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .header h1 {
+        color: #9c27b0;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        color: #666;
+        font-size: 1.2em;
+      }
+
+      .breadcrumb {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+
+      .quiz-container {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+
+      .quiz-progress {
+        background: #f0f0f0;
+        height: 10px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        height: 100%;
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+
+      .question-counter {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
+
+      .question {
+        display: none;
+        animation: fadeIn 0.5s ease;
+      }
+
+      .question.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .question h3 {
+        color: #333;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .options {
+        list-style: none;
+      }
+
+      .option {
+        background: #f8f9fa;
+        margin: 10px 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .option:hover {
+        background: #e9ecef;
+        transform: translateX(5px);
+      }
+
+      .option input[type="radio"] {
+        display: none;
+      }
+
+      .option label {
+        display: block;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      .option input[type="radio"]:checked + label {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        color: white;
+        border-radius: 8px;
+      }
+
+      .option.correct {
+        border-color: #28a745;
+        background: #d4edda;
+      }
+
+      .option.incorrect {
+        border-color: #dc3545;
+        background: #f8d7da;
+      }
+
+      .fill-blank {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+
+      .blank-input {
+        background: #fff;
+        border: 2px solid #9c27b0;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 1em;
+        margin: 0 5px;
+        min-width: 120px;
+      }
+
+      .blank-input.correct {
+        background: #d4edda;
+        border-color: #28a745;
+      }
+
+      .blank-input.incorrect {
+        background: #f8d7da;
+        border-color: #dc3545;
+      }
+
+      .true-false {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .tf-option {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+
+      .tf-option:hover {
+        background: #e9ecef;
+        transform: scale(1.05);
+      }
+
+      .tf-option.selected {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        color: white;
+        border-color: #9c27b0;
+      }
+
+      .tf-option.correct {
+        background: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+
+      .tf-option.incorrect {
+        background: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #dee2e6;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #5a6268;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .feedback {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        display: none;
+      }
+
+      .feedback.correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .feedback.incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f1b6ba;
+      }
+
+      .results {
+        text-align: center;
+        display: none;
+      }
+
+      .score {
+        font-size: 3em;
+        font-weight: bold;
+        color: #9c27b0;
+        margin: 20px 0;
+      }
+
+      .score-details {
+        font-size: 1.2em;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .back-button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background: white;
+        color: #9c27b0;
+      }
+
+      @media (max-width: 768px) {
+        .true-false {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .controls {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+
+      .matching-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin: 20px 0;
+      }
+
+      .match-items,
+      .match-options {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .match-items h4,
+      .match-options h4 {
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 1.1em;
+        text-align: center;
+      }
+
+      .match-item,
+      .match-option {
+        background: white;
+        border: 2px solid #9c27b0;
+        border-radius: 8px;
+        padding: 12px 15px;
+        margin: 8px 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1em;
+        line-height: 1.4;
+      }
+
+      .match-item:hover,
+      .match-option:hover {
+        background: #e9ecef;
+        transform: translateX(3px);
+      }
+
+      .match-item.selected {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        color: white;
+        border-color: #9c27b0;
+      }
+
+      .match-option.selected {
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
+        color: white;
+        border-color: #9c27b0;
+      }
+
+      .match-item.correct,
+      .match-option.correct {
+        background: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+
+      .match-item.incorrect,
+      .match-option.incorrect {
+        background: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+
+      .match-item.disabled,
+      .match-option.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        background: #e9ecef;
+      }
+
+      .matching-feedback {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        text-align: center;
+      }
+
+      /* Responsive para preguntas de correspondencia */
+      @media (max-width: 768px) {
+        .matching-container {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .match-item,
+        .match-option {
+          font-size: 0.9em;
+          padding: 10px 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .match-item,
+        .match-option {
+          font-size: 0.8em;
+          padding: 8px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-button"
+        >⬅ Volver a Conmutación y Redes</a
+      >
+
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> >
+        <a href="index.html">Conmutación y Redes</a> > Unidad 1:
+        Direccionamiento IP
+      </div>
+
+      <div class="header">
+        <h1>🌐 Unidad 1: Direccionamiento IP y Enrutamiento</h1>
+        <p>
+          Fundamentos de Direccionamiento IP, VLSM, CIDR y Protocolos de
+          Enrutamiento
+        </p>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-counter">
+          <span id="currentQuestion">1</span> de
+          <span id="totalQuestions">71</span>
+        </div>
+
+        <!-- Pregunta 1 -->
+        <div class="question active" data-type="multiple">
+          <h3>¿Qué es el direccionamiento IP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1a" />
+              <label for="q1a"
+                >Una función de los protocolos de capa física que permite la
+                transmisión de datos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="correct" id="q1b" />
+              <label for="q1b"
+                >Una función clave de los protocolos de capa de Red que permite
+                la transmisión de datos entre hosts de la misma red o en redes
+                diferentes</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1c" />
+              <label for="q1c"
+                >Una función de los protocolos de capa de aplicación para
+                identificar servicios</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q1" value="incorrect" id="q1d" />
+              <label for="q1d"
+                >Una función exclusiva de IPv6 para el enrutamiento</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question" data-type="multiple">
+          <h3>Las direcciones IP se caracterizan por:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2a" />
+              <label for="q2a">Utilizar 16 bits agrupados en 2 octetos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="correct" id="q2b" />
+              <label for="q2b"
+                >Utilizar 32 bits agrupados en 4 octetos separados por
+                puntos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2c" />
+              <label for="q2c">Utilizar 64 bits agrupados en 8 octetos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q2" value="incorrect" id="q2d" />
+              <label for="q2d">Utilizar 128 bits en formato hexadecimal</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué RFC están definidos IPv4 e IPv6 respectivamente?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q3" value="correct" id="q3a" />
+              <label for="q3a">RFC 791 y RFC 2460</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3b" />
+              <label for="q3b">RFC 2460 y RFC 791</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3c" />
+              <label for="q3c">RFC 1918 y RFC 2460</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q3" value="incorrect" id="q3d" />
+              <label for="q3d">RFC 791 y RFC 1918</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántas redes Clase A pueden existir?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4a" />
+              <label for="q4a">128</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="correct" id="q4b" />
+              <label for="q4b">126</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4c" />
+              <label for="q4c">127</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q4" value="incorrect" id="q4d" />
+              <label for="q4d">254</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántos hosts puede tener una red Clase A?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5a" />
+              <label for="q5a">16.777.214</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="correct" id="q5b" />
+              <label for="q5b">16.387.064</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5c" />
+              <label for="q5c">16.000.000</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q5" value="incorrect" id="q5d" />
+              <label for="q5d">16.777.216</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántas redes Clase B diferentes pueden existir?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6a" />
+              <label for="q6a">16.256</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="correct" id="q6b" />
+              <label for="q6b">16.384</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6c" />
+              <label for="q6c">65.534</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q6" value="incorrect" id="q6d" />
+              <label for="q6d">32.768</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántos hosts máximo puede tener una red Clase B?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q7" value="correct" id="q7a" />
+              <label for="q7a">64.516</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7b" />
+              <label for="q7b">65.534</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7c" />
+              <label for="q7c">65.536</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q7" value="incorrect" id="q7d" />
+              <label for="q7d">64.000</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántas redes Clase C diferentes pueden existir?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8a" />
+              <label for="q8a">1.048.576</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="correct" id="q8b" />
+              <label for="q8b">2.097.152</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8c" />
+              <label for="q8c">16.777.216</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q8" value="incorrect" id="q8d" />
+              <label for="q8d">4.194.304</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Para qué se utiliza la Clase D?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9a" />
+              <label for="q9a">Para redes experimentales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9b" />
+              <label for="q9b">Para redes privadas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="correct" id="q9c" />
+              <label for="q9c">Para multicast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q9" value="incorrect" id="q9d" />
+              <label for="q9d">Para broadcast</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Para qué fueron designadas originalmente las direcciones Clase E?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10a" />
+              <label for="q10a">Para uso comercial</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10b" />
+              <label for="q10b">Para redes militares</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="correct" id="q10c" />
+              <label for="q10c"
+                >Para propósitos experimentales o de uso especial</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q10" value="incorrect" id="q10d" />
+              <label for="q10d">Para redes gubernamentales</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué representan los valores 0 y 255 en las direcciones IP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11a" />
+              <label for="q11a">0 para broadcast, 255 para red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="correct" id="q11b" />
+              <label for="q11b"
+                >0 para máquinas que no conocen su dirección, 255 para
+                multicast/broadcast</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11c" />
+              <label for="q11c"
+                >Ambos para direcciones especiales sin uso específico</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q11" value="incorrect" id="q11d" />
+              <label for="q11d"
+                >0 y 255 son direcciones normales utilizables</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question" data-type="multiple">
+          <h3>¿A qué máscara decimal corresponde /24 en notación CIDR?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12a" />
+              <label for="q12a">255.255.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="correct" id="q12b" />
+              <label for="q12b">255.255.255.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12c" />
+              <label for="q12c">255.255.255.128</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q12" value="incorrect" id="q12d" />
+              <label for="q12d">255.0.0.0</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántos hosts permite una máscara /16?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13a" />
+              <label for="q13a">32.766</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="correct" id="q13b" />
+              <label for="q13b">65.534</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13c" />
+              <label for="q13c">16.382</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q13" value="incorrect" id="q13d" />
+              <label for="q13d">131.070</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuántos hosts permite una máscara /30?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14a" />
+              <label for="q14a">6</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14b" />
+              <label for="q14b">4</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="correct" id="q14c" />
+              <label for="q14c">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q14" value="incorrect" id="q14d" />
+              <label for="q14d">14</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué significa CIDR?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15a" />
+              <label for="q15a">Classless Internal Domain Routing</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="correct" id="q15b" />
+              <label for="q15b">Classless Inter-Domain Routing</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15c" />
+              <label for="q15c">Classical Internet Domain Routing</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q15" value="incorrect" id="q15d" />
+              <label for="q15d">Centralized Inter-Domain Routing</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            En VLSM, ¿de qué dirección se toman los bits para realizar el
+            direccionamiento?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16a" />
+              <label for="q16a">De izquierda a derecha</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="correct" id="q16b" />
+              <label for="q16b">De derecha a izquierda</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16c" />
+              <label for="q16c">Del centro hacia los extremos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q16" value="incorrect" id="q16d" />
+              <label for="q16d">Alternando bits</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            ¿Cómo se denomina un router que sólo está conectado a otro router?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17a" />
+              <label for="q17a">Router de borde</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17b" />
+              <label for="q17b">Router de acceso</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="correct" id="q17c" />
+              <label for="q17c">Router de conexión única</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q17" value="incorrect" id="q17d" />
+              <label for="q17d">Router de distribución</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="question" data-type="multiple">
+          <h3>¿A qué familia de protocolos pertenece RIP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18a" />
+              <label for="q18a">EGP (Exterior Gateway Protocol)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="correct" id="q18b" />
+              <label for="q18b">IGP (Interior Gateway Protocol)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18c" />
+              <label for="q18c">BGP (Border Gateway Protocol)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q18" value="incorrect" id="q18d" />
+              <label for="q18d">OSPF Family</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué algoritmo emplea el protocolo RIP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19a" />
+              <label for="q19a">Algoritmo de Dijkstra</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="correct" id="q19b" />
+              <label for="q19b">Algoritmo de Bellman-Ford distribuido</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19c" />
+              <label for="q19c">Algoritmo de Floyd-Warshall</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q19" value="incorrect" id="q19d" />
+              <label for="q19d">Algoritmo SPF</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el tiempo de vida de las rutas en RIP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20a" />
+              <label for="q20a">120 segundos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20b" />
+              <label for="q20b">150 segundos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="correct" id="q20c" />
+              <label for="q20c">180 segundos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q20" value="incorrect" id="q20d" />
+              <label for="q20d">240 segundos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 21 -->
+        <div class="question" data-type="multiple">
+          <h3>Los 180 segundos de vida de las rutas RIP corresponden a:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21a" />
+              <label for="q21a">4 intercambios de información</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21b" />
+              <label for="q21b">5 intercambios de información</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="correct" id="q21c" />
+              <label for="q21c">6 intercambios de información</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q21" value="incorrect" id="q21d" />
+              <label for="q21d">8 intercambios de información</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 22 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuáles son las dos funciones principales del protocolo IP?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22a" />
+              <label for="q22a">Enrutamiento y seguridad</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22b" />
+              <label for="q22b">Direccionamiento y cifrado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="correct" id="q22c" />
+              <label for="q22c"
+                >Entrega de datagramas bajo mejor esfuerzo y
+                fragmentación/re-ensamblado</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q22" value="incorrect" id="q22d" />
+              <label for="q22d">Control de flujo y detección de errores</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Por qué se considera a IP un protocolo de "mejor esfuerzo"?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23a" />
+              <label for="q23a">Porque siempre garantiza la entrega</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23b" />
+              <label for="q23b">Porque usa la ruta más rápida</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="correct" id="q23c" />
+              <label for="q23c"
+                >Porque no garantiza que los paquetes lleguen ni el orden de
+                entrega</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q23" value="incorrect" id="q23d" />
+              <label for="q23d"
+                >Porque tiene mecanismos de corrección de errores</label
+              >
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es el propósito principal del DNS?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24a" />
+              <label for="q24a">Asignar direcciones IP dinámicamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="correct" id="q24b" />
+              <label for="q24b"
+                >Traducir direcciones IP a nombres de dominio y viceversa</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24c" />
+              <label for="q24c">Enrutar paquetes entre redes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q24" value="incorrect" id="q24d" />
+              <label for="q24d">Proporcionar seguridad en las conexiones</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="question" data-type="multiple">
+          <h3>¿De cuántas letras constan los dominios principales?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25a" />
+              <label for="q25a">Una letra</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="correct" id="q25b" />
+              <label for="q25b">Dos letras</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25c" />
+              <label for="q25c">Tres letras</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q25" value="incorrect" id="q25d" />
+              <label for="q25d">Cuatro letras</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Cuál es la función del ICANN?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26a" />
+              <label for="q26a">Desarrollar protocolos de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26b" />
+              <label for="q26b">Fabricar equipos de red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="correct" id="q26c" />
+              <label for="q26c"
+                >Controlar la distribución y mantenimiento de direcciones IP a
+                escala mundial</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q26" value="incorrect" id="q26d" />
+              <label for="q26d">Proporcionar servicios de Internet</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 27 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Con la dirección 192.168.1.24 y máscara 255.255.255.0, ¿cuál es el
+            rango de la subred?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27a" />
+              <label for="q27a">192.168.0.0 a 192.168.0.255</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="correct" id="q27b" />
+              <label for="q27b">192.168.1.0 a 192.168.1.255</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27c" />
+              <label for="q27c">192.168.1.1 a 192.168.1.254</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q27" value="incorrect" id="q27d" />
+              <label for="q27d">192.168.1.0 a 192.168.1.127</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 28 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Con máscara 255.255.255.128, ¿en cuántas subredes se divide
+            192.168.1.0?
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28a" />
+              <label for="q28a">Una subred</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="correct" id="q28b" />
+              <label for="q28b">Dos subredes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28c" />
+              <label for="q28c">Tres subredes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q28" value="incorrect" id="q28d" />
+              <label for="q28d">Cuatro subredes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 29 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué representa la métrica "longitud del camino"?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29a" />
+              <label for="q29a">Solo el número de routers</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29b" />
+              <label for="q29b">Solo la distancia física</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="correct" id="q29c" />
+              <label for="q29c"
+                >La suma de costos de cada salto o la suma de saltos</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q29" value="incorrect" id="q29d" />
+              <label for="q29d">El tiempo de transmisión</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 30 -->
+        <div class="question" data-type="multiple">
+          <h3>¿Qué mide la métrica "ancho de banda"?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30a" />
+              <label for="q30a">El costo monetario del enlace</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30b" />
+              <label for="q30b">La confiabilidad del enlace</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="correct" id="q30c" />
+              <label for="q30c"
+                >La velocidad de transmisión de información</label
+              >
+            </li>
+            <li class="option">
+              <input type="radio" name="q30" value="incorrect" id="q30d" />
+              <label for="q30d">La distancia física del enlace</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 31 -->
+        <div class="question" data-type="multiple">
+          <h3>¿En qué capa del modelo OSI toma decisiones el router?</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31a" />
+              <label for="q31a">Capa 2 (Enlace de datos)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="correct" id="q31b" />
+              <label for="q31b">Capa 3 (Red)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31c" />
+              <label for="q31c">Capa 4 (Transporte)</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q31" value="incorrect" id="q31d" />
+              <label for="q31d">Capa 1 (Física)</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Preguntas de completar -->
+        <!-- Pregunta 32 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            Las direcciones IP se denominan direcciones
+            <input type="text" class="blank-input" data-answer="lógicas" />,
+            tienen direccionamiento
+            <input type="text" class="blank-input" data-answer="jerárquico" />,
+            representan una
+            <input type="text" class="blank-input" data-answer="conexión" />
+            de la máquina a la red, utilizan
+            <input type="text" class="blank-input" data-answer="32" />
+            bits agrupados en
+            <input type="text" class="blank-input" data-answer="4" />
+            octetos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 33 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            IPv4 está definida en RFC
+            <input type="text" class="blank-input" data-answer="791" />
+            e IPv6 está definida en RFC
+            <input type="text" class="blank-input" data-answer="2460" />. La
+            diferencia básica es que IPv4 usa
+            <input type="text" class="blank-input" data-answer="32" />
+            bits mientras IPv6 usa
+            <input type="text" class="blank-input" data-answer="128" />
+            bits.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 34 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            VLSM significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Variable Length Subnet Mask"
+            />
+            y es una técnica diseñada para
+            <input type="text" class="blank-input" data-answer="optimizar" />
+            el direccionamiento IP. En VLSM el direccionamiento se hace de
+            <input type="text" class="blank-input" data-answer="derecha" />
+            a
+            <input type="text" class="blank-input" data-answer="izquierda" />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 35 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            RIP pertenece a la familia
+            <input type="text" class="blank-input" data-answer="IGP" />, es un
+            protocolo de
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="vector distancia"
+            />, usa como métrica el
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="número de saltos"
+            />, emplea datagramas
+            <input type="text" class="blank-input" data-answer="UDP" />
+            por el puerto
+            <input type="text" class="blank-input" data-answer="520" />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 36 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            DNS significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Domain Name System"
+            />, traduce direcciones
+            <input type="text" class="blank-input" data-answer="IP" />
+            a nombres de
+            <input type="text" class="blank-input" data-answer="dominio" />
+            y viceversa. Los dominios principales constan de
+            <input type="text" class="blank-input" data-answer="dos" />
+            letras que indican el
+            <input type="text" class="blank-input" data-answer="país" />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 37 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la frase:</h3>
+          <div class="fill-blank">
+            <input type="text" class="blank-input" data-answer="ICANN" />
+            es la autoridad mundial encargada de distribuir direcciones IP, esto
+            es necesario para evitar direcciones
+            <input type="text" class="blank-input" data-answer="duplicadas" />
+            y prevenir
+            <input type="text" class="blank-input" data-answer="colisiones" />
+            de paquetes.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Preguntas de verdadero/falso -->
+        <!-- Pregunta 38 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            Las direcciones IP se denominan direcciones lógicas porque
+            representan ubicaciones lógicas en la red.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 39 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>IPv6 ha reemplazado completamente a IPv4 en la actualidad.</h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 40 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            Las direcciones Clase A son utilizadas únicamente por organizaciones
+            militares.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 41 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            Los valores 0 y 255 pueden utilizarse normalmente para asignar a
+            dispositivos en cualquier red.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 42 -->
+        <div class="question" data-type="true-false" data-answer="true">
+          <h3>
+            CIDR eliminó completamente el concepto de clases en el
+            direccionamiento IP.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 43 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            VLSM y subnetting tradicional utilizan el mismo enfoque para crear
+            subredes.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 44 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            Un router de conexión única puede estar conectado a múltiples
+            routers simultáneamente.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 45 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            El enrutamiento estático se adapta automáticamente a los cambios en
+            la topología de red.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 46 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            RIP puede detectar automáticamente rutas circulares (bucles) en la
+            red.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 47 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            En RIP, cuando la métrica alcanza 16 saltos, se considera la ruta
+            como válida pero lenta.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 48 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            El protocolo IP garantiza que todos los paquetes lleguen a su
+            destino en el orden correcto.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 49 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            DNS es una base de datos centralizada que se encuentra en un solo
+            servidor mundial.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 50 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            Los dominios principales pueden tener entre 1 y 4 letras dependiendo
+            del país.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 51 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            ICANN asigna directamente todas las direcciones IP a todos los
+            dispositivos del mundo.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 52 -->
+        <div class="question" data-type="true-false" data-answer="false">
+          <h3>
+            Las tablas de enrutamiento solo pueden completarse automáticamente
+            mediante protocolos dinámicos.
+          </h3>
+          <div class="true-false">
+            <div class="tf-option" data-value="true">Verdadero</div>
+            <div class="tf-option" data-value="false">Falso</div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Preguntas de desarrollo/ensayo simplificadas -->
+        <!-- Pregunta 53 -->
+        <div class="question" data-type="fill">
+          <h3>Completa la definición del direccionamiento IP:</h3>
+          <div class="fill-blank">
+            El direccionamiento IP permite la transmisión de datos entre hosts
+            de la misma red o en
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="redes diferentes"
+            />. Las direcciones se denominan
+            <input type="text" class="blank-input" data-answer="lógicas" />
+            y tienen direccionamiento
+            <input type="text" class="blank-input" data-answer="jerárquico" />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 54 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre las direcciones especiales:</h3>
+          <div class="fill-blank">
+            La dirección de
+            <input type="text" class="blank-input" data-answer="red" />
+            permite el enrutamiento entre routers y tiene
+            <input type="text" class="blank-input" data-answer="0" />
+            binarios en la parte del host. La dirección de
+            <input type="text" class="blank-input" data-answer="broadcast" />
+            envía datos a todos los dispositivos de la red.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 55 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre la Clase A:</h3>
+          <div class="fill-blank">
+            La Clase A usa el primer bit
+            <input type="text" class="blank-input" data-answer="0" />
+            como fijo, permite
+            <input type="text" class="blank-input" data-answer="126" />
+            redes diferentes y cada red puede tener
+            <input type="text" class="blank-input" data-answer="16387064" />
+            hosts.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 56 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre la Clase B:</h3>
+          <div class="fill-blank">
+            La Clase B usa los primeros
+            <input type="text" class="blank-input" data-answer="2" />
+            bits
+            <input type="text" class="blank-input" data-answer="10" />
+            como fijos, el rango va de
+            <input type="text" class="blank-input" data-answer="128.0.0.0" />
+            a
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="191.255.255.255"
+            />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 57 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre máscaras por defecto:</h3>
+          <div class="fill-blank">
+            Las máscaras por defecto son: Clase A
+            <input type="text" class="blank-input" data-answer="255.0.0.0" />,
+            Clase B
+            <input type="text" class="blank-input" data-answer="255.255.0.0" />,
+            Clase C
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="255.255.255.0"
+            />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 58 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre CIDR:</h3>
+          <div class="fill-blank">
+            CIDR significa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="Classless Inter-Domain Routing"
+            />, fue introducido en los años
+            <input type="text" class="blank-input" data-answer="90" />
+            y elimina límites de
+            <input type="text" class="blank-input" data-answer="clases" />.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 59 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre enrutamiento:</h3>
+          <div class="fill-blank">
+            Solo hay
+            <input type="text" class="blank-input" data-answer="dos" />
+            maneras de completar una tabla de enrutamiento:
+            <input type="text" class="blank-input" data-answer="manualmente" />
+            (rutas estáticas) y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="automáticamente"
+            />
+            (protocolos dinámicos).
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 60 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre limitaciones de RIP:</h3>
+          <div class="fill-blank">
+            RIP usa el algoritmo de
+            <input type="text" class="blank-input" data-answer="Bellman-Ford" />
+            distribuido, las rutas tienen tiempo de vida de
+            <input type="text" class="blank-input" data-answer="180" />
+            segundos y el límite máximo es de
+            <input type="text" class="blank-input" data-answer="15" />
+            saltos.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 61 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre funciones del protocolo IP:</h3>
+          <div class="fill-blank">
+            Las dos funciones principales de IP son:
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="entrega de datagramas"
+            />
+            bajo mejor esfuerzo y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="fragmentación"
+            />
+            y
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="re-ensamblado"
+            />
+            de datagramas.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 62 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre autoridad de direcciones:</h3>
+          <div class="fill-blank">
+            <input type="text" class="blank-input" data-answer="ICANN" />
+            es la autoridad mundial encargada de distribuir direcciones IP, esto
+            es necesario para evitar direcciones
+            <input type="text" class="blank-input" data-answer="duplicadas" />
+            y prevenir
+            <input type="text" class="blank-input" data-answer="colisiones" />
+            de paquetes.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 63 -->
+        <div class="question" data-type="fill">
+          <h3>Completa sobre comandos de enrutamiento:</h3>
+          <div class="fill-blank">
+            Para crear una ruta estática se usa
+            <input type="text" class="blank-input" data-answer="ip route" />,
+            para verificar la tabla se usa
+            <input
+              type="text"
+              class="blank-input"
+              data-answer="show ip route"
+            />
+            y para eliminar una ruta se antepone
+            <input type="text" class="blank-input" data-answer="no" />
+            al comando.
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 64: Correspondencia clases IP -->
+        <div class="question" data-type="matching">
+          <h3>Relacione cada clase de dirección IP con sus características:</h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">Clase A</div>
+              <div class="match-item" data-match="2">Clase B</div>
+              <div class="match-item" data-match="3">Clase C</div>
+              <div class="match-item" data-match="4">Clase D</div>
+              <div class="match-item" data-match="5">Clase E</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">
+                0.0.0.0 a 127.255.255.255, 126 redes, 16.387.064 hosts
+              </div>
+              <div class="match-option" data-answer="2">
+                128.0.0.0 a 191.255.255.255, 16.384 redes, 64.516 hosts
+              </div>
+              <div class="match-option" data-answer="3">
+                192.0.0.0 a 223.255.255.255, 2.097.152 redes, 254 hosts
+              </div>
+              <div class="match-option" data-answer="4">
+                224.0.0.0 a 239.255.255.255, utilizada para multicast
+              </div>
+              <div class="match-option" data-answer="5">
+                240.0.0.0 a 247.255.255.255, propósitos experimentales
+              </div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 65: Correspondencia máscaras CIDR -->
+        <div class="question" data-type="matching">
+          <h3>
+            Relacione las máscaras en notación decimal con su equivalente CIDR:
+          </h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">255.0.0.0</div>
+              <div class="match-item" data-match="2">255.255.0.0</div>
+              <div class="match-item" data-match="3">255.255.255.0</div>
+              <div class="match-item" data-match="4">255.255.255.128</div>
+              <div class="match-item" data-match="5">255.255.255.252</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">/8</div>
+              <div class="match-option" data-answer="2">/16</div>
+              <div class="match-option" data-answer="3">/24</div>
+              <div class="match-option" data-answer="4">/25</div>
+              <div class="match-option" data-answer="5">/30</div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 66: Correspondencia métricas enrutamiento -->
+        <div class="question" data-type="matching">
+          <h3>Relacione cada métrica con su descripción específica:</h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">Longitud del camino</div>
+              <div class="match-item" data-match="2">Confiabilidad</div>
+              <div class="match-item" data-match="3">Retraso</div>
+              <div class="match-item" data-match="4">Ancho de banda</div>
+              <div class="match-item" data-match="5">Carga</div>
+              <div class="match-item" data-match="6">Costo</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">
+                Suma de costos de cada tramo o suma de saltos
+              </div>
+              <div class="match-option" data-answer="2">
+                Tasa de error de bits o probabilidad de caída del enlace
+              </div>
+              <div class="match-option" data-answer="3">
+                Tiempo necesario para transportar un paquete punto a punto
+              </div>
+              <div class="match-option" data-answer="4">
+                Velocidad de transmisión de información en el enlace
+              </div>
+              <div class="match-option" data-answer="5">
+                Porcentaje de utilización del procesador del router
+              </div>
+              <div class="match-option" data-answer="6">
+                Costo monetario del enlace o la ruta
+              </div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 67: Correspondencia dominios países -->
+        <div class="question" data-type="matching">
+          <h3>Relacione cada dominio principal con su país correspondiente:</h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">.mx</div>
+              <div class="match-item" data-match="2">.jp</div>
+              <div class="match-item" data-match="3">.fr</div>
+              <div class="match-item" data-match="4">.ar</div>
+              <div class="match-item" data-match="5">.it</div>
+              <div class="match-item" data-match="6">.es</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">México</div>
+              <div class="match-option" data-answer="2">Japón</div>
+              <div class="match-option" data-answer="3">Francia</div>
+              <div class="match-option" data-answer="4">Argentina</div>
+              <div class="match-option" data-answer="5">Italia</div>
+              <div class="match-option" data-answer="6">España</div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 68: Correspondencia subdominios función -->
+        <div class="question" data-type="matching">
+          <h3>
+            Relacione cada subdominio con su función o tipo de organización:
+          </h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">.com</div>
+              <div class="match-item" data-match="2">.edu</div>
+              <div class="match-item" data-match="3">.gov</div>
+              <div class="match-item" data-match="4">.mil</div>
+              <div class="match-item" data-match="5">.org</div>
+              <div class="match-item" data-match="6">.net</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">Empresa comercial</div>
+              <div class="match-option" data-answer="2">Educación</div>
+              <div class="match-option" data-answer="3">
+                Entidad de gobierno
+              </div>
+              <div class="match-option" data-answer="4">Militar</div>
+              <div class="match-option" data-answer="5">
+                Otras organizaciones
+              </div>
+              <div class="match-option" data-answer="6">Sitios en la red</div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 69: Correspondencia RFC protocolos -->
+        <div class="question" data-type="matching">
+          <h3>Relacione cada RFC con el protocolo que define:</h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">RFC 791</div>
+              <div class="match-item" data-match="2">RFC 2460</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">
+                IPv4 (Protocolo de Internet Versión 4)
+              </div>
+              <div class="match-option" data-answer="2">
+                IPv6 (Protocolo de Internet Versión 6)
+              </div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 70: Correspondencia comandos enrutamiento -->
+        <div class="question" data-type="matching">
+          <h3>
+            Relacione cada comando con su función en enrutamiento estático:
+          </h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">ip route</div>
+              <div class="match-item" data-match="2">show ip route</div>
+              <div class="match-item" data-match="3">no ip route</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">
+                Crear una ruta estática
+              </div>
+              <div class="match-option" data-answer="2">
+                Verificar la tabla de enrutamiento
+              </div>
+              <div class="match-option" data-answer="3">
+                Eliminar una ruta estática existente
+              </div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 71: Correspondencia tipos rutas -->
+        <div class="question" data-type="matching">
+          <h3>Relacione cada tipo de ruta con su método de creación:</h3>
+          <div class="matching-container">
+            <div class="match-items">
+              <div class="match-item" data-match="1">Rutas estáticas</div>
+              <div class="match-item" data-match="2">Rutas dinámicas</div>
+              <div class="match-item" data-match="3">Rutas conectadas</div>
+            </div>
+            <div class="match-options">
+              <div class="match-option" data-answer="1">
+                Creadas manualmente por el administrador
+              </div>
+              <div class="match-option" data-answer="2">
+                Creadas automáticamente por protocolos de enrutamiento
+              </div>
+              <div class="match-option" data-answer="3">
+                Se registran al configurar las interfaces del router
+              </div>
+            </div>
+          </div>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div class="results">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="score" id="score">0%</div>
+          <div class="score-details">
+            <span id="correctAnswers">0</span> respuestas correctas de
+            <span id="totalQuestionsResult">71</span>
+          </div>
+          <button class="btn btn-primary" onclick="restartQuiz()">
+            Reiniciar Cuestionario
+          </button>
+          <a href="index.html" class="btn btn-secondary"
+            >Volver a Conmutación y Redes</a
+          >
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="controls">
+          <button
+            class="btn btn-secondary"
+            id="prevBtn"
+            onclick="previousQuestion()"
+            disabled
+          >
+            Anterior
+          </button>
+          <div class="question-info">
+            <button
+              class="btn btn-primary"
+              id="checkBtn"
+              onclick="checkAnswer()"
+            >
+              Verificar Respuesta
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            id="nextBtn"
+            onclick="nextQuestion()"
+            disabled
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentQuestionIndex = 0;
+      let questions = [];
+      let userAnswers = [];
+      let correctAnswers = 0;
+      let questionOrder = []; // Array para el orden aleatorio de preguntas
+      let originalQuestions = []; // Array para almacenar las preguntas originales
+
+      // Función para mezclar un array (algoritmo Fisher-Yates)
+      function shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+
+      // Función para mezclar las opciones de una pregunta de opción múltiple
+      function shuffleOptions(question) {
+        const options = question.querySelectorAll(".option");
+        if (options.length > 0) {
+          const optionsArray = Array.from(options);
+          const shuffledOptions = shuffleArray(optionsArray);
+
+          const optionsList = question.querySelector(".options");
+          // Limpiar la lista actual
+          optionsList.innerHTML = "";
+
+          // Agregar las opciones mezcladas
+          shuffledOptions.forEach((option) => {
+            optionsList.appendChild(option);
+          });
+        }
+      }
+
+      // Función para mezclar items en preguntas de correspondencia
+      function shuffleMatchingItems(question) {
+        const matchItems = question.querySelectorAll(".match-item");
+        const matchOptions = question.querySelectorAll(".match-option");
+
+        if (matchItems.length > 0) {
+          const itemsArray = Array.from(matchItems);
+          const shuffledItems = shuffleArray(itemsArray);
+          const itemsContainer = question.querySelector(".match-items");
+          itemsContainer.innerHTML = "";
+          shuffledItems.forEach((item) => {
+            itemsContainer.appendChild(item);
+          });
+        }
+
+        if (matchOptions.length > 0) {
+          const optionsArray = Array.from(matchOptions);
+          const shuffledOptions = shuffleArray(optionsArray);
+          const optionsContainer = question.querySelector(".match-options");
+          optionsContainer.innerHTML = "";
+          shuffledOptions.forEach((option) => {
+            optionsContainer.appendChild(option);
+          });
+        }
+      }
+
+      // Función para inicializar el orden aleatorio de las preguntas
+      function initializeQuestionOrder() {
+        // Crear array con índices de preguntas
+        questionOrder = Array.from({ length: questions.length }, (_, i) => i);
+
+        // Mezclar el orden de las preguntas
+        questionOrder = shuffleArray(questionOrder);
+
+        // Guardar las preguntas originales antes de mezclar
+        originalQuestions = Array.from(questions);
+
+        // Mezclar las opciones de las preguntas según su tipo
+        originalQuestions.forEach((question) => {
+          const questionType = question.dataset.type;
+
+          if (questionType === "multiple") {
+            shuffleOptions(question);
+          } else if (questionType === "matching") {
+            shuffleMatchingItems(question);
+          }
+          // Las preguntas de fill y true-false no necesitan mezcla
+        });
+      }
+
+      // Función para obtener la pregunta actual basada en el orden aleatorio
+      function getCurrentQuestion() {
+        const actualIndex = questionOrder[currentQuestionIndex];
+        return originalQuestions[actualIndex];
+      }
+
+      // Función para obtener el índice original de la pregunta actual
+      function getCurrentOriginalIndex() {
+        return questionOrder[currentQuestionIndex];
+      }
+
+      // Inicializar el cuestionario
+      document.addEventListener("DOMContentLoaded", function () {
+        questions = document.querySelectorAll(".question");
+        initializeQuiz();
+      });
+
+      function initializeQuiz() {
+        userAnswers = new Array(questions.length).fill(null);
+        currentQuestionIndex = 0;
+        correctAnswers = 0;
+
+        // Inicializar orden aleatorio de preguntas
+        initializeQuestionOrder();
+
+        // Ocultar resultados
+        document.querySelector(".results").style.display = "none";
+
+        // Mostrar primera pregunta
+        showQuestion(0);
+
+        // Actualizar contador total
+        document.getElementById("totalQuestions").textContent =
+          questions.length;
+
+        // Actualizar barra de progreso
+        updateProgress();
+      }
+
+      function showQuestion(index) {
+        // Ocultar todas las preguntas
+        originalQuestions.forEach((q) => {
+          q.classList.remove("active");
+        });
+
+        // Mostrar pregunta actual según el orden aleatorio
+        const currentQuestion = getCurrentQuestion();
+        if (currentQuestion) {
+          currentQuestion.classList.add("active");
+        }
+
+        // Actualizar contador
+        document.getElementById("currentQuestion").textContent = index + 1;
+
+        // Actualizar botones
+        updateButtons();
+
+        // Actualizar barra de progreso
+        updateProgress();
+      }
+
+      function updateButtons() {
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const checkBtn = document.getElementById("checkBtn");
+
+        prevBtn.disabled = currentQuestionIndex === 0;
+
+        if (currentQuestionIndex === questions.length - 1) {
+          nextBtn.textContent = "Ver Resultados";
+          nextBtn.disabled = false;
+        } else {
+          nextBtn.textContent = "Siguiente";
+          nextBtn.disabled = userAnswers[currentQuestionIndex] === null;
+        }
+
+        // Verificar si ya fue respondida
+        if (userAnswers[currentQuestionIndex] !== null) {
+          checkBtn.style.display = "none";
+          nextBtn.disabled = false;
+        } else {
+          checkBtn.style.display = "inline-block";
+        }
+      }
+
+      function updateProgress() {
+        const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+        document.getElementById("progressBar").style.width = progress + "%";
+      }
+
+      function previousQuestion() {
+        if (currentQuestionIndex > 0) {
+          currentQuestionIndex--;
+          showQuestion(currentQuestionIndex);
+        }
+      }
+
+      function nextQuestion() {
+        if (currentQuestionIndex < questions.length - 1) {
+          currentQuestionIndex++;
+          showQuestion(currentQuestionIndex);
+        } else {
+          showResults();
+        }
+      }
+
+      // Manejo de preguntas de correspondencia
+      let matchingSelections = {};
+
+      function handleMatching(currentQuestion) {
+        const matchItems = currentQuestion.querySelectorAll(".match-item");
+        const matchOptions = currentQuestion.querySelectorAll(".match-option");
+
+        let selectedItem = null;
+
+        // Limpiar event listeners previos
+        matchItems.forEach((item) => {
+          item.replaceWith(item.cloneNode(true));
+        });
+        matchOptions.forEach((option) => {
+          option.replaceWith(option.cloneNode(true));
+        });
+
+        // Obtener elementos actualizados después del cloning
+        const updatedItems = currentQuestion.querySelectorAll(".match-item");
+        const updatedOptions =
+          currentQuestion.querySelectorAll(".match-option");
+
+        // Event listeners para items
+        updatedItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (this.classList.contains("disabled")) return;
+
+            // Limpiar selección anterior
+            updatedItems.forEach((i) => i.classList.remove("selected"));
+            // Seleccionar este item
+            this.classList.add("selected");
+            selectedItem = this;
+          });
+        });
+
+        // Event listeners para opciones
+        updatedOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            if (this.classList.contains("disabled")) return;
+
+            // Si hay un item seleccionado, hacer la conexión
+            if (selectedItem) {
+              const itemMatch = selectedItem.dataset.match;
+              const optionAnswer = this.dataset.answer;
+
+              // Guardar la selección
+              matchingSelections[itemMatch] = optionAnswer;
+
+              // Marcar como emparejados
+              selectedItem.classList.add("disabled");
+              this.classList.add("disabled");
+              selectedItem.classList.remove("selected");
+
+              selectedItem = null;
+            }
+          });
+        });
+
+        return matchingSelections;
+      }
+
+      // Verificar respuestas de correspondencia
+      function checkMatchingAnswers(currentQuestion) {
+        const matchItems = currentQuestion.querySelectorAll(".match-item");
+        let allCorrect = true;
+
+        matchItems.forEach((item) => {
+          const correctAnswer = item.dataset.match;
+          const userAnswer = matchingSelections[correctAnswer];
+
+          if (userAnswer === correctAnswer) {
+            item.classList.add("correct");
+            // Encontrar la opción correspondiente
+            const option = currentQuestion.querySelector(
+              `[data-answer="${userAnswer}"]`
+            );
+            if (option) option.classList.add("correct");
+          } else {
+            item.classList.add("incorrect");
+            allCorrect = false;
+            // Encontrar la opción correspondiente si existe
+            if (userAnswer) {
+              const option = currentQuestion.querySelector(
+                `[data-answer="${userAnswer}"]`
+              );
+              if (option) option.classList.add("incorrect");
+            }
+          }
+        });
+
+        return allCorrect;
+      }
+
+      // Función principal para verificar respuestas
+      function checkAnswer() {
+        const currentQuestion = getCurrentQuestion();
+        const questionType = currentQuestion.dataset.type;
+        let userAnswer = null;
+        let isCorrect = false;
+
+        if (questionType === "multiple") {
+          const selectedOption = currentQuestion.querySelector(
+            'input[type="radio"]:checked'
+          );
+          if (!selectedOption) {
+            alert("Por favor selecciona una respuesta");
+            return;
+          }
+
+          userAnswer = selectedOption.value;
+          isCorrect = selectedOption.value === "correct";
+
+          // Mostrar feedback visual
+          const options = currentQuestion.querySelectorAll(".option");
+          options.forEach((option) => {
+            const input = option.querySelector('input[type="radio"]');
+            if (input.value === "correct") {
+              option.classList.add("correct");
+            } else if (input.checked && input.value === "incorrect") {
+              option.classList.add("incorrect");
+            }
+          });
+        } else if (questionType === "true-false") {
+          const selectedOption = currentQuestion.querySelector(
+            ".tf-option.selected"
+          );
+          if (!selectedOption) {
+            alert("Por favor selecciona una respuesta");
+            return;
+          }
+
+          userAnswer = selectedOption.dataset.value;
+          const correctAnswer = currentQuestion.dataset.answer;
+          isCorrect = userAnswer === correctAnswer;
+
+          // Mostrar feedback visual
+          const options = currentQuestion.querySelectorAll(".tf-option");
+          options.forEach((option) => {
+            if (option.dataset.value === correctAnswer) {
+              option.classList.add("correct");
+            } else if (
+              option.classList.contains("selected") &&
+              option.dataset.value !== correctAnswer
+            ) {
+              option.classList.add("incorrect");
+            }
+          });
+        } else if (questionType === "fill") {
+          const inputs = currentQuestion.querySelectorAll(".blank-input");
+          if (inputs.length === 0) {
+            alert("No se encontraron campos para completar");
+            return;
+          }
+
+          let allCorrect = true;
+          userAnswer = [];
+
+          inputs.forEach((input) => {
+            const userInput = input.value.trim().toLowerCase();
+            const correctAnswer = input.dataset.answer.toLowerCase();
+            const inputCorrect =
+              userInput === correctAnswer ||
+              userInput.includes(correctAnswer) ||
+              correctAnswer.includes(userInput);
+
+            userAnswer.push(userInput);
+
+            if (inputCorrect) {
+              input.classList.add("correct");
+            } else {
+              input.classList.add("incorrect");
+              allCorrect = false;
+            }
+          });
+
+          isCorrect = allCorrect;
+        } else if (questionType === "matching") {
+          // Verificar que se hayan hecho todas las conexiones
+          const matchItems = currentQuestion.querySelectorAll(".match-item");
+          if (Object.keys(matchingSelections).length < matchItems.length) {
+            alert("Por favor completa todas las correspondencias");
+            return;
+          }
+
+          userAnswer = { ...matchingSelections };
+          isCorrect = checkMatchingAnswers(currentQuestion);
+          matchingSelections = {}; // Reset para la siguiente pregunta
+        }
+
+        // Guardar respuesta
+        userAnswers[currentQuestionIndex] = {
+          answer: userAnswer,
+          correct: isCorrect,
+        };
+
+        if (isCorrect) {
+          correctAnswers++;
+        }
+
+        // Mostrar feedback
+        showFeedback(isCorrect);
+
+        // Actualizar botones
+        updateButtons();
+      }
+
+      function showFeedback(isCorrect) {
+        const currentQuestion = getCurrentQuestion();
+        const feedback = currentQuestion.querySelector(".feedback");
+
+        feedback.style.display = "block";
+        feedback.className =
+          "feedback " + (isCorrect ? "correct" : "incorrect");
+        feedback.textContent = isCorrect
+          ? "¡Correcto! Bien hecho."
+          : "Incorrecto. Revisa el material de estudio.";
+      }
+
+      function showResults() {
+        // Ocultar pregunta actual
+        const currentQuestion = getCurrentQuestion();
+        currentQuestion.classList.remove("active");
+
+        // Mostrar resultados
+        const resultsDiv = document.querySelector(".results");
+        resultsDiv.style.display = "block";
+
+        // Calcular puntuación
+        const percentage = Math.round(
+          (correctAnswers / questions.length) * 100
+        );
+
+        // Actualizar elementos de resultado
+        document.getElementById("score").textContent = percentage + "%";
+        document.getElementById("correctAnswers").textContent = correctAnswers;
+        document.getElementById("totalQuestionsResult").textContent =
+          questions.length;
+
+        // Ocultar controles
+        document.querySelector(".controls").style.display = "none";
+        document.querySelector(".question-counter").style.display = "none";
+        document.querySelector(".quiz-progress").style.display = "none";
+      }
+
+      function restartQuiz() {
+        // Resetear variables
+        correctAnswers = 0;
+        userAnswers = new Array(questions.length).fill(null);
+        currentQuestionIndex = 0;
+        matchingSelections = {};
+
+        // Limpiar estados visuales
+        originalQuestions.forEach((question) => {
+          question.classList.remove("active");
+
+          // Limpiar opciones múltiples
+          const options = question.querySelectorAll(".option");
+          options.forEach((option) => {
+            option.classList.remove("correct", "incorrect");
+          });
+
+          // Limpiar verdadero/falso
+          const tfOptions = question.querySelectorAll(".tf-option");
+          tfOptions.forEach((option) => {
+            option.classList.remove("selected", "correct", "incorrect");
+          });
+
+          // Limpiar inputs de texto
+          const inputs = question.querySelectorAll(".blank-input");
+          inputs.forEach((input) => {
+            input.value = "";
+            input.classList.remove("correct", "incorrect");
+          });
+
+          // Limpiar correspondencias
+          const matchItems = question.querySelectorAll(".match-item");
+          const matchOptions = question.querySelectorAll(".match-option");
+          matchItems.forEach((item) => {
+            item.classList.remove(
+              "selected",
+              "correct",
+              "incorrect",
+              "disabled"
+            );
+          });
+          matchOptions.forEach((option) => {
+            option.classList.remove(
+              "selected",
+              "correct",
+              "incorrect",
+              "disabled"
+            );
+          });
+
+          // Limpiar radio buttons
+          const radios = question.querySelectorAll('input[type="radio"]');
+          radios.forEach((radio) => {
+            radio.checked = false;
+          });
+
+          // Ocultar feedback
+          const feedback = question.querySelector(".feedback");
+          feedback.style.display = "none";
+        });
+
+        // Mostrar elementos del quiz
+        document.querySelector(".controls").style.display = "flex";
+        document.querySelector(".question-counter").style.display = "block";
+        document.querySelector(".quiz-progress").style.display = "block";
+
+        // Inicializar quiz con nuevo orden aleatorio
+        initializeQuiz();
+      }
+
+      // Event listeners para verdadero/falso
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("tf-option")) {
+          const currentQuestion = getCurrentQuestion();
+          if (
+            currentQuestion &&
+            currentQuestion.dataset.type === "true-false"
+          ) {
+            // Limpiar selección anterior
+            const allOptions = currentQuestion.querySelectorAll(".tf-option");
+            allOptions.forEach((opt) => opt.classList.remove("selected"));
+
+            // Seleccionar nueva opción
+            e.target.classList.add("selected");
+          }
+        }
+
+        // Manejar correspondencias
+        if (
+          e.target.classList.contains("match-item") ||
+          e.target.classList.contains("match-option")
+        ) {
+          const currentQuestion = getCurrentQuestion();
+          if (currentQuestion && currentQuestion.dataset.type === "matching") {
+            handleMatching(currentQuestion);
+          }
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft" && currentQuestionIndex > 0) {
+          previousQuestion();
+        } else if (
+          e.key === "ArrowRight" &&
+          currentQuestionIndex < questions.length - 1
+        ) {
+          nextQuestion();
+        } else if (e.key === "Enter") {
+          const checkBtn = document.getElementById("checkBtn");
+          if (checkBtn.style.display !== "none") {
+            checkAnswer();
+          } else {
+            nextQuestion();
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,452 @@
+// ===== PREGUNTAS DE OPCIÓN MÚLTIPLE =====
+
+::Definición direccionamiento IP::¿Qué es el direccionamiento IP?{
+~Una función de los protocolos de capa física que permite la transmisión de datos
+=Una función clave de los protocolos de capa de Red que permite la transmisión de datos entre hosts de la misma red o en redes diferentes
+~Una función de los protocolos de capa de aplicación para identificar servicios
+~Una función exclusiva de IPv6 para el enrutamiento
+}
+
+::Características direcciones IP::Las direcciones IP se caracterizan por\:{
+~Utilizar 16 bits agrupados en 2 octetos
+=Utilizar 32 bits agrupados en 4 octetos separados por puntos
+~Utilizar 64 bits agrupados en 8 octetos
+~Utilizar 128 bits en formato hexadecimal
+}
+
+::RFC IPv4 IPv6::¿En qué RFC están definidos IPv4 e IPv6 respectivamente?{
+=RFC 791 y RFC 2460
+~RFC 2460 y RFC 791
+~RFC 1918 y RFC 2460
+~RFC 791 y RFC 1918
+}
+
+::Clase A número redes::¿Cuántas redes Clase A pueden existir?{
+~128
+=126
+~127
+~254
+}
+
+::Clase A hosts totales::¿Cuántos hosts puede tener una red Clase A?{
+~16.777.214
+=16.387.064
+~16.000.000
+~16.777.216
+}
+
+::Clase B redes disponibles::¿Cuántas redes Clase B diferentes pueden existir?{
+~16.256
+=16.384
+~65.534
+~32.768
+}
+
+::Clase B hosts por red::¿Cuántos hosts máximo puede tener una red Clase B?{
+=64.516
+~65.534
+~65.536
+~64.000
+}
+
+::Clase C redes totales::¿Cuántas redes Clase C diferentes pueden existir?{
+~1.048.576
+=2.097.152
+~16.777.216
+~4.194.304
+}
+
+::Clase D propósito::¿Para qué se utiliza la Clase D?{
+~Para redes experimentales
+~Para redes privadas
+=Para multicast
+~Para broadcast
+}
+
+::Clase E propósito::¿Para qué fueron designadas originalmente las direcciones Clase E?{
+~Para uso comercial
+~Para redes militares
+=Para propósitos experimentales o de uso especial
+~Para redes gubernamentales
+}
+
+::Direcciones reservadas 0 255::¿Qué representan los valores 0 y 255 en las direcciones IP?{
+~0 para broadcast, 255 para red
+=0 para máquinas que no conocen su dirección, 255 para multicast/broadcast
+~Ambos para direcciones especiales sin uso específico
+~0 y 255 son direcciones normales utilizables
+}
+
+::Máscara CIDR /24::¿A qué máscara decimal corresponde /24 en notación CIDR?{
+~255.255.0.0
+=255.255.255.0
+~255.255.255.128
+~255.0.0.0
+}
+
+::Máscara /16 hosts::¿Cuántos hosts permite una máscara /16?{
+~32.766
+=65.534
+~16.382
+~131.070
+}
+
+::Máscara /30 hosts::¿Cuántos hosts permite una máscara /30?{
+~6
+~4
+=2
+~14
+}
+
+::CIDR significado completo::¿Qué significa CIDR?{
+~Classless Internal Domain Routing
+=Classless Inter-Domain Routing
+~Classical Internet Domain Routing
+~Centralized Inter-Domain Routing
+}
+
+::VLSM dirección bits::En VLSM, ¿de qué dirección se toman los bits para realizar el direccionamiento?{
+~De izquierda a derecha
+=De derecha a izquierda
+~Del centro hacia los extremos
+~Alternando bits
+}
+
+::Router conexión única::¿Cómo se denomina un router que sólo está conectado a otro router?{
+~Router de borde
+~Router de acceso
+=Router de conexión única
+~Router de distribución
+}
+
+::RIP familia protocolo::¿A qué familia de protocolos pertenece RIP?{
+~EGP (Exterior Gateway Protocol)
+=IGP (Interior Gateway Protocol)
+~BGP (Border Gateway Protocol)
+~OSPF Family
+}
+
+::RIP algoritmo::¿Qué algoritmo emplea el protocolo RIP?{
+~Algoritmo de Dijkstra
+=Algoritmo de Bellman-Ford distribuido
+~Algoritmo de Floyd-Warshall
+~Algoritmo SPF
+}
+
+::RIP tiempo vida rutas::¿Cuál es el tiempo de vida de las rutas en RIP?{
+~120 segundos
+~150 segundos
+=180 segundos
+~240 segundos
+}
+
+::RIP intercambios información::Los 180 segundos de vida de las rutas RIP corresponden a\:{
+~4 intercambios de información
+~5 intercambios de información
+=6 intercambios de información
+~8 intercambios de información
+}
+
+::IP funciones principales::¿Cuáles son las dos funciones principales del protocolo IP?{
+~Enrutamiento y seguridad
+~Direccionamiento y cifrado
+=Entrega de datagramas bajo mejor esfuerzo y fragmentación/re-ensamblado
+~Control de flujo y detección de errores
+}
+
+::IP mejor esfuerzo::¿Por qué se considera a IP un protocolo de "mejor esfuerzo"?{
+~Porque siempre garantiza la entrega
+~Porque usa la ruta más rápida
+=Porque no garantiza que los paquetes lleguen ni el orden de entrega
+~Porque tiene mecanismos de corrección de errores
+}
+
+::DNS función::¿Cuál es el propósito principal del DNS?{
+~Asignar direcciones IP dinámicamente
+=Traducir direcciones IP a nombres de dominio y viceversa
+~Enrutar paquetes entre redes
+~Proporcionar seguridad en las conexiones
+}
+
+::Dominio principal letras::¿De cuántas letras constan los dominios principales?{
+~Una letra
+=Dos letras
+~Tres letras
+~Cuatro letras
+}
+
+::ICANN función::¿Cuál es la función del ICANN?{
+~Desarrollar protocolos de red
+~Fabricar equipos de red
+=Controlar la distribución y mantenimiento de direcciones IP a escala mundial
+~Proporcionar servicios de Internet
+}
+
+::Subred ejemplo 192.168.1.24::Con la dirección 192.168.1.24 y máscara 255.255.255.0, ¿cuál es el rango de la subred?{
+~192.168.0.0 a 192.168.0.255
+=192.168.1.0 a 192.168.1.255
+~192.168.1.1 a 192.168.1.254
+~192.168.1.0 a 192.168.1.127
+}
+
+::Subred máscara 255.255.255.128::Con máscara 255.255.255.128, ¿en cuántas subredes se divide 192.168.1.0?{
+~Una subred
+=Dos subredes
+~Tres subredes
+~Cuatro subredes
+}
+
+::Métrica longitud camino::¿Qué representa la métrica "longitud del camino"?{
+~Solo el número de routers
+~Solo la distancia física
+=La suma de costos de cada salto o la suma de saltos
+~El tiempo de transmisión
+}
+
+::Métrica ancho banda::¿Qué mide la métrica "ancho de banda"?{
+~El costo monetario del enlace
+~La confiabilidad del enlace
+=La velocidad de transmisión de información
+~La distancia física del enlace
+}
+
+::Router función capa::¿En qué capa del modelo OSI toma decisiones el router?{
+~Capa 2 (Enlace de datos)
+=Capa 3 (Red)
+~Capa 4 (Transporte)
+~Capa 1 (Física)
+}
+
+// ===== PREGUNTAS ABIERTAS =====
+
+::Direccionamiento IP concepto completo::Defina el direccionamiento IP y explique detalladamente sus cinco características principales mencionadas en el material.{
+=El direccionamiento IP es una función clave de los protocolos de capa de Red que permite la transmisión de datos entre hosts de la misma red o en redes diferentes. Sus cinco características principales son\: 1) Las direcciones IP se denominan direcciones lógicas (no físicas), 2) Tienen un direccionamiento jerárquico (estructura organizada), 3) Representan una conexión de la máquina a la red y no la máquina misma, 4) Utiliza una dirección de 32 bits agrupados en 4 octetos separados por puntos y representado en forma decimal, 5) Cada bit en el octeto tiene un peso binario, con valor mínimo de 0 y máximo de 255 por octeto.
+}
+
+::Dos direcciones especiales IP::Explique detalladamente las dos direcciones especiales en IP, incluyendo sus características y ejemplos.{
+=Las dos direcciones especiales son\: 1) Dirección de red\: permite el enrutamiento entre routers, posee 0 binarios en todos los bits de la parte del Host (ejemplo\: 172.16.0.0), se usa para identificar la red completa. 2) Dirección de broadcast\: permite enviar datos a todos los dispositivos de una red, posee un 1 en todos los bits de la parte del Host (ejemplo\: 172.16.255.255), se utiliza para comunicación uno-a-todos en la red local.
+}
+
+::Comparación IPv4 IPv6 completa::Compare IPv4 e IPv6 en términos de bits utilizados, RFC de definición, y estado actual de implementación.{
+=IPv4\: Utiliza 32 bits, definida en RFC 791, actualmente maneja la mayoría del tráfico de Internet. IPv6\: Utiliza 128 bits, definida en RFC 2460, diseñada para reemplazar a IPv4 pero aún en proceso de adopción. La diferencia básica es la cantidad de bits (32 vs 128), lo que permite a IPv6 tener un espacio de direcciones mucho mayor. Actualmente ambos protocolos coexisten, aunque se pretende que IPv6 reemplace completamente a IPv4 en el futuro.
+}
+
+::Análisis detallado Clase A::Analice completamente la Clase A incluyendo\: estructura de bits, rango, número de redes posibles, número de hosts por red, y tipo de organizaciones que la utilizan.{
+=Clase A\: Estructura\: primeros 8 bits con 1 bit fijo (0) y 7 bits variables (00000000 a 01111111). Rango\: 0.0.0.0 a 127.255.255.255, pero 0 y 127 están reservados. Redes posibles\: 126 (2^7 - 2). Hosts por red\: 16.387.064 (2^24 - 2). Uso\: 1 byte para identificación de red, 3 bytes para hosts. Utilizada por redes muy extensas como grandes corporaciones comerciales, aunque son pocas las organizaciones que obtienen clase A, siendo más común que grandes organizaciones usen varias redes clase B.
+}
+
+::Análisis detallado Clase B::Analice completamente la Clase B incluyendo estructura de bits, rango, cálculos de redes y hosts, y uso típico.{
+=Clase B\: Estructura\: primeros 2 bits fijos (10) en el primer byte. Rango\: 128.0.0.0 a 191.255.255.255 (128=10000000 a 191=10111111). Redes posibles\: 16.384 (2^14), usando 16 bits menos 2 bits fijos para identificación de red. Hosts por red\: 64.516 (2^16 - 2), usando los dos últimos bytes. Identificación\: 2 bytes para red (valores válidos 128.1 a 191.254), 2 bytes para hosts. Uso\: Suficiente para la gran mayoría de organizaciones grandes, evitando usar clase A cuando se necesitan múltiples redes.
+}
+
+::Análisis detallado Clase C::Analice completamente la Clase C incluyendo estructura, rango, capacidades y limitaciones.{
+=Clase C\: Estructura\: primeros 3 bits fijos (110) en el primer byte. Rango\: 192.0.0.0 a 223.255.255.255 (192=11000000 a 223=11011111). Redes posibles\: 2.097.152 (2^21), usando 3 bytes para identificación de red. Hosts por red\: 254 (2^8 - 2), usando el último byte. Identificación\: 3 bytes para red (192.1.1 a 223.254.254), 1 byte para hosts. Limitación\: Solo 254 computadoras por red, no se usan direcciones 0 y 255 del último octeto.
+}
+
+::Clases D y E propósitos::Explique detalladamente los propósitos y características de las Clases D y E.{
+=Clase D\: Utilizada para multicast. Estructura\: primeros 4 bits 1110. Rango\: 224.0.0.0 a 239.255.255.255. Los otros 28 bits identifican el grupo de computadoras al que se dirige el mensaje multicast. Uso muy particular para comunicación uno-a-muchos. Clase E\: Rango\: 240.0.0.0 a 247.255.255.255. Originalmente designadas para propósitos experimentales o de uso especial. Parte del esquema de direccionamiento IP pero con aplicación limitada en redes de producción.
+}
+
+::Valores reservados 0 y 255::Explique detalladamente por qué los valores 0 y 255 no pueden usarse normalmente en direcciones IP y sus propósitos específicos.{
+=El número 0 está reservado para máquinas que no conocen su dirección\: puede usarse en identificación de red (máquinas que no conocen su número de red), en identificación de host (máquinas que no conocen su número de host), o en ambos casos. El número 255 se reserva para multicast/broadcast\: necesario para hacer mensajes visibles a todos los sistemas de la misma red, más eficiente que envío individual, útil para convertir nombres de dominio a IP cuando no se conoce el servidor DNS. Se puede usar dirección específica de red + 255 en hosts, o 255.255.255.255 para referirse a todos los sistemas de la red.
+}
+
+::Métricas enrutamiento completas::Describa detalladamente las seis métricas utilizadas en algoritmos de enrutamiento mencionadas en el material.{
+=1) Longitud del camino\: Métrica más usada, suma de costos de cada tramo o suma de saltos del paquete. 2) Confiabilidad\: Valor arbitrario del administrador, refleja tasa de error de bits (BER), probabilidad de caída del enlace, facilidad de recuperación. 3) Retraso\: Tiempo para transportar paquete punto a punto, depende de ancho de banda, distancia, colas en routers, congestión. 4) Ancho de banda\: Velocidad de transmisión esperada, cuanto más alta mejor, pero debe considerar factores como colas. 5) Carga\: Ocupación de elementos de red, porcentaje de utilización del procesador, capacidad de proceso en paquetes/segundo. 6) Costo\: Costo monetario, a veces se prefiere camino más largo pero más barato.
+}
+
+::VLSM vs subnetting tradicional::Compare VLSM con subnetting tradicional, explicando ventajas, diferencias en enfoque y ejemplo práctico detallado.{
+=Subnetting tradicional\: Todas las subredes tienen la misma máscara, enfoque en número de redes requeridas, desperdicia direcciones cuando subredes tienen pocos hosts. VLSM\: Máscara se adapta al requerimiento de hosts, enfoque en cantidad de hosts por subred, técnica más eficiente. Ejemplo\: Red de ventas (100 hosts) y administración (10 hosts). Subnetting\: ambas tendrían /24 (254 hosts), desperdiciando 154 direcciones en administración. VLSM\: ventas /25 (126 hosts), administración /28 (14 hosts), optimizando uso. VLSM requiere CIDR, elimina límites de clases, permite sumarización de rutas.
+}
+
+::Ejemplo VLSM red ventas::Desarrolle completamente el ejemplo de VLSM para una red de ventas con 100 hosts, incluyendo cálculos binarios y justificación de la máscara seleccionada.{
+=Red de ventas\: 100 hosts requeridos. Análisis del cuarto octeto\: necesitamos al menos 7 bits para hosts (2^7 \= 128 - 2 \= 126 hosts disponibles). Estructura binaria\: 11111111.11111111.11111111.10000000. Máscara resultante\: 255.255.255.128 o /25. Cálculo\: 2^7 \= 128 direcciones totales - 2 (red y broadcast) \= 126 direcciones de hosts disponibles. Como solo requerimos 100 hosts, quedan 26 hosts como reserva para ampliaciones futuras. Esta máscara es eficiente porque no desperdicia excesivas direcciones y permite crecimiento moderado del departamento.
+}
+
+::Protocolo IP funciones principales::Explique las dos funciones principales del protocolo IP y por qué se considera un protocolo de "mejor esfuerzo".{
+=Funciones principales\: 1) Entrega de datagramas a través de Internet bajo el mejor esfuerzo\: transporta paquetes sin garantías. 2) Fragmentación y re-ensamblado de datagramas\: divide paquetes grandes y los reensambla en destino. Se considera "mejor esfuerzo" porque\: no garantiza que paquetes transmitidos lleguen al destino, no garantiza que datagramas se reciban en el orden enviado, no tiene mecanismos de corrección de errores o control de flujo. La función principal es llevar paquetes de nodo fuente a nodo destino identificando cada paquete con una dirección IP numérica.
+}
+
+::DNS y dominios relación completa::Explique la relación entre DNS, nombres de dominio, y direcciones IP, incluyendo estructura jerárquica y ejemplos.{
+=DNS (Domain Name System)\: base de datos distribuida jerárquicamente que traduce entre direcciones IP numéricas y nombres de dominio nemónicos. Necesidad\: humanos prefieren nombres (http\://ford.com) sobre direcciones IP (http\://19.12.113.37). Estructura jerárquica\: ejemplo http\://cursos.itparral.edu.mx - "cursos" (sub-subdominio), "itparral" (subdominio), "edu" (subdominio mayor), "mx" (dominio principal). Dominios principales\: dos letras indican país (.mx México, .jp Japón). Subdominios\: .com (comercial), .edu (educación), .gov (gobierno), .mil (militar), .org (otras organizaciones), .net (sitios en red). Primera palabra indica función del servidor.
+}
+
+::ICANN y gestión direcciones::Explique el rol del ICANN y la necesidad de una autoridad central para el direccionamiento IP.{
+=ICANN (Internet Corporation for Assigned Names and Numbers)\: autoridad mundial encargada de distribuir y mantener información de direccionamiento IP. Necesidad\: evitar direcciones duplicadas o repetidas en la misma red, prevenir conflictos de "identidad", evitar colisiones de paquetes, mantener calidad de respuesta de red. Función\: controla registro asignado a cada dominio de red, mantiene buen funcionamiento de red global. Gestores regionales\: se encargan de asignar direcciones IP en diferentes dominios internacionales. Sin esta autoridad habría caos en Internet por direcciones conflictivas.
+}
+
+::Configuración subredes ejemplo detallado::Explique detalladamente el ejemplo de creación de subredes con 192.168.1.24 y las dos máscaras mencionadas (255.255.255.0 y 255.255.255.128).{
+=Ejemplo base\: 192.168.1.24. Máscara 255.255.255.0 (/24)\: Parte fija\: 192.168.1.X, parte variable\: último byte. Rango total\: 192.168.1.0 a 192.168.1.255. Direcciones utilizables\: 192.168.1.1 a 192.168.1.254 (254 hosts). Primera dirección (192.168.1.0) reservada para identificación de red, última (192.168.1.255) reservada para broadcast. Máscara 255.255.255.128 (/25)\: Divide dominio original en dos subredes\: Primera subred\: 192.168.1.0 a 192.168.1.127, Segunda subred\: 192.168.1.128 a 192.168.1.255. En cada subred, punto inicio y fin son direcciones reservadas (red y broadcast).
+}
+
+::Enrutamiento estático completo::Explique el enrutamiento estático, sus ventajas, desventajas, y cuándo es apropiado utilizarlo.{
+=Enrutamiento estático\: método donde administradores crean tablas de enrutamiento manualmente en lugar de usar protocolos dinámicos, proporciona control absoluto sobre rutas de transmisión. Ventajas\: control total del administrador, más seguro, no consume ancho de banda para intercambio de información, configuración determinística. Desventajas\: requiere configuración manual, no se adapta automáticamente a cambios, más trabajo administrativo, menos escalable. Uso apropiado\: internetworks pequeñas, como respaldo en redes grandes, conexiones con proveedores de servicios, routers de conexión única. No es método antiguo, sigue siendo fundamental y extensamente usado.
+}
+
+::Protocolos RIP características completas::Describa todas las características del protocolo RIP mencionadas en el material.{
+=RIP (Routing Information Protocol)\: Familia\: IGP (Interior Gateway Protocol). Tipo\: vector distancia, busca camino más corto determinando dirección y distancia. Funcionamiento\: pasa copias periódicas de tabla de enrutamiento entre routers. Métrica\: número de saltos entre router origen y destino, red directamente conectada \= costo 1. Transporte\: datagramas UDP por puerto 520. Algoritmo\: Bellman-Ford distribuido. Tiempo de vida\: rutas 180 segundos (6 intercambios), si no se confirman se borran. Limitaciones\: no detecta rutas circulares (bucles), límite 15 saltos máximo, métrica 16 \= infinito/inalcanzable. Simplicidad\: uno de los más sencillos en operación y configuración.
+}
+
+::Tabla enrutamiento construcción::Explique qué es una tabla de enrutamiento, cómo se construye, y los tipos de rutas que puede contener.{
+=Tabla de enrutamiento\: recopilación de toda la información que puede obtener un router mediante configuración de interfaces e intercambio con routers vecinos. Propósito\: almacenar información de rutas/destinos en memoria interna, procesar con algoritmos especiales para calcular mejor vía para entrega de paquetes. Construcción\: Solo dos métodos\: 1) Manualmente (rutas estáticas), 2) Automáticamente (protocolos de enrutamiento dinámico). Tipos de rutas\: Conectadas directamente (al configurar interfaces), Rutas dinámicas (protocolos de ruteo, se ajustan a cambios), Rutas estáticas (configuración manual, se conservan igual hasta modificación manual). Importancia\: establece topología integral de enlace interworking, crucial mantener actualizada.
+}
+
+::Comandos enrutamiento estático completos::Explique los comandos para crear, verificar y eliminar rutas estáticas, incluyendo sintaxis completa y ejemplos.{
+=Crear ruta estática\: Sintaxis\: ip route [red_destino] [máscara] [interfaz_salida]. Ejemplo\: ip route 10.0.1.0 255.255.255.0 serial 1/1/0. Componentes\: "ip route" (comando base), "10.0.1.0" (dirección red destino), "255.255.255.0" (máscara subred), "serial 1/1/0" (interfaz salida para el paquete). Verificar tabla\: show ip route. Resultado\: muestra rutas conectadas directamente (configuración interfaces), rutas dinámicas (protocolos ruteo), rutas estáticas (configuración manual). Eliminar ruta\: anteponer "no" al comando\: no ip route 10.0.1.0 255.255.255.0 serial 1/1/0. Flexibilidad\: se pueden crear tantas rutas como sea conveniente y eliminarlas fácilmente.
+}
+
+// ===== PREGUNTAS DE COMPLETAR =====
+
+::Completar características IP::Las direcciones IP se denominan direcciones _______, tienen direccionamiento _______, representan una _______ de la máquina a la red, utilizan _____ bits agrupados en _____ octetos.{
+=lógicas\#jerárquico\#conexión#32\#4
+}
+
+::Completar direcciones especiales::La dirección de _______ permite el enrutamiento entre routers y posee _____ binarios en la parte del host. La dirección de _______ permite enviar datos a todos los dispositivos y posee _____ en todos los bits del host.{
+=red#0#broadcast#1
+}
+
+::Completar RFC versiones::IPv4 está definida en RFC _______ e IPv6 está definida en RFC _______. La diferencia básica es que IPv4 usa _____ bits mientras IPv6 usa _____ bits.{
+=791#2460#32#128
+}
+
+::Completar Clase A::La Clase A usa el primer bit _____ como fijo, permite _____ redes diferentes (excluyendo reservadas), y cada red puede tener _______ hosts.{
+=0#126#16387064
+}
+
+::Completar Clase B::La Clase B usa los primeros _____ bits _____ como fijos, el rango va de _______ a _______, y permite _______ hosts por red.{
+=2#10#128.0.0.0#191.255.255.255#64516
+}
+
+::Completar Clase C::La Clase C usa _____ bytes para identificar la red, permite _____ hosts por red, y pueden existir _______ redes clase C diferentes.{
+=3#254#2097152
+}
+
+::Completar máscaras default::Las máscaras por defecto son\: Clase A _______, Clase B _______, Clase C _______. Estas también se conocen como máscaras _______.{
+=255.0.0.0#255.255.0.0#255.255.255.0#default
+}
+
+::Completar VLSM concepto::VLSM significa _______ _______ _______ _______ y es una técnica diseñada para _______ el direccionamiento IP. En VLSM el direccionamiento se hace de _______ a _______.{
+=Variable#Length#Subnet#Mask#optimizar#derecha#izquierda
+}
+
+::Completar CIDR::CIDR significa _______ _______ _______ _______, fue introducido por _______ en los años _____, elimina límites de _______ y permite _______ y sumarización de rutas.{
+=Classless#Inter-Domain#Routing#IETF#90s#clases#VLSM
+}
+
+::Completar enrutamiento métodos::Solo hay _____ maneras de completar una tabla de enrutamiento\: _______ (rutas estáticas) y _______ (protocolos dinámicos). Un router de _______ _______ está conectado solo a otro router.{
+=dos#manualmente#automáticamente#conexión#única
+}
+
+::Completar RIP características::RIP pertenece a la familia _____, es un protocolo de _______ _______, usa como métrica el _______ de _______, emplea datagramas _____ por el puerto _____.{
+=IGP#vector#distancia#número#saltos#UDP#520
+}
+
+::Completar RIP limitaciones::RIP usa el algoritmo de _______ _______ distribuido, las rutas tienen tiempo de vida de _____ segundos que corresponden a _____ intercambios, y el límite máximo es de _____ saltos.{
+=Bellman-Ford#180#6#15
+}
+
+::Completar IP funciones::Las dos funciones principales de IP son\: _______ de _______ bajo mejor esfuerzo y _______ y _______ de datagramas. Se considera de "mejor esfuerzo" porque no _______ la entrega.{
+=entrega#datagramas#fragmentación#re-ensamblado#garantiza
+}
+
+::Completar DNS estructura::DNS significa _______ _______ _______, traduce direcciones _____ a nombres de _______ y viceversa. Los dominios principales constan de _____ letras que indican el _______.{
+=Domain#Name#System#IP#dominio#dos#país
+}
+
+::Completar autoridad direcciones::_______ es la autoridad mundial encargada de distribuir direcciones IP, esto es necesario para evitar direcciones _______ y prevenir _______ de paquetes.{
+=ICANN#duplicadas#colisiones
+}
+
+// ===== PREGUNTAS DE VERDADERO/FALSO =====
+
+::VF direcciones lógicas::Las direcciones IP se denominan direcciones lógicas porque representan ubicaciones lógicas en la red.{TRUE#Las direcciones IP son llamadas lógicas porque no representan ubicaciones físicas sino lógicas en la estructura de red.}
+
+::VF IPv4 reemplazado::IPv6 ha reemplazado completamente a IPv4 en la actualidad.{FALSE#Aunque IPv6 está diseñado para reemplazar a IPv4, actualmente ambos protocolos coexisten y la mayoría del tráfico sigue siendo IPv4.}
+
+::VF Clase A organizaciones::Las direcciones Clase A son utilizadas únicamente por organizaciones militares.{FALSE#Las direcciones Clase A son utilizadas por redes muy extensas y grandes redes comerciales, no exclusivamente militares.}
+
+::VF valores 0 255::Los valores 0 y 255 pueden utilizarse normalmente para asignar a dispositivos en cualquier red.{FALSE#Los valores 0 y 255 están reservados para propósitos específicos (identificación de red/host desconocidos y multicast/broadcast respectivamente).}
+
+::VF CIDR clases::CIDR eliminó completamente el concepto de clases en el direccionamiento IP.{TRUE#CIDR (Classless Inter-Domain Routing) eliminó los límites de clases y agregó flexibilidad al direccionamiento.}
+
+::VF VLSM subnetting::VLSM y subnetting tradicional utilizan el mismo enfoque para crear subredes.{FALSE#VLSM se enfoca en la cantidad de hosts por subred, mientras subnetting tradicional se enfoca en el número de redes requeridas.}
+
+::VF router conexión única::Un router de conexión única puede estar conectado a múltiples routers simultáneamente.{FALSE#Un router de conexión única está conectado solamente a otro router, de ahí su nombre.}
+
+::VF enrutamiento estático automático::El enrutamiento estático se adapta automáticamente a los cambios en la topología de red.{FALSE#Las rutas estáticas se conservan igual mientras no sean modificadas manualmente por el administrador.}
+
+::VF RIP detecta bucles::RIP puede detectar automáticamente rutas circulares (bucles) en la red.{FALSE#RIP no es capaz de detectar rutas circulares, por eso necesita limitar el tamaño de la red a 15 saltos.}
+
+::VF RIP 16 saltos::En RIP, cuando la métrica alcanza 16 saltos, se considera la ruta como válida pero lenta.{FALSE#Cuando la métrica alcanza 16, se considera infinito o inalcanzable y el destino es eliminado de la tabla de ruteo.}
+
+::VF IP garantiza entrega::El protocolo IP garantiza que todos los paquetes lleguen a su destino en el orden correcto.{FALSE#IP es un protocolo de "mejor esfuerzo" que no garantiza entrega ni orden de los paquetes.}
+
+::VF DNS distribuida::DNS es una base de datos centralizada que se encuentra en un solo servidor mundial.{FALSE#DNS es una base de datos distribuida de forma jerárquica por toda la red.}
+
+::VF dominios principales::Los dominios principales pueden tener entre 1 y 4 letras dependiendo del país.{FALSE#Los dominios principales constan específicamente de dos letras que indican el país.}
+
+::VF ICANN regional::ICANN asigna directamente todas las direcciones IP a todos los dispositivos del mundo.{FALSE#ICANN controla a escala mundial, pero diferentes gestores regionales se encargan de asignar direcciones IP en diferentes dominios internacionales.}
+
+::VF tabla enrutamiento automática::Las tablas de enrutamiento solo pueden completarse automáticamente mediante protocolos dinámicos.{FALSE#Solo hay dos maneras\: manualmente (rutas estáticas) y automáticamente (protocolos dinámicos).}
+
+// ===== PREGUNTAS DE CORRESPONDENCIA =====
+
+::Correspondencia clases IP completa::Relacione cada clase de dirección IP con sus características correspondientes.{
+=Clase A -> 0.0.0.0 a 127.255.255.255, 126 redes, 16.387.064 hosts
+=Clase B -> 128.0.0.0 a 191.255.255.255, 16.384 redes, 64.516 hosts
+=Clase C -> 192.0.0.0 a 223.255.255.255, 2.097.152 redes, 254 hosts
+=Clase D -> 224.0.0.0 a 239.255.255.255, utilizada para multicast
+=Clase E -> 240.0.0.0 a 247.255.255.255, propósitos experimentales
+}
+
+::Correspondencia máscaras CIDR::Relacione las máscaras en notación decimal con su equivalente CIDR.{
+=255.0.0.0 -> /8
+=255.255.0.0 -> /16
+=255.255.255.0 -> /24
+=255.255.255.128 -> /25
+=255.255.255.252 -> /30
+}
+
+::Correspondencia métricas enrutamiento::Relacione cada métrica con su descripción específica.{
+=Longitud del camino -> Suma de costos de cada tramo o suma de saltos
+=Confiabilidad -> Tasa de error de bits o probabilidad de caída del enlace
+=Retraso -> Tiempo necesario para transportar un paquete punto a punto
+=Ancho de banda -> Velocidad de transmisión de información en el enlace
+=Carga -> Porcentaje de utilización del procesador del router
+=Costo -> Costo monetario del enlace o la ruta
+}
+
+::Correspondencia dominios países::Relacione cada dominio principal con su país correspondiente.{
+=.mx -> México
+=.jp -> Japón
+=.fr -> Francia
+=.ar -> Argentina
+=.it -> Italia
+=.es -> España
+}
+
+::Correspondencia subdominios función::Relacione cada subdominio con su función o tipo de organización.{
+=.com -> Empresa comercial
+=.edu -> Educación
+=.gov -> Entidad de gobierno
+=.mil -> Militar
+=.org -> Otras organizaciones
+=.net -> Sitios en la red
+}
+
+::Correspondencia RFC protocolos::Relacione cada RFC con el protocolo que define.{
+=RFC 791 -> IPv4 (Protocolo de Internet Versión 4)
+=RFC 2460 -> IPv6 (Protocolo de Internet Versión 6)
+}
+
+::Correspondencia comandos enrutamiento::Relacione cada comando con su función en enrutamiento estático.{
+=ip route -> Crear una ruta estática
+=show ip route -> Verificar la tabla de enrutamiento
+=no ip route -> Eliminar una ruta estática existente
+}
+
+::Correspondencia tipos rutas::Relacione cada tipo de ruta con su método de creación.{
+=Rutas estáticas -> Creadas manualmente por el administrador
+=Rutas dinámicas -> Creadas automáticamente por protocolos de enrutamiento
+=Rutas conectadas -> Se registran al configurar las interfaces del router
+}
