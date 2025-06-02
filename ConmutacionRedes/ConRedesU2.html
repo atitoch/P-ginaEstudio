@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unidad 2: Segmentación de Redes - Cuestionario</title>
+    <
     <style>
       * {
         margin: 0;
@@ -13,7 +14,7 @@
 
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #3f51b5 0%, #2196f3 100%);
+        background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
         min-height: 100vh;
         padding: 20px;
       }
@@ -33,7 +34,7 @@
       }
 
       .header h1 {
-        color: #3f51b5;
+        color: #9c27b0;
         font-size: 2.5em;
         margin-bottom: 10px;
       }
@@ -78,7 +79,7 @@
       }
 
       .progress-bar {
-        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
         height: 100%;
         width: 0%;
         transition: width 0.3s ease;
@@ -148,7 +149,7 @@
       }
 
       .option input[type="radio"]:checked + label {
-        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
         color: white;
         border-radius: 8px;
       }
@@ -185,13 +186,13 @@
       }
 
       .btn-primary {
-        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        background: linear-gradient(45deg, #9c27b0, #e91e63);
         color: white;
       }
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(63, 81, 181, 0.4);
+        box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
       }
 
       .btn-secondary {
@@ -236,7 +237,7 @@
       .score {
         font-size: 3em;
         font-weight: bold;
-        color: #3f51b5;
+        color: #9c27b0;
         margin: 20px 0;
       }
 
@@ -261,7 +262,7 @@
 
       .back-button:hover {
         background: white;
-        color: #3f51b5;
+        color: #9c27b0;
       }
 
       @media (max-width: 768px) {
@@ -3778,7 +3779,6 @@
           currentQuestion.classList.add("active");
         }
 
-        // Corregir esta línea
         document.getElementById("currentQuestion").textContent = index + 1;
         updateButtons();
         updateProgress();

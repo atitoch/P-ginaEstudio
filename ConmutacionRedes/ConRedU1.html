@@ -480,7 +480,7 @@
 
         <div class="question-counter">
           <span id="currentQuestion">1</span> de
-          <span id="totalQuestions">71</span>
+          <span id="totalQuestions">118</span>
         </div>
 
         <!-- Pregunta 1 -->
@@ -1281,123 +1281,6 @@
           <div class="feedback"></div>
         </div>
 
-        <!-- Preguntas de completar -->
-        <!-- Pregunta 32 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            Las direcciones IP se denominan direcciones
-            <input type="text" class="blank-input" data-answer="lógicas" />,
-            tienen direccionamiento
-            <input type="text" class="blank-input" data-answer="jerárquico" />,
-            representan una
-            <input type="text" class="blank-input" data-answer="conexión" />
-            de la máquina a la red, utilizan
-            <input type="text" class="blank-input" data-answer="32" />
-            bits agrupados en
-            <input type="text" class="blank-input" data-answer="4" />
-            octetos.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
-        <!-- Pregunta 33 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            IPv4 está definida en RFC
-            <input type="text" class="blank-input" data-answer="791" />
-            e IPv6 está definida en RFC
-            <input type="text" class="blank-input" data-answer="2460" />. La
-            diferencia básica es que IPv4 usa
-            <input type="text" class="blank-input" data-answer="32" />
-            bits mientras IPv6 usa
-            <input type="text" class="blank-input" data-answer="128" />
-            bits.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
-        <!-- Pregunta 34 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            VLSM significa
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="Variable Length Subnet Mask"
-            />
-            y es una técnica diseñada para
-            <input type="text" class="blank-input" data-answer="optimizar" />
-            el direccionamiento IP. En VLSM el direccionamiento se hace de
-            <input type="text" class="blank-input" data-answer="derecha" />
-            a
-            <input type="text" class="blank-input" data-answer="izquierda" />.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
-        <!-- Pregunta 35 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            RIP pertenece a la familia
-            <input type="text" class="blank-input" data-answer="IGP" />, es un
-            protocolo de
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="vector distancia"
-            />, usa como métrica el
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="número de saltos"
-            />, emplea datagramas
-            <input type="text" class="blank-input" data-answer="UDP" />
-            por el puerto
-            <input type="text" class="blank-input" data-answer="520" />.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
-        <!-- Pregunta 36 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            DNS significa
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="Domain Name System"
-            />, traduce direcciones
-            <input type="text" class="blank-input" data-answer="IP" />
-            a nombres de
-            <input type="text" class="blank-input" data-answer="dominio" />
-            y viceversa. Los dominios principales constan de
-            <input type="text" class="blank-input" data-answer="dos" />
-            letras que indican el
-            <input type="text" class="blank-input" data-answer="país" />.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
-        <!-- Pregunta 37 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la frase:</h3>
-          <div class="fill-blank">
-            <input type="text" class="blank-input" data-answer="ICANN" />
-            es la autoridad mundial encargada de distribuir direcciones IP, esto
-            es necesario para evitar direcciones
-            <input type="text" class="blank-input" data-answer="duplicadas" />
-            y prevenir
-            <input type="text" class="blank-input" data-answer="colisiones" />
-            de paquetes.
-          </div>
-          <div class="feedback"></div>
-        </div>
-
         <!-- Preguntas de verdadero/falso -->
         <!-- Pregunta 38 -->
         <div class="question" data-type="true-false" data-answer="true">
@@ -1578,6 +1461,8 @@
           <div class="feedback"></div>
         </div>
 
+        <!-- ...existing code... -->
+
         <!-- Pregunta 52 -->
         <div class="question" data-type="true-false" data-answer="false">
           <h3>
@@ -1591,418 +1476,1774 @@
           <div class="feedback"></div>
         </div>
 
-        <!-- Preguntas de desarrollo/ensayo simplificadas -->
         <!-- Pregunta 53 -->
-        <div class="question" data-type="fill">
-          <h3>Completa la definición del direccionamiento IP:</h3>
-          <div class="fill-blank">
-            El direccionamiento IP permite la transmisión de datos entre hosts
-            de la misma red o en
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="redes diferentes"
-            />. Las direcciones se denominan
-            <input type="text" class="blank-input" data-answer="lógicas" />
-            y tienen direccionamiento
-            <input type="text" class="blank-input" data-answer="jerárquico" />.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>Las direcciones IP se denominan direcciones:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q53" value="correct" id="q53a" />
+              <label for="q53a">lógicas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53b" />
+              <label for="q53b">físicas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53c" />
+              <label for="q53c">virtuales</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q53" value="incorrect" id="q53d" />
+              <label for="q53d">temporales</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 54 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre las direcciones especiales:</h3>
-          <div class="fill-blank">
-            La dirección de
-            <input type="text" class="blank-input" data-answer="red" />
-            permite el enrutamiento entre routers y tiene
-            <input type="text" class="blank-input" data-answer="0" />
-            binarios en la parte del host. La dirección de
-            <input type="text" class="blank-input" data-answer="broadcast" />
-            envía datos a todos los dispositivos de la red.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>Las direcciones IP tienen direccionamiento:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q54" value="correct" id="q54a" />
+              <label for="q54a">jerárquico</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54b" />
+              <label for="q54b">plano</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54c" />
+              <label for="q54c">circular</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q54" value="incorrect" id="q54d" />
+              <label for="q54d">aleatorio</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 55 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre la Clase A:</h3>
-          <div class="fill-blank">
-            La Clase A usa el primer bit
-            <input type="text" class="blank-input" data-answer="0" />
-            como fijo, permite
-            <input type="text" class="blank-input" data-answer="126" />
-            redes diferentes y cada red puede tener
-            <input type="text" class="blank-input" data-answer="16387064" />
-            hosts.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>
+            Las direcciones IP representan una _______ de la máquina a la red:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q55" value="correct" id="q55a" />
+              <label for="q55a">conexión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55b" />
+              <label for="q55b">ubicación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55c" />
+              <label for="q55c">distancia</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q55" value="incorrect" id="q55d" />
+              <label for="q55d">velocidad</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 56 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre la Clase B:</h3>
-          <div class="fill-blank">
-            La Clase B usa los primeros
-            <input type="text" class="blank-input" data-answer="2" />
-            bits
-            <input type="text" class="blank-input" data-answer="10" />
-            como fijos, el rango va de
-            <input type="text" class="blank-input" data-answer="128.0.0.0" />
-            a
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="191.255.255.255"
-            />.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>Las direcciones IPv4 utilizan _____ bits:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56a" />
+              <label for="q56a">16</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56b" />
+              <label for="q56b">24</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="correct" id="q56c" />
+              <label for="q56c">32</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q56" value="incorrect" id="q56d" />
+              <label for="q56d">64</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 57 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre máscaras por defecto:</h3>
-          <div class="fill-blank">
-            Las máscaras por defecto son: Clase A
-            <input type="text" class="blank-input" data-answer="255.0.0.0" />,
-            Clase B
-            <input type="text" class="blank-input" data-answer="255.255.0.0" />,
-            Clase C
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="255.255.255.0"
-            />.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>Las direcciones IPv4 se agrupan en _____ octetos:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57a" />
+              <label for="q57a">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57b" />
+              <label for="q57b">3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="correct" id="q57c" />
+              <label for="q57c">4</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q57" value="incorrect" id="q57d" />
+              <label for="q57d">8</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 58 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre CIDR:</h3>
-          <div class="fill-blank">
-            CIDR significa
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="Classless Inter-Domain Routing"
-            />, fue introducido en los años
-            <input type="text" class="blank-input" data-answer="90" />
-            y elimina límites de
-            <input type="text" class="blank-input" data-answer="clases" />.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>
+            La dirección de _______ permite el enrutamiento entre routers:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q58" value="correct" id="q58a" />
+              <label for="q58a">red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58b" />
+              <label for="q58b">host</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58c" />
+              <label for="q58c">broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q58" value="incorrect" id="q58d" />
+              <label for="q58d">multicast</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 59 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre enrutamiento:</h3>
-          <div class="fill-blank">
-            Solo hay
-            <input type="text" class="blank-input" data-answer="dos" />
-            maneras de completar una tabla de enrutamiento:
-            <input type="text" class="blank-input" data-answer="manualmente" />
-            (rutas estáticas) y
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="automáticamente"
-            />
-            (protocolos dinámicos).
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>
+            La dirección de red posee _____ binarios en la parte del host:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q59" value="correct" id="q59a" />
+              <label for="q59a">0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59b" />
+              <label for="q59b">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59c" />
+              <label for="q59c">mixtos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q59" value="incorrect" id="q59d" />
+              <label for="q59d">variables</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 60 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre limitaciones de RIP:</h3>
-          <div class="fill-blank">
-            RIP usa el algoritmo de
-            <input type="text" class="blank-input" data-answer="Bellman-Ford" />
-            distribuido, las rutas tienen tiempo de vida de
-            <input type="text" class="blank-input" data-answer="180" />
-            segundos y el límite máximo es de
-            <input type="text" class="blank-input" data-answer="15" />
-            saltos.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>
+            La dirección de _______ permite enviar datos a todos los
+            dispositivos:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60a" />
+              <label for="q60a">red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60b" />
+              <label for="q60b">host</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="correct" id="q60c" />
+              <label for="q60c">broadcast</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q60" value="incorrect" id="q60d" />
+              <label for="q60d">unicast</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 61 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre funciones del protocolo IP:</h3>
-          <div class="fill-blank">
-            Las dos funciones principales de IP son:
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="entrega de datagramas"
-            />
-            bajo mejor esfuerzo y
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="fragmentación"
-            />
-            y
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="re-ensamblado"
-            />
-            de datagramas.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>
+            La dirección de broadcast posee _____ en todos los bits del host:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61a" />
+              <label for="q61a">0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="correct" id="q61b" />
+              <label for="q61b">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61c" />
+              <label for="q61c">mixtos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q61" value="incorrect" id="q61d" />
+              <label for="q61d">variables</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 62 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre autoridad de direcciones:</h3>
-          <div class="fill-blank">
-            <input type="text" class="blank-input" data-answer="ICANN" />
-            es la autoridad mundial encargada de distribuir direcciones IP, esto
-            es necesario para evitar direcciones
-            <input type="text" class="blank-input" data-answer="duplicadas" />
-            y prevenir
-            <input type="text" class="blank-input" data-answer="colisiones" />
-            de paquetes.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>IPv6 está definida en RFC:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q62" value="correct" id="q62a" />
+              <label for="q62a">2460</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62b" />
+              <label for="q62b">791</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62c" />
+              <label for="q62c">1918</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q62" value="incorrect" id="q62d" />
+              <label for="q62d">3261</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
         <!-- Pregunta 63 -->
-        <div class="question" data-type="fill">
-          <h3>Completa sobre comandos de enrutamiento:</h3>
-          <div class="fill-blank">
-            Para crear una ruta estática se usa
-            <input type="text" class="blank-input" data-answer="ip route" />,
-            para verificar la tabla se usa
-            <input
-              type="text"
-              class="blank-input"
-              data-answer="show ip route"
-            />
-            y para eliminar una ruta se antepone
-            <input type="text" class="blank-input" data-answer="no" />
-            al comando.
-          </div>
+        <div class="question" data-type="multiple">
+          <h3>IPv6 usa _____ bits:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63a" />
+              <label for="q63a">32</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63b" />
+              <label for="q63b">64</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="incorrect" id="q63c" />
+              <label for="q63c">96</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q63" value="correct" id="q63d" />
+              <label for="q63d">128</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 64: Correspondencia clases IP -->
-        <div class="question" data-type="matching">
-          <h3>Relacione cada clase de dirección IP con sus características:</h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">Clase A</div>
-              <div class="match-item" data-match="2">Clase B</div>
-              <div class="match-item" data-match="3">Clase C</div>
-              <div class="match-item" data-match="4">Clase D</div>
-              <div class="match-item" data-match="5">Clase E</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">
-                0.0.0.0 a 127.255.255.255, 126 redes, 16.387.064 hosts
-              </div>
-              <div class="match-option" data-answer="2">
-                128.0.0.0 a 191.255.255.255, 16.384 redes, 64.516 hosts
-              </div>
-              <div class="match-option" data-answer="3">
-                192.0.0.0 a 223.255.255.255, 2.097.152 redes, 254 hosts
-              </div>
-              <div class="match-option" data-answer="4">
-                224.0.0.0 a 239.255.255.255, utilizada para multicast
-              </div>
-              <div class="match-option" data-answer="5">
-                240.0.0.0 a 247.255.255.255, propósitos experimentales
-              </div>
-            </div>
-          </div>
+        <!-- Pregunta 64 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase A usa el primer bit _____ como fijo:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q64" value="correct" id="q64a" />
+              <label for="q64a">0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64b" />
+              <label for="q64b">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64c" />
+              <label for="q64c">10</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q64" value="incorrect" id="q64d" />
+              <label for="q64d">11</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 65: Correspondencia máscaras CIDR -->
-        <div class="question" data-type="matching">
+        <!-- Pregunta 65 -->
+        <div class="question" data-type="multiple">
           <h3>
-            Relacione las máscaras en notación decimal con su equivalente CIDR:
+            La Clase A permite _____ redes diferentes (excluyendo reservadas):
           </h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">255.0.0.0</div>
-              <div class="match-item" data-match="2">255.255.0.0</div>
-              <div class="match-item" data-match="3">255.255.255.0</div>
-              <div class="match-item" data-match="4">255.255.255.128</div>
-              <div class="match-item" data-match="5">255.255.255.252</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">/8</div>
-              <div class="match-option" data-answer="2">/16</div>
-              <div class="match-option" data-answer="3">/24</div>
-              <div class="match-option" data-answer="4">/25</div>
-              <div class="match-option" data-answer="5">/30</div>
-            </div>
-          </div>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65a" />
+              <label for="q65a">124</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65b" />
+              <label for="q65b">125</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="correct" id="q65c" />
+              <label for="q65c">126</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q65" value="incorrect" id="q65d" />
+              <label for="q65d">128</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 66: Correspondencia métricas enrutamiento -->
-        <div class="question" data-type="matching">
-          <h3>Relacione cada métrica con su descripción específica:</h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">Longitud del camino</div>
-              <div class="match-item" data-match="2">Confiabilidad</div>
-              <div class="match-item" data-match="3">Retraso</div>
-              <div class="match-item" data-match="4">Ancho de banda</div>
-              <div class="match-item" data-match="5">Carga</div>
-              <div class="match-item" data-match="6">Costo</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">
-                Suma de costos de cada tramo o suma de saltos
-              </div>
-              <div class="match-option" data-answer="2">
-                Tasa de error de bits o probabilidad de caída del enlace
-              </div>
-              <div class="match-option" data-answer="3">
-                Tiempo necesario para transportar un paquete punto a punto
-              </div>
-              <div class="match-option" data-answer="4">
-                Velocidad de transmisión de información en el enlace
-              </div>
-              <div class="match-option" data-answer="5">
-                Porcentaje de utilización del procesador del router
-              </div>
-              <div class="match-option" data-answer="6">
-                Costo monetario del enlace o la ruta
-              </div>
-            </div>
-          </div>
+        <!-- Pregunta 66 -->
+        <div class="question" data-type="multiple">
+          <h3>Cada red Clase A puede tener _______ hosts:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66a" />
+              <label for="q66a">16.387.062</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66b" />
+              <label for="q66b">16.387.063</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="correct" id="q66c" />
+              <label for="q66c">16.387.064</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q66" value="incorrect" id="q66d" />
+              <label for="q66d">16.387.066</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 67: Correspondencia dominios países -->
-        <div class="question" data-type="matching">
-          <h3>Relacione cada dominio principal con su país correspondiente:</h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">.mx</div>
-              <div class="match-item" data-match="2">.jp</div>
-              <div class="match-item" data-match="3">.fr</div>
-              <div class="match-item" data-match="4">.ar</div>
-              <div class="match-item" data-match="5">.it</div>
-              <div class="match-item" data-match="6">.es</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">México</div>
-              <div class="match-option" data-answer="2">Japón</div>
-              <div class="match-option" data-answer="3">Francia</div>
-              <div class="match-option" data-answer="4">Argentina</div>
-              <div class="match-option" data-answer="5">Italia</div>
-              <div class="match-option" data-answer="6">España</div>
-            </div>
-          </div>
+        <!-- Pregunta 67 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase B usa los primeros _____ bits como fijos:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67a" />
+              <label for="q67a">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="correct" id="q67b" />
+              <label for="q67b">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67c" />
+              <label for="q67c">3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q67" value="incorrect" id="q67d" />
+              <label for="q67d">4</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 68: Correspondencia subdominios función -->
-        <div class="question" data-type="matching">
+        <!-- Pregunta 68 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase B usa los primeros bits _____ como fijos:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68a" />
+              <label for="q68a">01</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="correct" id="q68b" />
+              <label for="q68b">10</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68c" />
+              <label for="q68c">11</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q68" value="incorrect" id="q68d" />
+              <label for="q68d">00</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 69 -->
+        <div class="question" data-type="multiple">
+          <h3>El rango de Clase B va de _______ a 191.255.255.255:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69a" />
+              <label for="q69a">127.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="correct" id="q69b" />
+              <label for="q69b">128.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69c" />
+              <label for="q69c">129.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q69" value="incorrect" id="q69d" />
+              <label for="q69d">192.0.0.0</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 70 -->
+        <div class="question" data-type="multiple">
+          <h3>El rango de Clase B va de 128.0.0.0 a _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70a" />
+              <label for="q70a">190.255.255.255</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="correct" id="q70b" />
+              <label for="q70b">191.255.255.255</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70c" />
+              <label for="q70c">192.255.255.255</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q70" value="incorrect" id="q70d" />
+              <label for="q70d">223.255.255.255</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 71 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase B permite _______ hosts por red:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71a" />
+              <label for="q71a">64.514</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71b" />
+              <label for="q71b">64.515</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="correct" id="q71c" />
+              <label for="q71c">64.516</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q71" value="incorrect" id="q71d" />
+              <label for="q71d">65.534</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 72 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase C usa _____ bytes para identificar la red:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72a" />
+              <label for="q72a">1</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72b" />
+              <label for="q72b">2</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="correct" id="q72c" />
+              <label for="q72c">3</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q72" value="incorrect" id="q72d" />
+              <label for="q72d">4</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 73 -->
+        <div class="question" data-type="multiple">
+          <h3>La Clase C permite _____ hosts por red:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73a" />
+              <label for="q73a">252</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73b" />
+              <label for="q73b">253</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="correct" id="q73c" />
+              <label for="q73c">254</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q73" value="incorrect" id="q73d" />
+              <label for="q73d">256</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 74 -->
+        <div class="question" data-type="multiple">
+          <h3>Pueden existir _______ redes clase C diferentes:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74a" />
+              <label for="q74a">1.048.576</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="correct" id="q74b" />
+              <label for="q74b">2.097.152</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74c" />
+              <label for="q74c">4.194.304</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q74" value="incorrect" id="q74d" />
+              <label for="q74d">8.388.608</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 75 -->
+        <div class="question" data-type="multiple">
+          <h3>La máscara por defecto de Clase A es:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q75" value="correct" id="q75a" />
+              <label for="q75a">255.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75b" />
+              <label for="q75b">255.255.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75c" />
+              <label for="q75c">255.255.255.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q75" value="incorrect" id="q75d" />
+              <label for="q75d">255.255.255.255</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 76 -->
+        <div class="question" data-type="multiple">
+          <h3>La máscara por defecto de Clase B es:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76a" />
+              <label for="q76a">255.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="correct" id="q76b" />
+              <label for="q76b">255.255.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76c" />
+              <label for="q76c">255.255.255.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q76" value="incorrect" id="q76d" />
+              <label for="q76d">255.255.255.255</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 77 -->
+        <div class="question" data-type="multiple">
+          <h3>La máscara por defecto de Clase C es:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77a" />
+              <label for="q77a">255.0.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77b" />
+              <label for="q77b">255.255.0.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="correct" id="q77c" />
+              <label for="q77c">255.255.255.0</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q77" value="incorrect" id="q77d" />
+              <label for="q77d">255.255.255.255</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 78 -->
+        <div class="question" data-type="multiple">
+          <h3>Las máscaras por defecto también se conocen como máscaras:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78a" />
+              <label for="q78a">estáticas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78b" />
+              <label for="q78b">fijas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="correct" id="q78c" />
+              <label for="q78c">default</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q78" value="incorrect" id="q78d" />
+              <label for="q78d">estándar</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 79 -->
+        <div class="question" data-type="multiple">
+          <h3>VLSM significa _______ Length Subnet Mask:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q79" value="correct" id="q79a" />
+              <label for="q79a">Variable</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79b" />
+              <label for="q79b">Virtual</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79c" />
+              <label for="q79c">Versatile</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q79" value="incorrect" id="q79d" />
+              <label for="q79d">Vector</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 80 -->
+        <div class="question" data-type="multiple">
+          <h3>VLSM significa Variable _______ Subnet Mask:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80a" />
+              <label for="q80a">Line</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="correct" id="q80b" />
+              <label for="q80b">Length</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80c" />
+              <label for="q80c">Link</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q80" value="incorrect" id="q80d" />
+              <label for="q80d">Level</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 81 -->
+        <div class="question" data-type="multiple">
+          <h3>VLSM significa Variable Length _______ Mask:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81a" />
+              <label for="q81a">System</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="correct" id="q81b" />
+              <label for="q81b">Subnet</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81c" />
+              <label for="q81c">Switch</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q81" value="incorrect" id="q81d" />
+              <label for="q81d">Service</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 82 -->
+        <div class="question" data-type="multiple">
+          <h3>VLSM significa Variable Length Subnet _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82a" />
+              <label for="q82a">Mode</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82b" />
+              <label for="q82b">Method</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="correct" id="q82c" />
+              <label for="q82c">Mask</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q82" value="incorrect" id="q82d" />
+              <label for="q82d">Model</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 83 -->
+        <div class="question" data-type="multiple">
           <h3>
-            Relacione cada subdominio con su función o tipo de organización:
+            VLSM es una técnica diseñada para _______ el direccionamiento IP:
           </h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">.com</div>
-              <div class="match-item" data-match="2">.edu</div>
-              <div class="match-item" data-match="3">.gov</div>
-              <div class="match-item" data-match="4">.mil</div>
-              <div class="match-item" data-match="5">.org</div>
-              <div class="match-item" data-match="6">.net</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">Empresa comercial</div>
-              <div class="match-option" data-answer="2">Educación</div>
-              <div class="match-option" data-answer="3">
-                Entidad de gobierno
-              </div>
-              <div class="match-option" data-answer="4">Militar</div>
-              <div class="match-option" data-answer="5">
-                Otras organizaciones
-              </div>
-              <div class="match-option" data-answer="6">Sitios en la red</div>
-            </div>
-          </div>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83a" />
+              <label for="q83a">simplificar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="correct" id="q83b" />
+              <label for="q83b">optimizar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83c" />
+              <label for="q83c">acelerar</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q83" value="incorrect" id="q83d" />
+              <label for="q83d">automatizar</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 69: Correspondencia RFC protocolos -->
-        <div class="question" data-type="matching">
-          <h3>Relacione cada RFC con el protocolo que define:</h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">RFC 791</div>
-              <div class="match-item" data-match="2">RFC 2460</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">
-                IPv4 (Protocolo de Internet Versión 4)
-              </div>
-              <div class="match-option" data-answer="2">
-                IPv6 (Protocolo de Internet Versión 6)
-              </div>
-            </div>
-          </div>
+        <!-- Pregunta 84 -->
+        <div class="question" data-type="multiple">
+          <h3>En VLSM el direccionamiento se hace de _______ a izquierda:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84a" />
+              <label for="q84a">izquierda</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="correct" id="q84b" />
+              <label for="q84b">derecha</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84c" />
+              <label for="q84c">centro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q84" value="incorrect" id="q84d" />
+              <label for="q84d">arriba</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 70: Correspondencia comandos enrutamiento -->
-        <div class="question" data-type="matching">
+        <!-- Pregunta 85 -->
+        <div class="question" data-type="multiple">
+          <h3>En VLSM el direccionamiento se hace de derecha a _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q85" value="correct" id="q85a" />
+              <label for="q85a">izquierda</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85b" />
+              <label for="q85b">derecha</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85c" />
+              <label for="q85c">centro</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q85" value="incorrect" id="q85d" />
+              <label for="q85d">abajo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 86 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR significa _______ Inter-Domain Routing:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86a" />
+              <label for="q86a">Classical</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="correct" id="q86b" />
+              <label for="q86b">Classless</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86c" />
+              <label for="q86c">Complex</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q86" value="incorrect" id="q86d" />
+              <label for="q86d">Centralized</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 87 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR significa Classless _______-Domain Routing:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87a" />
+              <label for="q87a">Intra</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="correct" id="q87b" />
+              <label for="q87b">Inter</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87c" />
+              <label for="q87c">Internal</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q87" value="incorrect" id="q87d" />
+              <label for="q87d">Internet</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 88 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR significa Classless Inter-_______ Routing:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88a" />
+              <label for="q88a">Data</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="correct" id="q88b" />
+              <label for="q88b">Domain</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88c" />
+              <label for="q88c">Digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q88" value="incorrect" id="q88d" />
+              <label for="q88d">Dynamic</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 89 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR significa Classless Inter-Domain _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89a" />
+              <label for="q89a">Resolution</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89b" />
+              <label for="q89b">Registry</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="correct" id="q89c" />
+              <label for="q89c">Routing</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q89" value="incorrect" id="q89d" />
+              <label for="q89d">Protocol</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 90 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR fue introducido por _______ en los años 90s:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90a" />
+              <label for="q90a">IEEE</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90b" />
+              <label for="q90b">ISO</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="correct" id="q90c" />
+              <label for="q90c">IETF</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q90" value="incorrect" id="q90d" />
+              <label for="q90d">ITU</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 91 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR fue introducido por IETF en los años _____:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91a" />
+              <label for="q91a">80s</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="correct" id="q91b" />
+              <label for="q91b">90s</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91c" />
+              <label for="q91c">2000s</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q91" value="incorrect" id="q91d" />
+              <label for="q91d">70s</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 92 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR elimina límites de _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92a" />
+              <label for="q92a">protocolos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="correct" id="q92b" />
+              <label for="q92b">clases</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92c" />
+              <label for="q92c">redes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q92" value="incorrect" id="q92d" />
+              <label for="q92d">hosts</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 93 -->
+        <div class="question" data-type="multiple">
+          <h3>CIDR permite _______ y sumarización de rutas:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93a" />
+              <label for="q93a">subnetting</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="correct" id="q93b" />
+              <label for="q93b">VLSM</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93c" />
+              <label for="q93c">NAT</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q93" value="incorrect" id="q93d" />
+              <label for="q93d">DHCP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 94 -->
+        <div class="question" data-type="multiple">
           <h3>
-            Relacione cada comando con su función en enrutamiento estático:
+            Solo hay _____ maneras de completar una tabla de enrutamiento:
           </h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">ip route</div>
-              <div class="match-item" data-match="2">show ip route</div>
-              <div class="match-item" data-match="3">no ip route</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">
-                Crear una ruta estática
-              </div>
-              <div class="match-option" data-answer="2">
-                Verificar la tabla de enrutamiento
-              </div>
-              <div class="match-option" data-answer="3">
-                Eliminar una ruta estática existente
-              </div>
-            </div>
-          </div>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94a" />
+              <label for="q94a">una</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="correct" id="q94b" />
+              <label for="q94b">dos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94c" />
+              <label for="q94c">tres</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q94" value="incorrect" id="q94d" />
+              <label for="q94d">cuatro</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
-        <!-- Pregunta 71: Correspondencia tipos rutas -->
-        <div class="question" data-type="matching">
-          <h3>Relacione cada tipo de ruta con su método de creación:</h3>
-          <div class="matching-container">
-            <div class="match-items">
-              <div class="match-item" data-match="1">Rutas estáticas</div>
-              <div class="match-item" data-match="2">Rutas dinámicas</div>
-              <div class="match-item" data-match="3">Rutas conectadas</div>
-            </div>
-            <div class="match-options">
-              <div class="match-option" data-answer="1">
-                Creadas manualmente por el administrador
-              </div>
-              <div class="match-option" data-answer="2">
-                Creadas automáticamente por protocolos de enrutamiento
-              </div>
-              <div class="match-option" data-answer="3">
-                Se registran al configurar las interfaces del router
-              </div>
-            </div>
-          </div>
+        <!-- Pregunta 95 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una manera de completar tabla de enrutamiento es _______ (rutas
+            estáticas):
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95a" />
+              <label for="q95a">automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="correct" id="q95b" />
+              <label for="q95b">manualmente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95c" />
+              <label for="q95c">dinámicamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q95" value="incorrect" id="q95d" />
+              <label for="q95d">remotamente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 96 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una manera de completar tabla de enrutamiento es _______ (protocolos
+            dinámicos):
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96a" />
+              <label for="q96a">manualmente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="correct" id="q96b" />
+              <label for="q96b">automáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96c" />
+              <label for="q96c">estáticamente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q96" value="incorrect" id="q96d" />
+              <label for="q96d">localmente</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 97 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Un router de _______ _______ está conectado solo a otro router:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97a" />
+              <label for="q97a">múltiple conexión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="correct" id="q97b" />
+              <label for="q97b">conexión única</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97c" />
+              <label for="q97c">doble conexión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q97" value="incorrect" id="q97d" />
+              <label for="q97d">triple conexión</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 98 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP pertenece a la familia _____:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98a" />
+              <label for="q98a">EGP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="correct" id="q98b" />
+              <label for="q98b">IGP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98c" />
+              <label for="q98c">BGP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q98" value="incorrect" id="q98d" />
+              <label for="q98d">OSPF</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 99 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP es un protocolo de _______ _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99a" />
+              <label for="q99a">estado enlace</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="correct" id="q99b" />
+              <label for="q99b">vector distancia</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99c" />
+              <label for="q99c">híbrido avanzado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q99" value="incorrect" id="q99d" />
+              <label for="q99d">ruta origen</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 100 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP es un protocolo de vector _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100a" />
+              <label for="q100a">tiempo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="correct" id="q100b" />
+              <label for="q100b">distancia</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100c" />
+              <label for="q100c">costo</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q100" value="incorrect" id="q100d" />
+              <label for="q100d">velocidad</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 101 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP usa como métrica el _______ de _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101a" />
+              <label for="q101a">tiempo de saltos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="correct" id="q101b" />
+              <label for="q101b">número de saltos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101c" />
+              <label for="q101c">costo de saltos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q101" value="incorrect" id="q101d" />
+              <label for="q101d">peso de saltos</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 102 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP usa como métrica el número de _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102a" />
+              <label for="q102a">routers</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="correct" id="q102b" />
+              <label for="q102b">saltos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102c" />
+              <label for="q102c">enlaces</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q102" value="incorrect" id="q102d" />
+              <label for="q102d">redes</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 103 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP emplea datagramas _____ por el puerto 520:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103a" />
+              <label for="q103a">TCP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="correct" id="q103b" />
+              <label for="q103b">UDP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103c" />
+              <label for="q103c">ICMP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q103" value="incorrect" id="q103d" />
+              <label for="q103d">ARP</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 104 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP emplea datagramas UDP por el puerto _____:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104a" />
+              <label for="q104a">21</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104b" />
+              <label for="q104b">80</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="incorrect" id="q104c" />
+              <label for="q104c">443</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q104" value="correct" id="q104d" />
+              <label for="q104d">520</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 105 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP usa el algoritmo de _______ _______ distribuido:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q105" value="correct" id="q105a" />
+              <label for="q105a">Bellman-Ford</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105b" />
+              <label for="q105b">Dijkstra-Ford</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105c" />
+              <label for="q105c">Floyd-Warshall</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q105" value="incorrect" id="q105d" />
+              <label for="q105d">Shortest-Path</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 106 -->
+        <div class="question" data-type="multiple">
+          <h3>RIP usa el algoritmo de Bellman-_______ distribuido:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106a" />
+              <label for="q106a">Fulkerson</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="correct" id="q106b" />
+              <label for="q106b">Ford</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106c" />
+              <label for="q106c">Floyd</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q106" value="incorrect" id="q106d" />
+              <label for="q106d">Dijkstra</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 107 -->
+        <div class="question" data-type="multiple">
+          <h3>Las rutas RIP tienen tiempo de vida de _____ segundos:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107a" />
+              <label for="q107a">120</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107b" />
+              <label for="q107b">150</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="correct" id="q107c" />
+              <label for="q107c">180</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q107" value="incorrect" id="q107d" />
+              <label for="q107d">240</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 108 -->
+        <div class="question" data-type="multiple">
+          <h3>Los 180 segundos corresponden a _____ intercambios:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108a" />
+              <label for="q108a">4</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108b" />
+              <label for="q108b">5</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="correct" id="q108c" />
+              <label for="q108c">6</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q108" value="incorrect" id="q108d" />
+              <label for="q108d">8</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 109 -->
+        <div class="question" data-type="multiple">
+          <h3>El límite máximo de RIP es de _____ saltos:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109a" />
+              <label for="q109a">10</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109b" />
+              <label for="q109b">12</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="correct" id="q109c" />
+              <label for="q109c">15</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q109" value="incorrect" id="q109d" />
+              <label for="q109d">16</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 110 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una función principal de IP es _______ de _______ bajo mejor
+            esfuerzo:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110a" />
+              <label for="q110a">recepción de datagramas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="correct" id="q110b" />
+              <label for="q110b">entrega de datagramas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110c" />
+              <label for="q110c">procesamiento de datagramas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q110" value="incorrect" id="q110d" />
+              <label for="q110d">almacenamiento de datagramas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 111 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una función principal de IP es entrega de _______ bajo mejor
+            esfuerzo:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111a" />
+              <label for="q111a">paquetes</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="correct" id="q111b" />
+              <label for="q111b">datagramas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111c" />
+              <label for="q111c">segmentos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q111" value="incorrect" id="q111d" />
+              <label for="q111d">tramas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 112 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una función principal de IP es _______ y _______ de datagramas:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112a" />
+              <label for="q112a">encriptación y desencriptación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="correct" id="q112b" />
+              <label for="q112b">fragmentación y re-ensamblado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112c" />
+              <label for="q112c">compresión y descompresión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q112" value="incorrect" id="q112d" />
+              <label for="q112d">routing y switching</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 113 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Una función principal de IP es fragmentación y _______ de
+            datagramas:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113a" />
+              <label for="q113a">descompresión</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113b" />
+              <label for="q113b">desencriptación</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="correct" id="q113c" />
+              <label for="q113c">re-ensamblado</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q113" value="incorrect" id="q113d" />
+              <label for="q113d">decodificación</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 114 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            IP se considera de "mejor esfuerzo" porque no _______ la entrega:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114a" />
+              <label for="q114a">acelera</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114b" />
+              <label for="q114b">optimiza</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="correct" id="q114c" />
+              <label for="q114c">garantiza</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q114" value="incorrect" id="q114d" />
+              <label for="q114d">mejora</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 115 -->
+        <div class="question" data-type="multiple">
+          <h3>DNS significa _______ Name System:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115a" />
+              <label for="q115a">Data</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="correct" id="q115b" />
+              <label for="q115b">Domain</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115c" />
+              <label for="q115c">Digital</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q115" value="incorrect" id="q115d" />
+              <label for="q115d">Dynamic</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 116 -->
+        <div class="question" data-type="multiple">
+          <h3>DNS significa Domain _______ System:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116a" />
+              <label for="q116a">Network</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="correct" id="q116b" />
+              <label for="q116b">Name</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116c" />
+              <label for="q116c">Node</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q116" value="incorrect" id="q116d" />
+              <label for="q116d">Number</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 117 -->
+        <div class="question" data-type="multiple">
+          <h3>DNS significa Domain Name _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117a" />
+              <label for="q117a">Service</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117b" />
+              <label for="q117b">Server</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="correct" id="q117c" />
+              <label for="q117c">System</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q117" value="incorrect" id="q117d" />
+              <label for="q117d">Standard</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 118 -->
+        <div class="question" data-type="multiple">
+          <h3>DNS traduce direcciones _____ a nombres de dominio:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118a" />
+              <label for="q118a">MAC</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="correct" id="q118b" />
+              <label for="q118b">IP</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118c" />
+              <label for="q118c">físicas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q118" value="incorrect" id="q118d" />
+              <label for="q118d">lógicas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 119 -->
+        <div class="question" data-type="multiple">
+          <h3>DNS traduce direcciones IP a nombres de _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119a" />
+              <label for="q119a">red</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="correct" id="q119b" />
+              <label for="q119b">dominio</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119c" />
+              <label for="q119c">host</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q119" value="incorrect" id="q119d" />
+              <label for="q119d">servidor</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 120 -->
+        <div class="question" data-type="multiple">
+          <h3>Los dominios principales constan de _____ letras:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120a" />
+              <label for="q120a">una</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="correct" id="q120b" />
+              <label for="q120b">dos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120c" />
+              <label for="q120c">tres</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q120" value="incorrect" id="q120d" />
+              <label for="q120d">cuatro</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 121 -->
+        <div class="question" data-type="multiple">
+          <h3>Las dos letras de dominios principales indican el _______:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121a" />
+              <label for="q121a">idioma</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="correct" id="q121b" />
+              <label for="q121b">país</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121c" />
+              <label for="q121c">continente</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q121" value="incorrect" id="q121d" />
+              <label for="q121d">protocolo</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 122 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            _______ es la autoridad mundial encargada de distribuir direcciones
+            IP:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122a" />
+              <label for="q122a">IEEE</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122b" />
+              <label for="q122b">ISO</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="correct" id="q122c" />
+              <label for="q122c">ICANN</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q122" value="incorrect" id="q122d" />
+              <label for="q122d">IETF</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 123 -->
+        <div class="question" data-type="multiple">
+          <h3>
+            Es necesario evitar direcciones _______ y prevenir colisiones:
+          </h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123a" />
+              <label for="q123a">complejas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="correct" id="q123b" />
+              <label for="q123b">duplicadas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123c" />
+              <label for="q123c">largas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q123" value="incorrect" id="q123d" />
+              <label for="q123d">dinámicas</label>
+            </li>
+          </ul>
+          <div class="feedback"></div>
+        </div>
+
+        <!-- Pregunta 124 -->
+        <div class="question" data-type="multiple">
+          <h3>Es necesario prevenir _______ de paquetes:</h3>
+          <ul class="options">
+            <li class="option">
+              <input type="radio" name="q124" value="incorrect" id="q124a" />
+              <label for="q124a">pérdidas</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q124" value="incorrect" id="q124b" />
+              <label for="q124b">retrasos</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q124" value="correct" id="q124c" />
+              <label for="q124c">colisiones</label>
+            </li>
+            <li class="option">
+              <input type="radio" name="q124" value="incorrect" id="q124d" />
+              <label for="q124d">fragmentación</label>
+            </li>
+          </ul>
           <div class="feedback"></div>
         </div>
 
@@ -2012,7 +3253,7 @@
           <div class="score" id="score">0%</div>
           <div class="score-details">
             <span id="correctAnswers">0</span> respuestas correctas de
-            <span id="totalQuestionsResult">71</span>
+            <span id="totalQuestionsResult">118</span>
           </div>
           <button class="btn btn-primary" onclick="restartQuiz()">
             Reiniciar Cuestionario
@@ -2135,7 +3376,6 @@
           } else if (questionType === "matching") {
             shuffleMatchingItems(question);
           }
-          // Las preguntas de fill y true-false no necesitan mezcla
         });
       }
 
