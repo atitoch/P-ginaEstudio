@@ -100,91 +100,76 @@
       </div>
     </div>
 
+    <!-- ...existing code... -->
     <script>
       let currentQuestionIndex = 0;
       let questions = [];
       let userAnswers = [];
       let correctAnswers = 0;
-      let questionOrder = [];
-      let originalQuestions = [];
-      let quizData = null;
 
-      // Función para cargar el archivo JSON
-      async function loadQuizData() {
-        try {
-          const response = await fetch("U4.json");
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          const data = await response.json();
-          return data;
-        } catch (error) {
-          console.error("Error loading quiz data:", error);
-          throw error;
-        }
-      }
-
-      // Función para crear HTML de una pregunta
+      // Función para crear HTML de una pregunta (actualizada)
       function createQuestionHTML(questionData, index) {
         const questionDiv = document.createElement("div");
         questionDiv.className = "question";
-        questionDiv.dataset.type = "multiple";
+        questionDiv.dataset.type = questionData.type || "multiple";
 
         let optionsHTML = "";
-        questionData.options.forEach((option, optionIndex) => {
-          const optionId = `q${index}_${optionIndex}`;
-          const value = option.correct ? "correct" : "incorrect";
 
-          optionsHTML += `
-            <li class="option">
-              <input type="radio" name="q${index}" value="${value}" id="${optionId}" />
-              <label for="${optionId}">${option.text}</label>
-            </li>
-          `;
-        });
+        if (questionData.type === "true_false") {
+          // Crear opciones específicas para verdadero/falso
+          const trueOption = {
+            text: "Verdadero",
+            correct: questionData.correct === true,
+          };
+          const falseOption = {
+            text: "Falso",
+            correct: questionData.correct === false,
+          };
+
+          [trueOption, falseOption].forEach((option, optionIndex) => {
+            const optionId = `q${index}_${optionIndex}`;
+            const value = option.correct ? "correct" : "incorrect";
+
+            optionsHTML += `
+          <li class="option">
+            <input type="radio" name="q${index}" value="${value}" id="${optionId}" />
+            <label for="${optionId}">${option.text}</label>
+          </li>
+        `;
+          });
+        } else {
+          // Crear opciones para preguntas de opción múltiple
+          questionData.options.forEach((option, optionIndex) => {
+            const optionId = `q${index}_${optionIndex}`;
+            const value = option.correct ? "correct" : "incorrect";
+
+            optionsHTML += `
+          <li class="option">
+            <input type="radio" name="q${index}" value="${value}" id="${optionId}" />
+            <label for="${optionId}">${option.text}</label>
+          </li>
+        `;
+          });
+        }
 
         questionDiv.innerHTML = `
-          <h3>${questionData.question}</h3>
-          <ul class="options">
-            ${optionsHTML}
-          </ul>
-          <div class="feedback"></div>
-        `;
+      <h3>${questionData.question}</h3>
+      <ul class="options">
+        ${optionsHTML}
+      </ul>
+      <div class="feedback"></div>
+    `;
 
         return questionDiv;
       }
 
-      // Función para inicializar las preguntas desde JSON
-      function initializeQuestionsFromJSON() {
-        const questionsContainer =
-          document.getElementById("questionsContainer");
-        questionsContainer.innerHTML = "";
-
-        quizData.quiz.questions.forEach((questionData, index) => {
-          const questionElement = createQuestionHTML(questionData, index);
-          questionsContainer.appendChild(questionElement);
-        });
-
-        // Actualizar las referencias a las preguntas
-        questions = document.querySelectorAll(".question");
-
-        // Actualizar contador total
-        document.getElementById("totalQuestions").textContent =
-          questions.length;
-      }
-
-      // Función para mezclar un array (algoritmo Fisher-Yates)
-      function shuffleArray(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-      }
-
-      // Función para mezclar las opciones de una pregunta
+      // Función para mezclar las opciones de una pregunta (actualizada)
       function shuffleOptions(question) {
+        // No mezclar opciones de verdadero/falso
+        if (question.dataset.type === "true_false") {
+          return;
+        }
+
         const options = question.querySelectorAll(".option");
         if (options.length > 0) {
           const optionsArray = Array.from(options);
@@ -196,7 +181,6 @@
           });
         }
       }
-
       // Función para inicializar el orden aleatorio de las preguntas
       function initializeQuestionOrder() {
         questionOrder = Array.from({ length: questions.length }, (_, i) => i);

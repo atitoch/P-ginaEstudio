@@ -263,3 +263,113 @@ body {
     gap: 15px;
   }
 }
+
+.question[data-type="true_false"] .options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.question[data-type="true_false"] .option {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.question[data-type="true_false"] .option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.question[data-type="true_false"] .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #495057;
+  cursor: pointer;
+}
+
+.question[data-type="true_false"] .option label::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.question[data-type="true_false"] .option:first-child label::before {
+  content: "✓";
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.question[data-type="true_false"] .option:last-child label::before {
+  content: "✗";
+  background: linear-gradient(135deg, #dc3545, #e83e8c);
+  color: white;
+}
+
+.question[data-type="true_false"] .option input[type="radio"]:checked + label {
+  background: linear-gradient(135deg, #9c27b0, #e91e63);
+  color: white;
+  border-color: #9c27b0;
+}
+
+.question[data-type="true_false"]
+  .option
+  input[type="radio"]:checked
+  + label::before {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.question[data-type="true_false"] .option.correct {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+}
+
+.question[data-type="true_false"] .option.incorrect {
+  border-color: #dc3545;
+  background: linear-gradient(135deg, #f8d7da, #f1b6ba);
+}
+
+/* Responsive para verdadero/falso */
+@media (max-width: 768px) {
+  .question[data-type="true_false"] .options {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .question[data-type="true_false"] .option {
+    max-width: none;
+  }
+
+  .question[data-type="true_false"] .option label {
+    flex-direction: row;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .question[data-type="true_false"] .option label::before {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-size: 1.5em;
+  }
+}

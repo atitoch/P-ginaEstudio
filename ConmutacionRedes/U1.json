@@ -1,0 +1,823 @@
+{
+  "quiz": {
+    "title": "Direccionamiento IP y Protocolos de Red",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Qué es el direccionamiento IP?",
+        "options": [
+          {
+            "text": "Una función de los protocolos de capa física que permite la transmisión de datos",
+            "correct": false
+          },
+          {
+            "text": "Una función clave de los protocolos de capa de Red que permite la transmisión de datos entre hosts de la misma red o en redes diferentes",
+            "correct": true
+          },
+          {
+            "text": "Una función de los protocolos de capa de aplicación para identificar servicios",
+            "correct": false
+          },
+          {
+            "text": "Una función exclusiva de IPv6 para el enrutamiento",
+            "correct": false
+          }
+        ],
+        "feedback": "El direccionamiento IP es una función fundamental de la capa de Red que permite la comunicación entre dispositivos."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "Las direcciones IP se caracterizan por:",
+        "options": [
+          {
+            "text": "Utilizar 16 bits agrupados en 2 octetos",
+            "correct": false
+          },
+          {
+            "text": "Utilizar 32 bits agrupados en 4 octetos separados por puntos",
+            "correct": true
+          },
+          {
+            "text": "Utilizar 64 bits agrupados en 8 octetos",
+            "correct": false
+          },
+          {
+            "text": "Utilizar 128 bits en formato hexadecimal",
+            "correct": false
+          }
+        ],
+        "feedback": "IPv4 utiliza 32 bits organizados en 4 octetos de 8 bits cada uno, separados por puntos."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿En qué RFC están definidos IPv4 e IPv6 respectivamente?",
+        "options": [
+          {
+            "text": "RFC 791 y RFC 2460",
+            "correct": true
+          },
+          {
+            "text": "RFC 2460 y RFC 791",
+            "correct": false
+          },
+          {
+            "text": "RFC 1918 y RFC 2460",
+            "correct": false
+          },
+          {
+            "text": "RFC 791 y RFC 1918",
+            "correct": false
+          }
+        ],
+        "feedback": "IPv4 está definido en RFC 791 e IPv6 en RFC 2460."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Cuántas redes Clase A pueden existir?",
+        "options": [
+          {
+            "text": "128",
+            "correct": false
+          },
+          {
+            "text": "126",
+            "correct": true
+          },
+          {
+            "text": "127",
+            "correct": false
+          },
+          {
+            "text": "254",
+            "correct": false
+          }
+        ],
+        "feedback": "Existen 126 redes Clase A utilizables, excluyendo las direcciones reservadas."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Cuántos hosts puede tener una red Clase A?",
+        "options": [
+          {
+            "text": "16.777.214",
+            "correct": false
+          },
+          {
+            "text": "16.387.064",
+            "correct": true
+          },
+          {
+            "text": "16.000.000",
+            "correct": false
+          },
+          {
+            "text": "16.777.216",
+            "correct": false
+          }
+        ],
+        "feedback": "Una red Clase A puede tener 16.387.064 hosts disponibles."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Cuántas redes Clase B diferentes pueden existir?",
+        "options": [
+          {
+            "text": "16.256",
+            "correct": false
+          },
+          {
+            "text": "16.384",
+            "correct": true
+          },
+          {
+            "text": "65.534",
+            "correct": false
+          },
+          {
+            "text": "32.768",
+            "correct": false
+          }
+        ],
+        "feedback": "Pueden existir 16.384 redes Clase B diferentes."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuántos hosts máximo puede tener una red Clase B?",
+        "options": [
+          {
+            "text": "64.516",
+            "correct": true
+          },
+          {
+            "text": "65.534",
+            "correct": false
+          },
+          {
+            "text": "65.536",
+            "correct": false
+          },
+          {
+            "text": "64.000",
+            "correct": false
+          }
+        ],
+        "feedback": "Una red Clase B puede tener máximo 64.516 hosts."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Cuántas redes Clase C diferentes pueden existir?",
+        "options": [
+          {
+            "text": "1.048.576",
+            "correct": false
+          },
+          {
+            "text": "2.097.152",
+            "correct": true
+          },
+          {
+            "text": "16.777.216",
+            "correct": false
+          },
+          {
+            "text": "4.194.304",
+            "correct": false
+          }
+        ],
+        "feedback": "Pueden existir 2.097.152 redes Clase C diferentes."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Para qué se utiliza la Clase D?",
+        "options": [
+          {
+            "text": "Para redes experimentales",
+            "correct": false
+          },
+          {
+            "text": "Para redes privadas",
+            "correct": false
+          },
+          {
+            "text": "Para multicast",
+            "correct": true
+          },
+          {
+            "text": "Para broadcast",
+            "correct": false
+          }
+        ],
+        "feedback": "La Clase D está reservada para direcciones multicast."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Para qué fueron designadas originalmente las direcciones Clase E?",
+        "options": [
+          {
+            "text": "Para uso comercial",
+            "correct": false
+          },
+          {
+            "text": "Para redes militares",
+            "correct": false
+          },
+          {
+            "text": "Para propósitos experimentales o de uso especial",
+            "correct": true
+          },
+          {
+            "text": "Para redes gubernamentales",
+            "correct": false
+          }
+        ],
+        "feedback": "Las direcciones Clase E fueron reservadas para propósitos experimentales."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Qué representan los valores 0 y 255 en las direcciones IP?",
+        "options": [
+          {
+            "text": "0 para broadcast, 255 para red",
+            "correct": false
+          },
+          {
+            "text": "0 para máquinas que no conocen su dirección, 255 para multicast/broadcast",
+            "correct": true
+          },
+          {
+            "text": "Ambos para direcciones especiales sin uso específico",
+            "correct": false
+          },
+          {
+            "text": "0 y 255 son direcciones normales utilizables",
+            "correct": false
+          }
+        ],
+        "feedback": "0 se usa para máquinas que no conocen su dirección y 255 para multicast/broadcast."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿A qué máscara decimal corresponde /24 en notación CIDR?",
+        "options": [
+          {
+            "text": "255.255.0.0",
+            "correct": false
+          },
+          {
+            "text": "255.255.255.0",
+            "correct": true
+          },
+          {
+            "text": "255.255.255.128",
+            "correct": false
+          },
+          {
+            "text": "255.0.0.0",
+            "correct": false
+          }
+        ],
+        "feedback": "/24 corresponde a una máscara de 255.255.255.0."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Cuántos hosts permite una máscara /16?",
+        "options": [
+          {
+            "text": "32.766",
+            "correct": false
+          },
+          {
+            "text": "65.534",
+            "correct": true
+          },
+          {
+            "text": "16.382",
+            "correct": false
+          },
+          {
+            "text": "131.070",
+            "correct": false
+          }
+        ],
+        "feedback": "Una máscara /16 permite 65.534 hosts utilizables."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Cuántos hosts permite una máscara /30?",
+        "options": [
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "2",
+            "correct": true
+          },
+          {
+            "text": "14",
+            "correct": false
+          }
+        ],
+        "feedback": "Una máscara /30 permite solo 2 hosts utilizables."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Qué significa CIDR?",
+        "options": [
+          {
+            "text": "Classless Internal Domain Routing",
+            "correct": false
+          },
+          {
+            "text": "Classless Inter-Domain Routing",
+            "correct": true
+          },
+          {
+            "text": "Classical Internet Domain Routing",
+            "correct": false
+          },
+          {
+            "text": "Centralized Inter-Domain Routing",
+            "correct": false
+          }
+        ],
+        "feedback": "CIDR significa Classless Inter-Domain Routing."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "En VLSM, ¿de qué dirección se toman los bits para realizar el direccionamiento?",
+        "options": [
+          {
+            "text": "De izquierda a derecha",
+            "correct": false
+          },
+          {
+            "text": "De derecha a izquierda",
+            "correct": true
+          },
+          {
+            "text": "Del centro hacia los extremos",
+            "correct": false
+          },
+          {
+            "text": "Alternando bits",
+            "correct": false
+          }
+        ],
+        "feedback": "En VLSM el direccionamiento se realiza tomando bits de derecha a izquierda."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cómo se denomina un router que sólo está conectado a otro router?",
+        "options": [
+          {
+            "text": "Router de borde",
+            "correct": false
+          },
+          {
+            "text": "Router de acceso",
+            "correct": false
+          },
+          {
+            "text": "Router de conexión única",
+            "correct": true
+          },
+          {
+            "text": "Router de distribución",
+            "correct": false
+          }
+        ],
+        "feedback": "Un router conectado solo a otro router se denomina router de conexión única."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿A qué familia de protocolos pertenece RIP?",
+        "options": [
+          {
+            "text": "EGP (Exterior Gateway Protocol)",
+            "correct": false
+          },
+          {
+            "text": "IGP (Interior Gateway Protocol)",
+            "correct": true
+          },
+          {
+            "text": "BGP (Border Gateway Protocol)",
+            "correct": false
+          },
+          {
+            "text": "OSPF Family",
+            "correct": false
+          }
+        ],
+        "feedback": "RIP pertenece a la familia IGP (Interior Gateway Protocol)."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Qué algoritmo emplea el protocolo RIP?",
+        "options": [
+          {
+            "text": "Algoritmo de Dijkstra",
+            "correct": false
+          },
+          {
+            "text": "Algoritmo de Bellman-Ford distribuido",
+            "correct": true
+          },
+          {
+            "text": "Algoritmo de Floyd-Warshall",
+            "correct": false
+          },
+          {
+            "text": "Algoritmo SPF",
+            "correct": false
+          }
+        ],
+        "feedback": "RIP utiliza el algoritmo de Bellman-Ford distribuido."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Cuál es el tiempo de vida de las rutas en RIP?",
+        "options": [
+          {
+            "text": "120 segundos",
+            "correct": false
+          },
+          {
+            "text": "150 segundos",
+            "correct": false
+          },
+          {
+            "text": "180 segundos",
+            "correct": true
+          },
+          {
+            "text": "240 segundos",
+            "correct": false
+          }
+        ],
+        "feedback": "Las rutas en RIP tienen un tiempo de vida de 180 segundos."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "Los 180 segundos de vida de las rutas RIP corresponden a:",
+        "options": [
+          {
+            "text": "4 intercambios de información",
+            "correct": false
+          },
+          {
+            "text": "5 intercambios de información",
+            "correct": false
+          },
+          {
+            "text": "6 intercambios de información",
+            "correct": true
+          },
+          {
+            "text": "8 intercambios de información",
+            "correct": false
+          }
+        ],
+        "feedback": "Los 180 segundos equivalen a 6 intercambios de información en RIP."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cuáles son las dos funciones principales del protocolo IP?",
+        "options": [
+          {
+            "text": "Enrutamiento y seguridad",
+            "correct": false
+          },
+          {
+            "text": "Direccionamiento y cifrado",
+            "correct": false
+          },
+          {
+            "text": "Entrega de datagramas bajo mejor esfuerzo y fragmentación/re-ensamblado",
+            "correct": true
+          },
+          {
+            "text": "Control de flujo y detección de errores",
+            "correct": false
+          }
+        ],
+        "feedback": "IP se encarga de la entrega de datagramas y fragmentación/re-ensamblado."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Por qué se considera a IP un protocolo de \"mejor esfuerzo\"?",
+        "options": [
+          {
+            "text": "Porque siempre garantiza la entrega",
+            "correct": false
+          },
+          {
+            "text": "Porque usa la ruta más rápida",
+            "correct": false
+          },
+          {
+            "text": "Porque no garantiza que los paquetes lleguen ni el orden de entrega",
+            "correct": true
+          },
+          {
+            "text": "Porque tiene mecanismos de corrección de errores",
+            "correct": false
+          }
+        ],
+        "feedback": "IP es de \"mejor esfuerzo\" porque no garantiza entrega ni orden."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Cuál es el propósito principal del DNS?",
+        "options": [
+          {
+            "text": "Asignar direcciones IP dinámicamente",
+            "correct": false
+          },
+          {
+            "text": "Traducir direcciones IP a nombres de dominio y viceversa",
+            "correct": true
+          },
+          {
+            "text": "Enrutar paquetes entre redes",
+            "correct": false
+          },
+          {
+            "text": "Proporcionar seguridad en las conexiones",
+            "correct": false
+          }
+        ],
+        "feedback": "DNS traduce entre direcciones IP y nombres de dominio."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿De cuántas letras constan los dominios principales?",
+        "options": [
+          {
+            "text": "Una letra",
+            "correct": false
+          },
+          {
+            "text": "Dos letras",
+            "correct": true
+          },
+          {
+            "text": "Tres letras",
+            "correct": false
+          },
+          {
+            "text": "Cuatro letras",
+            "correct": false
+          }
+        ],
+        "feedback": "Los dominios principales constan de dos letras que indican el país."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Cuál es la función del ICANN?",
+        "options": [
+          {
+            "text": "Desarrollar protocolos de red",
+            "correct": false
+          },
+          {
+            "text": "Fabricar equipos de red",
+            "correct": false
+          },
+          {
+            "text": "Controlar la distribución y mantenimiento de direcciones IP a escala mundial",
+            "correct": true
+          },
+          {
+            "text": "Proporcionar servicios de Internet",
+            "correct": false
+          }
+        ],
+        "feedback": "ICANN es la autoridad mundial para la distribución de direcciones IP."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "Con la dirección 192.168.1.24 y máscara 255.255.255.0, ¿cuál es el rango de la subred?",
+        "options": [
+          {
+            "text": "192.168.0.0 a 192.168.0.255",
+            "correct": false
+          },
+          {
+            "text": "192.168.1.0 a 192.168.1.255",
+            "correct": true
+          },
+          {
+            "text": "192.168.1.1 a 192.168.1.254",
+            "correct": false
+          },
+          {
+            "text": "192.168.1.0 a 192.168.1.127",
+            "correct": false
+          }
+        ],
+        "feedback": "Con máscara /24, la subred abarca de 192.168.1.0 a 192.168.1.255."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "Con máscara 255.255.255.128, ¿en cuántas subredes se divide 192.168.1.0?",
+        "options": [
+          {
+            "text": "Una subred",
+            "correct": false
+          },
+          {
+            "text": "Dos subredes",
+            "correct": true
+          },
+          {
+            "text": "Tres subredes",
+            "correct": false
+          },
+          {
+            "text": "Cuatro subredes",
+            "correct": false
+          }
+        ],
+        "feedback": "La máscara 255.255.255.128 divide la red en dos subredes."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Qué representa la métrica \"longitud del camino\"?",
+        "options": [
+          {
+            "text": "Solo el número de routers",
+            "correct": false
+          },
+          {
+            "text": "Solo la distancia física",
+            "correct": false
+          },
+          {
+            "text": "La suma de costos de cada salto o la suma de saltos",
+            "correct": true
+          },
+          {
+            "text": "El tiempo de transmisión",
+            "correct": false
+          }
+        ],
+        "feedback": "La métrica de longitud representa la suma de costos o saltos en el camino."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Qué mide la métrica \"ancho de banda\"?",
+        "options": [
+          {
+            "text": "El costo monetario del enlace",
+            "correct": false
+          },
+          {
+            "text": "La confiabilidad del enlace",
+            "correct": false
+          },
+          {
+            "text": "La velocidad de transmisión de información",
+            "correct": true
+          },
+          {
+            "text": "La distancia física del enlace",
+            "correct": false
+          }
+        ],
+        "feedback": "La métrica de ancho de banda mide la velocidad de transmisión."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿En qué capa del modelo OSI toma decisiones el router?",
+        "options": [
+          {
+            "text": "Capa 2 (Enlace de datos)",
+            "correct": false
+          },
+          {
+            "text": "Capa 3 (Red)",
+            "correct": true
+          },
+          {
+            "text": "Capa 4 (Transporte)",
+            "correct": false
+          },
+          {
+            "text": "Capa 1 (Física)",
+            "correct": false
+          }
+        ],
+        "feedback": "Los routers toman decisiones en la Capa 3 (Red) del modelo OSI."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "Las direcciones IP se denominan direcciones:",
+        "options": [
+          {
+            "text": "lógicas",
+            "correct": true
+          },
+          {
+            "text": "físicas",
+            "correct": false
+          },
+          {
+            "text": "virtuales",
+            "correct": false
+          },
+          {
+            "text": "temporales",
+            "correct": false
+          }
+        ],
+        "feedback": "Las direcciones IP son direcciones lógicas de la capa de red."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "DNS traduce direcciones _____ a nombres de dominio:",
+        "options": [
+          {
+            "text": "MAC",
+            "correct": false
+          },
+          {
+            "text": "IP",
+            "correct": true
+          },
+          {
+            "text": "físicas",
+            "correct": false
+          },
+          {
+            "text": "lógicas",
+            "correct": false
+          }
+        ],
+        "feedback": "DNS traduce específicamente direcciones IP a nombres de dominio."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "Es necesario prevenir _______ de paquetes:",
+        "options": [
+          {
+            "text": "pérdidas",
+            "correct": false
+          },
+          {
+            "text": "retrasos",
+            "correct": false
+          },
+          {
+            "text": "colisiones",
+            "correct": true
+          },
+          {
+            "text": "fragmentación",
+            "correct": false
+          }
+        ],
+        "feedback": "Es importante prevenir colisiones de paquetes en la red."
+      }
+    ]
+  }
+}
