@@ -21,7 +21,7 @@ const QUIZ_CONFIG = {
   ProgramacionWeb: {
     name: "Programación Web",
     units: {
-      U1: { file: "U1.json", name: "Fundamentos de BD" },
+      U1: { file: "U1.json", name: "Fundamentos de Aplicaciones Web" },
       U2: { file: "U2.json", name: "Modelo Relacional" },
       U3: { file: "U3.json", name: "SQL Avanzado" },
     },

@@ -1,0 +1,223 @@
+{
+  "quiz": {
+    "title": "JavaScript - Objetos, Variables y Conceptos Fundamentales",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Qué objeto permite mostrar una ventana emergente?",
+        "options": [
+          { "text": "window", "correct": false },
+          { "text": "alert", "correct": true },
+          { "text": "popup", "correct": false },
+          { "text": "dialog", "correct": false }
+        ],
+        "feedback": "El objeto 'alert' permite mostrar ventanas emergentes simples con mensajes para el usuario."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Cómo son los objetos dependientes de la implementación?",
+        "options": [
+          { "text": "nativos", "correct": false },
+          { "text": "anfitriones", "correct": true },
+          { "text": "incorporados", "correct": false },
+          { "text": "predeterminados", "correct": false }
+        ],
+        "feedback": "Los objetos anfitriones (host objects) son aquellos que dependen del entorno de implementación, como el navegador."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Cuándo se puede ejecutar el lenguaje script?",
+        "options": [
+          { "text": "Solo al inicio", "correct": false },
+          { "text": "Al cargarse", "correct": true },
+          { "text": "Solo manualmente", "correct": false },
+          { "text": "Al cerrar la página", "correct": false }
+        ],
+        "feedback": "El lenguaje script se puede ejecutar al cargarse la página, entre otros momentos."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Qué permite el operador //?",
+        "options": [
+          { "text": "división", "correct": false },
+          { "text": "comentario", "correct": true },
+          { "text": "comparación", "correct": false },
+          { "text": "concatenación", "correct": false }
+        ],
+        "feedback": "El operador // se utiliza para crear comentarios de una sola línea en JavaScript."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿A qué se puede vincular el lenguaje script en una página web?",
+        "options": [
+          { "text": "imágenes", "correct": false },
+          { "text": "controles", "correct": true },
+          { "text": "estilos", "correct": false },
+          { "text": "enlaces", "correct": false }
+        ],
+        "feedback": "El lenguaje script se puede vincular a controles de formulario y otros elementos interactivos de la página."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo de objeto proporcionado por la implementación?",
+        "options": [
+          { "text": "Array", "correct": false },
+          { "text": "Date", "correct": true },
+          { "text": "String", "correct": false },
+          { "text": "Number", "correct": false }
+        ],
+        "feedback": "Date es un ejemplo de objeto incorporado proporcionado por la implementación de JavaScript."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Qué se puede validar con el lenguaje script?",
+        "options": [
+          { "text": "estilos", "correct": false },
+          { "text": "datos", "correct": true },
+          { "text": "imágenes", "correct": false },
+          { "text": "enlaces", "correct": false }
+        ],
+        "feedback": "JavaScript se utiliza comúnmente para validar datos de formularios antes de enviarlos al servidor."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Cómo se consideran los tipos null y undefined con el operador ===?",
+        "options": [
+          { "text": "iguales", "correct": false },
+          { "text": "diferentes", "correct": true },
+          { "text": "similares", "correct": false },
+          { "text": "equivalentes", "correct": false }
+        ],
+        "feedback": "Con el operador === (igualdad estricta), null y undefined se consideran diferentes porque son tipos distintos."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Qué no debe ser el primer carácter de un identificador?",
+        "options": [
+          { "text": "letra", "correct": false },
+          { "text": "dígito", "correct": true },
+          { "text": "guión bajo", "correct": false },
+          { "text": "signo de dólar", "correct": false }
+        ],
+        "feedback": "Un identificador en JavaScript no puede comenzar con un dígito, debe empezar con una letra, _ o $."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Cuál es el conjunto de objetos predeterminados presentes en el navegador (inglés)?",
+        "options": [
+          { "text": "BOM", "correct": false },
+          { "text": "DOM", "correct": true },
+          { "text": "API", "correct": false },
+          { "text": "SDK", "correct": false }
+        ],
+        "feedback": "DOM (Document Object Model) es el conjunto de objetos predeterminados que representan la estructura del documento en el navegador."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Cuántos tipos de datos compuestos tiene JavaScript?",
+        "options": [
+          { "text": "1", "correct": false },
+          { "text": "2", "correct": true },
+          { "text": "3", "correct": false },
+          { "text": "4", "correct": false }
+        ],
+        "feedback": "JavaScript tiene 2 tipos de datos compuestos principales: Object y Array (aunque Array es técnicamente un tipo de Object)."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿El lenguaje script se puede ejecutar en un...?",
+        "options": [
+          { "text": "archivo", "correct": false },
+          { "text": "evento", "correct": true },
+          { "text": "documento", "correct": false },
+          { "text": "servidor", "correct": false }
+        ],
+        "feedback": "El lenguaje script se puede ejecutar en respuesta a eventos como clicks, carga de página, envío de formularios, etc."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Cuáles son las variables que se pueden omitir su declaración?",
+        "options": [
+          { "text": "locales", "correct": false },
+          { "text": "globales", "correct": true },
+          { "text": "privadas", "correct": false },
+          { "text": "estáticas", "correct": false }
+        ],
+        "feedback": "Las variables globales pueden ser usadas sin declaración explícita (aunque no es recomendado), se crean automáticamente."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Cómo es el lenguaje script con respecto al soporte?",
+        "options": [
+          { "text": "dependiente", "correct": false },
+          { "text": "independiente", "correct": true },
+          { "text": "limitado", "correct": false },
+          { "text": "específico", "correct": false }
+        ],
+        "feedback": "JavaScript es independiente de plataforma en cuanto a soporte, funciona en diferentes navegadores y sistemas operativos."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cómo son los objetos nativos respecto al entorno?",
+        "options": [
+          { "text": "dependientes", "correct": false },
+          { "text": "independientes", "correct": true },
+          { "text": "variables", "correct": false },
+          { "text": "específicos", "correct": false }
+        ],
+        "feedback": "Los objetos nativos son independientes del entorno, están definidos por el estándar ECMAScript y funcionan igual en cualquier implementación."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo de objeto incorporado?",
+        "options": [
+          { "text": "window", "correct": false },
+          { "text": "Math", "correct": true },
+          { "text": "document", "correct": false },
+          { "text": "navigator", "correct": false }
+        ],
+        "feedback": "Math es un objeto incorporado (built-in) que proporciona propiedades y métodos para constantes y funciones matemáticas."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cuáles son los objetos proporcionados por la implementación?",
+        "options": [
+          { "text": "nativos", "correct": true },
+          { "text": "anfitriones", "correct": false },
+          { "text": "incorporados", "correct": false },
+          { "text": "personalizados", "correct": false }
+        ],
+        "feedback": "Los objetos nativos son proporcionados por la implementación de JavaScript y están definidos en el estándar ECMAScript."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Dónde se ejecuta el lenguaje script?",
+        "options": [
+          { "text": "servidor", "correct": false },
+          { "text": "navegador", "correct": true },
+          { "text": "base de datos", "correct": false },
+          { "text": "sistema operativo", "correct": false }
+        ],
+        "feedback": "El lenguaje script (JavaScript del lado cliente) se ejecuta principalmente en el navegador web del usuario."
+      }
+    ]
+  }
+}

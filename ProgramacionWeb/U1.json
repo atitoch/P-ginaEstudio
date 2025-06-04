@@ -1,0 +1,376 @@
+{
+  "quiz": {
+    "title": "Desarrollo Web y Tecnologías",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cómo se resolvió la falta de estándares en el desarrollo web?",
+        "options": [
+          {
+            "text": "Mediante el uso de frameworks propietarios",
+            "correct": false
+          },
+          { "text": "La creación de W3C", "correct": true },
+          { "text": "Con la implementación de HTML5", "correct": false },
+          { "text": "A través de los navegadores web", "correct": false }
+        ],
+        "feedback": "El W3C (World Wide Web Consortium) fue creado para establecer estándares web universales."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Cuál es el propósito de IndexedDB en las aplicaciones web?",
+        "options": [
+          { "text": "Acelerar el procesamiento de CSS", "correct": false },
+          { "text": "Almacenar datos en el navegador", "correct": true },
+          { "text": "Gestionar cookies del servidor", "correct": false },
+          { "text": "Optimizar imágenes web", "correct": false }
+        ],
+        "feedback": "IndexedDB es una API para almacenar grandes cantidades de datos estructurados en el navegador del cliente."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Cuál es la función de la capa de persistencia?",
+        "options": [
+          { "text": "Gestionar la interfaz de usuario", "correct": false },
+          { "text": "Almacenar datos", "correct": true },
+          { "text": "Procesar lógica de negocio", "correct": false },
+          { "text": "Manejar las comunicaciones de red", "correct": false }
+        ],
+        "feedback": "La capa de persistencia se encarga del almacenamiento y recuperación de datos de forma permanente."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Cuál fue el primer navegador web de uso amplio?",
+        "options": [
+          { "text": "Internet Explorer", "correct": false },
+          { "text": "Netscape", "correct": false },
+          { "text": "Mosaic", "correct": true },
+          { "text": "Firefox", "correct": false }
+        ],
+        "feedback": "Mosaic fue uno de los primeros navegadores web gráficos y de uso amplio, desarrollado en 1993."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Cuántos son los tipos de diseño web?",
+        "options": [
+          { "text": "2", "correct": false },
+          { "text": "3", "correct": true },
+          { "text": "4", "correct": false },
+          { "text": "5", "correct": false }
+        ],
+        "feedback": "Tradicionalmente se reconocen 3 tipos principales de diseño web: estático, dinámico y responsivo."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Dónde se instalan las aplicaciones web?",
+        "options": [
+          { "text": "En el cliente", "correct": false },
+          { "text": "En un servidor", "correct": true },
+          { "text": "En la base de datos", "correct": false },
+          { "text": "En el navegador", "correct": false }
+        ],
+        "feedback": "Las aplicaciones web se instalan y ejecutan en un servidor, siendo accesibles a través de navegadores web."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿En cuántas partes se divide el modelo cliente/servidor?",
+        "options": [
+          { "text": "1", "correct": false },
+          { "text": "2", "correct": true },
+          { "text": "3", "correct": false },
+          { "text": "4", "correct": false }
+        ],
+        "feedback": "El modelo cliente/servidor se divide en dos partes principales: el cliente y el servidor."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿En una aplicación quién hace la solicitud?",
+        "options": [
+          { "text": "El servidor", "correct": false },
+          { "text": "La base de datos", "correct": false },
+          { "text": "Remitente o cliente", "correct": true },
+          { "text": "El protocolo HTTP", "correct": false }
+        ],
+        "feedback": "En el modelo cliente/servidor, es el cliente (remitente) quien inicia la comunicación haciendo solicitudes al servidor."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Es la dependencia del conocimiento una ventaja del desarrollo web?",
+        "options": [
+          { "text": "Sí, es una ventaja", "correct": false },
+          { "text": "No, es un desafío", "correct": true },
+          { "text": "Depende del proyecto", "correct": false },
+          { "text": "Solo en aplicaciones complejas", "correct": false }
+        ],
+        "feedback": "La dependencia del conocimiento especializado es considerada un desafío, no una ventaja del desarrollo web."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Es PCHP un lenguaje ampliamente utilizado en el backend de las aplicaciones web?",
+        "options": [
+          { "text": "Sí", "correct": false },
+          { "text": "No", "correct": true },
+          { "text": "Solo en aplicaciones pequeñas", "correct": false },
+          { "text": "Solo con MySQL", "correct": false }
+        ],
+        "feedback": "PCHP no es un lenguaje reconocido. PHP (sin la 'C' inicial) sí es un lenguaje ampliamente utilizado en backend."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Para qué se usa el protocolo FTP?",
+        "options": [
+          { "text": "Para navegación web", "correct": false },
+          { "text": "Para transferir archivos", "correct": true },
+          { "text": "Para enviar correos", "correct": false },
+          { "text": "Para bases de datos", "correct": false }
+        ],
+        "feedback": "FTP (File Transfer Protocol) es un protocolo diseñado específicamente para la transferencia de archivos."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Qué maneja la interfaz de usuario y parte de la lógica del negocio?",
+        "options": [
+          { "text": "El servidor", "correct": false },
+          { "text": "La base de datos", "correct": false },
+          { "text": "Capa de presentación y lógica", "correct": true },
+          { "text": "El protocolo HTTP", "correct": false }
+        ],
+        "feedback": "La capa de presentación maneja la interfaz de usuario y parte de la lógica de negocio en aplicaciones web."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Qué protocolo es utilizado para solicitar y recibir páginas web?",
+        "options": [
+          { "text": "FTP", "correct": false },
+          { "text": "SMTP", "correct": false },
+          { "text": "HTTP", "correct": true },
+          { "text": "TCP", "correct": false }
+        ],
+        "feedback": "HTTP (HyperText Transfer Protocol) es el protocolo principal para la comunicación entre navegadores y servidores web."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "En el modelo clásico, ¿quién gestiona la interfaz de usuario?",
+        "options": [
+          { "text": "El servidor", "correct": true },
+          { "text": "El cliente", "correct": false },
+          { "text": "La base de datos", "correct": false },
+          { "text": "El navegador", "correct": false }
+        ],
+        "feedback": "En el modelo clásico de aplicaciones web, el servidor gestiona la interfaz de usuario generando las páginas HTML."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cuál tecnología permite la comunicación en tiempo real en aplicaciones web?",
+        "options": [
+          { "text": "HTTP", "correct": false },
+          { "text": "WebSocket", "correct": true },
+          { "text": "FTP", "correct": false },
+          { "text": "SMTP", "correct": false }
+        ],
+        "feedback": "WebSocket es la tecnología que permite comunicación bidireccional en tiempo real entre cliente y servidor."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Cuáles son las 3 capas que hay en las aplicaciones web?",
+        "options": [
+          { "text": "Cliente, Servidor, Base de datos", "correct": false },
+          { "text": "Presentación, Lógica, Datos", "correct": false },
+          {
+            "text": "Capa de datos, capa de negocio, capa de presentación",
+            "correct": true
+          },
+          { "text": "HTML, CSS, JavaScript", "correct": false }
+        ],
+        "feedback": "Las tres capas principales son: capa de datos (persistencia), capa de negocio (lógica) y capa de presentación (interfaz)."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cuáles son las bases de datos ampliamente utilizadas en las aplicaciones web?",
+        "options": [
+          { "text": "Solo MySQL", "correct": false },
+          { "text": "Relacionales", "correct": true },
+          { "text": "Solo NoSQL", "correct": false },
+          { "text": "Solo en memoria", "correct": false }
+        ],
+        "feedback": "Las bases de datos relacionales (como MySQL, PostgreSQL, SQL Server) son ampliamente utilizadas en aplicaciones web."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Cuáles son los tipos de diseño web?",
+        "options": [
+          { "text": "Estático y dinámico solamente", "correct": false },
+          { "text": "Avanzado, Clásico, Industrial", "correct": true },
+          { "text": "Solo responsivo", "correct": false },
+          { "text": "HTML y CSS únicamente", "correct": false }
+        ],
+        "feedback": "Los tipos de diseño web incluyen diseño avanzado, clásico e industrial, cada uno con características específicas."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Los clientes pueden conectarse a múltiples servidores al mismo tiempo?",
+        "options": [
+          { "text": "No", "correct": false },
+          { "text": "Sí", "correct": true },
+          { "text": "Solo con HTTP/2", "correct": false },
+          { "text": "Solo en aplicaciones web", "correct": false }
+        ],
+        "feedback": "Sí, los clientes pueden establecer conexiones simultáneas a múltiples servidores para acceder a diferentes recursos."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿En la arquitectura cliente-servidor, el cliente es una de las desventajas de la arquitectura en 2 capas?",
+        "options": [
+          { "text": "Sí", "correct": false },
+          { "text": "No", "correct": false },
+          { "text": "Falso", "correct": true },
+          { "text": "Depende del caso", "correct": false }
+        ],
+        "feedback": "Es falso. El cliente no es una desventaja de la arquitectura de 2 capas, sino que las desventajas están relacionadas con escalabilidad y mantenimiento."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Es el alto rendimiento en una arquitectura en 2 capas suelen ser eficientes?",
+        "options": [
+          { "text": "Siempre", "correct": false },
+          { "text": "Nunca", "correct": false },
+          { "text": "No", "correct": true },
+          { "text": "Solo con bases de datos pequeñas", "correct": false }
+        ],
+        "feedback": "No, las arquitecturas de 2 capas no suelen ser eficientes en términos de alto rendimiento debido a limitaciones de escalabilidad."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Las aplicaciones web son dependientes del sistema operativo?",
+        "options": [
+          { "text": "Sí", "correct": false },
+          { "text": "No", "correct": true },
+          { "text": "Solo en Windows", "correct": false },
+          { "text": "Solo las aplicaciones complejas", "correct": false }
+        ],
+        "feedback": "No, las aplicaciones web son independientes del sistema operativo ya que se ejecutan en navegadores web multiplataforma."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Para qué sirve el servidor SMTP?",
+        "options": [
+          { "text": "Para transferir archivos", "correct": false },
+          { "text": "Envío de correo", "correct": true },
+          { "text": "Para bases de datos", "correct": false },
+          { "text": "Para páginas web", "correct": false }
+        ],
+        "feedback": "SMTP (Simple Mail Transfer Protocol) es el protocolo estándar para el envío de correos electrónicos."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué independiza la lógica de negocio de la interfaz gráfica?",
+        "options": [
+          { "text": "HTML5", "correct": false },
+          { "text": "La arquitectura en 3 capas", "correct": true },
+          { "text": "JavaScript", "correct": false },
+          { "text": "CSS", "correct": false }
+        ],
+        "feedback": "La arquitectura en 3 capas separa la lógica de negocio de la interfaz gráfica, permitiendo mayor modularidad y mantenimiento."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Qué independiza el funcionamiento sin conexión a internet?",
+        "options": [
+          { "text": "Service Workers", "correct": false },
+          { "text": "El uso de Service Workers", "correct": true },
+          { "text": "HTML local", "correct": false },
+          { "text": "CSS offline", "correct": false }
+        ],
+        "feedback": "Los Service Workers permiten que las aplicaciones web funcionen sin conexión a internet mediante cache y gestión offline."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Qué permite el funcionamiento sin conexión a internet?",
+        "options": [
+          { "text": "Cookies", "correct": false },
+          { "text": "HTML5", "correct": true },
+          { "text": "PHP", "correct": false },
+          { "text": "MySQL", "correct": false }
+        ],
+        "feedback": "HTML5 incluye APIs como Application Cache y Service Workers que permiten funcionamiento offline en aplicaciones web."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué tecnología ha reemplazado a Flash y Java applets en el desarrollo web moderno?",
+        "options": [
+          { "text": "Silverlight", "correct": false },
+          { "text": "HTML5", "correct": true },
+          { "text": "ActiveX", "correct": false },
+          { "text": "PHP", "correct": false }
+        ],
+        "feedback": "HTML5 con sus APIs avanzadas ha reemplazado tecnologías como Flash y Java applets en el desarrollo web moderno."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Qué función del análisis?",
+        "options": [
+          { "text": "Compilar código", "correct": false },
+          {
+            "text": "Especificar los requerimientos e identificar el problema",
+            "correct": true
+          },
+          { "text": "Diseñar la interfaz", "correct": false },
+          { "text": "Probar la aplicación", "correct": false }
+        ],
+        "feedback": "La fase de análisis se enfoca en especificar los requerimientos del sistema e identificar claramente el problema a resolver."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "En el proceso de ingeniería web ¿Cuál es el primer paso?",
+        "options": [
+          { "text": "Diseño", "correct": false },
+          { "text": "Análisis", "correct": true },
+          { "text": "Implementación", "correct": false },
+          { "text": "Pruebas", "correct": false }
+        ],
+        "feedback": "El análisis es el primer paso en el proceso de ingeniería web, donde se definen los requerimientos y se entiende el problema."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿En la distribución monolítica, toda la aplicación se ejecuta en un solo nodo?",
+        "options": [
+          { "text": "No", "correct": false },
+          { "text": "Sí", "correct": true },
+          { "text": "Solo en desarrollo", "correct": false },
+          { "text": "Solo aplicaciones pequeñas", "correct": false }
+        ],
+        "feedback": "Sí, en una arquitectura monolítica toda la aplicación se ejecuta como una sola unidad en un único nodo o servidor."
+      }
+    ]
+  }
+}
