@@ -1,5 +1,3 @@
-// === PREGUNTAS ADICIONALES - EVOLUCIÓN DE LAS APP WEB ===
-
 ::Personalización Consistencia::La personalización del usuario puede afectar la {=consistencia y funcionalidad ~velocidad y rendimiento ~seguridad y privacidad ~instalación y configuración} de la aplicación.
 
 ::Flash Java Uniformidad::Una ventaja adicional de Flash y Java applets era la {=uniformidad en los elementos gráficos ~velocidad de carga ~facilidad de instalación ~compatibilidad universal}.
@@ -71,10 +69,6 @@
 ::WebGL Soporte::WebGL es mencionado como un soporte {=multimedia ~de navegadores ~de sistemas ~de redes} en las tecnologías clave.
 
 ::Quinta Generación Empresas::Hooping.tv ofrece soluciones específicamente para {=empresas y organizaciones ~usuarios domésticos ~estudiantes universitarios ~desarrolladores independientes}.
-
-// ...existing code...
-
-// === ARQUITECTURA DE APLICACIONES WEB ===
 
 ::Evolución Apps Web::Las aplicaciones web se han convertido en complejos sistemas con interfaces de usuario cada vez más parecidas a las aplicaciones de {=escritorio ~móviles ~consola ~servidores}.
 
@@ -238,10 +232,6 @@
 ::SMTP Conexión::SMTP permite transferencia de correo mediante una conexión {=punto a punto ~multipunto ~broadcast ~multicast}.
 
 ::SMTP Modelo::SMTP se basa en el modelo {=cliente-servidor ~peer-to-peer ~distribuido ~centralizado} donde un cliente envía mensaje a receptores.
-
-// ...existing code...
-
-// === TECNOLOGÍAS PARA EL DESARROLLO DE APLICACIONES WEB ===
 
 ::Modelo Cliente Servidor División::El modelo cliente/servidor divide los sistemas informáticos en {=dos partes principales ~tres componentes ~cuatro niveles ~múltiples capas}.
 
@@ -468,10 +458,6 @@
 
 ::Cloud Computing::AWS, Google Cloud y Azure proporcionan {=infraestructura escalable en la nube ~solo almacenamiento local ~únicamente procesamiento offline ~exclusivamente diseño web}.
 
-// ...existing code...
-
-// === FASES DEL DISEÑO WEB ===
-
 ::Diseño Web Proceso::El diseño web es un proceso {=elaborado que está formado por varias fases ~simple de una sola etapa ~automático sin intervención ~básico de dos pasos}.
 
 ::Proyecto Grande Fases::Cuanto más grande es el proyecto, {=más fases puede tener ~menos etapas requiere ~igual número de pasos ~menor complejidad presenta}.
@@ -567,8 +553,6 @@
 ~%20%Testimonios de clientes
 ~%-50%Entretenimiento multimedia
 }
-
-// === METODOLOGÍAS PARA EL DESARROLLO DE APLICACIONES WEB ===
 
 ::Desarrollo Crecimiento::El desarrollo de aplicaciones web ha crecido significativamente debido a{
 ~%50%la expansión del comercio electrónico
@@ -691,8 +675,6 @@
 
 ::Evaluación Cliente::Finalmente, el resultado es sometido a la {=evaluación del cliente ~programación automática ~testing interno ~documentación técnica}.
 
-// === PLANIFICACIÓN DE APLICACIÓN WEB ===
-
 ::Planificar Objetivo::A menudo antes de empezar un proyecto no tenemos claro {=cuál es el objetivo del mismo ~qué tecnología usar ~cuánto costará ~quién lo desarrollará}.
 
 ::Planificar Futuro::Planificar una aplicación web implica {=pensar y definir muchas cuestiones de importancia ~solo programar ~únicamente diseñar ~exclusivamente testear}.
@@ -775,10 +757,6 @@
 ::Frecuencia Actualizar::Se debe estudiar con qué {=frecuencia se deberá actualizar ~velocidad funcionará ~costo operará ~complejidad mantendrá}.
 
 ::Necesita Funcionar::Se debe estudiar {=qué se necesita para que funcione ~solo el código inicial ~únicamente el diseño ~exclusivamente la programación}.
-
-// ...existing code...
-
-// === ¿QUÉ ES UNA APP WEB? ===
 
 ::Definición App Web::¿Qué es una aplicación web?{
 =Software accesible a través de un navegador utilizando un servidor web
