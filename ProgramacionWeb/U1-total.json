@@ -3438,21 +3438,6 @@
         "feedback": "A menudo antes de empezar un proyecto no tenemos claro cuál es el objetivo del mismo."
       },
       {
-        "id": 268,
-        "type": "multiple",
-        "question": "¿Qué implica planificar una aplicación web?",
-        "options": [
-          {
-            "text": "Pensar y definir muchas cuestiones de importancia",
-            "correct": true
-          },
-          { "text": "Solo programar", "correct": false },
-          { "text": "Únicamente diseñar", "correct": false },
-          { "text": "Exclusivamente testear", "correct": false }
-        ],
-        "feedback": "Planificar una aplicación web implica pensar y definir muchas cuestiones de importancia."
-      },
-      {
         "id": 269,
         "type": "multiple",
         "question": "¿Qué se debe considerar al planificar el futuro en escalabilidad?",
@@ -3948,27 +3933,6 @@
         "feedback": "Se debe estudiar qué se necesita para que funcione."
       },
       {
-        "id": 306,
-        "type": "multiple",
-        "question": "¿Qué es una aplicación web?",
-        "options": [
-          {
-            "text": "Software accesible a través de un navegador utilizando un servidor web",
-            "correct": true
-          },
-          {
-            "text": "Programa que se instala localmente en cada dispositivo",
-            "correct": false
-          },
-          {
-            "text": "Aplicación móvil descargable desde una tienda",
-            "correct": false
-          },
-          { "text": "Sistema operativo basado en web", "correct": false }
-        ],
-        "feedback": "Una aplicación web es software accesible a través de un navegador utilizando un servidor web."
-      },
-      {
         "id": 307,
         "type": "multiple",
         "question": "¿En qué lenguajes están codificadas las aplicaciones web?",
@@ -4101,18 +4065,6 @@
         "feedback": "Los usuarios pueden modificar configuraciones como tamaño y color de las fuentes, y habilitar o deshabilitar JavaScript."
       },
       {
-        "id": 318,
-        "type": "multiple",
-        "question": "¿Qué puede afectar la personalización del usuario?",
-        "options": [
-          { "text": "La consistencia y funcionalidad", "correct": true },
-          { "text": "Velocidad y rendimiento", "correct": false },
-          { "text": "Seguridad y privacidad", "correct": false },
-          { "text": "Instalación y configuración", "correct": false }
-        ],
-        "feedback": "La personalización del usuario puede afectar la consistencia y funcionalidad de la aplicación."
-      },
-      {
         "id": 319,
         "type": "multiple",
         "question": "¿Cuáles fueron tecnologías populares para crear interfaces ricas y personalizadas?",
@@ -4123,78 +4075,6 @@
           { "text": "Solo CSS", "correct": false }
         ],
         "feedback": "Flash y Java applets fueron tecnologías populares para crear interfaces ricas y personalizadas."
-      },
-      {
-        "id": 320,
-        "type": "multiple",
-        "question": "¿Cuál era una ventaja de Flash y Java applets?",
-        "options": [
-          { "text": "Más control sobre la interfaz", "correct": true },
-          { "text": "Menor tamaño", "correct": false },
-          { "text": "Mayor velocidad", "correct": false },
-          { "text": "Menor costo", "correct": false }
-        ],
-        "feedback": "Una ventaja de Flash y Java applets era el más control sobre la interfaz."
-      },
-      {
-        "id": 322,
-        "type": "multiple",
-        "question": "¿Cuál era una desventaja de Flash y Java applets?",
-        "options": [
-          { "text": "Dependencia de complementos (plug-ins)", "correct": true },
-          { "text": "Mayor velocidad", "correct": false },
-          { "text": "Mejor compatibilidad", "correct": false },
-          { "text": "Menor costo", "correct": false }
-        ],
-        "feedback": "Una desventaja de Flash y Java applets era la dependencia de complementos (plug-ins)."
-      },
-      {
-        "id": 323,
-        "type": "multiple",
-        "question": "¿Entre qué ocurrían los problemas de compatibilidad de Flash y Java?",
-        "options": [
-          { "text": "Diferentes implementaciones", "correct": true },
-          { "text": "Navegadores", "correct": false },
-          { "text": "Sistemas operativos", "correct": false },
-          { "text": "Usuarios", "correct": false }
-        ],
-        "feedback": "Los problemas de compatibilidad de Flash y Java ocurrían entre diferentes implementaciones de Flash o Java."
-      },
-      {
-        "id": 324,
-        "type": "multiple",
-        "question": "¿Cómo se conocen también las Aplicaciones Enriquecidas de Internet?",
-        "options": [
-          { "text": "RIA", "correct": true },
-          { "text": "SPA", "correct": false },
-          { "text": "PWA", "correct": false },
-          { "text": "API", "correct": false }
-        ],
-        "feedback": "Las Aplicaciones Enriquecidas de Internet también se conocen como RIA."
-      },
-      {
-        "id": 325,
-        "type": "multiple",
-        "question": "¿Qué tipo de interfaces proporcionan las RIA?",
-        "options": [
-          { "text": "Avanzadas", "correct": true },
-          { "text": "Simples", "correct": false },
-          { "text": "Rápidas", "correct": false },
-          { "text": "Económicas", "correct": false }
-        ],
-        "feedback": "Las Aplicaciones Enriquecidas de Internet aprovechan tecnologías adicionales para proporcionar interfaces más avanzadas."
-      },
-      {
-        "id": 326,
-        "type": "multiple",
-        "question": "¿Qué es AJAX en el contexto de aplicaciones web?",
-        "options": [
-          { "text": "Un framework", "correct": true },
-          { "text": "Un lenguaje", "correct": false },
-          { "text": "Un navegador", "correct": false },
-          { "text": "Un sistema operativo", "correct": false }
-        ],
-        "feedback": "AJAX es un ejemplo de framework para interactividad en tiempo real."
       },
       {
         "id": 327,
@@ -4443,63 +4323,6 @@
         "feedback": "Se debe estudiar qué se necesita para que funcione."
       },
       {
-        "id": 346,
-        "type": "multiple",
-        "question": "¿Qué es una aplicación web?",
-        "options": [
-          {
-            "text": "Software accesible a través de un navegador utilizando un servidor web",
-            "correct": true
-          },
-          {
-            "text": "Programa que se instala localmente en cada dispositivo",
-            "correct": false
-          },
-          {
-            "text": "Aplicación móvil descargable desde una tienda",
-            "correct": false
-          },
-          { "text": "Sistema operativo basado en web", "correct": false }
-        ],
-        "feedback": "Una aplicación web es software accesible a través de un navegador utilizando un servidor web."
-      },
-      {
-        "id": 347,
-        "type": "multiple",
-        "question": "¿En qué lenguajes están codificadas las aplicaciones web?",
-        "options": [
-          { "text": "HTML", "correct": true },
-          { "text": "CSS", "correct": true },
-          { "text": "JavaScript", "correct": true },
-          { "text": "Solo en Java", "correct": false }
-        ],
-        "feedback": "Las aplicaciones web están codificadas en HTML, CSS y JavaScript principalmente."
-      },
-      {
-        "id": 348,
-        "type": "multiple",
-        "question": "¿Cómo utilizan el navegador las aplicaciones web?",
-        "options": [
-          { "text": "Como un cliente ligero", "correct": true },
-          { "text": "Como un cliente pesado", "correct": false },
-          { "text": "Como un cliente completo", "correct": false },
-          { "text": "Como un cliente independiente", "correct": false }
-        ],
-        "feedback": "Las aplicaciones web utilizan el navegador como un cliente ligero."
-      },
-      {
-        "id": 349,
-        "type": "multiple",
-        "question": "¿Cuáles son ejemplos de aplicaciones web?",
-        "options": [
-          { "text": "Wikis", "correct": true },
-          { "text": "Blogs", "correct": true },
-          { "text": "Tiendas en línea", "correct": true },
-          { "text": "Aplicaciones de escritorio", "correct": false }
-        ],
-        "feedback": "Ejemplos de aplicaciones web incluyen wikis, blogs, tiendas en línea y webmails."
-      },
-      {
         "id": 350,
         "type": "multiple",
         "question": "¿Qué requerían los modelos cliente-servidor antes de las aplicaciones web?",
@@ -4596,18 +4419,6 @@
         "feedback": "Los usuarios pueden modificar configuraciones como tamaño y color de las fuentes, y habilitar o deshabilitar JavaScript."
       },
       {
-        "id": 358,
-        "type": "multiple",
-        "question": "¿Qué puede afectar la personalización del usuario?",
-        "options": [
-          { "text": "La consistencia y funcionalidad", "correct": true },
-          { "text": "Velocidad y rendimiento", "correct": false },
-          { "text": "Seguridad y privacidad", "correct": false },
-          { "text": "Instalación y configuración", "correct": false }
-        ],
-        "feedback": "La personalización del usuario puede afectar la consistencia y funcionalidad de la aplicación."
-      },
-      {
         "id": 359,
         "type": "multiple",
         "question": "¿Cuáles fueron tecnologías populares para crear interfaces ricas y personalizadas?",
@@ -4632,30 +4443,6 @@
         "feedback": "Una ventaja de Flash y Java applets era el más control sobre la interfaz."
       },
       {
-        "id": 362,
-        "type": "multiple",
-        "question": "¿Cuál era una desventaja de Flash y Java applets?",
-        "options": [
-          { "text": "Dependencia de complementos (plug-ins)", "correct": true },
-          { "text": "Mayor velocidad", "correct": false },
-          { "text": "Mejor compatibilidad", "correct": false },
-          { "text": "Menor costo", "correct": false }
-        ],
-        "feedback": "Una desventaja de Flash y Java applets era la dependencia de complementos (plug-ins)."
-      },
-      {
-        "id": 363,
-        "type": "multiple",
-        "question": "¿Entre qué ocurrían los problemas de compatibilidad de Flash y Java?",
-        "options": [
-          { "text": "Diferentes implementaciones", "correct": true },
-          { "text": "Navegadores", "correct": false },
-          { "text": "Sistemas operativos", "correct": false },
-          { "text": "Usuarios", "correct": false }
-        ],
-        "feedback": "Los problemas de compatibilidad de Flash y Java ocurrían entre diferentes implementaciones de Flash o Java."
-      },
-      {
         "id": 364,
         "type": "multiple",
         "question": "¿Cómo se conocen también las Aplicaciones Enriquecidas de Internet?",
@@ -4678,18 +4465,6 @@
           { "text": "Económicas", "correct": false }
         ],
         "feedback": "Las Aplicaciones Enriquecidas de Internet aprovechan tecnologías adicionales para proporcionar interfaces más avanzadas."
-      },
-      {
-        "id": 366,
-        "type": "multiple",
-        "question": "¿Qué es AJAX en el contexto de aplicaciones web?",
-        "options": [
-          { "text": "Un framework", "correct": true },
-          { "text": "Un lenguaje", "correct": false },
-          { "text": "Un navegador", "correct": false },
-          { "text": "Un sistema operativo", "correct": false }
-        ],
-        "feedback": "AJAX es un ejemplo de framework para interactividad en tiempo real."
       },
       {
         "id": 367,
