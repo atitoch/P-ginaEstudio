@@ -1,0 +1,803 @@
+{
+  "quiz": {
+    "title": "Fundamentos de Arduino y Sistemas Programables",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cómo se calcula la carga eléctrica (q) en un sensor piezoeléctrico?",
+        "options": [
+          {
+            "text": "Sumando la constante piezoeléctrica a la densidad de flujo eléctrico",
+            "correct": false
+          },
+          {
+            "text": "Multiplicando la densidad de flujo eléctrico por la fuerza aplicada",
+            "correct": false
+          },
+          {
+            "text": "Dividiendo la densidad de flujo eléctrico entre el área",
+            "correct": false
+          },
+          {
+            "text": "Multiplicando la densidad de flujo eléctrico por el área",
+            "correct": true
+          }
+        ],
+        "feedback": "La carga eléctrica (q) en un sensor piezoeléctrico se calcula multiplicando la densidad de flujo eléctrico (D) por el área (A): q = D × A. Esta relación fundamental permite determinar la carga generada por el efecto piezoeléctrico."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Qué sabemos sobre el voltaje en los nodos 1 y 2 de un amplificador operacional ideal?",
+        "options": [
+          {
+            "text": "Es igual al voltaje de entrada",
+            "correct": true
+          },
+          {
+            "text": "Es cero",
+            "correct": false
+          },
+          {
+            "text": "Ninguna de las anteriores",
+            "correct": false
+          },
+          {
+            "text": "Depende de la corriente de la casa",
+            "correct": false
+          }
+        ],
+        "feedback": "En un amplificador operacional ideal, el voltaje entre las entradas inversora y no inversora (nodos 1 y 2) es igual al voltaje de entrada debido a la propiedad de cortocircuito virtual, donde V+ = V- por la alta ganancia del amplificador."
+      },
+      {
+        "id": 3,
+        "type": "true_false",
+        "question": "La linealización permite que una señal tenga un comportamiento más predecible y fácil de procesar.",
+        "correct": true,
+        "feedback": "Verdadero. La linealización es una técnica que transforma señales no lineales en lineales, lo que permite un comportamiento más predecible y facilita el procesamiento, análisis y control de las señales en sistemas programables."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Qué significa el aislamiento eléctrico en un circuito?",
+        "options": [
+          {
+            "text": "Interrumpir el paso de la señal entre la entrada y la salida sin conexión física directa",
+            "correct": true
+          },
+          {
+            "text": "Convertir la señal analógica en digital para su procesamiento",
+            "correct": false
+          },
+          {
+            "text": "Conectar la entrada y la salida mediante un cable físico",
+            "correct": false
+          },
+          {
+            "text": "Amplificar la señal entre la entrada y la salida",
+            "correct": false
+          }
+        ],
+        "feedback": "El aislamiento eléctrico significa interrumpir el paso de la señal entre la entrada y la salida sin conexión física directa. Esto permite transferir señales o energía mientras se mantienen eléctricamente separados los circuitos, proporcionando protección y eliminando ruido."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "Es un sensor de humedad y temperatura",
+        "options": [
+          {
+            "text": "HIH6130",
+            "correct": true
+          },
+          {
+            "text": "HIH3016",
+            "correct": false
+          },
+          {
+            "text": "FC-28",
+            "correct": false
+          },
+          {
+            "text": "FC-38",
+            "correct": false
+          }
+        ],
+        "feedback": "El HIH6130 es un sensor digital de humedad y temperatura que proporciona mediciones precisas y calibradas de ambos parámetros ambientales en un solo dispositivo, con comunicación I2C/SPI."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Qué se obtiene a la salida de un amplificador diferencial?",
+        "options": [
+          {
+            "text": "La suma de los voltajes aplicados a la terminal inversora y la no inversora",
+            "correct": false
+          },
+          {
+            "text": "Un voltaje constante independiente de la entrada",
+            "correct": false
+          },
+          {
+            "text": "La multiplicación de los voltajes de entrada",
+            "correct": false
+          },
+          {
+            "text": "La diferencia entre los voltajes aplicados a la terminal inversora y la no inversora",
+            "correct": true
+          }
+        ],
+        "feedback": "Un amplificador diferencial amplifica la diferencia entre los voltajes aplicados a sus dos entradas (inversora y no inversora). Su voltaje de salida es proporcional a (V+ - V-), donde V+ es la entrada no inversora y V- es la entrada inversora."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cómo se forma un puente de Wheatstone?",
+        "options": [
+          {
+            "text": "Con 4 resistencias conectadas en serie de luz",
+            "correct": false
+          },
+          {
+            "text": "Con 2 resistencias y un divisor de voltaje",
+            "correct": false
+          },
+          {
+            "text": "Con un amplificador de sonido y dos resistencias",
+            "correct": false
+          },
+          {
+            "text": "Con 4 resistencias en forma de cuadrado, una fuente de excitación y un medidor de voltaje entre los nodos opuestos",
+            "correct": true
+          }
+        ],
+        "feedback": "Un puente de Wheatstone se forma con 4 resistencias conectadas en forma de cuadrado (diamante), una fuente de excitación aplicada entre dos nodos opuestos y un medidor de voltaje entre los otros dos nodos opuestos. Esta configuración permite detectar pequeños cambios en las resistencias con alta precisión."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué determina la variación de la resistencia del Flex Sensor?",
+        "options": [
+          {
+            "text": "La temperatura del entorno.",
+            "correct": false
+          },
+          {
+            "text": "La deflexión directa del material.",
+            "correct": false
+          },
+          {
+            "text": "La curvatura aplicada al sensor.",
+            "correct": true
+          },
+          {
+            "text": "La presión sobre el sensor.",
+            "correct": false
+          }
+        ],
+        "feedback": "La variación de la resistencia del Flex Sensor está determinada por la curvatura aplicada al sensor. Cuando el sensor se dobla o flexiona, su resistencia cambia proporcionalmente al grado de curvatura, permitiendo medir ángulos de flexión y movimientos."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Cuáles son escalas de temperatura reconocidas científicamente?",
+        "options": [
+          {
+            "text": "Celsius, Fahrenheit, Kelvin, Rankine y Newton",
+            "correct": true
+          },
+          {
+            "text": "Solo Celsius y Fahrenheit",
+            "correct": false
+          },
+          {
+            "text": "Kilokelvin, Megacelsius y Celsius",
+            "correct": false
+          },
+          {
+            "text": "Solo Kelvin y Celsius",
+            "correct": false
+          }
+        ],
+        "feedback": "Las escalas de temperatura reconocidas científicamente son: Celsius (°C), Fahrenheit (°F), Kelvin (K), Rankine (°R) y Newton (°N). Estas son las escalas estándar utilizadas en diferentes contextos científicos e ingenieriles."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "En un amplificador no inversor ideal, ¿qué característica tiene el Nodo 1?",
+        "options": [
+          {
+            "text": "También tiene un voltaje Vi en un amplificador operacional ideal",
+            "correct": true
+          },
+          {
+            "text": "Se conecta directamente a tierra",
+            "correct": false
+          },
+          {
+            "text": "Tiene voltaje cero siempre",
+            "correct": false
+          },
+          {
+            "text": "No tiene conexión eléctrica",
+            "correct": false
+          }
+        ],
+        "feedback": "En un amplificador operacional ideal configurado como no inversor, el Nodo 1 también tiene un voltaje Vi debido a la propiedad de cortocircuito virtual, donde ambas entradas tienen el mismo potencial."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Qué se conecta a la terminal no inversora en un amplificador no inversor?",
+        "options": [
+          {
+            "text": "Se conecta a la terminal no inversora",
+            "correct": true
+          },
+          {
+            "text": "Se conecta solo a tierra",
+            "correct": false
+          },
+          {
+            "text": "Se conecta a la salida del amplificador",
+            "correct": false
+          },
+          {
+            "text": "No tiene conexión",
+            "correct": false
+          }
+        ],
+        "feedback": "En un amplificador no inversor, la terminal no inversora se conecta directamente a la señal de entrada, estableciendo el punto de referencia para la amplificación."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Qué voltaje tiene la fuente de voltaje cuando se utiliza un amplificador operacional ideal?",
+        "options": [
+          {
+            "text": "Tiene un voltaje Vi cuando se utiliza un amplificador operacional ideal",
+            "correct": true
+          },
+          {
+            "text": "Siempre proporciona voltaje cero",
+            "correct": false
+          },
+          {
+            "text": "Proporciona voltaje variable automáticamente",
+            "correct": false
+          },
+          {
+            "text": "Solo funciona con voltaje AC",
+            "correct": false
+          }
+        ],
+        "feedback": "La fuente de voltaje en un amplificador operacional ideal proporciona el voltaje de entrada Vi que será procesado por el circuito amplificador."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Qué voltaje tiene la terminal inversora en un amplificador no inversor ideal?",
+        "options": [
+          {
+            "text": "Tiene un voltaje Vi",
+            "correct": true
+          },
+          {
+            "text": "Siempre tiene voltaje cero",
+            "correct": false
+          },
+          {
+            "text": "Tiene voltaje negativo",
+            "correct": false
+          },
+          {
+            "text": "Se mantiene desconectada",
+            "correct": false
+          }
+        ],
+        "feedback": "En un amplificador operacional ideal configurado como no inversor, la terminal inversora también tiene un voltaje Vi debido a la propiedad de cortocircuito virtual, donde ambas entradas mantienen el mismo potencial."
+      },
+      {
+        "id": 14,
+        "type": "true_false",
+        "question": "Los amplificadores operacionales son utilizados en una gran cantidad de aplicaciones debido a sus diversas configuraciones.",
+        "correct": true,
+        "feedback": "Verdadero. Los amplificadores operacionales son componentes muy versátiles que se utilizan en una amplia variedad de aplicaciones como amplificadores inversores, no inversores, integradores, diferenciadores, comparadores, filtros activos, osciladores, entre otros, debido a la flexibilidad de sus configuraciones de circuito."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Qué describe la resolución de un sensor óptico?",
+        "options": [
+          {
+            "text": "La velocidad de respuesta del sensor a los cambios de luz",
+            "correct": false
+          },
+          {
+            "text": "La capacidad del sensor para detectar cambios en la intensidad de la luz",
+            "correct": false
+          },
+          {
+            "text": "El rango espectral del sensor",
+            "correct": false
+          },
+          {
+            "text": "La capacidad del sensor para distinguir entre diferentes niveles de luz o colores",
+            "correct": true
+          }
+        ],
+        "feedback": "La resolución de un sensor óptico describe su capacidad para distinguir entre diferentes niveles de luz o colores. Esta característica determina qué tan finamente puede diferenciar el sensor entre variaciones mínimas en la intensidad lumínica o en las longitudes de onda, siendo fundamental para la precisión de las mediciones ópticas."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "Cuando la señal de entrada tiene una frecuencia baja, en un filtro pasa altas el capacitor se comporta como...",
+        "options": [
+          {
+            "text": "Amplificador",
+            "correct": false
+          },
+          {
+            "text": "Corto circuito",
+            "correct": false
+          },
+          {
+            "text": "Circuito abierto",
+            "correct": true
+          },
+          {
+            "text": "Filtro de paso de banda",
+            "correct": false
+          }
+        ],
+        "feedback": "En un filtro pasa altas, cuando la señal de entrada tiene una frecuencia baja, el capacitor se comporta como un circuito abierto. Esto ocurre porque la reactancia capacitiva (Xc = 1/2πfC) es inversamente proporcional a la frecuencia, por lo que a bajas frecuencias la reactancia es muy alta, impidiendo el paso de la señal."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Qué ventaja tienen los sensores CMOS en comparación con los CCD?",
+        "options": [
+          {
+            "text": "Tienen su propio circuito de lectura",
+            "correct": true
+          },
+          {
+            "text": "Son más sensibles a la luz",
+            "correct": false
+          },
+          {
+            "text": "Tienen una mayor resolución",
+            "correct": false
+          },
+          {
+            "text": "Tienen una mayor eficiencia cuántica",
+            "correct": false
+          }
+        ],
+        "feedback": "Una ventaja clave de los sensores CMOS es que tienen su propio circuito de lectura integrado en cada píxel o grupo de píxeles. Esto permite un procesamiento más rápido, menor consumo de energía y la capacidad de leer selectivamente áreas específicas del sensor, a diferencia de los CCD que requieren circuitos externos de lectura secuencial."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Qué componente almacena carga eléctrica en un circuito?",
+        "options": [
+          {
+            "text": "Resistor",
+            "correct": false
+          },
+          {
+            "text": "Inductor",
+            "correct": false
+          },
+          {
+            "text": "Capacitor",
+            "correct": true
+          },
+          {
+            "text": "Transistor",
+            "correct": false
+          }
+        ],
+        "feedback": "El capacitor es el componente que almacena carga eléctrica en un circuito. Está formado por dos placas conductoras separadas por un material dieléctrico, y puede acumular y liberar energía eléctrica en forma de campo eléctrico entre sus placas."
+      },
+      {
+        "id": 19,
+        "type": "true_false",
+        "question": "Los fototransistores convierten la luz en una señal eléctrica.",
+        "correct": true,
+        "feedback": "Verdadero. Los fototransistores son dispositivos semiconductores que convierten la energía luminosa en una señal eléctrica. Cuando la luz incide sobre la base del fototransistor, genera pares electrón-hueco que modifican la corriente de colector, permitiendo detectar y cuantificar la intensidad lumínica."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Qué tipo de comunicación utilizan sensores como la cámara Adafruit VC0706 para transferir imágenes?",
+        "options": [
+          {
+            "text": "Comunicación serie para transferir imágenes a un microcontrolador como Arduino",
+            "correct": true
+          },
+          {
+            "text": "Comunicación digital a través de protocolos como I2C o SPI",
+            "correct": false
+          },
+          {
+            "text": "Comunicación mediante señales analógicas",
+            "correct": false
+          },
+          {
+            "text": "Comunicación a través de protocolos de Ethernet",
+            "correct": false
+          }
+        ],
+        "feedback": "La cámara Adafruit VC0706 utiliza comunicación serie (UART/TTL) para transferir imágenes a microcontroladores como Arduino. Este protocolo permite enviar comandos a la cámara y recibir datos de imagen de manera secuencial a través de una interfaz serie estándar."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Qué significa \"ganancia nula en modo común\" en un amplificador operacional?",
+        "options": [
+          {
+            "text": "Significa que la salida se amplifica infinitamente",
+            "correct": false
+          },
+          {
+            "text": "Significa que el amplificador no tiene ganancia alguna",
+            "correct": false
+          },
+          {
+            "text": "Significa que cuando las dos terminales tienen valores de voltaje iguales, no hay voltaje a la salida",
+            "correct": true
+          },
+          {
+            "text": "Significa que el voltaje de salida será siempre cero, independientemente de la entrada",
+            "correct": false
+          }
+        ],
+        "feedback": "La ganancia nula en modo común significa que cuando ambas entradas del amplificador operacional (terminal inversora y no inversora) tienen el mismo voltaje, la salida es cero. Esta característica es fundamental porque el amplificador solo responde a la diferencia entre las entradas, rechazando las señales comunes que aparecen en ambas entradas simultáneamente."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Qué establece la ley de las temperaturas sucesivas en termopares?",
+        "options": [
+          {
+            "text": "Con 3 uniones (ABC), la fuerza electromotriz entre A y C es igual a la suma entre AB y BC",
+            "correct": true
+          },
+          {
+            "text": "Si las uniones están a la misma temperatura, la suma de todas las fuerzas electromotrices es cero",
+            "correct": false
+          },
+          {
+            "text": "Para generar una fuerza electromotriz, se requieren al menos dos materiales diferentes",
+            "correct": false
+          },
+          {
+            "text": "La temperatura debe ser constante en todo el circuito",
+            "correct": false
+          }
+        ],
+        "feedback": "La ley de las temperaturas sucesivas establece que con 3 uniones (ABC), la fuerza electromotriz entre A y C es igual a la suma entre AB y BC. Esta ley permite calcular la fem total en un circuito con múltiples uniones termoeléctricas."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Qué establece la ley del circuito homogéneo en termopares?",
+        "options": [
+          {
+            "text": "Para generar una fuerza electromotriz, se requieren al menos dos materiales diferentes",
+            "correct": false
+          },
+          {
+            "text": "Si las uniones están a la misma temperatura, la suma de todas las fuerzas electromotrices es cero",
+            "correct": true
+          },
+          {
+            "text": "Con 3 uniones (ABC), la fuerza electromotriz entre A y C es igual a la suma entre AB y BC",
+            "correct": false
+          },
+          {
+            "text": "La resistencia del circuito debe ser constante",
+            "correct": false
+          }
+        ],
+        "feedback": "La ley del circuito homogéneo establece que si las uniones están a la misma temperatura, la suma de todas las fuerzas electromotrices es cero. Esta ley explica por qué no se genera voltaje cuando no hay diferencia de temperatura entre las uniones."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué establece la ley de los metales intermedios en termopares?",
+        "options": [
+          {
+            "text": "Si las uniones están a la misma temperatura, la suma de todas las fuerzas electromotrices es cero",
+            "correct": false
+          },
+          {
+            "text": "Con 3 uniones (ABC), la fuerza electromotriz entre A y C es igual a la suma entre AB y BC",
+            "correct": false
+          },
+          {
+            "text": "Para generar una fuerza electromotriz, se requieren al menos dos materiales diferentes",
+            "correct": true
+          },
+          {
+            "text": "Los metales deben tener la misma conductividad térmica",
+            "correct": false
+          }
+        ],
+        "feedback": "La ley de los metales intermedios establece que para generar una fuerza electromotriz, se requieren al menos dos materiales diferentes. Esta ley fundamenta el principio básico del funcionamiento de los termopares, donde la diferencia en las propiedades termoeléctricas de dos metales distintos genera el voltaje."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Cómo varía la resistencia de los sensores FlexiForce® y FSR®?",
+        "options": [
+          {
+            "text": "Por la vibración a altas frecuencias.",
+            "correct": false
+          },
+          {
+            "text": "Por la aplicación de una fuerza sobre su extremo circular.",
+            "correct": true
+          },
+          {
+            "text": "Por cambios en la temperatura.",
+            "correct": false
+          },
+          {
+            "text": "Por deformación de la superficie.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los sensores FlexiForce® y FSR® (Force Sensitive Resistor) varían su resistencia por la aplicación de una fuerza sobre su extremo circular o área sensible. Estos sensores están diseñados específicamente para detectar presión o fuerza aplicada, disminuyendo su resistencia cuando aumenta la fuerza aplicada sobre su superficie activa."
+      },
+      {
+        "id": 26,
+        "type": "true_false",
+        "question": "Los sensores de color RGB emiten luz de diferentes colores y miden la reflexión para determinar el color.",
+        "correct": true,
+        "feedback": "Verdadero. Los sensores de color RGB emiten luz de diferentes longitudes de onda (rojo, verde y azul) hacia el objeto y miden la cantidad de luz reflejada en cada color. Al analizar las proporciones de reflexión en cada componente RGB, pueden determinar el color del objeto."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué afirmación es correcta sobre la conversión digital-analógica (DAC)?",
+        "options": [
+          {
+            "text": "Existen pérdidas de información al reconstruir la señal",
+            "correct": true
+          },
+          {
+            "text": "La señal reconstruida es siempre idéntica a la original",
+            "correct": false
+          },
+          {
+            "text": "Reconstruye una señal analógica sin pérdidas",
+            "correct": false
+          },
+          {
+            "text": "Se obtiene una señal digital a partir de una analógica",
+            "correct": false
+          }
+        ],
+        "feedback": "En la conversión digital-analógica (DAC) existen pérdidas de información al reconstruir la señal. Esto se debe a que la señal digital original fue muestreada y cuantizada, procesos que implican pérdida de información. El DAC no puede recuperar completamente todos los detalles de la señal analógica original, especialmente las componentes de alta frecuencia y los valores entre niveles de cuantización."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Qué factor influye en la variación de la resistencia de una fotoresistencia (LDR)?",
+        "options": [
+          {
+            "text": "La humedad",
+            "correct": false
+          },
+          {
+            "text": "La temperatura",
+            "correct": false
+          },
+          {
+            "text": "La intensidad de la luz",
+            "correct": true
+          },
+          {
+            "text": "La presión",
+            "correct": false
+          }
+        ],
+        "feedback": "La resistencia de una fotoresistencia (LDR - Light Dependent Resistor) varía principalmente con la intensidad de la luz que incide sobre ella. Cuando aumenta la intensidad lumínica, la resistencia disminuye, y cuando la luz es baja o nula, la resistencia aumenta considerablemente. Este comportamiento se debe a que la luz libera electrones en el material semiconductor, aumentando su conductividad."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Por qué es importante la medición precisa de fuerza y torque en la actualidad?",
+        "options": [
+          {
+            "text": "Es fundamental en diversas aplicaciones industriales, científicas y tecnológicas.",
+            "correct": true
+          },
+          {
+            "text": "Para evaluar la durabilidad de materiales.",
+            "correct": false
+          },
+          {
+            "text": "Para medir el rendimiento de motores eléctricos.",
+            "correct": false
+          },
+          {
+            "text": "Solo para fines de investigación científica.",
+            "correct": false
+          }
+        ],
+        "feedback": "La medición precisa de fuerza y torque es fundamental en diversas aplicaciones industriales, científicas y tecnológicas. Estas mediciones son esenciales en control de calidad, automatización industrial, robótica, sistemas automotrices, aeroespaciales, biomedicina, y muchas otras áreas donde se requiere precisión y control en los procesos que involucran fuerzas mecánicas."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Cómo se llama el proceso de convertir una señal no lineal en una señal lineal?",
+        "options": [
+          {
+            "text": "Cuantización",
+            "correct": false
+          },
+          {
+            "text": "Modulación",
+            "correct": false
+          },
+          {
+            "text": "Amplificación",
+            "correct": false
+          },
+          {
+            "text": "Linealización",
+            "correct": true
+          }
+        ],
+        "feedback": "La linealización es el proceso de convertir una señal no lineal en una señal lineal. Esta técnica es fundamental en sistemas programables para hacer que las señales tengan un comportamiento más predecible y fácil de procesar, permitiendo aplicar técnicas de análisis y control lineales a sistemas que originalmente presentan características no lineales."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "Es una resistencia construida a base de material semiconductor que es sensitivo a diferentes niveles de temperatura",
+        "options": [
+          {
+            "text": "Termopar",
+            "correct": false
+          },
+          {
+            "text": "Termistor",
+            "correct": true
+          },
+          {
+            "text": "RTD (Resistance Temperature Detector)",
+            "correct": false
+          },
+          {
+            "text": "IC (Integrated Circuit)",
+            "correct": false
+          }
+        ],
+        "feedback": "Un termistor es una resistencia construida a base de material semiconductor que es sensitivo a diferentes niveles de temperatura. Su resistencia varía significativamente con los cambios de temperatura, siendo más sensible que los RTD. Los termistores pueden ser de coeficiente negativo (NTC) donde la resistencia disminuye al aumentar la temperatura, o de coeficiente positivo (PTC) donde la resistencia aumenta con la temperatura."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Qué es la amplificación?",
+        "options": [
+          {
+            "text": "Proceso de aumentar la magnitud de una señal",
+            "correct": true
+          },
+          {
+            "text": "Proceso de convertir señales analógicas a digitales",
+            "correct": false
+          },
+          {
+            "text": "Proceso de filtrar ruido de una señal",
+            "correct": false
+          },
+          {
+            "text": "Proceso de modular una señal portadora",
+            "correct": false
+          }
+        ],
+        "feedback": "La amplificación es el proceso de aumentar la magnitud de una señal. Este proceso es fundamental en sistemas electrónicos para incrementar la potencia, voltaje o corriente de señales débiles para que puedan ser procesadas o utilizadas efectivamente."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Qué representa el factor de amplificación (A)?",
+        "options": [
+          {
+            "text": "La potencia consumida por el amplificador",
+            "correct": false
+          },
+          {
+            "text": "Relación entre la señal de salida y la de entrada en un amplificador",
+            "correct": true
+          },
+          {
+            "text": "La frecuencia máxima que puede amplificar",
+            "correct": false
+          },
+          {
+            "text": "El ruido introducido por el amplificador",
+            "correct": false
+          }
+        ],
+        "feedback": "El factor de amplificación (A) representa la relación entre la señal de salida y la de entrada en un amplificador. Se calcula como A = Salida/Entrada y determina cuántas veces se incrementa la magnitud de la señal original."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Qué es una señal amplificada?",
+        "options": [
+          {
+            "text": "Una señal convertida a formato digital",
+            "correct": false
+          },
+          {
+            "text": "Una señal filtrada de ruido",
+            "correct": false
+          },
+          {
+            "text": "Señal de mayor magnitud después de pasar por un amplificador",
+            "correct": true
+          },
+          {
+            "text": "Una señal modulada en frecuencia",
+            "correct": false
+          }
+        ],
+        "feedback": "Una señal amplificada es una señal de mayor magnitud después de pasar por un amplificador. Esta señal mantiene la forma y características de la señal original, pero con una amplitud incrementada según el factor de amplificación del circuito."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Qué representa el ejemplo \"5-10 mV a 0-5 V\" en amplificación?",
+        "options": [
+          {
+            "text": "Un proceso de conversión analógico-digital",
+            "correct": false
+          },
+          {
+            "text": "Ejemplo de amplificación",
+            "correct": true
+          },
+          {
+            "text": "Un filtrado de señal",
+            "correct": false
+          },
+          {
+            "text": "Una modulación de amplitud",
+            "correct": false
+          }
+        ],
+        "feedback": "El ejemplo \"5-10 mV a 0-5 V\" representa un ejemplo de amplificación donde una señal de entrada pequeña (5-10 milivolts) se amplifica a una señal de salida mucho mayor (0-5 volts), demostrando cómo un amplificador incrementa significativamente la magnitud de la señal."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Cuál es la disposición de las galgas extensiométricas en una celda de carga?",
+        "options": [
+          {
+            "text": "Se disponen en un plano, formando una cruz.",
+            "correct": false
+          },
+          {
+            "text": "Se instalan únicamente en las caras superiores e inferiores del cuerpo.",
+            "correct": false
+          },
+          {
+            "text": "Se montan en un cuerpo esférico de forma aleatoria.",
+            "correct": false
+          },
+          {
+            "text": "Se montan en un cuerpo cúbico, una en cada cara perpendicular a la superficie de apoyo, con las galgas en caras opuestas orientadas en la misma dirección y las de caras contiguas rotadas 90° entre sí.",
+            "correct": true
+          }
+        ],
+        "feedback": "En una celda de carga, las galgas extensiométricas se montan estratégicamente en un cuerpo cúbico, una en cada cara perpendicular a la superficie de apoyo. Las galgas en caras opuestas se orientan en la misma dirección, mientras que las de caras contiguas se rotan 90° entre sí. Esta configuración permite detectar fuerzas en múltiples direcciones y compensar efectos térmicos y mecánicos no deseados."
+      }
+    ]
+  }
+}

@@ -30,12 +30,12 @@ const QUIZ_CONFIG = {
       U3: { file: "U3.json", name: "SQL Avanzado" },
     },
   },
-  SistemasOperativos: {
-    name: "Sistemas Operativos",
+  SistemasProgramables: {
+    name: "Sistemas Programables",
     units: {
       U1: { file: "U1.json", name: "Introducción a SO" },
       U2: { file: "U2.json", name: "Gestión de Procesos" },
-      U3: { file: "U3.json", name: "Gestión de Memoria" },
+      U3: { file: "U3.json", name: "Arduino y Microcontroladores" },
     },
   },
   // Agregar más materias según sea necesario
