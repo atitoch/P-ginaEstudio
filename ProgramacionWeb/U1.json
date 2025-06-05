@@ -370,6 +370,92 @@
           { "text": "Solo aplicaciones pequeñas", "correct": false }
         ],
         "feedback": "Sí, en una arquitectura monolítica toda la aplicación se ejecuta como una sola unidad en un único nodo o servidor."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Qué tecnología ha reemplazado a Flash y Java applets en el desarrollo web moderno?",
+        "options": [
+          { "text": "HTML5", "correct": true },
+          { "text": "ActiveX", "correct": false },
+          { "text": "Adobe Shockwave", "correct": false },
+          { "text": "Silverlight", "correct": false }
+        ],
+        "feedback": "HTML5 ha reemplazado a Flash y Java applets en el desarrollo web moderno, ofreciendo capacidades multimedia nativas sin necesidad de plugins adicionales."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Cuál es una ventaja clave de las aplicaciones web en comparación con los modelos antiguos de software?",
+        "options": [
+          {
+            "text": "No necesitan servidores para funcionar",
+            "correct": false
+          },
+          { "text": "Son más costosas de desarrollar", "correct": false },
+          { "text": "No dependen del navegador", "correct": false },
+          { "text": "No requieren instalación local", "correct": true }
+        ],
+        "feedback": "Una ventaja clave de las aplicaciones web es que no requieren instalación local, ya que se ejecutan directamente en el navegador."
+      },
+      {
+        "id": 38,
+        "type": "true_false",
+        "question": "La arquitectura de un sistema solo se aplica a sistemas individuales, no a familias de sistemas.",
+        "correct": false,
+        "feedback": "Falso. La arquitectura de un sistema puede aplicarse tanto a sistemas individuales como a familias de sistemas relacionados."
+      },
+      {
+        "id": 39,
+        "type": "true_false",
+        "question": "Las aplicaciones web cada vez son más parecidas a las aplicaciones de escritorio.",
+        "correct": true,
+        "feedback": "Verdadero. Las aplicaciones web modernas han evolucionado para ofrecer interfaces y funcionalidades muy similares a las aplicaciones de escritorio."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿React.js es un framework o una biblioteca?",
+        "options": [
+          { "text": "Biblioteca", "correct": true },
+          { "text": "Framework", "correct": false }
+        ],
+        "feedback": "React.js es una biblioteca de JavaScript para construir interfaces de usuario, no un framework completo."
+      },
+      {
+        "id": 41,
+        "type": "true_false",
+        "question": "¿El servidor en el modelo cliente/servidor responde proporcionando recursos o servicios necesarios?",
+        "correct": true,
+        "feedback": "Verdadero. El servidor responde a las solicitudes del cliente proporcionando los recursos o servicios necesarios."
+      },
+      {
+        "id": 42,
+        "type": "true_false",
+        "question": "¿La arquitectura en 3 capas facilita la reutilización del código?",
+        "correct": true,
+        "feedback": "Verdadero. La arquitectura en 3 capas facilita la reutilización del código al separar las responsabilidades en capas distintas."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Qué se gestiona principalmente en el backend?",
+        "options": [
+          {
+            "text": "La lógica de negocio y las bases de datos",
+            "correct": true
+          },
+          { "text": "Los estilos visuales", "correct": false },
+          { "text": "La interfaz de usuario", "correct": false }
+        ],
+        "feedback": "En el backend se gestiona principalmente la lógica de negocio y las bases de datos."
+      },
+      {
+        "id": 44,
+        "type": "true_false",
+        "question": "¿El modelo cliente/servidor se divide en dos partes principales?",
+        "correct": true,
+        "feedback": "Verdadero. El modelo cliente/servidor se divide en dos partes principales: el cliente y el servidor."
       }
     ]
   }
