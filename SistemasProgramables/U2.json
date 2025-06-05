@@ -1,0 +1,391 @@
+{
+  "quiz": {
+    "title": "Actuadores Mecánicos y Motores Eléctricos",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cómo se puede mejorar la eficiencia de un actuador mecánico?",
+        "options": [
+          {
+            "text": "Utilizando engranajes que reduzcan la fricción",
+            "correct": true
+          },
+          { "text": "Aumentando la velocidad de operación", "correct": false },
+          { "text": "Reduciendo el tamaño del actuador", "correct": false },
+          { "text": "Utilizando más energía eléctrica", "correct": false }
+        ],
+        "feedback": "La eficiencia de un actuador mecánico se mejora utilizando engranajes que reduzcan la fricción, minimizando las pérdidas de energía por rozamiento."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Cuál es el principio básico de un actuador lineal?",
+        "options": [
+          {
+            "text": "Transformar la rotación de un motor en un desplazamiento lineal",
+            "correct": true
+          },
+          {
+            "text": "Convertir energía térmica en movimiento",
+            "correct": false
+          },
+          { "text": "Generar movimiento circular continuo", "correct": false },
+          { "text": "Almacenar energía potencial", "correct": false }
+        ],
+        "feedback": "El principio básico de un actuador lineal es transformar la rotación de un motor en un desplazamiento lineal mediante mecanismos como tornillos sin fin o cremalleras."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Cuál es la función de un actuador rotativo de leva y balancín?",
+        "options": [
+          {
+            "text": "Generar movimientos rotatorios precisos en máquinas mecánicas",
+            "correct": true
+          },
+          {
+            "text": "Convertir movimiento lineal en rotatorio",
+            "correct": false
+          },
+          { "text": "Almacenar energía cinética", "correct": false },
+          { "text": "Regular la temperatura del sistema", "correct": false }
+        ],
+        "feedback": "Los actuadores rotativos de leva y balancín se utilizan para generar movimientos rotatorios precisos en máquinas mecánicas, permitiendo control exacto del posicionamiento."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Por qué los actuadores mecánicos son eficientes energéticamente?",
+        "options": [
+          {
+            "text": "No requieren una conversión digital de la energía",
+            "correct": true
+          },
+          { "text": "Utilizan menos materiales", "correct": false },
+          { "text": "Son más pequeños que otros actuadores", "correct": false },
+          { "text": "Funcionan solo con energía solar", "correct": false }
+        ],
+        "feedback": "Los actuadores mecánicos son eficientes energéticamente porque no requieren conversión digital de la energía, trabajando directamente con transmisión mecánica."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Qué combinación de mecanismos usa el actuador lineal de cremallera y piñón?",
+        "options": [
+          {
+            "text": "Un piñón giratorio que engrana con una cremallera para generar desplazamiento lineal",
+            "correct": true
+          },
+          {
+            "text": "Dos engranajes que giran en sentidos opuestos",
+            "correct": false
+          },
+          { "text": "Una polea y una correa de transmisión", "correct": false },
+          { "text": "Un resorte y una palanca", "correct": false }
+        ],
+        "feedback": "El actuador lineal de cremallera y piñón utiliza un piñón giratorio que engrana con una cremallera para generar desplazamiento lineal."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Qué función cumplen los actuadores neumáticos en sistemas mecánicos?",
+        "options": [
+          {
+            "text": "Permiten cambios de dirección o transmisión de torque",
+            "correct": true
+          },
+          { "text": "Generan electricidad", "correct": false },
+          { "text": "Enfrían el sistema", "correct": false },
+          { "text": "Almacenan datos", "correct": false }
+        ],
+        "feedback": "Los actuadores neumáticos en sistemas mecánicos permiten cambios de dirección o transmisión de torque utilizando aire comprimido."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Qué tipo de movimiento generan los actuadores mecánicos?",
+        "options": [
+          {
+            "text": "Transforman el movimiento rotatorio en movimiento lineal o viceversa",
+            "correct": true
+          },
+          { "text": "Solo movimiento rotatorio", "correct": false },
+          { "text": "Solo movimiento lineal", "correct": false },
+          { "text": "Movimiento aleatorio", "correct": false }
+        ],
+        "feedback": "Los actuadores mecánicos transforman el movimiento rotatorio en movimiento lineal o viceversa según las necesidades de la aplicación."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué ventaja tienen los actuadores mecánicos en entornos industriales?",
+        "options": [
+          {
+            "text": "Son resistentes y tienen una vida útil prolongada",
+            "correct": true
+          },
+          { "text": "Son completamente silenciosos", "correct": false },
+          { "text": "No requieren mantenimiento", "correct": false },
+          { "text": "Son los más económicos", "correct": false }
+        ],
+        "feedback": "Los actuadores mecánicos tienen la ventaja de ser resistentes y tener una vida útil prolongada en entornos industriales exigentes."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Qué convierte la energía eléctrica en energía mecánica?",
+        "options": [
+          { "text": "Motores eléctricos", "correct": true },
+          { "text": "Generadores", "correct": false },
+          { "text": "Transformadores", "correct": false },
+          { "text": "Capacitores", "correct": false }
+        ],
+        "feedback": "Los motores eléctricos son dispositivos que convierten la energía eléctrica en energía mecánica para generar movimiento."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿El funcionamiento de qué motor se basa en la inducción mutua de Faraday?",
+        "options": [
+          { "text": "Motor Asíncrono (Inducción)", "correct": true },
+          { "text": "Motor de corriente continua", "correct": false },
+          { "text": "Motor paso a paso", "correct": false },
+          { "text": "Motor síncrono", "correct": false }
+        ],
+        "feedback": "El motor asíncrono o de inducción basa su funcionamiento en la inducción mutua de Faraday, donde el campo magnético del estator induce corrientes en el rotor."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿El relé actúa sobre uno o varios circuitos por medio de?",
+        "options": [
+          { "text": "Una bobina y un electroimán", "correct": true },
+          { "text": "Un semiconductor", "correct": false },
+          { "text": "Un capacitor", "correct": false },
+          { "text": "Una resistencia variable", "correct": false }
+        ],
+        "feedback": "El relé actúa sobre uno o varios circuitos por medio de una bobina y un electroimán que controla los contactos mecánicos."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Cuál es un tipo de relé de los más usados?",
+        "options": [
+          { "text": "Relé de estado sólido", "correct": true },
+          { "text": "Relé térmico", "correct": false },
+          { "text": "Relé de tiempo", "correct": false },
+          { "text": "Relé de protección", "correct": false }
+        ],
+        "feedback": "El relé de estado sólido es uno de los tipos de relés más usados debido a su confiabilidad y ausencia de partes móviles."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿La velocidad de giro del motor síncrono es?",
+        "options": [
+          { "text": "Constante", "correct": true },
+          { "text": "Variable", "correct": false },
+          { "text": "Proporcional a la carga", "correct": false },
+          { "text": "Inversamente proporcional al voltaje", "correct": false }
+        ],
+        "feedback": "La velocidad de giro del motor síncrono es constante y está determinada por la frecuencia de la corriente alterna y el número de polos."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Cuál es la secuencia de manejo de motor unipolar en la que el motor avanza un paso por vez con 2 bobinas activadas simultáneamente?",
+        "options": [
+          { "text": "Secuencia Normal", "correct": true },
+          { "text": "Secuencia de medio paso", "correct": false },
+          { "text": "Secuencia de onda", "correct": false },
+          { "text": "Secuencia inversa", "correct": false }
+        ],
+        "feedback": "La secuencia normal es aquella en la que el motor paso a paso avanza un paso por vez con 2 bobinas activadas simultáneamente."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cómo se transmite la fuerza en un actuador mecánico?",
+        "options": [
+          {
+            "text": "Mediante transmisión directa a través de engranajes y levas",
+            "correct": true
+          },
+          { "text": "Por ondas electromagnéticas", "correct": false },
+          { "text": "A través de señales digitales", "correct": false },
+          {
+            "text": "Por medio de aire comprimido únicamente",
+            "correct": false
+          }
+        ],
+        "feedback": "En un actuador mecánico, la fuerza se transmite mediante transmisión directa a través de engranajes, levas y otros elementos mecánicos."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Cuál es el principio de funcionamiento de los actuadores por resorte o elásticos?",
+        "options": [
+          {
+            "text": "Usan la energía almacenada en un material elástico para generar movimiento",
+            "correct": true
+          },
+          { "text": "Utilizan energía térmica", "correct": false },
+          { "text": "Funcionan con energía magnética", "correct": false },
+          { "text": "Requieren energía nuclear", "correct": false }
+        ],
+        "feedback": "Los actuadores por resorte o elásticos usan la energía almacenada en un material elástico para generar movimiento cuando se libera."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de un actuador rotativo?",
+        "options": [
+          {
+            "text": "Convertir energía en un movimiento de rotación",
+            "correct": true
+          },
+          { "text": "Generar energía eléctrica", "correct": false },
+          { "text": "Almacenar datos", "correct": false },
+          { "text": "Enfriar sistemas", "correct": false }
+        ],
+        "feedback": "La función principal de un actuador rotativo es convertir energía en un movimiento de rotación controlado."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Qué aplicación NO es adecuada para un actuador mecánico?",
+        "options": [
+          {
+            "text": "Procesamiento de señales y control en tiempo real",
+            "correct": true
+          },
+          { "text": "Apertura y cierre de válvulas", "correct": false },
+          { "text": "Movimiento de brazos robóticos", "correct": false },
+          {
+            "text": "Posicionamiento de máquinas herramienta",
+            "correct": false
+          }
+        ],
+        "feedback": "El procesamiento de señales y control en tiempo real no es adecuado para actuadores mecánicos, ya que requiere respuesta electrónica rápida."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Qué factor NO influye en la eficiencia de un actuador mecánico?",
+        "options": [
+          {
+            "text": "La cantidad de engranajes y palancas utilizadas",
+            "correct": true
+          },
+          { "text": "La fricción en los componentes", "correct": false },
+          { "text": "La calidad de los materiales", "correct": false },
+          { "text": "El mantenimiento del sistema", "correct": false }
+        ],
+        "feedback": "La cantidad de engranajes y palancas no necesariamente afecta negativamente la eficiencia si están bien diseñados y lubricados."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Qué materiales utilizan comúnmente en bandas para actuadores?",
+        "options": [
+          {
+            "text": "Materiales elásticos como bandas de goma o polímeros especiales",
+            "correct": true
+          },
+          { "text": "Metales rígidos", "correct": false },
+          { "text": "Materiales cerámicos", "correct": false },
+          { "text": "Materiales conductores", "correct": false }
+        ],
+        "feedback": "Las bandas para actuadores utilizan comúnmente materiales elásticos como bandas de goma o polímeros especiales para transmitir movimiento."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Qué utilizan los actuadores para generar movimiento?",
+        "options": [
+          { "text": "Palancas, engranajes o levas", "correct": true },
+          { "text": "Solo circuitos electrónicos", "correct": false },
+          { "text": "Únicamente energía térmica", "correct": false },
+          { "text": "Solo software de control", "correct": false }
+        ],
+        "feedback": "Los actuadores mecánicos utilizan palancas, engranajes o levas para generar y transmitir movimiento de manera eficiente."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cuál es el componente principal del relé que controla cuándo pasa o no la corriente?",
+        "options": [
+          { "text": "Bobina magnética", "correct": true },
+          { "text": "Resistencia", "correct": false },
+          { "text": "Capacitor", "correct": false },
+          { "text": "Diodo", "correct": false }
+        ],
+        "feedback": "La bobina magnética es el componente principal del relé que controla cuándo pasa o no la corriente a través de los contactos."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿El control de un motor paso a paso se realiza mediante un?",
+        "options": [
+          { "text": "Controlador digital", "correct": true },
+          { "text": "Controlador analógico", "correct": false },
+          { "text": "Interruptor manual", "correct": false },
+          { "text": "Termostato", "correct": false }
+        ],
+        "feedback": "El control de un motor paso a paso se realiza mediante un controlador digital que envía pulsos secuenciales a las bobinas."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿El motor paso a paso también es llamado?",
+        "options": [
+          { "text": "Stepper", "correct": true },
+          { "text": "Servo", "correct": false },
+          { "text": "Brushless", "correct": false },
+          { "text": "Síncrono", "correct": false }
+        ],
+        "feedback": "El motor paso a paso también es conocido como motor stepper, término que deriva del inglés 'step' (paso)."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿En qué tipo de motor el campo magnético se genera a partir de corrientes continuas?",
+        "options": [
+          { "text": "Motor de corriente continua (CC)", "correct": true },
+          { "text": "Motor de corriente alterna (CA)", "correct": false },
+          { "text": "Motor de inducción", "correct": false },
+          { "text": "Motor universal", "correct": false }
+        ],
+        "feedback": "En el motor de corriente continua (CC), el campo magnético se genera a partir de corrientes continuas tanto en el estator como en el rotor."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Cuál es la función del interruptor diferencial?",
+        "options": [
+          {
+            "text": "Evitar daños a las personas en caso de contacto",
+            "correct": true
+          },
+          { "text": "Regular la velocidad del motor", "correct": false },
+          { "text": "Controlar la temperatura", "correct": false },
+          { "text": "Medir la corriente del circuito", "correct": false }
+        ],
+        "feedback": "La función del interruptor diferencial es evitar daños a las personas en caso de contacto accidental, detectando fugas de corriente."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué dispositivos están pensados para potencias más bajas?",
+        "options": [
+          { "text": "Relés de estado sólido", "correct": true },
+          { "text": "Contactores industriales", "correct": false },
+          { "text": "Interruptores de potencia", "correct": false },
+          { "text": "Transformadores de distribución", "correct": false }
+        ],
+        "feedback": "Los relés de estado sólido están diseñados para aplicaciones de potencias más bajas comparados con otros dispositivos de conmutación industrial."
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuestionario Arduino - Sistemas Programables</title>
+    <link rel="stylesheet" href="./CSS/Cuestionario.css" />
+  </head>
+  <body data-subject="SistemasProgramables" data-unit="U1">
+    <div class="container">
+      <a href="index.html" class="back-button"
+        >⬅ Volver a Conmutación y Redes</a
+      >
+      <div class="breadcrumb">
+        <a href="../index.html">Inicio</a> >
+        <a href="index.html">Sistemas Programables</a> > Unidad 3: Arduino
+      </div>
+
+      <div class="header">
+        <h1>🔧 Cuestionario Arduino</h1>
+        <p>Sistemas Programables - Unidad 3</p>
+      </div>
+
+      <div id="loadingMessage" class="loading">
+        <h3>Cargando preguntas...</h3>
+        <p>
+          Por favor espera mientras se cargan las preguntas del cuestionario.
+        </p>
+      </div>
+
+      <div id="errorMessage" class="error" style="display: none">
+        <h3>Error al cargar las preguntas</h3>
+        <p id="errorDetails">
+          No se pudo cargar el archivo de preguntas. Verifica que el archivo
+          existe y es válido.
+        </p>
+      </div>
+
+      <div class="quiz-container" id="quizContainer" style="display: none">
+        <div class="quiz-progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="question-counter">
+          <span id="currentQuestion">1</span> de
+          <span id="totalQuestions">0</span>
+        </div>
+
+        <div id="questionsContainer">
+          <!-- Las preguntas se cargarán aquí dinámicamente -->
+        </div>
+
+        <!-- Resultados -->
+        <div class="results">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="score" id="score">0%</div>
+          <div class="score-details">
+            <span id="correctAnswers">0</span> respuestas correctas de
+            <span id="totalQuestionsResult">0</span>
+          </div>
+          <button class="btn btn-primary" onclick="restartQuiz()">
+            Reiniciar Cuestionario
+          </button>
+          <a href="index.html" class="btn btn-secondary">
+            Volver a Sistemas Programables
+          </a>
+        </div>
+
+        <!-- Controles de navegación -->
+        <div class="controls">
+          <button
+            class="btn btn-secondary"
+            id="prevBtn"
+            onclick="previousQuestion()"
+            disabled
+          >
+            Anterior
+          </button>
+          <div class="question-info">
+            <button
+              class="btn btn-primary"
+              id="checkBtn"
+              onclick="checkAnswer()"
+            >
+              Verificar Respuesta
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            id="nextBtn"
+            onclick="nextQuestion()"
+            disabled
+          >
+            Siguiente
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="../HandleQuestions.js"></script>
+  </body>
+</html>
