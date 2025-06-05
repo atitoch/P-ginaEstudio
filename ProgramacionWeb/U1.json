@@ -456,6 +456,151 @@
         "question": "¿El modelo cliente/servidor se divide en dos partes principales?",
         "correct": true,
         "feedback": "Verdadero. El modelo cliente/servidor se divide en dos partes principales: el cliente y el servidor."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Cuál es una de las características principales de la cuarta generación del diseño web?",
+        "options": [
+          { "text": "Dependencia de navegadores antiguos", "correct": false },
+          { "text": "Uso de Flash como estándar", "correct": false },
+          { "text": "Integración de multimedia avanzada", "correct": true },
+          {
+            "text": "Reducción de interactividad en aplicaciones web",
+            "correct": false
+          }
+        ],
+        "feedback": "La cuarta generación del diseño web se caracteriza por la integración de multimedia avanzada, incluyendo video, audio, gráficos interactivos y experiencias inmersivas."
+      },
+      {
+        "id": 46,
+        "type": "true_false",
+        "question": "HTTP funciona en una estructura de solicitud-respuesta.",
+        "correct": true,
+        "feedback": "Verdadero. HTTP (HyperText Transfer Protocol) funciona bajo un modelo de solicitud-respuesta donde el cliente envía una solicitud y el servidor responde."
+      },
+      {
+        "id": 47,
+        "type": "true_false",
+        "question": "Una desventaja del modelo cliente-servidor es la posible congestión del tráfico.",
+        "correct": true,
+        "feedback": "Verdadero. La congestión del tráfico puede ocurrir cuando múltiples clientes hacen solicitudes simultáneas al servidor, creando cuellos de botella."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Qué sector se ve impulsado por el desarrollo web a través de tecnologías como E-commerce, fintech y SaaS?",
+        "options": [
+          { "text": "La economía tradicional", "correct": false },
+          { "text": "El sector industrial", "correct": false },
+          { "text": "La economía digital", "correct": true }
+        ],
+        "feedback": "La economía digital se ve impulsada por el desarrollo web a través de tecnologías como E-commerce, fintech y SaaS (Software as a Service)."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Qué lenguaje de programación es independiente de la plataforma y orientado a objetos?",
+        "options": [
+          { "text": "C++", "correct": false },
+          { "text": "Java", "correct": true },
+          { "text": "Perl", "correct": false }
+        ],
+        "feedback": "Java es un lenguaje de programación independiente de la plataforma y orientado a objetos, diseñado bajo el principio 'write once, run anywhere'."
+      },
+      {
+        "id": 50,
+        "type": "true_false",
+        "question": "En una arquitectura en 2 capas, la lógica de negocio puede ser fácilmente reutilizada en otras aplicaciones.",
+        "correct": false,
+        "feedback": "Falso. En una arquitectura en 2 capas, la lógica de negocio está mezclada con la presentación, lo que dificulta su reutilización en otras aplicaciones."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Qué protocolo se utiliza como estándar para la web?",
+        "options": [
+          { "text": "FTP", "correct": false },
+          { "text": "SMTP", "correct": false },
+          { "text": "HTTP", "correct": true }
+        ],
+        "feedback": "HTTP (HyperText Transfer Protocol) es el protocolo estándar utilizado para la comunicación en la World Wide Web."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "¿Qué ventaja de la arquitectura en 3 capas está relacionada con la separación de responsabilidades?",
+        "options": [
+          { "text": "Escalabilidad de la aplicación", "correct": false },
+          { "text": "Reutilización del código", "correct": false },
+          { "text": "Independencia de la lógica de negocio", "correct": true }
+        ],
+        "feedback": "La independencia de la lógica de negocio es una ventaja clave de la arquitectura en 3 capas relacionada con la separación de responsabilidades."
+      },
+      {
+        "id": 53,
+        "type": "true_false",
+        "question": "El alto consumo de recursos en el cliente es una de las desventajas de la arquitectura en 2 capas.",
+        "correct": true,
+        "feedback": "Verdadero. El alto consumo de recursos en el cliente es una desventaja de la arquitectura en 2 capas, ya que parte de la lógica se ejecuta localmente."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Qué herramienta revolucionó el diseño web en la tercera generación?",
+        "options": [
+          { "text": "HTML", "correct": false },
+          { "text": "Macromedia Flash", "correct": true },
+          { "text": "WordPress", "correct": false },
+          { "text": "CSS", "correct": false }
+        ],
+        "feedback": "Macromedia Flash revolucionó el diseño web en la tercera generación al permitir contenido multimedia interactivo, animaciones avanzadas y experiencias más dinámicas en los sitios web."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "¿Qué hace que Ruby on Rails sea adecuado para un desarrollo ágil?",
+        "options": [
+          {
+            "text": "Su enfoque en aplicaciones de alto rendimiento",
+            "correct": false
+          },
+          {
+            "text": "Su sintaxis sencilla y la rapidez en la creación de prototipos",
+            "correct": true
+          },
+          { "text": "Su uso de TypeScript", "correct": false }
+        ],
+        "feedback": "Ruby on Rails es adecuado para desarrollo ágil debido a su sintaxis sencilla y la rapidez en la creación de prototipos, siguiendo el principio de 'convención sobre configuración'."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "En el modelo clásico, ¿qué tecnología se utiliza para la comunicación entre el cliente y el servidor?",
+        "options": [
+          { "text": "APIs REST", "correct": false },
+          { "text": "Middleware como ORB o sockets", "correct": true },
+          { "text": "WebSockets", "correct": false }
+        ],
+        "feedback": "En el modelo clásico cliente-servidor, se utiliza middleware como ORB (Object Request Broker) o sockets para facilitar la comunicación entre el cliente y el servidor."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Qué es WebGL y por qué es importante en las aplicaciones web modernas?",
+        "options": [
+          { "text": "Es un framework de desarrollo backend", "correct": false },
+          {
+            "text": "Es un lenguaje de programación para bases de datos",
+            "correct": false
+          },
+          { "text": "Es un navegador web especializado", "correct": false },
+          {
+            "text": "Es una API que permite gráficos 3D en navegadores",
+            "correct": true
+          }
+        ],
+        "feedback": "WebGL es una API de JavaScript que permite renderizar gráficos 2D y 3D interactivos en navegadores web sin necesidad de plugins, siendo fundamental para aplicaciones web modernas que requieren visualización gráfica avanzada."
       }
     ]
   }
