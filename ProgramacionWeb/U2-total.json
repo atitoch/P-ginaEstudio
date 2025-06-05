@@ -1,0 +1,842 @@
+{
+  "quiz": {
+    "title": "Etiquetas y Elementos HTML",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Para qué se usa la etiqueta code?",
+        "options": [
+          { "text": "Para crear tablas", "correct": false },
+          { "text": "Para definir código en las páginas web", "correct": true },
+          { "text": "Para insertar imágenes", "correct": false },
+          { "text": "Para crear formularios", "correct": false }
+        ],
+        "feedback": "La etiqueta code se utiliza para mostrar código de programación en línea dentro del texto."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Qué etiqueta agrupa a un conjunto de encabezados en HTML?",
+        "options": [
+          { "text": "header", "correct": false },
+          { "text": "hgroup", "correct": true },
+          { "text": "group", "correct": false },
+          { "text": "headings", "correct": false }
+        ],
+        "feedback": "La etiqueta hgroup se usa para agrupar múltiples encabezados relacionados (h1, h2, etc.)."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Qué etiqueta se utiliza para marcar una definición en HTML?",
+        "options": [
+          { "text": "def", "correct": false },
+          { "text": "dfn", "correct": true },
+          { "text": "definition", "correct": false },
+          { "text": "define", "correct": false }
+        ],
+        "feedback": "La etiqueta dfn se utiliza para marcar la primera aparición de un término que se está definiendo."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Cuál es la función de los elementos sup y sub?",
+        "options": [
+          { "text": "Crear listas", "correct": false },
+          { "text": "Texto en superíndice", "correct": true },
+          { "text": "Insertar imágenes", "correct": false },
+          { "text": "Crear tablas", "correct": false }
+        ],
+        "feedback": "sup crea texto en superíndice y sub crea texto en subíndice, útiles para fórmulas matemáticas y químicas."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿La etiqueta table acepta los atributos cellpadding y border?",
+        "options": [
+          { "text": "No", "correct": false },
+          { "text": "Sí", "correct": true },
+          { "text": "Solo cellpadding", "correct": false },
+          { "text": "Solo border", "correct": false }
+        ],
+        "feedback": "Sí, aunque estos atributos están deprecados en HTML5, la etiqueta table tradicionalmente acepta cellpadding y border."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Cuál es la función de la etiqueta caption?",
+        "options": [
+          { "text": "Crear subtítulos", "correct": false },
+          { "text": "Poner título a una tabla", "correct": true },
+          { "text": "Insertar imágenes", "correct": false },
+          { "text": "Crear formularios", "correct": false }
+        ],
+        "feedback": "La etiqueta caption proporciona un título descriptivo para una tabla HTML."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Qué etiqueta se utiliza para crear un cuadro de diálogo modal en HTML?",
+        "options": [
+          { "text": "modal", "correct": false },
+          { "text": "dialog", "correct": true },
+          { "text": "popup", "correct": false },
+          { "text": "window", "correct": false }
+        ],
+        "feedback": "La etiqueta dialog de HTML5 se utiliza para crear cuadros de diálogo modales o no modales."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué etiqueta se utiliza para agrupar controles dentro de un formulario?",
+        "options": [
+          { "text": "group", "correct": false },
+          { "text": "fieldset", "correct": true },
+          { "text": "controls", "correct": false },
+          { "text": "formgroup", "correct": false }
+        ],
+        "feedback": "La etiqueta fieldset agrupa controles relacionados en un formulario y puede incluir una leyenda con legend."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Qué atributo utilizan los campos de entrada para ser obligatorios?",
+        "options": [
+          { "text": "mandatory", "correct": false },
+          { "text": "required", "correct": true },
+          { "text": "obligatory", "correct": false },
+          { "text": "needed", "correct": false }
+        ],
+        "feedback": "El atributo 'required' hace que un campo de entrada sea obligatorio antes de enviar el formulario."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Cuál etiqueta permite mostrar imágenes y menciona dos formatos admitidos?",
+        "options": [
+          { "text": "picture", "correct": false },
+          { "text": "img png, gif, svg, jpg", "correct": true },
+          { "text": "image", "correct": false },
+          { "text": "photo", "correct": false }
+        ],
+        "feedback": "La etiqueta img muestra imágenes y admite formatos como PNG, GIF, SVG, JPG, entre otros."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Dentro de qué etiqueta debe estar la etiqueta area?",
+        "options": [
+          { "text": "img", "correct": false },
+          { "text": "map", "correct": true },
+          { "text": "region", "correct": false },
+          { "text": "zone", "correct": false }
+        ],
+        "feedback": "La etiqueta area debe estar dentro de map para definir áreas clicables en mapas de imagen."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿En qué navegador y Sistema Operativo se introdujo canvas?",
+        "options": [
+          { "text": "Internet Explorer en Windows", "correct": false },
+          { "text": "Safari en Apple", "correct": true },
+          { "text": "Firefox en Linux", "correct": false },
+          { "text": "Chrome en Android", "correct": false }
+        ],
+        "feedback": "La etiqueta canvas fue introducida por primera vez en Safari de Apple para Mac OS X."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Qué versión de CSS soporta tipografía y texto bidireccional?",
+        "options": [
+          { "text": "CSS 1", "correct": false },
+          { "text": "CSS 2", "correct": true },
+          { "text": "CSS 3", "correct": false },
+          { "text": "CSS 4", "correct": false }
+        ],
+        "feedback": "CSS 2 introdujo soporte mejorado para tipografía y texto bidireccional, incluyendo propiedades como direction."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Qué etiqueta permite incluir CSS como un bloque interno en HTML?",
+        "options": [
+          { "text": "css", "correct": false },
+          { "text": "style", "correct": true },
+          { "text": "stylesheet", "correct": false },
+          { "text": "styles", "correct": false }
+        ],
+        "feedback": "La etiqueta style permite incluir código CSS directamente dentro del documento HTML."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Qué atributos utiliza la etiqueta link?",
+        "options": [
+          { "text": "src, alt", "correct": false },
+          { "text": "type, href, rel", "correct": true },
+          { "text": "width, height", "correct": false },
+          { "text": "class, id", "correct": false }
+        ],
+        "feedback": "La etiqueta link utiliza principalmente los atributos type (tipo de archivo), href (URL) y rel (relación)."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Para qué sirve la etiqueta dt?",
+        "options": [
+          { "text": "Para crear tablas", "correct": false },
+          {
+            "text": "Término en un ítem de lista de definición",
+            "correct": true
+          },
+          { "text": "Para fechas", "correct": false },
+          { "text": "Para datos", "correct": false }
+        ],
+        "feedback": "La etiqueta dt define el término en una lista de definición, trabajando junto con dd para la descripción."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Qué etiqueta se utiliza para pedir una lista no ordenada?",
+        "options": [
+          { "text": "ol", "correct": false },
+          { "text": "ul", "correct": true },
+          { "text": "list", "correct": false },
+          { "text": "items", "correct": false }
+        ],
+        "feedback": "La etiqueta ul (unordered list) se utiliza para crear listas no ordenadas con viñetas."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Qué etiqueta se usa para ejecutar una lista no ordenada?",
+        "options": [
+          { "text": "ol", "correct": false },
+          {
+            "text": "Definición en un ítem de lista de definición",
+            "correct": false
+          },
+          { "text": "ul", "correct": true },
+          { "text": "li", "correct": false }
+        ],
+        "feedback": "La etiqueta ul se usa para crear (ejecutar) una lista no ordenada, conteniendo elementos li."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Escriba el código para poner su nombre como comentario en HTML?",
+        "options": [
+          { "text": "// Mi Nombre", "correct": false },
+          { "text": "!-- Mi Nombre --", "correct": true },
+          { "text": "/* Mi Nombre */", "correct": false },
+          { "text": "commentMi Nombre/comment", "correct": false }
+        ],
+        "feedback": "Los comentarios en HTML se escriben entre !-- y --, por ejemplo: !-- Mi Nombre --"
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Escriba el código para definir la palabra clave 'mouse' en HTML?",
+        "options": [
+          { "text": "defmouse/def", "correct": false },
+          { "text": "meta name='keywords' content='mouse'", "correct": true },
+          { "text": "keywordmouse/keyword", "correct": false },
+          { "text": "keymouse/key", "correct": false }
+        ],
+        "feedback": "Para definir palabras clave se usa la etiqueta meta: meta name='keywords' content='mouse'"
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Cómo se asocia un <label> con un campo de entrada?",
+        "options": [
+          { "text": "Usando la etiqueta <legend>", "correct": false },
+          {
+            "text": "Colocándolo dentro de un elemento <fieldset>",
+            "correct": false
+          },
+          { "text": "Aplicando una clase CSS especial", "correct": false },
+          {
+            "text": "Mediante el atributo \"for\" que apunta al id del campo",
+            "correct": true
+          }
+        ],
+        "feedback": "El atributo 'for' del label debe coincidir con el 'id' del campo de entrada para asociarlos correctamente."
+      },
+      {
+        "id": 22,
+        "type": "matching",
+        "question": "Empareja la etiqueta con su función dentro de un <select>",
+        "pairs": [
+          {
+            "left": "<output>",
+            "right": "Muestra el resultado de un cálculo",
+            "correct": true
+          },
+          {
+            "left": "<select>",
+            "right": "Contenedor de opciones seleccionables",
+            "correct": true
+          },
+          {
+            "left": "<option>",
+            "right": "Representa una opción dentro de la lista",
+            "correct": true
+          },
+          {
+            "left": "<optgroup>",
+            "right": "Agrupa opciones relacionadas",
+            "correct": true
+          }
+        ],
+        "feedback": "Cada etiqueta tiene una función específica: output para resultados, select como contenedor, option para cada opción y optgroup para agrupar."
+      },
+      {
+        "id": 23,
+        "type": "boolean",
+        "question": "El atributo low es el limite numerico superior del extremo, inferior del intervalo medido",
+        "correct": false,
+        "feedback": "Falso. El atributo 'low' especifica el límite inferior del rango, no el superior. Es el punto por debajo del cual se considera que el valor es bajo."
+      },
+      {
+        "id": 24,
+        "type": "boolean",
+        "question": "Puedo agrupar el encabezado de una tabla con thead",
+        "correct": true,
+        "feedback": "Verdadero. La etiqueta thead se utiliza para agrupar el contenido del encabezado de una tabla HTML, conteniendo típicamente filas de encabezados con elementos th."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Qué función tiene la etiqueta tr?",
+        "options": [
+          { "text": "Crear columnas en una tabla", "correct": false },
+          { "text": "Definir una fila en una tabla", "correct": true },
+          { "text": "Agrupar el encabezado de la tabla", "correct": false },
+          { "text": "Crear celdas individuales", "correct": false }
+        ],
+        "feedback": "La etiqueta tr (table row) se utiliza para definir una fila en una tabla HTML, conteniendo elementos td o th."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Qué utilidad se le da a la etiqueta img?",
+        "options": [
+          { "text": "Agregar una referencia a la imagen", "correct": false },
+          {
+            "text": "Representa un texto alterno en la imagen",
+            "correct": false
+          },
+          {
+            "text": "Poder clickear la imagen para abrir vinculos",
+            "correct": false
+          },
+          { "text": "Representar una imagen en la pagina", "correct": true }
+        ],
+        "feedback": "La etiqueta img se utiliza para representar/mostrar una imagen en la página web. Su función principal es incrustar imágenes en el documento HTML mediante el atributo src."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Qué función tiene la etiqueta col y colgroup?",
+        "options": [
+          { "text": "Crear filas en una tabla", "correct": false },
+          {
+            "text": "Definir propiedades para columnas de tablas",
+            "correct": true
+          },
+          { "text": "Agrupar celdas de encabezado", "correct": false },
+          { "text": "Crear enlaces entre tablas", "correct": false }
+        ],
+        "feedback": "Las etiquetas col y colgroup se utilizan para definir propiedades (como ancho, estilo, etc.) para una o más columnas de una tabla sin necesidad de repetir atributos en cada celda."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <data>?",
+        "options": [
+          { "text": "Insertar una tabla en HTML.", "correct": false },
+          {
+            "text": "Asociar un valor legible por máquina con un contenido.",
+            "correct": true
+          },
+          {
+            "text": "Definir un bloque de texto en negrita.",
+            "correct": false
+          },
+          { "text": "Mostrar datos en una lista ordenada.", "correct": false }
+        ],
+        "feedback": "La etiqueta data permite asociar un valor legible por máquina (mediante el atributo 'value') con contenido legible por humanos, facilitando el procesamiento automatizado de datos."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Para qué funciona shape?",
+        "options": [
+          { "text": "Pone un borde al mapa de imagen", "correct": false },
+          {
+            "text": "Define la forma asociada al mapa de imagen",
+            "correct": true
+          },
+          { "text": "Muestra el titulo del mapa de imagen", "correct": false },
+          {
+            "text": "Define la URL hacia donde se dirigira el clic",
+            "correct": false
+          }
+        ],
+        "feedback": "El atributo 'shape' define la forma geométrica del área clicable en un mapa de imagen (rect, circle, poly, default), trabajando junto con 'coords' para especificar las coordenadas."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "¿Qué etiqueta HTML permite seleccionar opciones de una lista desplegable?",
+        "options": [
+          { "text": "<option>", "correct": false },
+          { "text": "<dropdown>", "correct": false },
+          { "text": "<select>", "correct": true },
+          { "text": "<list>", "correct": false }
+        ],
+        "feedback": "La etiqueta select crea una lista desplegable que permite al usuario seleccionar una o más opciones. Las opciones individuales se definen con la etiqueta option dentro de select."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Qué etiqueta HTML representa texto en cursiva sin importancia semántica?",
+        "options": [
+          { "text": "< cite >", "correct": false },
+          { "text": "< b >", "correct": false },
+          { "text": "< i >", "correct": true },
+          { "text": "< em >", "correct": false }
+        ],
+        "feedback": "La etiqueta i representa texto en cursiva puramente estilístico sin importancia semántica, a diferencia de em que indica énfasis semántico."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <fieldset>?",
+        "options": [
+          { "text": "Crear una lista de opciones", "correct": false },
+          { "text": "Agrupar controles de un formulario", "correct": true },
+          { "text": "Definir un campo de texto", "correct": false },
+          { "text": "Insertar una imagen", "correct": false }
+        ],
+        "feedback": "La etiqueta fieldset se utiliza para agrupar controles relacionados dentro de un formulario, creando un conjunto lógico de elementos."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <label>?",
+        "options": [
+          { "text": "Crear un botón de envío", "correct": false },
+          {
+            "text": "Asocia texto descriptivo a un campo de entrada",
+            "correct": true
+          },
+          { "text": "Definir el título del formulario", "correct": false },
+          { "text": "Agrupar elementos de formulario", "correct": false }
+        ],
+        "feedback": "La etiqueta label asocia texto descriptivo a un campo de entrada, mejorando la accesibilidad y usabilidad del formulario."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <legend>?",
+        "options": [
+          { "text": "Crear una leyenda para imágenes", "correct": false },
+          {
+            "text": "Proporcionar una descripción a un fieldset",
+            "correct": true
+          },
+          { "text": "Definir texto en cursiva", "correct": false },
+          { "text": "Crear un enlace", "correct": false }
+        ],
+        "feedback": "La etiqueta legend proporciona una descripción o título para un grupo de controles dentro de un fieldset."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <form>?",
+        "options": [
+          { "text": "Crear tablas de datos", "correct": false },
+          {
+            "text": "Contenedor para elementos de entrada y envío",
+            "correct": true
+          },
+          { "text": "Definir estilos CSS", "correct": false },
+          { "text": "Insertar multimedia", "correct": false }
+        ],
+        "feedback": "La etiqueta form actúa como contenedor para elementos de entrada y gestiona el envío de datos al servidor."
+      },
+      {
+        "id": 36,
+        "type": "boolean",
+        "question": "¿\"shape\" es una etiqueta?",
+        "correct": false,
+        "feedback": "Falso. 'shape' no es una etiqueta HTML, es un atributo que se utiliza dentro de la etiqueta <area> para definir la forma geométrica de un área clicable en mapas de imagen."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Qué etiqueta HTML se usa para marcar una referencia o fuente de una cita?",
+        "options": [
+          { "text": "< bdi >", "correct": false },
+          { "text": "< dfn >", "correct": false },
+          { "text": "< blockquote >", "correct": false },
+          { "text": "< cite >", "correct": true }
+        ],
+        "feedback": "La etiqueta cite se utiliza para marcar una referencia o fuente de una cita, indicando el título de una obra, autor o fuente citada."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Cuál de los atributos es indispensable en las etiquetas multimedia?",
+        "options": [
+          { "text": "width", "correct": false },
+          { "text": "bufferes", "correct": false },
+          { "text": "src", "correct": true },
+          { "text": "width", "correct": false }
+        ],
+        "feedback": "El atributo 'src' es indispensable en las etiquetas multimedia como audio, video e img, ya que especifica la fuente o ruta del archivo multimedia a cargar."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Cuál es la versión de Internet Explorer que no admite de forma nativa canvas?",
+        "options": [
+          { "text": "versión 9.0 para abajo", "correct": true },
+          { "text": "version 11 y posteriores", "correct": false },
+          { "text": "version 10 y posteriores", "correct": false }
+        ],
+        "feedback": "Internet Explorer versión 9.0 y anteriores no admiten la etiqueta canvas de forma nativa. El soporte para canvas se introdujo a partir de IE 9, por lo que IE 8 y versiones anteriores no lo soportan."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <output>?",
+        "options": [
+          { "text": "Crear un campo de entrada", "correct": false },
+          { "text": "Muestra resultados calculados", "correct": true },
+          { "text": "Definir texto en negrita", "correct": false },
+          { "text": "Crear una lista", "correct": false }
+        ],
+        "feedback": "La etiqueta output se utiliza para mostrar el resultado de un cálculo o acción del usuario, típicamente en formularios interactivos."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <textarea>?",
+        "options": [
+          { "text": "Crear un botón", "correct": false },
+          { "text": "Campo de texto de múltiples líneas", "correct": true },
+          { "text": "Insertar una imagen", "correct": false },
+          { "text": "Crear un enlace", "correct": false }
+        ],
+        "feedback": "La etiqueta textarea crea un campo de entrada de texto que permite múltiples líneas, ideal para comentarios o texto largo."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <search>?",
+        "options": [
+          { "text": "Crear tablas de datos", "correct": false },
+          { "text": "Entrada especializada para búsquedas", "correct": true },
+          { "text": "Definir estilos CSS", "correct": false },
+          { "text": "Mostrar imágenes", "correct": false }
+        ],
+        "feedback": "La etiqueta search (input type='search') proporciona un campo de entrada especializado para búsquedas con funcionalidades adicionales del navegador."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de la etiqueta <input>?",
+        "options": [
+          { "text": "Crear párrafos de texto", "correct": false },
+          { "text": "Campo de entrada de una sola línea", "correct": true },
+          { "text": "Insertar multimedia", "correct": false },
+          { "text": "Definir encabezados", "correct": false }
+        ],
+        "feedback": "La etiqueta input crea campos de entrada de una sola línea para diversos tipos de datos como texto, números, fechas, etc."
+      },
+      {
+        "id": 44,
+        "type": "boolean",
+        "question": "La etiqueta <col> permite agregar un título a la tabla.",
+        "correct": false,
+        "feedback": "Falso. La etiqueta col se utiliza para definir propiedades de columnas en una tabla, no para agregar títulos. Para títulos de tablas se usa la etiqueta caption."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Qué atributo no pertenece a table?",
+        "options": [
+          { "text": "Border", "correct": false },
+          { "text": "cellpading", "correct": false },
+          { "text": "global", "correct": true },
+          { "text": "width", "correct": false },
+          { "text": "cellspacing", "correct": false }
+        ],
+        "feedback": "El atributo 'global' no pertenece a la etiqueta table. Los atributos border, cellpadding, width y cellspacing sí son válidos para table, aunque algunos están deprecados en HTML5."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Qué etiqueta permite definir propiedades de varias columnas a la vez?",
+        "options": [
+          { "text": "<caption>", "correct": false },
+          { "text": "<table>", "correct": false },
+          { "text": "<strong>", "correct": false },
+          { "text": "<colgroup>", "correct": true }
+        ],
+        "feedback": "La etiqueta colgroup permite definir propiedades para varias columnas de una tabla simultáneamente, agrupándolas bajo una configuración común."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Qué unidad de medida corresponde a 'pt'?",
+        "options": [
+          { "text": "Pulgadas", "correct": false },
+          { "text": "Punto", "correct": true },
+          { "text": "Pixel", "correct": false },
+          { "text": "Pica", "correct": false }
+        ],
+        "feedback": "La unidad 'pt' corresponde a punto, una unidad de medida tipográfica equivalente a 1/72 de pulgada."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Qué unidad de medida corresponde a 'in'?",
+        "options": [
+          { "text": "Punto", "correct": false },
+          { "text": "Pulgadas", "correct": true },
+          { "text": "Pixel", "correct": false },
+          { "text": "Pica", "correct": false }
+        ],
+        "feedback": "La unidad 'in' corresponde a pulgadas, una unidad de medida física equivalente a 2.54 centímetros."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Qué unidad de medida corresponde a 'px'?",
+        "options": [
+          { "text": "Punto", "correct": false },
+          { "text": "Pulgadas", "correct": false },
+          { "text": "Pixel", "correct": true },
+          { "text": "Pica", "correct": false }
+        ],
+        "feedback": "La unidad 'px' corresponde a pixel, la unidad básica de medida en pantallas digitales."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Qué unidad de medida corresponde a 'pc'?",
+        "options": [
+          { "text": "Punto", "correct": false },
+          { "text": "Pulgadas", "correct": false },
+          { "text": "Pixel", "correct": false },
+          { "text": "Pica", "correct": true }
+        ],
+        "feedback": "La unidad 'pc' corresponde a pica, una unidad tipográfica equivalente a 12 puntos o 1/6 de pulgada."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Qué unidad de medida corresponde a 'em'?",
+        "options": [
+          { "text": "Punto", "correct": false },
+          { "text": "Pulgadas", "correct": false },
+          { "text": "Pixel", "correct": false },
+          { "text": "Tamaño vertical del tipo", "correct": true }
+        ],
+        "feedback": "La unidad 'em' corresponde al tamaño vertical del tipo (font-size), siendo una unidad relativa al tamaño de fuente del elemento padre."
+      },
+      {
+        "id": 52,
+        "type": "boolean",
+        "question": "La etiqueta <bdi> es útil cuando se trabaja con múltiples idiomas en una web.",
+        "correct": true,
+        "feedback": "Verdadero. La etiqueta bdi (bidirectional isolation) es muy útil cuando se trabaja con múltiples idiomas, especialmente aquellos que se escriben de derecha a izquierda (como árabe o hebreo) mezclados con texto de izquierda a derecha."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "La etiqueta <strong> se usa para...",
+        "options": [
+          { "text": "Definir una columna en una tabla.", "correct": false },
+          { "text": "Crear una tabla.", "correct": false },
+          { "text": "Subrayar un texto.", "correct": false },
+          {
+            "text": "Resaltar texto en negrita con importancia.",
+            "correct": true
+          }
+        ],
+        "feedback": "La etiqueta strong se utiliza para resaltar texto en negrita indicando importancia semántica, a diferencia de la etiqueta b que es puramente presentacional."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Cómo agrupo el contenido de la tabla?",
+        "options": [
+          { "text": "Usando div y span", "correct": false },
+          { "text": "Con thead, tbody y tfoot", "correct": true },
+          { "text": "Utilizando fieldset", "correct": false },
+          { "text": "Con section y article", "correct": false }
+        ],
+        "feedback": "Para agrupar el contenido de una tabla se utilizan las etiquetas semánticas thead (encabezado), tbody (cuerpo) y tfoot (pie), que organizan lógicamente las filas de la tabla."
+      },
+      {
+        "id": 55,
+        "type": "boolean",
+        "question": "La etiqueta <del> muestra el texto tachado en la mayoría de los navegadores.",
+        "correct": true,
+        "feedback": "Verdadero. La etiqueta del (delete) muestra el texto tachado en la mayoría de los navegadores modernos, indicando que el contenido ha sido eliminado o marcado para eliminación."
+      },
+      {
+        "id": 56,
+        "type": "boolean",
+        "question": "¿Es posible poner contenedores de clase dentro de las etiquetas de estilo de HTML?",
+        "correct": true,
+        "feedback": "Verdadero. Es posible usar selectores de clase dentro de la etiqueta <style> en HTML. Por ejemplo: <style> .mi-clase { color: red; } </style>. Los selectores de clase (.clase) son perfectamente válidos dentro de las etiquetas de estilo."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Para qué sirve la etiqueta <col>?",
+        "options": [
+          { "text": "Para agregar un título a la tabla.", "correct": false },
+          { "text": "Para crear una tabla.", "correct": false },
+          {
+            "text": "Para definir propiedades de una columna específica.",
+            "correct": true
+          },
+          { "text": "Para definir texto en negrita.", "correct": false }
+        ],
+        "feedback": "La etiqueta col se utiliza para definir propiedades de una columna específica en una tabla HTML, como ancho, estilo o alineación, sin necesidad de repetir atributos en cada celda de esa columna."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "¿Para qué sirve la etiqueta progress?",
+        "options": [
+          { "text": "Visualizar el progreso de una tarea", "correct": true },
+          { "text": "Valor escalar dentro de un rango", "correct": false }
+        ],
+        "feedback": "La etiqueta progress se utiliza para visualizar el progreso de una tarea, mostrando una barra de progreso que indica qué tan completa está una operación específica."
+      },
+      {
+        "id": 59,
+        "type": "multiple",
+        "question": "¿Qué utiliza canvas para generar contenido?",
+        "options": [
+          { "text": "Hace uso de Javascript", "correct": true },
+          { "text": "Por si sola genera contenido", "correct": false },
+          { "text": "Utiliza PHP para poder manejarlo", "correct": false }
+        ],
+        "feedback": "La etiqueta canvas requiere JavaScript para generar contenido dinámico. Por sí sola, canvas solo proporciona un lienzo vacío; es JavaScript quien dibuja formas, texto, imágenes y animaciones en él."
+      },
+      {
+        "id": 60,
+        "type": "multiple",
+        "question": "¿En qué está basada la tecnología SVG?",
+        "options": [
+          { "text": "Píxeles", "correct": false },
+          { "text": "Vectores", "correct": true },
+          { "text": "Mapas de bits", "correct": false },
+          { "text": "Rasterización", "correct": false }
+        ],
+        "feedback": "SVG (Scalable Vector Graphics) está basado en vectores, lo que permite que los gráficos mantengan su calidad sin importar el nivel de zoom o redimensionamiento."
+      },
+      {
+        "id": 61,
+        "type": "multiple",
+        "question": "¿Cuál es el uso de la etiqueta wbr?",
+        "options": [
+          {
+            "text": "Representa una posicion dentro del texto",
+            "correct": false
+          },
+          {
+            "text": "Hace un salto de linea solo si es necesario",
+            "correct": true
+          },
+          { "text": "Se puede dar clic dentro de un texto", "correct": false },
+          {
+            "text": "Representa un salto de linea obligatorio",
+            "correct": false
+          }
+        ],
+        "feedback": "La etiqueta wbr (Word Break Opportunity) indica un punto donde el navegador puede hacer un salto de línea si es necesario para el ajuste del texto, pero no fuerza el salto como <br>."
+      },
+      {
+        "id": 62,
+        "type": "boolean",
+        "question": "El atributo name de la etiqueta map es para definir el nombre del mapa",
+        "correct": true,
+        "feedback": "Verdadero. El atributo 'name' de la etiqueta map se utiliza para definir el nombre del mapa de imagen, que luego se referencia desde la etiqueta img mediante el atributo 'usemap'."
+      },
+      {
+        "id": 63,
+        "type": "multiple",
+        "question": "¿Qué función tiene la etiqueta th?",
+        "options": [
+          { "text": "Crear una celda de datos normal", "correct": false },
+          {
+            "text": "Definir una celda de encabezado en una tabla",
+            "correct": true
+          },
+          { "text": "Crear una fila en la tabla", "correct": false },
+          { "text": "Agrupar columnas de la tabla", "correct": false }
+        ],
+        "feedback": "La etiqueta th (table header) se utiliza para definir celdas de encabezado en una tabla, diferenciándose de td por su importancia semántica y formato visual más prominente."
+      },
+      {
+        "id": 64,
+        "type": "multiple",
+        "question": "¿Qué versión de CSS cubre el diseño responsivo?",
+        "options": [
+          { "text": "CSS 1", "correct": false },
+          { "text": "CSS 2", "correct": false },
+          { "text": "CSS 3", "correct": true },
+          { "text": "CSS 4", "correct": false }
+        ],
+        "feedback": "CSS 3 introdujo las características clave para el diseño responsivo, incluyendo media queries, flexbox, grid layout y unidades relativas como vw, vh, que permiten crear sitios web adaptativos a diferentes dispositivos y tamaños de pantalla."
+      },
+      {
+        "id": 65,
+        "type": "multiple",
+        "question": "Para probar, conocer o experimentar CSS se recomienda usar un _____ para incluir CSS en páginas WEB",
+        "options": [
+          { "text": "Editor de texto", "correct": false },
+          { "text": "Navegador web", "correct": false },
+          { "text": "Preprocesador", "correct": true },
+          { "text": "Compilador", "correct": false }
+        ],
+        "feedback": "Se recomienda usar un preprocesador CSS (como Sass, Less o Stylus) para experimentar y desarrollar CSS de manera más eficiente, ya que ofrecen características avanzadas como variables, funciones, mixins y anidamiento."
+      },
+      {
+        "id": 66,
+        "type": "boolean",
+        "question": "¿La etiqueta <datalist> permite definir una lista de opciones predefinidas para un campo de entrada?",
+        "correct": true,
+        "feedback": "Verdadero. La etiqueta datalist proporciona una lista de opciones predefinidas para un campo de entrada, creando un autocompletado que sugiere valores mientras el usuario escribe."
+      },
+      {
+        "id": 67,
+        "type": "multiple",
+        "question": "¿Para qué se usa la etiqueta <kbd>?",
+        "options": [
+          { "text": "Insertar un botón en HTML.", "correct": false },
+          { "text": "Definir una lista numerada.", "correct": false },
+          {
+            "text": "Representar texto que el usuario debe ingresar en un teclado.",
+            "correct": true
+          },
+          { "text": "Crear una tabla de contenido.", "correct": false }
+        ],
+        "feedback": "La etiqueta kbd (keyboard) se utiliza para representar texto que el usuario debe ingresar desde el teclado, como comandos, teclas específicas o combinaciones de teclas."
+      }
+    ]
+  }
+}
