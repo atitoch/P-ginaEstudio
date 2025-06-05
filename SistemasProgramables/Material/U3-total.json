@@ -1,0 +1,2282 @@
+{
+  "quiz": {
+    "title": "Fundamentos de Arduino y Sistemas Programables",
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cuál es el microcontrolador del Arduino UNO?",
+        "options": [
+          {
+            "text": "ATmega328P",
+            "correct": true
+          },
+          {
+            "text": "ESP32",
+            "correct": false
+          },
+          {
+            "text": "ATmega2560",
+            "correct": false
+          },
+          {
+            "text": "RP2040",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO utiliza el microcontrolador ATmega328P de 8 bits como su procesador principal."
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Cuál es una característica del Arduino MEGA?",
+        "options": [
+          {
+            "text": "Más pines digitales y analógicos",
+            "correct": true
+          },
+          {
+            "text": "Tamaño reducido",
+            "correct": false
+          },
+          {
+            "text": "WiFi integrado",
+            "correct": false
+          },
+          {
+            "text": "Diseñado para wearables",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA se caracteriza por tener una mayor cantidad de pines de entrada/salida digitales y analógicos comparado con otras placas Arduino."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Qué tipo de memoria permite almacenar código permanentemente?",
+        "options": [
+          {
+            "text": "Flash",
+            "correct": true
+          },
+          {
+            "text": "SRAM",
+            "correct": false
+          },
+          {
+            "text": "EEPROM",
+            "correct": false
+          },
+          {
+            "text": "RAM",
+            "correct": false
+          }
+        ],
+        "feedback": "La memoria Flash es no volátil y permite almacenar el código del programa de manera permanente, manteniéndolo incluso cuando se apaga el dispositivo."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Qué placa es ideal para proyectos con WiFi integrado?",
+        "options": [
+          {
+            "text": "Arduino UNO WiFi",
+            "correct": true
+          },
+          {
+            "text": "Arduino Leonardo",
+            "correct": false
+          },
+          {
+            "text": "Arduino MEGA",
+            "correct": false
+          },
+          {
+            "text": "Arduino Nano clásico",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO WiFi incluye conectividad WiFi integrada, lo que lo hace ideal para proyectos de IoT y comunicación inalámbrica."
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Qué característica tiene el Arduino Nano?",
+        "options": [
+          {
+            "text": "Es compacto y se conecta vía mini-USB",
+            "correct": true
+          },
+          {
+            "text": "Tiene WiFi integrado",
+            "correct": false
+          },
+          {
+            "text": "Es el más grande de todos",
+            "correct": false
+          },
+          {
+            "text": "Es el único con puerto HDMI",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Nano se caracteriza por su tamaño compacto y su conexión a través de puerto mini-USB o micro-USB."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuál es el propósito de la EEPROM?",
+        "options": [
+          {
+            "text": "Almacenar datos que deben conservarse después de apagar el equipo",
+            "correct": true
+          },
+          {
+            "text": "Mejorar la velocidad del reloj",
+            "correct": false
+          },
+          {
+            "text": "Conectarse a Internet",
+            "correct": false
+          },
+          {
+            "text": "Controlar puertos USB",
+            "correct": false
+          }
+        ],
+        "feedback": "La EEPROM (Electrically Erasable Programmable Read-Only Memory) permite almacenar datos de forma permanente que se conservan incluso después de apagar el dispositivo."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Cuál de estas placas incluye un procesador ARM Cortex-M3?",
+        "options": [
+          {
+            "text": "Arduino Due",
+            "correct": true
+          },
+          {
+            "text": "Arduino MEGA",
+            "correct": false
+          },
+          {
+            "text": "Arduino UNO",
+            "correct": false
+          },
+          {
+            "text": "Arduino Nano clásico",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due utiliza un procesador ARM Cortex-M3 de 32 bits, lo que le proporciona mayor capacidad de procesamiento."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Cuál es una aplicación típica del Arduino Leonardo?",
+        "options": [
+          {
+            "text": "Simular teclado o ratón USB",
+            "correct": true
+          },
+          {
+            "text": "Conexión Bluetooth",
+            "correct": false
+          },
+          {
+            "text": "Medición de temperatura industrial",
+            "correct": false
+          },
+          {
+            "text": "WiFi de largo alcance",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo puede emular dispositivos HID (Human Interface Device) como teclados y ratones USB gracias a su capacidad de comunicación USB nativa."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Qué característica define al Arduino MKR?",
+        "options": [
+          {
+            "text": "Diseño modular con conectividad (LoRa, NB-IoT, WiFi, etc.)",
+            "correct": true
+          },
+          {
+            "text": "Pantalla integrada",
+            "correct": false
+          },
+          {
+            "text": "Solo funciona con baterías",
+            "correct": false
+          },
+          {
+            "text": "Puerto Ethernet de fábrica",
+            "correct": false
+          }
+        ],
+        "feedback": "La familia Arduino MKR se caracteriza por su diseño modular y las diferentes opciones de conectividad especializada para IoT."
+      },
+      {
+        "id": 11,
+        "type": "multiple",
+        "question": "¿Cuál es la frecuencia de reloj del Arduino UNO?",
+        "options": [
+          {
+            "text": "16 MHz",
+            "correct": true
+          },
+          {
+            "text": "8 MHz",
+            "correct": false
+          },
+          {
+            "text": "32 MHz",
+            "correct": false
+          },
+          {
+            "text": "80 MHz",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO opera a una frecuencia de reloj de 16 MHz, proporcionada por un cristal de cuarzo externo."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Qué ventaja tiene el Arduino Leonardo respecto al UNO?",
+        "options": [
+          {
+            "text": "Puede emular dispositivos USB como teclado",
+            "correct": true
+          },
+          {
+            "text": "Más memoria RAM",
+            "correct": false
+          },
+          {
+            "text": "Soporte para tarjetas SD",
+            "correct": false
+          },
+          {
+            "text": "Conexión WiFi integrada",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo tiene la capacidad única de emular dispositivos USB HID como teclados y ratones gracias a su microcontrolador ATmega32U4."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Qué función tienen los conversores ADC en Arduino?",
+        "options": [
+          {
+            "text": "Convertir señales analógicas a digitales",
+            "correct": true
+          },
+          {
+            "text": "Proteger el microcontrolador",
+            "correct": false
+          },
+          {
+            "text": "Ampliar la señal",
+            "correct": false
+          },
+          {
+            "text": "Almacenar programas",
+            "correct": false
+          }
+        ],
+        "feedback": "Los conversores ADC (Analog-to-Digital Converter) permiten convertir señales analógicas continuas en valores digitales que el microcontrolador puede procesar."
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Cuál tiene más memoria flash?",
+        "options": [
+          {
+            "text": "Arduino MEGA 2560",
+            "correct": true
+          },
+          {
+            "text": "Arduino Nano",
+            "correct": false
+          },
+          {
+            "text": "Arduino UNO",
+            "correct": false
+          },
+          {
+            "text": "Arduino Leonardo",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 256 KB de memoria Flash, significativamente más que otras placas Arduino estándar."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Qué tecnología permite comunicación con solo dos cables?",
+        "options": [
+          {
+            "text": "I2C",
+            "correct": true
+          },
+          {
+            "text": "SPI",
+            "correct": false
+          },
+          {
+            "text": "UART",
+            "correct": false
+          },
+          {
+            "text": "PWM",
+            "correct": false
+          }
+        ],
+        "feedback": "El protocolo I2C (Inter-Integrated Circuit) permite la comunicación entre múltiples dispositivos usando solo dos cables: SDA (datos) y SCL (reloj)."
+      },
+      {
+        "id": 18,
+        "type": "multiple",
+        "question": "¿Cuál es una ventaja del Arduino Due?",
+        "options": [
+          {
+            "text": "Procesador ARM Cortex-M3 de 32 bits",
+            "correct": true
+          },
+          {
+            "text": "Mayor duración de batería",
+            "correct": false
+          },
+          {
+            "text": "WiFi integrado",
+            "correct": false
+          },
+          {
+            "text": "Solo funciona con 3.3 V",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due utiliza un procesador ARM Cortex-M3 de 32 bits que proporciona mayor potencia de cálculo y velocidad de procesamiento."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Qué protocolo se usa comúnmente para comunicación con módulos GPS o Bluetooth?",
+        "options": [
+          {
+            "text": "UART",
+            "correct": true
+          },
+          {
+            "text": "I2C",
+            "correct": false
+          },
+          {
+            "text": "PWM",
+            "correct": false
+          },
+          {
+            "text": "CAN",
+            "correct": false
+          }
+        ],
+        "feedback": "UART (Universal Asynchronous Receiver-Transmitter) es el protocolo de comunicación serie más común para módulos GPS, Bluetooth y otros dispositivos de comunicación."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué tipo de memoria es volátil y se borra al apagar el Arduino?",
+        "options": [
+          {
+            "text": "SRAM",
+            "correct": true
+          },
+          {
+            "text": "EEPROM",
+            "correct": false
+          },
+          {
+            "text": "Flash",
+            "correct": false
+          },
+          {
+            "text": "ROM",
+            "correct": false
+          }
+        ],
+        "feedback": "La SRAM (Static Random Access Memory) es memoria volátil que se utiliza para almacenar variables y datos temporales durante la ejecución del programa."
+      },
+      {
+        "id": 25,
+        "type": "multiple",
+        "question": "¿Qué protocolo usa Arduino para comunicación de alta velocidad con múltiples dispositivos?",
+        "options": [
+          {
+            "text": "SPI",
+            "correct": true
+          },
+          {
+            "text": "I2C",
+            "correct": false
+          },
+          {
+            "text": "UART",
+            "correct": false
+          },
+          {
+            "text": "PWM",
+            "correct": false
+          }
+        ],
+        "feedback": "SPI (Serial Peripheral Interface) es un protocolo de comunicación serie síncrono de alta velocidad que permite comunicación con múltiples dispositivos."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Qué placa Arduino incluye conectividad LoRa?",
+        "options": [
+          {
+            "text": "Arduino MKR WAN 1300",
+            "correct": true
+          },
+          {
+            "text": "Arduino UNO R3",
+            "correct": false
+          },
+          {
+            "text": "Arduino Nano 33 BLE",
+            "correct": false
+          },
+          {
+            "text": "Arduino MKR Zero",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR WAN 1300 incluye conectividad LoRa (Long Range) diseñada para aplicaciones IoT de largo alcance y bajo consumo."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Qué tipo de alimentación acepta Arduino UNO?",
+        "options": [
+          {
+            "text": "5V desde USB o 7-12V desde entrada VIN",
+            "correct": true
+          },
+          {
+            "text": "Solo 3.3V desde USB",
+            "correct": false
+          },
+          {
+            "text": "Exclusivamente batería de 9V",
+            "correct": false
+          },
+          {
+            "text": "Solo alimentación a través de pines digitales",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO puede alimentarse con 5V a través del puerto USB o con un rango de 7-12V a través de la entrada VIN o el conector de alimentación."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Cuál es una característica del Arduino Leonardo?",
+        "options": [
+          {
+            "text": "Puede emular dispositivos HID como teclado y ratón",
+            "correct": true
+          },
+          {
+            "text": "Tiene WiFi integrado",
+            "correct": false
+          },
+          {
+            "text": "Soporta LoRa",
+            "correct": false
+          },
+          {
+            "text": "Posee procesador de 32 bits",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo puede emular dispositivos HID (Human Interface Device) como teclados y ratones gracias a su microcontrolador ATmega32U4 con USB nativo."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Qué placa Arduino usa un procesador ARM Cortex-M0+?",
+        "options": [
+          {
+            "text": "Arduino MKR Zero",
+            "correct": true
+          },
+          {
+            "text": "Arduino Leonardo",
+            "correct": false
+          },
+          {
+            "text": "Arduino UNO",
+            "correct": false
+          },
+          {
+            "text": "Arduino Mega 2560",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR Zero utiliza un procesador ARM Cortex-M0+ que proporciona mayor eficiencia energética y capacidad de procesamiento."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cuál de las siguientes placas es más adecuada para proyectos de audio digital?",
+        "options": [
+          {
+            "text": "Arduino MKR Zero",
+            "correct": true
+          },
+          {
+            "text": "Arduino UNO",
+            "correct": false
+          },
+          {
+            "text": "Arduino Nano Every",
+            "correct": false
+          },
+          {
+            "text": "Arduino Pro Mini",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR Zero incluye características especiales como slot para tarjeta SD y capacidades mejoradas para manejo de audio digital."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Qué ventaja tiene el protocolo I2C?",
+        "options": [
+          {
+            "text": "Permite conectar varios dispositivos con solo dos cables",
+            "correct": true
+          },
+          {
+            "text": "Soporta largas distancias de transmisión",
+            "correct": false
+          },
+          {
+            "text": "Tiene mayor velocidad que SPI",
+            "correct": false
+          },
+          {
+            "text": "No requiere resistencias de pull-up",
+            "correct": false
+          }
+        ],
+        "feedback": "I2C permite conectar múltiples dispositivos usando solo dos cables (SDA y SCL), simplificando el cableado en proyectos complejos."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Qué es una shield en Arduino?",
+        "options": [
+          {
+            "text": "Una placa de expansión que se monta sobre otra para añadir funciones",
+            "correct": true
+          },
+          {
+            "text": "Un tipo de sensor integrado",
+            "correct": false
+          },
+          {
+            "text": "Un sistema operativo",
+            "correct": false
+          },
+          {
+            "text": "Un lenguaje de programación",
+            "correct": false
+          }
+        ],
+        "feedback": "Una shield es una placa de expansión que se monta sobre una placa Arduino base para añadir funcionalidades específicas como WiFi, Ethernet, motores, etc."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Cuál es la frecuencia de reloj común del Arduino UNO?",
+        "options": [
+          {
+            "text": "16 MHz",
+            "correct": true
+          },
+          {
+            "text": "8 MHz",
+            "correct": false
+          },
+          {
+            "text": "32 MHz",
+            "correct": false
+          },
+          {
+            "text": "1 GHz",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO opera a 16 MHz, frecuencia proporcionada por un cristal de cuarzo externo que determina la velocidad de procesamiento."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Cuánta memoria SRAM tiene el Arduino UNO?",
+        "options": [
+          {
+            "text": "2 KB",
+            "correct": true
+          },
+          {
+            "text": "4 KB",
+            "correct": false
+          },
+          {
+            "text": "8 KB",
+            "correct": false
+          },
+          {
+            "text": "1 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO tiene 2 KB de memoria SRAM disponible para almacenar variables y datos durante la ejecución del programa."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Cuánta memoria EEPROM tiene el Arduino UNO?",
+        "options": [
+          {
+            "text": "1 KB",
+            "correct": true
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "512 bytes",
+            "correct": false
+          },
+          {
+            "text": "4 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO incluye 1 KB de memoria EEPROM para almacenar datos que deben persistir después de apagar el dispositivo."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Cuál es el voltaje de funcionamiento del Arduino UNO?",
+        "options": [
+          {
+            "text": "5V",
+            "correct": true
+          },
+          {
+            "text": "3.3V",
+            "correct": false
+          },
+          {
+            "text": "12V",
+            "correct": false
+          },
+          {
+            "text": "9V",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO opera a 5V, voltaje al cual funcionan tanto el microcontrolador como la mayoría de sus pines de entrada/salida."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino UNO?",
+        "options": [
+          {
+            "text": "14",
+            "correct": true
+          },
+          {
+            "text": "12",
+            "correct": false
+          },
+          {
+            "text": "16",
+            "correct": false
+          },
+          {
+            "text": "20",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO tiene 14 pines digitales de entrada/salida, numerados del 0 al 13, algunos de los cuales tienen funciones especiales."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Cuántas entradas analógicas tiene el Arduino UNO?",
+        "options": [
+          {
+            "text": "6",
+            "correct": true
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO tiene 6 entradas analógicas (A0-A5) que pueden leer valores analógicos y convertirlos a valores digitales de 10 bits."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Cuántos pines pueden usarse como salidas PWM en el Arduino UNO?",
+        "options": [
+          {
+            "text": "6",
+            "correct": true
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          },
+          {
+            "text": "14",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO tiene 6 pines con capacidad PWM (3, 5, 6, 9, 10, 11) que pueden generar señales analógicas simuladas mediante modulación de ancho de pulso."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Cuál es la corriente máxima DC por pin de E/S en Arduino UNO?",
+        "options": [
+          {
+            "text": "40 mA",
+            "correct": true
+          },
+          {
+            "text": "20 mA",
+            "correct": false
+          },
+          {
+            "text": "50 mA",
+            "correct": false
+          },
+          {
+            "text": "100 mA",
+            "correct": false
+          }
+        ],
+        "feedback": "Cada pin de E/S del Arduino UNO puede proporcionar o recibir un máximo de 40 mA de corriente DC de forma segura."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Cuál es el rango de voltaje de entrada recomendado para Arduino UNO?",
+        "options": [
+          {
+            "text": "7-12V",
+            "correct": true
+          },
+          {
+            "text": "5-9V",
+            "correct": false
+          },
+          {
+            "text": "9-15V",
+            "correct": false
+          },
+          {
+            "text": "6-20V",
+            "correct": false
+          }
+        ],
+        "feedback": "El rango de voltaje de entrada recomendado para el Arduino UNO es de 7-12V a través del conector de alimentación o pin VIN."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Qué tipo de conector USB usa el Arduino Nano?",
+        "options": [
+          {
+            "text": "Mini-USB",
+            "correct": true
+          },
+          {
+            "text": "USB-C",
+            "correct": false
+          },
+          {
+            "text": "Micro-USB",
+            "correct": false
+          },
+          {
+            "text": "USB estándar tipo B",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Nano tradicionalmente usa conector Mini-USB, aunque versiones más recientes pueden usar Micro-USB."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Cuánta memoria Flash tiene el Arduino MEGA 2560?",
+        "options": [
+          {
+            "text": "256 KB",
+            "correct": true
+          },
+          {
+            "text": "128 KB",
+            "correct": false
+          },
+          {
+            "text": "512 KB",
+            "correct": false
+          },
+          {
+            "text": "32 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 256 KB de memoria Flash para almacenar el código del programa, considerablemente más que el UNO."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Qué característica especial tiene el Arduino YUN?",
+        "options": [
+          {
+            "text": "Combina Linux y Arduino en una sola placa",
+            "correct": true
+          },
+          {
+            "text": "Solo funciona con baterías",
+            "correct": false
+          },
+          {
+            "text": "Tiene pantalla integrada",
+            "correct": false
+          },
+          {
+            "text": "Es la placa más pequeña",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino YUN es único porque combina un microcontrolador Arduino con un procesador Linux en una sola placa, permitiendo aplicaciones híbridas."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "¿Qué tipo de conectividad incluye el Arduino ETHERNET?",
+        "options": [
+          {
+            "text": "Conectividad Ethernet integrada",
+            "correct": true
+          },
+          {
+            "text": "Solo WiFi",
+            "correct": false
+          },
+          {
+            "text": "Bluetooth únicamente",
+            "correct": false
+          },
+          {
+            "text": "LoRa y NB-IoT",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ETHERNET incluye conectividad Ethernet integrada mediante el chip W5100, permitiendo conexión directa a redes cableadas."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "¿Cuál es la ventaja del Arduino MKR-FOX 1200?",
+        "options": [
+          {
+            "text": "Conectividad SigFox para IoT de bajo consumo",
+            "correct": true
+          },
+          {
+            "text": "Procesador de 64 bits",
+            "correct": false
+          },
+          {
+            "text": "Pantalla táctil integrada",
+            "correct": false
+          },
+          {
+            "text": "Solo funciona con corriente alterna",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR FOX 1200 incluye conectividad SigFox, una tecnología de comunicación de largo alcance y ultra-bajo consumo para IoT."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Qué tipo de conectividad celular tiene el Arduino MKR GSM 1400?",
+        "options": [
+          {
+            "text": "GSM 850/900/1800/1900 MHz",
+            "correct": true
+          },
+          {
+            "text": "Solo 5G",
+            "correct": false
+          },
+          {
+            "text": "Únicamente 2G",
+            "correct": false
+          },
+          {
+            "text": "WiFi de largo alcance",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR GSM 1400 soporta las bandas GSM estándar 850/900/1800/1900 MHz para comunicación celular global."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "¿Qué módulo WiFi integra el Arduino MKR WiFi 1010?",
+        "options": [
+          {
+            "text": "Módulo ESP32 de U-BLOX",
+            "correct": true
+          },
+          {
+            "text": "Chip ATmega328P",
+            "correct": false
+          },
+          {
+            "text": "Procesador ARM",
+            "correct": false
+          },
+          {
+            "text": "Módulo LoRa",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR WiFi 1010 integra un módulo ESP32 de U-BLOX para proporcionar conectividad WiFi y Bluetooth."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "¿Cuál es la característica principal del Arduino MICRO?",
+        "options": [
+          {
+            "text": "Es la placa más pequeña de la familia Arduino",
+            "correct": true
+          },
+          {
+            "text": "Tiene la mayor cantidad de memoria",
+            "correct": false
+          },
+          {
+            "text": "Solo funciona con 12V",
+            "correct": false
+          },
+          {
+            "text": "Incluye pantalla OLED",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MICRO se caracteriza por ser una de las placas más pequeñas de la familia Arduino, manteniendo funcionalidad completa en formato compacto."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Qué sensores tiene integrados el Arduino EXPLORA?",
+        "options": [
+          {
+            "text": "Luz (LDR), temperatura, acelerómetro y joystick",
+            "correct": true
+          },
+          {
+            "text": "Solo sensor de temperatura",
+            "correct": false
+          },
+          {
+            "text": "Únicamente GPS",
+            "correct": false
+          },
+          {
+            "text": "Solo cámara y micrófono",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino EXPLORA incluye múltiples sensores integrados: LDR para luz, sensor de temperatura, acelerómetro y joystick, además de otros componentes."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "¿Qué procesador usa el Arduino 101?",
+        "options": [
+          {
+            "text": "Intel Curie",
+            "correct": true
+          },
+          {
+            "text": "ATmega328P",
+            "correct": false
+          },
+          {
+            "text": "ARM Cortex-M3",
+            "correct": false
+          },
+          {
+            "text": "ESP32",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 utiliza el procesador Intel Curie, que incluye un microcontrolador Quark SE C1000 y capacidades de sensores integrados."
+      },
+      {
+        "id": 59,
+        "type": "multiple",
+        "question": "¿Qué conectividad inalámbrica incluye el Arduino 101?",
+        "options": [
+          {
+            "text": "Bluetooth 4.0 LE",
+            "correct": true
+          },
+          {
+            "text": "WiFi 6",
+            "correct": false
+          },
+          {
+            "text": "LoRa",
+            "correct": false
+          },
+          {
+            "text": "NFC únicamente",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 incluye conectividad Bluetooth 4.0 Low Energy (BLE) integrada para comunicación inalámbrica de bajo consumo."
+      },
+      {
+        "id": 60,
+        "type": "multiple",
+        "question": "¿Cuánta memoria SRAM tiene el Arduino MEGA 2560?",
+        "options": [
+          {
+            "text": "8 KB",
+            "correct": true
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "4 KB",
+            "correct": false
+          },
+          {
+            "text": "16 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 8 KB de memoria SRAM, cuatro veces más que el Arduino UNO, permitiendo manejar programas más complejos."
+      },
+      {
+        "id": 61,
+        "type": "multiple",
+        "question": "¿Cuál es el voltaje de funcionamiento del Arduino Due?",
+        "options": [
+          {
+            "text": "3.3V",
+            "correct": true
+          },
+          {
+            "text": "5V",
+            "correct": false
+          },
+          {
+            "text": "12V",
+            "correct": false
+          },
+          {
+            "text": "1.8V",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due opera a 3.3V debido a su procesador ARM Cortex-M3, diferente del estándar de 5V de otras placas Arduino."
+      },
+      {
+        "id": 62,
+        "type": "multiple",
+        "question": "¿Qué significa ICSP en Arduino?",
+        "options": [
+          {
+            "text": "In-Circuit Serial Programming",
+            "correct": true
+          },
+          {
+            "text": "Integrated Circuit Serial Port",
+            "correct": false
+          },
+          {
+            "text": "Internal Clock Signal Processor",
+            "correct": false
+          },
+          {
+            "text": "Input/Output Control Serial Protocol",
+            "correct": false
+          }
+        ],
+        "feedback": "ICSP significa In-Circuit Serial Programming, un método para programar microcontroladores directamente en el circuito usando una interfaz específica."
+      },
+      {
+        "id": 63,
+        "type": "multiple",
+        "question": "¿Qué característica especial tiene el Arduino ETHERNET respecto al UNO?",
+        "options": [
+          {
+            "text": "Algunos pines están reservados para funciones de red",
+            "correct": true
+          },
+          {
+            "text": "Tiene más memoria RAM",
+            "correct": false
+          },
+          {
+            "text": "Funciona con mayor voltaje",
+            "correct": false
+          },
+          {
+            "text": "Incluye pantalla LCD",
+            "correct": false
+          }
+        ],
+        "feedback": "En el Arduino ETHERNET, ciertos pines están reservados para las funciones de red del chip W5100, limitando su disponibilidad para otros usos."
+      },
+      {
+        "id": 64,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino MEGA 2560?",
+        "options": [
+          {
+            "text": "54",
+            "correct": true
+          },
+          {
+            "text": "20",
+            "correct": false
+          },
+          {
+            "text": "14",
+            "correct": false
+          },
+          {
+            "text": "32",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 54 pines digitales de entrada/salida, significativamente más que otras placas Arduino estándar."
+      },
+      {
+        "id": 65,
+        "type": "multiple",
+        "question": "¿Qué arquitectura de procesador usa el Arduino YUN para Linux?",
+        "options": [
+          {
+            "text": "MIPS",
+            "correct": true
+          },
+          {
+            "text": "ARM",
+            "correct": false
+          },
+          {
+            "text": "x86",
+            "correct": false
+          },
+          {
+            "text": "RISC-V",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino YUN utiliza un procesador MIPS para ejecutar el sistema operativo Linux OpenWRT, separado del microcontrolador Arduino."
+      },
+      {
+        "id": 66,
+        "type": "multiple",
+        "question": "¿Cuál es el voltaje de entrada límite del Arduino UNO?",
+        "options": [
+          {
+            "text": "6-20V",
+            "correct": true
+          },
+          {
+            "text": "5-15V",
+            "correct": false
+          },
+          {
+            "text": "7-12V",
+            "correct": false
+          },
+          {
+            "text": "9-18V",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO puede aceptar voltajes de entrada de 6-20V, aunque el rango recomendado es 7-12V para un funcionamiento óptimo."
+      },
+      {
+        "id": 67,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino Leonardo?",
+        "options": [
+          {
+            "text": "20",
+            "correct": true
+          },
+          {
+            "text": "14",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          },
+          {
+            "text": "16",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo tiene 20 pines digitales de entrada/salida, más que el Arduino UNO debido a su microcontrolador ATmega32U4."
+      },
+      {
+        "id": 68,
+        "type": "multiple",
+        "question": "¿Cuántos pines PWM tiene el Arduino Leonardo?",
+        "options": [
+          {
+            "text": "7",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo tiene 7 pines con capacidad PWM, uno más que el Arduino UNO, proporcionando mayor flexibilidad para salidas analógicas."
+      },
+      {
+        "id": 69,
+        "type": "multiple",
+        "question": "¿Cuántas entradas analógicas tiene el Arduino Leonardo?",
+        "options": [
+          {
+            "text": "12",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          },
+          {
+            "text": "16",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Leonardo tiene 12 entradas analógicas, el doble que el Arduino UNO, permitiendo conectar más sensores analógicos."
+      },
+      {
+        "id": 70,
+        "type": "multiple",
+        "question": "¿Cuánto espacio del bootloader ocupa en la memoria Flash del Arduino Leonardo?",
+        "options": [
+          {
+            "text": "4 KB",
+            "correct": true
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "1 KB",
+            "correct": false
+          },
+          {
+            "text": "8 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El bootloader del Arduino Leonardo ocupa 4 KB de la memoria Flash, dejando el resto disponible para el código del usuario."
+      },
+      {
+        "id": 71,
+        "type": "multiple",
+        "question": "¿Cuál es la frecuencia de reloj del Arduino 101?",
+        "options": [
+          {
+            "text": "32 MHz",
+            "correct": true
+          },
+          {
+            "text": "16 MHz",
+            "correct": false
+          },
+          {
+            "text": "48 MHz",
+            "correct": false
+          },
+          {
+            "text": "84 MHz",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 opera a 32 MHz gracias a su procesador Intel Curie, proporcionando mayor velocidad de procesamiento que el UNO."
+      },
+      {
+        "id": 72,
+        "type": "multiple",
+        "question": "¿Cuánta memoria SRAM tiene el Arduino 101?",
+        "options": [
+          {
+            "text": "24 KB",
+            "correct": true
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "8 KB",
+            "correct": false
+          },
+          {
+            "text": "32 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 tiene 24 KB de memoria SRAM, significativamente más que otras placas Arduino estándar, permitiendo aplicaciones más complejas."
+      },
+      {
+        "id": 73,
+        "type": "multiple",
+        "question": "¿Cuánta memoria Flash tiene el Arduino 101?",
+        "options": [
+          {
+            "text": "196 KB",
+            "correct": true
+          },
+          {
+            "text": "256 KB",
+            "correct": false
+          },
+          {
+            "text": "32 KB",
+            "correct": false
+          },
+          {
+            "text": "512 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 tiene 196 KB de memoria Flash disponibles para el código del usuario, más que muchas otras placas Arduino."
+      },
+      {
+        "id": 74,
+        "type": "multiple",
+        "question": "¿Qué característica especial de sensores tiene el Arduino 101?",
+        "options": [
+          {
+            "text": "Acelerómetro y giroscopio de 6 ejes",
+            "correct": true
+          },
+          {
+            "text": "Solo acelerómetro de 3 ejes",
+            "correct": false
+          },
+          {
+            "text": "Sensor de temperatura integrado",
+            "correct": false
+          },
+          {
+            "text": "GPS integrado",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino 101 incluye un acelerómetro y giroscopio de 6 ejes integrados, proporcionando capacidades avanzadas de detección de movimiento."
+      },
+      {
+        "id": 75,
+        "type": "multiple",
+        "question": "¿Cuánta memoria SRAM tiene el Arduino EXPLORA?",
+        "options": [
+          {
+            "text": "2.5 KB",
+            "correct": true
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "4 KB",
+            "correct": false
+          },
+          {
+            "text": "8 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino EXPLORA tiene 2.5 KB de memoria SRAM, ligeramente más que el UNO estándar para manejar sus sensores integrados."
+      },
+      {
+        "id": 76,
+        "type": "multiple",
+        "question": "¿Qué componentes adicionales tiene el Arduino EXPLORA además de sensores?",
+        "options": [
+          {
+            "text": "Pulsadores, potenciómetro lineal, LED RGB y zumbador piezoeléctrico",
+            "correct": true
+          },
+          {
+            "text": "Solo LED RGB",
+            "correct": false
+          },
+          {
+            "text": "Únicamente pulsadores",
+            "correct": false
+          },
+          {
+            "text": "Solo zumbador",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino EXPLORA incluye múltiples componentes integrados: pulsadores, potenciómetro lineal, LED RGB y zumbador piezoeléctrico para experiencias interactivas."
+      },
+      {
+        "id": 77,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales PWM tiene el Arduino MICRO?",
+        "options": [
+          {
+            "text": "7",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MICRO tiene 7 pines con capacidad PWM, similar al Leonardo, manteniendo funcionalidad completa en formato compacto."
+      },
+      {
+        "id": 78,
+        "type": "multiple",
+        "question": "¿Qué tipo de conector USB usa el Arduino Nano según las modificaciones mencionadas?",
+        "options": [
+          {
+            "text": "Micro-USB",
+            "correct": true
+          },
+          {
+            "text": "Mini-USB",
+            "correct": false
+          },
+          {
+            "text": "USB-C",
+            "correct": false
+          },
+          {
+            "text": "USB tipo B",
+            "correct": false
+          }
+        ],
+        "feedback": "Las versiones más recientes del Arduino Nano utilizan conectores Micro-USB en lugar del Mini-USB tradicional."
+      },
+      {
+        "id": 79,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S con salida PWM tiene el Arduino MEGA 2560?",
+        "options": [
+          {
+            "text": "15",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          },
+          {
+            "text": "20",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 15 pines con capacidad PWM, considerablemente más que otras placas Arduino estándar."
+      },
+      {
+        "id": 80,
+        "type": "multiple",
+        "question": "¿Cuántas entradas analógicas tiene el Arduino MEGA 2560?",
+        "options": [
+          {
+            "text": "16",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MEGA 2560 tiene 16 entradas analógicas (A0-A15), más del doble que el UNO, permitiendo conectar muchos más sensores analógicos."
+      },
+      {
+        "id": 81,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino ZERO?",
+        "options": [
+          {
+            "text": "20",
+            "correct": true
+          },
+          {
+            "text": "14",
+            "correct": false
+          },
+          {
+            "text": "22",
+            "correct": false
+          },
+          {
+            "text": "54",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ZERO tiene 20 pines digitales de entrada/salida, proporcionando buena flexibilidad para proyectos diversos."
+      },
+      {
+        "id": 82,
+        "type": "multiple",
+        "question": "¿Cuántos pines PWM tiene el Arduino ZERO?",
+        "options": [
+          {
+            "text": "10",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "7",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ZERO tiene 10 pines con capacidad PWM, más que muchas otras placas Arduino, gracias a su procesador ARM Cortex-M0+."
+      },
+      {
+        "id": 83,
+        "type": "multiple",
+        "question": "¿Cuántos UARTs tiene el Arduino ZERO?",
+        "options": [
+          {
+            "text": "2",
+            "correct": true
+          },
+          {
+            "text": "1",
+            "correct": false
+          },
+          {
+            "text": "3",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ZERO tiene 2 UARTs disponibles, permitiendo comunicación serie simultánea con múltiples dispositivos."
+      },
+      {
+        "id": 84,
+        "type": "multiple",
+        "question": "¿Cuántas salidas analógicas (DAC) tiene el Arduino Due?",
+        "options": [
+          {
+            "text": "2",
+            "correct": true
+          },
+          {
+            "text": "1",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "0",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due tiene 2 salidas analógicas DAC (Digital-to-Analog Converter) que pueden generar señales analógicas reales, no simuladas por PWM."
+      },
+      {
+        "id": 85,
+        "type": "multiple",
+        "question": "¿Cuál es la frecuencia de reloj del Arduino Due?",
+        "options": [
+          {
+            "text": "84 MHz",
+            "correct": true
+          },
+          {
+            "text": "16 MHz",
+            "correct": false
+          },
+          {
+            "text": "48 MHz",
+            "correct": false
+          },
+          {
+            "text": "32 MHz",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due opera a 84 MHz gracias a su procesador ARM Cortex-M3, proporcionando la mayor velocidad de procesamiento entre las placas Arduino tradicionales."
+      },
+      {
+        "id": 86,
+        "type": "multiple",
+        "question": "¿Cuánta memoria SRAM tiene el Arduino Due?",
+        "options": [
+          {
+            "text": "96 KB",
+            "correct": true
+          },
+          {
+            "text": "32 KB",
+            "correct": false
+          },
+          {
+            "text": "2 KB",
+            "correct": false
+          },
+          {
+            "text": "8 KB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino Due tiene 96 KB de memoria SRAM, significativamente más que otras placas Arduino, permitiendo aplicaciones muy complejas."
+      },
+      {
+        "id": 87,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino MKR ZERO?",
+        "options": [
+          {
+            "text": "22",
+            "correct": true
+          },
+          {
+            "text": "20",
+            "correct": false
+          },
+          {
+            "text": "14",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR ZERO tiene 22 pines digitales de entrada/salida, proporcionando amplia flexibilidad para proyectos de audio y otros usos."
+      },
+      {
+        "id": 88,
+        "type": "multiple",
+        "question": "¿Cuántas interrupciones externas soporta el Arduino MKR ZERO?",
+        "options": [
+          {
+            "text": "9",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR ZERO soporta 9 interrupciones externas, permitiendo respuesta rápida a eventos externos en múltiples pines."
+      },
+      {
+        "id": 89,
+        "type": "multiple",
+        "question": "¿Qué característica especial tiene el Arduino MKR ZERO para audio?",
+        "options": [
+          {
+            "text": "Conector SD integrado para reproducir música sin hardware extra",
+            "correct": true
+          },
+          {
+            "text": "Amplificador integrado",
+            "correct": false
+          },
+          {
+            "text": "Micrófono incorporado",
+            "correct": false
+          },
+          {
+            "text": "Salida de audio digital",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR ZERO incluye un conector SD integrado que permite reproducir archivos de audio directamente sin necesidad de hardware adicional."
+      },
+      {
+        "id": 90,
+        "type": "multiple",
+        "question": "¿Cuántos pines PWM tiene el Arduino YUN?",
+        "options": [
+          {
+            "text": "7",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          },
+          {
+            "text": "4",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino YUN tiene 7 pines con capacidad PWM en su parte Arduino, similar al Leonardo pero con capacidades Linux adicionales."
+      },
+      {
+        "id": 91,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad de reloj del procesador Linux en el Arduino YUN?",
+        "options": [
+          {
+            "text": "400 MHz",
+            "correct": true
+          },
+          {
+            "text": "16 MHz",
+            "correct": false
+          },
+          {
+            "text": "84 MHz",
+            "correct": false
+          },
+          {
+            "text": "48 MHz",
+            "correct": false
+          }
+        ],
+        "feedback": "El procesador Linux del Arduino YUN opera a 400 MHz, proporcionando capacidad de procesamiento significativa para aplicaciones complejas."
+      },
+      {
+        "id": 92,
+        "type": "multiple",
+        "question": "¿Cuánta memoria RAM DDR2 tiene el procesador del Arduino YUN?",
+        "options": [
+          {
+            "text": "64 MB",
+            "correct": true
+          },
+          {
+            "text": "32 MB",
+            "correct": false
+          },
+          {
+            "text": "16 MB",
+            "correct": false
+          },
+          {
+            "text": "128 MB",
+            "correct": false
+          }
+        ],
+        "feedback": "El procesador Linux del Arduino YUN tiene 64 MB de memoria RAM DDR2 para ejecutar el sistema operativo y aplicaciones Linux."
+      },
+      {
+        "id": 93,
+        "type": "multiple",
+        "question": "¿Cuántos pines PWM tiene el Arduino ETHERNET?",
+        "options": [
+          {
+            "text": "4",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "7",
+            "correct": false
+          },
+          {
+            "text": "14",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ETHERNET tiene solo 4 pines PWM disponibles debido a que algunos pines están reservados para las funciones de red."
+      },
+      {
+        "id": 94,
+        "type": "multiple",
+        "question": "¿Qué pines están reservados en el Arduino ETHERNET para funciones especiales?",
+        "options": [
+          {
+            "text": "Pines 10-13 para SPI, pin 4 para SD, pin 2 para interrupt W5100",
+            "correct": true
+          },
+          {
+            "text": "Solo pines 10-13",
+            "correct": false
+          },
+          {
+            "text": "Pines 0-1 únicamente",
+            "correct": false
+          },
+          {
+            "text": "Ningún pin está reservado",
+            "correct": false
+          }
+        ],
+        "feedback": "En el Arduino ETHERNET, los pines 10-13 están reservados para SPI, el pin 4 para la tarjeta SD, y el pin 2 para interrupciones del chip W5100."
+      },
+      {
+        "id": 95,
+        "type": "multiple",
+        "question": "¿Qué característica especial de alimentación tiene el Arduino ETHERNET?",
+        "options": [
+          {
+            "text": "Power Over Ethernet ready",
+            "correct": true
+          },
+          {
+            "text": "Solo alimentación por batería",
+            "correct": false
+          },
+          {
+            "text": "Voltaje dual 3.3V/5V",
+            "correct": false
+          },
+          {
+            "text": "Carga inalámbrica",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino ETHERNET está preparado para Power Over Ethernet (PoE), permitiendo alimentación a través del mismo cable de red."
+      },
+      {
+        "id": 96,
+        "type": "multiple",
+        "question": "¿Cuántos pines digitales de E/S tiene el Arduino INDUSTRIAL 101?",
+        "options": [
+          {
+            "text": "20",
+            "correct": true
+          },
+          {
+            "text": "14",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          },
+          {
+            "text": "12",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino INDUSTRIAL 101 tiene 20 pines digitales de entrada/salida, similar a otras placas avanzadas pero diseñado para uso industrial."
+      },
+      {
+        "id": 97,
+        "type": "multiple",
+        "question": "¿Cuántos pines PWM tiene el Arduino MKR-FOX 1200?",
+        "options": [
+          {
+            "text": "12",
+            "correct": true
+          },
+          {
+            "text": "6",
+            "correct": false
+          },
+          {
+            "text": "7",
+            "correct": false
+          },
+          {
+            "text": "8",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR FOX 1200 tiene 12 pines con capacidad PWM, proporcionando gran flexibilidad para proyectos IoT con SigFox."
+      },
+      {
+        "id": 98,
+        "type": "multiple",
+        "question": "¿Qué tipo de baterías soporta el Arduino MKR WAN 1300?",
+        "options": [
+          {
+            "text": "2x AA o AAA",
+            "correct": true
+          },
+          {
+            "text": "Li-Po únicamente",
+            "correct": false
+          },
+          {
+            "text": "Solo 9V",
+            "correct": false
+          },
+          {
+            "text": "3.7V LiPo exclusivamente",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR WAN 1300 soporta alimentación con 2 baterías AA o AAA, además de otras opciones de alimentación, ideal para proyectos LoRa remotos."
+      },
+      {
+        "id": 99,
+        "type": "multiple",
+        "question": "¿Cuál es la potencia de antena del Arduino MKR WAN 1300?",
+        "options": [
+          {
+            "text": "2dB",
+            "correct": true
+          },
+          {
+            "text": "5dB",
+            "correct": false
+          },
+          {
+            "text": "10dB",
+            "correct": false
+          },
+          {
+            "text": "1dB",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino MKR WAN 1300 tiene una potencia de antena de 2dB, optimizada para comunicaciones LoRa de largo alcance y bajo consumo."
+      },
+      {
+        "id": 100,
+        "type": "multiple",
+        "question": "¿Qué microcontrolador usa el Arduino UNO WiFi REV2?",
+        "options": [
+          {
+            "text": "ATMEGA4809",
+            "correct": true
+          },
+          {
+            "text": "ATmega328P",
+            "correct": false
+          },
+          {
+            "text": "ESP32",
+            "correct": false
+          },
+          {
+            "text": "ATmega32U4",
+            "correct": false
+          }
+        ],
+        "feedback": "El Arduino UNO WiFi REV2 utiliza el microcontrolador ATMEGA4809, una versión más avanzada que el ATmega328P tradicional, con WiFi integrado."
+      },
+      {
+        "id": 101,
+        "type": "multiple",
+        "question": "¿Cómo se identifican los pines que tienen permitido ser controlados por ancho de pulso?",
+        "options": [
+          { "text": "Con el símbolo ~", "correct": true },
+          { "text": "Con la letra A", "correct": false },
+          { "text": "Con un asterisco *", "correct": false },
+          { "text": "Con la letra P", "correct": false }
+        ],
+        "feedback": "Los pines PWM en Arduino se identifican con el símbolo ~ (tilde) junto al número del pin en la placa."
+      },
+      {
+        "id": 102,
+        "type": "multiple",
+        "question": "¿Cuál es el conector mediante el cual se puede alimentar el Arduino UNO R3?",
+        "options": [
+          { "text": "USB", "correct": true },
+          { "text": "Ethernet", "correct": false },
+          { "text": "HDMI", "correct": false },
+          { "text": "VGA", "correct": false }
+        ],
+        "feedback": "El Arduino UNO R3 puede alimentarse a través del conector USB, además del jack de alimentación externa."
+      },
+      {
+        "id": 103,
+        "type": "multiple",
+        "question": "¿Cuál es la corriente máxima para el pin de 3.3V del Arduino UNO R3?",
+        "options": [
+          { "text": "50 mA", "correct": true },
+          { "text": "100 mA", "correct": false },
+          { "text": "200 mA", "correct": false },
+          { "text": "500 mA", "correct": false }
+        ],
+        "feedback": "El pin de 3.3V del Arduino UNO R3 puede suministrar un máximo de 50 mA de corriente."
+      },
+      {
+        "id": 104,
+        "type": "multiple",
+        "question": "¿Cuál sería el valor de una resistencia limitadora de corriente para un led con caída de voltaje 1.4 V y corriente de 10 mA alimentado a 5V?",
+        "options": [
+          { "text": "360 Ohms", "correct": true },
+          { "text": "220 Ohms", "correct": false },
+          { "text": "470 Ohms", "correct": false },
+          { "text": "150 Ohms", "correct": false }
+        ],
+        "feedback": "Usando la ley de Ohm: R = (5V - 1.4V) / 0.01A = 3.6V / 0.01A = 360 Ohms."
+      },
+      {
+        "id": 105,
+        "type": "multiple",
+        "question": "¿De qué rango suele ser la corriente de los zumbadores?",
+        "options": [
+          { "text": "Menos de 10 mA", "correct": true },
+          { "text": "10-50 mA", "correct": false },
+          { "text": "50-100 mA", "correct": false },
+          { "text": "Más de 100 mA", "correct": false }
+        ],
+        "feedback": "Los zumbadores típicamente consumen menos de 10 mA de corriente, siendo dispositivos de bajo consumo."
+      },
+      {
+        "id": 106,
+        "type": "multiple",
+        "question": "¿De qué tipo de periférico son los sensores fotoeléctricos?",
+        "options": [
+          { "text": "Entrada", "correct": true },
+          { "text": "Salida", "correct": false },
+          { "text": "Bidireccional", "correct": false },
+          { "text": "Alimentación", "correct": false }
+        ],
+        "feedback": "Los sensores fotoeléctricos son periféricos de entrada que detectan luz y envían señales al microcontrolador."
+      },
+      {
+        "id": 107,
+        "type": "multiple",
+        "question": "¿En el plug de alimentación externa qué polaridad tiene la terminal central?",
+        "options": [
+          { "text": "Positiva", "correct": true },
+          { "text": "Negativa", "correct": false },
+          { "text": "Neutra", "correct": false },
+          { "text": "Variable", "correct": false }
+        ],
+        "feedback": "En el conector de alimentación externa del Arduino, la terminal central tiene polaridad positiva."
+      },
+      {
+        "id": 108,
+        "type": "true_false",
+        "question": "¿Los pines analógicos del Arduino UNO R3 son de entrada?",
+        "correct": true,
+        "feedback": "Verdadero. Los pines analógicos del Arduino UNO R3 están configurados como entradas para leer señales analógicas."
+      },
+      {
+        "id": 109,
+        "type": "multiple",
+        "question": "¿Qué significa UART en los pines del Arduino UNO R3?",
+        "options": [
+          {
+            "text": "Universal Asynchronous Receiver-Transmitter",
+            "correct": true
+          },
+          { "text": "Referencia analógica", "correct": false },
+          { "text": "Unidad aritmética", "correct": false },
+          { "text": "Alimentación universal", "correct": false }
+        ],
+        "feedback": "UART significa Universal Asynchronous Receiver-Transmitter, protocolo de comunicación serie utilizado en los pines 0 y 1."
+      },
+      {
+        "id": 110,
+        "type": "multiple",
+        "question": "¿Con qué número están identificados los pines I/O digitales del Arduino UNO R3?",
+        "options": [
+          { "text": "0-13", "correct": true },
+          { "text": "1-14", "correct": false },
+          { "text": "A0-A13", "correct": false },
+          { "text": "D0-D13", "correct": false }
+        ],
+        "feedback": "Los pines digitales de entrada/salida del Arduino UNO R3 están numerados del 0 al 13."
+      },
+      {
+        "id": 111,
+        "type": "multiple",
+        "question": "¿Cuál es la terminal de un LED ubicada en el borde más largo?",
+        "options": [
+          { "text": "Ánodo", "correct": true },
+          { "text": "Cátodo", "correct": false },
+          { "text": "Base", "correct": false },
+          { "text": "Emisor", "correct": false }
+        ],
+        "feedback": "En un LED, la terminal más larga corresponde al ánodo (terminal positiva)."
+      },
+      {
+        "id": 112,
+        "type": "multiple",
+        "question": "¿Cuál sería el valor de una resistencia limitadora de corriente para un led con caída de voltaje 1.2 V y corriente de 10 mA alimentado a 5V?",
+        "options": [
+          { "text": "380 Ohms", "correct": true },
+          { "text": "220 Ohms", "correct": false },
+          { "text": "470 Ohms", "correct": false },
+          { "text": "150 Ohms", "correct": false }
+        ],
+        "feedback": "Usando la ley de Ohm: R = (5V - 1.2V) / 0.01A = 3.8V / 0.01A = 380 Ohms."
+      },
+      {
+        "id": 113,
+        "type": "multiple",
+        "question": "¿Cuál suele ser el voltaje de operación de los zumbadores?",
+        "options": [
+          { "text": "3 a 16 V", "correct": true },
+          { "text": "1 a 3 V", "correct": false },
+          { "text": "5 V únicamente", "correct": false },
+          { "text": "12 V únicamente", "correct": false }
+        ],
+        "feedback": "Los zumbadores típicamente operan en un rango de voltaje de 3 a 16 V, siendo muy versátiles en su alimentación."
+      },
+      {
+        "id": 114,
+        "type": "multiple",
+        "question": "¿Cuántos pines de tierra tienen las conexiones de 6 pines del Arduino UNO R3?",
+        "options": [
+          { "text": "2", "correct": true },
+          { "text": "1", "correct": false },
+          { "text": "3", "correct": false },
+          { "text": "4", "correct": false }
+        ],
+        "feedback": "En las conexiones de alimentación de 6 pines del Arduino UNO R3, hay 2 pines de tierra (GND) disponibles."
+      },
+      {
+        "id": 115,
+        "type": "true_false",
+        "question": "¿Cuenta el Arduino UNO R3 con un regulador de voltaje de 5V?",
+        "correct": true,
+        "feedback": "Verdadero. El Arduino UNO R3 incluye un regulador de voltaje que proporciona 5V estables para el funcionamiento del microcontrolador y los pines."
+      },
+      {
+        "id": 116,
+        "type": "multiple",
+        "question": "¿Dónde se configuran los pines analógicos del Arduino UNO R3?",
+        "options": [
+          { "text": "No requieren configuración", "correct": true },
+          { "text": "En el setup()", "correct": false },
+          { "text": "En el loop()", "correct": false },
+          { "text": "Con pinMode()", "correct": false }
+        ],
+        "feedback": "Los pines analógicos del Arduino UNO R3 no requieren configuración previa, están listos para usar con analogRead()."
+      },
+      {
+        "id": 117,
+        "type": "true_false",
+        "question": "¿Los Display requieren resistencias limitadoras de corriente?",
+        "correct": true,
+        "feedback": "Verdadero. Los displays, especialmente los de 7 segmentos con LEDs, requieren resistencias limitadoras para proteger tanto el display como los pines del Arduino."
+      },
+      {
+        "id": 118,
+        "type": "true_false",
+        "question": "¿Los pines analógicos del Arduino UNO R3 son de salida?",
+        "correct": false,
+        "feedback": "Falso. Los pines analógicos del Arduino UNO R3 están diseñados principalmente como entradas para leer señales analógicas, aunque pueden usarse como digitales."
+      },
+      {
+        "id": 119,
+        "type": "multiple",
+        "question": "¿Qué tipo de carga manejan los optoacopladores?",
+        "options": [
+          { "text": "Pequeña", "correct": true },
+          { "text": "Grande", "correct": false },
+          { "text": "Media", "correct": false },
+          { "text": "Industrial", "correct": false }
+        ],
+        "feedback": "Los optoacopladores típicamente manejan cargas pequeñas, siendo dispositivos de aislamiento y control de señales de baja potencia."
+      }
+    ]
+  }
+}

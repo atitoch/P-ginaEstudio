@@ -37,6 +37,14 @@ const QUIZ_CONFIG = {
         file: "U1-total.json",
         name: "Introducción a Sistemas Programables",
       },
+      "U2-total": {
+        file: "U2-total.json",
+        name: "Introducción a Sistemas Programables",
+      },
+      "U3-total": {
+        file: "U3-total.json",
+        name: "Introducción a Sistemas Programables",
+      },
       U1: { file: "U1.json", name: "Introducción a SO" },
       U2: { file: "U2.json", name: "Gestión de Procesos" },
       U3: { file: "U3.json", name: "Arduino y Microcontroladores" },
