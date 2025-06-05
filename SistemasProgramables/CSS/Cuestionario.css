@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.header h1 {
+  color: #ff6b35;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.2em;
+}
+
+.breadcrumb {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.breadcrumb a:hover {
+  opacity: 1;
+}
+
+.quiz-container {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.quiz-progress {
+  background: #f0f0f0;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#progressBar {
+  height: 100%;
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+.question-counter {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.question {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.question.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question h3 {
+  color: #333;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.options {
+  list-style: none;
+}
+
+.option {
+  background: #f8f9fa;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.option:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option label {
+  display: block;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.option input[type="radio"]:checked + label {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+  border-radius: 8px;
+}
+
+.option.correct {
+  border-color: #28a745;
+  background: #d4edda;
+}
+
+.option.incorrect {
+  border-color: #dc3545;
+  background: #f8d7da;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dee2e6;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  display: none;
+}
+
+.feedback.correct {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f1b6ba;
+}
+
+.results {
+  text-align: center;
+  display: none;
+}
+
+.results.show {
+  display: block;
+}
+
+.score {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff6b35;
+  margin: 20px 0;
+}
+
+.score-details {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: white;
+  color: #ff6b35;
+}
+
+/* Estados de carga y error */
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.loading {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.question-info {
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.question[data-type="true_false"] .options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.question[data-type="true_false"] .option {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 3px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.question[data-type="true_false"] .option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+}
+
+.question[data-type="true_false"] .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #495057;
+  cursor: pointer;
+}
+
+.question[data-type="true_false"] .option label::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.question[data-type="true_false"] .option:first-child label::before {
+  content: "✓";
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+}
+
+.question[data-type="true_false"] .option:last-child label::before {
+  content: "✗";
+  background: linear-gradient(135deg, #dc3545, #e83e8c);
+  color: white;
+}
+
+.question[data-type="true_false"] .option input[type="radio"]:checked + label {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  border-color: #ff6b35;
+}
+
+.question[data-type="true_false"]
+  .option
+  input[type="radio"]:checked
+  + label::before {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.question[data-type="true_false"] .option.correct {
+  border-color: #28a745;
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+}
+
+.question[data-type="true_false"] .option.incorrect {
+  border-color: #dc3545;
+  background: linear-gradient(135deg, #f8d7da, #f1b6ba);
+}
+
+/* Responsive para verdadero/falso */
+@media (max-width: 768px) {
+  .question[data-type="true_false"] .options {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .question[data-type="true_false"] .option {
+    max-width: none;
+  }
+
+  .question[data-type="true_false"] .option label {
+    flex-direction: row;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .question[data-type="true_false"] .option label::before {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-size: 1.5em;
+  }
+
+  .container {
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .question-info {
+    margin: 0;
+    order: -1;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .score {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .quiz-container {
+    padding: 15px;
+  }
+
+  .option {
+    padding: 12px 15px;
+  }
+
+  .feedback {
+    padding: 15px;
+  }
+}
+
+/* Estados adicionales para mejor UX */
+.option.disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.question.completed .option {
+  cursor: default;
+}
