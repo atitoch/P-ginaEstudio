@@ -48,47 +48,45 @@
         <div id="questionsContainer">
           <!-- Las preguntas se cargarán aquí dinámicamente -->
         </div>
-      </div>
-
-      <!-- Resultados -->
-      <div class="results">
-        <h2>¡Cuestionario Completado!</h2>
-        <div class="score" id="score">0%</div>
-        <div class="score-details">
-          <span id="correctAnswers">0</span> respuestas correctas de
-          <span id="totalQuestionsResult">0</span>
+         <!-- Resultados -->
+        <div class="results">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="score" id="score">0%</div>
+          <div class="score-details">
+            <span id="correctAnswers">0</span> respuestas correctas de
+            <span id="totalQuestionsResult">0</span>
+          </div>
+          <button class="btn btn-primary" onclick="restartQuiz()">
+            Reiniciar Cuestionario
+          </button>
+          <a href="index.html" class="btn btn-secondary"
+            >Volver a Programación web</a
+          >
         </div>
-        <button class="btn btn-primary" onclick="restartQuiz()">
-          Reiniciar Cuestionario
-        </button>
-        <a href="index.html" class="btn btn-secondary"
-          >Volver a Programación web</a
-        >
-      </div>
-
-      <div class="controls">
-        <button
-          class="btn btn-secondary"
-          id="prevBtn"
-          onclick="previousQuestion()"
-          disabled
-        >
-          Anterior
-        </button>
-        <div class="question-info">
-          <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()">
-            Verificar Respuesta
+        <div class="controls">
+          <button
+            class="btn btn-secondary"
+            id="prevBtn"
+            onclick="previousQuestion()"
+            disabled
+          >
+            Anterior
+          </button>
+          <div class="question-info">
+            <button class="btn btn-primary" id="checkBtn" onclick="checkAnswer()">
+              Verificar Respuesta
+            </button>
+          </div>
+          <button
+            class="btn btn-secondary"
+            id="nextBtn"
+            onclick="nextQuestion()"
+            disabled
+          >
+            Siguiente
           </button>
         </div>
-        <button
-          class="btn btn-secondary"
-          id="nextBtn"
-          onclick="nextQuestion()"
-          disabled
-        >
-          Siguiente
-        </button>
-      </div>
+    </div>
     </div>
 
     <script src="../HandleQuestions.js"></script>
