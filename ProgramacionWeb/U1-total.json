@@ -4,23 +4,34 @@
     "questions": [
       {
         "id": 1,
-        "type": "fill_blank",
+        "type": "multiple",
         "question": "Antes de las aplicaciones web, las aplicaciones requerían __ en cada dispositivo.",
-        "correct_answer": "instalación",
+        "options": [
+          { "text": "Instalación", "correct": true },
+          { "text": "Configuración", "correct": false },
+          { "text": "Registro", "correct": false },
+          { "text": "Actualización", "correct": false }
+        ],
         "feedback": "Antes de las aplicaciones web, las aplicaciones requerían instalación en cada dispositivo."
       },
       {
         "id": 2,
-        "type": "true_false",
+        "type": "multiple",
         "question": "En la arquitectura cliente-servidor, los clientes pueden conectarse a múltiples servidores al mismo tiempo.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. En la arquitectura cliente-servidor, los clientes pueden conectarse a múltiples servidores simultáneamente."
       },
       {
         "id": 3,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El remitente es quien hace la solicitud.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El remitente es quien inicia la comunicación haciendo la solicitud al servidor."
       },
       {
@@ -39,16 +50,22 @@
       },
       {
         "id": 5,
-        "type": "true_false",
+        "type": "multiple",
         "question": "TCP/IP es un solo protocolo que maneja exclusivamente la transferencia de archivos.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. TCP/IP es una suite de protocolos que maneja múltiples funciones de comunicación, no solo transferencia de archivos."
       },
       {
         "id": 6,
-        "type": "true_false",
+        "type": "multiple",
         "question": "En la capa de presentación se puede utilizar MySQL, JAVA y C++.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. MySQL es un sistema de gestión de bases de datos (capa de persistencia), no de presentación."
       },
       {
@@ -63,9 +80,12 @@
       },
       {
         "id": 8,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El alto consumo de recursos en el cliente es una de las desventajas de la arquitectura en 2 capas.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El alto consumo de recursos en el cliente es una desventaja de la arquitectura en 2 capas."
       },
       {
@@ -101,16 +121,22 @@
       },
       {
         "id": 11,
-        "type": "true_false",
+        "type": "multiple",
         "question": "En la arquitectura en 2 capas, la capa de presentación y lógica (P+L) es responsable de la gestión de datos.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. En la arquitectura en 2 capas, la gestión de datos está en la capa de datos, no en presentación y lógica."
       },
       {
         "id": 12,
-        "type": "true_false",
+        "type": "multiple",
         "question": "La dificultad para reutilizar la lógica en otras aplicaciones es una ventaja de la arquitectura en 2 capas.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. La dificultad para reutilizar la lógica es una desventaja, no una ventaja."
       },
       {
@@ -126,9 +152,12 @@
       },
       {
         "id": 14,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El alto consumo de recursos en el cliente es una de las desventajas de la arquitectura en 2 capas.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El alto consumo de recursos en el cliente es una desventaja de la arquitectura en 2 capas."
       },
       {
@@ -288,9 +317,12 @@
       },
       {
         "id": 25,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La arquitectura en 3 capas permite escalar mejor la aplicación?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La arquitectura en 3 capas permite escalar mejor la aplicación al separar las responsabilidades."
       },
       {
@@ -317,16 +349,22 @@
       },
       {
         "id": 28,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿Las aplicaciones en una arquitectura en 2 capas suelen ser monolíticas y fáciles de mantener?",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. Las aplicaciones en 2 capas suelen ser monolíticas pero NO son fáciles de mantener."
       },
       {
         "id": 29,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El modelo cliente/servidor involucra más de dos partes principales.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. El modelo cliente/servidor involucra exactamente dos partes principales: cliente y servidor."
       },
       {
@@ -386,9 +424,12 @@
       },
       {
         "id": 34,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El protocolo HTTPS se usa para conexiones seguras en aplicaciones web.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. HTTPS (HyperText Transfer Protocol Secure) se usa para conexiones seguras en aplicaciones web, cifrando la comunicación entre cliente y servidor."
       },
       {
@@ -447,16 +488,22 @@
       },
       {
         "id": 38,
-        "type": "true_false",
+        "type": "multiple",
         "question": "La arquitectura de un sistema solo se aplica a sistemas individuales, no a familias de sistemas.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. La arquitectura de un sistema puede aplicarse tanto a sistemas individuales como a familias de sistemas relacionados."
       },
       {
         "id": 39,
-        "type": "true_false",
+        "type": "multiple",
         "question": "Las aplicaciones web cada vez son más parecidas a las aplicaciones de escritorio.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. Las aplicaciones web modernas han evolucionado para ofrecer interfaces y funcionalidades muy similares a las aplicaciones de escritorio."
       },
       {
@@ -471,16 +518,22 @@
       },
       {
         "id": 41,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿El servidor en el modelo cliente/servidor responde proporcionando recursos o servicios necesarios?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El servidor responde a las solicitudes del cliente proporcionando los recursos o servicios necesarios."
       },
       {
         "id": 42,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La arquitectura en 3 capas facilita la reutilización del código?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La arquitectura en 3 capas facilita la reutilización del código al separar las responsabilidades en capas distintas."
       },
       {
@@ -499,9 +552,12 @@
       },
       {
         "id": 44,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿El modelo cliente/servidor se divide en dos partes principales?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El modelo cliente/servidor se divide en dos partes principales: el cliente y el servidor."
       },
       {
@@ -691,9 +747,12 @@
       },
       {
         "id": 55,
-        "type": "true_false",
+        "type": "multiple",
         "question": "SMTP sigue un modelo cliente-servidor para el envío de correos.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. SMTP (Simple Mail Transfer Protocol) sigue un modelo cliente-servidor para el envío de correos electrónicos."
       },
       {
@@ -730,16 +789,22 @@
       },
       {
         "id": 58,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La arquitectura en 3 capas independiza la lógica de negocio de la interfaz gráfica?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La arquitectura en 3 capas independiza la lógica de negocio de la interfaz gráfica, separando responsabilidades en capas distintas."
       },
       {
         "id": 59,
-        "type": "true_false",
+        "type": "multiple",
         "question": "Java (Spring Boot) es ideal para sistemas empresariales por su enfoque robusto y escalable.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. Java con Spring Boot es ideal para sistemas empresariales debido a su enfoque robusto, escalable y amplio ecosistema empresarial."
       },
       {
@@ -776,9 +841,12 @@
       },
       {
         "id": 62,
-        "type": "true_false",
+        "type": "multiple",
         "question": "La arquitectura cliente-servidor es poco utilizada en las páginas web.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. La arquitectura cliente-servidor es ampliamente utilizada en las páginas web, siendo la base fundamental de la comunicación en internet."
       },
       {
@@ -830,16 +898,22 @@
       },
       {
         "id": 66,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La capa de presentación y lógica maneja la interfaz de usuario y parte de la lógica del negocio?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. En la arquitectura de 2 capas, la capa de presentación y lógica maneja tanto la interfaz de usuario como parte de la lógica del negocio."
       },
       {
         "id": 67,
-        "type": "true_false",
+        "type": "multiple",
         "question": "La arquitectura en 2 capas se divide en tres partes.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. La arquitectura en 2 capas se divide en dos partes: presentación+lógica y datos."
       },
       {
@@ -855,9 +929,12 @@
       },
       {
         "id": 69,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La arquitectura en 3 capas mejora la separación de responsabilidades en comparación con la arquitectura en 2 capas?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La arquitectura en 3 capas mejora la separación de responsabilidades al dividir claramente presentación, lógica de negocio y datos."
       },
       {
@@ -932,23 +1009,32 @@
       },
       {
         "id": 75,
-        "type": "true_false",
+        "type": "multiple",
         "question": "El Servidor de aplicaciones también se le conoce como software intermedio.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El servidor de aplicaciones también se conoce como middleware o software intermedio, ya que actúa como intermediario entre la capa de presentación y la capa de datos."
       },
       {
         "id": 76,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿El modelo de contenido dinámico reduce la carga en los clientes?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. El modelo de contenido dinámico reduce la carga en los clientes al procesar la lógica en el servidor y enviar solo el contenido necesario."
       },
       {
         "id": 77,
-        "type": "true_false",
+        "type": "multiple",
         "question": "¿La distribución orientada al web distribuye dinámicamente el contenido?",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La distribución orientada al web distribuye dinámicamente el contenido según las necesidades y solicitudes del usuario."
       },
       {
@@ -964,16 +1050,22 @@
       },
       {
         "id": 79,
-        "type": "true_false",
+        "type": "multiple",
         "question": "En una arquitectura en 2 capas, la lógica de negocio puede ser fácilmente reutilizada en otras aplicaciones.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. En una arquitectura en 2 capas, la lógica de negocio está mezclada con la presentación, lo que dificulta su reutilización en otras aplicaciones."
       },
       {
         "id": 80,
-        "type": "true_false",
+        "type": "multiple",
         "question": "Las aplicaciones web requieren instalación en cada dispositivo.",
-        "correct": false,
+        "options": [
+          { "text": "Verdadero", "correct": false },
+          { "text": "Falso", "correct": true }
+        ],
         "feedback": "Falso. Las aplicaciones web NO requieren instalación en cada dispositivo, ya que se ejecutan directamente en el navegador web."
       },
       {
@@ -1008,9 +1100,12 @@
       },
       {
         "id": 83,
-        "type": "true_false",
+        "type": "multiple",
         "question": "La personalización de la interfaz es una característica de las aplicaciones web.",
-        "correct": true,
+        "options": [
+          { "text": "Verdadero", "correct": true },
+          { "text": "Falso", "correct": false }
+        ],
         "feedback": "Verdadero. La personalización de la interfaz es una característica importante de las aplicaciones web modernas, permitiendo adaptar la experiencia del usuario."
       },
       {
