@@ -2065,6 +2065,217 @@
           }
         ],
         "feedback": "El Arduino UNO WiFi REV2 utiliza el microcontrolador ATMEGA4809, una versión más avanzada que el ATmega328P tradicional, con WiFi integrado."
+      },
+      {
+        "id": 101,
+        "type": "multiple",
+        "question": "¿Cómo se identifican los pines que tienen permitido ser controlados por ancho de pulso?",
+        "options": [
+          { "text": "Con el símbolo ~", "correct": true },
+          { "text": "Con la letra A", "correct": false },
+          { "text": "Con un asterisco *", "correct": false },
+          { "text": "Con la letra P", "correct": false }
+        ],
+        "feedback": "Los pines PWM en Arduino se identifican con el símbolo ~ (tilde) junto al número del pin en la placa."
+      },
+      {
+        "id": 102,
+        "type": "multiple",
+        "question": "¿Cuál es el conector mediante el cual se puede alimentar el Arduino UNO R3?",
+        "options": [
+          { "text": "USB", "correct": true },
+          { "text": "Ethernet", "correct": false },
+          { "text": "HDMI", "correct": false },
+          { "text": "VGA", "correct": false }
+        ],
+        "feedback": "El Arduino UNO R3 puede alimentarse a través del conector USB, además del jack de alimentación externa."
+      },
+      {
+        "id": 103,
+        "type": "multiple",
+        "question": "¿Cuál es la corriente máxima para el pin de 3.3V del Arduino UNO R3?",
+        "options": [
+          { "text": "50 mA", "correct": true },
+          { "text": "100 mA", "correct": false },
+          { "text": "200 mA", "correct": false },
+          { "text": "500 mA", "correct": false }
+        ],
+        "feedback": "El pin de 3.3V del Arduino UNO R3 puede suministrar un máximo de 50 mA de corriente."
+      },
+      {
+        "id": 104,
+        "type": "multiple",
+        "question": "¿Cuál sería el valor de una resistencia limitadora de corriente para un led con caída de voltaje 1.4 V y corriente de 10 mA alimentado a 5V?",
+        "options": [
+          { "text": "360 Ohms", "correct": true },
+          { "text": "220 Ohms", "correct": false },
+          { "text": "470 Ohms", "correct": false },
+          { "text": "150 Ohms", "correct": false }
+        ],
+        "feedback": "Usando la ley de Ohm: R = (5V - 1.4V) / 0.01A = 3.6V / 0.01A = 360 Ohms."
+      },
+      {
+        "id": 105,
+        "type": "multiple",
+        "question": "¿De qué rango suele ser la corriente de los zumbadores?",
+        "options": [
+          { "text": "Menos de 10 mA", "correct": true },
+          { "text": "10-50 mA", "correct": false },
+          { "text": "50-100 mA", "correct": false },
+          { "text": "Más de 100 mA", "correct": false }
+        ],
+        "feedback": "Los zumbadores típicamente consumen menos de 10 mA de corriente, siendo dispositivos de bajo consumo."
+      },
+      {
+        "id": 106,
+        "type": "multiple",
+        "question": "¿De qué tipo de periférico son los sensores fotoeléctricos?",
+        "options": [
+          { "text": "Entrada", "correct": true },
+          { "text": "Salida", "correct": false },
+          { "text": "Bidireccional", "correct": false },
+          { "text": "Alimentación", "correct": false }
+        ],
+        "feedback": "Los sensores fotoeléctricos son periféricos de entrada que detectan luz y envían señales al microcontrolador."
+      },
+      {
+        "id": 107,
+        "type": "multiple",
+        "question": "¿En el plug de alimentación externa qué polaridad tiene la terminal central?",
+        "options": [
+          { "text": "Positiva", "correct": true },
+          { "text": "Negativa", "correct": false },
+          { "text": "Neutra", "correct": false },
+          { "text": "Variable", "correct": false }
+        ],
+        "feedback": "En el conector de alimentación externa del Arduino, la terminal central tiene polaridad positiva."
+      },
+      {
+        "id": 108,
+        "type": "boolean",
+        "question": "¿Los pines analógicos del Arduino UNO R3 son de entrada?",
+        "correct": true,
+        "feedback": "Verdadero. Los pines analógicos del Arduino UNO R3 están configurados como entradas para leer señales analógicas."
+      },
+      {
+        "id": 109,
+        "type": "multiple",
+        "question": "¿Qué significa UART en los pines del Arduino UNO R3?",
+        "options": [
+          {
+            "text": "Universal Asynchronous Receiver-Transmitter",
+            "correct": true
+          },
+          { "text": "Referencia analógica", "correct": false },
+          { "text": "Unidad aritmética", "correct": false },
+          { "text": "Alimentación universal", "correct": false }
+        ],
+        "feedback": "UART significa Universal Asynchronous Receiver-Transmitter, protocolo de comunicación serie utilizado en los pines 0 y 1."
+      },
+      {
+        "id": 110,
+        "type": "multiple",
+        "question": "¿Con qué número están identificados los pines I/O digitales del Arduino UNO R3?",
+        "options": [
+          { "text": "0-13", "correct": true },
+          { "text": "1-14", "correct": false },
+          { "text": "A0-A13", "correct": false },
+          { "text": "D0-D13", "correct": false }
+        ],
+        "feedback": "Los pines digitales de entrada/salida del Arduino UNO R3 están numerados del 0 al 13."
+      },
+      {
+        "id": 111,
+        "type": "multiple",
+        "question": "¿Cuál es la terminal de un LED ubicada en el borde más largo?",
+        "options": [
+          { "text": "Ánodo", "correct": true },
+          { "text": "Cátodo", "correct": false },
+          { "text": "Base", "correct": false },
+          { "text": "Emisor", "correct": false }
+        ],
+        "feedback": "En un LED, la terminal más larga corresponde al ánodo (terminal positiva)."
+      },
+      {
+        "id": 112,
+        "type": "multiple",
+        "question": "¿Cuál sería el valor de una resistencia limitadora de corriente para un led con caída de voltaje 1.2 V y corriente de 10 mA alimentado a 5V?",
+        "options": [
+          { "text": "380 Ohms", "correct": true },
+          { "text": "220 Ohms", "correct": false },
+          { "text": "470 Ohms", "correct": false },
+          { "text": "150 Ohms", "correct": false }
+        ],
+        "feedback": "Usando la ley de Ohm: R = (5V - 1.2V) / 0.01A = 3.8V / 0.01A = 380 Ohms."
+      },
+      {
+        "id": 113,
+        "type": "multiple",
+        "question": "¿Cuál suele ser el voltaje de operación de los zumbadores?",
+        "options": [
+          { "text": "3 a 16 V", "correct": true },
+          { "text": "1 a 3 V", "correct": false },
+          { "text": "5 V únicamente", "correct": false },
+          { "text": "12 V únicamente", "correct": false }
+        ],
+        "feedback": "Los zumbadores típicamente operan en un rango de voltaje de 3 a 16 V, siendo muy versátiles en su alimentación."
+      },
+      {
+        "id": 114,
+        "type": "multiple",
+        "question": "¿Cuántos pines de tierra tienen las conexiones de 6 pines del Arduino UNO R3?",
+        "options": [
+          { "text": "2", "correct": true },
+          { "text": "1", "correct": false },
+          { "text": "3", "correct": false },
+          { "text": "4", "correct": false }
+        ],
+        "feedback": "En las conexiones de alimentación de 6 pines del Arduino UNO R3, hay 2 pines de tierra (GND) disponibles."
+      },
+      {
+        "id": 115,
+        "type": "boolean",
+        "question": "¿Cuenta el Arduino UNO R3 con un regulador de voltaje de 5V?",
+        "correct": true,
+        "feedback": "Verdadero. El Arduino UNO R3 incluye un regulador de voltaje que proporciona 5V estables para el funcionamiento del microcontrolador y los pines."
+      },
+      {
+        "id": 116,
+        "type": "multiple",
+        "question": "¿Dónde se configuran los pines analógicos del Arduino UNO R3?",
+        "options": [
+          { "text": "No requieren configuración", "correct": true },
+          { "text": "En el setup()", "correct": false },
+          { "text": "En el loop()", "correct": false },
+          { "text": "Con pinMode()", "correct": false }
+        ],
+        "feedback": "Los pines analógicos del Arduino UNO R3 no requieren configuración previa, están listos para usar con analogRead()."
+      },
+      {
+        "id": 117,
+        "type": "boolean",
+        "question": "¿Los Display requieren resistencias limitadoras de corriente?",
+        "correct": true,
+        "feedback": "Verdadero. Los displays, especialmente los de 7 segmentos con LEDs, requieren resistencias limitadoras para proteger tanto el display como los pines del Arduino."
+      },
+      {
+        "id": 118,
+        "type": "boolean",
+        "question": "¿Los pines analógicos del Arduino UNO R3 son de salida?",
+        "correct": false,
+        "feedback": "Falso. Los pines analógicos del Arduino UNO R3 están diseñados principalmente como entradas para leer señales analógicas, aunque pueden usarse como digitales."
+      },
+      {
+        "id": 119,
+        "type": "multiple",
+        "question": "¿Qué tipo de carga manejan los optoacopladores?",
+        "options": [
+          { "text": "Pequeña", "correct": true },
+          { "text": "Grande", "correct": false },
+          { "text": "Media", "correct": false },
+          { "text": "Industrial", "correct": false }
+        ],
+        "feedback": "Los optoacopladores típicamente manejan cargas pequeñas, siendo dispositivos de aislamiento y control de señales de baja potencia."
       }
     ]
   }
