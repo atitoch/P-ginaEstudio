@@ -797,6 +797,126 @@
           }
         ],
         "feedback": "En una celda de carga, las galgas extensiométricas se montan estratégicamente en un cuerpo cúbico, una en cada cara perpendicular a la superficie de apoyo. Las galgas en caras opuestas se orientan en la misma dirección, mientras que las de caras contiguas se rotan 90° entre sí. Esta configuración permite detectar fuerzas en múltiples direcciones y compensar efectos térmicos y mecánicos no deseados."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Qué tipo de sensor de flujo utiliza un obstructor para medir la diferencia de presión antes y después de él?",
+        "options": [
+          { "text": "Sensor de presión diferencial", "correct": true },
+          { "text": "Sensor de diagramas de flujo", "correct": false },
+          { "text": "Sensor de presion atmosferica", "correct": false },
+          { "text": "Sensor de aire", "correct": false }
+        ],
+        "feedback": "El sensor de presión diferencial utiliza un obstructor (como un orificio, venturi o placa de orificio) en el flujo para crear una diferencia de presión antes y después del obstáculo. Esta diferencia de presión es proporcional al caudal del fluido, permitiendo medir el flujo de manera precisa."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Qué permite la realimentación en un amplificador diferencial?",
+        "options": [
+          {
+            "text": "Controlar la ganancia para evitar la saturación",
+            "correct": true
+          },
+          {
+            "text": "Eliminar la necesidad de una fuente de alimentación",
+            "correct": false
+          },
+          { "text": "Aumentar la impedancia de salida", "correct": false },
+          { "text": "Reducir la corriente de polarización", "correct": false }
+        ],
+        "feedback": "La realimentación en un amplificador diferencial permite controlar la ganancia para evitar la saturación. Al crear un lazo de retroalimentación negativa, se establece una ganancia controlada y estable, evitando que el amplificador se sature y manteniendo la operación en la región lineal."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Cuál es la resistencia típica de una celda de carga con dos vigas?",
+        "options": [
+          { "text": "350 Ω.", "correct": true },
+          { "text": "150 Ω.", "correct": false },
+          { "text": "500 Ω.", "correct": false },
+          { "text": "1000 Ω.", "correct": false }
+        ],
+        "feedback": "La resistencia típica de una celda de carga con dos vigas es de 350 Ω. Esta es la resistencia estándar más común en las celdas de carga comerciales, aunque también existen variantes de 120 Ω y 1000 Ω dependiendo de la aplicación específica."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Cómo se llaman los circuitos que realizan la conversión de una señal continua en una forma discreta o digital?",
+        "options": [
+          { "text": "Convertidores", "correct": true },
+          { "text": "Filtros", "correct": false },
+          { "text": "Amplificadores", "correct": false },
+          { "text": "Acondicionadores de señal", "correct": false }
+        ],
+        "feedback": "Los convertidores son los circuitos que realizan la conversión de una señal continua (analógica) en una forma discreta o digital. Específicamente, los convertidores analógico-digitales (ADC) toman señales analógicas continuas y las transforman en valores digitales discretos que pueden ser procesados por sistemas digitales como microcontroladores."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "¿Por qué los seguidores de voltaje son útiles a pesar de no amplificar la señal?",
+        "options": [
+          {
+            "text": "Porque su elevada impedancia de entrada anula los efectos de carga y aíslan la señal de salida respecto a la de entrada",
+            "correct": true
+          },
+          {
+            "text": "Porque amplifican la señal de manera significativa",
+            "correct": false
+          },
+          { "text": "Porque reducen el voltaje de la señal", "correct": false },
+          {
+            "text": "Porque aumentan la frecuencia de la señal",
+            "correct": false
+          }
+        ],
+        "feedback": "Los seguidores de voltaje son útiles a pesar de no amplificar la señal porque su elevada impedancia de entrada anula los efectos de carga y aíslan la señal de salida respecto a la de entrada. Esto permite que actúen como buffers, protegiendo la fuente de señal de la carga y proporcionando acoplamiento de impedancia entre etapas de circuitos."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Cuál es la función principal de un acondicionador de señal?",
+        "options": [
+          {
+            "text": "Modificar la señal de entrada para que sea compatible con el sistema de adquisición de datos.",
+            "correct": true
+          },
+          { "text": "Almacenar datos en una memoria RAM.", "correct": false },
+          {
+            "text": "Regular la temperatura de un sistema electrónico.",
+            "correct": false
+          },
+          {
+            "text": "Encender y apagar un circuito eléctrico.",
+            "correct": false
+          }
+        ],
+        "feedback": "La función principal de un acondicionador de señal es modificar la señal de entrada para que sea compatible con el sistema de adquisición de datos. Esto incluye amplificación, filtrado, aislamiento, linealización y conversión de niveles de voltaje, asegurando que la señal sea adecuada para su procesamiento por el sistema receptor."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Qué tipo de sensor de color utiliza filtros para detectar el color de un objeto?",
+        "options": [
+          { "text": "Basados en filtros", "correct": true },
+          { "text": "Fotodiodos", "correct": false },
+          { "text": "Basados en fuentes de luz fija", "correct": false },
+          { "text": "Fotoresistencias", "correct": false }
+        ],
+        "feedback": "Los sensores de color basados en filtros utilizan filtros ópticos específicos (generalmente RGB o de diferentes longitudes de onda) para detectar selectivamente diferentes componentes de color del objeto. Estos filtros permiten que solo ciertas longitudes de onda de luz pasen al detector, permitiendo la identificación precisa del color."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuál es una ventaja de los circuitos de linealización de puentes resistivos?",
+        "options": [
+          { "text": "Salida lineal y amplificada", "correct": true },
+          { "text": "Generan calor para soldadura", "correct": false },
+          { "text": "Funcionan como baterías recargables", "correct": false },
+          { "text": "Permiten comunicación inalámbrica", "correct": false }
+        ],
+        "feedback": "Una ventaja clave de los circuitos de linealización de puentes resistivos es que proporcionan una salida lineal y amplificada. Estos circuitos convierten las pequeñas variaciones de resistencia en el puente en señales de voltaje lineales y de mayor magnitud, facilitando el procesamiento y medición precisa de variables físicas como fuerza, presión o deformación."
       }
     ]
   }
