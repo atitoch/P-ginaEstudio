@@ -385,6 +385,41 @@
           { "text": "Transformadores de distribución", "correct": false }
         ],
         "feedback": "Los relés de estado sólido están diseñados para aplicaciones de potencias más bajas comparados con otros dispositivos de conmutación industrial."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "Componente principal del relé magnetotérmico que se calienta por el efecto térmico y se deforma",
+        "options": [
+          { "text": "Lámina Bimetálica", "correct": true },
+          { "text": "Bobina", "correct": false },
+          { "text": "Contactos", "correct": false },
+          { "text": "Resistencia", "correct": false }
+        ],
+        "feedback": "La lámina bimetálica es el componente principal del relé magnetotérmico que se calienta por el efecto térmico y se deforma para abrir o cerrar el circuito."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "Parte del motor que alberga los polos magnéticos que generan el campo magnético",
+        "options": [
+          { "text": "Estator", "correct": true },
+          { "text": "Rotor", "correct": false },
+          { "text": "Bobina", "correct": false },
+          { "text": "Conmutador", "correct": false }
+        ],
+        "feedback": "El estator es la parte del motor que alberga los polos magnéticos que generan el campo magnético necesario para el funcionamiento del motor."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "Son dispositivos pensados para potencias más bajas",
+        "options": [
+          { "text": "Relés ", "correct": true },
+          { "text": "Contactores industriales", "correct": false },
+          { "text": "Interruptores de potencia", "correct": false },
+          { "text": "Transformadores de distribución", "correct": false }
+        ]
       }
     ]
   }
