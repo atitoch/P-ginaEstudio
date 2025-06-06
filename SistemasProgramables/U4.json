@@ -1,0 +1,1209 @@
+{
+  "quiz": {
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple",
+        "question": "¿Cuál es el tipo de dato correcto para almacenar un número entero en Arduino?",
+        "options": [
+          { "text": "int", "correct": true },
+          { "text": "float", "correct": false },
+          { "text": "String", "correct": false },
+          { "text": "char", "correct": false }
+        ],
+        "feedback": "El tipo de dato 'int' se utiliza para almacenar números enteros en Arduino, como por ejemplo: int numero = 10;"
+      },
+      {
+        "id": 2,
+        "type": "multiple",
+        "question": "¿Qué función se ejecuta una sola vez al inicio del programa en Arduino?",
+        "options": [
+          { "text": "setup()", "correct": true },
+          { "text": "loop()", "correct": false },
+          { "text": "begin()", "correct": false },
+          { "text": "start()", "correct": false }
+        ],
+        "feedback": "La función setup() se ejecuta una sola vez al inicio del programa y se utiliza para configuraciones iniciales como pinMode() y Serial.begin()."
+      },
+      {
+        "id": 3,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia entre Serial.print() y Serial.println()?",
+        "options": [
+          {
+            "text": "println() añade un salto de línea al final",
+            "correct": true
+          },
+          { "text": "print() es más rápido que println()", "correct": false },
+          { "text": "println() solo imprime números", "correct": false },
+          { "text": "No hay diferencia", "correct": false }
+        ],
+        "feedback": "Serial.println() añade un salto de línea al final del texto, mientras que Serial.print() imprime el texto sin salto de línea."
+      },
+      {
+        "id": 4,
+        "type": "multiple",
+        "question": "¿Qué palabra clave se usa para declarar una variable que no puede cambiar su valor?",
+        "options": [
+          { "text": "const", "correct": true },
+          { "text": "static", "correct": false },
+          { "text": "final", "correct": false },
+          { "text": "readonly", "correct": false }
+        ],
+        "feedback": "La palabra clave 'const' se utiliza para declarar constantes que no pueden cambiar su valor durante la ejecución del programa, como: const int PIN_LED = 13;"
+      },
+      {
+        "id": 5,
+        "type": "multiple",
+        "question": "¿Cuál es el rango de valores para analogWrite() en Arduino?",
+        "options": [
+          { "text": "0-255", "correct": true },
+          { "text": "0-1023", "correct": false },
+          { "text": "0-100", "correct": false },
+          { "text": "0-5", "correct": false }
+        ],
+        "feedback": "analogWrite() usa PWM y acepta valores de 0 a 255, donde 0 es 0% de ciclo de trabajo y 255 es 100%."
+      },
+      {
+        "id": 6,
+        "type": "multiple",
+        "question": "¿Qué función configura un pin como entrada en Arduino?",
+        "options": [
+          { "text": "pinMode(pin, INPUT)", "correct": true },
+          { "text": "setInput(pin)", "correct": false },
+          { "text": "configPin(pin, INPUT)", "correct": false },
+          { "text": "digitalInput(pin)", "correct": false }
+        ],
+        "feedback": "pinMode(pin, INPUT) configura un pin específico como entrada para poder leer señales digitales con digitalRead()."
+      },
+      {
+        "id": 7,
+        "type": "multiple",
+        "question": "¿Cuál es la estructura correcta de un bucle for en Arduino?",
+        "options": [
+          { "text": "for (int i = 0; i < 10; i++)", "correct": true },
+          { "text": "for (i = 0 to 10)", "correct": false },
+          { "text": "for i in range(10)", "correct": false },
+          { "text": "for (i = 0; i <= 10; i--)", "correct": false }
+        ],
+        "feedback": "La estructura correcta del bucle for es: for (inicialización; condición; incremento), como for (int i = 0; i < 10; i++)."
+      },
+      {
+        "id": 8,
+        "type": "multiple",
+        "question": "¿Qué operador se usa para comparar si dos valores son iguales?",
+        "options": [
+          { "text": "==", "correct": true },
+          { "text": "=", "correct": false },
+          { "text": "!=", "correct": false },
+          { "text": ">=", "correct": false }
+        ],
+        "feedback": "El operador '==' se usa para comparar igualdad, mientras que '=' se usa para asignación de variables."
+      },
+      {
+        "id": 9,
+        "type": "multiple",
+        "question": "¿Qué función devuelve el tiempo transcurrido desde que se encendió el Arduino?",
+        "options": [
+          { "text": "millis()", "correct": true },
+          { "text": "delay()", "correct": false },
+          { "text": "timer()", "correct": false },
+          { "text": "clock()", "correct": false }
+        ],
+        "feedback": "millis() devuelve el número de milisegundos transcurridos desde que se encendió el Arduino o se reinició el programa."
+      },
+      {
+        "id": 10,
+        "type": "multiple",
+        "question": "¿Cuál es el rango de valores que devuelve analogRead()?",
+        "options": [
+          { "text": "0-1023", "correct": true },
+          { "text": "0-255", "correct": false },
+          { "text": "0-100", "correct": false },
+          { "text": "0-5", "correct": false }
+        ],
+        "feedback": "analogRead() devuelve valores de 0 a 1023, representando el voltaje de entrada de 0V a 5V (o 3.3V según el modelo)."
+      },
+      {
+        "id": 11,
+        "type": "true_false",
+        "question": "La función loop() se ejecuta continuamente después de setup().",
+        "correct": true,
+        "feedback": "Verdadero. Después de ejecutarse setup() una vez, la función loop() se ejecuta repetidamente de forma continua."
+      },
+      {
+        "id": 12,
+        "type": "multiple",
+        "question": "¿Qué directiva se usa para incluir una librería en Arduino?",
+        "options": [
+          { "text": "#include", "correct": true },
+          { "text": "import", "correct": false },
+          { "text": "using", "correct": false },
+          { "text": "require", "correct": false }
+        ],
+        "feedback": "La directiva #include se usa para incluir librerías, como #include <Servo.h> para usar servomotores."
+      },
+      {
+        "id": 13,
+        "type": "multiple",
+        "question": "¿Cuál es la sintaxis correcta para una condición if-else?",
+        "options": [
+          { "text": "if (condicion) { } else { }", "correct": true },
+          { "text": "if condicion then else", "correct": false },
+          { "text": "if (condicion): else:", "correct": false },
+          { "text": "if condicion { } otherwise { }", "correct": false }
+        ],
+        "feedback": "La sintaxis correcta es if (condicion) { código } else { código alternativo }, usando llaves para delimitar los bloques de código."
+      },
+      {
+        "id": 14,
+        "type": "multiple",
+        "question": "¿Qué tipo de dato se usa para almacenar texto en Arduino?",
+        "options": [
+          { "text": "String", "correct": true },
+          { "text": "text", "correct": false },
+          { "text": "varchar", "correct": false },
+          { "text": "str", "correct": false }
+        ],
+        "feedback": "String se usa para almacenar cadenas de texto, como String texto = \"Hola mundo\";"
+      },
+      {
+        "id": 15,
+        "type": "multiple",
+        "question": "¿Qué función pausa la ejecución del programa por un tiempo determinado?",
+        "options": [
+          { "text": "delay()", "correct": true },
+          { "text": "wait()", "correct": false },
+          { "text": "pause()", "correct": false },
+          { "text": "sleep()", "correct": false }
+        ],
+        "feedback": "delay() pausa la ejecución del programa por el número de milisegundos especificado, como delay(1000) para 1 segundo."
+      },
+      {
+        "id": 16,
+        "type": "multiple",
+        "question": "¿Qué valor se debe usar con digitalWrite() para enviar una señal alta?",
+        "options": [
+          { "text": "HIGH", "correct": true },
+          { "text": "1", "correct": false },
+          { "text": "TRUE", "correct": false },
+          { "text": "ON", "correct": false }
+        ],
+        "feedback": "digitalWrite() usa los valores HIGH y LOW para enviar señales digitales. HIGH representa 5V (o 3.3V) y LOW representa 0V."
+      },
+      {
+        "id": 17,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad de comunicación más común para Serial.begin()?",
+        "options": [
+          { "text": "9600", "correct": true },
+          { "text": "115200", "correct": false },
+          { "text": "57600", "correct": false },
+          { "text": "38400", "correct": false }
+        ],
+        "feedback": "9600 baudios es la velocidad más común y estándar para Serial.begin() en proyectos básicos de Arduino."
+      },
+      {
+        "id": 18,
+        "type": "true_false",
+        "question": "El tipo de dato 'bool' solo puede almacenar los valores true o false.",
+        "correct": true,
+        "feedback": "Verdadero. El tipo bool es booleano y solo puede contener dos valores: true (verdadero) o false (falso)."
+      },
+      {
+        "id": 19,
+        "type": "multiple",
+        "question": "¿Qué operador se usa para el 'Y lógico' en condiciones?",
+        "options": [
+          { "text": "&&", "correct": true },
+          { "text": "||", "correct": false },
+          { "text": "&", "correct": false },
+          { "text": "AND", "correct": false }
+        ],
+        "feedback": "El operador && representa el 'Y lógico' (AND), devuelve true solo si ambas condiciones son verdaderas."
+      },
+      {
+        "id": 20,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia entre delayMicroseconds() y delay()?",
+        "options": [
+          {
+            "text": "delayMicroseconds() pausa en microsegundos, delay() en milisegundos",
+            "correct": true
+          },
+          { "text": "No hay diferencia", "correct": false },
+          { "text": "delayMicroseconds() es más preciso", "correct": false },
+          {
+            "text": "delay() es para bucles, delayMicroseconds() para funciones",
+            "correct": false
+          }
+        ],
+        "feedback": "delayMicroseconds() pausa la ejecución en microsegundos (millonésimas de segundo), mientras que delay() lo hace en milisegundos (milésimas de segundo)."
+      },
+      {
+        "id": 21,
+        "type": "multiple",
+        "question": "¿Qué tipo de dato se usa para almacenar un solo carácter?",
+        "options": [
+          { "text": "char", "correct": true },
+          { "text": "String", "correct": false },
+          { "text": "character", "correct": false },
+          { "text": "letter", "correct": false }
+        ],
+        "feedback": "El tipo 'char' almacena un solo carácter, como char letra = 'A'; usando comillas simples."
+      },
+      {
+        "id": 22,
+        "type": "multiple",
+        "question": "¿Cuál es la estructura correcta de un bucle while?",
+        "options": [
+          { "text": "while (condicion) { }", "correct": true },
+          { "text": "while condicion do { }", "correct": false },
+          { "text": "while (condicion): { }", "correct": false },
+          { "text": "while condicion then { }", "correct": false }
+        ],
+        "feedback": "La estructura correcta es while (condicion) { código }, el código se ejecuta mientras la condición sea verdadera."
+      },
+      {
+        "id": 23,
+        "type": "multiple",
+        "question": "¿Qué función verifica si hay datos disponibles en el puerto serie?",
+        "options": [
+          { "text": "Serial.available()", "correct": true },
+          { "text": "Serial.ready()", "correct": false },
+          { "text": "Serial.check()", "correct": false },
+          { "text": "Serial.hasData()", "correct": false }
+        ],
+        "feedback": "Serial.available() devuelve el número de bytes disponibles para leer en el buffer del puerto serie."
+      },
+      {
+        "id": 24,
+        "type": "multiple",
+        "question": "¿Qué palabra clave se usa en switch para salir de un caso?",
+        "options": [
+          { "text": "break", "correct": true },
+          { "text": "exit", "correct": false },
+          { "text": "return", "correct": false },
+          { "text": "end", "correct": false }
+        ],
+        "feedback": "La palabra 'break' se usa para salir de un caso en switch y evitar que se ejecuten los casos siguientes."
+      },
+      {
+        "id": 25,
+        "type": "true_false",
+        "question": "pinMode() debe llamarse en la función setup() para configurar los pines.",
+        "correct": true,
+        "feedback": "Verdadero. pinMode() generalmente se llama en setup() para configurar los pines como INPUT u OUTPUT antes de usarlos."
+      },
+      {
+        "id": 26,
+        "type": "multiple",
+        "question": "¿Qué operador se usa para 'diferente de' en comparaciones?",
+        "options": [
+          { "text": "!=", "correct": true },
+          { "text": "<>", "correct": false },
+          { "text": "=/=", "correct": false },
+          { "text": "!==", "correct": false }
+        ],
+        "feedback": "El operador != se usa para verificar si dos valores son diferentes o no iguales."
+      },
+      {
+        "id": 27,
+        "type": "multiple",
+        "question": "¿Cuál es la función correcta para leer una cadena completa del puerto serie?",
+        "options": [
+          { "text": "Serial.readString()", "correct": true },
+          { "text": "Serial.getString()", "correct": false },
+          { "text": "Serial.readLine()", "correct": false },
+          { "text": "Serial.readText()", "correct": false }
+        ],
+        "feedback": "Serial.readString() lee y devuelve una cadena completa del puerto serie hasta encontrar un carácter de terminación."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "¿Qué librería se incluye para usar servomotores?",
+        "options": [
+          { "text": "Servo.h", "correct": true },
+          { "text": "Motor.h", "correct": false },
+          { "text": "Stepper.h", "correct": false },
+          { "text": "Engine.h", "correct": false }
+        ],
+        "feedback": "La librería Servo.h se incluye con #include <Servo.h> para controlar servomotores en Arduino."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "¿Qué función devuelve el tiempo en microsegundos desde el inicio?",
+        "options": [
+          { "text": "micros()", "correct": true },
+          { "text": "millis()", "correct": false },
+          { "text": "timer()", "correct": false },
+          { "text": "microseconds()", "correct": false }
+        ],
+        "feedback": "micros() devuelve el tiempo transcurrido en microsegundos desde que se encendió el Arduino."
+      },
+      {
+        "id": 30,
+        "type": "true_false",
+        "question": "Un bucle do-while se ejecuta al menos una vez, incluso si la condición es falsa.",
+        "correct": true,
+        "feedback": "Verdadero. En do-while, el código se ejecuta primero y luego se evalúa la condición, garantizando al menos una ejecución."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "¿Qué función se usa para inicializar una pantalla LCD en Arduino?",
+        "options": [
+          { "text": "lcd.begin(columnas, filas)", "correct": true },
+          { "text": "lcd.init(columnas, filas)", "correct": false },
+          { "text": "lcd.start(columnas, filas)", "correct": false },
+          { "text": "lcd.setup(columnas, filas)", "correct": false }
+        ],
+        "feedback": "lcd.begin(columnas, filas) inicializa la pantalla LCD especificando el número de columnas y filas disponibles."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "¿Cómo se posiciona el cursor en una ubicación específica del LCD?",
+        "options": [
+          { "text": "lcd.setCursor(columna, fila)", "correct": true },
+          { "text": "lcd.moveTo(columna, fila)", "correct": false },
+          { "text": "lcd.position(columna, fila)", "correct": false },
+          { "text": "lcd.goto(columna, fila)", "correct": false }
+        ],
+        "feedback": "lcd.setCursor(columna, fila) posiciona el cursor en la columna y fila especificadas, donde (0,0) es la esquina superior izquierda."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "¿Qué función limpia completamente la pantalla LCD?",
+        "options": [
+          { "text": "lcd.clear()", "correct": true },
+          { "text": "lcd.erase()", "correct": false },
+          { "text": "lcd.delete()", "correct": false },
+          { "text": "lcd.reset()", "correct": false }
+        ],
+        "feedback": "lcd.clear() borra todo el contenido de la pantalla LCD y posiciona el cursor en (0,0)."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia entre lcd.display() y lcd.noDisplay()?",
+        "options": [
+          {
+            "text": "display() enciende el LCD, noDisplay() lo apaga",
+            "correct": true
+          },
+          {
+            "text": "display() muestra texto, noDisplay() borra texto",
+            "correct": false
+          },
+          {
+            "text": "display() es más rápido que noDisplay()",
+            "correct": false
+          },
+          { "text": "No hay diferencia", "correct": false }
+        ],
+        "feedback": "lcd.display() enciende la pantalla LCD mostrando el contenido, mientras que lcd.noDisplay() apaga la pantalla pero conserva el contenido en memoria."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cómo se inicializa la comunicación Bluetooth en Arduino?",
+        "options": [
+          { "text": "bluetooth.begin(velocidad)", "correct": true },
+          { "text": "bluetooth.start(velocidad)", "correct": false },
+          { "text": "bluetooth.init(velocidad)", "correct": false },
+          { "text": "bluetooth.connect(velocidad)", "correct": false }
+        ],
+        "feedback": "bluetooth.begin(velocidad) inicializa la comunicación Bluetooth con la velocidad especificada, típicamente 9600 baudios."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Qué función verifica si hay datos disponibles en el módulo Bluetooth?",
+        "options": [
+          { "text": "bluetooth.available()", "correct": true },
+          { "text": "bluetooth.ready()", "correct": false },
+          { "text": "bluetooth.hasData()", "correct": false },
+          { "text": "bluetooth.check()", "correct": false }
+        ],
+        "feedback": "bluetooth.available() devuelve el número de bytes disponibles para leer en el buffer del módulo Bluetooth."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿Cuál es la función correcta para leer una cadena completa vía Bluetooth?",
+        "options": [
+          { "text": "bluetooth.readString()", "correct": true },
+          { "text": "bluetooth.getString()", "correct": false },
+          { "text": "bluetooth.readLine()", "correct": false },
+          { "text": "bluetooth.readText()", "correct": false }
+        ],
+        "feedback": "bluetooth.readString() lee y devuelve una cadena completa del módulo Bluetooth hasta encontrar un carácter de terminación."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "¿Qué comando AT se usa para verificar la comunicación con el módulo HC-05?",
+        "options": [
+          { "text": "AT", "correct": true },
+          { "text": "AT+TEST", "correct": false },
+          { "text": "AT+OK", "correct": false },
+          { "text": "AT+CHECK", "correct": false }
+        ],
+        "feedback": "El comando AT básico se usa para verificar que la comunicación con el módulo HC-05 esté funcionando correctamente."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "¿Cómo se cambia el nombre del módulo Bluetooth HC-05?",
+        "options": [
+          { "text": "AT+NAME=NuevoNombre", "correct": true },
+          { "text": "AT+SETNAME=NuevoNombre", "correct": false },
+          { "text": "AT+RENAME=NuevoNombre", "correct": false },
+          { "text": "AT+CHANGENAME=NuevoNombre", "correct": false }
+        ],
+        "feedback": "AT+NAME=NuevoNombre cambia el nombre del módulo HC-05 que aparecerá cuando otros dispositivos busquen conexiones Bluetooth."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "¿Qué función muestra el cursor en la pantalla LCD?",
+        "options": [
+          { "text": "lcd.cursor()", "correct": true },
+          { "text": "lcd.showCursor()", "correct": false },
+          { "text": "lcd.displayCursor()", "correct": false },
+          { "text": "lcd.enableCursor()", "correct": false }
+        ],
+        "feedback": "lcd.cursor() hace visible el cursor en la pantalla LCD, mientras que lcd.noCursor() lo oculta."
+      },
+      {
+        "id": 41,
+        "type": "true_false",
+        "question": "La función lcd.home() posiciona el cursor en la esquina superior izquierda del LCD.",
+        "correct": true,
+        "feedback": "Verdadero. lcd.home() mueve el cursor a la posición (0,0), que es la esquina superior izquierda de la pantalla LCD."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "¿Qué comando AT configura la contraseña del módulo HC-05?",
+        "options": [
+          { "text": "AT+PSWD=1234", "correct": true },
+          { "text": "AT+PASSWORD=1234", "correct": false },
+          { "text": "AT+PIN=1234", "correct": false },
+          { "text": "AT+PASS=1234", "correct": false }
+        ],
+        "feedback": "AT+PSWD=1234 establece la contraseña del módulo HC-05 que se requerirá para establecer conexiones."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "¿Qué función hace que el cursor parpadee en el LCD?",
+        "options": [
+          { "text": "lcd.blink()", "correct": true },
+          { "text": "lcd.flash()", "correct": false },
+          { "text": "lcd.blinkCursor()", "correct": false },
+          { "text": "lcd.flickering()", "correct": false }
+        ],
+        "feedback": "lcd.blink() hace que el cursor parpadee en la pantalla LCD, mientras que lcd.noBlink() lo mantiene fijo."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuál es una aplicación móvil recomendada para Android para comunicación Bluetooth con Arduino?",
+        "options": [
+          { "text": "Bluetooth Terminal", "correct": true },
+          { "text": "Arduino IDE Mobile", "correct": false },
+          { "text": "Serial Monitor App", "correct": false },
+          { "text": "WiFi Terminal", "correct": false }
+        ],
+        "feedback": "Bluetooth Terminal es una aplicación popular para Android que permite comunicación bidireccional con módulos Bluetooth como el HC-05."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Qué comando AT configura la velocidad de comunicación del HC-05?",
+        "options": [
+          { "text": "AT+UART=9600,0,0", "correct": true },
+          { "text": "AT+BAUD=9600", "correct": false },
+          { "text": "AT+SPEED=9600", "correct": false },
+          { "text": "AT+RATE=9600", "correct": false }
+        ],
+        "feedback": "AT+UART=9600,0,0 configura la velocidad de comunicación del módulo HC-05 a 9600 baudios con configuración estándar."
+      },
+      {
+        "id": 46,
+        "type": "true_false",
+        "question": "bluetooth.write() se usa para enviar un solo byte vía Bluetooth.",
+        "correct": true,
+        "feedback": "Verdadero. bluetooth.write(byte) envía un solo byte de datos vía Bluetooth, mientras que bluetooth.print() envía texto."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Qué librería se debe incluir para usar pantallas LCD en Arduino?",
+        "options": [
+          { "text": "LiquidCrystal.h", "correct": true },
+          { "text": "LCD.h", "correct": false },
+          { "text": "Display.h", "correct": false },
+          { "text": "Screen.h", "correct": false }
+        ],
+        "feedback": "La librería LiquidCrystal.h se incluye con #include <LiquidCrystal.h> para controlar pantallas LCD estándar."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia entre bluetooth.print() y bluetooth.println()?",
+        "options": [
+          {
+            "text": "println() añade un salto de línea al final",
+            "correct": true
+          },
+          { "text": "print() es más rápido", "correct": false },
+          { "text": "println() solo envía números", "correct": false },
+          { "text": "No hay diferencia", "correct": false }
+        ],
+        "feedback": "bluetooth.println() añade un salto de línea al final del mensaje, facilitando la lectura en aplicaciones móviles."
+      },
+      {
+        "id": 49,
+        "type": "true_false",
+        "question": "El módulo HC-05 se puede configurar usando comandos AT cuando está en modo configuración.",
+        "correct": true,
+        "feedback": "Verdadero. El HC-05 debe estar en modo AT (desconectado) para recibir y procesar comandos de configuración AT."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Qué función permite escribir texto en la posición actual del cursor en el LCD?",
+        "options": [
+          { "text": "lcd.print()", "correct": true },
+          { "text": "lcd.write()", "correct": false },
+          { "text": "lcd.display()", "correct": false },
+          { "text": "lcd.show()", "correct": false }
+        ],
+        "feedback": "lcd.print() escribe texto o variables en la posición actual del cursor en la pantalla LCD."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Cuáles son las velocidades de comunicación serie más comunes en Arduino?",
+        "options": [
+          { "text": "9600, 19200, 38400, 57600, 115200", "correct": true },
+          { "text": "1200, 2400, 4800, 9600, 19200", "correct": false },
+          { "text": "9600, 14400, 28800, 33600, 56000", "correct": false },
+          { "text": "115200, 230400, 460800, 921600", "correct": false }
+        ],
+        "feedback": "Las velocidades más comunes son 9600, 19200, 38400, 57600 y 115200 baudios, siendo 9600 la más utilizada para proyectos básicos."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "¿Qué función lee un número entero del puerto serie?",
+        "options": [
+          { "text": "Serial.parseInt()", "correct": true },
+          { "text": "Serial.readInt()", "correct": false },
+          { "text": "Serial.getInt()", "correct": false },
+          { "text": "Serial.readNumber()", "correct": false }
+        ],
+        "feedback": "Serial.parseInt() lee y convierte una cadena de caracteres numéricos del puerto serie en un número entero."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "¿Qué función lee un número decimal del puerto serie?",
+        "options": [
+          { "text": "Serial.parseFloat()", "correct": true },
+          { "text": "Serial.readFloat()", "correct": false },
+          { "text": "Serial.getFloat()", "correct": false },
+          { "text": "Serial.readDecimal()", "correct": false }
+        ],
+        "feedback": "Serial.parseFloat() lee y convierte una cadena de caracteres del puerto serie en un número decimal (float)."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "¿Cuál es la diferencia entre Serial.read() y Serial.readString()?",
+        "options": [
+          {
+            "text": "read() lee un byte, readString() lee una cadena completa",
+            "correct": true
+          },
+          { "text": "read() es más lento que readString()", "correct": false },
+          {
+            "text": "read() lee números, readString() lee texto",
+            "correct": false
+          },
+          { "text": "No hay diferencia", "correct": false }
+        ],
+        "feedback": "Serial.read() lee un solo byte del buffer, mientras que Serial.readString() lee todos los caracteres disponibles hasta un timeout y los devuelve como String."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "¿Qué función lee una cadena hasta encontrar un carácter específico?",
+        "options": [
+          { "text": "Serial.readStringUntil()", "correct": true },
+          { "text": "Serial.readUntil()", "correct": false },
+          { "text": "Serial.readLine()", "correct": false },
+          { "text": "Serial.getString()", "correct": false }
+        ],
+        "feedback": "Serial.readStringUntil('\\n') lee caracteres del puerto serie hasta encontrar el carácter especificado, comúnmente '\\n' para nueva línea."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "¿Cómo se imprime un número en formato hexadecimal?",
+        "options": [
+          { "text": "Serial.print(numero, HEX)", "correct": true },
+          { "text": "Serial.printHex(numero)", "correct": false },
+          { "text": "Serial.print(numero, 16)", "correct": false },
+          { "text": "Serial.hexPrint(numero)", "correct": false }
+        ],
+        "feedback": "Serial.print(numero, HEX) imprime el número en formato hexadecimal, útil para depuración y visualización de datos binarios."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Cómo se especifica el número de decimales al imprimir un float?",
+        "options": [
+          { "text": "Serial.print(3.14159, 2)", "correct": true },
+          { "text": "Serial.print(3.14159).decimals(2)", "correct": false },
+          { "text": "Serial.printFloat(3.14159, 2)", "correct": false },
+          { "text": "Serial.print(3.14159, DECIMAL_2)", "correct": false }
+        ],
+        "feedback": "Serial.print(numero, decimales) permite especificar el número de decimales a mostrar, como Serial.print(3.14159, 2) que muestra '3.14'."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "¿Qué función envía un byte directamente sin conversión?",
+        "options": [
+          { "text": "Serial.write()", "correct": true },
+          { "text": "Serial.send()", "correct": false },
+          { "text": "Serial.transmit()", "correct": false },
+          { "text": "Serial.output()", "correct": false }
+        ],
+        "feedback": "Serial.write(byte) envía un byte de datos directamente sin ninguna conversión, útil para protocolos binarios."
+      },
+      {
+        "id": 59,
+        "type": "multiple",
+        "question": "¿Qué función espera a que termine la transmisión serie?",
+        "options": [
+          { "text": "Serial.flush()", "correct": true },
+          { "text": "Serial.wait()", "correct": false },
+          { "text": "Serial.finish()", "correct": false },
+          { "text": "Serial.complete()", "correct": false }
+        ],
+        "feedback": "Serial.flush() espera a que se complete la transmisión de todos los datos pendientes en el buffer de salida."
+      },
+      {
+        "id": 60,
+        "type": "multiple",
+        "question": "¿Cómo se termina la comunicación serie?",
+        "options": [
+          { "text": "Serial.end()", "correct": true },
+          { "text": "Serial.stop()", "correct": false },
+          { "text": "Serial.close()", "correct": false },
+          { "text": "Serial.terminate()", "correct": false }
+        ],
+        "feedback": "Serial.end() termina la comunicación serie y libera los pines RX y TX para otros usos."
+      },
+      {
+        "id": 61,
+        "type": "true_false",
+        "question": "Serial.available() devuelve true o false según si hay datos disponibles.",
+        "correct": false,
+        "feedback": "Falso. Serial.available() devuelve el número de bytes disponibles para leer (0 si no hay datos), no un valor booleano."
+      },
+      {
+        "id": 62,
+        "type": "multiple",
+        "question": "¿Cuál es la forma correcta de verificar si hay datos disponibles antes de leer?",
+        "options": [
+          { "text": "if (Serial.available() > 0)", "correct": true },
+          { "text": "if (Serial.available() == true)", "correct": false },
+          { "text": "if (Serial.hasData())", "correct": false },
+          { "text": "if (Serial.ready())", "correct": false }
+        ],
+        "feedback": "if (Serial.available() > 0) verifica si hay al menos un byte disponible para leer antes de intentar la lectura."
+      },
+      {
+        "id": 63,
+        "type": "multiple",
+        "question": "¿Cómo se limpia el buffer de entrada serie?",
+        "options": [
+          {
+            "text": "while(Serial.available()) Serial.read();",
+            "correct": true
+          },
+          { "text": "Serial.clear();", "correct": false },
+          { "text": "Serial.empty();", "correct": false },
+          { "text": "Serial.flush();", "correct": false }
+        ],
+        "feedback": "while(Serial.available()) Serial.read(); lee y descarta todos los bytes pendientes en el buffer de entrada."
+      },
+      {
+        "id": 64,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad más alta de comunicación serie estándar en Arduino?",
+        "options": [
+          { "text": "115200", "correct": true },
+          { "text": "57600", "correct": false },
+          { "text": "230400", "correct": false },
+          { "text": "38400", "correct": false }
+        ],
+        "feedback": "115200 baudios es la velocidad más alta de comunicación serie estándar comúnmente soportada en Arduino."
+      },
+      {
+        "id": 65,
+        "type": "true_false",
+        "question": "El Monitor Serie de Arduino IDE debe configurarse con la misma velocidad que Serial.begin().",
+        "correct": true,
+        "feedback": "Verdadero. La velocidad configurada en Serial.begin() debe coincidir con la seleccionada en el Monitor Serie para una comunicación correcta."
+      },
+      {
+        "id": 66,
+        "type": "multiple",
+        "question": "¿Qué atajo de teclado abre el Monitor Serie en Arduino IDE?",
+        "options": [
+          { "text": "Ctrl+Shift+M", "correct": true },
+          { "text": "Ctrl+M", "correct": false },
+          { "text": "Ctrl+S", "correct": false },
+          { "text": "Shift+M", "correct": false }
+        ],
+        "feedback": "Ctrl+Shift+M es el atajo de teclado para abrir rápidamente el Monitor Serie en Arduino IDE."
+      },
+      {
+        "id": 67,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo típico de uso de comunicación serie para control remoto?",
+        "options": [
+          {
+            "text": "Enviar comandos como 'LED_ON' para controlar dispositivos",
+            "correct": true
+          },
+          { "text": "Solo para depuración de código", "correct": false },
+          {
+            "text": "Únicamente para mostrar valores de sensores",
+            "correct": false
+          },
+          { "text": "Solo para configuración inicial", "correct": false }
+        ],
+        "feedback": "La comunicación serie permite enviar comandos de texto como 'LED_ON', 'MOTOR_START' para controlar remotamente dispositivos conectados al Arduino."
+      },
+      {
+        "id": 68,
+        "type": "multiple",
+        "question": "¿Qué configuración se recomienda para terminación de línea en el Monitor Serie?",
+        "options": [
+          { "text": "Nueva línea (\\n)", "correct": true },
+          { "text": "Retorno de carro (\\r)", "correct": false },
+          { "text": "Sin terminación", "correct": false },
+          { "text": "Ambos (\\r\\n)", "correct": false }
+        ],
+        "feedback": "Nueva línea (\\n) es la configuración más común y compatible para terminación de línea en comunicación serie."
+      },
+      {
+        "id": 69,
+        "type": "true_false",
+        "question": "Serial.print() puede imprimir tanto texto como variables numéricas.",
+        "correct": true,
+        "feedback": "Verdadero. Serial.print() es versátil y puede imprimir cadenas de texto, números enteros, decimales y otros tipos de datos."
+      },
+      {
+        "id": 70,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo típico de monitoreo de sensores vía serie?",
+        "options": [
+          {
+            "text": "Serial.print(\"Temperatura: \"); Serial.println(temperatura);",
+            "correct": true
+          },
+          { "text": "digitalWrite(13, HIGH);", "correct": false },
+          { "text": "delay(1000);", "correct": false },
+          { "text": "pinMode(A0, INPUT);", "correct": false }
+        ],
+        "feedback": "El patrón Serial.print(\"etiqueta\"); Serial.println(valor); es típico para monitorear sensores, mostrando valores con etiquetas descriptivas."
+      },
+      {
+        "id": 71,
+        "type": "multiple",
+        "question": "¿Qué librería se debe incluir para usar puertos serie por software?",
+        "options": [
+          { "text": "SoftwareSerial.h", "correct": true },
+          { "text": "SerialSoft.h", "correct": false },
+          { "text": "SoftSerial.h", "correct": false },
+          { "text": "VirtualSerial.h", "correct": false }
+        ],
+        "feedback": "La librería SoftwareSerial.h se incluye con #include <SoftwareSerial.h> para crear puertos serie adicionales por software en cualquier pin digital."
+      },
+      {
+        "id": 72,
+        "type": "multiple",
+        "question": "¿Cuál es la sintaxis correcta para crear un puerto SoftwareSerial?",
+        "options": [
+          {
+            "text": "SoftwareSerial mySerial(2, 3); // RX, TX",
+            "correct": true
+          },
+          {
+            "text": "SoftwareSerial mySerial(3, 2); // TX, RX",
+            "correct": false
+          },
+          { "text": "SoftwareSerial(2, 3) mySerial;", "correct": false },
+          { "text": "mySerial = SoftwareSerial(2, 3);", "correct": false }
+        ],
+        "feedback": "La sintaxis correcta es SoftwareSerial nombreVariable(pinRX, pinTX), donde el primer parámetro es RX y el segundo TX."
+      },
+      {
+        "id": 73,
+        "type": "multiple",
+        "question": "¿Por qué se usa while (!Serial) en Arduino Leonardo/Micro?",
+        "options": [
+          {
+            "text": "Para esperar hasta que se establezca la conexión USB",
+            "correct": true
+          },
+          { "text": "Para verificar errores en el código", "correct": false },
+          { "text": "Para inicializar el puerto más rápido", "correct": false },
+          { "text": "Para ahorrar memoria", "correct": false }
+        ],
+        "feedback": "while (!Serial) es necesario en Leonardo/Micro porque el puerto serie USB se establece cuando se conecta, a diferencia del Uno que tiene puerto serie dedicado."
+      },
+      {
+        "id": 74,
+        "type": "multiple",
+        "question": "¿Cuántos puertos serie hardware tiene Arduino Mega?",
+        "options": [
+          {
+            "text": "4 puertos (Serial, Serial1, Serial2, Serial3)",
+            "correct": true
+          },
+          { "text": "2 puertos (Serial, Serial1)", "correct": false },
+          { "text": "1 puerto (Serial)", "correct": false },
+          { "text": "8 puertos", "correct": false }
+        ],
+        "feedback": "Arduino Mega tiene 4 puertos serie hardware: Serial (USB), Serial1 (pines 18,19), Serial2 (pines 16,17) y Serial3 (pines 14,15)."
+      },
+      {
+        "id": 75,
+        "type": "multiple",
+        "question": "¿Qué velocidad se recomienda comúnmente para módulos Bluetooth?",
+        "options": [
+          { "text": "38400", "correct": true },
+          { "text": "9600", "correct": false },
+          { "text": "115200", "correct": false },
+          { "text": "57600", "correct": false }
+        ],
+        "feedback": "38400 baudios es la velocidad común para módulos Bluetooth y GPS, aunque muchos también funcionan a 9600."
+      },
+      {
+        "id": 76,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad recomendada para debugging de alta velocidad?",
+        "options": [
+          { "text": "115200", "correct": true },
+          { "text": "9600", "correct": false },
+          { "text": "38400", "correct": false },
+          { "text": "57600", "correct": false }
+        ],
+        "feedback": "115200 baudios es ideal para debugging de alta velocidad cuando se necesita transmitir grandes cantidades de datos rápidamente."
+      },
+      {
+        "id": 77,
+        "type": "multiple",
+        "question": "¿En qué pines está ubicado Serial1 en Arduino Mega?",
+        "options": [
+          { "text": "Pines 18 y 19", "correct": true },
+          { "text": "Pines 16 y 17", "correct": false },
+          { "text": "Pines 14 y 15", "correct": false },
+          { "text": "Pines 0 y 1", "correct": false }
+        ],
+        "feedback": "Serial1 en Arduino Mega está ubicado en los pines 18 (TX1) y 19 (RX1)."
+      },
+      {
+        "id": 78,
+        "type": "multiple",
+        "question": "¿Cómo se inicializa un puerto SoftwareSerial?",
+        "options": [
+          { "text": "mySerial.begin(9600);", "correct": true },
+          { "text": "mySerial.start(9600);", "correct": false },
+          { "text": "mySerial.init(9600);", "correct": false },
+          { "text": "SoftwareSerial.begin(9600);", "correct": false }
+        ],
+        "feedback": "Al igual que el puerto serie principal, un puerto SoftwareSerial se inicializa con mySerial.begin(velocidad) en la función setup()."
+      },
+      {
+        "id": 79,
+        "type": "multiple",
+        "question": "¿Qué velocidad se recomienda para módulos WiFi?",
+        "options": [
+          { "text": "57600", "correct": true },
+          { "text": "9600", "correct": false },
+          { "text": "115200", "correct": false },
+          { "text": "38400", "correct": false }
+        ],
+        "feedback": "57600 baudios es una velocidad común para módulos WiFi, aunque algunos pueden usar otras velocidades según el fabricante."
+      },
+      {
+        "id": 80,
+        "type": "multiple",
+        "question": "¿En qué pines está ubicado Serial2 en Arduino Mega?",
+        "options": [
+          { "text": "Pines 16 y 17", "correct": true },
+          { "text": "Pines 18 y 19", "correct": false },
+          { "text": "Pines 14 y 15", "correct": false },
+          { "text": "Pines 0 y 1", "correct": false }
+        ],
+        "feedback": "Serial2 en Arduino Mega está ubicado en los pines 16 (TX2) y 17 (RX2)."
+      },
+      {
+        "id": 81,
+        "type": "true_false",
+        "question": "SoftwareSerial permite crear puertos serie en cualquier pin digital de Arduino.",
+        "correct": true,
+        "feedback": "Verdadero. SoftwareSerial emula comunicación serie por software en pines digitales, permitiendo múltiples puertos serie en Arduino Uno que solo tiene uno hardware."
+      },
+      {
+        "id": 82,
+        "type": "multiple",
+        "question": "¿Cuál es el principal problema si aparecen caracteres extraños en el Monitor Serie?",
+        "options": [
+          { "text": "Velocidad incorrecta", "correct": true },
+          { "text": "Pin mal conectado", "correct": false },
+          { "text": "Cable USB defectuoso", "correct": false },
+          { "text": "Arduino dañado", "correct": false }
+        ],
+        "feedback": "Los caracteres extraños en el Monitor Serie generalmente indican que la velocidad configurada no coincide con la del código (Serial.begin())."
+      },
+      {
+        "id": 83,
+        "type": "multiple",
+        "question": "¿En qué pines está ubicado Serial3 en Arduino Mega?",
+        "options": [
+          { "text": "Pines 14 y 15", "correct": true },
+          { "text": "Pines 16 y 17", "correct": false },
+          { "text": "Pines 18 y 19", "correct": false },
+          { "text": "Pines 0 y 1", "correct": false }
+        ],
+        "feedback": "Serial3 en Arduino Mega está ubicado en los pines 14 (TX3) y 15 (RX3)."
+      },
+      {
+        "id": 84,
+        "type": "multiple",
+        "question": "¿Qué debe coincidir entre el código Arduino y el Monitor Serie?",
+        "options": [
+          { "text": "La velocidad en baudios", "correct": true },
+          { "text": "El número de pines", "correct": false },
+          { "text": "El tipo de cable", "correct": false },
+          { "text": "La versión del IDE", "correct": false }
+        ],
+        "feedback": "La velocidad configurada en Serial.begin() debe coincidir exactamente con la velocidad seleccionada en el Monitor Serie para una comunicación correcta."
+      },
+      {
+        "id": 85,
+        "type": "multiple",
+        "question": "¿Cuál es la velocidad estándar más utilizada en proyectos Arduino?",
+        "options": [
+          { "text": "9600", "correct": true },
+          { "text": "115200", "correct": false },
+          { "text": "38400", "correct": false },
+          { "text": "57600", "correct": false }
+        ],
+        "feedback": "9600 baudios es la velocidad estándar más utilizada para la mayoría de proyectos Arduino por su confiabilidad y compatibilidad."
+      },
+      {
+        "id": 86,
+        "type": "true_false",
+        "question": "Arduino Uno tiene múltiples puertos serie hardware como el Mega.",
+        "correct": false,
+        "feedback": "Falso. Arduino Uno solo tiene un puerto serie hardware (Serial), mientras que Arduino Mega tiene cuatro puertos serie hardware."
+      },
+      {
+        "id": 87,
+        "type": "multiple",
+        "question": "¿Qué puerto serie usa los pines 0 y 1 en Arduino Mega?",
+        "options": [
+          { "text": "Serial (puerto USB)", "correct": true },
+          { "text": "Serial1", "correct": false },
+          { "text": "Serial2", "correct": false },
+          { "text": "Serial3", "correct": false }
+        ],
+        "feedback": "El puerto Serial principal (USB) en Arduino Mega usa los pines 0 (RX) y 1 (TX), al igual que en Arduino Uno."
+      },
+      {
+        "id": 88,
+        "type": "multiple",
+        "question": "¿Qué sucede si no se incluye while (!Serial) en Leonardo/Micro?",
+        "options": [
+          {
+            "text": "El código puede ejecutarse antes de establecer la conexión USB",
+            "correct": true
+          },
+          { "text": "El Arduino se daña", "correct": false },
+          { "text": "No se puede subir el código", "correct": false },
+          { "text": "Se reduce la velocidad", "correct": false }
+        ],
+        "feedback": "Sin while (!Serial), el código puede ejecutarse antes de que se establezca la conexión USB, perdiendo los primeros mensajes serie."
+      },
+      {
+        "id": 89,
+        "type": "true_false",
+        "question": "SoftwareSerial puede funcionar a la misma velocidad que los puertos serie hardware.",
+        "correct": false,
+        "feedback": "Falso. SoftwareSerial tiene limitaciones de velocidad y es menos eficiente que los puertos serie hardware, especialmente a altas velocidades."
+      },
+      {
+        "id": 90,
+        "type": "multiple",
+        "question": "¿Cuál es la solución más común cuando no aparece nada en el Monitor Serie?",
+        "options": [
+          {
+            "text": "Verificar que la velocidad del Monitor Serie coincida con Serial.begin()",
+            "correct": true
+          },
+          { "text": "Reiniciar la computadora", "correct": false },
+          { "text": "Cambiar el cable USB", "correct": false },
+          { "text": "Reinstalar Arduino IDE", "correct": false }
+        ],
+        "feedback": "El problema más común es la diferencia de velocidades entre Serial.begin() en el código y la configuración del Monitor Serie."
+      },
+      {
+        "id": 91,
+        "type": "multiple",
+        "question": "¿Qué librería se debe incluir para usar el módulo Bluetooth HC-05 por software?",
+        "options": [
+          { "text": "SoftwareSerial.h", "correct": true },
+          { "text": "Bluetooth.h", "correct": false },
+          { "text": "HC05.h", "correct": false },
+          { "text": "WirelessSerial.h", "correct": false }
+        ],
+        "feedback": "Para controlar el HC-05 se usa #include <SoftwareSerial.h> ya que se comunica vía puerto serie por software en pines digitales."
+      },
+      {
+        "id": 92,
+        "type": "multiple",
+        "question": "¿Cuál es la declaración correcta para inicializar un puerto serie para HC-05?",
+        "options": [
+          {
+            "text": "SoftwareSerial bluetooth(2, 3); // RX, TX",
+            "correct": true
+          },
+          { "text": "HC05 bluetooth(2, 3);", "correct": false },
+          { "text": "Bluetooth serial(2, 3);", "correct": false },
+          { "text": "BluetoothSerial bt(2, 3);", "correct": false }
+        ],
+        "feedback": "La declaración correcta es SoftwareSerial bluetooth(pinRX, pinTX), donde el pin 2 es RX y el pin 3 es TX para Arduino."
+      },
+      {
+        "id": 93,
+        "type": "multiple",
+        "question": "¿Cómo se configura el HC-05 en modo AT para comandos de configuración?",
+        "options": [
+          {
+            "text": "Mantener presionado el botón EN mientras se enciende",
+            "correct": true
+          },
+          { "text": "Enviar comando AT+MODE=CONFIG", "correct": false },
+          { "text": "Conectar el pin RESET a GND", "correct": false },
+          { "text": "Usar velocidad 115200 automáticamente", "correct": false }
+        ],
+        "feedback": "Para entrar en modo AT, se debe mantener presionado el botón EN (o KEY) del HC-05 mientras se enciende el módulo."
+      },
+      {
+        "id": 94,
+        "type": "multiple",
+        "question": "¿Qué velocidad se usa típicamente para comandos AT en el HC-05?",
+        "options": [
+          { "text": "38400", "correct": true },
+          { "text": "9600", "correct": false },
+          { "text": "115200", "correct": false },
+          { "text": "57600", "correct": false }
+        ],
+        "feedback": "En modo AT, el HC-05 típicamente usa 38400 baudios por defecto para recibir comandos de configuración."
+      },
+      {
+        "id": 95,
+        "type": "multiple",
+        "question": "¿Cuál es la estructura básica para leer datos del HC-05 en Arduino?",
+        "options": [
+          {
+            "text": "if (bluetooth.available()) { String data = bluetooth.readString(); }",
+            "correct": true
+          },
+          {
+            "text": "if (HC05.connected()) { data = HC05.read(); }",
+            "correct": false
+          },
+          {
+            "text": "while (Bluetooth.hasData()) { data = Bluetooth.get(); }",
+            "correct": false
+          },
+          {
+            "text": "if (Serial.bluetooth()) { data = Serial.readBT(); }",
+            "correct": false
+          }
+        ],
+        "feedback": "La estructura correcta usa bluetooth.available() para verificar datos disponibles y bluetooth.readString() para leer la información completa."
+      },
+      {
+        "id": 96,
+        "type": "true_false",
+        "question": "El HC-05 puede funcionar tanto como maestro (master) como esclavo (slave).",
+        "correct": true,
+        "feedback": "Verdadero. El HC-05 puede configurarse como maestro para iniciar conexiones o como esclavo para esperar conexiones de otros dispositivos."
+      },
+      {
+        "id": 97,
+        "type": "multiple",
+        "question": "¿Qué comando AT cambia el modo del HC-05 a maestro?",
+        "options": [
+          { "text": "AT+ROLE=1", "correct": true },
+          { "text": "AT+MODE=MASTER", "correct": false },
+          { "text": "AT+MASTER=ON", "correct": false },
+          { "text": "AT+SET=MASTER", "correct": false }
+        ],
+        "feedback": "AT+ROLE=1 configura el HC-05 como maestro, mientras que AT+ROLE=0 lo configura como esclavo."
+      },
+      {
+        "id": 98,
+        "type": "multiple",
+        "question": "¿Cuál es la conexión de alimentación correcta para el HC-05?",
+        "options": [
+          { "text": "VCC a 3.3V o 5V, GND a GND", "correct": true },
+          { "text": "Solo 5V, no funciona con 3.3V", "correct": false },
+          { "text": "Solo 3.3V, se daña con 5V", "correct": false },
+          { "text": "VCC a pin digital, GND a analog", "correct": false }
+        ],
+        "feedback": "El HC-05 acepta tanto 3.3V como 5V en VCC y debe conectarse GND a GND del Arduino para referencia común."
+      },
+      {
+        "id": 99,
+        "type": "multiple",
+        "question": "¿Cómo se envían datos desde Arduino hacia una app móvil vía HC-05?",
+        "options": [
+          {
+            "text": "bluetooth.print(\"datos\"); o bluetooth.println(\"datos\");",
+            "correct": true
+          },
+          { "text": "HC05.send(\"datos\");", "correct": false },
+          { "text": "Bluetooth.transmit(\"datos\");", "correct": false },
+          { "text": "Serial.bluetooth(\"datos\");", "correct": false }
+        ],
+        "feedback": "Se usan bluetooth.print() y bluetooth.println() igual que con Serial, para enviar datos al dispositivo móvil conectado."
+      },
+      {
+        "id": 100,
+        "type": "true_false",
+        "question": "Es necesario emparejar el HC-05 con el dispositivo móvil antes de establecer comunicación.",
+        "correct": true,
+        "feedback": "Verdadero. Antes de la comunicación, el HC-05 debe emparejarse con el dispositivo móvil usando la contraseña (típicamente '1234' o '0000')."
+      }
+    ]
+  }
+}
