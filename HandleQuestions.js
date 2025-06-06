@@ -48,6 +48,7 @@ const QUIZ_CONFIG = {
       U1: { file: "U1.json", name: "Introducción a SO" },
       U2: { file: "U2.json", name: "Gestión de Procesos" },
       U3: { file: "U3.json", name: "Arduino y Microcontroladores" },
+      U4: { file: "U4.json", name: "Programación de Microcontroladores" },
     },
   },
   // Agregar más materias según sea necesario
