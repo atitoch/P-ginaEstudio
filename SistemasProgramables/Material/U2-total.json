@@ -385,6 +385,555 @@
           { "text": "Transformadores de distribución", "correct": false }
         ],
         "feedback": "Los relés de estado sólido están diseñados para aplicaciones de potencias más bajas comparados con otros dispositivos de conmutación industrial."
+      },
+      {
+        "id": 28,
+        "type": "multiple",
+        "question": "Los motores de inducción de CA son fáciles de controlar, por lo que son una opción...",
+        "options": [
+          { "text": "Confiable y económica", "correct": true },
+          { "text": "Inestable y económica", "correct": false },
+          { "text": "Confiable y cara", "correct": false },
+          { "text": "Compleja y costosa", "correct": false }
+        ],
+        "feedback": "Los motores de inducción de CA son fáciles de controlar, por lo que representan una opción confiable y económica para muchas aplicaciones industriales."
+      },
+      {
+        "id": 29,
+        "type": "multiple",
+        "question": "Es un motor que utiliza retroalimentación de posición.",
+        "options": [
+          { "text": "Servomotor", "correct": true },
+          { "text": "Motor CA", "correct": false },
+          { "text": "Motor de inducción", "correct": false }
+        ],
+        "feedback": "El servomotor es un motor que utiliza retroalimentación de posición para controlar con precisión su movimiento y mantener la posición deseada."
+      },
+      {
+        "id": 30,
+        "type": "multiple",
+        "question": "El control preciso de este motor lo convierte en ideal para aplicaciones que requieren posicionamiento exacto, como en robótica o sistemas CNC.",
+        "options": [
+          { "text": "Servomotor", "correct": true },
+          { "text": "Motor sin escobillas", "correct": false },
+          { "text": "Motor CC", "correct": false }
+        ],
+        "feedback": "El servomotor, con su control preciso, es ideal para aplicaciones que requieren posicionamiento exacto como en robótica o sistemas CNC debido a su retroalimentación de posición."
+      },
+      {
+        "id": 31,
+        "type": "multiple",
+        "question": "Tipo de motor que es usado para control preciso de movimientos",
+        "options": [
+          { "text": "Servomotor, motor paso a paso", "correct": true },
+          { "text": "Motor universal", "correct": false },
+          { "text": "Motor lineal", "correct": false }
+        ],
+        "feedback": "Los servomotores y motores paso a paso son utilizados para control preciso de movimientos debido a su capacidad de posicionamiento exacto y control de velocidad."
+      },
+      {
+        "id": 32,
+        "type": "multiple",
+        "question": "Es un dispositivo electromagnético que consiste en un interruptor automático controlado por un circuito eléctrico.",
+        "options": [
+          { "text": "Relé", "correct": true },
+          { "text": "Electroimán", "correct": false },
+          { "text": "Bobina", "correct": false }
+        ],
+        "feedback": "El relé es un dispositivo electromagnético que consiste en un interruptor automático controlado por un circuito eléctrico, permitiendo controlar circuitos de alta potencia con señales de baja potencia."
+      },
+      {
+        "id": 33,
+        "type": "multiple",
+        "question": "Componente principal del relé magnetotérmico que es responsable de detectar sobrecargas a través del campo magnético generado por la corriente.",
+        "options": [
+          { "text": "Electroimán", "correct": true },
+          { "text": "Resistencia", "correct": false },
+          { "text": "Lámina bimetálica", "correct": false }
+        ],
+        "feedback": "El electroimán es el componente principal del relé magnetotérmico responsable de detectar sobrecargas a través del campo magnético generado por la corriente, activando la protección cuando se supera el umbral establecido."
+      },
+      {
+        "id": 34,
+        "type": "multiple",
+        "question": "¿Qué ventaja ofrece un husillo de bolas en un tornillo de avance?",
+        "options": [
+          {
+            "text": "Reduce la fricción, permitiendo movimientos suaves y precisos.",
+            "correct": true
+          },
+          {
+            "text": "Aumenta la resistencia eléctrica del sistema.",
+            "correct": false
+          },
+          {
+            "text": "Sustituye completamente el uso de motores en el actuador.",
+            "correct": false
+          },
+          {
+            "text": "Incrementa la velocidad de rotación sin control.",
+            "correct": false
+          }
+        ],
+        "feedback": "El husillo de bolas en un tornillo de avance reduce significativamente la fricción comparado con un tornillo convencional, permitiendo movimientos más suaves, precisos y eficientes con menor desgaste."
+      },
+      {
+        "id": 35,
+        "type": "multiple",
+        "question": "¿Cuál de las siguientes afirmaciones sobre los actuadores mecánicos es FALSA?",
+        "options": [
+          {
+            "text": "Son altamente dependientes de protocolos de comunicación digital.",
+            "correct": true
+          },
+          {
+            "text": "Funcionan sin necesidad de conversión digital de señales.",
+            "correct": false
+          },
+          {
+            "text": "Suelen ser más económicos que los actuadores electrónicos.",
+            "correct": false
+          },
+          {
+            "text": "Se caracterizan por su robustez y durabilidad.",
+            "correct": false
+          }
+        ],
+        "feedback": "La afirmación FALSA es que son altamente dependientes de protocolos de comunicación digital. Los actuadores mecánicos funcionan mediante transmisión directa de fuerza mecánica, sin requerir protocolos de comunicación digital."
+      },
+      {
+        "id": 36,
+        "type": "multiple",
+        "question": "¿Qué son los actuadores mecánicos?",
+        "options": [
+          {
+            "text": "Mecanismos que convierten un tipo de movimiento en otro sin necesidad de electricidad.",
+            "correct": true
+          },
+          {
+            "text": "Equipos que generan corriente alterna mediante engranajes.",
+            "correct": false
+          },
+          {
+            "text": "Componentes que transforman una señal electrónica en calor.",
+            "correct": false
+          },
+          {
+            "text": "Dispositivos que convierten energía eléctrica en movimiento mecánico.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los actuadores mecánicos son mecanismos que convierten un tipo de movimiento en otro mediante transmisión directa de fuerza mecánica, sin necesidad de electricidad para su funcionamiento básico."
+      },
+      {
+        "id": 37,
+        "type": "multiple",
+        "question": "¿En qué consiste el mecanismo de biela-manivela en un actuador rotativo?",
+        "options": [
+          {
+            "text": "En una manivela giratoria conectada a una biela que mueve un pistón en línea recta.",
+            "correct": true
+          },
+          {
+            "text": "En un sistema de resortes que almacenan energía elástica.",
+            "correct": false
+          },
+          {
+            "text": "En un conjunto de cables que transmiten señales digitales.",
+            "correct": false
+          },
+          {
+            "text": "En un sensor óptico que detecta posición angular.",
+            "correct": false
+          }
+        ],
+        "feedback": "El mecanismo de biela-manivela consiste en una manivela giratoria conectada a una biela que convierte el movimiento rotatorio en movimiento rectilíneo alternativo, moviendo un pistón en línea recta."
+      },
+      {
+        "id": 38,
+        "type": "multiple",
+        "question": "Es el trabajo realizado por el motor en unidad de tiempo, se mide en caballos de vapor (CV).",
+        "options": [
+          { "text": "Potencia", "correct": true },
+          { "text": "Frecuencia", "correct": false },
+          { "text": "Rendimiento", "correct": false }
+        ],
+        "feedback": "La potencia es el trabajo realizado por el motor en unidad de tiempo y se mide en caballos de vapor (CV) o watts (W), representando la capacidad del motor para realizar trabajo."
+      },
+      {
+        "id": 39,
+        "type": "multiple",
+        "question": "Este motor funciona similar al sin escobillas, pero ofrece un mayor control de posición.",
+        "options": [
+          { "text": "Motor paso a paso", "correct": true },
+          { "text": "Motor universal", "correct": false },
+          { "text": "Motor Brushless", "correct": false }
+        ],
+        "feedback": "El motor paso a paso funciona similar al motor sin escobillas pero ofrece un mayor control de posición, ya que puede moverse en incrementos precisos y mantener su posición sin retroalimentación."
+      },
+      {
+        "id": 40,
+        "type": "multiple",
+        "question": "Cuando el interruptor diferencial detecta diferencia entre la intensidad de corriente de entrada y salida, significa que",
+        "options": [
+          {
+            "text": "La corriente se está perdiendo por derivación o defecto a tierra",
+            "correct": true
+          },
+          { "text": "Hay un aumento de tensión", "correct": false },
+          {
+            "text": "La corriente está aumentando dentro del dispositivo",
+            "correct": false
+          }
+        ],
+        "feedback": "Cuando el interruptor diferencial detecta diferencia entre la corriente de entrada y salida, significa que hay una fuga de corriente por derivación o defecto a tierra, activando la protección para evitar riesgos eléctricos."
+      },
+      {
+        "id": 41,
+        "type": "multiple",
+        "question": "Parte del motor que gira dentro del campo magnético creado por el estator.",
+        "options": [
+          { "text": "Rotor", "correct": true },
+          { "text": "Estator", "correct": false },
+          { "text": "Resistencia", "correct": false }
+        ],
+        "feedback": "El rotor es la parte del motor que gira dentro del campo magnético creado por el estator, convirtiendo la energía eléctrica en movimiento mecánico rotatorio."
+      },
+      {
+        "id": 42,
+        "type": "multiple",
+        "question": "Es un contacto abierto",
+        "options": [
+          { "text": "NO", "correct": true },
+          { "text": "NC", "correct": false }
+        ],
+        "feedback": "NO (Normally Open) significa contacto normalmente abierto, es decir, un contacto que en su estado de reposo está abierto y se cierra cuando se activa."
+      },
+      {
+        "id": 43,
+        "type": "multiple",
+        "question": "Secuencia de manejo de motor unipolar en el que se activa solo una bobina a la vez",
+        "options": [
+          { "text": "Secuencia Wave Drive (Paso Completo)", "correct": true },
+          { "text": "Secuencia Medio Paso", "correct": false },
+          { "text": "Secuencia Híbrida", "correct": false }
+        ],
+        "feedback": "La secuencia Wave Drive (Paso Completo) es aquella en la que se activa solo una bobina a la vez en el motor paso a paso unipolar, proporcionando menor torque pero menor consumo de energía."
+      },
+      {
+        "id": 44,
+        "type": "multiple",
+        "question": "¿Cuál es una aplicación común de los actuadores mecánicos?",
+        "options": [
+          { "text": "Sistemas de válvulas manuales.", "correct": true },
+          { "text": "Circuitos de refrigeración líquida.", "correct": false },
+          { "text": "Procesadores de datos digitales.", "correct": false },
+          {
+            "text": "Dispositivos electrónicos de comunicación.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los sistemas de válvulas manuales son una aplicación común de los actuadores mecánicos, ya que permiten controlar el flujo de fluidos mediante transmisión directa de fuerza mecánica."
+      },
+      {
+        "id": 45,
+        "type": "multiple",
+        "question": "¿Cómo se comunican los actuadores mecánicos con el sistema que los acciona?",
+        "options": [
+          {
+            "text": "A través de una conexión mecánica directa.",
+            "correct": true
+          },
+          { "text": "Mediante señales de radiofrecuencia.", "correct": false },
+          { "text": "Utilizando ondas infrarrojas.", "correct": false },
+          {
+            "text": "Por medio de pulsos eléctricos digitales.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los actuadores mecánicos se comunican con el sistema que los acciona a través de una conexión mecánica directa, sin necesidad de señales electrónicas complejas, utilizando transmisión física de fuerza y movimiento."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Cuáles son ejemplos de actuadores por resorte o elásticos?",
+        "options": [
+          {
+            "text": "Resortes de compresión o extensión, bandas elásticas.",
+            "correct": true
+          },
+          {
+            "text": "Motores eléctricos, engranajes, válvulas hidráulicas.",
+            "correct": false
+          },
+          {
+            "text": "Bombas de vacío, compresores, cilindros neumáticos.",
+            "correct": false
+          },
+          {
+            "text": "Sensores ópticos, paneles solares, baterías.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los ejemplos de actuadores por resorte o elásticos incluyen resortes de compresión o extensión y bandas elásticas, que almacenan energía mecánica para generar movimiento cuando se libera."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Cuál es una aplicación común de los actuadores mecánicos?",
+        "options": [
+          { "text": "Máquinas de manivela.", "correct": true },
+          {
+            "text": "Circuitos impresos de alta frecuencia.",
+            "correct": false
+          },
+          {
+            "text": "Sistemas de refrigeración electrónica.",
+            "correct": false
+          },
+          { "text": "Antenas parabólicas digitales.", "correct": false }
+        ],
+        "feedback": "Las máquinas de manivela son una aplicación común de los actuadores mecánicos, ya que utilizan mecanismos de transmisión directa de fuerza mecánica para generar movimiento."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿En qué se diferencia un actuador mecánico de uno electrónico?",
+        "options": [
+          {
+            "text": "Los actuadores mecánicos no requieren electricidad para funcionar.",
+            "correct": true
+          },
+          {
+            "text": "Los actuadores mecánicos necesitan una batería para operar.",
+            "correct": false
+          },
+          {
+            "text": "Los actuadores mecánicos son más precisos que los electrónicos.",
+            "correct": false
+          },
+          {
+            "text": "Los actuadores mecánicos dependen de software para su control.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los actuadores mecánicos se diferencian de los electrónicos principalmente porque no requieren electricidad para funcionar, ya que operan mediante transmisión directa de fuerza mecánica a través de engranajes, palancas y otros elementos mecánicos."
+      },
+      {
+        "id": 49,
+        "type": "multiple",
+        "question": "¿Cómo pueden los actuadores mecánicos integrarse en sistemas de automatización?",
+        "options": [
+          {
+            "text": "Mediante sensores de posición y contactos de fin de carrera.",
+            "correct": true
+          },
+          {
+            "text": "Solo si están conectados a un procesador de alto rendimiento.",
+            "correct": false
+          },
+          {
+            "text": "Utilizando una conexión de red inalámbrica.",
+            "correct": false
+          },
+          {
+            "text": "Dependen exclusivamente de señales digitales para funcionar.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los actuadores mecánicos pueden integrarse en sistemas de automatización mediante sensores de posición y contactos de fin de carrera que proporcionan retroalimentación sobre el estado y posición del actuador al sistema de control."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Cuál de los siguientes elementos pueden integrarse a un actuador mecánico para mejorar su precisión?",
+        "options": [
+          {
+            "text": "Encoders mecánicos y microinterruptores.",
+            "correct": true
+          },
+          { "text": "Circuitos de refrigeración líquida.", "correct": false },
+          { "text": "Sensores de temperatura.", "correct": false },
+          { "text": "Placas base de microcontroladores.", "correct": false }
+        ],
+        "feedback": "Los encoders mecánicos y microinterruptores pueden integrarse a un actuador mecánico para mejorar su precisión, proporcionando retroalimentación de posición y límites de movimiento que permiten un control más exacto."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Cuál de los siguientes elementos pueden integrarse a un actuador mecánico para mejorar su precisión?",
+        "options": [
+          {
+            "text": "Encoders mecánicos y microinterruptores.",
+            "correct": true
+          },
+          { "text": "Circuitos de refrigeración líquida.", "correct": false },
+          { "text": "Sensores de temperatura.", "correct": false },
+          { "text": "Placas base de microcontroladores.", "correct": false }
+        ],
+        "feedback": "Los encoders mecánicos y microinterruptores pueden integrarse a un actuador mecánico para mejorar su precisión, proporcionando retroalimentación de posición y límites de movimiento que permiten un control más exacto."
+      },
+      {
+        "id": 52,
+        "type": "multiple",
+        "question": "Un devanado es",
+        "options": [
+          { "text": "Una bobina de hilo o cable conductor", "correct": true },
+          { "text": "Un cable conductor", "correct": false },
+          { "text": "Un transformador", "correct": false }
+        ],
+        "feedback": "Un devanado es una bobina de hilo o cable conductor enrollado de manera organizada, utilizado en motores, transformadores y otros dispositivos electromagnéticos para generar campos magnéticos."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "El relé magnetotérmico está compuesto por dos principales componentes",
+        "options": [
+          { "text": "Electroimán y Lámina bimetálica", "correct": true },
+          { "text": "Imanes y lámina de metal", "correct": false },
+          { "text": "Lámina bimetálica e imanes", "correct": false },
+          { "text": "Electroimán y lámina de metal", "correct": false }
+        ],
+        "feedback": "El relé magnetotérmico está compuesto por dos principales componentes: el electroimán que detecta sobrecargas por campo magnético y la lámina bimetálica que responde a sobrecalentamiento por temperatura, proporcionando protección completa contra sobrecargas y cortocircuitos."
+      },
+      {
+        "id": 54,
+        "type": "multiple",
+        "question": "El efecto que se genera cuando la corriente eléctrica genera calor al circular por un conductor, elevando su temperatura es llamado...",
+        "options": [
+          { "text": "Efecto térmico", "correct": true },
+          { "text": "Efecto magnético", "correct": false },
+          { "text": "Efecto lumínico", "correct": false }
+        ],
+        "feedback": "El efecto térmico (también conocido como efecto Joule) es el fenómeno que se genera cuando la corriente eléctrica produce calor al circular por un conductor debido a la resistencia del material, elevando su temperatura."
+      },
+      {
+        "id": 55,
+        "type": "multiple",
+        "question": "Este motor utiliza una corriente alterna trifásica para generar un campo magnético que induce el movimiento del rotor.",
+        "options": [
+          { "text": "Motor trifásico", "correct": true },
+          { "text": "Motor paso a paso", "correct": false },
+          { "text": "Motor de Corriente Directa", "correct": false }
+        ],
+        "feedback": "El motor trifásico utiliza una corriente alterna trifásica para generar un campo magnético rotatorio que induce el movimiento del rotor, siendo ampliamente utilizado en aplicaciones industriales por su eficiencia y robustez."
+      },
+      {
+        "id": 56,
+        "type": "multiple",
+        "question": "La velocidad de este motor se controla mediante un controlador electrónico de velocidad, porque no se puede cambiar manualmente la conexión de los bobinados.",
+        "options": [
+          { "text": "Motor sin escobillas BLDC", "correct": true },
+          { "text": "Motor DC", "correct": false },
+          { "text": "Motor paso a paso", "correct": false }
+        ],
+        "feedback": "El motor sin escobillas BLDC requiere un controlador electrónico de velocidad (ESC) porque no se puede cambiar manualmente la conexión de los bobinados, ya que la conmutación se realiza electrónicamente mediante sensores o algoritmos de control."
+      },
+      {
+        "id": 57,
+        "type": "multiple",
+        "question": "¿Qué se necesita para que un motor bipolar funcione?",
+        "options": [
+          {
+            "text": "Invertir la corriente en las bobinas siguiendo una secuencia determinada.",
+            "correct": true
+          },
+          { "text": "Mantener la corriente constante.", "correct": false },
+          {
+            "text": "Generar corriente en un solo sentido en las bobinas.",
+            "correct": false
+          }
+        ],
+        "feedback": "Para que un motor bipolar funcione, se necesita invertir la corriente en las bobinas siguiendo una secuencia determinada, lo que permite crear el campo magnético rotatorio necesario para el movimiento del rotor."
+      },
+      {
+        "id": 58,
+        "type": "multiple",
+        "question": "En este tipo de motor, la corriente genera un campo magnético variable.",
+        "options": [
+          { "text": "Motor de corriente alterna (CA)", "correct": true },
+          { "text": "Motor paso a paso", "correct": false },
+          { "text": "Motor de corriente continua (CC)", "correct": false }
+        ],
+        "feedback": "En el motor de corriente alterna (CA), la corriente genera un campo magnético variable debido a la naturaleza alternante de la corriente, lo que produce el movimiento rotatorio del rotor."
+      },
+      {
+        "id": 59,
+        "type": "multiple",
+        "question": "¿Cómo funciona un actuador lineal de leva y seguidor?",
+        "options": [
+          {
+            "text": "Una leva giratoria con forma irregular empuja un seguidor, generando un movimiento rotativo controlado.",
+            "correct": true
+          },
+          {
+            "text": "Un imán mueve un pistón dentro de un cilindro.",
+            "correct": false
+          },
+          {
+            "text": "Un motor eléctrico convierte energía en señales digitales.",
+            "correct": false
+          },
+          {
+            "text": "Una palanca libera gas comprimido para generar fuerza.",
+            "correct": false
+          }
+        ],
+        "feedback": "Un actuador lineal de leva y seguidor funciona mediante una leva giratoria con forma irregular que empuja un seguidor, convirtiendo el movimiento rotatorio en movimiento lineal controlado y preciso."
+      },
+      {
+        "id": 60,
+        "type": "multiple",
+        "question": "¿Por qué los actuadores mecánicos no presentan latencia en su respuesta?",
+        "options": [
+          {
+            "text": "No dependen de señales electrónicas intermedias.",
+            "correct": true
+          },
+          {
+            "text": "Utilizan algoritmos de procesamiento de datos.",
+            "correct": false
+          },
+          {
+            "text": "Requieren sincronización con un microcontrolador.",
+            "correct": false
+          },
+          {
+            "text": "Funcionan exclusivamente con motores eléctricos.",
+            "correct": false
+          }
+        ],
+        "feedback": "Los actuadores mecánicos no presentan latencia en su respuesta porque no dependen de señales electrónicas intermedias, operando mediante transmisión directa de fuerza mecánica sin delays de procesamiento digital."
+      },
+      {
+        "id": 61,
+        "type": "multiple",
+        "question": "¿Dónde se utiliza comúnmente el mecanismo de biela-manivela?",
+        "options": [
+          { "text": "En motores y máquinas industriales.", "correct": true },
+          { "text": "En antenas de transmisión satelital.", "correct": false },
+          {
+            "text": "En sistemas de refrigeración doméstica.",
+            "correct": false
+          },
+          {
+            "text": "En circuitos electrónicos de baja potencia.",
+            "correct": false
+          }
+        ],
+        "feedback": "El mecanismo de biela-manivela se utiliza comúnmente en motores y máquinas industriales para convertir movimiento rotatorio en movimiento rectilíneo alternativo, como en motores de combustión interna, compresores y bombas."
+      },
+      {
+        "id": 62,
+        "type": "multiple",
+        "question": "¿Qué tipo de movimiento puede generar un resorte al liberarse en un actuador?",
+        "options": [
+          { "text": "Lineal o rotativo.", "correct": true },
+          { "text": "Expansión térmica controlada.", "correct": false },
+          { "text": "Únicamente movimiento oscilatorio.", "correct": false },
+          { "text": "Vibración ultrasónica.", "correct": false }
+        ],
+        "feedback": "Un resorte al liberarse en un actuador puede generar movimiento lineal (mediante extensión o compresión) o rotativo (mediante resortes de torsión), dependiendo del tipo de resorte y la configuración del mecanismo."
       }
     ]
   }
