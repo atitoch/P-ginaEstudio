@@ -917,6 +917,110 @@
           { "text": "Permiten comunicación inalámbrica", "correct": false }
         ],
         "feedback": "Una ventaja clave de los circuitos de linealización de puentes resistivos es que proporcionan una salida lineal y amplificada. Estos circuitos convierten las pequeñas variaciones de resistencia en el puente en señales de voltaje lineales y de mayor magnitud, facilitando el procesamiento y medición precisa de variables físicas como fuerza, presión o deformación."
+      },
+      {
+        "id": 45,
+        "type": "true_false",
+        "question": "¿Se suele usar un amplificador operacional en un circuito integrado LM741?",
+        "correct": true,
+        "feedback": "Verdadero. El LM741 es un circuito integrado que contiene un amplificador operacional de propósito general. Es uno de los amplificadores operacionales más conocidos y utilizados en aplicaciones electrónicas, proporcionando alta ganancia, alta impedancia de entrada y baja impedancia de salida."
+      },
+      {
+        "id": 46,
+        "type": "multiple",
+        "question": "¿Qué material se utiliza para fabricar las celdas de carga de viga?",
+        "options": [
+          {
+            "text": "Acero inoxidable o acero para herramienta.",
+            "correct": true
+          },
+          { "text": "Madera y acero.", "correct": false },
+          { "text": "Titanio.", "correct": false },
+          { "text": "Plástico y aluminio.", "correct": false }
+        ],
+        "feedback": "Las celdas de carga de viga se fabrican típicamente con acero inoxidable o acero para herramienta. Estos materiales proporcionan las propiedades mecánicas necesarias como resistencia, durabilidad, estabilidad dimensional y buenas características elásticas, además de resistencia a la corrosión y factores ambientales."
+      },
+      {
+        "id": 47,
+        "type": "multiple",
+        "question": "¿Qué tipo de sensor de visión convierte la luz en carga eléctrica y luego en una señal digital?",
+        "options": [
+          { "text": "CCD", "correct": true },
+          { "text": "CMOS", "correct": false },
+          { "text": "Fotoresistencia", "correct": false },
+          { "text": "Fotodiodo", "correct": false }
+        ],
+        "feedback": "Los sensores CCD (Charge-Coupled Device) convierten la luz en carga eléctrica y luego en una señal digital. Cada píxel del CCD acumula carga eléctrica proporcional a la cantidad de luz que recibe, y esta carga se transfiere secuencialmente para convertirse en una señal digital que representa la imagen capturada."
+      },
+      {
+        "id": 48,
+        "type": "multiple",
+        "question": "¿Qué tipo de sensores se utilizan para medir el torque de manera precisa?",
+        "options": [
+          {
+            "text": "Sensores específicos diseñados para medir el torque.",
+            "correct": true
+          },
+          { "text": "Sensores de proximidad.", "correct": false },
+          { "text": "Sensores de temperatura.", "correct": false },
+          { "text": "Sensores de aceleración.", "correct": false }
+        ],
+        "feedback": "Para medir el torque de manera precisa se utilizan sensores específicos diseñados para medir el torque, como los sensores de torque rotativos, células de carga de torque, y transductores de par. Estos sensores están especializados en detectar la fuerza de torsión aplicada a un eje o componente rotativo, proporcionando mediciones precisas y confiables del momento de torsión."
+      },
+      {
+        "id": 49,
+        "type": "true_false",
+        "question": "La impedancia infinita de entrada en un amplificador operacional significa que las corrientes de entrada son cero.",
+        "correct": true,
+        "feedback": "Verdadero. En un amplificador operacional ideal, la impedancia infinita de entrada significa que las corrientes de entrada (tanto en la terminal inversora como en la no inversora) son cero. Esta es una de las características ideales fundamentales de los amplificadores operacionales, junto con la ganancia infinita y la impedancia de salida cero."
+      },
+      {
+        "id": 50,
+        "type": "multiple",
+        "question": "¿Para qué se usa un amplificador de instrumentación?",
+        "options": [
+          {
+            "text": "Medir pequeños cambios de voltaje con ruido bajo",
+            "correct": true
+          },
+          { "text": "Para hacer helados más rápido", "correct": false },
+          { "text": "Para calentar agua en una tetera", "correct": false },
+          { "text": "Para lanzar cohetes al espacio", "correct": false }
+        ],
+        "feedback": "Un amplificador de instrumentación se usa para medir pequeños cambios de voltaje con ruido bajo. Está diseñado específicamente para amplificar señales diferenciales muy pequeñas, como las provenientes de sensores (termopares, galgas extensiométricas, etc.), mientras rechaza eficazmente el ruido y las interferencias de modo común."
+      },
+      {
+        "id": 51,
+        "type": "multiple",
+        "question": "¿Cuáles son algunos dispositivos basados en el principio piezorresistivo además de las galgas extensiométricas?",
+        "options": [
+          {
+            "text": "Elastómeros conductores y fibras de carbono",
+            "correct": true
+          },
+          { "text": "Sensores ópticos y térmicos", "correct": false },
+          { "text": "Sensores ultrasónicos y magnéticos", "correct": false }
+        ],
+        "feedback": "Además de las galgas extensiométricas, otros dispositivos basados en el principio piezorresistivo incluyen elastómeros conductores y fibras de carbono. Estos materiales también cambian su resistencia eléctrica cuando se aplica esfuerzo mecánico, aprovechando el efecto piezorresistivo para detectar deformación, presión o fuerza."
+      },
+      {
+        "id": 52,
+        "type": "true_false",
+        "question": "Un circuito de acondicionamiento de señal se usa para preparar una señal cruda antes de su procesamiento.",
+        "correct": true,
+        "feedback": "Verdadero. Un circuito de acondicionamiento de señal se utiliza específicamente para preparar una señal cruda (raw signal) antes de su procesamiento. Esto incluye operaciones como amplificación, filtrado, linealización, aislamiento y conversión de niveles, transformando la señal en una forma adecuada para el sistema de adquisición de datos o procesamiento posterior."
+      },
+      {
+        "id": 53,
+        "type": "multiple",
+        "question": "¿Cuál es un ejemplo de amplificador de instrumentación integrado?",
+        "options": [
+          { "text": "AD620", "correct": true },
+          { "text": "Bocina Bluetooth", "correct": false },
+          { "text": "Motor V8", "correct": false },
+          { "text": "Galleta con chispas de chocolate", "correct": false }
+        ],
+        "feedback": "El AD620 es un ejemplo clásico de amplificador de instrumentación integrado. Es un circuito integrado de precisión diseñado específicamente para amplificar señales diferenciales pequeñas con alta ganancia, bajo ruido y excelente rechazo al modo común, siendo ampliamente utilizado en aplicaciones de instrumentación y medición."
       }
     ]
   }
