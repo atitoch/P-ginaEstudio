@@ -1203,6 +1203,171 @@
         "question": "Es necesario emparejar el HC-05 con el dispositivo móvil antes de establecer comunicación.",
         "correct": true,
         "feedback": "Verdadero. Antes de la comunicación, el HC-05 debe emparejarse con el dispositivo móvil usando la contraseña (típicamente '1234' o '0000')."
+      },
+      {
+        "id": 101,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para configurar la comunicación serial a 38400?",
+        "options": [
+          { "text": "Serial.begin(38400);", "correct": true },
+          { "text": "Serial.start(38400);", "correct": false },
+          { "text": "Serial.config(38400);", "correct": false },
+          { "text": "Serial.init(38400);", "correct": false }
+        ],
+        "feedback": "Serial.begin(38400); configura la comunicación serie a 38400 baudios, velocidad común para módulos Bluetooth y GPS."
+      },
+      {
+        "id": 102,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para configurar el pin digital 10 con la resistencia pull-up activada?",
+        "options": [
+          { "text": "pinMode(10, INPUT_PULLUP);", "correct": true },
+          { "text": "pinMode(10, INPUT, PULLUP);", "correct": false },
+          { "text": "pinMode(10, PULLUP_INPUT);", "correct": false },
+          { "text": "digitalPullup(10, HIGH);", "correct": false }
+        ],
+        "feedback": "pinMode(10, INPUT_PULLUP); configura el pin 10 como entrada con resistencia pull-up interna activada, útil para botones y switches."
+      },
+      {
+        "id": 103,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para configurar la entrada A0?",
+        "options": [
+          {
+            "text": "pinMode(A0, INPUT); (opcional para pines analógicos)",
+            "correct": true
+          },
+          { "text": "analogMode(A0, INPUT);", "correct": false },
+          { "text": "configAnalog(A0);", "correct": false },
+          { "text": "setAnalogPin(A0);", "correct": false }
+        ],
+        "feedback": "Los pines analógicos como A0 están configurados como entrada por defecto. pinMode(A0, INPUT); es opcional pero se puede usar para claridad en el código."
+      },
+      {
+        "id": 104,
+        "type": "multiple",
+        "question": "¿Qué es el LM35 y cuál es la relación voltaje-temperatura?",
+        "options": [
+          { "text": "Sensor de temperatura, 10mV por °C", "correct": true },
+          { "text": "Sensor de humedad, 5mV por %", "correct": false },
+          { "text": "Sensor de luz, 1V por lux", "correct": false },
+          { "text": "Sensor de presión, 100mV por kPa", "correct": false }
+        ],
+        "feedback": "El LM35 es un sensor de temperatura que proporciona 10mV por cada grado Celsius (10mV/°C). A 25°C entrega 250mV."
+      },
+      {
+        "id": 105,
+        "type": "multiple",
+        "question": "¿Qué es un LCD y cuál es el valor típico de la resistencia para el contraste?",
+        "options": [
+          {
+            "text": "Pantalla de cristal líquido, potenciómetro de 10kΩ",
+            "correct": true
+          },
+          {
+            "text": "Pantalla LED, resistencia fija de 220Ω",
+            "correct": false
+          },
+          { "text": "Display OLED, no necesita resistencia", "correct": false },
+          { "text": "Pantalla táctil, resistencia de 1kΩ", "correct": false }
+        ],
+        "feedback": "LCD significa Liquid Crystal Display (pantalla de cristal líquido). Para el contraste se usa típicamente un potenciómetro de 10kΩ conectado al pin V0."
+      },
+      {
+        "id": 106,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para determinar si existe información en el canal serial?",
+        "options": [
+          { "text": "Serial.available()", "correct": true },
+          { "text": "Serial.hasData()", "correct": false },
+          { "text": "Serial.check()", "correct": false },
+          { "text": "Serial.ready()", "correct": false }
+        ],
+        "feedback": "Serial.available() devuelve el número de bytes disponibles para leer en el buffer del puerto serie. Devuelve 0 si no hay datos."
+      },
+      {
+        "id": 107,
+        "type": "multiple",
+        "question": "¿Cuáles son las instrucciones necesarias para habilitar los pines digitales 8 y 10 como puerto serial?",
+        "options": [
+          {
+            "text": "#include <SoftwareSerial.h> y SoftwareSerial mySerial(8, 10);",
+            "correct": true
+          },
+          { "text": "Serial.addPort(8, 10);", "correct": false },
+          {
+            "text": "pinMode(8, SERIAL_RX); pinMode(10, SERIAL_TX);",
+            "correct": false
+          },
+          { "text": "Serial8_10.begin();", "correct": false }
+        ],
+        "feedback": "Para usar pines digitales como puerto serie se necesita #include <SoftwareSerial.h> y crear el objeto SoftwareSerial mySerial(8, 10); donde 8 es RX y 10 es TX."
+      },
+      {
+        "id": 108,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para habilitar la interrupción en el pin digital 3, cuando pase de HIGH a LOW?",
+        "options": [
+          {
+            "text": "attachInterrupt(digitalPinToInterrupt(3), funcion, FALLING);",
+            "correct": true
+          },
+          { "text": "interrupt(3, funcion, LOW_TO_HIGH);", "correct": false },
+          { "text": "enableInterrupt(3, FALLING);", "correct": false },
+          { "text": "setInterrupt(3, funcion, DOWN);", "correct": false }
+        ],
+        "feedback": "attachInterrupt(digitalPinToInterrupt(3), nombreFuncion, FALLING); habilita una interrupción en el pin 3 que se activa en el flanco descendente (1 a 0)."
+      },
+      {
+        "id": 109,
+        "type": "multiple",
+        "question": "¿Cuáles son los pines digitales que están conectados directamente al conector USB?",
+        "options": [
+          { "text": "Pines 0 (RX) y 1 (TX)", "correct": true },
+          { "text": "Pines 2 y 3", "correct": false },
+          { "text": "Pines 8 y 10", "correct": false },
+          { "text": "Pines 12 y 13", "correct": false }
+        ],
+        "feedback": "Los pines 0 (RX) y 1 (TX) están conectados directamente al conector USB a través del convertidor USB-Serial del Arduino."
+      },
+      {
+        "id": 110,
+        "type": "multiple",
+        "question": "¿Cuáles son las instrucciones para enviar un carácter por el conector USB a una velocidad de 115200 baudios?",
+        "options": [
+          {
+            "text": "Serial.begin(115200); Serial.print('A');",
+            "correct": true
+          },
+          { "text": "USB.begin(115200); USB.send('A');", "correct": false },
+          {
+            "text": "Serial.config(115200); Serial.write('A');",
+            "correct": false
+          },
+          {
+            "text": "Serial.start(115200); Serial.transmit('A');",
+            "correct": false
+          }
+        ],
+        "feedback": "Serial.begin(115200); inicializa la comunicación a 115200 baudios y Serial.print('A'); envía el carácter 'A' por USB."
+      },
+      {
+        "id": 111,
+        "type": "multiple",
+        "question": "¿Qué son los comandos AT?",
+        "options": [
+          {
+            "text": "Comandos de configuración para módulos de comunicación",
+            "correct": true
+          },
+          {
+            "text": "Comandos internos del microcontrolador",
+            "correct": false
+          },
+          { "text": "Instrucciones de programación en C++", "correct": false },
+          { "text": "Protocolos de comunicación USB", "correct": false }
+        ],
+        "feedback": "Los comandos AT son instrucciones estándar para configurar módulos de comunicación como Bluetooth (HC-05), WiFi, GSM, etc. Permiten cambiar nombres, contraseñas, velocidades y otros parámetros."
       }
     ]
   }
