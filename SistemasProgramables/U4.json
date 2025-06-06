@@ -101,18 +101,6 @@
         "feedback": "El operador '==' se usa para comparar igualdad, mientras que '=' se usa para asignación de variables."
       },
       {
-        "id": 9,
-        "type": "multiple",
-        "question": "¿Qué función devuelve el tiempo transcurrido desde que se encendió el Arduino?",
-        "options": [
-          { "text": "millis()", "correct": true },
-          { "text": "delay()", "correct": false },
-          { "text": "timer()", "correct": false },
-          { "text": "clock()", "correct": false }
-        ],
-        "feedback": "millis() devuelve el número de milisegundos transcurridos desde que se encendió el Arduino o se reinició el programa."
-      },
-      {
         "id": 10,
         "type": "multiple",
         "question": "¿Cuál es el rango de valores que devuelve analogRead()?",
@@ -130,18 +118,6 @@
         "question": "La función loop() se ejecuta continuamente después de setup().",
         "correct": true,
         "feedback": "Verdadero. Después de ejecutarse setup() una vez, la función loop() se ejecuta repetidamente de forma continua."
-      },
-      {
-        "id": 12,
-        "type": "multiple",
-        "question": "¿Qué directiva se usa para incluir una librería en Arduino?",
-        "options": [
-          { "text": "#include", "correct": true },
-          { "text": "import", "correct": false },
-          { "text": "using", "correct": false },
-          { "text": "require", "correct": false }
-        ],
-        "feedback": "La directiva #include se usa para incluir librerías, como #include <Servo.h> para usar servomotores."
       },
       {
         "id": 13,
@@ -223,24 +199,6 @@
         "feedback": "El operador && representa el 'Y lógico' (AND), devuelve true solo si ambas condiciones son verdaderas."
       },
       {
-        "id": 20,
-        "type": "multiple",
-        "question": "¿Cuál es la diferencia entre delayMicroseconds() y delay()?",
-        "options": [
-          {
-            "text": "delayMicroseconds() pausa en microsegundos, delay() en milisegundos",
-            "correct": true
-          },
-          { "text": "No hay diferencia", "correct": false },
-          { "text": "delayMicroseconds() es más preciso", "correct": false },
-          {
-            "text": "delay() es para bucles, delayMicroseconds() para funciones",
-            "correct": false
-          }
-        ],
-        "feedback": "delayMicroseconds() pausa la ejecución en microsegundos (millonésimas de segundo), mientras que delay() lo hace en milisegundos (milésimas de segundo)."
-      },
-      {
         "id": 21,
         "type": "multiple",
         "question": "¿Qué tipo de dato se usa para almacenar un solo carácter?",
@@ -277,35 +235,11 @@
         "feedback": "Serial.available() devuelve el número de bytes disponibles para leer en el buffer del puerto serie."
       },
       {
-        "id": 24,
-        "type": "multiple",
-        "question": "¿Qué palabra clave se usa en switch para salir de un caso?",
-        "options": [
-          { "text": "break", "correct": true },
-          { "text": "exit", "correct": false },
-          { "text": "return", "correct": false },
-          { "text": "end", "correct": false }
-        ],
-        "feedback": "La palabra 'break' se usa para salir de un caso en switch y evitar que se ejecuten los casos siguientes."
-      },
-      {
         "id": 25,
         "type": "true_false",
         "question": "pinMode() debe llamarse en la función setup() para configurar los pines.",
         "correct": true,
         "feedback": "Verdadero. pinMode() generalmente se llama en setup() para configurar los pines como INPUT u OUTPUT antes de usarlos."
-      },
-      {
-        "id": 26,
-        "type": "multiple",
-        "question": "¿Qué operador se usa para 'diferente de' en comparaciones?",
-        "options": [
-          { "text": "!=", "correct": true },
-          { "text": "<>", "correct": false },
-          { "text": "=/=", "correct": false },
-          { "text": "!==", "correct": false }
-        ],
-        "feedback": "El operador != se usa para verificar si dos valores son diferentes o no iguales."
       },
       {
         "id": 27,
@@ -318,37 +252,6 @@
           { "text": "Serial.readText()", "correct": false }
         ],
         "feedback": "Serial.readString() lee y devuelve una cadena completa del puerto serie hasta encontrar un carácter de terminación."
-      },
-      {
-        "id": 28,
-        "type": "multiple",
-        "question": "¿Qué librería se incluye para usar servomotores?",
-        "options": [
-          { "text": "Servo.h", "correct": true },
-          { "text": "Motor.h", "correct": false },
-          { "text": "Stepper.h", "correct": false },
-          { "text": "Engine.h", "correct": false }
-        ],
-        "feedback": "La librería Servo.h se incluye con #include <Servo.h> para controlar servomotores en Arduino."
-      },
-      {
-        "id": 29,
-        "type": "multiple",
-        "question": "¿Qué función devuelve el tiempo en microsegundos desde el inicio?",
-        "options": [
-          { "text": "micros()", "correct": true },
-          { "text": "millis()", "correct": false },
-          { "text": "timer()", "correct": false },
-          { "text": "microseconds()", "correct": false }
-        ],
-        "feedback": "micros() devuelve el tiempo transcurrido en microsegundos desde que se encendió el Arduino."
-      },
-      {
-        "id": 30,
-        "type": "true_false",
-        "question": "Un bucle do-while se ejecuta al menos una vez, incluso si la condición es falsa.",
-        "correct": true,
-        "feedback": "Verdadero. En do-while, el código se ejecuta primero y luego se evalúa la condición, garantizando al menos una ejecución."
       },
       {
         "id": 31,
@@ -468,18 +371,6 @@
         "feedback": "AT+NAME=NuevoNombre cambia el nombre del módulo HC-05 que aparecerá cuando otros dispositivos busquen conexiones Bluetooth."
       },
       {
-        "id": 40,
-        "type": "multiple",
-        "question": "¿Qué función muestra el cursor en la pantalla LCD?",
-        "options": [
-          { "text": "lcd.cursor()", "correct": true },
-          { "text": "lcd.showCursor()", "correct": false },
-          { "text": "lcd.displayCursor()", "correct": false },
-          { "text": "lcd.enableCursor()", "correct": false }
-        ],
-        "feedback": "lcd.cursor() hace visible el cursor en la pantalla LCD, mientras que lcd.noCursor() lo oculta."
-      },
-      {
         "id": 41,
         "type": "true_false",
         "question": "La función lcd.home() posiciona el cursor en la esquina superior izquierda del LCD.",
@@ -497,18 +388,6 @@
           { "text": "AT+PASS=1234", "correct": false }
         ],
         "feedback": "AT+PSWD=1234 establece la contraseña del módulo HC-05 que se requerirá para establecer conexiones."
-      },
-      {
-        "id": 43,
-        "type": "multiple",
-        "question": "¿Qué función hace que el cursor parpadee en el LCD?",
-        "options": [
-          { "text": "lcd.blink()", "correct": true },
-          { "text": "lcd.flash()", "correct": false },
-          { "text": "lcd.blinkCursor()", "correct": false },
-          { "text": "lcd.flickering()", "correct": false }
-        ],
-        "feedback": "lcd.blink() hace que el cursor parpadee en la pantalla LCD, mientras que lcd.noBlink() lo mantiene fijo."
       },
       {
         "id": 44,
@@ -642,18 +521,6 @@
         "feedback": "Serial.read() lee un solo byte del buffer, mientras que Serial.readString() lee todos los caracteres disponibles hasta un timeout y los devuelve como String."
       },
       {
-        "id": 55,
-        "type": "multiple",
-        "question": "¿Qué función lee una cadena hasta encontrar un carácter específico?",
-        "options": [
-          { "text": "Serial.readStringUntil()", "correct": true },
-          { "text": "Serial.readUntil()", "correct": false },
-          { "text": "Serial.readLine()", "correct": false },
-          { "text": "Serial.getString()", "correct": false }
-        ],
-        "feedback": "Serial.readStringUntil('\\n') lee caracteres del puerto serie hasta encontrar el carácter especificado, comúnmente '\\n' para nueva línea."
-      },
-      {
         "id": 56,
         "type": "multiple",
         "question": "¿Cómo se imprime un número en formato hexadecimal?",
@@ -733,21 +600,6 @@
         "feedback": "if (Serial.available() > 0) verifica si hay al menos un byte disponible para leer antes de intentar la lectura."
       },
       {
-        "id": 63,
-        "type": "multiple",
-        "question": "¿Cómo se limpia el buffer de entrada serie?",
-        "options": [
-          {
-            "text": "while(Serial.available()) Serial.read();",
-            "correct": true
-          },
-          { "text": "Serial.clear();", "correct": false },
-          { "text": "Serial.empty();", "correct": false },
-          { "text": "Serial.flush();", "correct": false }
-        ],
-        "feedback": "while(Serial.available()) Serial.read(); lee y descarta todos los bytes pendientes en el buffer de entrada."
-      },
-      {
         "id": 64,
         "type": "multiple",
         "question": "¿Cuál es la velocidad más alta de comunicación serie estándar en Arduino?",
@@ -765,18 +617,6 @@
         "question": "El Monitor Serie de Arduino IDE debe configurarse con la misma velocidad que Serial.begin().",
         "correct": true,
         "feedback": "Verdadero. La velocidad configurada en Serial.begin() debe coincidir con la seleccionada en el Monitor Serie para una comunicación correcta."
-      },
-      {
-        "id": 66,
-        "type": "multiple",
-        "question": "¿Qué atajo de teclado abre el Monitor Serie en Arduino IDE?",
-        "options": [
-          { "text": "Ctrl+Shift+M", "correct": true },
-          { "text": "Ctrl+M", "correct": false },
-          { "text": "Ctrl+S", "correct": false },
-          { "text": "Shift+M", "correct": false }
-        ],
-        "feedback": "Ctrl+Shift+M es el atajo de teclado para abrir rápidamente el Monitor Serie en Arduino IDE."
       },
       {
         "id": 67,
@@ -861,36 +701,6 @@
         "feedback": "La sintaxis correcta es SoftwareSerial nombreVariable(pinRX, pinTX), donde el primer parámetro es RX y el segundo TX."
       },
       {
-        "id": 73,
-        "type": "multiple",
-        "question": "¿Por qué se usa while (!Serial) en Arduino Leonardo/Micro?",
-        "options": [
-          {
-            "text": "Para esperar hasta que se establezca la conexión USB",
-            "correct": true
-          },
-          { "text": "Para verificar errores en el código", "correct": false },
-          { "text": "Para inicializar el puerto más rápido", "correct": false },
-          { "text": "Para ahorrar memoria", "correct": false }
-        ],
-        "feedback": "while (!Serial) es necesario en Leonardo/Micro porque el puerto serie USB se establece cuando se conecta, a diferencia del Uno que tiene puerto serie dedicado."
-      },
-      {
-        "id": 74,
-        "type": "multiple",
-        "question": "¿Cuántos puertos serie hardware tiene Arduino Mega?",
-        "options": [
-          {
-            "text": "4 puertos (Serial, Serial1, Serial2, Serial3)",
-            "correct": true
-          },
-          { "text": "2 puertos (Serial, Serial1)", "correct": false },
-          { "text": "1 puerto (Serial)", "correct": false },
-          { "text": "8 puertos", "correct": false }
-        ],
-        "feedback": "Arduino Mega tiene 4 puertos serie hardware: Serial (USB), Serial1 (pines 18,19), Serial2 (pines 16,17) y Serial3 (pines 14,15)."
-      },
-      {
         "id": 75,
         "type": "multiple",
         "question": "¿Qué velocidad se recomienda comúnmente para módulos Bluetooth?",
@@ -914,18 +724,7 @@
         ],
         "feedback": "115200 baudios es ideal para debugging de alta velocidad cuando se necesita transmitir grandes cantidades de datos rápidamente."
       },
-      {
-        "id": 77,
-        "type": "multiple",
-        "question": "¿En qué pines está ubicado Serial1 en Arduino Mega?",
-        "options": [
-          { "text": "Pines 18 y 19", "correct": true },
-          { "text": "Pines 16 y 17", "correct": false },
-          { "text": "Pines 14 y 15", "correct": false },
-          { "text": "Pines 0 y 1", "correct": false }
-        ],
-        "feedback": "Serial1 en Arduino Mega está ubicado en los pines 18 (TX1) y 19 (RX1)."
-      },
+
       {
         "id": 78,
         "type": "multiple",
@@ -951,18 +750,6 @@
         "feedback": "57600 baudios es una velocidad común para módulos WiFi, aunque algunos pueden usar otras velocidades según el fabricante."
       },
       {
-        "id": 80,
-        "type": "multiple",
-        "question": "¿En qué pines está ubicado Serial2 en Arduino Mega?",
-        "options": [
-          { "text": "Pines 16 y 17", "correct": true },
-          { "text": "Pines 18 y 19", "correct": false },
-          { "text": "Pines 14 y 15", "correct": false },
-          { "text": "Pines 0 y 1", "correct": false }
-        ],
-        "feedback": "Serial2 en Arduino Mega está ubicado en los pines 16 (TX2) y 17 (RX2)."
-      },
-      {
         "id": 81,
         "type": "true_false",
         "question": "SoftwareSerial permite crear puertos serie en cualquier pin digital de Arduino.",
@@ -980,18 +767,6 @@
           { "text": "Arduino dañado", "correct": false }
         ],
         "feedback": "Los caracteres extraños en el Monitor Serie generalmente indican que la velocidad configurada no coincide con la del código (Serial.begin())."
-      },
-      {
-        "id": 83,
-        "type": "multiple",
-        "question": "¿En qué pines está ubicado Serial3 en Arduino Mega?",
-        "options": [
-          { "text": "Pines 14 y 15", "correct": true },
-          { "text": "Pines 16 y 17", "correct": false },
-          { "text": "Pines 18 y 19", "correct": false },
-          { "text": "Pines 0 y 1", "correct": false }
-        ],
-        "feedback": "Serial3 en Arduino Mega está ubicado en los pines 14 (TX3) y 15 (RX3)."
       },
       {
         "id": 84,
@@ -1016,40 +791,6 @@
           { "text": "57600", "correct": false }
         ],
         "feedback": "9600 baudios es la velocidad estándar más utilizada para la mayoría de proyectos Arduino por su confiabilidad y compatibilidad."
-      },
-      {
-        "id": 86,
-        "type": "true_false",
-        "question": "Arduino Uno tiene múltiples puertos serie hardware como el Mega.",
-        "correct": false,
-        "feedback": "Falso. Arduino Uno solo tiene un puerto serie hardware (Serial), mientras que Arduino Mega tiene cuatro puertos serie hardware."
-      },
-      {
-        "id": 87,
-        "type": "multiple",
-        "question": "¿Qué puerto serie usa los pines 0 y 1 en Arduino Mega?",
-        "options": [
-          { "text": "Serial (puerto USB)", "correct": true },
-          { "text": "Serial1", "correct": false },
-          { "text": "Serial2", "correct": false },
-          { "text": "Serial3", "correct": false }
-        ],
-        "feedback": "El puerto Serial principal (USB) en Arduino Mega usa los pines 0 (RX) y 1 (TX), al igual que en Arduino Uno."
-      },
-      {
-        "id": 88,
-        "type": "multiple",
-        "question": "¿Qué sucede si no se incluye while (!Serial) en Leonardo/Micro?",
-        "options": [
-          {
-            "text": "El código puede ejecutarse antes de establecer la conexión USB",
-            "correct": true
-          },
-          { "text": "El Arduino se daña", "correct": false },
-          { "text": "No se puede subir el código", "correct": false },
-          { "text": "Se reduce la velocidad", "correct": false }
-        ],
-        "feedback": "Sin while (!Serial), el código puede ejecutarse antes de que se establezca la conexión USB, perdiendo los primeros mensajes serie."
       },
       {
         "id": 89,
@@ -1368,6 +1109,21 @@
           { "text": "Protocolos de comunicación USB", "correct": false }
         ],
         "feedback": "Los comandos AT son instrucciones estándar para configurar módulos de comunicación como Bluetooth (HC-05), WiFi, GSM, etc. Permiten cambiar nombres, contraseñas, velocidades y otros parámetros."
+      },
+      {
+        "id": 112,
+        "type": "multiple",
+        "question": "¿Cuál es la instrucción para habilitar la interrupción en el pin digital 3, cuando pase de LOW a HIGH?",
+        "options": [
+          {
+            "text": "attachInterrupt(digitalPinToInterrupt(3), funcion, RISING);",
+            "correct": true
+          },
+          { "text": "interrupt(3, funcion, HIGH_TO_LOW);", "correct": false },
+          { "text": "enableInterrupt(3, RISING);", "correct": false },
+          { "text": "setInterrupt(3, funcion, UP);", "correct": false }
+        ],
+        "feedback": "attachInterrupt(digitalPinToInterrupt(3), nombreFuncion, RISING); habilita una interrupción en el pin 3 que se activa en el flanco ascendente (0 a 1)."
       }
     ]
   }
